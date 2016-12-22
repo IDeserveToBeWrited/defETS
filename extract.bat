@@ -1,7 +1,7 @@
 @echo off
 
 :: Location for extraction
-SET LOCATION=X:\defy
+SET LOCATION=X:\def
 :: Location to SCS Extractor
 SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2\scs_extractor.exe"
 :: Get the SCS Game Archive Extractor here: http://download.eurotrucksimulator2.com/scs_extractor.zip
@@ -10,6 +10,10 @@ SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulato
 :: Create folders
 ECHO Creating def folder
 MKDIR %LOCATION%\def
+ECHO Creating dlc_christmas folder
+MKDIR %LOCATION%\dlc_christmas
+ECHO Creating dlc_dragon folder
+MKDIR %LOCATION%\dlc_dragon
 ECHO Creating dlc_east folder
 MKDIR %LOCATION%\dlc_east
 ECHO Creating dlc_fr folder
@@ -39,6 +43,10 @@ ECHO.
 :: Extract archives
 ECHO Extracting def archive
 %EXTRACTOR% def.scs %LOCATION%\def >NUL
+ECHO Extracting dlc_christmas archive
+%EXTRACTOR% dlc_christmas.scs %LOCATION%\dlc_christmas >NUL
+ECHO Extracting dlc_dragon archive
+%EXTRACTOR% dlc_dragon.scs %LOCATION%\dlc_dragon >NUL
 ECHO Extracting dlc_east archive
 %EXTRACTOR% dlc_east.scs %LOCATION%\dlc_east >NUL
 ECHO Extracting dlc_fr archive
@@ -67,6 +75,18 @@ ECHO.
 
 :: Delete all non-def directories
 ECHO Starting cleanup
+:: dlc_christmas
+RMDIR "%LOCATION%\dlc_christmas\automat" /s /q
+RMDIR "%LOCATION%\dlc_christmas\material" /s /q
+RMDIR "%LOCATION%\dlc_christmas\vehicle" /s /q
+DEL %LOCATION%\dlc_christmas\dlc_christmas.manifest.sii
+
+:: dlc_dragon
+RMDIR "%LOCATION%\dlc_dragon\automat" /s /q
+RMDIR "%LOCATION%\dlc_dragon\material" /s /q
+RMDIR "%LOCATION%\dlc_dragon\vehicle" /s /q
+DEL %LOCATION%\dlc_dragon\dlc_dragon.manifest.sii
+
 :: dlc_east
 RMDIR "%LOCATION%\dlc_east\automat" /s /q
 RMDIR "%LOCATION%\dlc_east\map" /s /q
