@@ -1,0 +1,80 @@
+traffic_vehicle : traffic.iveco.stralis.hiway
+{
+	accessories[]: .tivecostrhw.chassis
+	accessories[]: .tivecostrhw.cabin
+	accessories[]: .tivecostrhw.fwheel
+	accessories[]: .tivecostrhw.rwheel
+	accessories[]: .tivecostrhw.rwheel2
+	accessories[]: .tivecostrhw.doorstep
+	accessories[]: .tivecostrhw.doorhndl
+	accessories[]: .tivecostrhw.mirror
+	accessories[]: .tivecostrhw.sunshld
+	accessories[]: .tivecostrhw.fmirror
+	accessories[]: .tivecostrhw.smirror
+
+	max_speed: 90
+	attachable_trailer[]: ""
+	type: truck
+
+	engine_torque: 2300
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	headlights_diffuse : (0.89, 0.88, 0.72)
+	headlights_offset : -0.8
+	headlights_pitch: -7
+	headlights_range: 20.0
+	headlights_angle: 95.0
+	headlights_aspect: 2
+	headlights_mask: "/material/custom/trucklight_mask_norm.tobj"
+	headlights_attenuation: "/material/custom/trucklight_attn.tobj"
+	headlights_intensity_min: 0.7
+	headlights_intensity_max: 2.5
+
+}
+
+vehicle_accessory : .tivecostrhw.chassis {
+	data_path: "/def/vehicle/truck/iveco.hiway/chassis/6x4.sii"
+}
+
+vehicle_accessory : .tivecostrhw.cabin {
+	data_path: "/def/vehicle/truck/iveco.hiway/cabin/hiway_cab.sii"
+}
+
+vehicle_wheel_accessory : .tivecostrhw.fwheel {
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory : .tivecostrhw.rwheel {
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory : .tivecostrhw.rwheel2 {
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+	offset: 2
+}
+
+vehicle_addon_accessory : .tivecostrhw.doorstep {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/doorstep/shape1.sii"
+}
+
+vehicle_addon_accessory : .tivecostrhw.doorhndl {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/doorhndl/shape1.sii"
+}
+
+vehicle_addon_accessory : .tivecostrhw.mirror {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/mirror/shape3.sii"
+}
+
+vehicle_addon_accessory : .tivecostrhw.sunshld {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/sunshld/shape1.sii"
+}
+
+vehicle_addon_accessory : .tivecostrhw.fmirror {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/f_mirror/shape1.sii"
+}
+
+vehicle_addon_accessory : .tivecostrhw.smirror {
+	data_path: "/def/vehicle/truck/iveco.hiway/accessory/s_mirror/shape1.sii"
+}

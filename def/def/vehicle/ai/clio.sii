@@ -1,0 +1,32 @@
+traffic_vehicle : traffic.clio
+{
+	accessories[]: .clio.chassis
+	accessories[]: .clio.fwheel
+	accessories[]: .clio.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+
+	vehicle_mass: 1600
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .clio.chassis
+{
+	data_path: "/def/vehicle/ai/clio/chassis.sii"
+}
+
+vehicle_wheel_accessory: .clio.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .clio.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}

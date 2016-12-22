@@ -1,0 +1,411 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+# Global Commands (used mostly in cutscenes):
+#
+# "play_sound"		- plays a sound
+#					str_params[0]: sound file path
+#					num_params[0]: sound volume [0.0 - 1.0] (default: 1.0)
+#
+# "play_music"		- plays a music
+#					str_params[0]: music file path
+#					num_params[0]: music volume [0.0 - 1.0] (default: 1.0)
+#					num_params[1]: fade in [0 - false, 1 - true] (default: true)
+#
+# "stop_music"		- stops the last played music
+#					num_params[0]: fade out [0 - false, 1 - true] (default: true)
+#
+# "create_win"		- creates an ui window
+#					str_params[0]: window name
+#					str_params[1]: window script path
+#
+# "show_win"		- shows an ui window
+#					str_params[0]: window name
+#					str_params[1]: window script path
+#
+# "set_win_text"	- sets the text of the specified ui element in the active window
+#					num_params[0]: id
+#					str_params[0]: window name
+#					str_params[1]: text
+#
+# "hide_win"		- hides an ui window
+#					str_params[0]: window name
+#
+# "cutscene"		- loads the specified cutscene at node[0] of the closest item found with specified tag
+#					str_params[0]: cutscene data name (from cutscene.sii)
+#					str_params[1]: origin item tag
+#					num_params[0]: autorun [0 - false, 1 - true] (default: false)
+#
+# "activate_hud"	- activates player hud
+#					num_params[0]: hud activation code
+#
+# "cam_enable"		- sets camera mode enabled state
+#					num_params[0]: camera mode
+#					num_params[1]: enabled [0 - false, 1 - true]
+#
+# "teleport"		- teleports the player to the first node of the closest camera point with specified tag
+#                   			str_params[0]: target camera point tag
+#
+# "game_state"		- adds or removes specified game state flags
+#					num_params[0]: add/remove [0 - remove, 1 - add]
+#					str_params[0 - n]: game state flags
+#
+# "pay_toll"		- immediately withdraws money from player's account to pay a toll
+#					num_params[0]: money in [EUR] to withdraw
+#
+# "set_toll"		- set tollgate parameters for tollgate hookups inside the trigger area
+#					str_params[0]: tollgate type
+#					num_params[0]: toll amount in [EUR]
+#
+# Target Commands:
+#
+# "play_anim"		- plays an animation
+#					num_params[0]: anim index
+#					num_params[1]: blend-in duration [sec] (default: 0.0)
+#					num_params[2]: blend-out duration [sec] (default: 0.0)
+#					num_params[3]: loop [0 - false, 1 - true] (default: 0)
+#
+# "set_visible"		- sets object visibility
+#					num_params[0]: visible [0 - false, 1 - true]
+#
+# "camera_point"	- switches the TV camera (if it is activated) to the target camera point
+#					num_params[0]: activation [0 - deactivate, 1 - activate]
+#
+#
+# "service_lock"	- locks/unlocks a service item
+#					num_params[0]: service item type
+#					num_params[1]: lock [0 - false, 1 - true]
+#
+# "achievement"		- unlock a trigger achievement
+#					str_params[0]: achievement trigger param (from achievements.sii)
+#
+#
+# HUD activation codes:
+#
+#	UIA_none				= 0 (deactivation)
+#	UIA_parking				= 3
+#
+#
+# Camera modes:
+#
+#	CAM_behind				= 1
+#	CAM_interior			= 2
+#	CAM_bumper				= 3
+#	CAM_window 				= 4
+#	CAM_cabin 				= 5
+#	CAM_wheel 				= 6
+#	CAM_top 				= 7
+#	CAM_top_fixed 			= 8
+#	CAM_tv 					= 9
+#	CAM_side 				= 10
+#	CAM_cinematic 			= 11
+#
+#
+# Service item types:
+#
+#	ST_gas_station			= 0
+#	ST_service				= 1
+#	ST_truck_dealer			= 2
+#	ST_custom_check			= 3
+#	ST_parking				= 4
+#	ST_recruitment			= 5
+
+trigger_action : trig_action.hud_parking
+{
+	name: "Parking hud activation/deactivation"
+
+	command: "activate_hud"
+	num_params[]: 3
+
+	on_armed: true
+	on_activated: false
+	on_reset: false
+
+	additional_actions[]: trig_action.hud_deactiv
+}
+
+trigger_action : trig_action.hud_deactiv
+{
+	name: "Hud deactivation"
+
+	command: "activate_hud"
+	num_params[]: 0
+
+	on_armed: false
+	on_activated: false
+	on_reset: true
+}
+
+trigger_action : trig_action.cam7_on_off
+{
+	name: "Top camera mode enable/disable"
+
+	command: "cam_enable"
+	num_params[]: 7
+	num_params[]: 0
+
+	on_armed: true
+	on_activated: false
+	on_reset: false
+
+	additional_actions[]: trig_action.cam7_on
+}
+
+trigger_action : trig_action.cam7_on
+{
+	name: "Top camera mode enable"
+
+	command: "cam_enable"
+	num_params[]: 7
+	num_params[]: 1
+
+	on_armed: false
+	on_activated: false
+	on_reset: true
+}
+
+trigger_action : trig_action.sv_unlock
+{
+	name: "Unlock truck dealer"
+
+	command: "service_lock"
+	num_params[]: 2
+	num_params[]: 0
+}
+
+trigger_action : trig_action.pay_toll
+{
+	name: "Pay toll"
+
+	command: "pay_toll"
+	num_params[]: 25
+}
+
+trigger_action : trig_action.toll_start
+{
+	name: "Tollgate start"
+
+	command: "set_toll"
+	str_params[]: "start"
+}
+
+trigger_action : trig_action.toll_onetime
+{
+	name: "Tollgate one-time"
+
+	command: "set_toll"
+	str_params[]: "one_time"
+}
+
+trigger_action : trig_action.toll_end
+{
+	name: "Tollgate end"
+
+	command: "set_toll"
+	str_params[]: "end"
+}
+
+trigger_action : trig_action.trg_disable
+{
+	name: "Trigger disable"
+
+	command: "_trigger"
+	num_params[]: 0
+}
+
+trigger_action : trig_action.trg_enable
+{
+	name: "Trigger enable"
+
+	command: "_trigger"
+	num_params[]: 1
+}
+
+trigger_action : trig_action.trg_enablea
+{
+	name: "Trigger enable (on armed)"
+
+	on_armed: true
+	on_activated: false
+	on_reset: false
+
+	command: "_trigger"
+	num_params[]: 0
+}
+
+trigger_action : trig_action.trg_disabler
+{
+	name: "Trigger disable (on reset)"
+
+	on_armed: false
+	on_activated: false
+	on_reset: true
+
+	command: "_trigger"
+	num_params[]: 1
+}
+
+trigger_action : trig_action.trg_activ
+{
+	name: "Trigger activate"
+
+	command: "_trigger"
+	num_params[]: 2
+}
+
+trigger_action : trig_action.trg_activf
+{
+	name: "Trigger activate (forced)"
+
+	command: "_trigger"
+	num_params[]: 3
+}
+
+trigger_action : trig_action.hide_item
+{
+	name: "Hide item"
+
+	command: "set_visible"
+	num_params[]: 0
+}
+
+trigger_action : trig_action.show_item
+{
+	name: "Show item"
+
+	command: "set_visible"
+	num_params[]: 1
+}
+
+trigger_action : trig_action.hide_item_a
+{
+	name: "Hide item (on armed)"
+
+	on_armed: true
+	on_activated: false
+	on_reset: false
+
+	command: "set_visible"
+	num_params[]: 0
+}
+
+trigger_action : trig_action.show_item_r
+{
+	name: "Show item (on reset)"
+
+	on_armed: false
+	on_activated: false
+	on_reset: true
+
+	command: "set_visible"
+	num_params[]: 1
+}
+
+trigger_action : trig_action.scene
+{
+	name: "Load cutscene"
+
+	command: "cutscene"
+}
+
+trigger_action : trig_action.toll_01
+{
+	name: "toll Norway big default"
+
+	command: "pay_toll"
+	num_params[]: 19
+}
+
+trigger_action : trig_action.toll_02
+{
+	name: "toll Norway small v4_s2_b2_i2"
+
+	command: "pay_toll"
+	num_params[]: 14.5
+}
+
+trigger_action : trig_action.toll_03
+{
+	name: "toll Norway big pay_01"
+
+	command: "pay_toll"
+	num_params[]: 7
+}
+
+trigger_action : trig_action.toll_04
+{
+	name: "toll Norway small v1_s1_b1_i1"
+
+	command: "pay_toll"
+	num_params[]: 10.5
+}
+
+trigger_action : trig_action.toll_05
+{
+	name: "toll Norway big pay_02"
+
+	command: "pay_toll"
+	num_params[]: 7.5
+}
+
+trigger_action : trig_action.toll_06
+{
+	name: "toll Norway small v3_s1_b2_i2"
+
+	command: "pay_toll"
+	num_params[]: 11.5
+}
+
+trigger_action : trig_action.toll_07
+{
+	name: "toll Norway small v2_s2_b1_i1"
+
+	command: "pay_toll"
+	num_params[]: 93
+}
+
+trigger_action : trig_action.toll_08
+{
+	name: "toll Sweden Oresund"
+
+	command: "pay_toll"
+	num_params[]: 172
+}
+
+trigger_action : trig_action.toll_09
+{
+	name: "toll Denmark Storebelt"
+
+	command: "pay_toll"
+	num_params[]: 234
+}
+
+trigger_action : trig_action.toll_10
+{
+	name: "toll Sweden Svinesund"
+
+	command: "pay_toll"
+	num_params[]: 12
+}
+
+trigger_action : trig_action.bus_parking
+{
+	# Not used for now - just to prevent warnings
+}
+
+trigger_action : trig_action.achievement
+{
+	name: "Trigger achievement"
+
+	command: "achievement"
+}
+
+}

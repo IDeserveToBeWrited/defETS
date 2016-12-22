@@ -1,0 +1,59 @@
+SiiNunit
+{
+
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+traffic_data : .traffic.data {
+
+	# max_vehicle_count: 50 	# Total AI vehicle count limit (including trucks)
+
+	## Global AI safety modifier - influences 'safety factor' for all AI vehicles
+	## Valid values: <-1;1>  where '-1' means 'minimum safety for all' and '1' means 'maximum safety for all'
+	## Vehicles with low safety factor tend to brake more abruptly, use low spacing distances, use lights later in case of low visibility...
+	#
+	# ai_safety_modifier: 0.3
+
+	## Global AI patience modifier - influences 'patience factor' for all AI vehicles
+	## Valid values: <-1;1>  where '-1' means 'minimum patience for all' and '1' means 'maximum patience for all'
+	## Vehicles with low patience factor tend to overtake more often, have lower waiting times (e.g. when yielding), use horns sooner (when blocked)...
+	#
+	# ai_patience_modifier: 0.0
+
+	## Horn and blink delay intervals - how long before an AI vehicle uses its horn (e.g. when blocked)
+	## or lights (e.g. when yielding) to notify other vehicle about something
+	## The actual value used depends on vehicle's 'patience factor': lower patience -> lower delay
+	#
+	# ai_horn_delay: (4.0, 8.0)
+	# ai_blink_delay: (3.0, 6.0)
+
+	## Yield attributes. If a vehicle (including player's one) is forced to give way to other ones for too long time, a 'yield event' can occur.
+	## This should help reducing traffic jams, which can occur at small roads during rush hours.
+	## To make a vehicle yield to another one, the following conditions must be met:
+	##
+	## 1. Vehicles must be on 'small roads' (max 1 lane in each direction)
+	## 2. The speed of the driving vehicle must not be higher than 'ai_yield_max_speed' [m/s]
+	## 3. The waiting vehicle must have been waiting at least 'ai_yield_wait_time' [s].
+	## 4. Yielding vehicle waits for the other one until it moves, but only for 'ai_yield_timeout' [s]. If nothing happens, yielding is cancelled.
+	##
+	## The actual values used depend on yielding vehicle's 'patience factor':
+	#
+	# ai_yield_max_speed: (18.0, 26.0)      # lower patience -> lower speed
+	# ai_yield_wait_time: (20.0, 30.0)      # lower patience -> higher wait time
+	# ai_yield_timeout: (3.0, 5.0)          # lower patience -> lower timeout
+
+
+	## Obsolete attributes:
+	#
+	# mass_truck: 10500.0  		# the attribute is obsolete - mass is now set per-vehicle
+	# mass_trailer: 20000.0  	# the attribute is obsolete - mass is now set per-vehicle
+	# mass_car: 2000.0  		# the attribute is obsolete - mass is now set per-vehicle
+	# max_truck_count: 4		# the attribute is obsolete - vehicle max count is now set per vehicle type
+}
+
+}

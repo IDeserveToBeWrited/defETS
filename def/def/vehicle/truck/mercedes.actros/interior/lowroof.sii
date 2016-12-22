@@ -1,0 +1,38 @@
+SiiNunit
+{
+accessory_interior_data: lowroof.mercedes.actros.interior
+{
+	name: "Elegance"
+	price: 12480
+	unlock: 0
+	icon: "interior_actros_std"
+
+	model:             "/vehicle/truck/mercedes_actros_2009/interior/model.pmd"
+  collision:         "/vehicle/truck/mercedes_actros_2009/interior/model.pmc"
+	animated_model:    "/vehicle/truck/mercedes_actros_2009/interior/anim.pmd"
+	active_mirrors_part: a_e_mirrors
+	passive_mirrors_part: p_e_mirrors
+	look: look1
+	variant: lowroof
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/mercedes_actros_2009.sii"
+
+	glass_panes[]: .mercedes.actros_09.pane.front
+	glass_panes[]: .mercedes.actros_09.pane.close
+	glass_panes[]: .mercedes.actros_09.pane.far
+	glass_panes[]: .mercedes.actros_09.pane.top
+
+	suitable_for[]: "cabin_l_lw.mercedes.actros.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/mercedes_actros_2009/stock.pmd"
+	ext_variant: cab_low_eu
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/mercedes.actros/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

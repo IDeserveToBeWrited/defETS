@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: standard_uk.man.tgx.interior
+{
+	name: "@@standard@@ UK"
+	price: 12900
+	unlock: 0
+	icon: "interior_man_tgx_std_uk"
+
+	model:             "/vehicle/truck/man_tgx/interior/uk/model.pmd"
+  collision:         "/vehicle/truck/man_tgx/interior/uk/model.pmc"
+	animated_model:    "/vehicle/truck/man_tgx/interior/uk/anim.pmd"
+	active_mirrors_part: a_s_mirrors
+	passive_mirrors_part: p_s_mirrors
+	look: look1
+	variant: standard
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/man_tgx.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .man.tgx.pane.front
+	glass_panes[]: .man.tgx.pane.close
+	glass_panes[]: .man.tgx.pane.far
+  
+  suitable_for[]: "xxl_cab.man.tgx.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/man_tgx/stock.pmd"
+	ext_variant: cab_hi_uk
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/man.tgx/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.dat"
+}

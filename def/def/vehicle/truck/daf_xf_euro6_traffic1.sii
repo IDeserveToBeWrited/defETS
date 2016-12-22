@@ -1,0 +1,78 @@
+traffic_vehicle : traffic1.daf.xf_euro6
+{
+
+	accessories[]: .token.chassis
+	accessories[]: .token.cabin
+	accessories[]: .token.fwheel
+	accessories[]: .token.rwheel
+	accessories[]: .token.doorstep
+	accessories[]: .token.doorhndl
+	accessories[]: .token.mirror
+	accessories[]: .token.sunshld
+	accessories[]: .token.fmirror
+	accessories[]: .token.badge
+	accessories[]: .token.cab_eq
+	accessories[]: .token.chs_eq
+ 	accessories[]: .token.decals
+
+	max_speed: 90
+	attachable_trailer[]: ""
+	type: truck
+
+	gearbox[]: (0.0f, 1.76f)
+	gearbox[]: (10.0f, 1.48f)
+	gearbox[]: (20.0f, 1.25f)
+	gearbox[]: (32.0f, 1.04f)
+	gearbox[]: (45.0f, 0.85f)
+	gearbox[]: (57.0f, 0.69f)
+	gearbox[]: (70.0f, 0.56f)
+	gearbox[]: (80.0f, 0.46f)
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	headlights_diffuse : (0.89, 0.88, 0.72)
+	headlights_offset : -0.8
+	headlights_pitch: -7
+	headlights_range: 20.0
+	headlights_angle: 95.0
+	headlights_aspect: 2
+	headlights_mask: "/material/custom/trucklight_mask_norm.tobj"
+	headlights_attenuation: "/material/custom/trucklight_attn.tobj"
+	headlights_intensity_min: 0.7
+	headlights_intensity_max: 2.5
+
+}
+
+
+
+vehicle_accessory : .token.chassis {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/chassis/4x2.sii"
+}
+vehicle_accessory : .token.cabin {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/cabin/superspace.sii"
+}
+vehicle_wheel_accessory : .token.fwheel {
+	 data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory : .token.rwheel {
+	 data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .token.doorstep {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/accessory/doorstep/shape1.sii"
+}
+vehicle_addon_accessory : .token.doorhndl {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/accessory/doorhndl/shape1.sii"
+}
+vehicle_addon_accessory : .token.mirror {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/accessory/mirror/shape3.sii"
+}
+vehicle_addon_accessory : .token.sunshld {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/accessory/sunshld/shape1.sii"
+}
+vehicle_addon_accessory : .token.fmirror {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/accessory/f_mirror/shape1.sii"
+}
+vehicle_addon_accessory : .token.badge {
+	 data_path: "/def/vehicle/truck/daf.xf_euro6/badge/badge_510.sii"
+}

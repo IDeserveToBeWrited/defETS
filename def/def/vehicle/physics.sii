@@ -1,0 +1,140 @@
+SiiNunit
+{
+physics_data: .phdata
+{
+	# Several changes have been done in this file:
+	# - Some traffic parameters are moved to traffic_data.sii
+	# - Scaling of most of the parameters is hardcoded, but you can still change these parameters 
+	#	by means of the related parameters named ..._factor.
+	#	For example, setting damping_scaling_front_factor = 2 increases former
+	#	damping_scaling_front twice.
+	#	This change will enable us to maintain compatibility between different versions,
+	#	since our physics is being developed continuously and physics parameters are inevitably changing.
+	# - Some parameters have become obsolete due to physics changes - these are removed.
+	# - Some parameters are dangerous to change, since often you can achieve the same effect by more proper means,
+	#	and that's why they are disabled and removed from this file.
+	# Hopefully further physics improvements will make the physics robust enough to allow us to provide you even more
+	# 	physics parameters to set up or to experiment with.
+	# Don't forget, our ultimate goal is to provide you the best possible truck enthusiast's enjoyment!
+
+
+	# Version of the structure used by the game to reduce some mod compatibility issues.
+	#
+	# Changes in individual versions:
+	# 1 - The thrust_characteristic_viscosity is now scaled by engine torque. When
+	#     loading older version, the old value is divided by 1875.
+	# 2 - several parameters made relative to maintain compatibility
+
+	version: 2
+
+	# These coeficients are used for computing autocentering wheel speed.
+	# The faster vehicle moves and the more steering wheel is turned left or right
+	# the higher autocentering speed is.
+	# Given value of speed_coef is for 100km/h velocity (linear raise).
+	# Given value of angle_coef is for maximum wheel turn (30degrees, linear raise).
+	# Returning speed coeficient is computed by multiplication of both coeficients.
+	# When result coeficient is 1, returning speed is exactly the same as full
+	# turning speed. This balance points define natural limits of steering
+	# dependent on vehicle speed.
+	# Ratio_coef defines upper limit of result coeficient (ratio against player).
+
+	steering_speed_coef:	4.0
+	steering_angle_coef:	2.0
+	steering_ratio_coef:	0.95
+
+	# Maximum allowed rotation of the front wheels (degrees)
+	max_visual_rotation:	35
+	
+	# Modification of base steering sensitivity depending on truck speed.
+	# Used only with relative steering (keyboard, joypad).
+
+	steering_sensitivity_multiplier_0kmh:		1.0
+	steering_sensitivity_multiplier_100kmh:		0.4
+	steering_sensitivity_multiplier_minimum:	0.2
+	steering_sensitivity_multiplier_maximum:	10.0
+
+	# maximum allowed relative angles in degrees between truck and trailer at the fifth wheel
+	fifth_wheel_pitch:		20
+	fifth_wheel_roll:		0
+
+	# brake strength
+	brake_torque_factor:		1.0
+	# how much stronger is braking at low speed
+	braking_curve_peak_rel:		6.0
+	# where approx. the braking curve bends
+	brake_characteristic_rpm:	250.0
+	
+	# front wheels are stronger by this factor
+	brake_balance:			1.1
+	
+	# maximum brake temperature
+	max_brake_temperature:		200.0
+	# how much brakes cool down
+	brake_cooling_rate:		0.01
+	# how much brakes warm up
+	brake_friction_warming_rate:	4.0
+
+	# maximum cabin pitch forward angle
+	cabin_max_pitch_angle_front:		8.0
+	# maximum cabin pitch backward angle
+	cabin_max_pitch_angle_rear:		8.0
+	# maximum cabin pitch roll angle
+	cabin_max_roll_angle:			8.0
+
+	# cabin pitch springing strength
+	cabin_pitch_force_scaling_factor: 	1.0
+	# cabin pitch damping strength
+	cabin_pitch_damping_factor: 		1.0
+	# cabin roll springing strength
+	cabin_roll_force_scaling_factor: 	1.0
+	# cabin roll damping strength
+	cabin_roll_damping_factor: 		1.0
+
+	cabin_mass: 				300.0
+	wheel_mass: 				100.0
+
+	# wheel suspension damping strength
+	damping_scaling_front_factor: 		1.0
+	damping_scaling_rear_factor: 		1.0
+	damping_scaling_trailer_factor: 	1.0
+
+	sway_bar_stiffness_factor:		1.0
+
+	# intensity of engine braking (not motor brake)
+	thrust_characteristic_viscosity_factor:		1.0
+	# transmission resistance
+	transmission_viscosity_factor:			1.0
+	# retarder resistance
+	transmission_viscosity_retarder_factor:		1.0
+	# rotational wheel resistance
+	wheel_viscosity_factor:				1.0
+	# clutch strength
+	clutch_viscosity_factor:			1.0
+	clutch_connected_viscosity_factor:		10.0
+	manual_clutch_viscosity_factor:			0.5
+	manual_clutch_connected_viscosity_factor:	10.0
+	# torque converter strength
+	torque_converter_viscosity_factor:		0.3
+	torque_converter_locked_viscosity_factor:	10.0
+	# relative magnitude of flywheel inertia
+	inertia_scaling_const:				1.0
+	# transmission inertia relative to the flywheel
+	transmission_rel_flywheel_inertia:		0.5
+
+	# approximate air resistance: resistant_force = air_resistance * sqr(speed)
+	air_resistance:					3.0
+
+	# friction parameters
+	# stiffness of tyre material
+	bristle_stiffness_longitudinal_factor:		1.0
+	bristle_stiffness_lateral_factor:		1.0
+	# damping of tyre deformation
+	bristle_damping_longitudinal_factor:		1.0
+	bristle_damping_lateral_factor:			1.0
+	# coefficients related to wheel slipping
+	slip_longitudinal_factor:			1.0
+	slip_lateral_factor:				1.0
+
+}	
+}
+

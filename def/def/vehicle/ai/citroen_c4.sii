@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.citroen_c4
+{
+	accessories[]: .citroen_c4.chassis
+	accessories[]: .citroen_c4.fwheel
+	accessories[]: .citroen_c4.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2000	
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .citroen_c4.chassis
+{
+	data_path: "/def/vehicle/ai/citroen_c4/chassis.sii"
+}
+
+vehicle_wheel_accessory: .citroen_c4.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .citroen_c4.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}

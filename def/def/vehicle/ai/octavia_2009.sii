@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.octavia_2009
+{
+	accessories[]: .octavia_2009.chassis
+	accessories[]: .octavia_2009.fwheel
+	accessories[]: .octavia_2009.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .octavia_2009.chassis
+{
+	data_path: "/def/vehicle/ai/octavia_2009/chassis.sii"
+}
+
+vehicle_wheel_accessory: .octavia_2009.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .octavia_2009.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}

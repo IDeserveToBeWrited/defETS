@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.xc90
+{
+	accessories[]: .xc90.chassis
+	accessories[]: .xc90.fwheel
+	accessories[]: .xc90.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2100
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .xc90.chassis
+{
+	data_path: "/def/vehicle/ai/xc90/chassis.sii"
+}
+
+vehicle_wheel_accessory: .xc90.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_20in.sii"
+}
+
+vehicle_wheel_accessory: .xc90.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_20in.sii"
+}

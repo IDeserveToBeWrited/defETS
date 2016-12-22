@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: hline_exuk.scania.streamline.interior
+{
+	name: "@@exclusive@@ UK"
+	price: 35760
+	unlock: 12
+	icon: "interior_streamline_exp_uk"
+
+	model:               "/vehicle/truck/scania_rcab_2009/interior/uk/model.pmd"
+  collision:           "/vehicle/truck/scania_rcab_2009/interior/uk/model.pmc"
+	animated_model:      "/vehicle/truck/scania_rcab_2009/interior/uk/anim.pmd"
+	look: stream1
+	variant: highline_exp
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/scania_streamline.sii"
+	gps_path:"/ui/gps.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .scania.streamline.pane.front
+	glass_panes[]: .scania.streamline.pane.close
+	glass_panes[]: .scania.streamline.pane.far
+	glass_panes[]: .scania.streamline.pane.top
+  
+	suitable_for[]: "highline.scania.streamline.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/scania_streamline/stock.pmd"
+	ext_variant: uk
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/scania.streamline/accessory/steering_w/exclusive.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.dat"
+}

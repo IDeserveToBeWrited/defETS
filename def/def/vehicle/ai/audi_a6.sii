@@ -1,0 +1,32 @@
+traffic_vehicle : traffic.audi_a6
+{
+	accessories[]: .audi_a6.chassis
+	accessories[]: .audi_a6.fwheel
+	accessories[]: .audi_a6.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .audi_a6.chassis
+{
+	data_path: "/def/vehicle/ai/audi_a6/chassis.sii"
+}
+
+vehicle_wheel_accessory: .audi_a6.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .audi_a6.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+

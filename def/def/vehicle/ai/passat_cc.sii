@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.passat_cc
+{
+	accessories[]: .passat_cc.chassis
+	accessories[]: .passat_cc.fwheel
+	accessories[]: .passat_cc.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .passat_cc.chassis
+{
+	data_path: "/def/vehicle/ai/passat_cc/chassis.sii"
+}
+
+vehicle_wheel_accessory: .passat_cc.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
+}
+
+vehicle_wheel_accessory: .passat_cc.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"
+}

@@ -1,0 +1,37 @@
+SiiNunit
+{
+accessory_interior_data: standard.iveco.hiway.interior
+{
+	name: "@@standard@@"
+	price: 17040
+	unlock: 0
+	icon: "interior_hiway"
+
+	model:          "/vehicle/truck/iveco_hiway/interior/model.pmd"
+	collision:      "/vehicle/truck/iveco_hiway/interior/model.pmc"
+	animated_model: "/vehicle/truck/iveco_hiway/interior/anim.pmd"
+	active_mirrors_part: a_s_mirrors
+	passive_mirrors_part: p_s_mirrors
+	look: look2
+	variant: standard
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/iveco_hiway.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .iveco.hiway.pane.front
+	glass_panes[]: .iveco.hiway.pane.close
+	glass_panes[]: .iveco.hiway.pane.far
+	glass_panes[]: .iveco.hiway.pane.top
+	ext_model: "/vehicle/truck/upgrade/ext_interior/iveco_hiway/stock.pmd"
+	ext_variant: default
+	ext_look: default
+
+	defaults[]: "/def/vehicle/truck/iveco.hiway/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

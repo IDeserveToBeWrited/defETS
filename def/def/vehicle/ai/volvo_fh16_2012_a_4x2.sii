@@ -1,0 +1,36 @@
+traffic_vehicle : traffic.vlv12_a4x2
+{
+	accessories[]: .vlv12_a4x2.chassis
+	accessories[]: .vlv12_a4x2.fwheel
+	accessories[]: .vlv12_a4x2.rwheel
+
+	max_speed: 90
+	attachable_trailer[]: ""
+
+	engine_torque: 3150
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	vehicle_mass: 15000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .vlv12_a4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/volvo.fh16_2012/a4x2.sii"
+}
+
+vehicle_wheel_accessory: .vlv12_a4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .vlv12_a4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

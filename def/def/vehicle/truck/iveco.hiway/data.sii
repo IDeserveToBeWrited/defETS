@@ -1,0 +1,49 @@
+SiiNunit
+{
+accessory_truck_data : vehicle.iveco.hiway	
+{
+	info[]: "@@brand_iveco@@"
+	info[]: "@@series_iveco_stralis@@"
+	info[]: "@@series_iveco_hiway@@"	# compact output uses 3rd line instead of 2nd if present
+
+	behind_camera: camera.behind.basic
+	interior_camera: camera.interior.iveco.hiway
+	interior_camera_oculus: camera.interior.iveco.hiway.oculus
+	bumper_camera: camera.bumper.basic
+	window_camera: camera.window.basic
+	cabin_camera: camera.cabin.basic
+	wheel_camera: camera.wheel.basic
+	top_camera: camera.top.basic
+	tv_camera: camera.tv.basic
+	wander_camera: camera.wander
+	debug_camera: camera.debug
+
+	fallback[]: "chassis|4x2.sii"
+	fallback[]: "cabin|hiway_cab.sii"
+	fallback[]: "interior|standard.sii"
+	fallback[]: "engine|cursor9_310hp.sii"
+	fallback[]: "transmission|12_speed.sii"
+	fallback[]: "f_tire|1.sii"
+	fallback[]: "f_disc|front_disc_02_matt_gray.sii"
+	fallback[]: "f_hub|front_hub_01.sii"
+	fallback[]: "f_nuts|front_nuts_01_steel.sii"
+	fallback[]: "r_tire|1.sii"
+	fallback[]: "r_disc|rear_disc_01_matt_gray.sii"
+	fallback[]: "r_hub|rear_hub_01.sii"
+	fallback[]: "r_nuts|rear_nuts_01_steel.sii"
+	fallback[]: "paint_job|color0.sii"
+	fallback[]: "head_light|standard.sii"
+	fallback[]: "accessory|steering_w/standard.sii"
+
+	#chassis
+	require[]: doorstep
+
+	#cabin
+	require[]: mirror
+	require[]: doorhndl
+	require[]: s_mirror
+
+	#interior
+	require[]: steering_w
+}
+}

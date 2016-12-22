@@ -1,0 +1,38 @@
+SiiNunit
+{
+accessory_interior_data: exclusive.man.tgx.interior
+{
+	name: "@@exclusive@@"
+	price: 31080
+	unlock: 12
+	icon: "interior_man_tgx_lux"
+
+	model:             "/vehicle/truck/man_tgx/interior/model.pmd"
+  collision:         "/vehicle/truck/man_tgx/interior/model.pmc"
+	animated_model:    "/vehicle/truck/man_tgx/interior/anim.pmd"
+	active_mirrors_part: a_e_mirrors
+	passive_mirrors_part: p_e_mirrors
+	look: look2
+	variant: exclusive
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/man_tgx.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .man.tgx.pane.front
+	glass_panes[]: .man.tgx.pane.close
+	glass_panes[]: .man.tgx.pane.far
+  
+    suitable_for[]: "xxl_cab.man.tgx.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/man_tgx/stock.pmd"
+	ext_variant: cab_hi_eu
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/man.tgx/accessory/steering_w/exclusive.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

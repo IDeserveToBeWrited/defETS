@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: standard.mercedes.actros2014.interior
+{
+	name: "@@standard@@ GigaSpace"
+	price: 23520
+	unlock: 12
+	icon: "interior_mercedes_actros_2014_std"
+
+	model:             "/vehicle/truck/mercedes_actros_2014/interior/model.pmd"
+  collision:         "/vehicle/truck/mercedes_actros_2014/interior/model.pmc"
+	animated_model:    "/vehicle/truck/mercedes_actros_2014/interior/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: default
+	variant: standard
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/mercedes_actros_2014.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .mercedes.actros2014.pane.front
+	glass_panes[]: .mercedes.actros2014.pane.close
+	glass_panes[]: .mercedes.actros2014.pane.far
+	glass_panes[]: .mercedes.actros2014.pane.top
+
+	suitable_for[]: "gigaspace.mercedes.actros2014.cabin"
+	suitable_for[]: "gs_8x4.mercedes.actros2014.cabin"
+	
+	ext_model: "/vehicle/truck/upgrade/ext_interior/mercedes_actros_2014/stock.pmd"
+	ext_variant: cab_hi_eu
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/mercedes.actros2014/accessory/steering_w/standard.sii"
+
+}
+@include "glass.dat"
+}

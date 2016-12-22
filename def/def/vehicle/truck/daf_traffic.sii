@@ -1,0 +1,76 @@
+traffic_vehicle : traffic.daf.xf
+{
+
+	accessories[]: .tdafxf.chassis
+	accessories[]: .tdafxf.cabin
+	accessories[]: .tdafxf.fwheel
+	accessories[]: .tdafxf.rwheel
+	accessories[]: .tdafxf.doorstep
+	accessories[]: .tdafxf.doorhndl
+	accessories[]: .tdafxf.mirror
+	accessories[]: .tdafxf.sunshld
+	accessories[]: .tdafxf.fmirror
+	accessories[]: .tdafxf.smirror
+
+	max_speed: 90
+	attachable_trailer[]: ""
+	type: truck
+
+	engine_torque: 2300
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	headlights_diffuse : (0.89, 0.88, 0.72)
+	headlights_offset : -0.8
+	headlights_pitch: -7
+	headlights_range: 20.0
+	headlights_angle: 95.0
+	headlights_aspect: 2
+	headlights_mask: "/material/custom/trucklight_mask_norm.tobj"
+	headlights_attenuation: "/material/custom/trucklight_attn.tobj"
+	headlights_intensity_min: 0.7
+	headlights_intensity_max: 2.5
+
+}
+
+vehicle_accessory : .tdafxf.chassis {
+	 data_path: "/def/vehicle/truck/daf.xf/chassis/4x2.sii"
+}
+
+vehicle_accessory : .tdafxf.cabin {
+	data_path: "/def/vehicle/truck/daf.xf/cabin/super_space_cab.sii"
+}
+
+vehicle_wheel_accessory : .tdafxf.fwheel {
+	 data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory : .tdafxf.rwheel {
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.doorstep {
+	data_path: "/def/vehicle/truck/daf.xf/accessory/doorstep/shape1.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.doorhndl {
+	data_path: "/def/vehicle/truck/daf.xf/accessory/doorhndl/shape1.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.mirror {
+	data_path: "/def/vehicle/truck/daf.xf/accessory/mirror/shape2.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.sunshld {
+	 data_path: "/def/vehicle/truck/daf.xf/accessory/sunshld/shape11.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.fmirror {
+	data_path: "/def/vehicle/truck/daf.xf/accessory/f_mirror/shape1.sii"
+}
+
+vehicle_addon_accessory : .tdafxf.smirror {
+	data_path: "/def/vehicle/truck/daf.xf/accessory/s_mirror/shape1.sii"
+}
+

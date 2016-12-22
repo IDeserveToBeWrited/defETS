@@ -1,0 +1,717 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+road_look : road.template0 {
+	name: 			"*Road 1 city minim scan temp"
+	template_right:		"/road_template/sc/road_1_city_minim_scan.pmd"
+
+
+	lanes_left[]:		traffic_lane.road.local
+	lanes_right[]:		traffic_lane.road.local
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template1 {
+	name: 			"*Road 1 scan temp"
+	template_right:		"/road_template/sc/road_1_scan.pmd"
+
+
+	lanes_left[]:		traffic_lane.road.local
+	lanes_right[]:		traffic_lane.road.local
+
+	allow_wrong_way[]:	"no_lines"
+	allow_wrong_way[]:	"lane_broken"
+	allow_wrong_way[]:	"broken_nor"
+	allow_wrong_way[]:	"broken_swe"
+	allow_wrong_way[]:	"no_lanes_swe"
+	allow_wrong_way[]:	"l_brok_sf"
+	allow_wrong_way[]:	"br_nor_sf"
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template2 {
+	name: 			"*Road 1 city narrow scan temp"
+	template_right:		"/road_template/sc/road_1_city_narrow_scan.pmd"
+
+	lanes_left[]:		traffic_lane.road.local
+	lanes_right[]:		traffic_lane.road.local
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template3 {
+	name: 			"*Road 1 plus 2 temp"
+	template_right:		"/road_template/sc/road_plus_2.pmd"
+	template_left:		"/road_template/sc/road_1_plus.pmd"
+
+	road_offset: 0.85
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: shldr_1m
+	compatible_edges_left[]: sh_curb_0_3m
+	compatible_edges_left[]: sw_3m_a
+	compatible_edges_left[]: sw_3m_b
+	compatible_edges_left[]: sw_3m_c
+	compatible_edges_left[]: center_np
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template4 {
+	name: 			"*Road 2 plus 1 temp"
+	template_right:		"/road_template/sc/road_1_plus.pmd"
+	template_left:		"/road_template/sc/road_plus_2.pmd"
+
+	road_offset: 0.85
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: shldr_1m
+	compatible_edges_left[]: sh_curb_0_3m
+	compatible_edges_left[]: sw_3m_a
+	compatible_edges_left[]: sw_3m_b
+	compatible_edges_left[]: sw_3m_c
+	compatible_edges_left[]: center_np
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template5 {
+	name: 			"*Road 2 city narrow scan temp"
+	template_right:		"/road_template/sc/road_2_city_narrow_scan.pmd"
+	template_left:		"/road_template/sc/road_2_city_narrow_scan.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: shldr_1m
+	compatible_edges_left[]: sh_curb_0_3m
+	compatible_edges_left[]: sw_3m_a
+	compatible_edges_left[]: sw_3m_b
+	compatible_edges_left[]: sw_3m_c
+	compatible_edges_left[]: center_np
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template6 {
+	name: 			"*Road 2 city narrow np scan temp"
+	template_right:		"/road_template/sc/road_2_city_narrow_np_scan.pmd"
+	template_left:		"/road_template/sc/road_2_city_narrow_np_scan.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: shldr_1m
+	compatible_edges_left[]: sh_curb_0_3m
+	compatible_edges_left[]: sw_3m_a
+	compatible_edges_left[]: sw_3m_b
+	compatible_edges_left[]: sw_3m_c
+	compatible_edges_left[]: center_np
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template7 {
+	name: 			"*Road 1 city enter scan temp"
+	template_right:		"/road_template/sc/road_1_city_enter_scan.pmd"
+
+	lanes_left[]:		traffic_lane.road.local
+	lanes_right[]:		traffic_lane.road.local
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np		
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template8 {
+	name: 			"*Road sidewalk scan temp"
+	template_right:		"/road_template/sc/sidewalk_road_scan.pmd"
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: center_np	
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template9 {
+	name: 			"*Hw exit temp"
+	template_right:		"/road_template/hw_exit.pmd"
+
+
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		2.5
+}
+
+road_look : road.template10 {
+	name: 			"*Hw2 exit one way temp"
+	template_right:		"/road_template/hw2_exit_one_way.pmd"
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		3.5
+}
+
+road_look : road.template11 {
+	name: 			"rail1 temp"
+	template_right:		"/road_template/rail1.pmd"
+
+	compatible_edges_right[]: shldr_rail
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template12 {
+	name: 			"rail double temp"
+	template_right:		"/road_template/rail1_double.pmd"
+	template_left:		"/road_template/rail1_double.pmd"
+
+	road_offset: 1.0
+
+	compatible_edges_left[]: shldr_rail
+	compatible_edges_right[]: shldr_rail
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.template13 {
+	name: 			"*Road 2 city narrow np hw scan temp"
+	template_right:		"/road_template/sc/road_2_city_narrow_np_scan.pmd"
+	template_left:		"/road_template/sc/road_2_city_narrow_np_scan.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: shldr_1m
+	compatible_edges_left[]: sh_curb_0_3m
+	compatible_edges_left[]: sw_3m_a
+	compatible_edges_left[]: sw_3m_b
+	compatible_edges_left[]: sw_3m_c
+	compatible_edges_left[]: center_np
+	compatible_edges_right[]: shldr_1m
+	compatible_edges_right[]: sh_curb_0_3m
+	compatible_edges_right[]: sw_3m_a
+	compatible_edges_right[]: sw_3m_b
+	compatible_edges_right[]: sw_3m_c
+	compatible_edges_right[]: center_np
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+
+}
+
+#########################################################################
+#           _____  _      _____   ______								#
+#          |  __ \| |    / ____| |  ____|								#
+#          | |  | | |   | |      | |__ _ __ __ _ _ __   ___ ___			#
+#          | |  | | |   | |      |  __| '__/ _` | '_ \ / __/ _ \		#
+#          | |__| | |___| |____  | |  | | | (_| | | | | (_|  __/		#
+#          |_____/|______\_____| |_|  |_|  \__,_|_| |_|\___\___|		#
+#																		#
+#########################################################################
+
+road_look : road.template14 {
+	name: 			"fr hw 2 lanes one way tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_one_way.pmd"
+
+	template_repeat: 3
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	
+	allow_wrong_way[]:	"default"
+
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45	
+
+}
+
+road_look : road.template14b {
+	name: 			"fr hw 2 lanes one way playeronly tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_one_way.pmd"
+
+	template_repeat: 3
+
+	lanes_right[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45	
+
+}
+
+road_look : road.template15 {
+	name: 			"fr hw 2 lanes 2m offset tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_two_ways.pmd"
+	template_left:      "/road_template/fr/fr_hw_2_lanes_two_ways.pmd"
+
+	template_repeat: 3
+
+	road_offset: 2
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: fr_sh_45
+	compatible_edges_left[]: fr_drain_45
+	compatible_edges_left[]: fr_green_45
+	compatible_edges_left[]: fr_red_45
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45
+	compatible_edges_right[]: fr_green_45
+	compatible_edges_right[]: fr_red_45
+}
+
+road_look : road.template16 {
+	name: 			"fr hw 3 lanes one way tmpl"
+	template_right:		"/road_template/fr/fr_hw_3_lanes_one_way.pmd"
+
+	template_repeat: 3
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45	
+}
+
+road_look : road.template17 {
+	name: 			"fr hw 3 lanes 2m offset tmpl"
+	template_right:		"/road_template/fr/fr_hw_3_lanes_two_ways.pmd"
+	template_left:		"/road_template/fr/fr_hw_3_lanes_two_ways.pmd"
+
+	template_repeat: 3
+
+	road_offset: 2
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: fr_sh_45
+	compatible_edges_left[]: fr_drain_45
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45
+}
+
+road_look : road.template18 {
+	name: 			"fr exit one lane tmpl"
+	template_right:		"/road_template/fr/fr_exit_one_lane.pmd"
+
+	template_repeat: 2
+
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: fr_sh_30
+}
+
+road_look : road.template19 {
+	name: 			"fr hw2 exit one lane tmpl"
+	template_right:		"/road_template/fr/fr_hw2_exit_one_lane.pmd"
+
+	template_repeat: 2
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: fr_sh_30
+}
+
+road_look : road.template20 {
+	name: 			"fr hw3 exit one lane tmpl"
+	template_right:		"/road_template/fr/fr_hw3_exit_one_lane.pmd"
+
+	template_repeat: 2
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: fr_sh_30
+}
+
+road_look : road.template21 {
+	name: 				"fr road1 hw 1m offset tmpl"
+	template_right:		"/road_template/fr/fr_exit_one_lane.pmd"
+	template_left:		"/road_template/fr/fr_exit_one_lane.pmd"
+
+	template_repeat: 2
+
+	road_offset: 6.5
+
+	lanes_left[]:		traffic_lane.road.motorway.low_density
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	lane_offsets_left[]:	(-4.5, 0.0)
+	lane_offsets_right[]:	(-4.5, 0.0)
+
+	compatible_edges_left[]: fr_sh_30
+	compatible_edges_right[]: fr_sh_30
+}
+
+road_look : road.template22 {
+	name: 				"fr road 1 tmpl"
+	template_right:		"/road_template/fr/fr_road_1_narrow.pmd"
+
+	lanes_left[]:		traffic_lane.road.local
+	lanes_right[]:		traffic_lane.road.local
+
+	allow_wrong_way[]:	"no_lanes"
+	allow_wrong_way[]:	"broken_fr"
+	allow_wrong_way[]:	"broken"
+
+	compatible_edges_right[]: fr_sw_3m_a
+	compatible_edges_right[]: fr_sw_3m_b
+	compatible_edges_right[]: fr_sw_3m_c
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+}
+
+road_look : road.template23 {
+	name: 				"fr hw exit one lane tmpl"
+	template_right:		"/road_template/fr/fr_hw_exit_one_lane.pmd"
+
+	template_repeat: 2
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]:	fr_sh_30
+}
+
+road_look : road.template26 {
+	name: 			"fr road 1 minim tmpl"
+	template_right:		"/road_template/fr/fr_road_1_minim.pmd"
+
+	lanes_left[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.no_vehicles
+
+	lane_offsets_left[]:	(-1, 0.0)
+	lane_offsets_right[]:	(-1, 0.0)
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+	compatible_edges_right[]: fr_sw_3m_a
+	compatible_edges_right[]: fr_sw_3m_b
+	compatible_edges_right[]: fr_sw_3m_c
+}
+
+road_look : road.template27 {
+	name: 			"fr road 1 enter tmpl"
+	template_right:		"/road_template/fr/fr_road_1_enter.pmd"
+
+	lanes_left[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.no_vehicles
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+	compatible_edges_right[]: fr_sw_3m_a
+	compatible_edges_right[]: fr_sw_3m_b
+	compatible_edges_right[]: fr_sw_3m_c
+}
+
+road_look : road.template28 {
+	name: 			"fr road 2 narrow tmpl"
+	template_right:		"/road_template/fr/fr_road_2_narrow.pmd"
+	template_left:		"/road_template/fr/fr_road_2_narrow.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: fr_sw_3m_a
+	compatible_edges_left[]: fr_sw_3m_b
+	compatible_edges_left[]: fr_sw_3m_c
+	compatible_edges_left[]: fr_sh_15
+	compatible_edges_left[]: fr_curb_15
+	compatible_edges_right[]: fr_sw_3m_a
+	compatible_edges_right[]: fr_sw_3m_b
+	compatible_edges_right[]: fr_sw_3m_c
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+}
+
+road_look : road.template29 {
+	name: 			"fr gas road 1 tmpl"
+	template_right:		"/road_template/fr/fr_gas_road_1.pmd"
+
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+}
+
+road_look : road.template30 {
+	name: 			"fr hw 2 lanes 5m offset tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_two_ways.pmd"
+	template_left:      "/road_template/fr/fr_hw_2_lanes_two_ways.pmd"
+
+	template_repeat: 3
+
+	road_offset: 5
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: fr_sh_45
+	compatible_edges_left[]: fr_drain_45
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45
+}
+
+road_look : road.template32 {
+	name: 			"fr road 1 one way tmpl"
+	template_right:		"/road_template/fr/fr_road_1_one_way.pmd"
+
+	lanes_right[]:		traffic_lane.road.local
+
+	lane_offsets_right[]:   (2.25, 0.0)
+
+	compatible_edges_right[]: fr_sh_15
+}
+
+road_look : road.template33 {
+	name: 			"fr tram 1"
+	template_right:		"/road_template/fr/fr_tram_1.pmd"
+	template_left:		"/road_template/fr/fr_tram_1.pmd"
+
+	road_offset: 0.8
+
+	lanes_left[]:           traffic_lane.rail.tram
+	lanes_right[]:          traffic_lane.rail.tram
+
+	lane_offsets_left[]:   (-0.99, 0.0)
+	lane_offsets_right[]:   (-0.99, 0.0)
+
+	compatible_edges_left[]: fr_tram_sh
+	compatible_edges_right[]: fr_tram_sh
+}
+
+road_look : road.template34 {
+	name: 			"fr road 1 minim village 1 tmpl"
+	template_right:		"/road_template/fr/fr_road_1_minim_village_1.pmd"
+
+	lanes_left[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.no_vehicles
+
+	lane_offsets_left[]:	(-1, 0.0)
+	lane_offsets_right[]:	(-1, 0.0)
+
+	allow_wrong_way[]:	""
+
+	compatible_edges_right[]: fr_sh_vill_1
+}
+
+road_look : road.template37 {
+	name: 			"fr sidewalk road tmpl"
+	template_right:		"/road_template/fr/fr_sidewalk_road.pmd"
+
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_curb_15
+}
+
+road_look : road.template98 {
+	name: 				"rail double AI 01 tmpl"
+	template_right:		"/road_template/rail1_double.pmd"
+	template_left:		"/road_template/rail1_double.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:			traffic_lane.rail.train
+	lanes_right[]:			traffic_lane.rail.train
+
+	lane_offsets_left[]:	(0.0, 0.5)
+	lane_offsets_right[]:	(0.0, 0.5)
+
+	compatible_edges_right[]:	shldr_rail
+	compatible_edges_left[]:	shldr_rail
+}
+
+road_look : road.template98b {
+	name: 			"rail double AI 01 TGV tmpl"
+	template_right:		"/road_template/rail1_double.pmd"
+	template_left:		"/road_template/rail1_double.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:           traffic_lane.rail.train.high_speed
+	lanes_right[]:          traffic_lane.rail.train.high_speed
+
+	lane_offsets_left[]:   (0.0, 0.5)
+	lane_offsets_right[]:   (0.0, 0.5)
+	
+	compatible_edges_right[]: shldr_rail
+	compatible_edges_left[]: shldr_rail
+
+}
+
+road_look : road.template99 {
+	name: 				"rail AI 01 tmpl"
+	template_right:		"/road_template/rail1.pmd"
+
+	lanes_right[]:		traffic_lane.rail.train
+
+	lane_offsets_right[]:		(0.0, 0.5)
+
+	compatible_edges_right[]:	shldr_rail
+}
+
+road_look : road.template36 {
+	name: 			"fr hw 2 lanes one way2 tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_one_way2.pmd"
+	
+	template_repeat: 3
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: fr_sh_45
+}
+
+road_look : road.template994 {
+	name: 			"fr hw 3 lanes one way br 30 tmpl"
+	template_right:		"/road_template/fr/fr_hw_3_lanes_one_way_br_30.pmd"
+
+	template_repeat: 2
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: fr_sh_30
+}
+
+}

@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.p3008
+{
+	accessories[]: .p3008.chassis
+	accessories[]: .p3008.fwheel
+	accessories[]: .p3008.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+	vehicle_mass: 2000
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p3008.chassis
+{
+	data_path: "/def/vehicle/ai/p3008/chassis.sii"
+}
+
+vehicle_wheel_accessory: .p3008.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .p3008.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}

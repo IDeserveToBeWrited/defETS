@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.punto
+{
+	accessories[]: .punto.chassis
+	accessories[]: .punto.fwheel
+	accessories[]: .punto.rwheel
+
+	max_speed: 150
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 1500
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .punto.chassis
+{
+	data_path: "/def/vehicle/ai/punto/chassis.sii"
+}
+
+vehicle_wheel_accessory: .punto.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in.sii"
+}
+
+vehicle_wheel_accessory: .punto.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in.sii"
+}

@@ -1,0 +1,29 @@
+SiiNunit
+{
+accessory_addon_int_data : hulladoll.iveco.stralis.toystand
+{
+	name: "Hula Hula"
+	price: 135
+	unlock: 0
+	icon: "hulladoll.dlc_toys"
+   
+	interior_model:	"/vehicle/truck/upgrade/interior_decors/toystand/hulladoll_base.dlc_toys.pmd"
+	
+	data[]: .hulladoll.phys_data
+}
+
+physics_toy_data : .hulladoll.phys_data
+{
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/hulladoll_top.dlc_toys.pmd"
+	phys_model_coll:	"/vehicle/truck/upgrade/interior_decors/toystand/hulladoll_top.dlc_toys.pmc"
+	
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.4			# toy mass
+	locator_hook_offset:	(0.0f, 0.09f, 0.0f)	# offset of connection point on hook against toy locator
+  
+	# definitions applied only to toys with joint
+	angular_stiffness:	(500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping:	(10.0, 10.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude:	(6.0, 10.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

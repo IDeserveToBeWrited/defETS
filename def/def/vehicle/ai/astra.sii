@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.astra
+{
+	accessories[]: .astra.chassis
+	accessories[]: .astra.fwheel
+	accessories[]: .astra.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 1500
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .astra.chassis
+{
+	data_path: "/def/vehicle/ai/astra/chassis.sii"
+}
+
+vehicle_wheel_accessory: .astra.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_2.sii"
+}
+
+vehicle_wheel_accessory: .astra.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_2.sii"
+}

@@ -1,0 +1,2605 @@
+SiiNunit
+{
+
+################################## Steering ###################################
+
+# Wheels
+
+default_input_entry : input.steer.fanatec.base
+{
+	group: 1
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.g29
+{
+	group: 1
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.g920
+{
+	group: 1
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.g27
+{
+	group: 1
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.g25
+{
+	group: 1
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.driving.force.gt
+{
+	group: 1
+	weight: 600
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29A046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.gembird.shockforce.m
+{
+	group: 1
+	weight: 590
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{00060079-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.momo.racing.wheel
+{
+	group: 1
+	weight: 510
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{CA03046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.ms.sidewinder.ff.wheel
+{
+	group: 1
+	weight: 500
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0034045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+}
+
+# Gamepads
+
+default_input_entry : input.steer.xinput.gamepad
+{
+	group: 1
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.steam.gamepad
+{
+	group: 1
+	weight: 165
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{11FF28DE-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.x360.gamepad
+{
+	group: 1
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+# XB1 controller - new win10 driver, separate axes for triggers
+default_input_entry : input.steer.xbone.gamepad
+{
+	group: 1
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+# XB1 controller - new id, but old behaviour? Seen on win7
+default_input_entry : input.steer.xbone7.gamepad
+{
+	group: 1
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+# Original XB1 controller id, the usual dinput setup with left/right triggers sharing one axis
+default_input_entry : input.steer.xone.gamepad
+{
+	group: 1
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.rumblepad.2.usb
+{
+	group: 1
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.f710.x
+{
+	group: 1
+	weight: 140
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.f710.di
+{
+	group: 1
+	weight: 130
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C219046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.thrustmaster.dual.analog.3
+{
+	group: 1
+	weight: 110
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B315044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.genius.maxfire.grandias.12
+{
+	group: 1
+	weight: 100
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+# Joystics
+
+default_input_entry : input.steer.saitek.x52.pro.flight
+{
+	group: 1
+	weight: 85
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076206A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x" # Has precise positioning so absolute mode is fine.
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.wingman.force.3d
+{
+	group: 1
+	weight: 81
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C283046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.logitech.attack.3.usb
+{
+	group: 1
+	weight: 80
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C214046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.genius.maxfighter.f17
+{
+	group: 1
+	weight: 79
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B03B0583-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+# Unusuall
+
+# The flight pedals are not ideal for normal steering however they can allow people with hand related
+# disabilities to drive in the game.
+
+default_input_entry : input.steer.saitek.pro.flight.combat.rudder.pedals
+{
+	group: 1
+	weight: 50
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076406A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x" # Pressing left pedal forward will turn to the left like in the plane.
+}
+
+# Default fallback
+
+default_input_entry : input.steer.generic.joy.absolute
+{
+	group: 1
+	weight: 10
+
+	names[]: "<joy>"
+	names[]: "<joy>.x"
+	names[]: "!<st_gamepad>"
+
+	configs[]: "steer.absolute <1> x"
+}
+
+default_input_entry : input.steer.generic.joy.relative
+{
+	group: 1
+	weight: 9
+
+	names[]: "<joy>"
+	names[]: "<joy>.x"
+	names[]: "<st_gamepad>"
+
+	configs[]: "steer.relative <1> x"
+}
+
+default_input_entry : input.steer.default
+{
+	group: 1
+	weight: 1
+
+	names[]: "<no_steer_device>"
+
+	configs[]: "steer.absolute joy x"
+}
+
+############################ Acceleration/braking #############################
+
+# Driving pedals
+
+default_input_entry : input.accelerate.bodnar.g27
+{
+	group: 10
+	weight: 2002
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "gt(<1>.rx?0, 0.25)"
+
+	configs[]: "accelerate <1> rx 1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.brake.bodnar.g27
+{
+	group: 10
+	weight: 2002
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(<1>.ry?0, -0.25)"
+
+	configs[]: "brake <1> ry 0"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.accelerate.bodnar.unknown
+{
+	group: 10
+	weight: 2001
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(<1>.rx?0, -0.25)"
+
+	configs[]: "accelerate <1> rx 0"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.brake.bodnar.unknown
+{
+	group: 10
+	weight: 2001
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "gt(<1>.ry?0, 0.25)"
+
+	configs[]: "brake <1> ry 1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.accelerate.bodnar.default # Either problem with value detection or some nonstandard input, assume G27.
+{
+	group: 10
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate <1> rx 1"
+}
+
+default_input_entry : input.brake.bodnar.default # Either problem with value detection or some nonstandard input, assume G27.
+{
+	group: 10
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "brake <1> ry 0"
+}
+
+default_input_entry : input.pedals.fanatec.base
+{
+	group: 10
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.g29.separate
+{
+	group: 10
+	weight: 1022
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.y?0), abs(<1>.rz?0)), 0.25)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+# If the shifter is not connected to the G29, the joystick initially returns zero
+# values of all inputs until any movement is done instead of just temporarily after
+# device creation. This is probably caused by missing noise from the internal axes
+# used to implement the shifter. Use the clutch input to detect this scenario and
+# assume the more advanced separate pedals in that case.
+
+default_input_entry : input.pedals.logitech.g29.detection.problem
+{
+	group: 10
+	weight: 1021
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(abs(<1>.sl1?1), 0.1)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "detection.problem"
+}
+
+default_input_entry : input.pedals.logitech.g29.combined
+{
+	group: 10
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.g920.separate
+{
+	group: 10
+	weight: 1012
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.sl1?0), abs(<1>.y?0)), 0.25)"
+
+	configs[]: "accelerate <1> sl1 1"
+	configs[]: "brake <1> y 1"
+	configs[]: "pedals.configured"
+}
+
+# If the shifter is not connected to the G920 then same issue as with G29 happens.
+# Do the same, just use different axes.
+
+default_input_entry : input.pedals.logitech.g920.detection.problem
+{
+	group: 10
+	weight: 1011
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(abs(<1>.rz?1), 0.1)"
+
+	configs[]: "accelerate <1> sl1 1"
+	configs[]: "brake <1> y 1"
+	configs[]: "detection.problem"
+}
+
+default_input_entry : input.pedals.logitech.g920.combined
+{
+	group: 10
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.g27.separate
+{
+	group: 10
+	weight: 1002
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.y?0), abs(<1>.rz?0)), 0.25)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+# If the shifter is not connected to the G27 then same issue as with G29 happens.
+# Do the same, just use different axes.
+
+default_input_entry : input.pedals.logitech.g27.detection.problem
+{
+	group: 10
+	weight: 1001
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(abs(<1>.sl2?1), 0.1)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "detection.problem"
+}
+
+default_input_entry : input.pedals.logitech.g27.combined
+{
+	group: 10
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.g25.separate
+{
+	group: 10
+	weight: 992
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.y?0), abs(<1>.rz?0)), 0.25)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+# If the shifter is not connected to the G25 then same issue as with G29 happens.
+# Do the same, just use different axes.
+
+default_input_entry : input.pedals.logitech.g25.detection.problem
+{
+	group: 10
+	weight: 991
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(abs(<1>.sl2?1), 0.1)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "detection.problem"
+}
+
+default_input_entry : input.pedals.logitech.g25.combined
+{
+	group: 10
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.driving.force.gt.separate
+{
+	group: 10
+	weight: 601
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29A046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.y?0), abs(<1>.rz?0)), 0.25)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.driving.force.gt.combined
+{
+	group: 10
+	weight: 600
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29A046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.gembird.shockforce.m
+{
+	group: 10
+	weight: 590
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{00060079-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.momo.racing.wheel.separate
+{
+	group: 10
+	weight: 511
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{CA03046D-0000-0000-0000-504944564944}'"
+	conditions[]: "gte(max(abs(<1>.y?0), abs(<1>.rz?0)), 0.25)"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.momo.racing.wheel.combined
+{
+	group: 10
+	weight: 510
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{CA03046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.ms.sidewinder.ff.wheel
+{
+	group: 10
+	weight: 500
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0034045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate <1> y 1"
+	configs[]: "brake <1> rz 1"
+	configs[]: "pedals.configured"
+}
+
+# Flight pedals
+
+default_input_entry : input.pedals.saitek.pro.flight.combat.rudder.pedals
+{
+	group: 10
+	weight: 200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076406A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate <1> y 0"
+	configs[]: "brake <1> x 0"
+}
+
+# Gamepads
+
+default_input_entry : input.pedals.xinput.gamepad
+{
+	group: 10
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	configs[]: "traccelerate <1> rt 0"
+	configs[]: "trbrake <1> lt 0"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.steam.gamepad
+{
+	group: 10
+	weight: 165
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{11FF28DE-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> z"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.x360.gamepad
+{
+	group: 10
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> z"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.xbone.gamepad
+{
+	group: 10
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate <1> rz 0"
+	configs[]: "brake <1> z 0"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.xbone7.gamepad
+{
+	group: 10
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> z"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.xone.gamepad
+{
+	group: 10
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> z"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.rumblepad.2.usb
+{
+	group: 10
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.f710.x
+{
+	group: 10
+	weight: 140
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.logitech.f710.di
+{
+	group: 10
+	weight: 130
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.thrustmaster.dual.analog.3
+{
+	group: 10
+	weight: 110
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B315044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.genius.maxfire.grandias.12
+{
+	group: 10
+	weight: 100
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+# Joystick throttles
+
+default_input_entry : input.pedals.saitek.x52.pro.flight
+{
+	group: 10
+	weight: 85
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076206A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> z"
+}
+
+default_input_entry : input.pedals.logitech.wingman.force.3d
+{
+	group: 10
+	weight: 81
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C283046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> sl1"
+}
+
+# Joystick axes
+
+default_input_entry : input.pedals.logitech.attack.3.usb
+{
+	group: 10
+	weight: 80
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C214046D-0000-0000-0000-504944564944}'aaaaaa"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.genius.maxfighter.f17
+{
+	group: 10
+	weight: 79
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B03B0583-0000-0000-0000-504944564944}'"
+
+	configs[]: "accelerate.brake <1> y"
+	configs[]: "pedals.configured"
+}
+
+# Default fallback
+
+default_input_entry : input.pedals.generic.joy
+{
+	group: 10
+	weight: 50
+
+	names[]: "<joy>"
+	names[]: "<joy>.y"
+
+	configs[]: "accelerate.brake <1> y"
+}
+
+default_input_entry : input.pedals.default
+{
+	group: 10
+	weight: 1
+
+	names[]: "<no_steer_device>"
+
+	configs[]: "accelerate.brake joy y"
+}
+
+################################### Clutch ####################################
+
+default_input_entry : input.clutch.bodnar.g27
+{
+	group: 20
+	weight: 2002
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "lt(<1>.rz?0, -0.25)"
+
+	configs[]: "clutch <1> rz 0"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.bodnar.unknown
+{
+	group: 20
+	weight: 2001
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+	conditions[]: "gt(<1>.rz?0, 0.25)"
+
+	configs[]: "clutch <1> rz 1"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.bodnar.default # Either problem with value detection or some nonstandard input, assume G27.
+{
+	group: 20
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> rz 0"
+}
+
+default_input_entry : input.clutch.fanatec.base
+{
+	group: 20
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> sl1 1"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.logitech.g29
+{
+	group: 20
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> sl1 1"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.logitech.g920
+{
+	group: 20
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> rz 1"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.logitech.g27
+{
+	group: 20
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> sl2 1"
+	configs[]: "clutch.configured"
+}
+
+default_input_entry : input.clutch.logitech.g25
+{
+	group: 20
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutch <1> sl2 1"
+	configs[]: "clutch.configured"
+}
+
+# Default fallback
+
+default_input_entry : input.clutch.default
+{
+	group: 20
+	weight: 1
+
+	configs[]: "clutch.default"
+}
+
+############################### Looking around ################################
+
+# Wheels
+
+default_input_entry : input.look.fanatec.base
+{
+	group: 30
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 1 ry 0"
+}
+
+# Gamepads
+
+default_input_entry : input.look.xinput.gamepad
+{
+	group: 30
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	configs[]: "look.generic <1> rx 0 ry 0"
+}
+
+default_input_entry : input.look.x360.gamepad
+{
+	group: 30
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 0 ry 0"
+}
+
+default_input_entry : input.look.xbone.gamepad
+{
+	group: 30
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 0 ry 0"
+}
+
+default_input_entry : input.look.xbone7.gamepad
+{
+	group: 30
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 0 ry 0"
+}
+
+default_input_entry : input.look.xone.gamepad
+{
+	group: 30
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 0 ry 0"
+}
+
+default_input_entry : input.look.logitech.rumblepad.2.usb
+{
+	group: 30
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.gamepad <1>"
+}
+
+default_input_entry : input.look.logitech.f710.x
+{
+	group: 30
+	weight: 140
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> rx 1 ry 0"
+}
+
+default_input_entry : input.look.logitech.f710.di
+{
+	group: 30
+	weight: 130
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C219046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.gamepad <1>"
+}
+
+default_input_entry : input.look.thrustmaster.dual.analog.3
+{
+	group: 30
+	weight: 110
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B315044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.thrustmaster.dual.analog <1>"
+}
+
+default_input_entry : input.look.genius.maxfire.grandias.12
+{
+	group: 30
+	weight: 100
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.gamepad <1>"
+}
+
+# Joysticks
+
+default_input_entry : input.look.saitek.x52.pro.flight
+{
+	group: 30
+	weight: 85
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076206A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.pov <1> <1>"
+}
+
+default_input_entry : input.look.logitech.wingman.force.3d
+{
+	group: 30
+	weight: 81
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C283046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.pov <1> <1>"
+}
+
+# Unusuall
+
+default_input_entry : input.look.saitek.pro.gamer.command.unit
+{
+	group: 30
+	weight: 20
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{80C006A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.xy <1>"
+}
+
+# Default fallback
+
+default_input_entry : input.look.default
+{
+	group: 30
+	weight: 1
+
+	configs[]: "look.default"
+}
+
+############################# Gear up/down buttons ############################
+
+# Formule padle.
+
+default_input_entry : input.gearbox.updown.fanatec.base
+{
+	group: 40
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 5 6"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.g29
+{
+	group: 40
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 5 6"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.g920
+{
+	group: 40
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 5 6"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.g27
+{
+	group: 40
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 5 6"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.g25
+{
+	group: 40
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 5 6"
+	configs[]: "gearupdown.configured"
+}
+
+# Physical autocentering lever.
+
+default_input_entry : input.gearbox.updown.logitech.driving.force.gt
+{
+	group: 40
+	weight: 600
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29A046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 14 13"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.gembird.shockforce.m
+{
+	group: 40
+	weight: 590
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{00060079-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 3 2"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.momo.racing.wheel
+{
+	group: 40
+	weight: 510
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{CA03046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 10 9"
+	configs[]: "gearupdown.configured"
+}
+
+# Normal buttons.
+
+# We do not setup gear shifting by default for XInput gamepads,
+# most people won't use it and the limited amount of buttons are better used elsewhere
+
+default_input_entry : input.gearbox.updown.xinput.gamepad
+{
+	group: 40
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	configs[]: "gearupdown.default"
+}
+
+default_input_entry : input.gearbox.updown.x360.gamepad
+{
+	group: 40
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.xbone.gamepad
+{
+	group: 40
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.xbone7.gamepad
+{
+	group: 40
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.xone.gamepad
+{
+	group: 40
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.rumblepad.2.usb
+{
+	group: 40
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 6 5"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.f710.x
+{
+	group: 40
+	weight: 140
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 6 5"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.logitech.f710.di
+{
+	group: 40
+	weight: 130
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C219046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 6 5"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.thrustmaster.dual.analog.3
+{
+	group: 40
+	weight: 110
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B315044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 7 5"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.genius.maxfire.grandias.12
+{
+	group: 40
+	weight: 90
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown <1> 6 5"
+	configs[]: "gearupdown.configured"
+}
+
+# Default fallback
+
+default_input_entry : input.gearbox.updown.default
+{
+	group: 40
+	weight: 1
+
+	configs[]: "gearupdown.default"
+}
+
+########################### Automatic drive selection #########################
+
+# Position keeping lever.
+
+default_input_entry : input.gearbox.drive.bodnar.hshifter
+{
+	group: 50
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10A11DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 3 4"
+}
+
+default_input_entry : input.gearbox.drive.thrustmaster.hshifter
+{
+	group: 50
+	weight: 1900
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B660044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 3 4"
+}
+
+default_input_entry : input.gearbox.drive.fanatec.base
+{
+	group: 50
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 16 17"
+}
+
+default_input_entry : input.gearbox.drive.logitech.g29
+{
+	group: 50
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 15 16"
+}
+
+default_input_entry : input.gearbox.drive.logitech.g920
+{
+	group: 50
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 15 16"
+}
+
+default_input_entry : input.gearbox.drive.logitech.g27
+{
+	group: 50
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 11 12"
+}
+
+default_input_entry : input.gearbox.drive.logitech.g25
+{
+	group: 50
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "drive.positions <1> 11 12"
+}
+
+# Default fallback
+
+default_input_entry : input.gearbox.drive.default
+{
+	group: 50
+	weight: 1
+
+	configs[]: "drive.gearupdown"
+}
+
+############################## H-shifter setup ################################
+
+# Physical lever positions.
+
+default_input_entry : input.gearbox.hshifter.bodnar
+{
+	group: 60
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10A11DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.bodnar <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.thrustmaster
+{
+	group: 60
+	weight: 1900
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B660044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.thrustmaster <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.fanatec.base
+{
+	group: 60
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.fanatec <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.logitech.g29
+{
+	group: 60
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.g29 <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.logitech.g920
+{
+	group: 60
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.g920 <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.logitech.g27
+{
+	group: 60
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.g27 <1>"
+	configs[]: "hshifter.configured"
+}
+
+default_input_entry : input.gearbox.hshifter.logitech.g25
+{
+	group: 60
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.g27 <1>"
+	configs[]: "hshifter.configured"
+}
+
+# Default fallback
+
+default_input_entry : input.gearbox.hshifter.default
+{
+	group: 60
+	weight: 1
+
+	configs[]: "hshifter.g27 joy"
+}
+
+
+############################## H-shifter switches setup ################################
+
+# Hshifter gear switches (range, splitter).
+
+default_input_entry : input.gearbox.hshifter.switch.bodnar
+{
+	group: 65
+	weight: 2000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10A11DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 10 11"
+}
+
+default_input_entry : input.gearbox.hshifter.switch.csio_skrs
+{
+	group: 65
+	weight: 1901
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{034316C0-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch.csio_skrs <1>"
+}
+
+
+default_input_entry : input.gearbox.hshifter.switch.fanatec.base
+{
+	group: 65
+	weight: 1200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 3 2"
+}
+
+default_input_entry : input.gearbox.hshifter.switch.logitech.g29
+{
+	group: 65
+	weight: 1020
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 9 10"
+}
+
+default_input_entry : input.gearbox.hshifter.switch.logitech.g920
+{
+	group: 65
+	weight: 1010
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 7 9"
+}
+
+default_input_entry : input.gearbox.hshifter.switch.logitech.g27
+{
+	group: 65
+	weight: 1000
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 1 2"
+}
+
+default_input_entry : input.gearbox.hshifter.switch.logitech.g25
+{
+	group: 65
+	weight: 990
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch <1> 1 2"
+}
+
+# Default fallback
+
+default_input_entry : input.gearbox.hshifter.switch.default
+{
+	group: 65
+	weight: 1
+
+	configs[]: "hshifter.switch.default"
+}
+
+
+############################ Menu entry for gamepad-like devices #############################
+
+# Gamepads
+
+default_input_entry : input.menu.xinput.gamepad
+{
+	group: 70
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+    # b12 = start
+	configs[]: "menu <1> 12"
+	configs[]: "ui_back <1> 12"
+}
+
+default_input_entry : input.menu.x360.gamepad
+{
+	group: 70
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 8"
+	configs[]: "ui_back <1> 8"
+}
+
+default_input_entry : input.menu.xbone.gamepad
+{
+	group: 70
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 8"
+	configs[]: "ui_back <1> 8"
+}
+
+default_input_entry : input.menu.xbone7.gamepad
+{
+	group: 70
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 8"
+	configs[]: "ui_back <1> 8"
+}
+
+default_input_entry : input.menu.xone.gamepad
+{
+	group: 70
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 8"
+	configs[]: "ui_back <1> 8"
+}
+
+default_input_entry : input.menu.logitech.rumblepad.2.usb
+{
+	group: 70
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 3"
+	configs[]: "ui_back <1> 3"
+}
+
+default_input_entry : input.menu.logitech.f710.x
+{
+	group: 70
+	weight: 140
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 3"
+	configs[]: "ui_back <1> 3"
+}
+
+default_input_entry : input.menu.logitech.f710.di
+{
+	group: 70
+	weight: 130
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C219046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "menu <1> 3"
+	configs[]: "ui_back <1> 3"
+}
+
+
+########## Complete setup for the rest of controls. Currently only XInput, Xbox 360 and Xbox One are covered.
+
+default_input_entry : input.misc.xinput.gamepad
+{
+	group: 80
+	weight: 170
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	# b5 = LB, b6 = RB
+	configs[]: "blinkers <1> b5 b6"
+
+	# b11 = back
+	configs[]: "advisor <1> b11"
+
+	# b1 = A, b2 = B, b3 = X, b4 = Y
+	configs[]: "activate <1> b1"
+	configs[]: "camera1 <1> b2"
+	configs[]: "cruise <1> b3"
+	configs[]: "attach <1> b4"
+
+	# b9 = left stick press, b10 = right
+	configs[]: "horn <1> b9"
+	configs[]: "engine <1> b10"
+
+	configs[]: "cameranext <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+	configs[]: "navmap <1> pov1_down"
+
+	# focused select
+	configs[]: "selectfcs <1> b3"
+
+	# scroll
+	configs[]: "scroll_up <1> lt"
+	configs[]: "scroll_down <1> rt"
+
+	# zoom
+	configs[]: "zoom_in <1> rt"
+	configs[]: "zoom_out <1> lt"
+}
+
+default_input_entry : input.misc.x360.gamepad
+{
+	group: 80
+	weight: 160
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b7"
+	configs[]: "activate <1> b1"
+	configs[]: "cruise <1> b3"
+	configs[]: "attach <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+}
+
+default_input_entry : input.misc.xbone.gamepad
+{
+	group: 80
+	weight: 157
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b7"
+	configs[]: "activate <1> b1"
+	configs[]: "cruise <1> b3"
+	configs[]: "attach <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+}
+
+default_input_entry : input.misc.xbone7.gamepad
+{
+	group: 80
+	weight: 156
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b7"
+	configs[]: "activate <1> b1"
+	configs[]: "cruise <1> b3"
+	configs[]: "attach <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+}
+
+default_input_entry : input.misc.xone.gamepad
+{
+	group: 80
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b7"
+	configs[]: "activate <1> b1"
+	configs[]: "cruise <1> b3"
+	configs[]: "attach <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+}
+
+############################ Various information about controllers, intended to be used for standalone queries #############################
+
+# Wheels
+
+default_input_entry : input.info.fanatec.base
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{038E0EB7-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.logitech.g29
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C24F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.logitech.g920
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C262046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.logitech.g27
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29B046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.logitech.g25
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C299046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
+
+
+default_input_entry : input.info.logitech.driving.force.gt
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C29A046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.gembird.shockforce.m
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{00060079-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.logitech.momo.racing.wheel
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{CA03046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.wheel"
+}
+
+default_input_entry : input.info.ms.sidewinder.ff.wheel
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0034045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.wheel"
+}
+
+# Gamepads
+
+default_input_entry : input.info.xinput.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "xinput.'xinput_gamepad'"
+
+	configs[]: "is.gamepad"
+	configs[]: "triggers.separate.centered"
+}
+
+default_input_entry : input.info.steam.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{11FF28DE-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.x360.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.xbone.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+	configs[]: "triggers.separate.full"
+}
+
+default_input_entry : input.info.xbone7.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.xone.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.logitech.rumblepad.2.usb
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C218046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.logitech.f710.x
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C21F046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.logitech.f710.di
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C219046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.thrustmaster.dual.analog.3
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B315044F-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.genius.maxfire.grandias.12
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+# Joystics
+
+default_input_entry : input.info.saitek.x52.pro.flight
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076206A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.joystick"
+}
+
+default_input_entry : input.info.logitech.wingman.force.3d
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C283046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.joystick"
+}
+
+default_input_entry : input.info.logitech.attack.3.usb
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{C214046D-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.joystick"
+}
+
+default_input_entry : input.info.genius.maxfighter.f17
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{B03B0583-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.joystick"
+}
+
+# Unusuall
+
+default_input_entry : input.info.saitek.pro.flight.combat.rudder.pedals
+{
+	group: 10000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076406A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "last_hope"
+}
+
+# Auxiliary devices.
+
+default_input_entry : input.info.bodnar.hshifter
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10A11DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "auxiliary"
+}
+
+default_input_entry : input.info.saitek.pro.gamer.command.unit
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{80C006A3-0000-0000-0000-504944564944}'"
+
+	configs[]: "auxiliary"
+}
+
+default_input_entry : input.info.bodnar.pedals
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{100C1DD2-0000-0000-0000-504944564944}'"
+
+	configs[]: "auxiliary"
+}
+
+############################## Configurations #################################
+
+# Hshifter configurations.
+
+default_input_config : icfg.hshifter.fanatec
+{
+ 	values[]: "gear1=<1>.b13?0"
+ 	values[]: "gear2=<1>.b9?0"
+ 	values[]: "gear3=<1>.b10?0"
+ 	values[]: "gear4=<1>.b16?0"
+ 	values[]: "gear5=<1>.b17?0"
+ 	values[]: "gear6=<1>.b18?0"
+ 	values[]: "gear7=<1>.b14?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+default_input_config : icfg.hshifter.g29
+{
+ 	values[]: "gear1=<1>.b19?0"
+ 	values[]: "gear2=<1>.b13?0"
+ 	values[]: "gear3=<1>.b14?0"
+ 	values[]: "gear4=<1>.b15?0"
+ 	values[]: "gear5=<1>.b16?0"
+ 	values[]: "gear6=<1>.b17?0"
+ 	values[]: "gear7=<1>.b18?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+default_input_config : icfg.hshifter.g920
+{
+ 	values[]: "gear1=<1>.b12?0"
+ 	values[]: "gear2=<1>.b13?0"
+ 	values[]: "gear3=<1>.b14?0"
+ 	values[]: "gear4=<1>.b15?0"
+ 	values[]: "gear5=<1>.b16?0"
+ 	values[]: "gear6=<1>.b17?0"
+ 	values[]: "gear7=<1>.b18?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+default_input_config : icfg.hshifter.g27
+{
+ 	values[]: "gear1=<1>.b15?0"
+ 	values[]: "gear2=<1>.b9?0"
+ 	values[]: "gear3=<1>.b10?0"
+ 	values[]: "gear4=<1>.b11?0"
+ 	values[]: "gear5=<1>.b12?0"
+ 	values[]: "gear6=<1>.b13?0"
+ 	values[]: "gear7=<1>.b14?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+default_input_config : icfg.hshifter.bodnar
+{
+ 	values[]: "gear1=<1>.b7?0"
+ 	values[]: "gear2=<1>.b1?0"
+ 	values[]: "gear3=<1>.b2?0"
+ 	values[]: "gear4=<1>.b3?0"
+ 	values[]: "gear5=<1>.b4?0"
+ 	values[]: "gear6=<1>.b5?0"
+ 	values[]: "gear7=<1>.b6?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+default_input_config : icfg.hshifter.thrustmaster
+{
+ 	values[]: "gear1=<1>.b8?0"
+ 	values[]: "gear2=<1>.b1?0"
+ 	values[]: "gear3=<1>.b2?0"
+ 	values[]: "gear4=<1>.b3?0"
+ 	values[]: "gear5=<1>.b4?0"
+ 	values[]: "gear6=<1>.b5?0"
+ 	values[]: "gear7=<1>.b6?0"
+ 	values[]: "gear8="
+ 	values[]: "gear9="
+ 	values[]: "gear10="
+ 	values[]: "gear11="
+ 	values[]: "gear12="
+ 	values[]: "gear13="
+ 	values[]: "gear14="
+ 	values[]: "gear15="
+ 	values[]: "gear16="
+}
+
+# Hshifter switches configurations
+
+default_input_config : icfg.hshifter.switch
+{
+ 	values[]: "gearsel1on="
+ 	values[]: "gearsel1off="
+ 	values[]: "gearsel1tgl=<1>.b<2>?0"
+ 	values[]: "gearsel2on="
+ 	values[]: "gearsel2off="
+ 	values[]: "gearsel2tgl=<1>.b<3>?0"
+}
+
+default_input_config : icfg.hshifter.switch.csio_skrs
+{
+ 	values[]: "gearsel1on=<1>.b1?0"
+ 	values[]: "gearsel1off=!<1>.b1?0"
+ 	values[]: "gearsel1tgl="
+ 	values[]: "gearsel2on=<1>.b2?0"
+ 	values[]: "gearsel2off=!<1>.b2?0"
+ 	values[]: "gearsel2tgl="
+}
+
+default_input_config : icfg.hshifter.switch.default
+{
+ 	values[]: "gearsel1on="
+ 	values[]: "gearsel1off="
+ 	values[]: "gearsel1tgl="
+ 	values[]: "gearsel2on="
+ 	values[]: "gearsel2off="
+ 	values[]: "gearsel2tgl="
+}
+
+# Standard handling of axes.
+
+default_input_config : icfg.steer.relative
+{
+	values[]: "j_steer=<1>.<2>"
+	values[]: "c_jisteer=0"
+	values[]: "c_relatsteer=1"
+	values[]: "c_steer_dz=0.16"
+}
+
+default_input_config : icfg.steer.absolute
+{
+	values[]: "j_steer=<1>.<2>"
+	values[]: "c_jisteer=0"
+	values[]: "c_relatsteer=0"
+	values[]: "c_steer_dz=0"
+}
+
+default_input_config : icfg.accelerate.brake
+{
+	values[]: "j_throttle=<1>.<2>"
+	values[]: "j_brake=<1>.<2>"
+	values[]: "c_jzthrottle=1"
+	values[]: "c_jithrottle=1"
+	values[]: "c_jzbrake=1"
+	values[]: "c_jibrake=0"
+}
+
+default_input_config : icfg.accelerate
+{
+	values[]: "j_throttle=<1>.<2>"
+	values[]: "c_jzthrottle=0"
+	values[]: "c_jithrottle=<3>"
+}
+
+default_input_config : icfg.brake
+{
+	values[]: "j_brake=<1>.<2>"
+	values[]: "c_jzbrake=0"
+	values[]: "c_jibrake=<3>"
+}
+
+default_input_config : icfg.traccelerate
+{
+	values[]: "j_throttle=<1>.<2>"
+	values[]: "c_jzthrottle=1"
+	values[]: "c_jithrottle=<3>"
+}
+
+default_input_config : icfg.trbrake
+{
+	values[]: "j_brake=<1>.<2>"
+	values[]: "c_jzbrake=1"
+	values[]: "c_jibrake=<3>"
+}
+
+default_input_config : icfg.clutch
+{
+	values[]: "j_clutch=<1>.<2>"
+	values[]: "c_jzclutch=0"
+	values[]: "c_jiclutch=<3>"
+}
+
+default_input_config : icfg.clutch.default
+{
+	values[]: "j_clutch="
+	values[]: "c_jzclutch=0"
+	values[]: "c_jiclutch=0"
+}
+
+
+# Standard gamepad camera look inputs.
+
+default_input_config : icfg.look.gamepad
+{
+	values[]: "j_look_lr=<1>.z"
+	values[]: "j_look_ud=<1>.rz"
+	values[]: "j_jilookud=0"
+	values[]: "j_jilooklr=0"
+	values[]: "c_lr_dz=0.16"
+	values[]: "c_ud_dz=0.16"
+}
+
+default_input_config : icfg.look.thrustmaster.dual.analog
+{
+	values[]: "j_look_lr=<1>.rz"
+	values[]: "j_look_ud=<1>.sl1"
+	values[]: "j_jilookud=0"
+	values[]: "j_jilooklr=0"
+	values[]: "c_lr_dz=0.16"
+	values[]: "c_ud_dz=0.16"
+}
+
+default_input_config : icfg.look.xy
+{
+	values[]: "j_look_lr=<1>.x"
+	values[]: "j_look_ud=<1>.y"
+	values[]: "j_jilookud=0"
+	values[]: "j_jilooklr=0"
+	values[]: "c_lr_dz=0.16"
+	values[]: "c_ud_dz=0.16"
+}
+
+default_input_config : icfg.look.pov
+{
+	values[]: "j_look_lr=<1>.pov<2>_x"
+	values[]: "j_look_ud=<1>.pov<2>_y"
+	values[]: "j_jilookud=0"
+	values[]: "j_jilooklr=0"
+	values[]: "c_lr_dz=0.1"
+	values[]: "c_ud_dz=0.1"
+}
+
+default_input_config : icfg.look.generic
+{
+	values[]: "j_look_lr=<1>.<2>"
+	values[]: "j_look_ud=<1>.<4>"
+	values[]: "j_jilookud=<5>"
+	values[]: "j_jilooklr=<3>"
+	values[]: "c_lr_dz=0.16"
+	values[]: "c_ud_dz=0.16"
+}
+
+default_input_config : icfg.look.default
+{
+	values[]: "j_look_lr="
+	values[]: "j_look_ud="
+	values[]: "j_jilookud=0"
+	values[]: "j_jilooklr=0"
+	values[]: "c_lr_dz=0.1"
+	values[]: "c_ud_dz=0.1"
+}
+
+# Gearbox related inputs
+
+default_input_config : icfg.gearupdown
+{
+	values[]: "gearup=keyboard.lshift?0 | <1>.b<2>?0"
+	values[]: "geardown=keyboard.lctrl?0 | <1>.b<3>?0"
+}
+
+default_input_config : icfg.gearupdown.default
+{
+	values[]: "gearup=keyboard.lshift?0 | keyboard.rshift?0"
+	values[]: "geardown=keyboard.lctrl?0 | keyboard.rctrl?0"
+}
+
+default_input_config : icfg.drive.positions
+{
+	values[]: "c_hsauto=1"
+	values[]: "drive=<1>.b<2>?0"
+	values[]: "reverse=<1>.b<3>?0"
+}
+
+default_input_config : icfg.drive.gearupdown
+{
+	values[]: "c_hsauto=0"
+	values[]: "drive="
+	values[]: "reverse="
+}
+
+# Configuration of the menu button.
+
+default_input_config : icfg.menu
+{
+	values[]: "menu=keyboard.esc?0 | <1>.b<2>?0"
+}
+default_input_config : icfg.ui_back
+{
+	values[]: "back=keyboard.esc?0 | <1>.b<2>?0"
+	values[]: "skip=keyboard.esc?0 | <1>.b<2>?0"
+}
+
+# Configuration of various functionalities
+
+default_input_config: icfg.selectfcs
+{
+	values[]: "selectfcs=keyboard.enter?0 | keyboard.numenter?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.scroll_up
+{
+	values[]: "scrol_up=mouse.wheel_up?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.scroll_down
+{
+	values[]: "scrol_dwn=mouse.wheel_down?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.zoom_in
+{
+	values[]: "mapzoom_in=mouse.wheel_up?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.zoom_out
+{
+	values[]: "mapzoom_out=mouse.wheel_down?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.blinkers
+{
+	values[]: "lblinker=keyboard.lbracket?0 | <1>.<2>?0"
+	values[]: "rblinker=keyboard.rbracket?0 | <1>.<3>?0"
+}
+
+default_input_config: icfg.advisor
+{
+	values[]: "advmouse=keyboard.f1?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.activate
+{
+	values[]: "activate=keyboard.enter?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.cruise
+{
+	values[]: "cruiectrl=keyboard.c?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.attach
+{
+	values[]: "attach=keyboard.t?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.light
+{
+	values[]: "light=keyboard.l?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.wippers
+{
+	values[]: "wippers=keyboard.p?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.horn
+{
+	values[]: "horn=keyboard.h?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.engine
+{
+	values[]: "engine=keyboard.e?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.navmap
+{
+	values[]: "navmap=keyboard.m?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.camera1
+{
+	values[]: "cam1=keyboard.key1?0 | <1>.<2>?0"
+}
+
+default_input_config: icfg.cameranext
+{
+	values[]: "camcycle=keyboard.key9?0 | <1>.<2>?0"
+}
+
+# Indicates that specified part is configured in imediatelly usable way.
+
+default_input_config: "icfg.steering.configured"
+{
+	values[]: "steer_cfg=1"
+}
+
+default_input_config: "icfg.pedals.configured"
+{
+	values[]: "pedals_cfg=1"
+}
+
+default_input_config: "icfg.clutch.configured"
+{
+	values[]: "clutch_cfg=1"
+}
+
+default_input_config: "icfg.gearupdown.configured"
+{
+	values[]: "gearupd_cfg=1"
+}
+
+default_input_config: "icfg.hshifter.configured"
+{
+	values[]: "hshifter_cfg=1"
+}
+
+# Information config
+
+# Indication that hshifter HW is available.
+
+default_input_config : icfg.hshifter.available
+{
+	values[]: "hshifter=1"
+}
+
+# Indication that the controller uses triggers for "pedals" in given mode.
+# If not set, system-default is used, which on DI/Windows is +1 for not pressed
+# and -1 for fully depressed.
+
+default_input_config : icfg.triggers.separate.full
+{
+	values[]: "pedal_zc=0"
+	values[]: "pedal_in=0"
+}
+
+default_input_config : icfg.triggers.separate.centered
+{
+	values[]: "pedal_zc=1"
+	values[]: "pedal_in=0"
+}
+
+# Indication that this is auxiliary HW which should be not used for
+# default fallback.
+
+default_input_config : icfg.auxiliary
+{
+	values[]: "auxiliary=1"
+}
+
+# Device which should be used only when nothing better is available.
+
+default_input_config : icfg.last_hope
+{
+	values[]: "last_hope=1"
+}
+
+# Set to indicate that there is some problem in the autodetection.
+
+default_input_config : icfg.detection.problem
+{
+	values[]: "problem=1"
+}
+
+# Indication of device types.
+
+default_input_config : icfg.is.gamepad
+{
+	values[]: "gamepad=1"
+}
+
+default_input_config : icfg.is.wheel
+{
+	values[]: "wheel=1"
+}
+
+default_input_config : icfg.is.joystick
+{
+	values[]: "joystick=1"
+}
+
+}
