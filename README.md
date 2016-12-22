@@ -3,8 +3,8 @@
 ## **Contains:**
 
 - [Base game](/def)
-- [Christmas Paint Jobs Pack](/dlc_christmas/def)
-- [Dragon Truck Design Pack](/dlc_dragon/def)
+- [Christmas Paint Jobs Pack](/dlc_christmas/def/vehicle)
+- [Dragon Truck Design Pack](/dlc_dragon/def/vehicle)
 - [Going East!](/dlc_east/def)
 - [Vive la France !](/dlc_fr/def)
 - [Halloween Paint Jobs Pack](/dlc_halloween/def/vehicle)
