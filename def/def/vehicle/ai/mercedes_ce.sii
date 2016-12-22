@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.mercedes_ce
+{
+	accessories[]: .mercedes_ce.chassis
+	accessories[]: .mercedes_ce.fwheel
+	accessories[]: .mercedes_ce.rwheel
+
+	max_speed: 180
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .mercedes_ce.chassis
+{
+	data_path: "/def/vehicle/ai/mercedes_ce/chassis.sii"
+}
+
+vehicle_wheel_accessory: .mercedes_ce.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .mercedes_ce.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}

@@ -1,0 +1,38 @@
+SiiNunit
+{
+accessory_interior_data: normal_exuk.renault.premium.interior
+{
+	name: "Excellence UK"
+	price: 27840
+	unlock: 12
+	icon: "interior_premium_lux_uk"
+
+	model:                 "/vehicle/truck/renault_premium/interior/uk/model.pmd"
+  collision:             "/vehicle/truck/renault_premium/interior/uk/model.pmc"
+	animated_model:        "/vehicle/truck/renault_premium/interior/uk/anim.pmd"
+	look: look2
+	variant: normal_exp
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/renault_magnum_2009.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .renault.premium.pane.front
+	glass_panes[]: .renault.premium.pane.close
+	glass_panes[]: .renault.premium.pane.far
+	glass_panes[]: .renault.premium.pane.top
+
+	suitable_for[]: "normal.renault.premium.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/renault_premium/stock.pmd"
+	ext_variant: cab_low_uk_e
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/renault.premium/accessory/steering_w/exclusive.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.dat"
+}

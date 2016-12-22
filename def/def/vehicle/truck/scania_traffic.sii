@@ -1,0 +1,62 @@
+traffic_vehicle : traffic.scania.r
+{
+	accessories[]: .tscaniar.chassis
+	accessories[]: .tscaniar.cabin
+	accessories[]: .tscaniar.fwheel
+	accessories[]: .tscaniar.rwheel
+	accessories[]: .tscaniar.doorstep
+	accessories[]: .tscaniar.doorhndl
+	accessories[]: .tscaniar.mirror
+	accessories[]: .tscaniar.fmirror
+	accessories[]: .tscaniar.badge
+
+	max_speed: 90
+	attachable_trailer[]: ""
+	type: truck
+
+	engine_torque: 1850
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	headlights_diffuse : (0.89, 0.88, 0.72)
+	headlights_offset : -0.8
+	headlights_pitch: -7
+	headlights_range: 20.0
+	headlights_angle: 95.0
+	headlights_aspect: 2
+	headlights_mask: "/material/custom/trucklight_mask_norm.tobj"
+	headlights_attenuation: "/material/custom/trucklight_attn.tobj"
+	headlights_intensity_min: 0.7
+	headlights_intensity_max: 2.5
+
+}
+
+vehicle_accessory : .tscaniar.chassis {
+	 data_path: "/def/vehicle/truck/scania.r/chassis/4x2.sii"
+}
+vehicle_accessory : .tscaniar.cabin {
+	 data_path: "/def/vehicle/truck/scania.r/cabin/normal.sii"
+}
+vehicle_wheel_accessory : .tscaniar.fwheel {
+	 data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory : .tscaniar.rwheel {
+	 data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .tscaniar.doorstep {
+	 data_path: "/def/vehicle/truck/scania.r/accessory/doorstep/shape1.sii"
+}
+vehicle_addon_accessory : .tscaniar.doorhndl {
+	 data_path: "/def/vehicle/truck/scania.r/accessory/doorhndl/shape1.sii"
+}
+vehicle_addon_accessory : .tscaniar.mirror {
+	 data_path: "/def/vehicle/truck/scania.r/accessory/mirror/shape1.sii"
+}
+vehicle_addon_accessory : .tscaniar.fmirror {
+	 data_path: "/def/vehicle/truck/scania.r/accessory/f_mirror/shape1.sii"
+}
+vehicle_addon_accessory : .tscaniar.badge {
+ data_path: "/def/vehicle/truck/scania.r/badge/r360.sii"
+}
+

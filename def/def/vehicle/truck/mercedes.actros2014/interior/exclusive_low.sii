@@ -1,0 +1,37 @@
+SiiNunit
+{
+accessory_interior_data: excl_low.mercedes.actros2014.interior
+{
+	name: "@@exclusive@@ StreamSpace"
+	price: 29760
+	unlock: 0
+	icon: "interior_mercedes_actros_2014_ecl"
+
+	model:             "/vehicle/truck/mercedes_actros_2014/interior/model.pmd"
+  collision:         "/vehicle/truck/mercedes_actros_2014/interior/model.pmc"
+	animated_model:    "/vehicle/truck/mercedes_actros_2014/interior/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: exclusive
+	variant: exclusive_l
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/mercedes_actros_2014.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .mercedes.actros2014.pane.front
+	glass_panes[]: .mercedes.actros2014.pane.close
+	glass_panes[]: .mercedes.actros2014.pane.far
+	glass_panes[]: .mercedes.actros2014.pane.top
+
+	suitable_for[]: "streamspace.mercedes.actros2014.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/mercedes_actros_2014/stock.pmd"
+	ext_variant: cab_low_eu
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/mercedes.actros2014/accessory/steering_w/exclusive.sii"
+
+}
+@include "glass.dat"
+}

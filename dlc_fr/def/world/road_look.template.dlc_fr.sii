@@ -1,0 +1,73 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+road_look : road.template24 {
+	name: 			"fr road 1 plus 2 tmpl"
+	template_right:		"/road_template/fr/fr_road_plus_2.pmd"
+	template_left:		"/road_template/fr/fr_road_1_plus.pmd"
+
+	road_offset: 0.85
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]:	fr_sh_15
+	compatible_edges_right[]:	fr_sh_15
+}
+road_look : road.template25 {
+	name: 			"fr road 2 plus 1 tmpl"
+	template_right:		"/road_template/fr/fr_road_1_plus.pmd"
+	template_left:		"/road_template/fr/fr_road_plus_2.pmd"
+
+	road_offset: 0.85
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	compatible_edges_left[]: fr_sh_15
+	compatible_edges_right[]: fr_sh_15
+}
+road_look : road.template31 {
+	name: 			"fr hw 3 lanes 5m offset tmpl"
+	template_right:		"/road_template/fr/fr_hw_3_lanes_two_ways.pmd"
+	template_left:      "/road_template/fr/fr_hw_3_lanes_two_ways.pmd"
+	
+	template_repeat: 3
+
+	road_offset: 5
+	
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: fr_sh_45
+	compatible_edges_left[]: fr_drain_45
+	compatible_edges_right[]: fr_sh_45
+	compatible_edges_right[]: fr_drain_45	
+}
+road_look : road.template35 {
+	name: 			"fr hw 2 lanes 2 way tmpl"
+	template_right:		"/road_template/fr/fr_hw_2_lanes_one_way.pmd"
+	
+	template_repeat: 3
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: fr_sh_45
+  
+}
+}

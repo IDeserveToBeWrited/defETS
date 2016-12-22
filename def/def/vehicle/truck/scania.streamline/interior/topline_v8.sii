@@ -1,0 +1,38 @@
+SiiNunit
+{
+accessory_interior_data: topline_v8.scania.streamline.interior
+{
+	name: "@@exclusive@@ V8"
+	price: 39840
+	unlock: 16
+	icon: "interior_streamline_v8"
+
+	model:               "/vehicle/truck/scania_rcab_2009/interior/model.pmd"
+  collision:           "/vehicle/truck/scania_rcab_2009/interior/model.pmc"
+	animated_model:      "/vehicle/truck/scania_rcab_2009/interior/anim.pmd"
+	look: v8
+	variant: top_exp_v8
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/scania_streamline.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .scania.streamline.pane.front
+	glass_panes[]: .scania.streamline.pane.close
+	glass_panes[]: .scania.streamline.pane.far
+	glass_panes[]: .scania.streamline.pane.top
+
+	suitable_for[]: "topline.scania.streamline.cabin"
+	suitable_for[]: "tl_8x4.scania.streamline.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/scania_streamline/stock.pmd"
+	ext_variant: eu
+	ext_look: v8
+
+	defaults[]: "/def/vehicle/truck/scania.streamline/accessory/steering_w/v8.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: excl_low.volvo.fh16_2012.interior
+{
+	name: "@@exclusive@@"
+	price: 30960
+	unlock: 12
+	icon: "interior_volvo_fh16_2012_ecl"
+
+	model:               "/vehicle/truck/volvo_fh16_2012/interior/model.pmd"
+  collision:           "/vehicle/truck/volvo_fh16_2012/interior/model.pmc"
+	animated_model:      "/vehicle/truck/volvo_fh16_2012/interior/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: look2
+	variant: exclusive_l
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/volvo_fh16_12.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .volvo.fh16_2012.pane.front
+	glass_panes[]: .volvo.fh16_2012.pane.close
+	glass_panes[]: .volvo.fh16_2012.pane.far
+	glass_panes[]: .volvo.fh16_2012.pane.top
+
+	suitable_for[]: "l2h1.volvo.fh16_2012.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/volvo_fh16_2012/stock.pmd"
+	ext_variant: excl_low
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/volvo.fh16_2012/accessory/steering_w/exclusive.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass_low.dat"
+}

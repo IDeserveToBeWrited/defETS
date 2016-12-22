@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: high_exuk.mercedes.actros.interior
+{
+	name: "Trust Edition UK"
+	price: 30360
+	unlock: 12
+	icon: "interior_actros_trust_uk"
+
+	model:             "/vehicle/truck/mercedes_actros_2009/interior/uk/model.pmd"
+  collision:         "/vehicle/truck/mercedes_actros_2009/interior/uk/model.pmc"
+	animated_model:    "/vehicle/truck/mercedes_actros_2009/interior/uk/anim.pmd"
+	active_mirrors_part: a_e_mirrors
+	passive_mirrors_part: p_e_mirrors
+	look: look2
+	variant: highroof_ex
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/mercedes_actros_2009.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .mercedes.actros_09.pane.front
+	glass_panes[]: .mercedes.actros_09.pane.close
+	glass_panes[]: .mercedes.actros_09.pane.far
+	glass_panes[]: .mercedes.actros_09.pane.top
+
+	suitable_for[]: "cabin_l.mercedes.actros.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/mercedes_actros_2009/stock.pmd"
+	ext_variant: cab_mid_uk
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/mercedes.actros/accessory/steering_w/exclusive.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.dat"
+}

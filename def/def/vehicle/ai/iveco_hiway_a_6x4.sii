@@ -1,0 +1,42 @@
+traffic_vehicle : traffic.ivecoh_a6x4
+{
+	accessories[]: .ivecoh_a6x4.chassis
+	accessories[]: .ivecoh_a6x4.fwheel
+	accessories[]: .ivecoh_a6x4.rwheel
+	accessories[]: .ivecoh_a6x4.rwheel2
+
+	max_speed: 90
+	attachable_trailer[]: ""
+
+	engine_torque: 2300
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	vehicle_mass: 15000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .ivecoh_a6x4.chassis
+{
+	data_path: "/def/vehicle/ai/truck/iveco.hiway/a6x4.sii"
+}
+
+vehicle_wheel_accessory: .ivecoh_a6x4.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .ivecoh_a6x4.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .ivecoh_a6x4.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

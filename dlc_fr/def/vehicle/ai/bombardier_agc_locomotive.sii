@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.bombar_agc
+{
+	accessories[]: .bombar_agc.chassis
+	accessories[]: .bombar_agc.fwheel
+	accessories[]: .bombar_agc.rwheel
+	accessories[]: .bombar_agc.rwheel2
+	accessories[]: .bombar_agc.rwheel3
+
+	max_speed: 120
+
+	vehicle_mass: 100000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 20000
+
+	attachable_trailer[]: "train_car.bombar_agc.*"
+	trailer_count[]: 2
+	trailer_count[]: 3
+	trailer_count[]: 4
+	trailer_count[]: 5
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+}
+
+vehicle_accessory: .bombar_agc.chassis
+{
+	data_path: "/def/vehicle/ai/bombardier_agc/chassis_locomotive.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_front.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
+}

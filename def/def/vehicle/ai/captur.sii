@@ -1,0 +1,32 @@
+traffic_vehicle : traffic.captur
+{
+	accessories[]: .captur.chassis
+	accessories[]: .captur.fwheel
+	accessories[]: .captur.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+
+	vehicle_mass: 1200
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .captur.chassis
+{
+	data_path: "/def/vehicle/ai/captur/chassis.sii"
+}
+
+vehicle_wheel_accessory: .captur.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_4.sii"
+}
+
+vehicle_wheel_accessory: .captur.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_4.sii"
+}

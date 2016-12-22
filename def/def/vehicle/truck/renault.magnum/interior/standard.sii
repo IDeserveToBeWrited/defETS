@@ -1,0 +1,33 @@
+SiiNunit
+{
+accessory_interior_data: standard.renault.magnum.interior
+{
+	name: "Excellence"
+	price: 14760
+	unlock: 0
+	icon: "interior_magnum_std"
+
+	model:             "/vehicle/truck/renault_magnum_2009/interior/model.pmd"
+  collision:         "/vehicle/truck/renault_magnum_2009/interior/model.pmc"
+	animated_model:    "/vehicle/truck/renault_magnum_2009/interior/anim.pmd"
+	look: look1
+	variant: standard
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/renault_magnum_2009.sii"
+
+	glass_panes[]: .renault.magnum.pane.front
+	glass_panes[]: .renault.magnum.pane.close
+	glass_panes[]: .renault.magnum.pane.far
+	ext_model: "/vehicle/truck/upgrade/ext_interior/renault_magnum_2009/stock.pmd"
+	ext_variant: eu
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/renault.magnum/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

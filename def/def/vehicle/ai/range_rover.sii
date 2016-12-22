@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.range_rover
+{
+	accessories[]: .range_rover.chassis
+	accessories[]: .range_rover.fwheel
+	accessories[]: .range_rover.rwheel
+
+	max_speed: 150
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2200
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .range_rover.chassis
+{
+	data_path: "/def/vehicle/ai/range_rover/chassis.sii"
+}
+
+vehicle_wheel_accessory: .range_rover.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_20in.sii"
+}
+
+vehicle_wheel_accessory: .range_rover.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_20in.sii"
+}

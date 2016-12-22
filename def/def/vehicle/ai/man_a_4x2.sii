@@ -1,0 +1,35 @@
+traffic_vehicle : traffic.mantgx_a4x2
+{
+	accessories[]: .mantgx_a4x2.chassis
+	accessories[]: .mantgx_a4x2.fwheel
+	accessories[]: .mantgx_a4x2.rwheel
+
+	max_speed: 90
+	attachable_trailer[]: ""
+
+	engine_torque: 2300
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	vehicle_mass: 15000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .mantgx_a4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx/a4x2.sii"
+}
+
+vehicle_wheel_accessory: .mantgx_a4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .mantgx_a4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

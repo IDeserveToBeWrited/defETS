@@ -1,0 +1,51 @@
+SiiNunit
+{
+
+#
+# See '/base/def/world/trigger_action.sii' for available commands
+#
+
+cutscene_action : _nameless.cutscene_act.1
+{
+	cutscene_time: 0.5
+
+	command: "play_music"
+
+	str_params[]: "/sound/music/cutscene.ogg"
+	num_params[]: 0.5
+}
+
+cutscene_action : _nameless.cutscene_act.2
+{
+	cutscene_time: 0.0
+
+	command: "create_win"
+
+	str_params[]: "msg"
+	str_params[]: "/ui/cutscene_msg.sii"
+}
+
+cutscene_action : _nameless.cutscene_act.3
+{
+	cutscene_time: 0.5
+
+	command: "set_win_text"
+
+	num_params[0]: 100
+	str_params[]: "msg"
+	str_params[]: "$ 0 $ <color value=@@clr_white@@>@@intro_1@@  $ 5 $ @@intro_2@@  $ 6 $ @@intro_3@@  $ 9 $ @@intro_4@@"
+}
+
+cutscene_action : _nameless.cutscene_act.4
+{
+	cutscene_time: 2.0
+
+	command: "show_win"
+
+	str_params[]: "msg"
+}
+
+
+
+
+}

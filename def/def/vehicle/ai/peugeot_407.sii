@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.peugeot_407
+{
+	accessories[]: .peugeot_407.chassis
+	accessories[]: .peugeot_407.fwheel
+	accessories[]: .peugeot_407.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .peugeot_407.chassis
+{
+	data_path: "/def/vehicle/ai/peugeot_407/chassis.sii"
+}
+
+vehicle_wheel_accessory: .peugeot_407.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .peugeot_407.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}

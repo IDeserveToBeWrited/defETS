@@ -1,0 +1,42 @@
+traffic_vehicle : traffic.sline_c
+{
+	accessories[]: .sline_c.chassis
+	accessories[]: .sline_c.fwheel
+	accessories[]: .sline_c.rwheel
+	accessories[]: .sline_c.rwheel2
+
+	max_speed: 90
+	attachable_trailer[]: ""
+
+	engine_torque: 2100
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	vehicle_mass: 17000
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .sline_c.chassis
+{
+	data_path: "/def/vehicle/ai/truck/scania.sline/c6x4.sii"
+}
+
+vehicle_wheel_accessory: .sline_c.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .sline_c.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .sline_c.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

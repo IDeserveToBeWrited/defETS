@@ -1,0 +1,89 @@
+traffic_vehicle : traffic.man.tgx
+{
+
+	max_speed: 90
+	attachable_trailer[]: ""
+	type: truck
+
+	engine_torque: 2300
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	headlights_diffuse : (0.89, 0.88, 0.72)
+	headlights_offset : -0.8
+	headlights_pitch: -7
+	headlights_range: 20.0
+	headlights_angle: 95.0
+	headlights_aspect: 2
+	headlights_mask: "/material/custom/trucklight_mask_norm.tobj"
+	headlights_attenuation: "/material/custom/trucklight_attn.tobj"
+	headlights_intensity_min: 0.7
+	headlights_intensity_max: 2.5
+
+	accessories[]: .tmantgx.chassis
+	accessories[]: .tmantgx.cabin
+	accessories[]: .tmantgx.fwheel
+	accessories[]: .tmantgx.rwheel
+	accessories[]: .tmantgx.mirror
+	accessories[]: .tmantgx.doorhndl
+	accessories[]: .tmantgx.doorstep
+	accessories[]: .tmantgx.sunshld
+	accessories[]: .tmantgx.fmirror
+	accessories[]: .tmantgx.smirror
+	accessories[]: .tmantgx.badge
+	accessories[]: .tmantgx.chsbadge
+
+}
+
+vehicle_accessory: .tmantgx.chassis
+{
+	data_path: "/def/vehicle/truck/man.tgx/chassis/4x2.sii"
+}
+
+vehicle_accessory: .tmantgx.cabin
+{
+	data_path: "/def/vehicle/truck/man.tgx/cabin/xxl_cab.sii"
+}
+
+vehicle_wheel_accessory: .tmantgx.fwheel
+{
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tmantgx.rwheel
+{
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .tmantgx.mirror {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/mirror/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.doorhndl {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/doorhndl/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.doorstep {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/doorstep/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.sunshld {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/sunshld/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.fmirror {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/f_mirror/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.smirror {
+	data_path: "/def/vehicle/truck/man.tgx/accessory/s_mirror/shape1.sii"
+}
+
+vehicle_addon_accessory : .tmantgx.badge {
+  	data_path: "/def/vehicle/truck/man.tgx/badge/18480.sii"
+
+
+}
+vehicle_addon_accessory : .tmantgx.chsbadge {
+  	data_path: "/def/vehicle/truck/man.tgx/chs_badges/chs_badges_18.sii"
+}

@@ -1,0 +1,36 @@
+SiiNunit
+{
+accessory_interior_data: normal.renault.premium.interior
+{
+	name: "Privilege"
+	price: 12660
+	unlock: 0
+	icon: "interior_premium_std"
+
+	model:             "/vehicle/truck/renault_premium/interior/model.pmd"
+  collision:         "/vehicle/truck/renault_premium/interior/model.pmc"
+	animated_model:    "/vehicle/truck/renault_premium/interior/anim.pmd"
+	look: look1
+	variant: normal
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/renault_magnum_2009.sii"
+
+	glass_panes[]: .renault.premium.pane.front
+	glass_panes[]: .renault.premium.pane.close
+	glass_panes[]: .renault.premium.pane.far
+	glass_panes[]: .renault.premium.pane.top
+
+	suitable_for[]: "normal.renault.premium.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/renault_premium/stock.pmd"
+	ext_variant: cab_low_eu
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/renault.premium/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.dat"
+}

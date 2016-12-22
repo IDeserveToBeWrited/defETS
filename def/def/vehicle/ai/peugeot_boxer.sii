@@ -1,0 +1,31 @@
+traffic_vehicle : traffic.peugeotbo
+{
+	accessories[]: .peugeotbo.chassis
+	accessories[]: .peugeotbo.fwheel
+	accessories[]: .peugeotbo.rwheel
+
+	max_speed: 140
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	vehicle_mass: 2800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .peugeotbo.chassis
+{
+	data_path: "/def/vehicle/ai/peugeot_boxer/chassis.sii"
+}
+
+vehicle_wheel_accessory: .peugeotbo.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_2.sii"
+}
+
+vehicle_wheel_accessory: .peugeotbo.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_2.sii"
+}

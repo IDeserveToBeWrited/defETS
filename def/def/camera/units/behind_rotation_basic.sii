@@ -1,0 +1,66 @@
+vehicle_behind_rotation_camera: camera.behind.basic
+{
+	distance_interval: (4.0, 9.0)		// min and max distances from the truck
+	distance_trailer_max_offset: 2.0	// offset added to the maximum distance when a trailer is attached
+	distance_default: 9.0			// default camera distance (no trailer)
+	distance_trailer_default: 10.5		// default camera distance (trailer attached)
+	distance_change_speed: 0.6		// how fast the zoom in/out impulse changes the distance from the truck
+	distance_laziness_speed: 3.0		// speed of the smooth distance change
+
+	azimuth_laziness_speed: 1.0		// speed of smooth azimuth change (when keeping the relative azimuth from the truck)
+
+	elevation_interval: (0.0, 50.0)		// min and max camera elevation (pitch)
+	elevation_default: 18.0			// default camera elevation (no trailer)
+	elevation_trailer_default: 12.5		// default camera elevation (trailer attached)
+
+	pivot_offset: (0.0, 1.5, -1.5)		// camera pivot point (the center of rotation) offset
+
+	dynamic_offset_max: 1.0				// maximum 'dynamic offset' (offset increasing with truck speed)
+	dynamic_offset_speed_interval: (15.0, 40.0)	// speed interval (in km/h) in which the dynamic offset changes
+	dynamic_offset_laziness_speed: 0.7		// speed of smooth dynamic offset change
+    
+
+	validation: true
+	validation_radius: 0.3
+	validation_speed_positive: 0.3
+	validation_speed_negative: 0.9
+	mouse_sensitivity: 0.12
+
+	camera_fov: 62
+	stereo_convergence: 1.5
+
+	shake_anim_step: 0.015
+	shake_anim_scale_min: 0.0005
+	shake_anim_scale_max: 0.005
+	shake_anim[]: (-0.049261,0.384342,0.374303)
+	shake_anim[]: (-0.399667,-2.28353,5.34701)
+	shake_anim[]: (0.225179,-3.48433,4.71461)
+	shake_anim[]: (-2.59281,-3.6041,-5.39482)
+	shake_anim[]: (0,0,0)
+	shake_anim[]: (4.00987,10.4943,14.4864)
+	shake_anim[]: (3.15777,12.5949,15.3713)
+	shake_anim[]: (0.548033,11.3213,11.7565)
+	shake_anim[]: (0.0313744,1.7865,0.348778)
+	shake_anim[]: (0,0,0)
+	shake_anim[]: (0.991035,-3.04649,-3.28584)
+	shake_anim[]: (0.216034,-2.44009,-3.4236)
+	shake_anim[]: (0.00812389,-0.480975,-1.06066)
+	shake_anim[]: (-0.116495,0.25165,-0.0747643)
+	shake_anim[]: (0,0,0)
+	shake_anim[]: (0.0572391,-0.658501,-0.0958948)
+	shake_anim[]: (0.0188806,-1.03266,-1.39954)
+	shake_anim[]: (-0.308272,-0.497175,-1.63113)
+	shake_anim[]: (0.510522,-0.279132,-1.39855)
+	shake_anim[]: (0,0,0)
+	shake_anim[]: (-0.699184,0.107246,1.06722)
+	shake_anim[]: (-0.516085,-0.396923,0.628708)
+	shake_anim[]: (0.14198,-0.308746,0.631268)
+	shake_anim[]: (0.122182,0.044732,0.152033)
+	shake_anim[]: (0,0,0)
+	shake_anim[]: (-0.0824616,-0.0513821,0.177382)
+	shake_anim[]: (-0.071153,0.0658949,0.0183458)
+	shake_anim[]: (-0.0357668,0.0548246,0.0222406)
+	shake_anim[]: (-0.00482155,0.0136086,-0.00697041)
+	shake_anim[]: (0,0,0)
+
+}

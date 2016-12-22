@@ -1,0 +1,34 @@
+traffic_vehicle : traffic.ford_smax
+{
+	accessories[]: .ford_smax.chassis
+	accessories[]: .ford_smax.fwheel
+	accessories[]: .ford_smax.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	vehicle_mass: 1700
+
+@include "drivers_generic.sui"
+	
+}
+
+vehicle_accessory: .ford_smax.chassis
+{
+	data_path: "/def/vehicle/ai/ford_smax/chassis.sii"
+}
+
+vehicle_wheel_accessory: .ford_smax.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_o_1.sii"
+}
+
+vehicle_wheel_accessory: .ford_smax.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_o_1.sii"
+}
+

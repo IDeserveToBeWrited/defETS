@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: standard_uk.volvo.fh16.interior
+{
+	name: "@@standard@@ UK"
+	price: 11760
+	unlock: 0
+	icon: "interior_volvo_fh16_std_uk"
+
+	model:               "/vehicle/truck/volvo_fh16_2009/interior/uk/model.pmd"
+  collision:           "/vehicle/truck/volvo_fh16_2009/interior/uk/model.pmc"
+	animated_model:      "/vehicle/truck/volvo_fh16_2009/interior/uk/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: look2
+	variant: default
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/volvo_fh16_09.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .volvo.fh16.pane.front
+	glass_panes[]: .volvo.fh16.pane.close
+	glass_panes[]: .volvo.fh16.pane.far
+
+	suitable_for[]: "l2h2.volvo.fh16.cabin"
+	suitable_for[]: "l2h3.volvo.fh16.cabin"
+	ext_model: "/vehicle/truck/upgrade/ext_interior/volvo_fh16_2009/stock.pmd"
+	ext_variant: cab_ab_uk
+	ext_look: default
+
+	defaults[]: "/def/vehicle/truck/volvo.fh16/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.dat"
+}

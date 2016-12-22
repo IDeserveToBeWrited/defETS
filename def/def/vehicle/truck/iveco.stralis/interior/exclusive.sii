@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: exclusive.iveco.stralis.interior
+{
+	name: "@@exclusive@@"
+	price: 32040
+	unlock: 12
+	icon: "interior_stralis_lux"
+
+	model:           "/vehicle/truck/iveco_stralis/interior/model.pmd"
+	collision:       "/vehicle/truck/iveco_stralis/interior/model.pmc"
+	animated_model:  "/vehicle/truck/iveco_stralis/interior/anim.pmd"
+	active_mirrors_part: a_e_mirrors
+	passive_mirrors_part: p_e_mirrors
+	look: look1
+	variant: exclusive
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/iveco_stralis.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .iveco.stralis.pane.front
+	glass_panes[]: .iveco.stralis.pane.close
+	glass_panes[]: .iveco.stralis.pane.far
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/iveco_stralis/stock.pmd"
+	ext_variant: exc
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/iveco.stralis/accessory/steering_w/exclusive.sii"
+
+	suitable_for[]: "as_higher.iveco.stralis.cabin"
+	suitable_for[]: "at_higher.iveco.stralis.cabin"
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass_no_top.sui"
+}
