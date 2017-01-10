@@ -1,44 +1,12 @@
-@echo off
+@ECHO OFF
 
 :: Location for extraction
 SET LOCATION=X:\def
+MKDIR %LOCATION%
 :: Location to SCS Extractor
 SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2\scs_extractor.exe"
 :: Get the SCS Game Archive Extractor here: http://download.eurotrucksimulator2.com/scs_extractor.zip
 
-
-:: Create folders
-ECHO Creating def folder
-MKDIR %LOCATION%\def
-ECHO Creating dlc_christmas folder
-MKDIR %LOCATION%\dlc_christmas
-ECHO Creating dlc_dragon folder
-MKDIR %LOCATION%\dlc_dragon
-ECHO Creating dlc_east folder
-MKDIR %LOCATION%\dlc_east
-ECHO Creating dlc_fr folder
-MKDIR %LOCATION%\dlc_fr
-ECHO Creating dlc_halloween folder
-MKDIR %LOCATION%\dlc_halloween
-ECHO Creating dlc_metallics folder
-MKDIR %LOCATION%\dlc_metallics
-ECHO Creating dlc_mighty_griffin folder
-MKDIR %LOCATION%\dlc_mighty_griffin
-ECHO Creating dlc_north folder
-MKDIR %LOCATION%\dlc_north
-ECHO Creating dlc_rims folder
-MKDIR %LOCATION%\dlc_rims
-ECHO Creating dlc_rocket_league folder
-MKDIR %LOCATION%\dlc_rocket_league
-ECHO Creating dlc_schwarzmuller folder
-MKDIR %LOCATION%\dlc_schwarzmuller
-ECHO Creating dlc_toys folder
-MKDIR %LOCATION%\dlc_toys
-ECHO Creating dlc_trailers folder
-MKDIR %LOCATION%\dlc_trailers
-
-ECHO.
-ECHO.
 
 :: Extract archives
 ECHO Extracting def archive
@@ -55,6 +23,8 @@ ECHO Extracting dlc_halloween archive
 %EXTRACTOR% dlc_halloween.scs %LOCATION%\dlc_halloween >NUL
 ECHO Extracting dlc_metallics archive
 %EXTRACTOR% dlc_metallics.scs %LOCATION%\dlc_metallics >NUL
+ECHO Extracting dlc_michelin archive
+%EXTRACTOR% dlc_michelin.scs %LOCATION%\dlc_michelin >NUL
 ECHO Extracting dlc_mighty_griffin archive
 %EXTRACTOR% dlc_mighty_griffin.scs %LOCATION%\dlc_mighty_griffin >NUL
 ECHO Extracting dlc_north archive
@@ -114,6 +84,12 @@ DEL %LOCATION%\dlc_halloween\dlc_halloween.manifest.sii
 RMDIR "%LOCATION%\dlc_metallics\material" /s /q
 RMDIR "%LOCATION%\dlc_metallics\vehicle" /s /q
 DEL %LOCATION%\dlc_metallics\dlc_metallics.manifest.sii
+
+:: dlc_michelin
+RMDIR "%LOCATION%\dlc_michelin\automat" /s /q
+RMDIR "%LOCATION%\dlc_michelin\material" /s /q
+RMDIR "%LOCATION%\dlc_michelin\vehicle" /s /q
+DEL %LOCATION%\dlc_michelin\dlc_michelin.manifest.sii
 
 :: dlc_mighty_griffin
 RMDIR "%LOCATION%\dlc_mighty_griffin\automat" /s /q
