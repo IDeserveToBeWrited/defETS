@@ -2,6 +2,12 @@ SiiNunit
 {
 police_data : police.data
 {
+	# level based fines: min(base + level * step, limit), rounded up to multiple of rounding.
+	fine_factor_base: 0.2
+	fine_factor_step: 0.08
+	fine_factor_limit: 1.0
+	fine_amount_rounding: 20
+
 	fine_amounts[0]: 400 		# car crash
 	fine_amounts[1]: 150 		# avoid sleeping
 	fine_amounts[2]: 100 		# wrong way
@@ -21,13 +27,34 @@ police_data : police.data
 	offence_check_delay[5]: 0 	# red lights
 	offence_check_delay[6]: 60 	# speeding
 
+	#
+	# in seconds of real time
+	#
+	offence_police_check_delay[0]: 0 	# car crash
+	offence_police_check_delay[1]: 30 	# avoid sleeping
+	offence_police_check_delay[2]: 5 	# wrong way
+	offence_police_check_delay[3]: 0 	# speeding (camera)
+	offence_police_check_delay[4]: 7	# no lights during night
+	offence_police_check_delay[5]: 0 	# red lights
+	offence_police_check_delay[6]: 3 	# speeding
+	offence_police_check_delay[7]: 0 	# avoid weighing
+
 	offence_probabilty[0]: 0.7 	# car crash
 	offence_probabilty[1]: 0.3 	# avoid sleeping
 	offence_probabilty[2]: 0.6 	# wrong way
 	offence_probabilty[3]: 1.0 	# speeding (camera)
 	offence_probabilty[4]: 0.3	# no lights during night
-	offence_probabilty[5]: 0.4 	# red lights
-	offence_probabilty[6]: 0.0 	# speeding (currently disabled. NOTE (viktor): Must to keep is 0 also because now we use ONLY speedcameras to detect player's speed, nothing random)
+	offence_probabilty[5]: 0.7 	# red lights
+	offence_probabilty[6]: 0.0 	# speeding
+
+	offence_police_probabilty[0]: 1.0 	# car crash
+	offence_police_probabilty[1]: 0.3 	# avoid sleeping
+	offence_police_probabilty[2]: 0.7 	# wrong way
+	offence_police_probabilty[3]: 1.0 	# speeding (camera)
+	offence_police_probabilty[4]: 0.8	# no lights during night
+	offence_police_probabilty[5]: 1.0 	# red lights
+	offence_police_probabilty[6]: 0.9 	# speeding
+	offence_police_probabilty[7]: 1.0 	# avoid weighing
 
 	# car crash
 	offence_message[0]: "<img src=/material/ui/hud/car_crash.mat kr=center><br offset=-5>@@offence_crash@@"
@@ -50,10 +77,16 @@ police_data : police.data
 	# speeding
 	offence_message[6]: "<img src=/material/ui/hud/speed_camera.mat kr=center><br offset=-5>@@offence_speeding@@"
 
-	# timer decrease rate how mach time it takes to decrese timer by 1 second (in seconds of real time)
+	# timer decrease rate how much time it takes to decrease timer by 1 second (in seconds of real time)
 	timer_decrease_rate: 120	# 2 minutes
 
 	# police offence information message delay in seconds of real time
 	message_delay: 4.0
+
+	# increase fine if there is some police car nearby
+	police_nearby_fine_rate: 2
+
+	# how often can nearby police car impose a fine
+	police_nearby_offence_timer: 15.0
 }
 }

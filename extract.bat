@@ -31,6 +31,8 @@ ECHO Extracting dlc_mighty_griffin archive
 %EXTRACTOR% dlc_mighty_griffin.scs %LOCATION%\dlc_mighty_griffin >NUL
 ECHO Extracting dlc_north archive
 %EXTRACTOR% dlc_north.scs %LOCATION%\dlc_north >NUL
+ECHO Extracting dlc_raven archive
+%EXTRACTOR% dlc_raven.scs %LOCATION%\dlc_raven >NUL
 ECHO Extracting dlc_rims archive
 %EXTRACTOR% dlc_rims.scs %LOCATION%\dlc_rims >NUL
 ECHO Extracting dlc_rocket_league archive
@@ -107,6 +109,13 @@ RMDIR "%LOCATION%\dlc_north\model2" /s /q
 RMDIR "%LOCATION%\dlc_north\prefab2" /s /q
 RMDIR "%LOCATION%\dlc_north\vehicle" /s /q
 DEL %LOCATION%\dlc_north\dlc_north.manifest.sii
+
+
+:: dlc_raven
+RMDIR "%LOCATION%\dlc_raven\automat" /s /q
+RMDIR "%LOCATION%\dlc_raven\material" /s /q
+RMDIR "%LOCATION%\dlc_raven\vehicle" /s /q
+DEL %LOCATION%\dlc_raven\dlc_raven.manifest.sii
 
 :: dlc_rims
 RMDIR "%LOCATION%\dlc_rims\automat" /s /q

@@ -1,0 +1,32 @@
+traffic_vehicle : traffic.volvo_xc70
+{
+	accessories[]: .volvo_xc70.chassis
+	accessories[]: .volvo_xc70.fwheel
+	accessories[]: .volvo_xc70.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+	lod_dist[]: 100
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .volvo_xc70.chassis
+{
+	data_path: "/def/vehicle/ai/volvo_xc70/chassis.sii"
+}
+
+vehicle_wheel_accessory: .volvo_xc70.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .volvo_xc70.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}

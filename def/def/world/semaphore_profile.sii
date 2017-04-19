@@ -133,8 +133,15 @@ tr_semaphore_profile : tr_sem_prof.crossing {
 
 	name: "road crossing - default"
 
-	interval[]: (150.0, 400.0, 300.0, 280.0)
-	cycle[]: 2.0
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	interval[]: (150.0, 500.0, 300.0, 50.0)
+	cycle[]: 4.0
 
 	type[0]: barrier_distance
 	type[1]: model_only
@@ -160,6 +167,17 @@ tr_semaphore_profile : tr_sem_prof.temporary {
 	name: "roadwork traffic light"
 
 	interval[]: (18.0, 2.0, 50.0, 2.0)
+	cycle[]: 36.0
+	cycle[]: 0.0
+	model[]: "temporary"
+	type[]: traffic_light_blockable
+}
+
+tr_semaphore_profile : tr_sem_prof.temporary.f {
+
+	name: "roadwork traffic light"
+
+	interval[]: (18.0, 2.0, 50.0, 0.0)
 	cycle[]: 36.0
 	cycle[]: 0.0
 	model[]: "temporary"

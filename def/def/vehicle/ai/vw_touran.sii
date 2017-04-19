@@ -1,0 +1,41 @@
+traffic_vehicle : traffic.vw_touran
+{
+	accessories[]: .vw_touran.chassis
+	accessories[]: .vw_touran.fwheel
+	accessories[]: .vw_touran.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+	lod_dist[]: 100
+
+	color[]: (0.1844, 0, 0.0085) #red
+	color[]: (0.0006, 0.0021, 0.0043) #black
+	color[]: (0.0761, 0.0512, 0.0331) #brown
+	color[]: (0.1022, 0.1714, 0.2422) #light blue
+	color[]: (0, 0.0144, 0.0865) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white	
+
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .vw_touran.chassis
+{
+	data_path: "/def/vehicle/ai/vw_touran/chassis.sii"
+}
+
+vehicle_wheel_accessory: .vw_touran.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
+}
+
+vehicle_wheel_accessory: .vw_touran.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"
+}
