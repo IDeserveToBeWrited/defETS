@@ -41,11 +41,11 @@ traffic_vehicle_type : traffic.vehicle_type.truck
 
 traffic_vehicle_type : traffic.vehicle_type.bus
 {
-	spawn_ratio: 0.4
+	spawn_ratio: 0.2
 
 	allowed_lane_type[]: "*road*"
 
-	spawn_max_count: 4
+	spawn_max_count: 3
 
 	storage_path: "/def/vehicle/traffic_storage_bus.sii"
 }
@@ -62,6 +62,19 @@ traffic_vehicle_type : traffic.vehicle_type.slow
 	attachable_trailer_type[]: simple
 
 	storage_path: "/def/vehicle/traffic_storage_slow.sii"
+}
+
+traffic_vehicle_type : traffic.vehicle_type.police
+{
+	speed_class: car
+	license_plate_type: police
+
+	allowed_lane_type[]: "*road*"
+
+	spawn_ratio: 0.12
+	spawn_max_count: 1
+
+	storage_path: "/def/vehicle/traffic_storage_police.sii"
 }
 
 }

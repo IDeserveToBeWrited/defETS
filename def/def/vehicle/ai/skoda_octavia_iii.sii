@@ -1,0 +1,37 @@
+traffic_vehicle : traffic.octavia_iii
+{
+	accessories[]: .octavia_iii.chassis
+	accessories[]: .octavia_iii.fwheel
+	accessories[]: .octavia_iii.rwheel
+
+	max_speed: 160
+	color[]: (0.0074, 0.0684, 0.2086) 
+	color[]: (0.0802, 0.0307, 0.0109) 
+	color[]: (0.063, 0.0528, 0.0578) 
+	color[]: (0.7835, 0.7835, 0.7835) 
+	color[]: (0.1221, 0.0043, 0.0018) 
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+	lod_dist[]: 100
+
+	vehicle_mass: 1800
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .octavia_iii.chassis
+{
+	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_17in.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_17in.sii"
+}

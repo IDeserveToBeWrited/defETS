@@ -1,0 +1,30 @@
+SiiNunit
+{
+accessory_addon_int_data : mich_bobl.iveco.stralis.toystand
+{
+	name: "Michelin Figure"
+	price: 105
+	unlock: 0
+	icon: "bhead_mich.dlc_michelin"
+   
+	interior_model:	"/vehicle/truck/upgrade/interior_decors/toystand/bibendum_base.dlc_michelin.pmd"
+	
+	data[]: .bhead_mich.phys_data
+}
+
+physics_toy_data : .bhead_mich.phys_data
+{
+
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/bibendum_head.dlc_michelin.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/bibendum_head.dlc_michelin.pmc"
+  
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.4			# toy mass
+	locator_hook_offset:	(0.0f, 0.027f, 0.000f)	# offset of connection point on hook against toy locator
+  
+	# definitions applied only to toys with joint
+	angular_stiffness:	(300.0, 300.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping:	(5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude:	(25.0, 25.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}
