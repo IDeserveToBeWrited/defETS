@@ -8,6 +8,7 @@
 - [Going East!](/dlc_east/def)
 - [Vive la France !](/dlc_fr/def)
 - [Halloween Paint Jobs Pack](/dlc_halloween/def/vehicle)
+- [Heavy Cargo Pack](/dlc_heavy_cargo/def)
 - [Metallic Paint Jobs Pack](/dlc_metallics/def/vehicle/truck)
 - [Michelin Fan Pack](/dlc_michelin/def/vehicle)
 - [Mighty Griffin Tuning Pack](/dlc_mighty_griffin/def/vehicle)
