@@ -1,0 +1,193 @@
+SiiNunit
+{
+
+truck_analysis_data : .main {
+	items[]:				"torque"
+	items_names[]:			"@@engine_torque@@"
+	items_ranges[]:			(1000, 3500)
+	items_visibility[]:		true
+	
+	items[]:				"power"
+	items_names[]:			"@@power@@"
+	items_ranges[]:			(300, 740)
+	items_visibility[]:		true
+	
+	items[]:				"gear_count"
+	items_names[]:			"@@gear_count@@"
+	items_ranges[]:			(5, 14)
+	items_visibility[]:		true
+	
+	items[]:				"first_gear_ratio"
+	items_names[]:			"@@first_gear_ratio@@"
+	items_ranges[]:			(4, 16)
+	items_visibility[]:		true
+	
+	items[]:				"last_gear_ratio"
+	items_names[]:			"@@last_gear_ratio@@"
+	items_ranges[]:			(0.5, 1.5)
+	items_visibility[]:		true
+	
+	items[]:				"differential_ratio"
+	items_names[]:			"@@differential_ratio@@"
+	items_ranges[]:			(2, 4)
+	items_visibility[]:		true
+	
+	items[]:				"effective_wheel_base"
+	items_names[]:			"@@effective_wheel_base@@"
+	items_ranges[]:			(3.5, 5)
+	items_visibility[]:		true
+	
+	items[]:				"retarder"
+	items_names[]:			"@@retarder_analysis@@"
+	items_ranges[]:			(0, 1)
+	items_visibility[]:		true
+	
+	items[]:				"axles"
+	items_names[]:			"@@axles@@"
+	items_ranges[]:			(2, 4)
+	items_visibility[]:		true
+	
+	items[]:				"powered_axles"
+	items_names[]:			"@@powered_axles@@"
+	items_ranges[]:			(1, 2)
+	items_visibility[]:		true
+	
+	
+	
+	
+	
+	items[]:				"first_gear_diff_ratio"
+	items_names[]:			"first_gear_diff_ratio"
+	items_ranges[]:			(8, 64)
+	items_visibility[]:		false
+	
+	items[]:				"normal_cargo_base"
+	items_names[]:			"normal_cargo_base"
+	items_ranges[]:			(3.5, 9.5)
+	items_visibility[]:		false
+	
+	items[]:				"heavy_cargo_base"
+	items_names[]:			"heavy_cargo_base"
+	items_ranges[]:			(15000, 150000)
+	items_visibility[]:		false
+	
+	items[]:				"maneuverability_base"
+	items_names[]:			"maneuverability_base"
+	items_ranges[]:			(0.14, 0.2)
+	items_visibility[]:		false
+	
+	
+	
+	
+	categories[]:		.c1
+	categories[]:		.c2
+	categories[]:		.c3
+	categories[]:		.c4
+	categories[]:		.c5
+}
+
+truck_analysis_category : .c1 {
+	name:				"@@normal_cargo@@"
+	tooltip:			"@@normal_cargo_tooltip@@"
+	
+	items[]:			"normal_cargo_base"
+	items_weight[]:		3.5
+	items[]:			"retarder"
+	items_weight[]:		1.0
+	items[]:			"axles"
+	items_weight[]:		-4.0
+	
+	additional_dependencies[]:	"torque"
+	additional_dependencies[]:	"power"
+	additional_dependencies[]:	"last_gear_ratio"
+	additional_dependencies[]:	"differential_ratio"
+}
+
+truck_analysis_category : .c2 {
+	name:				"@@heavy_cargo@@"
+	tooltip:			"@@heavy_cargo_tooltip@@"
+	
+	items[]:			"heavy_cargo_base"
+	items_weight[]:		7.0
+	items[]:			"axles"
+	items_weight[]:		4.0
+	items[]:			"powered_axles"
+	items_weight[]:		5.0
+	items[]:			"retarder"
+	items_weight[]:		8.0
+	
+	additional_dependencies[]:	"torque"
+	additional_dependencies[]:	"first_gear_ratio"
+	additional_dependencies[]:	"differential_ratio"
+}
+
+truck_analysis_category : .c3 {
+	name:				"@@maneuverability@@"
+	tooltip:			"@@maneuverability_tooltip@@"
+	
+	items[]:			"maneuverability_base"
+	items_weight[]:		5.0
+	items[]:			"gear_count"
+	items_weight[]:		1.0
+	
+	additional_dependencies[]:	"effective_wheel_base"
+}
+
+truck_analysis_category : .c4 {
+	name:				"@@hill_climbing@@"
+	tooltip:			"@@hill_climbing_tooltip@@"
+	
+	items[]:			"heavy_cargo_base"
+	items_weight[]:		9.0
+	items[]:			"retarder"
+	items_weight[]:		10.0
+	
+	additional_dependencies[]:	"torque"
+	additional_dependencies[]:	"first_gear_ratio"
+	additional_dependencies[]:	"differential_ratio"
+}
+
+truck_analysis_category : .c5 {
+	name:				"@@uneven_terrain@@"
+	tooltip:			"@@uneven_terrain_tooltip@@"
+	
+	items[]:			"axles"
+	items_weight[]:		3.0
+	items[]:			"first_gear_diff_ratio"
+	items_weight[]:		5.0
+	items[]:			"gear_count"
+	items_weight[]:		4.0
+	
+	additional_dependencies[]:	"first_gear_ratio"
+	additional_dependencies[]:	"differential_ratio"
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
