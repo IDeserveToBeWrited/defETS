@@ -27,6 +27,8 @@ ECHO Extracting dlc_heavy_cargo archive
 %EXTRACTOR% dlc_heavy_cargo.scs %LOCATION%\dlc_heavy_cargo >NUL
 ECHO Extracting dlc_metallics archive
 %EXTRACTOR% dlc_metallics.scs %LOCATION%\dlc_metallics >NUL
+ECHO Extracting dlc_metallics2 archive
+%EXTRACTOR% dlc_metallics2.scs %LOCATION%\dlc_metallics2 >NUL
 ECHO Extracting dlc_michelin archive
 %EXTRACTOR% dlc_michelin.scs %LOCATION%\dlc_michelin >NUL
 ECHO Extracting dlc_mighty_griffin archive
@@ -96,6 +98,11 @@ DEL %LOCATION%\dlc_heavy_cargo\dlc_heavy_cargo.manifest.sii
 RMDIR "%LOCATION%\dlc_metallics\material" /s /q
 RMDIR "%LOCATION%\dlc_metallics\vehicle" /s /q
 DEL %LOCATION%\dlc_metallics\dlc_metallics.manifest.sii
+
+:: dlc_metallics2
+RMDIR "%LOCATION%\dlc_metallics2\material" /s /q
+RMDIR "%LOCATION%\dlc_metallics2\vehicle" /s /q
+DEL %LOCATION%\dlc_metallics2\dlc_metallics2.manifest.sii
 
 :: dlc_michelin
 RMDIR "%LOCATION%\dlc_michelin\automat" /s /q
