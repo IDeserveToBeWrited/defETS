@@ -2,26 +2,46 @@ SiiNunit
 {
 ui_truck_scene_base_config : _nameless.config {
 
-	light_direction: (-1.5, -7.0, -1.5)
-	light_ambient: (0.35, 0.35, 0.35)
-	light_diffuse: (2.0, 2.0, 2.0)
-	light_specular: (1.0, 1.0, 1.0)
+  icon_path:"/model/ui/garage/ico_garage.mat"
+	scene_name: "@@garage_scene@@"
 
-	camera_position: (0.0, 3.1, -15)
-	camera_aim: ( 0.0, 2.5, -0.7 )
-	camera_fov: 30
+	light_direction: ( 0.0, -8.0, 0.0 )
+	light_ambient: ( 0.3, 0.3, 0.3 )
+	light_diffuse: ( 3.0, 3.0, 3.0 )
+	light_specular: ( 1.0, 1.0, 1.0 )
+    light_environment: 2.5
+    
+    fog_color: (0.9, 0.9, 0.9)
+	fog_density: 0.0018
+
+	camera_position: ( 0.0, 0.0, 0.0 )
+	camera_aim: ( 0.0, 0, -0.2 )
+	camera_fov: 35
 	camera_stereo_convergence: 2.5
 
-	truck_position: (0.0, 0.0, 0.0)
+	truck_position: ( 0.0, 0.0, 0.0 )
+    truck_rot: ( 0.0, 0.0, 0.0 )
+	truck_steering_rot: 0.0
 
-	icon_path:"/model/ui/ico_desktop.mat"
-	scene_model_path: "/model/ui/background_dome.pmd"
-	scene_cinematic_camera: "/def/camera/ui/desktop_bg_cam.sii"
-	scene_model_look: "color1"
-	scene_model_variant: "c_cabin"
+	scene_model_position: ( 0.0, 0.0, 0.0 )
+	scene_model_look: "default"
+	scene_model_variant: "Default"
+	
+	scene_model_path: "/model/ui/garage/desktop_garage.pmd"
+	scene_model_anim_path: "/model/ui/garage/desktop_garage_anim.pmd"
+	scene_model_animation: "/model/ui/garage/desktop_garage.pma"
+	
+	scene_cinematic_camera: "/def/camera/ui/desktop_garage_cam.sii"
+	
 
-	scene_model_position:(0.0, -0.25, 0.0)
+	floor_reflection: true
+	cube_reflection: true
+	vehicle_lights_on: true
+	
+    
+    part_order[]: reflection
+	part_order[]: a
+	part_order[]: b
 
-	vehicle_reflection: "/model/ui/dome_cubemap.tobj"
 }
 }

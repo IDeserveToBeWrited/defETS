@@ -1,8 +1,8 @@
-# SCS' Euro Truck Simulator 2 definition files
+﻿# SCS' Euro Truck Simulator 2 definition files
 
 ## **Contains:**
 
-- [Base game](/def)
+- [Base game](/def/def)
 - [Christmas Paint Jobs Pack](/dlc_christmas/def/vehicle)
 - [Dragon Truck Design Pack](/dlc_dragon/def/vehicle)
 - [Going East!](/dlc_east/def)
