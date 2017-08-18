@@ -4,6 +4,7 @@
 
 - [Base game](/def/def)
 - [Christmas Paint Jobs Pack](/dlc_christmas/def/vehicle)
+- [DAF Tuning Pack](/dlc_daf_tuning_pack/def/vehicle)
 - [Dragon Truck Design Pack](/dlc_dragon/def/vehicle)
 - [Going East!](/dlc_east/def)
 - [Vive la France !](/dlc_fr/def)

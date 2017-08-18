@@ -1,0 +1,42 @@
+SiiNunit
+{
+accessory_interior_data: stan_l_fl_uk.daf.xf_euro6.interior
+{
+	name: "@@standard@@ Line Facelift UK"
+	price: 12960
+	unlock: 0
+	icon: "interior_daf_xf_euro6_std_uk_fl"
+
+	model: "/vehicle/truck/daf_xf_euro6/interior/uk/model.pmd"
+	collision: "/vehicle/truck/daf_xf_euro6/interior/uk/model.pmc"
+
+	animated_model: "/vehicle/truck/daf_xf_euro6/interior/uk/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: stan_line
+	variant: stan_l_fl
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/daf_xf_euro6.sii"
+	gps_path:"/ui/gps.sii"
+	left_hand_traffic: true
+
+	glass_panes[]: .daf.xf_euro6.pane.front
+	glass_panes[]: .daf.xf_euro6.pane.close
+	glass_panes[]: .daf.xf_euro6.pane.far
+	glass_panes[]: .daf.xf_euro6.pane.top
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/daf_xf_euro6/stock.pmd"
+	ext_variant: uk_fl
+	ext_look: stan_line
+
+	defaults[]: "/def/vehicle/truck/daf.xf_euro6/accessory/steering_w/standard.sii"
+
+	suitable_for[]: "spacespoiler.daf.xf_euro6.cabin"
+	suitable_for[]: "space.daf.xf_euro6.cabin"
+
+@include "dashboard_color.sui"
+}
+@include "glass.dat"
+}

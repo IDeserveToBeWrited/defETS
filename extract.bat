@@ -1,7 +1,7 @@
 @ECHO OFF
 
 :: Location for extraction
-SET LOCATION=X:\def
+SET LOCATION=X:\defETS
 MKDIR %LOCATION%
 :: Location to SCS Extractor
 SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2\scs_extractor.exe"
@@ -15,6 +15,8 @@ ECHO Extracting def archive
 %EXTRACTOR% def.scs %LOCATION%\def >NUL
 ECHO Extracting dlc_christmas archive
 %EXTRACTOR% dlc_christmas.scs %LOCATION%\dlc_christmas >NUL
+ECHO Extracting dlc_daf_tuning_pack archive
+%EXTRACTOR% dlc_daf_tuning_pack.scs %LOCATION%\dlc_daf_tuning_pack	 >NUL
 ECHO Extracting dlc_dragon archive
 %EXTRACTOR% dlc_dragon.scs %LOCATION%\dlc_dragon >NUL
 ECHO Extracting dlc_east archive
@@ -58,6 +60,12 @@ RMDIR "%LOCATION%\dlc_christmas\automat" /s /q
 RMDIR "%LOCATION%\dlc_christmas\material" /s /q
 RMDIR "%LOCATION%\dlc_christmas\vehicle" /s /q
 DEL %LOCATION%\dlc_christmas\dlc_christmas.manifest.sii
+
+:: dlc_daf_tuning_pack
+RMDIR "%LOCATION%\dlc_daf_tuning_pack\automat" /s /q
+RMDIR "%LOCATION%\dlc_daf_tuning_pack\material" /s /q
+RMDIR "%LOCATION%\dlc_daf_tuning_pack\vehicle" /s /q
+DEL %LOCATION%\dlc_daf_tuning_pack\dlc_daf_tuning_pack.manifest.sii
 
 :: dlc_dragon
 RMDIR "%LOCATION%\dlc_dragon\automat" /s /q

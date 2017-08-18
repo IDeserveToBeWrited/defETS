@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: excl_fl.daf.xf_euro6.interior
+{
+	name: "@@exclusive@@ Line Facelift"
+	price: 36660
+	unlock: 12
+	icon: "interior_daf_xf_euro6_excl_line"
+
+	model: "/vehicle/truck/daf_xf_euro6/interior/model.pmd"
+	collision: "/vehicle/truck/daf_xf_euro6/interior/model.pmc"
+
+	animated_model: "/vehicle/truck/daf_xf_euro6/interior/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: excl_line
+	variant: excl_fl
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/daf_xf_euro6.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .daf.xf_euro6.pane.front
+	glass_panes[]: .daf.xf_euro6.pane.close
+	glass_panes[]: .daf.xf_euro6.pane.far
+	glass_panes[]: .daf.xf_euro6.pane.top
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/daf_xf_euro6/stock.pmd"
+	ext_variant: eu_fl
+	ext_look: excl_fl
+
+	defaults[]: "/def/vehicle/truck/daf.xf_euro6/accessory/steering_w/excl_line.sii"
+
+	suitable_for[]: "superspace.daf.xf_euro6.cabin"
+
+@include "dashboard_color.sui"
+}
+@include "glass.dat"
+}
