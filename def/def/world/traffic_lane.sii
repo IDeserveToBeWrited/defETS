@@ -14,33 +14,57 @@ SiiNunit
 #
 #
 
+traffic_lane_data : traffic_lane.road.local.no_overtake
+{
+	speed_class: local_road
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_truck_l
+	traffic_rules[]: traffic_rule.s_bus_l
+	traffic_rules[]: traffic_rule.s_police
+}
+
 traffic_lane_data : traffic_lane.road.local
 {
 	speed_class: local_road
 
-	spawn_count_limit_modifier: 0.3
-	spawn_frequency_modifier: 0.2
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_truck_l
+	traffic_rules[]: traffic_rule.s_bus_l
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
 }
 
 traffic_lane_data : traffic_lane.road.expressway
 {
 	speed_class: expressway
 
-	spawn_count_limit_modifier: 2.0
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
 }
 
 traffic_lane_data : traffic_lane.road.motorway
 {
 	speed_class: motorway
 
-	spawn_count_limit_modifier: 3.0
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
 }
 
 traffic_lane_data : traffic_lane.road.motorway.low_density
 {
 	speed_class: motorway
 
-	spawn_frequency_modifier: 0.1
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
 }
 
 traffic_lane_data : traffic_lane.road.unlimited
@@ -55,24 +79,25 @@ traffic_lane_data : traffic_lane.road.unlimited
 traffic_lane_data : traffic_lane.no_vehicles
 {
 	speed_class: local_road
-
-	spawn_count_limit_modifier: 0.3
-	spawn_frequency_modifier: 0.2
 }
 
 traffic_lane_data : traffic_lane.rail.train
 {
-	spawn_frequency_modifier: 0.04
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train
+	traffic_rules[]: traffic_rule.limit_80
 }
 
 traffic_lane_data : traffic_lane.rail.train.high_speed
 {
-	spawn_frequency_modifier: 0.04
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_f
 }
 
 traffic_lane_data : traffic_lane.rail.tram
 {
-	spawn_frequency_modifier: 0.07
+	traffic_rules[]: traffic_rule.rail_tram
+	traffic_rules[]: traffic_rule.s_tram
 }
 
 }

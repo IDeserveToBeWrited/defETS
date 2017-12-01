@@ -1032,4 +1032,210 @@ tr_semaphore_model : tr_sem_mdl.temporary.f {
 	dynamic: false
 }
 
+tr_semaphore_model : tr_sem_mdl.crossing_r.i {
+
+	name: "level_right_it"
+
+	model_desc: "/prefab2/level_crossing/level_right_anim_01_it.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_anim_01_it.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/level_crossing/r_dwn_it.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/r_up_it.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+}
+
+tr_semaphore_model : tr_sem_mdl.crossing_l.i {
+
+	name: "level_left_it"
+
+	model_desc: "/prefab2/level_crossing/level_left_anim_01_it.pmd"
+	model_coll: "/prefab2/level_crossing/level_left_anim_01_it.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/level_crossing/l_dwn_it.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/l_up_it.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+}
+
+tr_semaphore_model : tr_sem_mdl.ab_toll.i {
+
+	name: "ab_toll_it"
+
+	model_desc: "/prefab2/tollgate/tolgate_small_anim_it_01.pmd"
+	model_coll: "/prefab2/tollgate/tolgate_small_anim_it_01.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/tollgate/t_small_dwn.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/tollgate/t_smal_up.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+}
+
+tr_semaphore_model : tr_sem_mdl.bridge_l.i {
+
+	name: "bridge - left part - it"
+
+	model_desc: "/prefab2/landmark/livorno_bridge_anim_01_it.pmd"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/landmark/br_up_it.pma"
+	state_collision[1]: false
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/br_down_it.pma"
+	state_collision[2]: false
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+
+	draw_distance: 500
+}
+
+tr_semaphore_model : tr_sem_mdl.bridge2_l.i {
+
+	name: "bridge2 - left part - it"
+
+	model_desc: "/prefab2/landmark/livorno_bridge_anim_02_it.pmd"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/landmark/br2_up_it.pma"
+	state_collision[1]: false
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/br2_down_it.pma"
+	state_collision[2]: false
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+
+	draw_distance: 500
+}
+
+tr_semaphore_model : tr_sem_mdl.ship_cr_l.i {
+
+	name: "ship crossing barrier - left - it"
+
+	model_desc: "/prefab2/landmark/level_left_livorno_anim_it.pmd"
+	model_coll: "/prefab2/landmark/level_left_livorno_anim_it.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/landmark/liv_left_dwn.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/liv_left_up.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+}
+
+tr_semaphore_model : tr_sem_mdl.ship_cr_r.i {
+
+	name: "ship crossing barrier - right - it"
+
+	model_desc: "/prefab2/landmark/level_right_livorno_anim_it.pmd"
+	model_coll: "/prefab2/landmark/level_right_livorno_anim_it.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/landmark/liv_right_dn.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/liv_right_up.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	dynamic: false
+
+}
+
 }

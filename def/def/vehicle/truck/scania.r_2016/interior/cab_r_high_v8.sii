@@ -1,0 +1,39 @@
+SiiNunit
+{
+accessory_interior_data: a_v8.scania.r_2016.interior
+{
+	name: "@@exclusive@@ V8"
+	price: 39840
+	unlock: 16
+	icon: "interior_scania_2016_v8"
+
+	model: "/vehicle/truck/scania_2016/interior/model.pmd"
+	collision: "/vehicle/truck/scania_2016/interior/model.pmc"
+	animated_model: "/vehicle/truck/scania_2016/interior/anim.pmd"
+    
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: v8
+	variant: cab_r_a_v8
+
+@include "animations.sui"
+
+	dashboard_path:"/ui/dashboard/scania_2016_exc.sii"
+	gps_path:"/ui/gps.sii"
+
+	glass_panes[]: .scania.r_2016.pane.front
+	glass_panes[]: .scania.r_2016.pane.close
+	glass_panes[]: .scania.r_2016.pane.far
+	glass_panes[]: .scania.r_2016.pane.top
+
+    
+    ext_model: "/vehicle/truck/upgrade/ext_interior/scania_2016/stock.pmd"
+	ext_variant: r_h_v8_eu
+	ext_look: v8
+	
+	suitable_for[]: "highline.scania.r_2016.cabin"
+
+@include "dashboard_color.sui"
+}
+@include "glass.sui"
+}

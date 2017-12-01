@@ -13,15 +13,18 @@ vehicle: .tdealer.scania_3
  accessories[]: .scania3.fdisc
  accessories[]: .scania3.fhub
  accessories[]: .scania3.fnuts
+ accessories[]: .scania3.ftire2
+ accessories[]: .scania3.fdisc2
+ accessories[]: .scania3.fhub2
+ accessories[]: .scania3.fnuts2
  accessories[]: .scania3.rtire
  accessories[]: .scania3.rdisc
  accessories[]: .scania3.rhub
  accessories[]: .scania3.rnuts
  accessories[]: .scania3.paint_job
- accessories[]: .scania3.doorstep
  accessories[]: .scania3.doorhndl
  accessories[]: .scania3.mirror
- accessories[]: .scania3.sideskirt
+ accessories[]: .scania3.doorstep
  accessories[]: .scania3.sunshld
  accessories[]: .scania3.f_mirror
  accessories[]: .scania3.s_mirror
@@ -31,6 +34,7 @@ vehicle: .tdealer.scania_3
  accessories[]: .scania3.f_badge
  accessories[]: .scania3.r_bumper
  accessories[]: .scania3.r_mudflap
+ accessories[]: .scania3.sideskirt
  accessories[]: .scania3.swheel
 }
 
@@ -41,26 +45,26 @@ vehicle_accessory : .scania3.data {
 
 vehicle_accessory : .scania3.chassis {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/chassis/4x2.sii"
+ data_path: "/def/vehicle/truck/scania.r/chassis/6x2_4_midlift.sii"
 }
 
 vehicle_accessory : .scania3.cabin {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/cabin/normal.sii"
+ data_path: "/def/vehicle/truck/scania.r/cabin/topline.sii"
 }
 
 vehicle_accessory : .scania3.interior {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/interior/normal_uk.sii"
+ data_path: "/def/vehicle/truck/scania.r/interior/exclusive_uk.sii"
 }
 
 vehicle_accessory : .scania3.engine {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/engine/dc13_360.sii"
+ data_path: "/def/vehicle/truck/scania.r/engine/dc16_500.sii"
 }
 
 vehicle_addon_accessory : .scania3.badge {
- data_path: "/def/vehicle/truck/scania.r/badge/r360.sii"
+ data_path: "/def/vehicle/truck/scania.r/badge/r500.sii"
 }
 
 vehicle_addon_accessory : .scania3.f_intake_cab {
@@ -83,19 +87,23 @@ vehicle_addon_accessory : .scania3.r_mudflap {
  data_path: "/def/vehicle/truck/scania.r/accessory/r_mudflap/r_mudflap.sii"
 }
 
+vehicle_addon_accessory : .scania3.sideskirt {
+ data_path: "/def/vehicle/truck/scania.r/accessory/sideskirt/stock_6x_v8.sii"
+}
+
 vehicle_accessory : .scania3.transmission {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/transmission/12_speed_ret.sii"
+ data_path: "/def/vehicle/truck/scania.r/transmission/12_speed.sii"
 }
 
 vehicle_sound_accessory : .scania3.soundint {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/sound/interior.sii"
+ data_path: "/def/vehicle/truck/scania.r/sound/interior_v8.sii"
 }
 
 vehicle_sound_accessory : .scania3.soundext {
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/sound/exterior.sii"
+ data_path: "/def/vehicle/truck/scania.r/sound/exterior_v8.sii"
 }
 
 vehicle_accessory : .scania3.head_light {
@@ -104,19 +112,8 @@ vehicle_accessory : .scania3.head_light {
 }
 
 vehicle_paint_job_accessory : .scania3.paint_job {
- mask_r_color: (1, 0, 0)
- mask_g_color: (0, 1, 0)
- mask_b_color: (0, 0, 1)
- base_color: (&3c0b4396, &3c9e1b09, &3d73b646)
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/paint_job/color4.sii"
-}
-
-vehicle_addon_accessory : .scania3.doorstep {
- slot_name: 0
- slot_hookup: 0
- wear: 0
- data_path: "/def/vehicle/truck/scania.r/accessory/doorstep/shape1.sii"
+ data_path: "/def/vehicle/truck/scania.r/paint_job/color1.sii"
 }
 
 vehicle_addon_accessory : .scania3.doorhndl {
@@ -130,14 +127,14 @@ vehicle_addon_accessory : .scania3.mirror {
  slot_name: 0
  slot_hookup: 0
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/accessory/mirror/shape1.sii"
+ data_path: "/def/vehicle/truck/scania.r/accessory/mirror/shape2.sii"
 }
 
-vehicle_addon_accessory : .scania3.sideskirt {
+vehicle_addon_accessory : .scania3.doorstep {
  slot_name: 0
  slot_hookup: 0
  wear: 0
- data_path: "/def/vehicle/truck/scania.r/accessory/sideskirt/shape1.sii"
+ data_path: "/def/vehicle/truck/scania.r/accessory/doorstep/shape1.sii"
 }
 
 vehicle_addon_accessory : .scania3.sunshld {
@@ -160,7 +157,6 @@ vehicle_addon_accessory : .scania3.s_mirror {
  wear: 0
  data_path: "/def/vehicle/truck/scania.r/accessory/s_mirror/shape1.sii"
 }
-
 vehicle_wheel_accessory : .scania3.ftire {
  offset: 0
  wear: 0
@@ -181,6 +177,30 @@ vehicle_wheel_accessory : .scania3.fhub {
 
 vehicle_wheel_accessory : .scania3.fnuts {
  offset: 0
+ wear: 0
+ data_path: "/def/vehicle/f_nuts/front_nuts_01_steel.sii"
+}
+
+vehicle_wheel_accessory : .scania3.ftire2 {
+ offset: 2
+ wear: 0
+ data_path: "/def/vehicle/f_tire/1.sii"
+}
+
+vehicle_wheel_accessory : .scania3.fdisc2 {
+ offset: 2
+ wear: 0
+ data_path: "/def/vehicle/f_disc/front_disc_02_matt_gray.sii"
+}
+
+vehicle_wheel_accessory : .scania3.fhub2 {
+ offset: 2
+ wear: 0
+ data_path: "/def/vehicle/f_hub/front_hub_01.sii"
+}
+
+vehicle_wheel_accessory : .scania3.fnuts2 {
+ offset: 2
  wear: 0
  data_path: "/def/vehicle/f_nuts/front_nuts_01_steel.sii"
 }

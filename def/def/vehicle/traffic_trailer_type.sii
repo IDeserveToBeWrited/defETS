@@ -15,8 +15,40 @@ SiiNunit
 
 traffic_trailer_type : traffic.trailer_type.semi_trailer
 {
+	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_semi_trailer.sii"
+}
+
+traffic_trailer_type : traffic.trailer_type.train_car
+{
+	tags[]: "rail_train"
+
+	attachable_trailer_type[]: train_car
+
+	safe_distance: 1000
+
+	storage_path: "/def/vehicle/traffic_storage_train_car.sii"
+}
+
+traffic_trailer_type : traffic.trailer_type.tram_car
+{
+	tags[]: "rail_tram"
+
+	attachable_trailer_type[]: tram_car
+
+	storage_path: "/def/vehicle/traffic_storage_tram_car.sii"
+}
+
+traffic_trailer_type : traffic.trailer_type.simple
+{
+	tags[]: "road"
+	storage_path: "/def/vehicle/traffic_storage_trailer_simple.sii"
+}
+
+traffic_trailer_type : traffic.trailer_type.parked
+{
+	storage_path: "/def/vehicle/traffic_storage_trailer_parked.sii"
 }
 }
 

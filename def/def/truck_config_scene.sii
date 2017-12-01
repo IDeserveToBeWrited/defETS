@@ -10,38 +10,30 @@ ui_truck_scene_config : _nameless.config {
 	camera_position: (0.0, 3.1, -10.5)
 	camera_aim: ( 0.0, 2.6, -0.7 )
 	camera_elevation_limit : (-0.35, 0.0)
-	back_aim_offset: 2.8
+	back_aim_offset: 2.0
 
 	mouse_rot_sens : 0.1
 	camera_zoom_sens : 0.01
-	camera_zoom_min_coef : 0.5
-	camera_zoom_max_coef : 1.15
+	camera_zoom_min_coef : 0.6
+	camera_zoom_max_coef : 1.1
 	camera_fov: 40
 
 	camera_default_azimuth: -2.4
 	camera_default_elevation: -0.098
-	camera_default_zoom: 1.08
+	camera_default_zoom: 1
 
 	truck_position: (0.0, 0.0, 0.0)
-
-#	fog_color: (0.9, 0.9, 0.9)
-#	fog_density: 0.0018
 
 	scene_model_path: "/model/ui/garage/desktop_garage.pmd"
 	scene_model_anim_path: "/model/ui/garage/desktop_garage_anim.pmd"
 	scene_model_animation: "/model/ui/garage/desktop_garage.pma"
 
-	#scene_cinematic_camera: "/def/camera/ui/desktop_garage_cam.sii"
-
 	scene_model_position: ( 0.0, 0.0, 0.0 )
 	scene_model_look: "default"
 	scene_model_variant: "Default"
 
-	
 	floor_reflection: true
-#	cube_reflection: true
-#	vehicle_lights_on: true
-	
+
 
 	part_order[]: reflection
 	part_order[]: a
@@ -65,7 +57,7 @@ ui_truck_scene_config : _nameless.config {
 
 	pin_group[]: mirror
 	pin_look[]: custom_acc
-	pin_offset[]: (-1.35, 0.0, -0.2)
+	pin_offset[]: (-1.35, 0.0, 0.0)
 	pin_dir[]: (-1, 0, -1)
 	pin_dir_uk[]: (-1, 0, -1)
 	double_sided[]: true
@@ -216,6 +208,13 @@ ui_truck_scene_config : _nameless.config {
 	pin_dir[]: (-1, 0, 0)
 	pin_dir_uk[]: (-1, 0, 0)
 	double_sided[]: true
+	
+	pin_group[]: s_panel
+	pin_look[]: custom_acc
+	pin_offset[]: (-1.25, 0.0, 0.0)
+	pin_dir[]: (-1, 0, 0)
+	pin_dir_uk[]: (-1, 0, 0)
+	double_sided[]: true
 
 	pin_group[]: windowtrim
 	pin_look[]: custom_acc
@@ -265,6 +264,13 @@ ui_truck_scene_config : _nameless.config {
 	pin_dir[]: (-1, 0, 0)
 	pin_dir_uk[]: (-1, 0, 0)
 	double_sided[]: true
+	
+	pin_group[]: r_fender
+	pin_look[]: custom_acc
+	pin_offset[]: (-1.3, 0, 0)
+	pin_dir[]: (-1, 0, 0)
+	pin_dir_uk[]: (-1, 0, 0)
+	double_sided[]: true
 
 	pin_group[]: s_badge
 	pin_look[]: custom_acc
@@ -272,6 +278,29 @@ ui_truck_scene_config : _nameless.config {
 	pin_dir[]: (-1, 0, 0)
 	pin_dir_uk[]: (-1, 0, 0)
 	double_sided[]: true
+	
+	pin_group[]: f_light_mid
+	pin_look[]: custom_acc
+	pin_offset[]: (-0.8, 0.0, 0.0)
+	pin_dir[]: (0, 0, 0)
+	pin_dir_uk[]: (0, 0, 0)
+	double_sided[]: true
+	
+	pin_group[]: f_light_chs
+	pin_look[]: custom_acc
+	pin_offset[]: (-1, 0.0, 0.0)
+	pin_dir[]: (0, 0, 0)
+	pin_dir_uk[]: (0, 0, 0)
+	double_sided[]: true
+	
+	pin_group[]: f_light_top
+	pin_look[]: custom_acc
+	pin_offset[]: (-0.9, 0.0, 0.0)
+	pin_dir[]: (0, 0, 0)
+	pin_dir_uk[]: (0, 0, 0)
+	double_sided[]: true
+	
+
 
 	interior_only[]: curtain_f
 	interior_only[]: set_dashbrd
@@ -281,6 +310,7 @@ ui_truck_scene_config : _nameless.config {
 	interior_only[]: toyhang
 	interior_only[]: toyseat
 	interior_only[]: toystand
+	interior_only[]: intlight_bgr
 
 	hookups_exterior_only[]: sunshld
 

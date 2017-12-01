@@ -54,6 +54,16 @@ traffic_data : .traffic.data {
 	# mass_trailer: 20000.0  	# the attribute is obsolete - mass is now set per-vehicle
 	# mass_car: 2000.0  		# the attribute is obsolete - mass is now set per-vehicle
 	# max_truck_count: 4		# the attribute is obsolete - vehicle max count is now set per vehicle type
+
+	ai_displacement_curve_coef: 0.65 # limit curve displacement in curves
+
+	## Drag length limits - virtually 'shortens' vehicles/trailers to allow then to turn in sharp curves
+	## This attribute affects only on vehicles/trailers which are LONGER than the values set.
+	## The side effect of 'shortening' is that vehicles/trailers slide to sides when turning.
+	## It is more noticeable when the real length is much bigger than the limit
+	#
+	ai_drag_length_limits[0]: 6.0   # vehicles
+	ai_drag_length_limits[1]: 10.0   # trailers
 }
 
 }

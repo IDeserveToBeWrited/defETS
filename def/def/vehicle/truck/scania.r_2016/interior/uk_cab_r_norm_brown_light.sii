@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: b_brn_lgh_uk.scania.r_2016.interior
+{
+	name: "@@exclusive@@ Light UK"
+	price: 35160
+	unlock: 12
+	icon: "interior_scania_2016_brown_light_uk"
+
+	model: "/vehicle/truck/scania_2016/interior/uk/model_uk.pmd"
+	collision: "/vehicle/truck/scania_2016/interior/uk/model_uk.pmc"
+	animated_model: "/vehicle/truck/scania_2016/interior/uk/anim_uk.pmd"
+    
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: exc_light
+	variant: cab_r_b_exc
+
+@include "animations_uk.sui"
+
+	dashboard_path:"/ui/dashboard/scania_2016_exc.sii"
+	gps_path:"/ui/gps.sii"
+
+	left_hand_traffic: true
+	
+	glass_panes[]: .scania.r_2016.pane.front
+	glass_panes[]: .scania.r_2016.pane.close
+	glass_panes[]: .scania.r_2016.pane.far
+	glass_panes[]: .scania.r_2016.pane.top
+    
+    	ext_model: "/vehicle/truck/upgrade/ext_interior/scania_2016/stock.pmd"
+	ext_variant: r_l_exc_uk
+	ext_look: exc_light
+	
+	suitable_for[]: "normal.scania.r_2016.cabin"
+
+@include "dashboard_color.sui"
+}
+@include "glass.sui"
+}

@@ -8,9 +8,10 @@ traffic_trailer : train_car.bombar_agc.car
 	accessories[]: .bombar_agc.car.trwheel0
 	accessories[]: .bombar_agc.car.trwheel1
 
-	attachable_trailer[]: "train_car.bombar_agc.*"
+	attachable_trailer[]: "train_car.bombar_agc.car"
+	attachable_trailer[]: "train_car.bombar_agc.onelast"
 
-	trailer_count_min: 1
+	trailer_count_min: 2
 
 	displacement_limit: 0.0
 }
@@ -32,8 +33,45 @@ vehicle_wheel_accessory: .bombar_agc.car.trwheel1
 	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
 }
 
+
 #
-#	CARRIDGE 1
+#	CARRIDGE ONE TO LAST
+#
+
+traffic_trailer : train_car.bombar_agc.onelast
+{
+	accessories[]: .bombar_agc.onelast.tchassis
+	accessories[]: .bombar_agc.onelast.trwheel0
+	accessories[]: .bombar_agc.onelast.trwheel1
+    
+    attachable_trailer[]: "train_car.bombar_agc.rear"
+	trailer_count_min: 1
+    trailer_count_max: 1
+    
+	displacement_limit: 0.0
+}
+
+vehicle_accessory: .bombar_agc.onelast.tchassis
+{
+	data_path: "/def/vehicle/ai/bombardier_agc/chassis_car1.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.onelast.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
+}
+
+vehicle_wheel_accessory: .bombar_agc.onelast.trwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/bombardier_agc_rear.sii"
+}
+
+
+
+#
+#	CARRIDGE LAST
 #
 
 traffic_trailer : train_car.bombar_agc.rear
@@ -41,8 +79,10 @@ traffic_trailer : train_car.bombar_agc.rear
 	accessories[]: .bombar_agc.rear.tchassis
 	accessories[]: .bombar_agc.rear.trwheel0
 	accessories[]: .bombar_agc.rear.trwheel1
-
-	displacement_limit: 0.0
+    
+    trailer_count_min: 0
+	
+    displacement_limit: 0.0
 }
 
 vehicle_accessory: .bombar_agc.rear.tchassis
