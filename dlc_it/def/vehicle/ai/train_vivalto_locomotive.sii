@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.viva_loco
+{
+	accessories[]: .viva_loco.chassis
+	accessories[]: .viva_loco.fwheel
+	accessories[]: .viva_loco.rwheel
+	accessories[]: .viva_loco.rwheel2
+	accessories[]: .viva_loco.rwheel3
+
+	max_speed: 160
+
+	vehicle_mass: 50000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 35000
+
+	attachable_trailer[]: "train_car.viva_car"
+	trailer_count[]: 3
+	trailer_count[]: 4
+	trailer_count[]: 5
+
+	displacement_limit: 0.0
+    
+    spawn_ratio: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+}
+
+vehicle_accessory: .viva_loco.chassis
+{
+	data_path: "/def/vehicle/ai/train_vivalto/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .viva_loco.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .viva_loco.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .viva_loco.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .viva_loco.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

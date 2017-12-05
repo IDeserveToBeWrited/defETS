@@ -1,0 +1,53 @@
+traffic_vehicle : traffic.flexity_loco
+{
+	accessories[]: .flexity_loco.chassis
+	accessories[]: .flexity_loco.fwheel
+	accessories[]: .flexity_loco.rwheel
+
+
+	max_speed: 80 
+
+	vehicle_mass: 70000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 35000
+
+	attachable_trailer[]: "train_car.flexity_car1"
+	trailer_count[]: 4
+
+
+	displacement_limit: 0.0
+    
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+    spawn_condition[]: .traffic.flexity_loco.condition.city
+    
+}
+
+vehicle_accessory: .flexity_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_flexity/chassis_01.sii"
+}
+
+vehicle_wheel_accessory: .flexity_loco.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .flexity_loco.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.flexity_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "palermo"
+}
