@@ -16,6 +16,7 @@
 - [Michelin Fan Pack](/dlc_michelin/def/vehicle)
 - [Mighty Griffin Tuning Pack](/dlc_mighty_griffin/def/vehicle)
 - [Scandinavia](/dlc_north/def)
+- [Special Transport](/dlc_oversize/def)
 - [Raven Truck Design Pack](/dlc_raven/def)
 - [Wheel Tuning Pack](/dlc_rims/def/vehicle)
 - [Rocket League Promo](/dlc_rocket_league/def/vehicle)

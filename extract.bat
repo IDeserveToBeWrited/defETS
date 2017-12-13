@@ -28,6 +28,8 @@ ECHO Extracting dlc_halloween archive
 ECHO Extracting dlc_heavy_cargo archive
 %EXTRACTOR% dlc_heavy_cargo.scs %LOCATION%\dlc_heavy_cargo >NUL
 ECHO Extracting dlc_metallics archive
+%EXTRACTOR% dlc_it.scs %LOCATION%\dlc_it >NUL
+ECHO Extracting dlc_it archive
 %EXTRACTOR% dlc_metallics.scs %LOCATION%\dlc_metallics >NUL
 ECHO Extracting dlc_metallics2 archive
 %EXTRACTOR% dlc_metallics2.scs %LOCATION%\dlc_metallics2 >NUL
@@ -37,6 +39,8 @@ ECHO Extracting dlc_mighty_griffin archive
 %EXTRACTOR% dlc_mighty_griffin.scs %LOCATION%\dlc_mighty_griffin >NUL
 ECHO Extracting dlc_north archive
 %EXTRACTOR% dlc_north.scs %LOCATION%\dlc_north >NUL
+ECHO Extracting dlc_oversize archive
+%EXTRACTOR% dlc_oversize.scs %LOCATION%\dlc_oversize >NUL
 ECHO Extracting dlc_raven archive
 %EXTRACTOR% dlc_raven.scs %LOCATION%\dlc_raven >NUL
 ECHO Extracting dlc_rims archive
@@ -102,6 +106,16 @@ RMDIR "%LOCATION%\dlc_heavy_cargo\material" /s /q
 RMDIR "%LOCATION%\dlc_heavy_cargo\vehicle" /s /q
 DEL %LOCATION%\dlc_heavy_cargo\dlc_heavy_cargo.manifest.sii
 
+:: dlc_it
+RMDIR "%LOCATION%\dlc_it\automat" /s /q
+RMDIR "%LOCATION%\dlc_it\map" /s /q
+RMDIR "%LOCATION%\dlc_it\material" /s /q
+RMDIR "%LOCATION%\dlc_it\model2" /s /q
+RMDIR "%LOCATION%\dlc_it\prefab2" /s /q
+RMDIR "%LOCATION%\dlc_it\unit" /s /q
+RMDIR "%LOCATION%\dlc_it\vehicle" /s /q
+DEL %LOCATION%\dlc_it\dlc_it.manifest.sii
+
 :: dlc_metallics
 RMDIR "%LOCATION%\dlc_metallics\material" /s /q
 RMDIR "%LOCATION%\dlc_metallics\vehicle" /s /q
@@ -133,6 +147,13 @@ RMDIR "%LOCATION%\dlc_north\prefab2" /s /q
 RMDIR "%LOCATION%\dlc_north\vehicle" /s /q
 DEL %LOCATION%\dlc_north\dlc_north.manifest.sii
 
+:: dlc_oversize
+RMDIR "%LOCATION%\dlc_oversize\automat" /s /q
+RMDIR "%LOCATION%\dlc_oversize\map" /s /q
+RMDIR "%LOCATION%\dlc_oversize\material" /s /q
+RMDIR "%LOCATION%\dlc_oversize\unit" /s /q
+RMDIR "%LOCATION%\dlc_oversize\vehicle" /s /q
+DEL %LOCATION%\dlc_oversize\dlc_oversize.manifest.sii
 
 :: dlc_raven
 RMDIR "%LOCATION%\dlc_raven\automat" /s /q
