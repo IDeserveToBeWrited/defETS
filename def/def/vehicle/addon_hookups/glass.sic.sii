@@ -747,3 +747,92 @@ physics_toy_data : .flag_fr_r.phys_data
 	position_iterations:	4				# number of iterations in position solver
 	node_damping:		0.99				# rope node velocity damping
 }
+
+accessory_hookup_int_data :  flag_se_r.addon_hookup
+{
+	name: "Sweden - Gold Pennant"
+	price: 60
+	unlock: 0
+	icon: "interior_decors/toyglass/triangle_flag_se_r"
+  
+
+	model:		  	"/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmd"
+	coll:	                "/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmc"
+
+	data[]: .flag_se_r.phys_data
+
+	suitable_for[]: "set_glass"
+
+	steam_inventory_id:	29
+}
+
+physics_toy_data : .flag_se_r.phys_data
+{
+	phys_model:		"/vehicle/truck/upgrade/interior_decors/toyglass/rare_flags.pmd"   
+	phys_model_coll:	"/vehicle/truck/upgrade/interior_decors/toyglass/rare_flags.pmc"
+    phys_model_look:	se
+  
+	rope_material: 		"/material/ropes/rope_black.mat"
+
+	toy_type:		"TT_double_rope"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:		0.1				# toy mass
+	linear_damping:		0.99
+
+	linear_stiffness: 	1.0				# rope - influences rope springing
+	locator_hook_offset:	(0.0f, 0.0015f, -0.0035f)	# offset of connection point on hook against toy locator
+
+	# definitions valid only for toys with rope
+	rope_width:		0.002				# width of rope
+	rope_length:		0.05				# length of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset:	0.005				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset:	0.045				# double_rope - distance between rope tingles at toy
+	rope_resolution:	3				# number of inner nodes of rope, except end nodes with anchors
+	rope_linear_density:	1.0				# density, i.e. weight of rope per 1 m of length
+	position_iterations:	4				# number of iterations in position solver
+	node_damping:		0.99				# rope node velocity damping
+}
+
+
+accessory_hookup_int_data :  flag_se3_r.addon_hookup
+{
+	name: "Sweden - Three Crowns Pennant"
+	price: 60
+	unlock: 0
+	icon: "interior_decors/toyglass/triangle_flag_se3_r"
+  
+
+	model:		  	"/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmd"
+	coll:	                "/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmc"
+
+	data[]: .flag_se3_r.phys_data
+
+	suitable_for[]: "set_glass"
+
+	steam_inventory_id:	30
+}
+
+physics_toy_data : .flag_se3_r.phys_data
+{
+	phys_model:		"/vehicle/truck/upgrade/interior_decors/toyglass/rare_flags.pmd"   
+	phys_model_coll:	"/vehicle/truck/upgrade/interior_decors/toyglass/rare_flags.pmc"
+    phys_model_look:	se3
+  
+	rope_material: 		"/material/ropes/rope_black.mat"
+
+	toy_type:		"TT_double_rope"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:		0.1				# toy mass
+	linear_damping:		0.99
+
+	linear_stiffness: 	1.0				# rope - influences rope springing
+	locator_hook_offset:	(0.0f, 0.0015f, -0.0035f)	# offset of connection point on hook against toy locator
+
+	# definitions valid only for toys with rope
+	rope_width:		0.002				# width of rope
+	rope_length:		0.05				# length of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset:	0.005				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset:	0.045				# double_rope - distance between rope tingles at toy
+	rope_resolution:	3				# number of inner nodes of rope, except end nodes with anchors
+	rope_linear_density:	1.0				# density, i.e. weight of rope per 1 m of length
+	position_iterations:	4				# number of iterations in position solver
+	node_damping:		0.99				# rope node velocity damping
+}
