@@ -445,6 +445,17 @@ traffic_rule_data : traffic_rule.rail_tram
 	str_params[]: "rail_tram"
 }
 
+traffic_rule_data : traffic_rule.allow_tram
+{
+	name: "Allow trams"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "tram"
+
+	additional_rules[]: traffic_rule.s_tram
+}
+
 traffic_rule_data : traffic_rule.physics
 {
 	name: "Force physics"

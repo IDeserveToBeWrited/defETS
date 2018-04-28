@@ -42,6 +42,8 @@ trajectory_rule_data : .traj_rule
 	rules[]: .r29
 	rules[]: .r30
 	rules[]: .r31
+	rules[]: .r32
+	rules[]: .r33
 }
 
 trajectory_rule : .r0
@@ -82,6 +84,15 @@ trajectory_rule : .r3
 
 trajectory_rule : .r4
 {
+	name: "AI circle block"
+	rule: circ_emp_bl
+	
+	param1_name: "Activation:"
+	param2_name: "Range:"
+}
+
+trajectory_rule : .r5
+{
 	name: "Cancle AI node block"
 	rule: canc_bl
 	
@@ -90,7 +101,7 @@ trajectory_rule : .r4
 	param3_name: "Direction:"
 }
 
-trajectory_rule : .r5
+trajectory_rule : .r6
 {
 	name: "Cancle ally AI node block"
 	rule: canc_ally_bl
@@ -100,7 +111,7 @@ trajectory_rule : .r5
 	param3_name: "Direction:"
 }
 
-trajectory_rule : .r6
+trajectory_rule : .r7
 {
 	name: "Stop vehicle"
 	rule: st_vehicle
@@ -108,7 +119,7 @@ trajectory_rule : .r6
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r7
+trajectory_rule : .r8
 {
 	name: "Cancel ally stop"
 	rule: canc_ally_st
@@ -116,7 +127,7 @@ trajectory_rule : .r7
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r8
+trajectory_rule : .r9
 {
 	name: "PLAYER: Cancel front escort stop"
 	rule: canc_fr_st
@@ -125,7 +136,7 @@ trajectory_rule : .r8
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r9
+trajectory_rule : .r10
 {
 	name: "PLAYER: Cancel back escort stop"
 	rule: canc_bc_st
@@ -134,7 +145,7 @@ trajectory_rule : .r9
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r10
+trajectory_rule : .r11
 {
 	name: "Normal section start"
 	rule: norm_sec_st
@@ -142,7 +153,7 @@ trajectory_rule : .r10
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r11
+trajectory_rule : .r12
 {
 	name: "Dangerous section start"
 	rule: dang_sec_st
@@ -150,7 +161,7 @@ trajectory_rule : .r11
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r12
+trajectory_rule : .r13
 {
 	name: "Change lane section start"
 	rule: chan_sec_st
@@ -158,7 +169,7 @@ trajectory_rule : .r12
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r13
+trajectory_rule : .r14
 {
 	name: "Turn on left blinker"
 	rule: lf_blink_on
@@ -166,7 +177,7 @@ trajectory_rule : .r13
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r14
+trajectory_rule : .r15
 {
 	name: "Turn off left blinker"
 	rule: lf_blink_off
@@ -174,7 +185,7 @@ trajectory_rule : .r14
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r15
+trajectory_rule : .r16
 {
 	name: "Turn on right blinker"
 	rule: ri_blink_on
@@ -182,7 +193,7 @@ trajectory_rule : .r15
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r16
+trajectory_rule : .r17
 {
 	name: "Turn off right blinker"
 	rule: ri_blink_off
@@ -190,7 +201,7 @@ trajectory_rule : .r16
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r17
+trajectory_rule : .r18
 {
 	name: "Turn on escort near"
 	rule: esc_near_on
@@ -198,7 +209,7 @@ trajectory_rule : .r17
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r18
+trajectory_rule : .r19
 {
 	name: "Turn off escort near"
 	rule: esc_near_off
@@ -206,7 +217,7 @@ trajectory_rule : .r18
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r19
+trajectory_rule : .r20
 {
 	name: "PLAYER: Message slow down"
 	rule: pl_mess_slow
@@ -215,7 +226,7 @@ trajectory_rule : .r19
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r20
+trajectory_rule : .r21
 {
 	name: "Message slow down"
 	rule: es_mess_slow
@@ -223,7 +234,7 @@ trajectory_rule : .r20
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r21
+trajectory_rule : .r22
 {
 	name: "PLAYER: Message tight section"
 	rule: pl_mess_tigh
@@ -232,7 +243,7 @@ trajectory_rule : .r21
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r22
+trajectory_rule : .r23
 {
 	name: "Message tight section"
 	rule: es_mess_tigh
@@ -240,7 +251,7 @@ trajectory_rule : .r22
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r23
+trajectory_rule : .r24
 {
 	name: "PLAYER: Message change lane soon"
 	rule: pl_mess_chan
@@ -249,7 +260,7 @@ trajectory_rule : .r23
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r24
+trajectory_rule : .r25
 {
 	name: "Message change lane soon"
 	rule: es_mess_chan
@@ -257,7 +268,7 @@ trajectory_rule : .r24
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r25
+trajectory_rule : .r26
 {
 	name: "PLAYER: Message path for you"
 	rule: pl_mess_path
@@ -266,7 +277,7 @@ trajectory_rule : .r25
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r26
+trajectory_rule : .r27
 {
 	name: "Message path for you"
 	rule: es_mess_path
@@ -274,7 +285,7 @@ trajectory_rule : .r26
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r27
+trajectory_rule : .r28
 {
 	name: "PLAYER: Message wait for back escort"
 	rule: pl_mess_w_ba
@@ -283,7 +294,7 @@ trajectory_rule : .r27
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r28
+trajectory_rule : .r29
 {
 	name: "Message wait for back escort"
 	rule: es_mess_w_ba
@@ -291,7 +302,7 @@ trajectory_rule : .r28
 	param1_name: "Activation:"
 }
 
-trajectory_rule : .r29
+trajectory_rule : .r30
 {
 	name: "PLAYER: Off-road mission over"
 	rule: pl_off_road
@@ -300,7 +311,7 @@ trajectory_rule : .r29
 	param2_name: "Hit:"
 }
 
-trajectory_rule : .r30
+trajectory_rule : .r31
 {
 	name: "Parking spot"
 	rule: park_spot
@@ -314,7 +325,7 @@ trajectory_rule : .r30
 	param3_default_value: "-1"
 }
 
-trajectory_rule : .r31
+trajectory_rule : .r32
 {
 	name: "Parking spot random time"
 	rule: park_spot_r
@@ -330,6 +341,14 @@ trajectory_rule : .r31
 	param3_name: "Engine:"
 	param3_tooltip: "[-1] -> vehicle engine will be turned off during parking, [1] -> engine turned on"
 	param3_default_value: "-1"
+}
+
+trajectory_rule : .r33
+{
+	name: "Not spawning area"
+	rule: not_spawn
+	
+	param1_name: "Range:"
 }
 
 }

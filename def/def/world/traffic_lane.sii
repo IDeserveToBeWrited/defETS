@@ -81,6 +81,13 @@ traffic_lane_data : traffic_lane.no_vehicles
 	speed_class: local_road
 }
 
+traffic_lane_data : traffic_lane.no_vehicles.dirt
+{
+	speed_class: local_road
+
+	traffic_rules[]: traffic_rule.physics
+}
+
 traffic_lane_data : traffic_lane.rail.train
 {
 	traffic_rules[]: traffic_rule.rail_train

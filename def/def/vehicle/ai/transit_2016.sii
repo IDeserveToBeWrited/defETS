@@ -403,5 +403,47 @@ vehicle_wheel_accessory: .transit_16.cargo.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
 }
+traffic_vehicle : traffic.transit_16.trailer
+{
+	accessories[]: .transit_16.trailer.chassis
+	accessories[]: .transit_16.trailer.fwheel
+	accessories[]: .transit_16.trailer.rwheel
+
+	attachable_trailer[]: "trailer.a1_l_t*"
+	trailer_count[]: 1
+    
+	max_speed: 80
+	
+	spawn_ratio: 0.1
+	
+	lod_dist[]: 70
+	lod_dist[]: 110
+	allow_parked: false
+	vehicle_mass: 3000
+
+	color[]: (1, 1, 1) #white
+	color[]: (0.8387, 0.4072, 0.0512) #yellow
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transit_16.trailer.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/trailer.sii"
+}
+
+vehicle_wheel_accessory: .transit_16.trailer.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_16.trailer.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
 
 
