@@ -223,6 +223,18 @@ traffic_rule_data : traffic_rule.no_trucks
 	str_params[]: "truck"
 }
 
+traffic_rule_data : traffic_rule.trucks_only
+{
+	name: "Allow trucks only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
+	str_params[]: "truck"
+	str_params[]: "truck_city"
+}
+
 traffic_rule_data : traffic_rule.no_buses
 {
 	name: "No bus area"
@@ -417,6 +429,7 @@ traffic_rule_data : traffic_rule.allow_slow
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "slow"
+	str_params[]: "simple"
 
 	additional_rules[]: traffic_rule.s_slow
 }
@@ -451,7 +464,7 @@ traffic_rule_data : traffic_rule.allow_tram
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "tram"
+	str_params[]: "rail_tram"
 
 	additional_rules[]: traffic_rule.s_tram
 }
@@ -493,6 +506,26 @@ traffic_rule_data : traffic_rule.es_ba_only
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "escort_back"
+}
+
+traffic_rule_data : traffic_rule.escort_only
+{
+	name: "Escort vehicles only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "escort_front"
+	str_params[]: "escort_back"
+}
+
+traffic_rule_data : traffic_rule.no_escort
+{
+	name: "No escort vehicles"
+	rule: "actor_access"
+	num_params[]: 0 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "escort_front"
 	str_params[]: "escort_back"
 }
 

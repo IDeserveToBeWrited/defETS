@@ -4,6 +4,9 @@ economy_data : economy.data.storage
 {
 	truck_refund: 		0.35	# 35% of original price
 
+	# Base revenue per km in game native currency.
+	revenue_per_km_base: 15
+
 	price_small_garage: 180000
 	price_garage_upgrade: 100000
 
@@ -13,16 +16,8 @@ economy_data : economy.data.storage
 
 	fuel_discount_in_garage: 0.15	# 15%
 
-	truck_brands[]: "daf" 
-	truck_brands[]: "iveco" 
-	truck_brands[]: "man" 
-	truck_brands[]: "mercedes" 
-	truck_brands[]: "renault" 
-	truck_brands[]: "scania" 
-	truck_brands[]: "volvo"
-	
 	truck_count_for_online:	5	# number of owned trucks to unlock buying online feature
-	
+
 	abandoned_job_fine: 12000
 
 	cargo_damage_cost: 5.0 		# -5 Euro per 1% of damage
@@ -61,7 +56,8 @@ economy_data : economy.data.storage
 	driver_max_cargo_damage: 6.0		# in %, decrease with skill
 	driver_maintenance_cost: (1.8, 3.0) 	# maintenance + insurance, base range in E/km
 	minimal_driver_salary:	350		# fixed part of driver's pay
-	driver_revenue_per_km: 10		# in Euro
+	driver_revenue_coef_per_km: 0.67		# Revenue coefficient used during quick job and drivers jobs.
+	driver_cargo_market_revenue_coef_per_km: 0.8 # Revenue coefficient used during cargo market jobs for drivers.
 
 	driver_hire_cost: 1500		# Euro
 
@@ -86,7 +82,8 @@ economy_data : economy.data.storage
 	skill_distance[5]:	1500
 
 	fixed_revenue: 600
-	revenue_per_km: 15
+	revenue_coef_per_km: 0.9 # Revenue coefficient per km used during freight market jobs.
+	cargo_market_revenue_coef_per_km: 1.0 # Revenue coefficient per km used during cargo market jobs.
 
 	max_eco_consumption_drop[0]: (0.1, 0.1)	# consumption decreased by 40% (or 60% if driving with trailer) 
 							#  for ecodriving skill maximum
@@ -149,6 +146,8 @@ economy_data : economy.data.storage
 	exp_park_double_bonus: 20		# bonus for not using the autopark feature on EASY parking spot with double
 	exp_park_double_bonus_medium: 60	# bonus for not using the autopark feature on MEDIUM parking spot with double
 	exp_park_double_bonus_hard: 170		# bonus for not using the autopark feature on HARD parking spot with double
+
+	exp_park_load_bonus: 15		# exp bonus for manually parking trailer during loading phase of the job
 
 	exp_damaged_cargo:	5		# -5 XP per 1% of cargo damage
 	exp_damaged_cargo_factor: 0.04		# -4% of total XP per 1% of cargo damage

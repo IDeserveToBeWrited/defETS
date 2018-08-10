@@ -52,6 +52,59 @@ traffic_spawn_condition: .traffic.atm_7100_n1.condition.city
 	str_param[]: "napoli"
 }
 
+## SASSARI
+
+traffic_vehicle : traffic.atm_7100_s1
+{
+	accessories[]: .atm_7100_s1.chassis
+	accessories[]: .atm_7100_s1.fwheel
+	accessories[]: .atm_7100_s1.rwheel
+
+	max_speed: 40 
+
+	vehicle_mass: 70000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 35000
+
+	attachable_trailer[]: "train_car.atm_7100_s2"
+	trailer_count[]: 4
+
+
+	displacement_limit: 0.0
+	spawn_ratio: 0.0
+    
+	lod_dist[]: 70
+	lod_dist[]: 130
+    
+    spawn_condition[]: .traffic.atm_7100_s1.condition.city
+
+}
+
+vehicle_accessory: .atm_7100_s1.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/chassis_01_s.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_s1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_s1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.atm_7100_s1.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "sassari"
+}
+
 
 ## MILANO_1
 

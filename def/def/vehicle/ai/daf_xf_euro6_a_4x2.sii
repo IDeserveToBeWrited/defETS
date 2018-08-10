@@ -1,8 +1,9 @@
 traffic_vehicle : traffic.daf_e6_a4x2
 {
-	accessories[]: .chassis.daf_e6_a4x2
+	accessories[]: .daf_e6_a4x2.chassis
 	accessories[]: .daf_e6_a4x2.fwheel
 	accessories[]: .daf_e6_a4x2.rwheel
+	accessories[]: .daf_e6_a4x2.trlr_cables
 
 	max_speed: 90
 	attachable_trailer[]: ""
@@ -25,9 +26,9 @@ traffic_vehicle : traffic.daf_e6_a4x2
 @include "drivers_generic.sui"	
 }
 
-vehicle_accessory: .chassis.daf_e6_a4x2
+vehicle_accessory: .daf_e6_a4x2.chassis
 {
-	data_path: "/def/vehicle/ai/truck/daf_xf_euro6/a4x2.sii"
+	data_path: "/def/vehicle/ai/truck/daf.xf_euro6/a4x2.sii"
 }
 
 vehicle_wheel_accessory: .daf_e6_a4x2.fwheel
@@ -40,4 +41,8 @@ vehicle_wheel_accessory: .daf_e6_a4x2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf_e6_a4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_euro6/accessory/trlr_cables/stock.sii"
 }

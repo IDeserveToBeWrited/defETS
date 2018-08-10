@@ -296,6 +296,22 @@ journey_events_road_event : j_re.acc_spec
 	name: "Accident country specific (6)"
 }
 
+journey_events_road_event : j_re.acc_ger
+{
+	start_cutscene: j_cut.acc_stop_li
+    layer_cutscenes[]:  j_cut.acc_mid
+	end_cutscene: j_cut.acc_ger
+	
+	min_shoulder_space: 3.0	     	 // [m]
+	outer_lane_allowed: true
+	
+	weight: 100.0
+	
+	parent: j_re.acc_spec_p
+	
+	name: "Accident country specific (6) German addition"
+}
+
 journey_events_road_event : j_re.acc_rare
 {
 	start_cutscene: j_cut.acc_stop_l3
@@ -1635,11 +1651,11 @@ journey_events_road_event : j_re.rw_uni_p
 journey_events_road_event : j_re.rw_uni_pl
 {
 	signs_cutscenes_outer[]: j_cut.sn_in_rw
-	signs_cutscenes_outer[]: j_cut.sn_in_sp_70
+	signs_cutscenes_outer[]: j_cut.sn_in_sp_50
 	signs_cutscenes_outer[]: j_cut.sn_in_sp_0
 
 	signs_cutscenes_inner[]: j_cut.sn_rw
-	signs_cutscenes_inner[]: j_cut.sn_sp_70
+	signs_cutscenes_inner[]: j_cut.sn_sp_50
 	signs_cutscenes_inner[]: j_cut.sn_sp_0
 	
 	left_hand_traffic: true
@@ -2297,6 +2313,7 @@ journey_events_road_event : j_re.rand_ba
 	centerline_displacement: true
 	
     max_shoulder_space: 1.0
+	min_shoulder_space: 0.0
 
 	weight: 50.0
 	
@@ -2476,7 +2493,7 @@ journey_events_road_event : j_re.rand
     layer_cutscenes[]: j_cut.rand
     
     layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
     
     max_length: 50.0      // [m]
     min_length: 50.0      // [m]
@@ -2489,7 +2506,7 @@ journey_events_road_event : j_re.rand
 	
 #	allowed_lanes_count[]: 2
 
-	weight: 20.0
+	weight: 1.0
 	
 	name: "Helicopter (2)"
 }
@@ -2499,7 +2516,7 @@ journey_events_road_event : j_re.rand_l
     layer_cutscenes[]: j_cut.rand
     
     layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
     
     max_length: 50.0      // [m]
     min_length: 50.0      // [m]
@@ -2514,7 +2531,7 @@ journey_events_road_event : j_re.rand_l
 
 	left_hand_traffic: true
 
-	weight: 20.0
+	weight: 1.0
 	
 	name: "Helicopter LH (2)"
 }
