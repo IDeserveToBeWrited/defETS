@@ -11,6 +11,7 @@
 - [Halloween Paint Jobs Pack](/dlc_halloween/def/vehicle)
 - [Heavy Cargo Pack](/dlc_heavy_cargo/def)
 - [Italia](/dlc_it/def)
+- [Krone Trailer Pack](/dlc_krone/def)
 - [Metallic Paint Jobs Pack](/dlc_metallics/def/vehicle/truck)
 - [Flip Paint Designs](/dlc_metallics2/def/vehicle/truck)
 - [Michelin Fan Pack](/dlc_michelin/def/vehicle)

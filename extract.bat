@@ -110,6 +110,16 @@ RMDIR "%LOCATION%\dlc_it\vehicle" /s /q
 DEL %LOCATION%\dlc_it\dlc_it.manifest.sii
 
 
+:: dlc_krone
+ECHO Extracting dlc_krone archive
+%EXTRACTOR% dlc_krone.scs %LOCATION%\dlc_krone >NUL
+
+RMDIR "%LOCATION%\dlc_krone\automat" /s /q
+RMDIR "%LOCATION%\dlc_krone\material" /s /q
+RMDIR "%LOCATION%\dlc_krone\vehicle" /s /q
+DEL %LOCATION%\dlc_krone\dlc_krone.manifest.sii
+
+
 
 :: dlc_metallics
 ECHO Extracting dlc_metallics archive
@@ -231,6 +241,17 @@ RMDIR "%LOCATION%\dlc_schwarzmuller\automat" /s /q
 RMDIR "%LOCATION%\dlc_schwarzmuller\material" /s /q
 RMDIR "%LOCATION%\dlc_schwarzmuller\vehicle" /s /q
 DEL %LOCATION%\dlc_schwarzmuller\dlc_schwarzmuller.manifest.sii
+
+
+
+:: dlc_space
+ECHO Extracting dlc_space archive
+%EXTRACTOR% dlc_space.scs %LOCATION%\dlc_space >NUL
+
+RMDIR "%LOCATION%\dlc_space\automat" /s /q
+RMDIR "%LOCATION%\dlc_space\material" /s /q
+RMDIR "%LOCATION%\dlc_space\vehicle" /s /q
+DEL %LOCATION%\dlc_space\dlc_space.manifest.sii
 
 
 
