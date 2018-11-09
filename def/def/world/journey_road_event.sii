@@ -8,13 +8,26 @@ SiiNunit
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 
-
+journey_events_road_event : j_re.super_parent
+{
+	excluded_lane_types[]: rail
+}
 
 ##############################
 ###########ACCIDENTS##########
 ##############################
 
-############PARENT############
+journey_events_road_event : j_re.acc_spec_m
+{
+	countries[]: germany
+	countries[]: france
+	countries[]: italy
+	countries[]: slovakia
+	countries[]: czech
+	countries[]: finland
+}
+
+###########UNIVERSAL##########
 
 journey_events_road_event : j_re.acc_uni_p
 {
@@ -36,25 +49,31 @@ journey_events_road_event : j_re.acc_uni_p
 	weight: 50.0
 }
 
-journey_events_road_event : j_re.acc_spec_p
+journey_events_road_event : j_re.acc_uni
 {
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 175      // [m]
-    min_length: 175      // [m]
-  
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: true
+	signs_cutscenes_outer[]: j_cut.acc_tri
+    layer_cutscenes[]: j_cut.acc_uni
 	
-	countries[]: germany
-	countries[]: france
-	countries[]: italy
-	countries[]: slovakia
-	countries[]: czech
+	parents[]: j_re.acc_uni_p
+	
+	parents[]: j_re.super_parent
+	name: "Accident small universal (6)"
 }
+
+journey_events_road_event : j_re.acc_uni_l
+{
+	signs_cutscenes_outer[]: j_cut.acc_tri_l 
+    layer_cutscenes[]: j_cut.acc_uni_l
+	
+	left_hand_traffic: true
+	
+	parents[]: j_re.acc_uni_p
+	
+	parents[]: j_re.super_parent
+	name: "Accident small universal LH (6)"
+}
+
+###########COUNTRY##########
 
 journey_events_road_event : j_re.acc_cou_p
 {
@@ -77,290 +96,313 @@ journey_events_road_event : j_re.acc_cou_p
 	weight: 10.0
 }
 
-###########UNIVERSAL##########
-
-journey_events_road_event : j_re.acc_uni
-{
-	signs_cutscenes_outer[]: j_cut.acc_tri
-    layer_cutscenes[]: j_cut.acc_uni
-	
-	parent: j_re.acc_uni_p
-	
-	name: "Accident small universal (6)"
-}
-
-journey_events_road_event : j_re.acc_uni_l
-{
-	signs_cutscenes_outer[]: j_cut.acc_tri_l 
-    layer_cutscenes[]: j_cut.acc_uni_l
-	
-	left_hand_traffic: true
-	
-	parent: j_re.acc_uni_p
-	
-	name: "Accident small universal LH (6)"
-}
-
-journey_events_road_event : j_re.acc_cou
-{
-	parent: j_re.acc_cou_p
-	
-    layer_cutscenes[]: j_cut.acc_cou
-        
-    max_length: 20.0      // [m]
-    min_length: 20.0      // [m]
-	
-	name: "Accident small 1-1 (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_sf
-{
-	parent: j_re.acc_cou_p
-
-	start_cutscene: j_cut.acc_cou_p
-    layer_cutscenes[]: j_cut.acc_cou
-        
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident small 1-1 police front (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_sb
-{
-	parent: j_re.acc_cou_p
-
-    layer_cutscenes[]: j_cut.acc_cou
-	end_cutscene: j_cut.acc_cou_p
-        
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident small 1-1 police back (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_bf
-{
-	parent: j_re.acc_cou_p
-
-	start_cutscene: j_cut.acc_cou_p
-    layer_cutscenes[]: j_cut.acc_cou_b
-        
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident big 1-1 police front (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_bb
-{
-	parent: j_re.acc_cou_p
-
-    layer_cutscenes[]: j_cut.acc_cou_b
-	end_cutscene: j_cut.acc_cou_p
-        
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident big 1-1 police back (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_baf
-{
-	parent: j_re.acc_cou_p
-
-	start_cutscene: j_cut.acc_cou_ab
-    layer_cutscenes[]: j_cut.acc_cou_b
-	end_cutscene: j_cut.acc_cou_p
-        
-    max_length: 45.0      // [m]
-    min_length: 45.0      // [m]
-	
-	countries[]: germany
-	countries[]: france
-	countries[]: italy
-	countries[]: slovakia
-	countries[]: czech
-	
-	name: "Accident big 1-1 ambulance front (3)"
-}
-
-journey_events_road_event : j_re.acc_cou_bab
-{
-	parent: j_re.acc_cou_p
-
-	start_cutscene: j_cut.acc_cou_p
-    layer_cutscenes[]: j_cut.acc_cou_b
-	end_cutscene: j_cut.acc_cou_af
-        
-    max_length: 45.0      // [m]
-    min_length: 45.0      // [m]
-	
-	countries[]: germany
-	countries[]: france
-	countries[]: italy
-	countries[]: slovakia
-	countries[]: czech
-	
-	name: "Accident big 1-1 ambulance back (3)"
-}
-
 journey_events_road_event : j_re.acc_coul_p
 {
-	parent: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_p
 	
 	signs_cutscenes_outer[]: j_cut.acc_tri_l 
  	
 	left_hand_traffic: true
 }
 
-journey_events_road_event : j_re.acc_coul
+journey_events_road_event : j_re.acc_cou_sh
 {
-	parent: j_re.acc_coul_p
-	
-    layer_cutscenes[]: j_cut.acc_coul
-        
     max_length: 20.0      // [m]
     min_length: 20.0      // [m]
+}
+
+journey_events_road_event : j_re.acc_cou_len
+{
+    max_length: 30.0      // [m]
+    min_length: 30.0      // [m]
+}
+
+journey_events_road_event : j_re.acc_cou_spec
+{
+	parents[]: j_re.acc_spec_m
+
+    max_length: 45.0      // [m]
+    min_length: 45.0      // [m]
+}
+
+###
+
+journey_events_road_event : j_re.acc_cou_s
+{
+	parents[]: j_re.acc_spec_m
+	parents[]: j_re.acc_cou_p
+    max_length: 55.0      // [m]
+    min_length: 55.0      // [m]
 	
-	name: "Accident small 1-1 LH (3)"
+    start_cutscene: j_cut.acc_cs_s
+    layer_cutscenes[]: j_cut.acc_cs
+    end_cutscene: j_cut.acc_cs_e
+	
+	parents[]: j_re.super_parent
+	name: "Accident country specific 1-1 (3)"
+}
+
+journey_events_road_event : j_re.acc_cou
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_sh
+	
+    layer_cutscenes[]: j_cut.acc_cou
+	
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_sf
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_len
+
+	start_cutscene: j_cut.acc_cou_p
+    layer_cutscenes[]: j_cut.acc_cou
+	
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 police front (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_sb
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_len
+
+    layer_cutscenes[]: j_cut.acc_cou
+	end_cutscene: j_cut.acc_cou_p
+	
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 police back (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_bf
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_len
+
+	start_cutscene: j_cut.acc_cou_p
+    layer_cutscenes[]: j_cut.acc_cou_b
+
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 police front (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_bb
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_len
+
+    layer_cutscenes[]: j_cut.acc_cou_b
+	end_cutscene: j_cut.acc_cou_p
+	
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 police back (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_baf
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_spec
+
+	start_cutscene: j_cut.acc_cou_ab
+    layer_cutscenes[]: j_cut.acc_cou_b
+	end_cutscene: j_cut.acc_cou_p
+	
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 ambulance front (3)"
+}
+
+journey_events_road_event : j_re.acc_cou_bab
+{
+	parents[]: j_re.acc_cou_p
+	parents[]: j_re.acc_cou_spec
+
+	start_cutscene: j_cut.acc_cou_p
+    layer_cutscenes[]: j_cut.acc_cou_b
+	end_cutscene: j_cut.acc_cou_af
+	
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 ambulance back (3)"
+}
+
+journey_events_road_event : j_re.acc_coul
+{
+	parents[]: j_re.acc_coul_p
+	parents[]: j_re.acc_cou_sh
+	
+    layer_cutscenes[]: j_cut.acc_coul
+	
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 (3) LH"
 }
 
 journey_events_road_event : j_re.acc_coul_sf
 {
-	parent: j_re.acc_coul_p
+	parents[]: j_re.acc_coul_p
+	parents[]: j_re.acc_cou_len
 
 	start_cutscene: j_cut.acc_coul_p
     layer_cutscenes[]: j_cut.acc_coul
 	
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident small 1-1 police front LH (3)"
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 police front (3) LH"
 }
 
-journey_events_road_event : j_re.acc_cou_sbl
+journey_events_road_event : j_re.acc_coul_sb
 {
-	parent: j_re.acc_coul_p
+	parents[]: j_re.acc_coul_p
+	parents[]: j_re.acc_cou_len
 
     layer_cutscenes[]: j_cut.acc_coul
 	end_cutscene: j_cut.acc_coul_p
 	
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident small 1-1 police back LH (3)"
+	parents[]: j_re.super_parent
+	name: "Accident small 1-1 police back (3) LH"
 }
 
 journey_events_road_event : j_re.acc_coul_bf
 {
-	parent: j_re.acc_coul_p
+	parents[]: j_re.acc_coul_p
+	parents[]: j_re.acc_cou_len
 
 	start_cutscene: j_cut.acc_coul_p
     layer_cutscenes[]: j_cut.acc_coul_b
-	
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident big 1-1 police front LH (3)"
+
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 police front (3) LH"
 }
 
 journey_events_road_event : j_re.acc_coul_bb
 {
-	parent: j_re.acc_coul_p
+	parents[]: j_re.acc_coul_p
+	parents[]: j_re.acc_cou_len
 
     layer_cutscenes[]: j_cut.acc_coul_b
 	end_cutscene: j_cut.acc_coul_p
 	
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-	
-	name: "Accident big 1-1 police back LH (3)"
+	parents[]: j_re.super_parent
+	name: "Accident big 1-1 police back (3) LH"
 }
 
-###########SPECIFIC###########
+
+
+###########HW###########
+
+journey_events_road_event : j_re.acc_hw_m
+{
+	parents[]: j_re.acc_spec_m
+
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+  
+	slow_down_passing: true
+	bridge_forbidden: false
+	tunnel_forbidden: true
+	traffic_block: true
+}
+
+###hw1###
+
+journey_events_road_event : j_re.acc_hw1_p
+{
+	parents[]: j_re.acc_hw_m
+	
+	signs_cutscenes_outer[]: j_cut.s_acc_p
+    signs_distances_outer[]: 30
+	
+	start_cutscene: j_cut.acc_stop_li
+    layer_cutscenes[]:  j_cut.acc_mid
+	
+	max_length: 175      // [m]
+	min_length: 175      // [m]
+	
+	outer_lane_allowed: true
+	min_shoulder_space: 3.0	     	 // [m]
+	
+	weight: 100.0
+}
 
 journey_events_road_event : j_re.acc_spec
 {
-	start_cutscene: j_cut.acc_stop_li
-    layer_cutscenes[]:  j_cut.acc_mid
+	parents[]: j_re.acc_hw1_p
+
 	end_cutscene: j_cut.acc_spec
 	
-	min_shoulder_space: 3.0	     	 // [m]
-	outer_lane_allowed: true
-	
-	weight: 100.0
-	
-	parent: j_re.acc_spec_p
-	
+	parents[]: j_re.super_parent
 	name: "Accident country specific (6)"
 }
 
 journey_events_road_event : j_re.acc_ger
 {
-	start_cutscene: j_cut.acc_stop_li
-    layer_cutscenes[]:  j_cut.acc_mid
+	parents[]: j_re.acc_hw1_p
+
 	end_cutscene: j_cut.acc_ger
 	
-	min_shoulder_space: 3.0	     	 // [m]
-	outer_lane_allowed: true
-	
-	weight: 100.0
-	
-	parent: j_re.acc_spec_p
-	
-	name: "Accident country specific (6) German addition"
-}
-
-journey_events_road_event : j_re.acc_rare
-{
-	start_cutscene: j_cut.acc_stop_l3
-    layer_cutscenes[]: j_cut.acc_mid
-    layer_cutscenes[]: j_cut.acc_cone_lay
-	
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-	
-	end_cutscene: j_cut.acc_rare
-	min_shoulder_space: 3.0	     	 // [m]
-	outer_lane_allowed: true
-	
-	max_length: 155      // [m]
-    min_length: 155      // [m]
-	
-	weight: 30.0
-	
-	parent: j_re.acc_spec_p
-	
-	name: "Accident country specific rare (2)"
+	parents[]: j_re.super_parent
+	name: "Accident country specific (3) German addition"
 }
 
 journey_events_road_event : j_re.acc_plane
 {
-	start_cutscene: j_cut.acc_stop_li
-    layer_cutscenes[]: j_cut.acc_mid
+	parents[]: j_re.acc_hw1_p
 	
 	end_cutscene: j_cut.acc_plane
-	min_shoulder_space: 3.0	     	 // [m]
-	outer_lane_allowed: true
+
 	centerline_displacement: true
-	
     layer_max_curve[]: 2.0        // [degree]
-	
 	weight: 10.0
 	
-	parent: j_re.acc_spec_p
-	
+	parents[]: j_re.super_parent
 	name: "Accident country specific plane (1)"
 }
 
-journey_events_road_event : j_re.acc_in
+###hw2###
+
+journey_events_road_event : j_re.acc_hw2_p
 {
+	parents[]: j_re.acc_hw_m
+	
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+	
+	signs_cutscenes_outer[]: j_cut.s_acc_v
+    signs_distances_outer[]: 30
+
+	start_cutscene: j_cut.acc_stop_l3
+    layer_cutscenes[]: j_cut.acc_mid
+    layer_cutscenes[]: j_cut.acc_cone_lay
+
+	max_length: 155      // [m]
+    min_length: 155      // [m]
+	
+	outer_lane_allowed: true
+	min_shoulder_space: 3.0	     	 // [m]
+	
+	weight: 30.0
+}
+
+journey_events_road_event : j_re.acc_rare
+{
+	parents[]: j_re.acc_hw2_p
+	
+	end_cutscene: j_cut.acc_rare
+	
+	parents[]: j_re.super_parent
+	name: "Accident country specific rare (2)"
+}
+
+###hwi###
+
+journey_events_road_event : j_re.acc_hwi_p
+{
+	parents[]: j_re.acc_hw_m
+
 	start_cutscene: j_cut.acc_stop_lii
     layer_cutscenes[]: j_cut.acc_in_1a
-	end_cutscene: j_cut.acc_in_1b
     
     max_length: 150      // [m]
     min_length: 150      // [m]
@@ -368,1212 +410,113 @@ journey_events_road_event : j_re.acc_in
 	inner_lane_allowed: true
 
 	weight: 20.0
-	parent: j_re.acc_spec_p
+}
+
+journey_events_road_event : j_re.acc_in
+{
+	parents[]: j_re.acc_hwi_p
+
+	end_cutscene: j_cut.acc_in_1b
 	
+	parents[]: j_re.super_parent
 	name: "Accident country specific inner (1)"
 }
+
+###########CARGO###########
+
+
+
+
+
+
+
+
+
+
+
+
+journey_events_road_event : j_re.acc_cargo
+{
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+	
+	signs_cutscenes_outer[]: j_cut.s_acc_v
+    signs_distances_outer[]: 100
+	
+	start_cutscene: j_cut.acc_c_s1
+    layer_cutscenes[]:  j_cut.acc_c_m1
+    layer_cutscenes[]:  j_cut.acc_c_c1
+	end_cutscene: j_cut.acc_c_e1
+	
+	max_length: 100      // [m]
+	min_length: 100      // [m]
+	
+	slow_down_passing: false
+	bridge_forbidden: false
+	tunnel_forbidden: true
+	traffic_block: true
+	outer_lane_allowed: true
+	min_shoulder_space: 3.0	     	 // [m]
+	
+	weight: 10.0
+	
+	parents[]: j_re.super_parent
+	name: "Accident cargo (1)"
+}
+
+
+journey_events_road_event : j_re.acc_tank
+{
+    layer_min_curve[]: 0.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
+	
+	signs_cutscenes_outer[]: j_cut.acc_bt_e
+    signs_distances_outer[]: -10
+	
+    layer_cutscenes[]:  j_cut.acc_bt_m
+	
+	max_length: 70      // [m]
+	min_length: 70      // [m]
+	
+	slow_down_passing: true
+	bridge_forbidden: false
+	tunnel_forbidden: true
+	traffic_block: true
+	outer_lane_allowed: true
+	min_shoulder_space: 3.0	     	 // [m]
+	
+	weight: 10.0
+	
+	parents[]: j_re.super_parent
+	name: "Accident burning tank (1)"
+}
+
+
+
+
+
+
+
+
+
 
 ##############################
 ###########ROADWORKS##########
 ##############################
 
-############GERMANY###########
-
-journey_events_road_event : j_re.rw_g_m
-{
-    signs_distances_outer[]: 200
-    signs_distances_outer[]: 160
-    signs_distances_outer[]: 80
-    signs_distances_outer[]: -60
-	
-    signs_distances_inner[]: 200
-    signs_distances_inner[]: 160
-    signs_distances_inner[]: 80
-    signs_distances_inner[]: -60
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 250      // [m]
-    min_length: 100      // [m]
-
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	countries[]: germany
-	
-	weight: 100.0
-}
-
-journey_events_road_event : j_re.rw_g_2_p
-{
-	signs_cutscenes_outer[]: j_cut.sd_r
-	signs_cutscenes_outer[]: j_cut.sd_2_100_l
-	signs_cutscenes_outer[]: j_cut.sd_2_80_l
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-	
-	signs_cutscenes_inner[]: j_cut.sdi_r
-	signs_cutscenes_inner[]: j_cut.sdi_2_100
-	signs_cutscenes_inner[]: j_cut.sdi_2_80
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-	
-	allowed_lanes_count[]: 2 
-	
-	parent: j_re.rw_g_m
-}
-
-journey_events_road_event : j_re.rw_g_3_p
-{
-	signs_cutscenes_outer[]: j_cut.sd_r
-	signs_cutscenes_outer[]: j_cut.sd_3_100_l
-	signs_cutscenes_outer[]: j_cut.sd_3_80_l
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-
-	signs_cutscenes_inner[]: j_cut.sdi_r	
-	signs_cutscenes_inner[]: j_cut.sdi_3_100
-	signs_cutscenes_inner[]: j_cut.sdi_3_80
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-	
-	allowed_lanes_count[]: 3 
-	
-	parent: j_re.rw_g_m
-}
-
-journey_events_road_event : j_re.rw_g_2_pi
-{
-	signs_cutscenes_outer[]: j_cut.sd_r
-	signs_cutscenes_outer[]: j_cut.sd_2_100
-	signs_cutscenes_outer[]: j_cut.sd_2_80
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-	
-	signs_cutscenes_inner[]: j_cut.sdi_r
-	signs_cutscenes_inner[]: j_cut.sdi_2_100_l
-	signs_cutscenes_inner[]: j_cut.sdi_2_80_l
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-	
-	allowed_lanes_count[]: 2 
-	
-	parent: j_re.rw_g_m
-}
-
-journey_events_road_event : j_re.rw_g_3_pi
-{
-	signs_cutscenes_outer[]: j_cut.sd_r
-	signs_cutscenes_outer[]: j_cut.sd_3_100
-	signs_cutscenes_outer[]: j_cut.sd_3_80
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-	
-	signs_cutscenes_inner[]: j_cut.sdi_r
-	signs_cutscenes_inner[]: j_cut.sdi_3_100_l
-	signs_cutscenes_inner[]: j_cut.sdi_3_80_l
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-	
-	allowed_lanes_count[]: 3 
-	
-	parent: j_re.rw_g_m
-}
-	
-journey_events_road_event : j_re.rw_g_2
-{
-	start_cutscene: j_cut.rw_sta_g
-	end_cutscene: j_cut.rw_end_g
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid_g
-	
-	outer_lane_allowed: true	
-	min_shoulder_space: 3.0	     	 // [m]
-	
-	parent: j_re.rw_g_2_p
-	
-	name: "Roadwork Germany 2 lanes steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_g_out_2
-{
-	start_cutscene: j_cut.rw_sta_out_g
-	end_cutscene: j_cut.rw_end_out_g
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid_g
-	
-	outer_lane_allowed: true	
-	max_shoulder_space: 1.0     	 // [m]
-	
-	parent: j_re.rw_g_2_p
-	
-	name: "Roadwork German 2 lanes outer (9)"
-}
-
-journey_events_road_event : j_re.rw_g_in_2
-{
-	start_cutscene: j_cut.rw_sta_in_g
-	end_cutscene: j_cut.rw_end_in_g
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in_g
-	
-	inner_lane_allowed: true
-	parent: j_re.rw_g_2_pi
-	
-	name: "Roadwork Germany 2 lanes inner (9)"
-}
-
-journey_events_road_event : j_re.rw_g_2_lng
-{
-	parent: j_re.rw_g_2_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta_g
-	end_cutscene: j_cut.rw_end_g
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid_g
-  
-	outer_lane_allowed: true
-	min_shoulder_space: 3.0	     	 // [m]
-	
-	weight: 20.0
-	
-	name: "Roadwork Germany 2 lanes mill (1)"
-}
-
-journey_events_road_event : j_re.rw_g_3
-{
-	start_cutscene: j_cut.rw_sta_g
-	end_cutscene: j_cut.rw_end_g
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid_g
-	
-	outer_lane_allowed: true	
-	min_shoulder_space: 3.0	     	 // [m]
-	
-	parent: j_re.rw_g_3_p
-	
-	name: "Roadwork Germany 3 lanes steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_g_out_3
-{
-	start_cutscene: j_cut.rw_sta_out_g
-	end_cutscene: j_cut.rw_end_out_g
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid_g
-	
-	outer_lane_allowed: true	
-	max_shoulder_space: 1.0     	 // [m]
-	
-	parent: j_re.rw_g_3_p
-	
-	name: "Roadwork Germany 3 lanes outer (9)"
-}
-
-journey_events_road_event : j_re.rw_g_in_3
-{
-	start_cutscene: j_cut.rw_sta_in_g
-	end_cutscene: j_cut.rw_end_in_g
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in_g
-	
-	inner_lane_allowed: true
-	parent: j_re.rw_g_3_pi
-	
-	name: "Roadwork Germany 3 lanes inner (9)"
-}
-
-journey_events_road_event : j_re.rw_g_3_lng
-{
-	parent: j_re.rw_g_3_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta_g
-	end_cutscene: j_cut.rw_end_g
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid_g
-	
-	weight: 20.0
-  
-	outer_lane_allowed: true
-	min_shoulder_space: 3.0	     	 // [m]
-	
-	name: "Roadwork Germany 3 lanes mill (1)"
-}
-
-journey_events_road_event : j_re.rw_count_g
-{
-	signs_cutscenes_outer[]: j_cut.sn_rw
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-
-	parent: j_re.rw_count_p
-	
-	countries[]: germany
-	
-	name: "Roadwork Germany 1-1 (9)"
-}
-
-############FRANCE############
-
-journey_events_road_event : j_re.rw_f_p
-{
-    signs_distances_outer[]: 200
-    signs_distances_outer[]: 160
-    signs_distances_outer[]: 120
-    signs_distances_outer[]: 80
-    signs_distances_outer[]: -60
-	
-    signs_distances_inner[]: 200
-    signs_distances_inner[]: 160
-    signs_distances_inner[]: 80
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 250      // [m]
-    min_length: 100      // [m]
-
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	countries[]: france
-	
-	weight: 100.0
-}
-	
-journey_events_road_event : j_re.rw_f
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	     	 // [m]
-	
-	signs_cutscenes_outer[]: j_cut.sf_r
-	signs_cutscenes_outer[]: j_cut.sf_m
-	signs_cutscenes_outer[]: j_cut.sf_110
-	signs_cutscenes_outer[]: j_cut.sf_m_90
-	signs_cutscenes_outer[]: j_cut.sf_0
-	
-	signs_cutscenes_inner[]: j_cut.sfi_r
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	
-	min_shoulder_space: 3.0
-	
-	parent: j_re.rw_f_p
-	
-	name: "Roadwork France steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_f_out
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sfo_r
-	signs_cutscenes_outer[]: j_cut.sfo_m
-	signs_cutscenes_outer[]: j_cut.sfo_90
-	signs_cutscenes_outer[]: j_cut.sfo_m
-	signs_cutscenes_outer[]: j_cut.sfo_0
-	
-	signs_cutscenes_inner[]: j_cut.sfi_r
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	
-	max_shoulder_space: 1.0
-	
-	outer_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_f_p
-	
-	name: "Roadwork France outer (9)"
-}
-
-journey_events_road_event : j_re.rw_f_in
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sf_r
-	signs_cutscenes_outer[]: j_cut.sf_mr
-	signs_cutscenes_outer[]: j_cut.sf_110
-	signs_cutscenes_outer[]: j_cut.sf_mr_90
-	signs_cutscenes_outer[]: j_cut.sf_0
-	
-	signs_cutscenes_inner[]: j_cut.sfi_r
-	signs_cutscenes_inner[]: j_cut.sfi_mr
-	signs_cutscenes_inner[]: j_cut.sfi_mr
-	
-	min_shoulder_space: 3.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_f_p
-	
-	name: "Roadwork France inner steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_f_ino
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sfo_r
-	signs_cutscenes_outer[]: j_cut.sfo_mr
-	signs_cutscenes_outer[]: j_cut.sfo_90
-	signs_cutscenes_outer[]: j_cut.sfo_mr
-	signs_cutscenes_outer[]: j_cut.sfo_0
-	
-	signs_cutscenes_inner[]: j_cut.sfi_r
-	signs_cutscenes_inner[]: j_cut.sfi_mr
-	signs_cutscenes_inner[]: j_cut.sfi_mr
-	
-	max_shoulder_space: 1.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_f_p
-	
-	name: "Roadwork France inner (9)"
-}
-
-journey_events_road_event : j_re.rw_f_lng
-{
-	parent: j_re.rw_f_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sf_r
-	signs_cutscenes_outer[]: j_cut.sf_m
-	signs_cutscenes_outer[]: j_cut.sf_110
-	signs_cutscenes_outer[]: j_cut.sf_m_90
-	signs_cutscenes_outer[]: j_cut.sf_0
-	
-	signs_cutscenes_inner[]: j_cut.sfi_r
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	signs_cutscenes_inner[]: j_cut.sfi_m
-	
-	min_shoulder_space: 3.0
-  
-	outer_lane_allowed: true
-	
-	weight: 20.0
-	
-	name: "Roadwork France mill (1)"
-}
-
-journey_events_road_event : j_re.rw_count_f
-{
-	signs_cutscenes_outer[]: j_cut.sf_r
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-	
-	countries[]: france
-
-	parent: j_re.rw_count_p
-	
-	name: "Roadwork France 1-1 (9)"
-}
-
-#############ITALY############
-
-journey_events_road_event : j_re.rw_i_p
-{
-    signs_distances_outer[]: 200
-    signs_distances_outer[]: 160
-    signs_distances_outer[]: 120
-    signs_distances_outer[]: 80
-    signs_distances_outer[]: 40
-    signs_distances_outer[]: -60
-	
-    signs_distances_inner[]: 200
-    signs_distances_inner[]: 160
-    signs_distances_inner[]: 120
-    signs_distances_inner[]: 80
-    signs_distances_inner[]: 40
-    signs_distances_inner[]: -60
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 250      // [m]
-    min_length: 100      // [m]
-
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	countries[]: italy
-	
-	weight: 100.0
-}
-	
-journey_events_road_event : j_re.rw_i_2
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	     	 // [m]
-	
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m2
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m2
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 2
-	
-	min_shoulder_space: 3.0
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 2 lanes steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_i_3
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	     	 // [m]
-	
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m3
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m3
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 3
-	
-	min_shoulder_space: 3.0
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 3 lanes steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_i_out_2
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sio_r
-	signs_cutscenes_outer[]: j_cut.sio_70
-	signs_cutscenes_outer[]: j_cut.sio_m2
-	signs_cutscenes_outer[]: j_cut.sio_50
-	signs_cutscenes_outer[]: j_cut.sio_m2
-	signs_cutscenes_outer[]: j_cut.sio_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 2
-	
-	max_shoulder_space: 1.0
-	
-	outer_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 2 lanes outer (9)"
-}
-
-journey_events_road_event : j_re.rw_i_out_3
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sio_r
-	signs_cutscenes_outer[]: j_cut.sio_70
-	signs_cutscenes_outer[]: j_cut.sio_m3
-	signs_cutscenes_outer[]: j_cut.sio_50
-	signs_cutscenes_outer[]: j_cut.sio_m3
-	signs_cutscenes_outer[]: j_cut.sio_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 3
-	
-	max_shoulder_space: 1.0
-	
-	outer_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 3 lanes outer (9)"
-}
-
-journey_events_road_event : j_re.rw_i_in_2
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-	
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-    
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m2r
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m2r
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m2r
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m2r
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 2
-	
-	min_shoulder_space: 3.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 2 lanes inner (9)"
-}
-
-journey_events_road_event : j_re.rw_i_in_3
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-	
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-    
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m3r
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m3r
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m3r
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m3r
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 3
-	
-	min_shoulder_space: 3.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 3 lanes inner (9)"
-}
-
-journey_events_road_event : j_re.rw_i_ino_2
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sio_r
-	signs_cutscenes_outer[]: j_cut.sio_70
-	signs_cutscenes_outer[]: j_cut.sio_m2r
-	signs_cutscenes_outer[]: j_cut.sio_50
-	signs_cutscenes_outer[]: j_cut.sio_m2r
-	signs_cutscenes_outer[]: j_cut.sio_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m2r
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m2r
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 2
-	
-	max_shoulder_space: 1.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 2 lanes inner steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_i_ino_3
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sio_r
-	signs_cutscenes_outer[]: j_cut.sio_70
-	signs_cutscenes_outer[]: j_cut.sio_m3r
-	signs_cutscenes_outer[]: j_cut.sio_50
-	signs_cutscenes_outer[]: j_cut.sio_m3r
-	signs_cutscenes_outer[]: j_cut.sio_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m3r
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m3r
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 3
-	
-	max_shoulder_space: 1.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_i_p
-	
-	name: "Roadwork Italy 3 lanes inner steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_i_lng_2
-{
-	parent: j_re.rw_i_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m2
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m2
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m2
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 2
-	
-	min_shoulder_space: 3.0
-  
-	outer_lane_allowed: true
-	
-	weight: 20.0
-	
-	name: "Roadwork Italy 2 lanes mill (1)"
-}
-
-journey_events_road_event : j_re.rw_i_lng_3
-{
-	parent: j_re.rw_i_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.si_70
-	signs_cutscenes_outer[]: j_cut.si_m3
-	signs_cutscenes_outer[]: j_cut.si_50
-	signs_cutscenes_outer[]: j_cut.si_m3
-	signs_cutscenes_outer[]: j_cut.si_0
-	
-	signs_cutscenes_inner[]: j_cut.sii_r
-	signs_cutscenes_inner[]: j_cut.sii_70
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_50
-	signs_cutscenes_inner[]: j_cut.sii_m3
-	signs_cutscenes_inner[]: j_cut.sii_0
-	
-	allowed_lanes_count[]: 3
-	
-	min_shoulder_space: 3.0
-  
-	outer_lane_allowed: true
-	
-	weight: 20.0
-	
-	name: "Roadwork Italy 3 lanes mill (1)"
-}
-
-journey_events_road_event : j_re.rw_count_i
-{
-	signs_cutscenes_outer[]: j_cut.si_r
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-	
-	countries[]: italy
-
-	parent: j_re.rw_count_p
-	
-	name: "Roadwork Italy 1-1 (9)"
-}
-
-#############CZECH############
-
-journey_events_road_event : j_re.rw_c_p
-{
-    signs_distances_outer[]: 200
-    signs_distances_outer[]: 120
-	
-    signs_distances_inner[]: 200
-    signs_distances_inner[]: 120
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 250      // [m]
-    min_length: 100      // [m]
-
-	slow_down_passing: true
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	countries[]: czech
-	
-	weight: 100.0
-	
-}
-	
-journey_events_road_event : j_re.rw_c
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	     	 // [m]
-	
-	signs_cutscenes_outer[]: j_cut.sc_r
-	signs_cutscenes_outer[]: j_cut.sc_m
-	
-	signs_cutscenes_inner[]: j_cut.sci_r
-	signs_cutscenes_inner[]: j_cut.sci_m
-	
-	min_shoulder_space: 3.0
-	
-	parent: j_re.rw_c_p
-	
-	name: "Roadwork Czech steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_c_out
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sco_r
-	signs_cutscenes_outer[]: j_cut.sco_m
-	
-	signs_cutscenes_inner[]: j_cut.sci_r
-	signs_cutscenes_inner[]: j_cut.sci_m
-	
-	max_shoulder_space: 1.0
-	
-	outer_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_c_p
-	
-	name: "Roadwork Czech outer (9)"
-}
-
-journey_events_road_event : j_re.rw_c_in
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sc_r
-	signs_cutscenes_outer[]: j_cut.sc_mr
-	
-	signs_cutscenes_inner[]: j_cut.sci_r
-	signs_cutscenes_inner[]: j_cut.sci_mr
-	
-	min_shoulder_space: 3.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_c_p
-	
-	name: "Roadwork Czech inner steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_c_ino
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sco_r
-	signs_cutscenes_outer[]: j_cut.sco_mr
-	
-	signs_cutscenes_inner[]: j_cut.sci_r
-	signs_cutscenes_inner[]: j_cut.sci_mr
-	
-	max_shoulder_space: 1.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_c_p
-	
-	name: "Roadwork Czech inner (9)"
-}
-
-journey_events_road_event : j_re.rw_c_lng
-{
-	parent: j_re.rw_c_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sc_r
-	signs_cutscenes_outer[]: j_cut.sc_m
-	
-	signs_cutscenes_inner[]: j_cut.sci_r
-	signs_cutscenes_inner[]: j_cut.sci_m
-	
-	min_shoulder_space: 3.0
-  
-	outer_lane_allowed: true
-	
-	weight: 20.0
-	
-	name: "Roadwork Czech mill (1)"
-}
-
-journey_events_road_event : j_re.rw_count_c
-{
-	signs_cutscenes_outer[]: j_cut.sco_r
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-	
-	countries[]: czech
-
-	parent: j_re.rw_count_p
-	
-	name: "Roadwork Czech 1-1 (9)"
-}
-
-###########SLOVAKIA###########
-
-journey_events_road_event : j_re.rw_s_p
-{
-    signs_distances_outer[]: 200
-    signs_distances_outer[]: 120
-	
-    signs_distances_inner[]: 200
-    signs_distances_inner[]: 120
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 250      // [m]
-    min_length: 100      // [m]
-
-	slow_down_passing: true
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	countries[]: slovakia
-	
-	weight: 100.0
-}
-	
-journey_events_road_event : j_re.rw_s
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	     	 // [m]
-	
-	signs_cutscenes_outer[]: j_cut.ss_r
-	signs_cutscenes_outer[]: j_cut.ss_m
-	
-	signs_cutscenes_inner[]: j_cut.ssi_r
-	signs_cutscenes_inner[]: j_cut.ssi_m
-	
-	min_shoulder_space: 3.0
-	
-	parent: j_re.rw_s_p
-	
-	name: "Roadwork Slovakia steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_s_out
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.sso_r
-	signs_cutscenes_outer[]: j_cut.sso_m
-	
-	signs_cutscenes_inner[]: j_cut.ssi_r
-	signs_cutscenes_inner[]: j_cut.ssi_m
-	
-	max_shoulder_space: 1.0
-	
-	outer_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_s_p
-	
-	name: "Roadwork Slovakia outer (9)"
-}
-
-journey_events_road_event : j_re.rw_s_in
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.ss_r
-	signs_cutscenes_outer[]: j_cut.ss_mr
-	
-	signs_cutscenes_inner[]: j_cut.ssi_r
-	signs_cutscenes_inner[]: j_cut.ssi_mr
-	
-	min_shoulder_space: 3.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_s_p
-	
-	name: "Roadwork Slovakia inner steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_s_ino
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	signs_cutscenes_outer[]: j_cut.sso_r
-	signs_cutscenes_outer[]: j_cut.sso_mr
-	
-	signs_cutscenes_inner[]: j_cut.ssi_r
-	signs_cutscenes_inner[]: j_cut.ssi_mr
-	
-	max_shoulder_space: 1.0
-	
-	inner_lane_allowed: true     	 // [m]
-	
-	parent: j_re.rw_s_p
-	
-	name: "Roadwork Slovakia inner (9)"
-}
-
-journey_events_road_event : j_re.rw_s_lng
-{
-	parent: j_re.rw_s_p
-
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 150      // [m]
-    min_length: 110      // [m]
-
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_lng
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	signs_cutscenes_outer[]: j_cut.ss_r
-	signs_cutscenes_outer[]: j_cut.ss_m
-	
-	signs_cutscenes_inner[]: j_cut.ssi_r
-	signs_cutscenes_inner[]: j_cut.ssi_m
-
-	weight: 20.0
-	
-	min_shoulder_space: 3.0
-  
-	outer_lane_allowed: true
-	
-	name: "Roadwork Slovakia mill (1)"
-}
-
-journey_events_road_event : j_re.rw_count_s
-{
-	signs_cutscenes_outer[]: j_cut.sso_r
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-	
-	countries[]: slovakia
-
-	parent: j_re.rw_count_p
-	
-	name: "Roadwork Slovakia 1-1 (9)"
-}
+//Rw
+//Country/Urban/Highway/Mill
+//Shoulder/Inner/Outer/iNnershoulder
+//Finland/Russia/Universal/Slovakia
+//Parent/Master/Event
 
 ############PARENT############
 
-journey_events_road_event : j_re.rw_count_p
+####country####
+
+journey_events_road_event : j_re.rc__p
 {
 
     layer_cutscenes[]: j_cut.rw_count
@@ -1603,16 +546,10 @@ journey_events_road_event : j_re.rw_count_p
 	weight: 50.0
 }
 
-journey_events_road_event : j_re.rw_uni_m
+####HW####
+
+journey_events_road_event : j_re.rh__m
 {
-    signs_distances_outer[]: 140
-    signs_distances_outer[]: 80
-    signs_distances_outer[]: -60
-	
-    signs_distances_inner[]: 140
-    signs_distances_inner[]: 80
-    signs_distances_inner[]: -60
-    
     layer_min_curve[]:0.0        // [degree]
     layer_min_curve[]:0.0        // [degree]
     layer_max_curve[]:5.0        // [degree]
@@ -1626,101 +563,13 @@ journey_events_road_event : j_re.rw_uni_m
 	tunnel_forbidden: true
 	traffic_block: true
 	
-	excluded_countries[]: germany
-	excluded_countries[]: france
-	excluded_countries[]: italy
-	excluded_countries[]: czech
-	excluded_countries[]: slovakia
-	
 	weight: 100.0
 }
 
-journey_events_road_event : j_re.rw_uni_p
+journey_events_road_event : j_re.rhs_p
 {
-	signs_cutscenes_outer[]: j_cut.sn_rw
-	signs_cutscenes_outer[]: j_cut.sn_sp_70
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-	
-	signs_cutscenes_inner[]: j_cut.sn_in_rw
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_70
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-    
-	parent: j_re.rw_uni_m
-}
+	parents[]: j_re.rh__m
 
-journey_events_road_event : j_re.rw_uni_pl
-{
-	signs_cutscenes_outer[]: j_cut.sn_in_rw
-	signs_cutscenes_outer[]: j_cut.sn_in_sp_50
-	signs_cutscenes_outer[]: j_cut.sn_in_sp_0
-
-	signs_cutscenes_inner[]: j_cut.sn_rw
-	signs_cutscenes_inner[]: j_cut.sn_sp_50
-	signs_cutscenes_inner[]: j_cut.sn_sp_0
-	
-	left_hand_traffic: true
-	
-	parent: j_re.rw_uni_m
-}
-
-journey_events_road_event : j_re.rw_city_p
-{
-	signs_cutscenes_outer[]: j_cut.sn_rw
-	signs_cutscenes_inner[]: j_cut.sn_in_rw
-	
-    signs_distances_outer[]: 30
-    signs_distances_inner[]: 30
-    
-    layer_min_curve[]:0.0        // [degree]
-    layer_min_curve[]:0.0        // [degree]
-    layer_max_curve[]:5.0        // [degree]
-    layer_max_curve[]:5.0        // [degree]
-    
-    max_length:250      // [m]
-    min_length:100      // [m]
-  
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	area_tag: urban_area
-	
-	weight: 100.0
-}
-
-journey_events_road_event : j_re.rw_city_pl
-{
-	signs_cutscenes_outer[]: j_cut.sn_in_rw
-	signs_cutscenes_inner[]: j_cut.sn_rw
-	
-    signs_distances_outer[]: 30
-    signs_distances_inner[]: 30
-    
-    layer_min_curve[]:0.0        // [degree]
-    layer_min_curve[]:0.0        // [degree]
-    layer_max_curve[]:5.0        // [degree]
-    layer_max_curve[]:5.0        // [degree]
-    
-    max_length:250      // [m]
-    min_length:100      // [m]
-	
-	left_hand_traffic: true
-  
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	
-	area_tag: urban_area
-	
-	weight: 100.0
-}
-
-###########UNIVERSAL##########
-
-journey_events_road_event : j_re.rw
-{
 	start_cutscene: j_cut.rw_sta
 	end_cutscene: j_cut.rw_end
     
@@ -1729,251 +578,2618 @@ journey_events_road_event : j_re.rw
 	
 	outer_lane_allowed: true	
 	min_shoulder_space: 3.0	     	 // [m]
+}
+
+journey_events_road_event : j_re.rho_p
+{	
+	parents[]: j_re.rh__m
+
+	start_cutscene: j_cut.rw_sta_out
+	end_cutscene: j_cut.rw_end_out
     
-	parent: j_re.rw_uni_p
-	
-	name: "Roadwork universal steady strip (9)"
+    layer_cutscenes[]: j_cut.rw_out
+    layer_cutscenes[]: j_cut.rw_mid
+
+	outer_lane_allowed: true
+	max_shoulder_space: 1.0	     	 // [m]
 }
 
-journey_events_road_event : j_re.rw_count
+journey_events_road_event : j_re.rhn_p
 {
-	signs_cutscenes_outer[]: j_cut.sn_rw
-	signs_cutscenes_outer[]: j_cut.sn_sp_30
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: 30
-    signs_distances_outer[]: -30
-	
-	excluded_countries[]: germany
-	excluded_countries[]: france
-	excluded_countries[]: italy
-	excluded_countries[]: czech
-	excluded_countries[]: slovakia
+	parents[]: j_re.rh__m
 
-	parent: j_re.rw_count_p
+	start_cutscene: j_cut.rw_sta_in
+	end_cutscene: j_cut.rw_end_in
+    
+    layer_cutscenes[]: j_cut.rw_in
+    layer_cutscenes[]: j_cut.rw_mid_in
 	
-	name: "Roadwork universal 1-1 (9)"
+	inner_lane_allowed: true
+	min_shoulder_space: 3.0	     	 // [m]
 }
 
-journey_events_road_event : j_re.rw_city
+journey_events_road_event : j_re.rhi_p
 {
+	parents[]: j_re.rh__m
+
+	start_cutscene: j_cut.rw_sta_in
+	end_cutscene: j_cut.rw_end_in
+    
+    layer_cutscenes[]: j_cut.rw_in
+    layer_cutscenes[]: j_cut.rw_mid_in
+	
+	inner_lane_allowed: true
+	max_shoulder_space: 1.0	     	 // [m]
+}
+
+####mill####
+
+journey_events_road_event : j_re.rms_p
+{
+	parents[]: j_re.rhs_p
+
 	start_cutscene: j_cut.rw_sta
 	end_cutscene: j_cut.rw_end
-    
-    layer_cutscenes[]: j_cut.rw_uni
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	outer_lane_allowed: true	
-	min_shoulder_space: 3.0	     	 // [m]
-    
-	parent: j_re.rw_city_p
-
-	name: "Roadwork universal city steady strip (9)"
-}
-
-journey_events_road_event : j_re.rw_city_l
-{
-	start_cutscene: j_cut.rw_sta_l
-	end_cutscene: j_cut.rw_end_l
-    
-    layer_cutscenes[]: j_cut.rw_uni_l
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	outer_lane_allowed: true	
-	min_shoulder_space: 3.0	     	 // [m]
-    
-	parent: j_re.rw_city_pl
-
-	name: "Roadwork universal city steady strip LH (9)"
-}
-
-journey_events_road_event : j_re.rw_l
-{
-	start_cutscene: j_cut.rw_sta_l
-	end_cutscene: j_cut.rw_end_l
-    
-    layer_cutscenes[]: j_cut.rw_uni_l
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	outer_lane_allowed: true
-	min_shoulder_space: 3.0	     	 // [m]
-	
-	parent: j_re.rw_uni_pl
-	
-	name: "Roadwork universal steady strip LH (9)"
-}
-
-journey_events_road_event : j_re.rw_out
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-
-	outer_lane_allowed: true
-	max_shoulder_space: 1.0	     	 // [m]
-	
-	parent: j_re.rw_uni_p
-	
-	name: "Roadwork universal outer (9)"
-}
-
-journey_events_road_event : j_re.rw_city_out
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-
-	outer_lane_allowed: true
-	max_shoulder_space: 1.0	     	 // [m]
-	
-	parent: j_re.rw_city_p
-	
-	name: "Roadwork universal city outer (9)"
-}
-
-journey_events_road_event : j_re.rw_city_outl
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-
-	outer_lane_allowed: true
-	max_shoulder_space: 1.0	     	 // [m]
-	
-	parent: j_re.rw_city_pl
-	
-	name: "Roadwork universal city outer LH (9)"
-}
-
-journey_events_road_event : j_re.rw_in
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	inner_lane_allowed: true
-	
-	parent: j_re.rw_uni_p
-	
-	name: "Roadwork universal inner (9)"
-}
-
-journey_events_road_event : j_re.rw_city_in
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-	
-	inner_lane_allowed: true
-	
-	parent: j_re.rw_city_p
-	
-	name: "Roadwork universal city inner (9)"
-}
-
-journey_events_road_event : j_re.rw_city_in_l
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	inner_lane_allowed: true
-	
-	parent: j_re.rw_city_pl
-	
-	name: "Roadwork universal city inner LH (9)"
-}
-
-journey_events_road_event : j_re.rw_out_l
-{
-	start_cutscene: j_cut.rw_sta_in
-	end_cutscene: j_cut.rw_end_in
-    
-    layer_cutscenes[]: j_cut.rw_in
-    layer_cutscenes[]: j_cut.rw_mid_in
-    
-	outer_lane_allowed: true
-	max_shoulder_space: 1.0	     	 // [m]
-	
-	parent: j_re.rw_uni_pl
-	
-	name: "Roadwork universal outer LH (9)"
-}
-
-journey_events_road_event : j_re.rw_in_l
-{
-	start_cutscene: j_cut.rw_sta_out
-	end_cutscene: j_cut.rw_end_out
-    
-    layer_cutscenes[]: j_cut.rw_out
-    layer_cutscenes[]: j_cut.rw_mid
-	
-	inner_lane_allowed: true
-	
-	parent: j_re.rw_uni_pl
-	
-	name: "Roadwork universal inner LH (9)"
-}
-
-journey_events_road_event : j_re.rw_lng
-{
-	start_cutscene: j_cut.rw_sta
-	end_cutscene: j_cut.rw_end
-	
-	signs_cutscenes_outer[]: j_cut.sn_rw
-	signs_cutscenes_outer[]: j_cut.sn_sp_70
-	signs_cutscenes_outer[]: j_cut.sn_sp_0
-    signs_distances_outer[]: 140
-    signs_distances_outer[]: 60
-    signs_distances_outer[]: -80
-	
-	signs_cutscenes_inner[]: j_cut.sn_in_rw
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_70
-	signs_cutscenes_inner[]: j_cut.sn_in_sp_0
-    signs_distances_inner[]: 140
-    signs_distances_inner[]: 60
-    signs_distances_inner[]: -80
     
     layer_cutscenes[]: j_cut.rw_lng
     layer_cutscenes[]: j_cut.rw_mid
     
-    layer_min_curve[]: 0.0        // [degree]
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
     max_length: 150      // [m]
     min_length: 110      // [m]
-  
-	outer_lane_allowed: true
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: true
-	min_shoulder_space: 3.0	     	 // [m]
 	
 	weight: 20.0
+}
+
+####city####
+
+journey_events_road_event : j_re.rus_p
+{
+	parents[]: j_re.rhs_p
 	
+	area_tag: urban_area
+}
+
+journey_events_road_event : j_re.ruo_p
+{	
+	parents[]: j_re.rho_p
+	
+	area_tag: urban_area
+}
+
+journey_events_road_event : j_re.rui_p
+{
+	parents[]: j_re.rhi_p
+	
+	area_tag: urban_area
+}
+
+journey_events_road_event : j_re.run_p
+{
+	parents[]: j_re.rhn_p
+	
+	area_tag: urban_area
+}
+
+
+
+############GER###########
+
+journey_events_road_event : j_re.r__gm
+{
+	countries[]: Gerance
+}
+
+journey_events_road_event : j_re.rc_gp
+{
+	parents[]: j_re.r__gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusgp
+{
+	parents[]: j_re.r__gm
+
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruogp
+{
+	parents[]: j_re.r__gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_gm
+{
+	parents[]: j_re.r__gm
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 110
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 110
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsgp2
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_outer[]: j_cut.sd_2_100_l
+	signs_cutscenes_outer[]: j_cut.sd_2_80_l
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_2_100
+	signs_cutscenes_inner[]: j_cut.sdi_2_80
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhsgp3
+{
+	parents[]: j_re.rh_gm
+	
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_outer[]: j_cut.sd_3_100_l
+	signs_cutscenes_outer[]: j_cut.sd_3_80_l
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_3_100
+	signs_cutscenes_inner[]: j_cut.sdi_3_80
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhogp2
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.sd_2_100_l
+	signs_cutscenes_outer[]: j_cut.sd_2_80_l
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_2_100
+	signs_cutscenes_inner[]: j_cut.sdi_2_80
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhogp3
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.sd_3_100_l
+	signs_cutscenes_outer[]: j_cut.sd_3_80_l
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_3_100
+	signs_cutscenes_inner[]: j_cut.sdi_3_80
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhngp2
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_outer[]: j_cut.sd_2_100
+	signs_cutscenes_outer[]: j_cut.sd_2_80
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_2_100_l
+	signs_cutscenes_inner[]: j_cut.sdi_2_80_l
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhngp3
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_outer[]: j_cut.sd_3_100
+	signs_cutscenes_outer[]: j_cut.sd_3_80
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_3_100_l
+	signs_cutscenes_inner[]: j_cut.sdi_3_80_l
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhigp2
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.sd_2_100
+	signs_cutscenes_outer[]: j_cut.sd_2_80
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_2_100_l
+	signs_cutscenes_inner[]: j_cut.sdi_2_80_l
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhigp3
+{
+	parents[]: j_re.rh_gm
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.sd_3_100
+	signs_cutscenes_outer[]: j_cut.sd_3_80
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.sdi_3_100_l
+	signs_cutscenes_inner[]: j_cut.sdi_3_80_l
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_ge
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_gp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusge
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusgp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruoge
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruogp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger city outer (9)"
+}
+
+journey_events_road_event : j_re.runge
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusgp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruige
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruogp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsge2
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsgp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhsge3
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsgp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhoge2
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhogp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger outer (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhoge3
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhogp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger outer (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhnge2
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhngp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger inner steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhnge3
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhngp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger inner steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhige2
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhigp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger inner (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhige3
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhigp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger inner (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rmsge2
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsgp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger mill (1) 2 lines"
+}
+
+journey_events_road_event : j_re.rmsge3
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsgp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ger mill (1) 3 lines"
+}
+
+
+
+############FR###########
+
+journey_events_road_event : j_re.r__am
+{
+	countries[]: france
+}
+
+journey_events_road_event : j_re.rc_ap
+{
+	parents[]: j_re.r__am
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusap
+{
+	parents[]: j_re.r__am
+
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruoap
+{
+	parents[]: j_re.r__am
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_am
+{
+	parents[]: j_re.r__am
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 110
+    signs_distances_outer[]: 70
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 110
+    signs_distances_inner[]: 70
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsap2
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.sf_m
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sfi_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhsap3
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhoap2
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sfo_m
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sfi_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhoap3
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhnap2
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.sf_mr
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sfi_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhnap3
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhiap2
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sfo_mr
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sfi_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhiap3
+{
+	parents[]: j_re.rh_am
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_ae
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_ap
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusae
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusap
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruoae
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruoap
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr city outer (9)"
+}
+
+journey_events_road_event : j_re.runae
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusap
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruiae
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruoap
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsae2
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsap2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhsae3
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsap3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhoae2
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhoap2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr outer (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhoae3
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhoap3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr outer (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhnae2
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnap2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr inner steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhnae3
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnap3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr inner steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhiae2
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhiap2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr inner (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhiae3
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhiap3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr inner (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rmsae2
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsap2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr mill (1) 2 lines"
+}
+
+journey_events_road_event : j_re.rmsae3
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsap3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fr mill (1) 3 lines"
+}
+
+
+
+############IT###########
+
+journey_events_road_event : j_re.r__im
+{
+	countries[]: italy
+}
+
+journey_events_road_event : j_re.rc_ip
+{
+	parents[]: j_re.r__im
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusip
+{
+	parents[]: j_re.r__im
+
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruoip
+{
+	parents[]: j_re.r__im
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_im
+{
+	parents[]: j_re.r__im
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 110
+    signs_distances_outer[]: 70
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 110
+    signs_distances_inner[]: 70
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsip2
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.si_m2
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m2
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhsip3
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.si_m3
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m3
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhoip2
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sio_m2
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m2
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhoip3
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sio_m3
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m3
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhnip2
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.si_m2r
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m2r
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhnip3
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.si_m3r
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m3r
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhiip2
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sio_m2r
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m2r
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhiip3
+{
+	parents[]: j_re.rh_im
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.sio_m3r
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.sii_m3r
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_ie
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_ip
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusie
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusip
+
+	parents[]: j_re.super_parent
+	name: "Roadwork It city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruoie
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruoip
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It city outer (9)"
+}
+
+journey_events_road_event : j_re.runie
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusip
+
+	parents[]: j_re.super_parent
+	name: "Roadwork It city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruiie
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruoip
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsie2
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsip2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhsie3
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsip3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhoie2
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhoip2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It outer (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhoie3
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhoip3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It outer (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhnie2
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnip2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It inner steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhnie3
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnip3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It inner steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhiie2
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhiip2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It inner (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhiie3
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhiip3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It inner (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rmsie2
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsip2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It mill (1) 2 lines"
+}
+
+journey_events_road_event : j_re.rmsie3
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsip3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork It mill (1) 3 lines"
+}
+
+
+
+############CZE###########
+
+journey_events_road_event : j_re.r__cm
+{
+	countries[]: czech
+}
+
+journey_events_road_event : j_re.rc_cp
+{
+	parents[]: j_re.r__cm
+
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.ruscp
+{
+	parents[]: j_re.r__cm
+
+	signs_cutscenes_outer[]: j_cut.sc_r
+	signs_cutscenes_inner[]: j_cut.sci_r
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruocp
+{
+	parents[]: j_re.r__cm
+
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_inner[]: j_cut.sci_r
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_cm
+{
+	parents[]: j_re.r__cm
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 110
+    signs_distances_outer[]: 70
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 110
+    signs_distances_inner[]: 70
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhscp2
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sc_r
+	signs_cutscenes_outer[]: j_cut.sc_m
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.sci_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhscp3
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sc_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhocp2
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_outer[]: j_cut.sco_m
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.sci_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhocp3
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhncp2
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sc_r
+	signs_cutscenes_outer[]: j_cut.sc_mr
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.sci_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhncp3
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sc_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhicp2
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_outer[]: j_cut.sco_mr
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.sci_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhicp3
+{
+	parents[]: j_re.rh_cm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sco_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.sci_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_ce
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_cp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusce
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.ruscp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruoce
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruocp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze city outer (9)"
+}
+
+journey_events_road_event : j_re.runce
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.ruscp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruice
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruocp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsce2
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhscp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhsce3
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhscp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhoce2
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhocp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze outer (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhoce3
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhocp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze outer (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhnce2
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhncp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze inner steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhnce3
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhncp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze inner steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhice2
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhicp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze inner (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhice3
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhicp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze inner (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rmsce2
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhscp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze mill (1) 2 lines"
+}
+
+journey_events_road_event : j_re.rmsce3
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhscp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Cze mill (1) 3 lines"
+}
+
+
+
+############SK###########
+
+journey_events_road_event : j_re.r__sm
+{
+	countries[]: slovakia
+}
+
+journey_events_road_event : j_re.rc_sp
+{
+	parents[]: j_re.r__sm
+
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.russp
+{
+	parents[]: j_re.r__sm
+
+	signs_cutscenes_outer[]: j_cut.ss_r
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruosp
+{
+	parents[]: j_re.r__sm
+
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_sm
+{
+	parents[]: j_re.r__sm
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 110
+    signs_distances_outer[]: 70
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 110
+    signs_distances_inner[]: 70
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhssp2
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.ss_r
+	signs_cutscenes_outer[]: j_cut.ss_m
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.ssi_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhssp3
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.ss_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhosp2
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_outer[]: j_cut.sso_m
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.ssi_m
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhosp3
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhnsp2
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.ss_r
+	signs_cutscenes_outer[]: j_cut.ss_mr
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.ssi_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhnsp3
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.ss_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+journey_events_road_event : j_re.rhisp2
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_outer[]: j_cut.sso_mr
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.ssi_mr
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 2
+}
+
+journey_events_road_event : j_re.rhisp3
+{
+	parents[]: j_re.rh_sm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.sso_r
+	signs_cutscenes_outer[]: j_cut.rw_count_0
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.ssi_r
+	signs_cutscenes_inner[]: j_cut.rw_count_0
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+	
+	allowed_lanes_count[]: 3
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_se
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_sp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.russe
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.russp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruose
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruosp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk city outer (9)"
+}
+
+journey_events_road_event : j_re.runse
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.russp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruise
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruosp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsse2
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhssp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhsse3
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhssp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhose2
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhosp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk outer (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhose3
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhosp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk outer (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhnse2
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnsp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk inner steady strip (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhnse3
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhnsp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk inner steady strip (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rhise2
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhisp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk inner (9) 2 lines"
+}
+
+journey_events_road_event : j_re.rhise3
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhisp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk inner (9) 3 lines"
+}
+
+journey_events_road_event : j_re.rmsse2
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhssp2
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk mill (1) 2 lines"
+}
+
+journey_events_road_event : j_re.rmsse3
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhssp3
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Sk mill (1) 3 lines"
+}
+
+
+
+############FI+SWE###########
+
+journey_events_road_event : j_re.r__fm
+{
+	countries[]: finland
+	countries[]: sweden
+}
+
+journey_events_road_event : j_re.rc_fp
+{
+	parents[]: j_re.r__fm
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.syo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusfp
+{
+	parents[]: j_re.r__fm
+
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruofp
+{
+	parents[]: j_re.r__fm
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_fm
+{
+	parents[]: j_re.r__fm
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 80
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 80
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsfp
+{
+	parents[]: j_re.rh_fm
+
+	signs_cutscenes_outer[]: j_cut.sy_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.sy_sp_60
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.syi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.syi_sp_60
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+journey_events_road_event : j_re.rhofp
+{
+	parents[]: j_re.rh_fm
+
+	signs_cutscenes_outer[]: j_cut.syo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.syo_sp_60
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+	signs_cutscenes_inner[]: j_cut.syi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.syi_sp_60
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_fe
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_fp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusfe
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusfp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruofe
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruofp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe city outer (9)"
+}
+
+journey_events_road_event : j_re.runfe
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusfp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruife
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruofp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsfe
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsfp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhofe
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhofp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe outer (9)"
+}
+
+journey_events_road_event : j_re.rhnfe
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhsfp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhife
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhofp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe inner (9)"
+}
+
+journey_events_road_event : j_re.rmsfe
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsfp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Fi+Swe mill (1)"
+}
+
+
+
+############RU+EST+NOR###########
+
+journey_events_road_event : j_re.r__rm
+{
+	countries[]: russia
+	countries[]: estonia
+	countries[]: norway
+}
+
+journey_events_road_event : j_re.rc_rp
+{
+	parents[]: j_re.r__rm
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusrp
+{
+	parents[]: j_re.r__rm
+
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruorp
+{
+	parents[]: j_re.r__rm
+
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_rm
+{
+	parents[]: j_re.r__rm
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 80
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 80
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsrp
+{
+	parents[]: j_re.rh_rm
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sy_rw
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+journey_events_road_event : j_re.rhorp
+{
+	parents[]: j_re.rh_rm
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.syo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.syi_rw
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_re
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_rp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusre
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusrp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruore
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruorp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor city outer (9)"
+}
+
+journey_events_road_event : j_re.runre
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusrp
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruire
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruorp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsre
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsrp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhore
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhorp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor outer (9)"
+}
+
+journey_events_road_event : j_re.rhnre
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhsrp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhire
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhorp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor inner (9)"
+}
+
+journey_events_road_event : j_re.rmsre
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsrp
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Ru+Est+Nor mill (1)"
+}
+
+
+
+############UK###########
+
+journey_events_road_event : j_re.r__km
+{
+	left_hand_traffic: true
+}
+
+journey_events_road_event : j_re.ruskp
+{
+	parents[]: j_re.r__km
+
+	signs_cutscenes_outer[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.swo_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruokp
+{
+	parents[]: j_re.r__km
+
+	signs_cutscenes_outer[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.swo_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_km
+{
+	parents[]: j_re.r__km
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 80
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 80
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhskp
+{
+	parents[]: j_re.rh_km
+
+	signs_cutscenes_outer[]: j_cut.swi_sp_50
+	signs_cutscenes_outer[]: j_cut.swi_rw
+	signs_cutscenes_outer[]: j_cut.swi_sp_30
+	signs_cutscenes_outer[]: j_cut.swi_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swo_sp_50
+	signs_cutscenes_inner[]: j_cut.swo_rw
+	signs_cutscenes_inner[]: j_cut.swo_sp_30
+	signs_cutscenes_inner[]: j_cut.swo_sp_0
+}
+
+journey_events_road_event : j_re.rhokp
+{
+	parents[]: j_re.rh_km
+
+	signs_cutscenes_outer[]: j_cut.swi_sp_50
+	signs_cutscenes_outer[]: j_cut.swi_rw
+	signs_cutscenes_outer[]: j_cut.swi_sp_30
+	signs_cutscenes_outer[]: j_cut.swi_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swo_sp_50
+	signs_cutscenes_inner[]: j_cut.swo_rw
+	signs_cutscenes_inner[]: j_cut.swo_sp_30
+	signs_cutscenes_inner[]: j_cut.swo_sp_0
+}
+
+####city####
+
+journey_events_road_event : j_re.ruske
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.ruskp
+	
+	start_cutscene: j_cut.rw_sta_l
+	end_cutscene: j_cut.rw_end_l
+    
+    layer_cutscenes[]: j_cut.rw_uni_l
+    layer_cutscenes[]: j_cut.rw_mid_in
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk city steady strip (9) LH"
+}
+
+journey_events_road_event : j_re.ruoke
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruokp
+	
+	start_cutscene: j_cut.rw_sta_in
+	end_cutscene: j_cut.rw_end_in
+    
+    layer_cutscenes[]: j_cut.rw_in
+    layer_cutscenes[]: j_cut.rw_mid_in
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk city outer (9) LH"
+}
+
+journey_events_road_event : j_re.runke
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.ruskp
+	
+	start_cutscene: j_cut.rw_sta_out
+	end_cutscene: j_cut.rw_end_out
+    
+    layer_cutscenes[]: j_cut.rw_out
+    layer_cutscenes[]: j_cut.rw_mid
+
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk city inner steady strip (9) LH"
+}
+
+journey_events_road_event : j_re.ruike
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruokp
+	
+	start_cutscene: j_cut.rw_sta_out
+	end_cutscene: j_cut.rw_end_out
+    
+    layer_cutscenes[]: j_cut.rw_out
+    layer_cutscenes[]: j_cut.rw_mid
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk city inner (9) LH"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhske
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhskp
+	
+	start_cutscene: j_cut.rw_sta_l
+	end_cutscene: j_cut.rw_end_l
+    
+    layer_cutscenes[]: j_cut.rw_uni_l
+    layer_cutscenes[]: j_cut.rw_mid_in
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk steady strip (9) LH"
+}
+
+journey_events_road_event : j_re.rhoke
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhokp
+	
+	start_cutscene: j_cut.rw_sta_in
+	end_cutscene: j_cut.rw_end_in
+    
+    layer_cutscenes[]: j_cut.rw_in
+    layer_cutscenes[]: j_cut.rw_mid_in
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk outer (9) LH"
+}
+
+journey_events_road_event : j_re.rhnke
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhskp
+	
+	start_cutscene: j_cut.rw_sta_out
+	end_cutscene: j_cut.rw_end_out
+    
+    layer_cutscenes[]: j_cut.rw_out
+    layer_cutscenes[]: j_cut.rw_mid
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk inner steady strip (9) LH"
+}
+
+journey_events_road_event : j_re.rhike
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhokp
+	
+	start_cutscene: j_cut.rw_sta_out
+	end_cutscene: j_cut.rw_end_out
+    
+    layer_cutscenes[]: j_cut.rw_out
+    layer_cutscenes[]: j_cut.rw_mid
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork Uk inner (9) LH"
+}
+
+
+
+############UNIVERSAL###########
+
+journey_events_road_event : j_re.r__um
+{
+	excluded_countries[]: sweden
+	excluded_countries[]: norway
+	excluded_countries[]: russia
+	excluded_countries[]: estonia
+	excluded_countries[]: finland
 	excluded_countries[]: germany
 	excluded_countries[]: france
 	excluded_countries[]: italy
 	excluded_countries[]: czech
 	excluded_countries[]: slovakia
+}
+
+journey_events_road_event : j_re.rc_up
+{
+	parents[]: j_re.r__um
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_30
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
 	
+    signs_distances_outer[]: 60
+    signs_distances_outer[]: 30
+    signs_distances_outer[]: -30
+}
+
+journey_events_road_event : j_re.rusup
+{
+	parents[]: j_re.r__um
+
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.ruoup
+{
+	parents[]: j_re.r__um
+
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	
+    signs_distances_outer[]: 30
+    signs_distances_inner[]: 30
+}
+
+journey_events_road_event : j_re.rh_um
+{
+	parents[]: j_re.r__um
+	
+	signs_distances_outer[]: 140
+    signs_distances_outer[]: 80
+    signs_distances_outer[]: 40
+    signs_distances_outer[]: -60
+
+    signs_distances_inner[]: 140
+    signs_distances_inner[]: 80
+    signs_distances_inner[]: 40
+    signs_distances_inner[]: -60
+}
+
+journey_events_road_event : j_re.rhsup
+{
+	parents[]: j_re.rh_um
+
+	signs_cutscenes_outer[]: j_cut.sw_sp_90
+	signs_cutscenes_outer[]: j_cut.sw_rw
+	signs_cutscenes_outer[]: j_cut.sw_sp_50
+	signs_cutscenes_outer[]: j_cut.sw_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+journey_events_road_event : j_re.rhoup
+{
+	parents[]: j_re.rh_um
+
+	signs_cutscenes_outer[]: j_cut.swo_sp_90
+	signs_cutscenes_outer[]: j_cut.swo_rw
+	signs_cutscenes_outer[]: j_cut.swo_sp_50
+	signs_cutscenes_outer[]: j_cut.swo_sp_0
+
+	signs_cutscenes_inner[]: j_cut.swi_sp_90
+	signs_cutscenes_inner[]: j_cut.swi_rw
+	signs_cutscenes_inner[]: j_cut.swi_sp_50
+	signs_cutscenes_inner[]: j_cut.swi_sp_0
+}
+
+####country####
+
+journey_events_road_event : j_re.rc_ue
+{
+	parents[]: j_re.rc__p
+	parents[]: j_re.rc_up
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal 1-1 (9)"
+}
+
+####city####
+
+journey_events_road_event : j_re.rusue
+{
+	parents[]: j_re.rus_p
+	parents[]: j_re.rusup
+
+	parents[]: j_re.super_parent
+	name: "Roadwork universal city steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruoue
+{
+	parents[]: j_re.ruo_p
+	parents[]: j_re.ruoup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal city outer (9)"
+}
+
+journey_events_road_event : j_re.runue
+{
+	parents[]: j_re.run_p
+	parents[]: j_re.rusup
+
+	parents[]: j_re.super_parent
+	name: "Roadwork universal city inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.ruiue
+{
+	parents[]: j_re.rui_p
+	parents[]: j_re.ruoup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal city inner (9)"
+}
+
+####HW###
+
+journey_events_road_event : j_re.rhsue
+{
+	parents[]: j_re.rhs_p
+	parents[]: j_re.rhsup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhoue
+{
+	parents[]: j_re.rho_p
+	parents[]: j_re.rhoup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal outer (9)"
+}
+
+journey_events_road_event : j_re.rhnue
+{
+	parents[]: j_re.rhn_p
+	parents[]: j_re.rhsup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal inner steady strip (9)"
+}
+
+journey_events_road_event : j_re.rhiue
+{
+	parents[]: j_re.rhi_p
+	parents[]: j_re.rhoup
+	
+	parents[]: j_re.super_parent
+	name: "Roadwork universal inner (9)"
+}
+
+journey_events_road_event : j_re.rmsue
+{
+	parents[]: j_re.rms_p
+	parents[]: j_re.rhsup
+	
+	parents[]: j_re.super_parent
 	name: "Roadwork universal mill (1)"
 }
+
+
 
 ##############################
 ############POLICE############
@@ -2001,77 +3217,73 @@ journey_events_road_event : j_re.pol_uni_p
 
 journey_events_road_event : j_re.pol_uni_1
 {
-    layer_cutscenes[]: j_cut.pol_uni_1
+	parents[]: j_re.pol_uni_p
 	
+    layer_cutscenes[]: j_cut.pol_uni_1
 	weight: 40.0
 	
-	parent: j_re.pol_uni_p
-	
+	parents[]: j_re.super_parent
 	name: "Police (2)"
 }
 
 
 journey_events_road_event : j_re.pol_uni_2
 {
+	parents[]: j_re.pol_uni_p
     
     layer_cutscenes[]: j_cut.pol_uni_2
-    
 	weight: 30.0
 	
-	parent: j_re.pol_uni_p
-	
+	parents[]: j_re.super_parent
 	name: "Police larger (3)"
 }
 
 
 journey_events_road_event : j_re.pol_rare
 {
+	parents[]: j_re.pol_uni_p
+	
     layer_cutscenes[]: j_cut.pol_rare
-	
 	weight: 5.0
-	
-	parent: j_re.pol_uni_p
 
+	parents[]: j_re.super_parent
 	name: "Police rare (1)"
 }
 
 journey_events_road_event : j_re.pol_uni_1_l
 {
+	parents[]: j_re.pol_uni_p
     
     layer_cutscenes[]: j_cut.pol_uni_1_l
-	left_hand_traffic: true
-	
+	left_hand_traffic: true	
 	weight: 40.0
-
-	parent: j_re.pol_uni_p
 	
-	name: "Police LH (2)"
+	parents[]: j_re.super_parent
+	name: "Police (2) LH"
 }
 
 
 journey_events_road_event : j_re.pol_uni_2_l
 {
+	parents[]: j_re.pol_uni_p
     
     layer_cutscenes[]: j_cut.pol_uni_2_l
-	left_hand_traffic: true
-	
+	left_hand_traffic: true	
 	weight: 30.0
 	
-	parent: j_re.pol_uni_p
-	
+	parents[]: j_re.super_parent
 	name: "Police larger LH (3)"
 }
 
 journey_events_road_event : j_re.pol_rare_l
 {
+	parents[]: j_re.pol_uni_p
     
     layer_cutscenes[]: j_cut.pol_rare_l
 	left_hand_traffic: true
-
 	weight: 5.0
 	
-	parent: j_re.pol_uni_p
-	
+	parents[]: j_re.super_parent
 	name: "Police rare LH (1)"
 }
 
@@ -2097,6 +3309,7 @@ journey_events_road_event : j_re.pol_cou
 
 	weight: 10.0
 	
+	parents[]: j_re.super_parent
 	name: "Police country (2)"
 }
 
@@ -2106,10 +3319,8 @@ journey_events_road_event : j_re.pol_cou
 
 ###########UNIVERSAL##########
 
-journey_events_road_event : j_re.rand_t
-{
-    layer_cutscenes[]: j_cut.rand_t
-    
+journey_events_road_event : j_re.rand_p1
+{    
     layer_min_curve[]: 0.0        // [degree]
     layer_max_curve[]: 15.0        // [degree]
     
@@ -2121,358 +3332,230 @@ journey_events_road_event : j_re.rand_t
 	bridge_forbidden: false
 	tunnel_forbidden: true
 	traffic_block: false
-	
-    min_shoulder_space: 3.0
 
 	weight: 20.0
+}
+
+journey_events_road_event : j_re.rand_t
+{
+	parents[]: j_re.rand_p1
+
+    layer_cutscenes[]: j_cut.rand_t	
+    min_shoulder_space: 3.0
 	
+	parents[]: j_re.super_parent
 	name: "Tires steady strip (2)"
 }
 
 journey_events_road_event : j_re.rand_t_o
 {
-    layer_cutscenes[]: j_cut.rand_t_o
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_t_o	
     max_shoulder_space: 1.0
 
-	weight: 20.0
-	
+	parents[]: j_re.super_parent
 	name: "Tires (2)"
 }
 
 journey_events_road_event : j_re.rand_tl
 {
-    layer_cutscenes[]: j_cut.rand_tl
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
-	
+	parents[]: j_re.rand_p1
+
+    layer_cutscenes[]: j_cut.rand_tl	
 	left_hand_traffic: true
     min_shoulder_space: 3.0
-
-	weight: 20.0
 	
-	name: "Tires steady strip LH (2)"
+	parents[]: j_re.super_parent
+	name: "Tires steady strip (2) LH"
 }
 
 journey_events_road_event : j_re.rand_tl_o
 {
-    layer_cutscenes[]: j_cut.rand_tl_o
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_tl_o	
 	left_hand_traffic: true
     max_shoulder_space: 1.0
-
-	weight: 20.0
 	
-	name: "Tires LH (2)"
+	parents[]: j_re.super_parent
+	name: "Tires (2) LH"
 }
 
 journey_events_road_event : j_re.rand_br
 {
-    layer_cutscenes[]: j_cut.rand_br
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_br	
     max_shoulder_space: 1.0
-
-	weight: 20.0
 	
+	parents[]: j_re.super_parent
 	name: "Branches (3)"
 }
 
 journey_events_road_event : j_re.rand_brl
 {
-    layer_cutscenes[]: j_cut.rand_brl
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
-	
+	parents[]: j_re.rand_p1
+
+    layer_cutscenes[]: j_cut.rand_brl	
 	left_hand_traffic: true	
     max_shoulder_space: 1.0
-
-	weight: 20.0
 	
-	name: "Branches LH (3)"
+	parents[]: j_re.super_parent
+	name: "Branches (3) LH"
+}
+
+journey_events_road_event : j_re.rand_p2
+{
+	parents[]: j_re.rand_p1
+	
+	slow_down_passing: true
+	weight: 30.0
 }
 
 journey_events_road_event : j_re.rand_c
 {
-    layer_cutscenes[]: j_cut.rand_c
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
-	
-    max_shoulder_space: 1.0
+	parents[]: j_re.rand_p2
 
-	weight: 30.0
+    layer_cutscenes[]: j_cut.rand_c
+    max_shoulder_space: 1.0
 	
 	name: "Traffic cones (3)"
 }
 
 journey_events_road_event : j_re.rand_cl
 {
-    layer_cutscenes[]: j_cut.rand_cl
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p2
 	
+    layer_cutscenes[]: j_cut.rand_cl	
 	left_hand_traffic: true
-	
     max_shoulder_space: 1.0
-
-	weight: 30.0
 	
-	name: "Traffic cones LH (3)"
+	parents[]: j_re.super_parent
+	name: "Traffic cones (3) LH"
 }
 
 journey_events_road_event : j_re.rand_ba
 {
+	parents[]: j_re.rand_p2
+	
     layer_cutscenes[]: j_cut.rand_ba
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
 	centerline_displacement: true
 	
     max_shoulder_space: 1.0
 	min_shoulder_space: 0.0
-
-	weight: 50.0
 	
+	parents[]: j_re.super_parent
 	name: "Traffic barrier (3)"
 }
 
 journey_events_road_event : j_re.rand_bal
 {
-    layer_cutscenes[]: j_cut.rand_bal
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
-	centerline_displacement: true
-	
-	left_hand_traffic: true
-    max_shoulder_space: 1.0
+	parents[]: j_re.rand_p2
 
-	weight: 50.0
+    layer_cutscenes[]: j_cut.rand_bal
+	centerline_displacement: true
+	left_hand_traffic: true
 	
-	name: "Traffic barrier LH (3)"
+    max_shoulder_space: 1.0
+	min_shoulder_space: 0.0
+	
+	parents[]: j_re.super_parent
+	name: "Traffic barrier (3) LH"
 }
 
 journey_events_road_event : j_re.rand_bl
 {
+	parents[]: j_re.rand_p2
+
     layer_cutscenes[]: j_cut.rand_bl
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
     
     max_length: 100.0      // [m]
     min_length: 100.0      // [m]
   
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
 	centerline_displacement: true
-	
     max_shoulder_space: 1.0
-
-	weight: 30.0
+	min_shoulder_space: 0.0
 	
+	parents[]: j_re.super_parent
 	name: "Traffic barrier long (3)"
 }
 
 journey_events_road_event : j_re.rand_bll
 {
+	parents[]: j_re.rand_p2
+	
     layer_cutscenes[]: j_cut.rand_bll
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
     
     max_length: 100.0      // [m]
     min_length: 100.0      // [m]
   
-	outer_lane_allowed:	true
-	slow_down_passing: true
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
 	centerline_displacement: true
-	
 	left_hand_traffic: true
     max_shoulder_space: 1.0
-
-	weight: 30.0
+	min_shoulder_space: 0.0
 	
-	name: "Traffic barrier long LH (3)"
+	parents[]: j_re.super_parent
+	name: "Traffic barrier long (3) LH"
 }
 
 journey_events_road_event : j_re.rand_tr
 {
-    layer_cutscenes[]: j_cut.rand_tr
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_tr
     min_shoulder_space: 3.0
-
 	weight: 10.0
 	
+	parents[]: j_re.super_parent
 	name: "Trash steady strip (5)"
 }
 
 journey_events_road_event : j_re.rand_tri
 {
-    layer_cutscenes[]: j_cut.rand_tri
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_tri	
     max_shoulder_space: 1.0
-
-	weight: 20.0
 	
+	parents[]: j_re.super_parent
 	name: "Trash (5)"
 }
 
 journey_events_road_event : j_re.rand_trl
 {
-    layer_cutscenes[]: j_cut.rand_trl
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed:	true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.rand_p1
 	
+    layer_cutscenes[]: j_cut.rand_trl
 	left_hand_traffic: true
     min_shoulder_space: 3.0
-
 	weight: 10.0
 	
-	name: "Trash steady strip LH (5)"
+	parents[]: j_re.super_parent
+	name: "Trash steady strip (5) LH"
 }
 
 journey_events_road_event : j_re.rand_tril
 {
-    layer_cutscenes[]: j_cut.rand_tril
+	parents[]: j_re.rand_p1
+	
+    layer_cutscenes[]: j_cut.rand_tril	
+	left_hand_traffic: true
+    max_shoulder_space: 1.0
+
+	parents[]: j_re.super_parent
+	name: "Trash LH (5)"
+}
+
+journey_events_road_event : j_re.rand_p3
+{
+    layer_cutscenes[]: j_cut.rand
     
     layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
+    layer_max_curve[]: 5.0        // [degree]
     
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
+    max_length: 50.0      // [m]
+    min_length: 50.0      // [m]
   
 	outer_lane_allowed:	true
 	slow_down_passing: false
@@ -2480,17 +3563,30 @@ journey_events_road_event : j_re.rand_tril
 	tunnel_forbidden: true
 	traffic_block: false
 	
-	left_hand_traffic: true
-    max_shoulder_space: 1.0
+	allowed_lanes_count[]: 2
+	allowed_lanes_count[]: 3
 
-	weight: 20.0
-	
-	name: "Trash LH (5)"
+	weight: 1.0
 }
 
 journey_events_road_event : j_re.rand
 {
-    layer_cutscenes[]: j_cut.rand
+	parents[]: j_re.rand_p3
+	parents[]: j_re.super_parent
+	name: "Helicopter (1)"
+}
+
+journey_events_road_event : j_re.rand_l
+{
+	parents[]: j_re.rand_p3
+	left_hand_traffic: true
+	parents[]: j_re.super_parent
+	name: "Helicopter (1) LH"
+}
+
+journey_events_road_event : j_re.jet_p
+{
+    layer_cutscenes[]: j_cut.jet
     
     layer_min_curve[]: 0.0        // [degree]
     layer_max_curve[]: 5.0        // [degree]
@@ -2500,88 +3596,31 @@ journey_events_road_event : j_re.rand
   
 	outer_lane_allowed:	true
 	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: false
-	traffic_block: false
-	
-#	allowed_lanes_count[]: 2
-
-	weight: 1.0
-	
-	name: "Helicopter (2)"
-}
-
-journey_events_road_event : j_re.rand_l
-{
-    layer_cutscenes[]: j_cut.rand
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 5.0        // [degree]
-    
-    max_length: 50.0      // [m]
-    min_length: 50.0      // [m]
-  
-	outer_lane_allowed: true
-	slow_down_passing: false
-	bridge_forbidden: false
-	tunnel_forbidden: false
-	traffic_block: false
-	
-#	allowed_lanes_count[]: 2
-
-	left_hand_traffic: true
-
-	weight: 1.0
-	
-	name: "Helicopter LH (2)"
-}
-
-journey_events_road_event : j_re.shop
-{
-    layer_cutscenes[]: j_cut.shop
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed: true
-	slow_down_passing: false
 	bridge_forbidden: true
 	tunnel_forbidden: true
 	traffic_block: false
+	
+	excluded_countries[]: russia
+	
+	allowed_lanes_count[]: 2
+	allowed_lanes_count[]: 3
 
-	area_tag: shop
-	
-	weight: 100
-	
-	name: "Shop (4)"
+	weight: 1.0
 }
 
-journey_events_road_event : j_re.shop_l
+journey_events_road_event : j_re.jet
 {
-    layer_cutscenes[]: j_cut.shop_l
-    
-    layer_min_curve[]: 0.0        // [degree]
-    layer_max_curve[]: 15.0        // [degree]
-    
-    max_length: 30.0      // [m]
-    min_length: 30.0      // [m]
-  
-	outer_lane_allowed: true
-	slow_down_passing: false
-	bridge_forbidden: true
-	tunnel_forbidden: true
-	traffic_block: false
+	parents[]: j_re.jet_p
+	parents[]: j_re.super_parent
+	name: "Flyover (1)"
+}
 
-	area_tag: shop
-	
-	left_hand_traffic: true
-	
-	weight: 100
-	
-	name: "Shop LH (4)"
+journey_events_road_event : j_re.jet_l
+{
+	parents[]: j_re.jet_p
+	left_hand_traffic: true	
+	parents[]: j_re.super_parent
+	name: "Flyover (1) LH"
 }
 
 ##############################
@@ -2618,8 +3657,9 @@ journey_events_road_event : j_re.nat_u
 	
 	weight: 250.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal universal (19)"
 }
 
@@ -2630,8 +3670,9 @@ journey_events_road_event : j_re.nat_d
 	
 	weight: 10.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country (1)"
 }
 
@@ -2642,8 +3683,9 @@ journey_events_road_event : j_re.nat_l
 	
 	weight: 100.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country (10)"
 }
 
@@ -2654,8 +3696,9 @@ journey_events_road_event : j_re.nat_b
 	
 	weight: 20.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country building (7)"
 }
 
@@ -2669,8 +3712,9 @@ journey_events_road_event : j_re.nat_bl
 	
 	weight: 20.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country building long (2)"
 }
 
@@ -2685,8 +3729,9 @@ journey_events_road_event : j_re.nat_bl_l
 	
 	weight: 20.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country building long LH (2)"
 }
 
@@ -2699,8 +3744,9 @@ journey_events_road_event : j_re.nat_u_l
 	
 	weight: 250.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal universal LH (19)"
 }
 
@@ -2712,8 +3758,9 @@ journey_events_road_event : j_re.nat_d_l
 
 	weight: 10.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country LH (1)"
 }
 
@@ -2725,8 +3772,9 @@ journey_events_road_event : j_re.nat_l_l
 	
 	weight: 100.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country LH (10)"
 }
 
@@ -2738,8 +3786,9 @@ journey_events_road_event : j_re.nat_b_l
 	
 	weight: 20.0
 	
-	parent: j_re.nat_p
+	parents[]: j_re.nat_p
 	
+	parents[]: j_re.super_parent
 	name: "Decal country building LH (7)"
 }
 
@@ -2773,8 +3822,9 @@ journey_events_road_event : j_re.c_plat
 	
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City Platform (1)"
 }
 
@@ -2785,8 +3835,9 @@ journey_events_road_event : j_re.city_1
 	
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City (2)"
 }
 
@@ -2798,8 +3849,9 @@ journey_events_road_event : j_re.city_2
 	inner_lane_allowed: true
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City canal (2)"
 }
 
@@ -2811,8 +3863,9 @@ journey_events_road_event : j_re.c_plat_l
 	
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City Platform LH (1)"
 }
 
@@ -2824,8 +3877,9 @@ journey_events_road_event : j_re.city_1_l
 	
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City LH (2)"
 }
 
@@ -2838,9 +3892,9 @@ journey_events_road_event : j_re.city_2_l
 	inner_lane_allowed: true
 	weight: 100.0
 	
-	parent: j_re.c_p
+	parents[]: j_re.c_p
 	
+	parents[]: j_re.super_parent
 	name: "City canal LH (1)"
 }
-
 }

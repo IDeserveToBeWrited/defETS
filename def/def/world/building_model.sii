@@ -1448,15 +1448,16 @@ building_model : bld_model.2sc {
 building_model : bld_model.4sc {
 	single_part: true
 	vegetation_model[]: vegetmodel.small.tree_sc
-	vegetation_model[]: vegetmodel.medium.bush1_sc
-  vegetation_model[]: vegetmodel.medium.bush2
-  vegetation_model[]: vegetmodel.big.bush2
+	 vegetation_model[]: vegetmodel.big.bush2
+	 vegetation_model[]: vegetmodel.bush2
+   	 vegetation_model[]: vegetmodel.medium.bush2
 
-	width: 7
-	 model_size_override: 3.8
+	width: 4.5
+	model_size_override: 3.8
 	rand_rot: 360
 	min_scale: 0.8
 	max_scale: 1.2
+
 }
 
 building_model : bld_model.5sc {
@@ -1484,16 +1485,18 @@ building_model : bld_model.8sc {
 }
 
 building_model : bld_model.9sc {
-	single_part: true
-	vegetation_model[]: vegetmodel.bush1.avenue
-	vegetation_model[]: vegetmodel.bush2.avenue
-	vegetation_model[]: vegetmodel.bush3.avenue
-	vegetation_model[]: vegetmodel.bush4.avenue
 
-	width: 3
+	single_part: true
+	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.shrub1.small_fr
+	vegetation_model[]: vegetmodel.bush3
+	vegetation_model[]: vegetmodel.bush4
+
+	width: 2.5
 	rand_rot: 360
-	min_scale: 0.8
-	max_scale: 1.2
+	min_scale: 0.9
+	max_scale: 1.1
+	
 }
 
 building_model : bld_model.10sc {
@@ -1617,25 +1620,28 @@ building_model : bld_model.21sc {
 building_model : bld_model.22sc {
 	single_part: true
 	vegetation_model[]: vegetmodel.small.tree_sc
-	vegetation_model[]: vegetmodel.medium.bush1_sc
-  vegetation_model[]: vegetmodel.medium.bush2
-  vegetation_model[]: vegetmodel.big.bush2
+	 vegetation_model[]: vegetmodel.big.bush2
+	 vegetation_model[]: vegetmodel.bush2
+   	 vegetation_model[]: vegetmodel.medium.bush2
   sprite_only: true
 
-	width: 7
+	width: 4.5
+	model_size_override: 3.8
+	rand_rot: 360
 	min_scale: 0.8
 	max_scale: 1.2
 }
 
 building_model : bld_model.23sc {
 	single_part: true
-	vegetation_model[]: vegetmodel.bush1.avenue
-	vegetation_model[]: vegetmodel.bush2.avenue
-	vegetation_model[]: vegetmodel.bush3.avenue
-	vegetation_model[]: vegetmodel.bush4.avenue
+	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.shrub1.small_fr
+	vegetation_model[]: vegetmodel.bush3
+	vegetation_model[]: vegetmodel.bush4
+
   sprite_only: true
 
-	width: 3
+	width: 2.3
 	min_scale: 0.8
 	max_scale: 1.2
 }
@@ -2709,11 +2715,11 @@ building_model : bld_model.dlc_fr_68 {
 
 	width: 9
   rand_rot: 360
-  min_scale: 0.8
-	max_scale: 1.2
+ min_scale: 0.9
+	max_scale: 1.1
 }
 building_model : bld_model.dlc_fr_69 {
-	single_part: true
+		single_part: true
 	vegetation_model[]: vegetmodel.tree.middle3
 	vegetation_model[]: vegetmodel.tree.middle4
 	vegetation_model[]: vegetmodel.tree.middle3
@@ -2722,7 +2728,7 @@ building_model : bld_model.dlc_fr_69 {
 
 	width: 8
   rand_rot: 360
-  min_scale: 0.8
+  min_scale: 0.9
 	max_scale: 1.1
 }
 building_model : bld_model.dlc_fr_70 {
@@ -3120,15 +3126,15 @@ building_model : bld_model.dlc_fr_148 {
 building_model : bld_model.dlc_fr_149 {
 	single_part: true
 	vegetation_model[]: vegetmodel.shrub1
-	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.medium.bush2
 	vegetation_model[]: vegetmodel.shrub1
-	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.medium.bush2
 	sprite_only: false
 
-	width: 3
+	width: 2.6
   rand_rot: 360
   min_scale: 1.0
-	max_scale: 1.5
+	max_scale: 1.1
 }
 building_model : bld_model.dlc_fr_150 {
 	railing_model: true
@@ -3182,14 +3188,14 @@ building_model : bld_model.dlc_fr_155 {
 building_model : bld_model.dlc_fr_156 {
 	single_part: true
 	vegetation_model[]: vegetmodel.shrub1
-	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.medium.bush2
 	vegetation_model[]: vegetmodel.shrub1
-	vegetation_model[]: vegetmodel.shrub2
+	vegetation_model[]: vegetmodel.medium.bush2
 	sprite_only: true
 
-	width: 3
+	width: 2.6
   min_scale: 1.0
-	max_scale: 1.5
+	max_scale: 1.2
 }
 building_model : bld_model.dlc_fr_158 {
 	single_part: true
@@ -3402,7 +3408,7 @@ building_model : bld_model.dlc_fr_186 {
 }
 building_model : bld_model.dlc_fr_187 {
 	single_part: true
-	vegetation_model[]: vegetmodel.shrub1.small_fr
+	vegetation_model[]: vegetmodel.bush.small1
 	vegetation_model[]: vegetmodel.shrub2.small_fr
 	vegetation_model[]: vegetmodel.shrub1.small_fr
 	vegetation_model[]: vegetmodel.shrub2.small_fr
@@ -3410,7 +3416,7 @@ building_model : bld_model.dlc_fr_187 {
 
 	width: 2
   rand_rot: 360
-  min_scale: 0.8
+ min_scale: 0.8
 	max_scale: 1.1
 	
 }
@@ -5445,9 +5451,13 @@ building_model : bld_model.dlc_no_37 {
 
 building_model : bld_model.dlc_no_38 {
 	single_part: true
-	model_desc: "/model2/vegetation/hedges/hedge_low_01_sc.pmd"
-	width: 4
-  look_name: default
+	vegetation_model[]: vegetmodel.hedge_low1
+	vegetation_model[]: vegetmodel.hedge_low2
+	
+		width: 3.5
+ 
+	min_scale: 0.95
+	max_scale: 1.05
 }
 
 building_model : bld_model.dlc_no_39 {
@@ -5485,9 +5495,14 @@ building_model : bld_model.dlc_no_42 {
  
 building_model : bld_model.dlc_no_43 {
 	single_part: true
-	model_desc: "/model2/vegetation/hedges/hedge_irregular_01_sc.pmd"
-	width: 3.5
-  look_name: default
+	vegetation_model[]: vegetmodel.juniper1
+	vegetation_model[]: vegetmodel.juniper.small1
+	vegetation_model[]: vegetmodel.juniper3	
+	vegetation_model[]: vegetmodel.juniper4
+	
+	width: 4.5
+	min_scale: 0.9
+	max_scale: 1.1
 }
   
 building_model : bld_model.dlc_no_45 {
@@ -5823,4 +5838,515 @@ building_model : bld_model.dlc_no_9 {
 	model_desc: "/model2/barrier/wooden/wooden_barrier_01_sc.pmd"
 	look_name: default
 }
+building_model : bld_model.dlc_balt_85 {
+	single_part: true
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple3.balt
+	vegetation_model[]: vegetmodel.maple4.balt
+	sprite_only: false
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
 }
+building_model : bld_model.dlc_balt_145 {
+	single_part: true
+	vegetation_model[]: vegetmodel.linden.1.balt
+	vegetation_model[]: vegetmodel.linden.2.balt
+	vegetation_model[]: vegetmodel.linden.4.balt
+	vegetation_model[]: vegetmodel.linden.2.balt
+
+		
+	width: 12
+	rand_rot: 360
+	min_scale: 0.85
+	max_scale: 1.0	
+		
+}
+building_model : bld_model.dlc_balt_151 {
+	single_part: true
+	vegetation_model[]: vegetmodel.linden.1.balt
+	vegetation_model[]: vegetmodel.linden.2.balt
+	vegetation_model[]: vegetmodel.linden.1.balt
+	vegetation_model[]: vegetmodel.linden.2.balt
+	sprite_only: true
+		
+	width: 12
+	rand_rot: 360
+	min_scale: 0.85
+	max_scale: 1.0	
+
+}
+
+building_model : bld_model.dlc_balt_86 {
+	single_part: true
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple3.balt
+	vegetation_model[]: vegetmodel.maple4.balt
+	sprite_only: true
+
+	width: 12
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_150 {
+	single_part: true
+	vegetation_model[]: vegetmodel.foliage1a.balt
+	vegetation_model[]: vegetmodel.foliage1b.balt
+	vegetation_model[]: vegetmodel.foliage1a.balt
+	vegetation_model[]: vegetmodel.foliage1b.balt
+	sprite_only: true
+
+		
+	width: 5
+	rand_rot: 30
+	min_scale: 0.9
+	max_scale: 1.15	
+		
+}
+building_model : bld_model.dlc_balt_210 {
+	single_part: true
+	vegetation_model[]: vegetmodel.shrub_dense.small1
+	vegetation_model[]: vegetmodel.shrub_dense.small1
+	vegetation_model[]: vegetmodel.shrub_dense.big1
+	vegetation_model[]: vegetmodel.shrub_dense.big1
+	look_name: Default
+	
+	width: 4
+	rand_rot: 360
+	min_scale: 0.80
+	max_scale: 1.2	
+}
+
+	building_model : bld_model.dlc_balt_13 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_wooden_04_lv_balt.pmd"
+	look_name: default	
+}
+	building_model : bld_model.dlc_balt_20 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_brick_01_ru_balt.pmd"
+	look_name: default	
+}
+	building_model : bld_model.dlc_balt_27 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_concrete_01_lt_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_28 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_concrete_01_ru_balt.pmd"
+	look_name: default	
+}
+	building_model : bld_model.dlc_balt_52 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/railing/barrier/crash_barrier_rusty_01_lt_balt.pmd"
+	look_name: default
+}
+building_model : bld_model.dlc_balt_94 {
+	follow_curve_dir: true
+	railing_model: true
+	model_desc: "/model2/props/construction/balt_concrete_decal.pmd"
+}
+	building_model : bld_model.dlc_balt_128 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/plaza/pavement_3m_d_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_130 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/plaza/pavement_3m_a_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_155 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/building/street/decal_road_balt_01.pmd"
+	look_name: Default
+
+}
+
+	building_model : bld_model.dlc_balt_157 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/building/street/decal_road_balt_03.pmd"
+	look_name: Default
+
+}
+
+	building_model : bld_model.dlc_balt_158 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/building/street/decal_road_balt_04.pmd"
+	look_name: Default
+
+}
+	building_model : bld_model.dlc_balt_159 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/building/street/decal_road_balt_05.pmd"
+	look_name: Default
+
+}
+	building_model : bld_model.dlc_balt_179 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_wooden_02_middle_lv_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_202 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_wooden_05_middle_lv_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_219 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/barrier/water/bank_concrete_01_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_115 {
+	follow_curve_dir: true
+	railing_model: true
+	model_desc: "/model2/power_line/wooden_wire_01a_balt.pmd"
+
+}
+building_model : bld_model.dlc_balt_117 {
+	follow_curve_dir: true
+	railing_model: true
+	model_desc: "/model2/power_line/conc_wire_01_balt.pmd"	
+}
+
+building_model : bld_model.dlc_balt_64 {
+	single_part: true
+	vegetation_model[]: vegetmodel.birch.tall1
+	vegetation_model[]: vegetmodel.birch.tall1
+	vegetation_model[]: vegetmodel.birch.big_sc
+	vegetation_model[]: vegetmodel.birch.small_sc
+	sprite_only: false
+
+	width: 7
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+
+}
+
+
+
+building_model : bld_model.dlc_balt_65 {
+	single_part: true
+	vegetation_model[]:	vegetmodel.birch.very.tall2.far.balt 
+	vegetation_model[]:	vegetmodel.birch.very.tall1.far.balt 
+	vegetation_model[]: vegetmodel.birch.small.far 
+	vegetation_model[]: vegetmodel.birch.big.far
+	sprite_only: true
+
+	width: 10
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_87 {
+	single_part: true
+	vegetation_model[]: vegetmodel.cherry.1.balt
+	vegetation_model[]: vegetmodel.cherry.2.balt
+	vegetation_model[]: vegetmodel.cherry.3.balt
+	vegetation_model[]: vegetmodel.cherry.3.balt
+	sprite_only: false
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_88 {
+	single_part: true
+	vegetation_model[]: vegetmodel.cherry.1.balt
+	vegetation_model[]: vegetmodel.cherry.2.balt
+	vegetation_model[]: vegetmodel.cherry.3.balt
+	vegetation_model[]: vegetmodel.cherry.3.balt
+	sprite_only: true
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_91 {
+	model_desc: "/model2/water/balt_sandy_bank1_decal.pmd"
+	look_name: Default
+	follow_curve_dir: true
+}
+building_model : bld_model.dlc_balt_92 {
+	model_desc: "/model2/water/balt_rocky_bank1.pmd"
+	look_name: Default
+	follow_curve_dir: true
+}
+building_model : bld_model.dlc_balt_93 {
+	model_desc: "/model2/water/balt_rocky_bank1_decal.pmd"
+	look_name: Default
+	follow_curve_dir: true
+}
+
+building_model : bld_model.dlc_balt_101 {
+	model_desc: "/model2/water/balt_river_50m.pmd"
+	look_name: Default
+  single_part: true
+	follow_curve_dir: true
+	
+}
+building_model : bld_model.dlc_balt_102 {
+	model_desc: "/model2/water/balt_river_foam1.pmd"
+	look_name: Default
+	follow_curve_dir: true
+  railing_model: true
+  
+}
+building_model : bld_model.dlc_balt_108 {
+	single_part: true
+	vegetation_model[]: vegetmodel.hogweed.1.balt
+	vegetation_model[]: vegetmodel.hogweed.2.balt
+	vegetation_model[]: vegetmodel.hogweed.3.balt
+	vegetation_model[]: vegetmodel.hogweed.3.balt
+	sprite_only: true
+
+	width: 4
+  rand_rot: 20
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_109 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.silver1.balt
+	vegetation_model[]: vegetmodel.spruce.silver2.balt
+	vegetation_model[]: vegetmodel.spruce.silver1.balt
+	vegetation_model[]: vegetmodel.spruce.silver2.balt
+	sprite_only: false
+
+	width: 10
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_135 {
+	single_part: true
+	vegetation_model[]: vegetmodel.poplar.3_it
+	vegetation_model[]: vegetmodel.poplar.4_it
+	vegetation_model[]: vegetmodel.poplar.3_it
+	vegetation_model[]: vegetmodel.poplar.4_it
+	sprite_only: false
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.75
+	max_scale: 1.0
+}
+building_model : bld_model.dlc_balt_136 {
+	single_part: true
+	vegetation_model[]: vegetmodel.poplar.3_it
+	vegetation_model[]: vegetmodel.poplar.4_it
+	vegetation_model[]: vegetmodel.poplar.3_it
+	vegetation_model[]: vegetmodel.poplar.4_it
+	sprite_only: true
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.75
+	max_scale: 1.0
+}
+building_model : bld_model.dlc_balt_139 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.tall1
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+ 
+	width: 8
+	rand_rot: 180
+	min_scale: 0.85
+	max_scale: 1.0
+}
+building_model : bld_model.dlc_balt_140 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.mid_sc
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+	vegetation_model[]: vegetmodel.spruce_med3.balt
+	vegetation_model[]: vegetmodel.spruce.small_1_sc
+  
+	width: 8
+	rand_rot: 180
+	min_scale: 0.7
+	max_scale: 0.9
+}
+building_model : bld_model.dlc_balt_141 {
+	single_part: true
+	vegetation_model[]: vegetmodel.pine_tall1.balt
+	vegetation_model[]: vegetmodel.pine_tall2.balt
+	vegetation_model[]: vegetmodel.pine_middle1.balt
+	vegetation_model[]: vegetmodel.spruce.big2_sc
+  
+	width: 6
+	rand_rot: 180
+	min_scale: 0.8
+	max_scale: 1.0
+}
+building_model : bld_model.dlc_balt_142 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.tall1
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+	sprite_only: true
+	
+	width: 8
+	rand_rot: 180
+	min_scale: 0.85
+	max_scale: 1.0
+}
+
+building_model : bld_model.dlc_balt_144 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.tall1
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce.big
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+	sprite_only: true
+	
+	width: 8
+	rand_rot: 180
+	min_scale: 0.85
+	max_scale: 1.0 
+}
+building_model : bld_model.dlc_balt_146 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+	vegetation_model[]: vegetmodel.spruce.mid
+    vegetation_model[]: vegetmodel.spruce_med2.balt
+	vegetation_model[]: vegetmodel.spruce.mid
+
+		
+	width: 4
+	rand_rot: 360
+	min_scale: 0.65
+	max_scale: 0.85	
+		
+}
+
+building_model : bld_model.dlc_balt_152 {
+	model_desc: "/model2/water/balt_river_100m.pmd"
+	look_name: Default
+  single_part: true
+	follow_curve_dir: true
+		
+}
+building_model : bld_model.dlc_balt_203 {
+	model_desc: "/model2/vegetation/weed_line1_balt.pmd"
+	look_name: Default
+  single_part: true
+	follow_curve_dir: true
+}
+building_model : bld_model.dlc_balt_211 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/vegetation/tree_wall_birches1_balt.pmd"
+}
+building_model : bld_model.dlc_balt_214 {
+	single_part: true
+	vegetation_model[]: vegetmodel.spruce.mid_sc
+	vegetation_model[]: vegetmodel.spruce_med2.balt
+	vegetation_model[]: vegetmodel.spruce_med3.balt
+	vegetation_model[]: vegetmodel.spruce.small_1_sc
+  sprite_only: true
+  
+	width: 8
+	rand_rot: 180
+	min_scale: 0.7
+	max_scale: 0.9
+}
+building_model : bld_model.dlc_balt_220 {
+	single_part: true
+	vegetation_model[]: vegetmodel.shrub_dense.small1
+	vegetation_model[]: vegetmodel.shrub_dense.small1
+	vegetation_model[]: vegetmodel.shrub_dense.big1
+	vegetation_model[]: vegetmodel.shrub_dense.big1
+	look_name: Default
+  sprite_only: true
+	
+	width: 4
+	rand_rot: 360
+	min_scale: 0.80
+	max_scale: 1.2	
+}
+
+	building_model : bld_model.dlc_balt_9 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/fences/fence_wooden_09_ru_balt.pmd"
+	look_name: default
+	
+}
+building_model : bld_model.dlc_balt_176 {
+	follow_curve_dir: true
+	railing_model: true
+	model_desc: "/model2/power_line/power_wire_straight.pmd"	
+
+}
+building_model : bld_model.dlc_balt_221 {
+	single_part: true
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple.yellow2.balt
+	vegetation_model[]: vegetmodel.maple.yellow3.balt
+	vegetation_model[]: vegetmodel.maple4.balt
+	sprite_only: false
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+building_model : bld_model.dlc_balt_222 {
+	single_part: true
+	vegetation_model[]: vegetmodel.maple2.balt
+	vegetation_model[]: vegetmodel.maple.yellow2.balt
+	vegetation_model[]: vegetmodel.maple.yellow3.balt
+	vegetation_model[]: vegetmodel.maple4.balt
+	sprite_only: true
+
+	width: 12
+  rand_rot: 360
+  min_scale: 0.8
+	max_scale: 1.1
+}
+
+	building_model : bld_model.dlc_balt_43 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/railing/barrier/crash_barrier_concrete_bw_ru_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_53 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/railing/barrier/crash_barrier_rusty_01_ru_balt.pmd"
+	look_name: default
+}
+	building_model : bld_model.dlc_balt_129 {
+	railing_model: true
+	follow_curve_dir: true
+	model_desc: "/model2/plaza/pavement_3m_b_balt.pmd"
+	look_name: default
+}
+}
+

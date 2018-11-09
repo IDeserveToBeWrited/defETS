@@ -120,6 +120,14 @@ traffic_rule_data : traffic_rule.cross_end
 	additional_rules[]: traffic_rule.no_priority
 }
 
+traffic_rule_data : traffic_rule.limit_20
+{
+	name: "Speed limit 20"
+
+	rule: "speed_limit"
+	num_params[]: 20
+}
+
 traffic_rule_data : traffic_rule.limit_30
 {
 	name: "Speed limit 30"
@@ -242,6 +250,14 @@ traffic_rule_data : traffic_rule.no_buses
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "bus"
+}
+
+traffic_rule_data : traffic_rule.border_area
+{
+	name: "Border area (high traffic density)"
+
+	additional_rules[]: traffic_rule.s_car_h
+	additional_rules[]: traffic_rule.s_truck_h
 }
 
 traffic_rule_data : traffic_rule.city_xl_area
@@ -452,6 +468,7 @@ traffic_rule_data : traffic_rule.rail_train
 
 traffic_rule_data : traffic_rule.rail_tram
 {
+	name: "Allow trams only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
@@ -527,6 +544,38 @@ traffic_rule_data : traffic_rule.no_escort
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "escort_front"
 	str_params[]: "escort_back"
+}
+
+traffic_rule_data : traffic_rule.train_stop_v
+{
+	name: "Train stop very short"
+
+	rule: "stop"
+	num_params[]: 4.0
+}
+
+traffic_rule_data : traffic_rule.train_stop_s
+{
+	name: "Train stop short"
+
+	rule: "stop"
+	num_params[]: 10.0
+}
+
+traffic_rule_data : traffic_rule.train_stop_l
+{
+	name: "Train stop long"
+
+	rule: "stop"
+	num_params[]: 60.0
+}
+
+traffic_rule_data : traffic_rule.train_stop_f
+{
+	name: "Train stop forever"
+
+	rule: "stop"
+	num_params[]: 1000000.0
 }
 
 }

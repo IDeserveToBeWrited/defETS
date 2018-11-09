@@ -90,6 +90,8 @@ traffic_lane_data : traffic_lane.no_vehicles.dirt
 
 traffic_lane_data : traffic_lane.rail.train
 {
+	speed_class: rail_train
+
 	traffic_rules[]: traffic_rule.rail_train
 	traffic_rules[]: traffic_rule.s_train
 	traffic_rules[]: traffic_rule.limit_80
@@ -97,12 +99,16 @@ traffic_lane_data : traffic_lane.rail.train
 
 traffic_lane_data : traffic_lane.rail.train.high_speed
 {
+	speed_class: rail_train
+
 	traffic_rules[]: traffic_rule.rail_train
 	traffic_rules[]: traffic_rule.s_train_f
 }
 
 traffic_lane_data : traffic_lane.rail.tram
 {
+	speed_class: rail_tram
+
 	traffic_rules[]: traffic_rule.rail_tram
 	traffic_rules[]: traffic_rule.s_tram
 }
