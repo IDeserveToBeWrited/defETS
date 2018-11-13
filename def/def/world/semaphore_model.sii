@@ -1212,12 +1212,68 @@ tr_semaphore_model : tr_sem_mdl.border {
 
 }
 
+tr_semaphore_model : tr_sem_mdl.border_l {
+
+	name: "border barrier long"
+
+	model_desc: "/model2/barrier/animated/toll_gate_long_fr.pmd"
+	model_coll: "/model2/barrier/animated/toll_gate_long_fr.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: "/model2/barrier/animated/t_smal_dw_fr.pma"
+	state_collision[0]: true
+
+	# red
+	state_anim[1]: ""
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/model2/barrier/animated/t_smal_up_fr.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+}
+
 tr_semaphore_model : tr_sem_mdl.border_m {
 
 	name: "border barrier mirrored"
 
 	model_desc: "/model2/barrier/animated/toll_gate_mirrored_fr.pmd"
 	model_coll: "/model2/barrier/animated/toll_gate_mirrored_fr.pmc"
+	
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: "/model2/barrier/animated/t_s_m_dw_fr.pma"
+	state_collision[0]: true
+
+	# red
+	state_anim[1]: ""
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/model2/barrier/animated/t_s_m_up_fr.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.border_ml {
+
+	name: "border barrier mirrored long"
+
+	model_desc: "/model2/barrier/animated/toll_gate_long_mirrored_fr.pmd"
+	model_coll: "/model2/barrier/animated/toll_gate_long_mirrored_fr.pmc"
 	
 	state_anim: 4
 	state_collision: 4
