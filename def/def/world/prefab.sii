@@ -1836,6 +1836,8 @@ prefab_model : prefab.249 {
 	use_perlin: false
 	lod_desc:"/prefab/ikea/ikea_sc_lod1.pmd"
 	lod_dist: 42
+
+	allowed_trailer_length: 18
 }
 prefab_model : prefab.251 {
 	model_desc: "/prefab/meat_processing_co/meat_processing_co_sc.pmd"
@@ -2387,7 +2389,7 @@ prefab_model : prefab.338 {
 	category: "dlc_north"
 	use_perlin: false
 	slow_time: true
-	allowed_trailer_length: 20
+
 }
 
 prefab_model : prefab.339 {
@@ -2611,6 +2613,8 @@ prefab_model : prefab.dlc_fr_7 {
 	use_perlin: false
 	lod_desc:"/prefab2/ika/ika_01_fr_lod1.pmd"
 	lod_dist: 33
+
+	allowed_trailer_length: 18
 }
 
 prefab_model : prefab.dlc_fr_8 {
@@ -3219,10 +3223,11 @@ prefab_model : prefab.454 {
 	model_desc: "/prefab2/marina/marina_plaza_01_fr.pmd"
 	prefab_desc: "/prefab2/marina/marina_plaza_01_fr.ppd"
 	category: "dlc_fr"
-  use_perlin: false
+	use_perlin: false
 	lod_desc:"/prefab2/marina/marina_plaza_01_fr_lod1.pmd"
 	lod_dist: 135
-      
+
+	allowed_trailer_length: 20
 }
 
 prefab_model : prefab.dlc_fr_25 {
@@ -4665,7 +4670,9 @@ prefab_model : prefab.dlc_balt_64 {
   corner3[]: ba2
   corner3[]: ba98
   
+semaphore_profile[]:cr_1x1_v1
 semaphore_profile[]:cr_1x1_v2
+semaphore_profile[]:cr_1x1_v3
   
 }
 prefab_model : prefab.dlc_balt_67 {
@@ -4690,9 +4697,38 @@ prefab_model : prefab.dlc_balt_67 {
   corner2[]: ba99
 	corner2[]: ba6
 
+semaphore_profile[]:cr_1x1_v1
+semaphore_profile[]:cr_1x1_v2
+semaphore_profile[]:cr_1x1_v3
+}
+
+prefab_model : prefab.dlc_balt_280 {
+	model_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_t_narrow_tmpl.pmd"
+	prefab_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_t_narrow_tmpl_ru.ppd"
+	category: "dlc_balt"
+  
+  corner0[]: ba1
+	corner0[]: ba2
+  corner0[]: ba98
+	corner0[]: ba3
+
+  
+	corner1[]: ba1
+	corner1[]: ba2
+  corner1[]: ba98 
+	corner1[]: ba3
+ 
+   
+  corner2[]: ba4
+	corner2[]: ba5
+  corner2[]: ba99
+	corner2[]: ba6
+
 semaphore_profile[]:cr_1x1_v2
 	
 }
+
+
 prefab_model : prefab.dlc_balt_69 {
 	model_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_y_narrow_mirrored_tmpl.pmd"
 	prefab_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_y_narrow_mirrored_tmpl.ppd"
@@ -4715,7 +4751,9 @@ prefab_model : prefab.dlc_balt_69 {
   corner2[]: ba10
   corner2[]: ba414
 
+semaphore_profile[]:cr_1x1_v1
 semaphore_profile[]:cr_1x1_v2
+semaphore_profile[]:cr_1x1_v3
   
 }  
 prefab_model : prefab.dlc_balt_70 {
@@ -4735,9 +4773,36 @@ prefab_model : prefab.dlc_balt_70 {
   corner2[]: ba12   
   corner2[]: ba10
   
+  corner0[]: ba324 
+  corner1[]: ba325   
+  
+semaphore_profile[]:cr_1x1_v1
+semaphore_profile[]:cr_1x1_v2
+semaphore_profile[]:cr_1x1_v3
+
+}
+
+prefab_model : prefab.dlc_balt_281 {
+	model_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_y_narrow_tmpl.pmd"
+	prefab_desc: "/prefab2/cross_temp/balt/balt_r1_x_r1_y_narrow_tmpl_ru.ppd"
+	category: "dlc_balt"
+  
+  corner0[]: ba17
+  corner0[]: ba18   
+  corner0[]: ba16 
+
+  corner1[]: ba14
+  corner1[]: ba15                            
+  corner1[]: ba13
+
+  corner2[]: ba11
+  corner2[]: ba12   
+  corner2[]: ba10
+  
 semaphore_profile[]:cr_1x1_v2
 
 }
+
 prefab_model : prefab.dlc_balt_92 {
 	model_desc: "/prefab2/cross_temp/balt/balt_r2_plus_1_x_oneway_in.pmd"
 	prefab_desc: "/prefab2/cross_temp/balt/balt_r2_plus_1_x_oneway_in.ppd"
@@ -4811,6 +4876,7 @@ prefab_model : prefab.dlc_balt_153 {
 	category: "dlc_balt"
         lod_desc:"/prefab2/border_crossing/border_small_road_01_func_balt_lod1.pmd"
 	lod_dist: 200
+	use_semaphores: true
 } 
 prefab_model : prefab.dlc_balt_154 {
 	model_desc: "/prefab2/border_crossing/border_small_road_01_big_func_balt.pmd"
@@ -4818,7 +4884,8 @@ prefab_model : prefab.dlc_balt_154 {
 	category: "dlc_balt"
 	lod_desc:"/prefab2/border_crossing/border_small_road_01_big_func_balt_lod1.pmd"
 	lod_dist: 133
-        use_perlin: false  
+    use_perlin: true  
+	use_semaphores: true
 }
 prefab_model : prefab.dlc_balt_158 {
 	model_desc: "/prefab2/fork_temp/balt/balt_r1_oneway_gas_road.pmd"
@@ -4883,6 +4950,7 @@ prefab_model : prefab.dlc_balt_190 {
 	category: "dlc_balt"
         lod_desc:"/prefab2/border_crossing/border_small_road_01_truck_func_balt_lod1.pmd"
 	lod_dist: 116
+	use_semaphores: true
 } 
 prefab_model : prefab.dlc_balt_198 {
 	model_desc: "/prefab2/gas_station/balt_gas_parking_small_01_mirrored.pmd"
@@ -6417,12 +6485,14 @@ prefab_model : prefab.dlc_balt_87 {
   corner1[]: ba2
   corner1[]: ba98
   
-  corner2[]: ba3                                                                     
+  corner2[]: ba3                                            
   corner2[]: ba1
   corner2[]: ba2
   corner2[]: ba98
   
-semaphore_profile[]:cr_1x1_v2
+semaphore_profile[]:cr_t1x1t_v1
+semaphore_profile[]:cr_t1x1t_v2
+semaphore_profile[]:cr_t1x1t_v3
  
 }
 prefab_model : prefab.dlc_balt_152 {
@@ -6479,12 +6549,34 @@ prefab_model : prefab.dlc_no_15 {
 	slow_time: true
 
 }
-prefab_model : prefab.mod_ger_91 {
-	model_desc: "/prefab2/gas_station/gas_hw_small_01_ger.pmd"
-	prefab_desc: "/prefab2/gas_station/gas_hw_small_01_ger.ppd"
-    lod_desc:"/prefab2/gas_station/gas_hw_small_01_ger_lod1.pmd"
-	lod_dist: 200
-	category: "mod_germany/gas_station/"
+prefab_model : prefab.dlc_balt_82 {
+	model_desc: "/prefab2/fork_temp/balt/balt_road1_sw_end_tmpl.pmd"
+	prefab_desc: "/prefab2/fork_temp/balt/balt_road1_sw_end_tmpl.ppd"
+	category: "dlc_balt"
+  
+  corner0[]: ba25
+  corner0[]: ba68
+  corner0[]: ba26
+  corner0[]: ba27
+  corner0[]: ba151
+  corner0[]: ba152
+  corner0[]: ba154
+  corner0[]: ba156
+  corner0[]: ba157
+  corner0[]: ba159
+  corner0[]: ba326
+  
+  corner1[]: ba27
+  corner1[]: ba28
+  corner1[]: ba29
+  corner1[]: ba68
+  corner1[]: ba151
+  corner1[]: ba153
+  corner1[]: ba155
+  corner1[]: ba156
+  corner1[]: ba158
+  corner1[]: ba160
+  corner1[]: ba326
+  
 }
-
 }

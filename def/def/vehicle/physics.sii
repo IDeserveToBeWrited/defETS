@@ -2,28 +2,20 @@ SiiNunit
 {
 physics_data: .phdata
 {
-	# Several changes have been done in this file:
-	# - Some traffic parameters are moved to traffic_data.sii
-	# - Scaling of most of the parameters is hardcoded, but you can still change these parameters 
-	#	by means of the related parameters named ..._factor.
-	#	For example, setting damping_scaling_front_factor = 2 increases former
-	#	damping_scaling_front twice.
-	#	This change will enable us to maintain compatibility between different versions,
-	#	since our physics is being developed continuously and physics parameters are inevitably changing.
-	# - Some parameters have become obsolete due to physics changes - these are removed.
-	# - Some parameters are dangerous to change, since often you can achieve the same effect by more proper means,
-	#	and that's why they are disabled and removed from this file.
-	# Hopefully further physics improvements will make the physics robust enough to allow us to provide you even more
-	# 	physics parameters to set up or to experiment with.
-	# Don't forget, our ultimate goal is to provide you the best possible truck enthusiast's enjoyment!
+	# Several changes have been made in v1.33:
 
-
-	# Version of the structure used by the game to reduce some mod compatibility issues.
-	#
-	# Changes in individual versions:
-	# 1 - The thrust_characteristic_viscosity is now scaled by engine torque. When
-	#     loading older version, the old value is divided by 1875.
-	# 2 - several parameters made relative to maintain compatibility
+	# - Suspension springing linearity curves recalibrated and made slightly progressive to simulate air springs
+	# - Chassis suspension damping linearity curve recalibrated to simulate different compression and rebound behaviour
+	# - Chassis suspension travel and working point recalibrated to mimic actual real-life parameters	
+	# - Maximum steering lock increased slightly to calibrate trucks' turning circles
+	# - Braking curve made more linear to better simulate actual braking behaviour at lower speeds
+	# - Cabin suspension and damping reworked
+	# - Cabin mass increased to 650kg for better simulation accuracy
+	# - Wheel mass reduced for better accuracy
+	# - Chassis suspension damping adjusted for better accuracy
+	# - Trailer suspension reworked with resistant forces applied at the fifth wheel to replicate the effects of trailer chassis flex	
+	
+	# Further physics improvements are constantly in the works to improve the driving simulation in-game.
 
 	version: 2
 
@@ -43,7 +35,7 @@ physics_data: .phdata
 	steering_ratio_coef:	0.95
 
 	# Maximum allowed rotation of the front wheels (degrees)
-	max_visual_rotation:	35
+	max_visual_rotation:	38
 	
 	# Modification of base steering sensitivity depending on truck speed.
 	# Used only with relative steering (keyboard, joypad).
@@ -63,12 +55,12 @@ physics_data: .phdata
 
 	# brake strength
 	brake_torque_factor:		1.0
-	# how much stronger is braking at low speed
-	braking_curve_peak_rel:		6.0
+	# how much stronger braking is at low speeds
+	braking_curve_peak_rel:		1.5
 	# where approx. the braking curve bends
 	brake_characteristic_rpm:	250.0
 	
-	# front wheels are stronger by this factor
+	# front brakes are stronger by this factor
 	brake_balance:			1.1
 	
 	# maximum brake temperature
@@ -79,31 +71,32 @@ physics_data: .phdata
 	brake_friction_warming_rate:	4.0
 
 	# maximum cabin pitch forward angle
-	cabin_max_pitch_angle_front:		8.0
+	cabin_max_pitch_angle_front:		2.75
 	# maximum cabin pitch backward angle
-	cabin_max_pitch_angle_rear:		8.0
+	cabin_max_pitch_angle_rear:		2.5
 	# maximum cabin pitch roll angle
-	cabin_max_roll_angle:			8.0
+	cabin_max_roll_angle:			1.75
 
 	# cabin pitch springing strength
-	cabin_pitch_force_scaling_factor: 	1.0
+	cabin_pitch_force_scaling_factor: 	1.7
 	# cabin pitch damping strength
-	cabin_pitch_damping_factor: 		1.0
+	cabin_pitch_damping_factor: 		0.7
 	# cabin roll springing strength
-	cabin_roll_force_scaling_factor: 	1.0
+	cabin_roll_force_scaling_factor: 	0.6
 	# cabin roll damping strength
-	cabin_roll_damping_factor: 		1.0
+	cabin_roll_damping_factor: 		1.4
 
-	cabin_mass: 				300.0
-	wheel_mass: 				100.0
+	cabin_mass: 				650.0
+	wheel_mass: 				85.0
 
 	# wheel suspension damping strength
 	damping_scaling_front_factor: 		1.0
 	damping_scaling_rear_factor: 		1.0
-	damping_scaling_trailer_factor: 	1.0
+	damping_scaling_trailer_factor: 	0.4
 
+	# anti-roll/sway-bar stiffness (only applies to the front axle)
 	sway_bar_stiffness_factor:		1.0
-
+	
 	# intensity of engine braking (not motor brake)
 	thrust_characteristic_viscosity_factor:		1.0
 	# transmission resistance

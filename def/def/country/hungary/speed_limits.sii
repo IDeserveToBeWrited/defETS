@@ -61,4 +61,27 @@ country_speed_limit : .speed_limit.bus {
 	limit[]: 		80
 	urban_limit[]:  	80
 }
+
+country_speed_limit : .speed_limit.train {
+
+	vehicle_speed_class: train
+
+	lane_speed_class[]: 	rail_train
+	urban_limit[]:  	40
+}
+
+country_speed_limit : .speed_limit.tram {
+
+	vehicle_speed_class: tram
+
+	lane_speed_class[]: 	rail_tram
+	urban_limit[]:  	40
+	
+	lane_speed_class[]: 	divided_road  # combined rail+road
+	urban_limit[]:  	40
+	
+	lane_speed_class[]: 	local_road # combined rail+road
+	urban_limit[]:  	40
+}
+
 }
