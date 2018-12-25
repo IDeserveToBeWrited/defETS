@@ -238,6 +238,53 @@ vehicle_wheel_accessory: .crafter.fin.rwheel
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
 }
 
+# XXXXXXXXXXXXXXXXXXX HELL XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.crafter.hell
+{
+	accessories[]: .crafter.hell.chassis
+	accessories[]: .crafter.hell.fwheel
+	accessories[]: .crafter.hell.rwheel
+
+	max_speed: 100
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+	
+    spawn_condition[]: .traffic.crafter.hell.helsinki.condition.city
+
+color[]: (1, 1, 1) #white
+
+	vehicle_mass: 3500
+@include "drivers_generic_police.sui"	
+
+}
+
+traffic_spawn_condition: .traffic.crafter.hell.helsinki.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "helsinki"
+}
+
+vehicle_accessory: .crafter.hell.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/hell.sii"
+}
+
+vehicle_wheel_accessory: .crafter.hell.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.hell.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
 # XXXXXXXXXXXXXXXXXXX EST XXXXXXXXXXXXXXXXXXX
 
 traffic_vehicle : traffic.crafter.est

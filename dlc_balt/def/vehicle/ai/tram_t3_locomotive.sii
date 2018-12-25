@@ -1,0 +1,49 @@
+traffic_vehicle : traffic.t3_loco
+{
+	accessories[]: .t3_loco.chassis
+	accessories[]: .t3_loco.fwheel
+	accessories[]: .t3_loco.rwheel
+
+	max_speed: 50
+
+	sound_move[]: "/sound/ai/tram_engine.ogg"
+	sound_horn[]: "/sound/ai/tram_horn.ogg"
+
+	vehicle_mass: 100000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 20000
+
+	attachable_trailer[]: "train_car.t3_car"
+	trailer_count[]: 1
+
+	displacement_limit: 0.0
+    
+   
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+    
+    spawn_condition[]: .traffic.t3_loco.condition.city
+
+}
+vehicle_accessory: .t3_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_t3/chassis_locomotive.sii"
+}
+vehicle_wheel_accessory: .t3_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .t3_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.t3_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "riga"
+}

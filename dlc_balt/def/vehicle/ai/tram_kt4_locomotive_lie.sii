@@ -1,0 +1,49 @@
+traffic_vehicle : traffic.kt4_loco_lie
+{
+	accessories[]: .kt4_loco_lie.chassis
+	accessories[]: .kt4_loco_lie.fwheel
+	accessories[]: .kt4_loco_lie.rwheel
+
+	max_speed: 50
+
+	vehicle_mass: 100000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 20000
+
+	attachable_trailer[]: "train_car.kt4_car_lie"
+	trailer_count[]: 1
+
+	displacement_limit: 0.0
+    
+   
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+    
+	spawn_condition[]: .traffic.kt4_loco_lie.condition.city
+
+}
+
+vehicle_accessory: .kt4_loco_lie.chassis
+{
+	data_path: "/def/vehicle/ai/tram_kt4/chassis_locomotive_lie.sii"
+}
+vehicle_wheel_accessory: .kt4_loco_lie.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .kt4_loco_lie.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.kt4_loco_lie.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "liepaja"
+
+}
+

@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.fs_dv_12
+{
+	accessories[]: .fs_dv_12.chassis
+	accessories[]: .fs_dv_12.fwheel
+	accessories[]: .fs_dv_12.rwheel
+	accessories[]: .fs_dv_12.rwheel2
+	accessories[]: .fs_dv_12.rwheel3
+
+	max_speed: 140
+
+	sound_move[]: "/sound/ai/train_fast.ogg"
+	sound_horn[]: "/sound/ai/tram_horn.ogg"
+
+	vehicle_mass: 72000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 35000
+
+	attachable_trailer[]: "train_car.cargo.*"
+
+	displacement_limit: 0.0
+
+    	spawn_ratio: 0.0
+    
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+}
+
+vehicle_accessory: .fs_dv_12.chassis
+{
+	data_path: "/def/vehicle/ai/locomotive_dv_12/chassis.sii"
+}
+
+vehicle_wheel_accessory: .fs_dv_12.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_dv_12.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_dv_12.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_dv_12.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

@@ -1425,9 +1425,24 @@ road_look : road.balt10 {
 
 road_template_variant : .tmpl_var.road.balt10
 {
-	variant_names[]:	"no_lanes"
-	variant_names[]:	"broken_it"
-	variant_names[]:	"broken"
+    variant_names[]:    "no_lanes"
+    variant_names[]:    "broken_it"
+    variant_names[]:    "broken"
+    variant_names[]:    "brkendef"
+    variant_names[]:    "broken_balt"
+    variant_names[]:    "broken_est"
+    variant_names[]:    "city"
+    variant_names[]:    "lines_est"
+    variant_names[]:    "out_balt"
+    variant_names[]:    "out_only"
+    
+    # TODO: special behavior for warn lanes:
+	
+    variant_names[]:    "warn"
+    variant_names[]:    "warn_balt"
+    variant_names[]:    "warn_def"
+    variant_names[]:    "warnleft_fi"
+    variant_names[]:    "warnright_fi"
 
 	lanes_left[]:	traffic_lane.road.local
 	lanes_right[]:	traffic_lane.road.local
@@ -1454,7 +1469,7 @@ road_look : road.balt11 {
 	compatible_edges_right[]: ba_sw_3m_d
 	compatible_edges_right[]: ba_sh_asp_15
 	compatible_edges_right[]: ba_sh_dirt
-		compatible_edges_right[]: ba_dec
+	compatible_edges_right[]: ba_dec
 	
 	shoulder_space_left:		0.0
 	shoulder_space_right:		0.0
@@ -1509,9 +1524,9 @@ road_look : road.balt36 {
 	name: 				"balt road 1 exits tmpl"
 	template_right:		"/road_template/balt/balt_road_1_exits_tmpl.pmd"
 
-  lanes_left[]:		traffic_lane.road.local
-  lanes_left[]:		traffic_lane.road.local
-  lanes_right[]:		traffic_lane.road.local
+  lanes_left[]:			traffic_lane.road.local.no_overtake
+  lanes_left[]:			traffic_lane.road.local
+  lanes_right[]:		traffic_lane.road.local.no_overtake
   lanes_right[]:		traffic_lane.road.local
 
 
@@ -1577,7 +1592,8 @@ road_look : road.balt38 {
 road_look : road.ger1 {
 	name: 				"ger road 1 tmpl"
 	template_right:		"/road_template/ger/ger_road_1.pmd"
-
+	template_variants_right[]: .tmpl_var.road.ger1
+	
 	lanes_left[]:	traffic_lane.road.local.no_overtake
 	lanes_right[]:	traffic_lane.road.local.no_overtake
 
@@ -1595,6 +1611,22 @@ road_look : road.ger1 {
 	shoulder_space_left:		0.5
 	shoulder_space_right:		0.5	
 	
+}
+road_template_variant : .tmpl_var.road.ger1
+{
+	variant_names[]:    "broken_it"
+	variant_names[]:    "broken_de"
+    variant_names[]:    "broken"
+
+	variant_names[]:    "no_lanes"
+	variant_names[]:    "parking"
+	
+
+	variant_names[]:    "warn"
+	variant_names[]:    "warn_de"
+	
+	lanes_left[]:	traffic_lane.road.local
+	lanes_right[]:	traffic_lane.road.local
 }
 
 road_look : road.ger2 {

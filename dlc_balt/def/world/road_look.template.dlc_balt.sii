@@ -1,0 +1,808 @@
+SiiNunit
+
+
+{
+
+road_look : road.balt2 {
+	name: 			"balt hw 2 lanes one way playeronly tmpl"
+	template_right:		"/road_template/balt/balt_hw_2_lanes_one_way.pmd"
+
+
+
+	lanes_right[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]: ba_sh_na_15
+    compatible_edges_right[]: ba_sh_no_15
+    compatible_edges_right[]: ba_sh_wi_15
+	compatible_edges_right[]: ba_drain_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		3.5
+
+}
+
+road_look : road.balt3 {
+	name: 			"balt hw 2 lanes 2m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
+	template_left:			"/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
+
+
+
+	road_offset: 2
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+    compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+	compatible_edges_left[]: ba_curb_mid
+	compatible_edges_left[]: ba_sh_asp_15
+	
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+	compatible_edges_right[]: ba_curb_mid
+	compatible_edges_right[]: ba_sh_asp_15
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+
+
+}
+
+road_look : road.balt5 {
+	name: 			"balt hw 3 lanes 2m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_3_lanes_two_ways.pmd"
+	template_left:		"/road_template/balt/balt_hw_3_lanes_two_ways.pmd"
+
+
+
+	road_offset: 2
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+  compatible_edges_left[]: ba_sw_pete
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+  compatible_edges_right[]: ba_sw_pete
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+}
+
+road_look : road.balt7 {
+	name: 			"balt hw 3 lanes one way tmpl"
+	template_right:		"/road_template/balt/balt_hw_3_lanes_one_way.pmd"
+
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		3.5
+}
+
+road_look : road.balt8 {
+	name: 			"balt hw5 exit one lane tmpl"
+	template_right:		"/road_template/balt/balt_hw5_exit_one_lane.pmd"
+
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+    lanes_right[]:		traffic_lane.road.motorway
+    lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		3.5
+}
+
+
+road_look : road.balt9 {
+	name: 				"balt road1 hw 1m offset tmpl"
+	template_right:		"/road_template/balt/balt_exit_one_lane2.pmd"
+	template_left:		"/road_template/balt/balt_exit_one_lane2.pmd"
+
+
+	road_offset: 6.5
+
+	lanes_left[]:		traffic_lane.road.motorway.low_density
+	lanes_right[]:		traffic_lane.road.motorway.low_density
+
+	lane_offsets_left[]:	(-4.5, 0.0)
+	lane_offsets_right[]:	(-4.5, 0.0)
+
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_sh_asp_15
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_sh_asp_15
+	
+	shoulder_space_left:		2.5
+	shoulder_space_right:		2.5
+}
+
+road_look : road.balt13 {
+	name: 			"balt road 2 narrow tmpl"
+	template_right:		"/road_template/balt/balt_road_2.pmd"
+	template_left:		"/road_template/balt/balt_road_2.pmd"
+
+	road_offset: 1.0
+
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+
+	
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+
+	
+	
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.balt15 {
+	name: 			"balt hw 2 lanes 5m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
+	template_left:			"/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
+
+
+
+	road_offset: 5
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+
+}
+
+road_look : road.balt17 {
+	name: 			"balt tram 1"
+	template_right:		"/road_template/balt/balt_tram_1.pmd"
+	template_left:		"/road_template/balt/balt_tram_1.pmd"
+
+	road_offset: 2.25
+
+	lanes_left[]:					 traffic_lane.rail.tram
+	lanes_right[]:					traffic_lane.rail.tram
+
+	lane_offsets_left[]:	 (-2.75, 0.0)
+	lane_offsets_right[]:	 (-2.75, 0.0)
+
+	compatible_edges_left[]: ba_tram_sh
+	compatible_edges_right[]: ba_tram_sh
+	
+
+	
+}
+
+
+
+road_look : road.balt19 {
+	name: 			"balt sidewalk road tmpl"
+	template_right:		"/road_template/balt/balt_sidewalk_road.pmd"
+
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_cu_down
+	compatible_edges_right[]: ba_sh
+	
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_cu_down
+	compatible_edges_left[]: ba_sh
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+
+road_look : road.balt21 {
+	name: 			"balt hw 3 lanes 5m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_3_lanes_two_ways.pmd"
+	template_left:			"/road_template/balt/balt_hw_3_lanes_two_ways.pmd"
+
+	road_offset: 5
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+}
+
+road_look : road.balt22 {
+	name: 			"balt road 2 narrow one way tmpl"
+	template_right:		"/road_template/balt/balt_road_2_1.pmd"
+
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+
+	compatible_edges_left[]: ba_na_sh_15
+    compatible_edges_left[]: ba_no_sh_15
+    compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_sh_asp_15
+	
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_sh_asp_15
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+
+
+}
+road_look : road.balt23 {
+	name: 			"balt road 2 city narrow tmpl"
+	template_right:		"/road_template/balt/balt_road_2.pmd"
+	template_left:		"/road_template/balt/balt_road_2.pmd"
+
+	road_offset: 1.0
+
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+
+
+
+
+	
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_curb_mid
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_sh_asp_15
+	
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_curb_mid
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_sh_asp_15
+	
+	
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+
+
+}
+
+
+road_look : road.balt27 {
+	name: 			"balt hw 1 lanes 2m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_1_lanes_two_ways.pmd"
+	template_left:			"/road_template/balt/balt_hw_1_lanes_two_ways.pmd"
+
+
+
+	road_offset: 2
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+	
+}
+
+road_look : road.balt28 {
+	name: 			"balt hw 1 lanes 5m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_1_lanes_two_ways.pmd"
+	template_left:			"/road_template/balt/balt_hw_1_lanes_two_ways.pmd"
+
+
+
+	road_offset: 5
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+
+}
+
+road_look : road.balt29 {
+	name: 			"balt hw 4 lanes one way tmpl"
+	template_right:		"/road_template/balt/balt_hw_4_lanes_one_way.pmd"
+
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+
+  compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+  compatible_edges_left[]: ba_sw_pete
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+  compatible_edges_right[]: ba_sw_pete
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5	
+
+}
+
+
+road_look : road.balt30 {
+	name: 			"balt hw 4 lanes 2m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_4_lanes_two_way.pmd"
+	template_left:			"/road_template/balt/balt_hw_4_lanes_two_way.pmd"
+
+
+
+	road_offset: 2
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+  compatible_edges_left[]: ba_sw_pete
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+  compatible_edges_right[]: ba_sw_pete
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+
+}
+
+road_look : road.balt31 {
+	name: 			"balt hw 4 lanes 5m offset tmpl"
+	template_right:		"/road_template/balt/balt_hw_4_lanes_two_way.pmd"
+	template_left:			"/road_template/balt/balt_hw_4_lanes_two_way.pmd"
+
+
+
+	road_offset: 5
+
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_left[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+  lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+  compatible_edges_left[]: ba_na_sh_15
+  compatible_edges_left[]: ba_no_sh_15
+  compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_drain_15
+  compatible_edges_left[]: ba_sw_pete
+	compatible_edges_right[]: ba_na_sh_15
+  compatible_edges_right[]: ba_no_sh_15
+  compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_drain_15
+  compatible_edges_right[]: ba_sw_pete
+	
+	shoulder_space_left:		3.5
+	shoulder_space_right:		3.5
+
+}
+
+road_look : road.balt33 {
+	name: 				"balt road 2 plus 1 tmpl"
+	template_right:		"/road_template/balt/balt_road_2_plus_1.pmd"
+
+  lanes_left[]:		traffic_lane.road.local
+  lanes_left[]:		traffic_lane.road.local.no_overtake
+  lanes_right[]:	traffic_lane.road.local.no_overtake
+ 
+                               
+
+
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_na_sh_15
+  compatible_edges_right[]: ba_no_sh_15
+  compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sh_asp_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+}
+
+road_look : road.balt34 {
+	name: 				"balt road 3 tmpl"
+	template_right:		"/road_template/balt/balt_road_3.pmd"
+
+  lanes_right[]:		traffic_lane.road.expressway
+  lanes_right[]:		traffic_lane.road.expressway
+  lanes_right[]:		traffic_lane.road.expressway
+  
+
+
+
+
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_na_sh_15
+  compatible_edges_right[]: ba_no_sh_15
+  compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sh_asp_15
+
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0	
+}
+
+road_look : road.balt35 {
+	name: 				"balt hw 2 lanes one way tmpl"
+	template_right:		"/road_template/balt/balt_hw_2_lanes_one_way.pmd"
+
+
+
+	lanes_right[]:		traffic_lane.road.motorway
+	lanes_right[]:		traffic_lane.road.motorway
+
+	compatible_edges_right[]:	ba_na_sh_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		3.5	
+
+}
+
+road_look : road.balt39 {
+	name: 				"balt road dirt center"
+	template_right:		"/road_template/balt/balt_road_1_minim_dirt_center.pmd"
+	template_left:		"/road_template/balt/balt_road_1_minim_dirt_center.pmd"
+
+
+	road_offset: 1.5
+	
+
+ 	lanes_left[]:		traffic_lane.no_vehicles
+	lanes_right[]:		traffic_lane.no_vehicles
+	
+	compatible_edges_right[]: ba_sh_dt_ce
+	compatible_edges_right[]: ba_sh_dirt
+	compatible_edges_left[]: ba_sh_dt_ce
+	compatible_edges_left[]: ba_sh_dirt
+	
+    lane_offsets_left[]:	(-2.5, 0.0)
+	lane_offsets_right[]:	(-2.5, 0.0)
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+	
+
+	
+}
+
+road_look : road.balt40 {
+	name: 				"balt road 1 tram"
+	template_right:		"/road_template/balt/balt_road_1_tram.pmd"
+
+	lanes_left[]:	traffic_lane.road.local.no_overtake.tram
+	lanes_right[]:	traffic_lane.road.local.no_overtake.tram
+	
+	template_variants_right[]: .tmpl_var.road.balt40
+
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_na_sh_15
+    compatible_edges_right[]: ba_no_sh_15
+    compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sh_asp_15
+	compatible_edges_right[]: ba_dec
+	
+
+
+	shoulder_space_left:		0.5
+	shoulder_space_right:		0.5	
+	
+	overlay_schemes[]: "stones : 1.0 : _stones|1"
+	overlay_schemes[]: "panels : 1.0 : _panels|1"
+
+}
+
+road_template_variant : .tmpl_var.road.balt40
+{
+    variant_names[]:    "brkendef"
+	variant_names[]:    "broken"
+	variant_names[]:    "broken_balt"
+	variant_names[]:    "city"
+	variant_names[]:    "no_lanes"
+	variant_names[]:    "out_balt"
+	variant_names[]:    "out_only"
+	variant_names[]:    "warn"
+	variant_names[]:    "warn_balt"
+	variant_names[]:    "warn_def"
+	variant_names[]:    "warnleft_fi"
+	variant_names[]:    "warnright_fi"
+    
+
+	lanes_left[]:	traffic_lane.road.local.tram
+	lanes_right[]:	traffic_lane.road.local.tram
+}
+
+
+road_look : road.tram41 {
+	name: 				"balt road 2 tram"
+
+	template_right:		"/road_template/balt/balt_road_2.pmd"
+	template_left:		"/road_template/balt/balt_road_2.pmd"
+
+	road_offset: 3.25
+
+	lanes_right[]:		traffic_lane.rail.tram
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+
+	lanes_left[]:		traffic_lane.rail.tram
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+
+	lane_offsets_left[]:	(-3.75, 0.0)
+	lane_offsets_left[]:	(-4.5, 0.0)
+	lane_offsets_left[]:	(-4.5, 0.0)
+	
+	
+	lane_offsets_right[]:	(-3.75, 0.0)
+	lane_offsets_right[]:	(-4.5, 0.0)
+	lane_offsets_right[]:	(-4.5, 0.0)
+
+
+	
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	
+	compatible_edges_right[]: ba_track_sh
+	compatible_edges_right[]: ba_cbble
+	compatible_edges_right[]: ba_asph
+	compatible_edges_right[]: ba_gravel
+	compatible_edges_right[]: ba_sh_asp_15
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	
+	compatible_edges_left[]: ba_track_sh
+	compatible_edges_left[]: ba_cbble
+	compatible_edges_left[]: ba_asph
+	compatible_edges_left[]: ba_gravel
+	compatible_edges_left[]: ba_sh_asp_15
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+
+
+
+}
+
+road_look : road.tram42 {
+	name: 			"balt tram 1 one rail"
+	template_right:		"/road_template/balt/balt_tram_1.pmd"
+
+
+
+	lanes_right[]:	traffic_lane.rail.tram
+	lane_offsets_right[]:	 (1.75, 0.0)	
+
+
+	compatible_edges_left[]: ba_tram_sh
+	compatible_edges_right[]: ba_tram_sh
+}
+
+
+
+road_look : road.tram43 {
+	name: 			"balt road 2 city narrow tram offset tmpl"
+	template_right:		"/road_template/balt/balt_road_2.pmd"
+	template_left:		"/road_template/balt/balt_road_2.pmd"
+
+	road_offset: 3.25
+
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_right[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+	lanes_left[]:		traffic_lane.road.expressway
+
+
+
+
+	
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_curb_mid
+	
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_sh_asp_15
+	
+
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_curb_mid
+	
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_sh_asp_15
+	
+	
+	
+	shoulder_space_left:		0.0
+	shoulder_space_right:		0.0
+
+
+}
+
+
+
+}																																																								

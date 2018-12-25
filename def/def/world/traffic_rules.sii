@@ -252,6 +252,17 @@ traffic_rule_data : traffic_rule.no_buses
 	str_params[]: "bus"
 }
 
+traffic_rule_data : traffic_rule.buses_only
+{
+	name: "Allow buses only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
+	str_params[]: "bus"
+}
+
 traffic_rule_data : traffic_rule.border_area
 {
 	name: "Border area (high traffic density)"

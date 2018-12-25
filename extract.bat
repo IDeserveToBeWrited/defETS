@@ -12,9 +12,27 @@ SET ZIP="C:\Program Files\7-Zip\7z.exe"
 
 :: Extract archives
 ECHO Extracting def archive
+%EXTRACTOR% def.scs %LOCATION%\def >NUL
+
+
+
+:: dlc_balt
+ECHO Extracting dlc_balt archive
+%EXTRACTOR% dlc_balt.scs %LOCATION%\dlc_balt >NUL
+
+RMDIR "%LOCATION%\dlc_balt\automat" /s /q
+RMDIR "%LOCATION%\dlc_balt\map" /s /q
+RMDIR "%LOCATION%\dlc_balt\material" /s /q
+RMDIR "%LOCATION%\dlc_balt\model2" /s /q
+RMDIR "%LOCATION%\dlc_balt\prefab2" /s /q
+RMDIR "%LOCATION%\dlc_balt\road_template" /s /q
+RMDIR "%LOCATION%\dlc_balt\unit" /s /q
+RMDIR "%LOCATION%\dlc_balt\vehicle" /s /q
+DEL %LOCATION%\dlc_balt\dlc_balt.manifest.sii
+
+
 
 :: dlc_christmas
-%EXTRACTOR% def.scs %LOCATION%\def >NUL
 ECHO Extracting dlc_christmas archive
 %EXTRACTOR% dlc_christmas.scs %LOCATION%\dlc_christmas >NUL
 
@@ -56,6 +74,16 @@ RMDIR "%LOCATION%\dlc_east\map" /s /q
 RMDIR "%LOCATION%\dlc_east\model" /s /q
 RMDIR "%LOCATION%\dlc_east\material" /s /q
 DEL %LOCATION%\dlc_east\dlc_east.manifest.sii
+
+
+
+:: dlc_fantasy
+ECHO Extracting dlc_fantasy archive
+%EXTRACTOR% dlc_fantasy.scs %LOCATION%\dlc_fantasy >NUL
+
+RMDIR "%LOCATION%\dlc_fantasy\material" /s /q
+RMDIR "%LOCATION%\dlc_fantasy\vehicle" /s /q
+DEL %LOCATION%\dlc_fantasy\dlc_fantasy.manifest.sii
 
 
 
@@ -200,6 +228,27 @@ DEL %LOCATION%\dlc_phys_flags\dlc_phys_flags.manifest.sii
 
 
 
+:: dlc_pirates
+ECHO Extracting dlc_pirates archive
+%EXTRACTOR% dlc_pirates.scs %LOCATION%\dlc_pirates >NUL
+
+RMDIR "%LOCATION%\dlc_pirates\automat" /s /q
+RMDIR "%LOCATION%\dlc_pirates\material" /s /q
+RMDIR "%LOCATION%\dlc_pirates\vehicle" /s /q
+DEL %LOCATION%\dlc_pirates\dlc_pirates.manifest.sii
+
+
+
+:: dlc_prehistoric
+ECHO Extracting dlc_prehistoric archive
+%EXTRACTOR% dlc_prehistoric.scs %LOCATION%\dlc_prehistoric >NUL
+
+RMDIR "%LOCATION%\dlc_prehistoric\material" /s /q
+RMDIR "%LOCATION%\dlc_prehistoric\vehicle" /s /q
+DEL %LOCATION%\dlc_prehistoric\dlc_prehistoric.manifest.sii
+
+
+
 :: dlc_raven
 ECHO Extracting dlc_raven archive
 %EXTRACTOR% dlc_raven.scs %LOCATION%\dlc_raven >NUL
@@ -270,10 +319,30 @@ DEL %LOCATION%\dlc_toys\dlc_toys.manifest.sii
 :: dlc_trailers
 ECHO Extracting dlc_trailers archive
 %EXTRACTOR% dlc_trailers.scs %LOCATION%\dlc_trailers >NUL
+
 RMDIR "%LOCATION%\dlc_trailers\automat" /s /q
 RMDIR "%LOCATION%\dlc_trailers\material" /s /q
 RMDIR "%LOCATION%\dlc_trailers\vehicle" /s /q
 DEL %LOCATION%\dlc_trailers\dlc_trailers.manifest.sii
+
+
+
+:: dlc_vikings
+ECHO Extracting dlc_vikings archive
+%EXTRACTOR% dlc_vikings.scs %LOCATION%\dlc_vikings >NUL
+RMDIR "%LOCATION%\dlc_vikings\material" /s /q
+RMDIR "%LOCATION%\dlc_vikings\vehicle" /s /q
+DEL %LOCATION%\dlc_vikings\dlc_vikings.manifest.sii
+
+
+
+:: dlc_winter
+ECHO Extracting dlc_winter archive
+%EXTRACTOR% dlc_winter.scs %LOCATION%\dlc_winter >NUL
+RMDIR "%LOCATION%\dlc_winter\automat" /s /q
+RMDIR "%LOCATION%\dlc_winter\material" /s /q
+RMDIR "%LOCATION%\dlc_winter\vehicle" /s /q
+DEL %LOCATION%\dlc_winter\dlc_winter.manifest.sii
 
 ECHO.
 ECHO.

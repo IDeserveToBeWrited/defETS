@@ -1,0 +1,51 @@
+## HELSINKI
+
+traffic_vehicle : traffic.hkl_loco
+{
+	accessories[]: .hkl_loco.chassis
+	accessories[]: .hkl_loco.fwheel
+	accessories[]: .hkl_loco.rwheel
+
+	max_speed: 80
+
+
+	sound_move[]: "/sound/ai/tram_engine.ogg"
+	sound_horn[]: "/sound/ai/tram_horn.ogg"
+
+
+	vehicle_mass: 60000
+	gearbox[]: (0, 1)
+	gearbox[]: (10, 0.9)
+	gear_ratio: 10
+	engine_torque: 5000
+
+	attachable_trailer[]: "train_car.hkl_car1"
+	trailer_count[]: 2
+
+	displacement_limit: 0.0
+   
+	lod_dist[]: 70
+	lod_dist[]: 130
+    
+    spawn_condition[]: .traffic.hkl_loco.condition.city
+
+
+}
+vehicle_accessory: .hkl_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_locomotive.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.hkl_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "helsinki"
+}

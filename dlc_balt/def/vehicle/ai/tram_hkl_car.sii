@@ -1,0 +1,61 @@
+###########################
+##
+##  HELSINKI CARS
+##
+###########################
+
+traffic_trailer : train_car.hkl_car1
+{
+	accessories[]: .hkl_car1.tchassis
+	accessories[]: .hkl_car1.trwheel0
+	accessories[]: .hkl_car1.trwheel1
+
+	
+	displacement_limit: 0.0
+    
+    attachable_trailer[]: "train_car.hkl_car2"
+
+
+}
+vehicle_accessory: .hkl_car1.tchassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_car1.sii"
+}
+vehicle_wheel_accessory: .hkl_car1.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_car1.trwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
+
+
+traffic_trailer : train_car.hkl_car2
+{
+	accessories[]: .hkl_car2.tchassis
+	accessories[]: .hkl_car2.trwheel0
+	accessories[]: .hkl_car2.trwheel1
+
+	displacement_limit: 0.0
+
+
+}
+vehicle_accessory: .hkl_car2.tchassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_car2.sii"
+}
+vehicle_wheel_accessory: .hkl_car2.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_car2.trwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

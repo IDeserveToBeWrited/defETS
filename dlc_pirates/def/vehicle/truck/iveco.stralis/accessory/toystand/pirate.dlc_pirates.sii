@@ -1,0 +1,31 @@
+SiiNunit
+{
+accessory_addon_int_data : pirate.iveco.stralis.toystand
+{
+	name: "Pirate Figure"
+	price: 165
+	unlock: 0
+	icon: "pirate.dlc_pirates"
+   
+	interior_model:	"/vehicle/truck/upgrade/interior_decors/toystand/pirate_base.dlc_pirates.pmd"
+	
+	data[]: .pirate.phys_data
+}
+
+physics_toy_data : .pirate.phys_data
+{
+
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/pirate_head.dlc_pirates.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/pirate_head.dlc_pirates.pmc"
+  
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.4			# toy mass
+	locator_hook_offset:	(0.0f, 0.13f, 0.000f)	# offset of connection point on hook against toy locator
+  
+	# definitions applied only to toys with joint
+	angular_stiffness:	(300.0, 300.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping:	(5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude:	(25.0, 25.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}
+
