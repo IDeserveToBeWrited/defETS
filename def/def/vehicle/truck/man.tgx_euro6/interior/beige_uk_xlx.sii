@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: bei_xlx_uk.man.tgx_euro6.interior
+{
+	name: "@@exclusive@@ UK"
+	price: 31080
+	unlock: 12
+	icon: "interior/man_tgx_euro6/beige_uk"
+
+	model: "/vehicle/truck/man_tgx_euro6/interior/uk/cab_xlx.pmd"
+	collision: "/vehicle/truck/man_tgx_euro6/interior/uk/cab_xlx.pmc"
+	animated_model: "/vehicle/truck/man_tgx_euro6/interior/uk/anim.pmd"
+	active_mirrors_part: a_s_mirrors
+	passive_mirrors_part: p_s_mirrors
+	look: beige
+	variant: default
+
+@include "animations_uk.sui"
+
+	gps_path: "/ui/gps.sii"
+	dashboard_path: "/ui/dashboard/man_tgx_euro6.sii"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .man.tgx_euro6.pane.front
+	glass_panes[]: .man.tgx_euro6.pane.close
+	glass_panes[]: .man.tgx_euro6.pane.far
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/man_tgx_euro6/cab_xlx_beige.pmd"
+	ext_variant: uk
+	ext_look: Default
+
+	suitable_for[]: "xlx_cab.man.tgx_euro6.cabin"
+	defaults[]: "/def/vehicle/truck/man.tgx_euro6/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat_uk.sui"
+}
+@include "glass.sui"
+}
