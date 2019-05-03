@@ -9,7 +9,7 @@ traffic_vehicle : traffic.transport_t6
 
 	lod_dist[]: 70
 	lod_dist[]: 110
-	allow_parked: true
+	allow_parked: false
 	vehicle_mass: 2000
 	spawn_ratio: 0.5
 	
@@ -55,11 +55,11 @@ traffic_vehicle : traffic.transport_t6.hook
 	lod_dist[]: 110
 	allow_parked: false
 	vehicle_mass: 2000
-	
-	attachable_trailer[]: "trailer.ai_car*"
-	trailer_count[]: 1
+
+	trailer_chains[]: "trailer.ai_car.ontour"
+
 	spawn_ratio: 0.05
-	
+
 	color[]: (1, 1, 1) #white
 	#color[]: (0.5906, 0.4507, 0.0437) #yellow
 	color[]: (0.0886, 0.0908, 0.0953) #silver
@@ -104,9 +104,9 @@ traffic_vehicle : traffic.transport_t6.hook_ev
 	lod_dist[]: 110
 	allow_parked: false
 	vehicle_mass: 2000
-	
-	attachable_trailer[]: "trailer.a1_l_t*"
-	trailer_count[]: 1
+
+	trailer_chains[]: "trailer.a1_l_t"
+
 	spawn_ratio: 0.1
 
 	color[]: (1, 1, 1) #white

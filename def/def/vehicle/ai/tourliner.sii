@@ -6,11 +6,11 @@ traffic_vehicle : traffic.tourliner
 	
 	allow_parked: false
 	
-	max_speed: 100 
+	max_speed: 110 
 
 	lod_dist[]: 60
 	lod_dist[]: 110
-
+	
 	spawn_ratio: 0.0
 
 	color[]: (0.0103, 0.0171, 0.0835) # blue
@@ -20,6 +20,12 @@ traffic_vehicle : traffic.tourliner
 	color[]: (0.8713, 0.8631, 0.8227) #white
 	color[]: (0.8713, 0.8631, 0.8227) #white
 	color[]: (0.8713, 0.8631, 0.8227) #white
+	
+	sound_move[]: "/sound/ai/ai1.ogg"
+	sound_horn[]: "/sound/ai/aihorn1.ogg"
+	
+	variant[]: traffic.tourliner_p
+	
 
 	vehicle_mass: 12000	
 @include "drivers_generic.sui"	
@@ -37,6 +43,53 @@ vehicle_wheel_accessory: .tourliner.fwheel
 }
 
 vehicle_wheel_accessory: .tourliner.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_vehicle : traffic.tourliner_p
+{
+	accessories[]: .tourliner_p.chassis
+	accessories[]: .tourliner_p.fwheel
+	accessories[]: .tourliner_p.rwheel
+	
+	allow_parked: false
+	
+	max_speed: 110 
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	color[]: (0.0103, 0.0171, 0.0835) # blue
+	color[]: (0.1144, 0.1046, 0.0843) #light brown
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	
+	sound_move[]: "/sound/ai/ai1.ogg"
+	sound_horn[]: "/sound/ai/aihorn1.ogg"
+	
+	spawn_ratio: 0.0
+
+	vehicle_mass: 16000	
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .tourliner_p.chassis
+{
+	data_path: "/def/vehicle/ai/tourliner/chassis_p.sii"
+}
+
+vehicle_wheel_accessory: .tourliner_p.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tourliner_p.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/r_wheel/steel.sii"

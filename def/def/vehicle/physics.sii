@@ -15,6 +15,15 @@ physics_data: .phdata
 	# - Chassis suspension damping adjusted for better accuracy
 	# - Trailer suspension reworked with resistant forces applied at the fifth wheel to replicate the effects of trailer chassis flex	
 	
+	# v1.35 Changelog:
+	
+	# - 4-point truck cab suspension
+	# - Increased cab mass to 700kg (~the average mass of different cabs with different heights)
+	# - Overhaul of trailer/truck weight distribution algorithm
+	# - Better/more realistic weight distribution for tandem axles to improve traction
+	# - Realignment of tyre collisions with their models to ensure that trucks/trailers roll more accurately
+	# - Several bug fixes
+	
 	# Further physics improvements are constantly in the works to improve the driving simulation in-game.
 
 	version: 2
@@ -70,29 +79,22 @@ physics_data: .phdata
 	# how much brakes warm up
 	brake_friction_warming_rate:	4.0
 
-	# maximum cabin pitch forward angle
-	cabin_max_pitch_angle_front:		2.75
-	# maximum cabin pitch backward angle
-	cabin_max_pitch_angle_rear:		2.5
-	# maximum cabin pitch roll angle
-	cabin_max_roll_angle:			1.75
+	cabin_max_pitch_angle_front:		2.25
+	cabin_max_pitch_angle_rear:		2.25
+	cabin_max_roll_angle:			2.25
 
-	# cabin pitch springing strength
-	cabin_pitch_force_scaling_factor: 	1.7
-	# cabin pitch damping strength
-	cabin_pitch_damping_factor: 		0.7
-	# cabin roll springing strength
-	cabin_roll_force_scaling_factor: 	0.6
-	# cabin roll damping strength
-	cabin_roll_damping_factor: 		1.4
+	cabin_suspension_travel: 		0.05
+	cabin_suspension_damping_factor: 	1.0
+	cabin_sway_bar_factor: 			1.0
+	cabin_cog_height_offset:		0.5
 
-	cabin_mass: 				650.0
+	cabin_mass: 				700.0
 	wheel_mass: 				85.0
 
 	# wheel suspension damping strength
 	damping_scaling_front_factor: 		1.0
-	damping_scaling_rear_factor: 		1.0
-	damping_scaling_trailer_factor: 	0.4
+	damping_scaling_rear_factor: 		0.8
+	damping_scaling_trailer_factor: 	0.5
 
 	# anti-roll/sway-bar stiffness (only applies to the front axle)
 	sway_bar_stiffness_factor:		1.0

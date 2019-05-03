@@ -1,0 +1,40 @@
+traffic_vehicle : traffic.fox_tt_event
+{
+	accessories[]: .fox_tt_event.chassis
+	accessories[]: .fox_tt_event.fwheel
+	accessories[]: .fox_tt_event.rwheel
+
+	max_speed: 80
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+
+	allow_parked: false
+
+	engine_torque: 2000
+
+	vehicle_mass: 20000
+
+	color[]: (1.0, 0.653, 0.0) # yellow
+	color[]: (0.9049557515, 0.2428935112, 0.01165475188) # orange
+	color[]: (0.339, 0.3402, 0.371) # grey
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .fox_tt_event.chassis
+{
+	data_path: "/def/vehicle/ai/fox/chassis_towtruck_event.sii"
+}
+
+vehicle_wheel_accessory: .fox_tt_event.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/fox_front.sii"
+}
+
+vehicle_wheel_accessory: .fox_tt_event.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/fox_rear.sii"
+}

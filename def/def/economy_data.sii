@@ -49,6 +49,21 @@ economy_data : economy.data.storage
 	cargo_validity_min: 180		# 3 hours
 	cargo_validity_max: 1800	# 30 hours
 
+	# assistance service
+
+	tow_price_base: 150
+	tow_price_factor: 0.4	# cost per meter (as crow flies)
+	tow_time_base: 1800	# 30 min
+	tow_time_factor: 3	# time per meter (as crow flies)
+	tow_fuel_ratio: 0.0	# emergecy refuel upon tow (tank %)
+
+	# emergency refuel
+
+	refuel_fuel: 50
+	refuel_price_base: 150
+	refuel_price_factor: 3	# 3x regular fuel cost
+	refuel_time_base: 1800	# 30 min
+
 #
 # AI driver related configuration
 #
@@ -197,6 +212,13 @@ economy_data : economy.data.storage
 	reward_damage_level[]:	40.0
 	reward_damage_level[]:	100.0
 
+	reward_color[]: (1.00, 0.78, 0.05)
+	reward_color[]: (0.29, 0.51, 0.89)
+	reward_color[]: (0.57, 1.00, 0.45)
+	reward_color[]: (0.34, 0.29, 0.92)
+	reward_color[]: (1.00, 0.25, 0.20)
+	reward_color[]: (1.00, 0.00, 0.00)
+	reward_color[]: (1.00, 0.00, 0.00)
 
 #
 #	currency display options
