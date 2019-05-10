@@ -198,6 +198,53 @@ vehicle_wheel_accessory: .crafter.lit.rwheel
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
 }
 
+# XXXXXXXXXXXXXXXXXXX viln XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.crafter.viln
+{
+	accessories[]: .crafter.viln.chassis
+	accessories[]: .crafter.viln.fwheel
+	accessories[]: .crafter.viln.rwheel
+
+	max_speed: 100
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+ spawn_condition[]: .traffic.crafter.viln.vilnius.condition.city
+ 
+	
+
+color[]: (1, 1, 1) #white
+
+	vehicle_mass: 3500
+@include "drivers_generic_police.sui"	
+
+}
+traffic_spawn_condition: .traffic.crafter.viln.vilnius.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "vilnius"
+}
+
+vehicle_accessory: .crafter.viln.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/viln.sii"
+}
+
+vehicle_wheel_accessory: .crafter.viln.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.viln.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
 # XXXXXXXXXXXXXXXXXXX FIN XXXXXXXXXXXXXXXXXXX
 
 traffic_vehicle : traffic.crafter.fin
@@ -320,6 +367,53 @@ vehicle_wheel_accessory: .crafter.est.fwheel
 }
 
 vehicle_wheel_accessory: .crafter.est.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXX tall XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.crafter.tall
+{
+	accessories[]: .crafter.tall.chassis
+	accessories[]: .crafter.tall.fwheel
+	accessories[]: .crafter.tall.rwheel
+
+	max_speed: 100
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+spawn_condition[]: .traffic.crafter.tall.tallinn.condition.city	
+	
+	
+
+color[]: (1, 1, 1) #white
+
+	vehicle_mass: 3500
+@include "drivers_generic_police.sui"
+
+}
+traffic_spawn_condition: .traffic.crafter.tall.tallinn.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "tallinn"
+}
+
+vehicle_accessory: .crafter.tall.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/tall.sii"
+}
+
+vehicle_wheel_accessory: .crafter.tall.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.tall.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"

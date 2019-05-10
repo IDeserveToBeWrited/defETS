@@ -1009,7 +1009,7 @@ model_def : model.dlc_balt_106 {
 	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/village_close/village_fi/village_close_03_fi_balt_lod2.pmd"
 
-	color_variant[]:"white | w_a: 255,255,255 | w_b: 124,145,124 | c_a: 66,86,79 | c_b 70,89,71"
+	color_variant[]:"white | w_a: 255,255,255 | w_b: 124,145,124 | c_a: 66,86,79 | c_b: 70,89,71"
 	color_variant[]:"blue | w_a: 41,52,64 | w_b: 255,255,255 | c_a: 71,98,128"
 	color_variant[]:"red | w_a: 86,36,36 | w_b: 255,255,255 | c_a: 125,125,125"
 
@@ -1519,10 +1519,7 @@ model_def : model.dlc_balt_230 {
 model_def : model.dlc_balt_231 {
 	model_desc: "/model2/landmark/windmill_old_restaurant_estonia_balt.pmd"
 	category: "dlc_balt"	
-}
-model_def : model.dlc_balt_233 {
- 	model_desc: "/model2/props/street/street_track_decal_exit.pmd"
-	category: "dlc_balt"	
+	
 }
 model_def : model.dlc_balt_235 {
  	model_desc: "/model2/props/road/patch_decals_groups.pmd"
@@ -1664,9 +1661,17 @@ model_def : model.dlc_balt_261 {
 
 model_def : model.dlc_balt_262{
  	model_desc: "/model2/gates/gate_village_02_lv_balt.pmd"
-	category: "dlc_balt"	
-	
+	category: "dlc_balt"
+
+	color_variant[]:"Yellow | cvar_vis: 160,160,80"
+	color_variant[]:"Red | cvar_vis: 160,40,40"
+	color_variant[]:"Green | cvar_vis: 82,160,82"
+	color_variant[]:"Blue | cvar_vis: 20,35,90"
+	color_variant[]:"White/Light | cvar_vis: 255,255,255"
+	color_variant[]:"Black | cvar_vis: 10,10,10"
+	color_variant[]:"Gray | cvar_vis: 130,130,130"	
 }
+
 model_def : model.dlc_balt_266 {
  	model_desc: "/model2/building/village_far/village_far_lt/village_far_04_lt_balt.pmd"
 	category: "dlc_balt"
@@ -1922,9 +1927,9 @@ model_def : model.dlc_balt_360 {
  	model_desc: "/model2/building/shop/shop_04_balt.pmd"
 	category: "dlc_balt"
 	
-	color_variant[]:"original | vis_wall: 255,255,255 | vis_frame: 84,75,66 | vis_roof: 43,89,43"
-	color_variant[]:"red | vis_wall: 93,123,126 | vis_frame: 173,81,81 | vis_roof: 173,14,14"
-	color_variant[]:"blue | vis_wall: 255,136,77 | vis_frame: 255,255,255 | vis_roof: 35,82,150"
+	color_variant[]:"original | vis_wall: 255,255,255 | vis_frame: 84,75,66 | vis_roof: 50,80,50"
+	color_variant[]:"red | vis_wall: 93,123,126 | vis_frame: 173,81,81 | vis_roof: 150,55,55"
+	color_variant[]:"blue | vis_wall: 255,136,77 | vis_frame: 255,255,255 | vis_roof: 52,85,140"
 	
 	static_lod_name[]: "LOD from 50m"
 	static_lod_path[]: "/model2/building/shop/shop_04_balt_lod1.pmd"
@@ -2585,8 +2590,8 @@ model_def : model.dlc_balt_506 {
 } 
   model_def : model.dlc_balt_507 {
 	model_desc: "/model2/landmark/kaunas/kaunas_train_station_balt.pmd"
-  lod_desc:"/model2/landmark/kaunas/kaunas_train_station_balt_lod1.pmd"
-	lod_dist: 214
+  dynamic_lod_desc[]:"/model2/landmark/kaunas/kaunas_train_station_balt_lod1.pmd"
+	dynamic_lod_dist[]: 214
 	category: "dlc_balt"
   }
 model_def : model.dlc_balt_509 {
@@ -2733,8 +2738,8 @@ model_def : model.dlc_balt_538 {
 model_def : model.dlc_balt_539 {
  	model_desc: "/model2/landmark/pskov/pskov_small_chapel_balt.pmd"
 	category: "dlc_balt"
-      lod_desc:"/model2/landmark/pskov/pskov_small_chapel_balt_lod1.pmd"
-	lod_dist: 173
+      dynamic_lod_desc[]:"/model2/landmark/pskov/pskov_small_chapel_balt_lod1.pmd"
+	dynamic_lod_dist[]: 173
 }  
 model_def : model.dlc_balt_540 {
  	model_desc: "/model2/landmark/pskov/pskov_train_station_balt.pmd"
@@ -2992,14 +2997,6 @@ model_def : model.dlc_balt_599 {
  	model_desc: "/model2/landmark/ventspils/ventspils_cows_playground_01_balt.pmd"
 	category: "dlc_balt"
 }
-model_def : model.dlc_balt_601 {
- 	model_desc: "/model2/rock/balt_roadcliff_1.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_602 {
- 	model_desc: "/model2/rock/balt_roadcliff_2.pmd"
-	category: "dlc_balt"
-}
 model_def : model.dlc_balt_603 {
  	model_desc: "/model2/props/street/advert/advert_big_05_wall_1_balt.pmd"
 	category: "dlc_balt"
@@ -3032,56 +3029,8 @@ model_def : model.dlc_balt_610 {
  	model_desc: "/model2/landmark/kunda/kunda_tower_balt.pmd"
 	category: "dlc_balt"
 }
-model_def : model.dlc_balt_611 {
- 	model_desc: "/model2/rock/balt_roadcliff_3_low.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_612 {
- 	model_desc: "/model2/rock/balt_roadcliff_3_low_right.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_613 {
- 	model_desc: "/model2/rock/balt_roadcliff_3_low_left.pmd"
-	category: "dlc_balt"
-}
 model_def : model.dlc_balt_614 {
  	model_desc: "/model2/landmark/kunda/kunda_bust_balt.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_615 {
- 	model_desc: "/model2/rock/balt_roadcliff_4.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_616 {
- 	model_desc: "/model2/rock/balt_roadcliff_5.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_617 {
- 	model_desc: "/model2/rock/balt_roadcliff_6.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_618 {
- 	model_desc: "/model2/rock/balt_roadcliff_7.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_619 {
- 	model_desc: "/model2/rock/balt_roadcliff_8.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_620 {
- 	model_desc: "/model2/rock/balt_roadcliff_9.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_621 {
- 	model_desc: "/model2/rock/balt_roadcliff_10.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_622 {
- 	model_desc: "/model2/rock/balt_roadcliff_11.pmd"
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_623 {
- 	model_desc: "/model2/rock/balt_roadcliff_12.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_624 {
@@ -3107,16 +3056,16 @@ model_def : model.dlc_balt_709 {
 
 model_def : model.dlc_balt_710 {
 	model_desc: "/model2/landmark/ventspils/flower_circle1.pmd"
-#    lod_desc: "/model2/landmark/ventspils/flower_circle1_lod1.pmd"
-#	lod_dist: 250
+#    dynamic_lod_desc[]: "/model2/landmark/ventspils/flower_circle1_lod1.pmd"
+#	dynamic_lod_dist[]: 250
 #    distance_type: 1
 	category: "dlc_balt"
 }
 
 model_def : model.dlc_balt_711 {
 	model_desc: "/model2/landmark/ventspils/flower_clock1.pmd"
-#    lod_desc: "/model2/landmark/ventspils/flower_circle1_lod1.pmd"
-#	lod_dist: 120
+#    dynamic_lod_desc[]: "/model2/landmark/ventspils/flower_circle1_lod1.pmd"
+#	dynamic_lod_dist[]: 120
 #       distance_type: 3
 	category: "dlc_balt"
 	
@@ -3124,15 +3073,15 @@ model_def : model.dlc_balt_711 {
 
 model_def : model.dlc_balt_712 {
 	model_desc: "/model2/landmark/ventspils/flower_sleigh1.pmd"
-    lod_desc: "/model2/landmark/ventspils/flower_sleigh1_lod1.pmd"
-	lod_dist: 250
+    dynamic_lod_desc[]: "/model2/landmark/ventspils/flower_sleigh1_lod1.pmd"
+	dynamic_lod_dist[]: 250
        distance_type: 3
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_713 {
 	model_desc: "/model2/landmark/ventspils/flower_sleigh2.pmd"
-    lod_desc: "/model2/landmark/ventspils/flower_sleigh2_lod1.pmd"
-	lod_dist: 250
+    dynamic_lod_desc[]: "/model2/landmark/ventspils/flower_sleigh2_lod1.pmd"
+	dynamic_lod_dist[]: 250
        distance_type: 3
 	category: "dlc_balt"
 	
@@ -3144,8 +3093,8 @@ model_def : model.dlc_balt_714 {
 
 model_def : model.balt_715 {
 	model_desc: "/model2/props/country/logs_long_balt.pmd"
-	lod_desc: "/model2/props/country/logs_long_balt_lod1.pmd"
-	lod_dist: 16
+	dynamic_lod_desc[]: "/model2/props/country/logs_long_balt_lod1.pmd"
+	dynamic_lod_dist[]: 16
 	
 	static_lod_name[]: "lod 50m"
 	static_lod_path[]: "/model2/props/country/logs_long_balt_lod1.pmd"
@@ -3155,8 +3104,8 @@ model_def : model.balt_715 {
 
 model_def : model.balt_716 {
 	model_desc: "/model2/props/country/logs_mid_balt.pmd"
-	lod_desc: "/model2/props/country/logs_mid_balt_lod1.pmd"
-	lod_dist: 9
+	dynamic_lod_desc[]: "/model2/props/country/logs_mid_balt_lod1.pmd"
+	dynamic_lod_dist[]: 9
 	
 	static_lod_name[]: "lod 30m"
 	static_lod_path[]: "/model2/props/country/logs_mid_balt_lod1.pmd"
@@ -3166,8 +3115,8 @@ model_def : model.balt_716 {
 
 model_def : model.balt_717 {
 	model_desc: "/model2/props/country/logs_short_balt.pmd"
-	lod_desc: "/model2/props/country/logs_short_balt_lod1.pmd"
-	lod_dist: 17
+	dynamic_lod_desc[]: "/model2/props/country/logs_short_balt_lod1.pmd"
+	dynamic_lod_dist[]: 17
 	
 	static_lod_name[]: "lod 30m"
 	static_lod_path[]: "/model2/props/country/logs_short_balt_lod1.pmd"

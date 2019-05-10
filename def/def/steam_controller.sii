@@ -1,0 +1,971 @@
+SiiNunit
+{
+steam_controller_config: .main
+{
+	# Contexts. Note that the first context is used as default if
+	# a unknown context is requested.
+
+	contexts[]: .ui
+	contexts[]: .extui
+	contexts[]: .drive
+	contexts[]: .drive.arcade
+	contexts[]: .drive.automatic
+	contexts[]: .drive.manual
+	contexts[]: .drive.direct
+
+	action_sets[]: .set.ui
+	action_sets[]: .set.driving
+
+	inputs[]: .pause
+
+	inputs[]: .showmirrors
+	inputs[]: .showhud
+	inputs[]: .adjuster
+	inputs[]: .advmouse
+	inputs[]: .advpage0
+	inputs[]: .advpage1
+	inputs[]: .advpage2
+	inputs[]: .advpage3
+	inputs[]: .advpagen
+	inputs[]: .advpagep
+	inputs[]: .radio
+	inputs[]: .radionext
+	inputs[]: .radioprev
+	inputs[]: .radioup
+	inputs[]: .radiodown
+	inputs[]: .navmap
+	inputs[]: .gar_man
+
+	inputs[]: .back
+	inputs[]: .mouse.move
+	inputs[]: .mouse.left
+	inputs[]: .mouse.right
+
+	inputs[]: .scrol_up
+	inputs[]: .scrol_dwn
+	inputs[]: .mapzoom_in
+	inputs[]: .mapzoom_out
+
+	inputs[]: .assistact1
+	inputs[]: .assistact2
+	inputs[]: .assistact3
+	inputs[]: .assistact4
+	inputs[]: .assistact5
+	inputs[]: .screenshot
+
+	inputs[]: .steering
+	inputs[]: .forward
+	inputs[]: .backward
+	inputs[]: .clutch
+	inputs[]: .look.lr
+	inputs[]: .look.ud
+	inputs[]: .gearup
+	inputs[]: .geardown
+	inputs[]: .gear0
+	inputs[]: .gearuphint
+	inputs[]: .geardownhint
+	inputs[]: .transemi
+	inputs[]: .engine
+	inputs[]: .parkingbrake
+	inputs[]: .motorbrake
+	inputs[]: .engbraketog
+	inputs[]: .engbrakeup
+	inputs[]: .engbrakedwn
+	inputs[]: .trailerbrake
+	inputs[]: .retarderup
+	inputs[]: .retarderdown
+	inputs[]: .liftaxle
+	inputs[]: .liftaxlet
+	inputs[]: .diflock
+	inputs[]: .lblinker
+	inputs[]: .rblinker
+	inputs[]: .flasher4way
+	inputs[]: .light
+	inputs[]: .hblight
+	inputs[]: .beacon
+	inputs[]: .horn
+	inputs[]: .airhorn
+	inputs[]: .lighthorn
+	inputs[]: .wipers
+	inputs[]: .cruiectrl
+	inputs[]: .cruiectrlinc
+	inputs[]: .cruiectrldec
+	inputs[]: .cruiectrlres
+	inputs[]: .display
+	inputs[]: .dashmapzoom
+	inputs[]: .tripreset
+	inputs[]: .camcycle
+	inputs[]: .cam1
+	inputs[]: .cam2
+	inputs[]: .cam3
+	inputs[]: .cam4
+	inputs[]: .cam5
+	inputs[]: .cam6
+	inputs[]: .cam7
+	inputs[]: .cam8
+	inputs[]: .camrotate
+	inputs[]: .camzoom
+	inputs[]: .lookleft
+	inputs[]: .lookright
+	inputs[]: .lookpos1
+	inputs[]: .lookpos2
+	inputs[]: .lookpos3
+	inputs[]: .lookpos4
+	inputs[]: .lookpos5
+	inputs[]: .lookpos6
+	inputs[]: .looksteer
+	inputs[]: .lookblink
+	inputs[]: .activate
+	inputs[]: .attach
+	inputs[]: .menu
+	inputs[]: .quicksave
+	inputs[]: .quickload
+
+	vibrations[]: .vibration.steam
+	vibrations[]: .vibration.xi
+	vibrations[]: .vibration.ps4
+	vibrations[]: .vibration.switch
+}
+
+steam_controller_input_context: .ui
+{
+	name: "ui"
+	action_set: .set.ui
+}
+
+steam_controller_input_context: .extui
+{
+	name: "extui"
+	action_set: .set.ui
+}
+
+steam_controller_input_context: .drive
+{
+	name: "drive"
+	action_set: .set.driving
+}
+
+steam_controller_input_context: .drive.arcade
+{
+	name: "drivearcade"
+	action_set: .set.driving
+	action_set_layers[]: "gearbox_arcade"
+}
+
+steam_controller_input_context: .drive.automatic
+{
+	name: "driveautomat"
+	action_set: .set.driving
+	action_set_layers[]: "gearbox_automatic"
+}
+
+steam_controller_input_context: .drive.manual
+{
+	name: "drivemanual"
+	action_set: .set.driving
+	action_set_layers[]: "gearbox_manual"
+}
+
+steam_controller_input_context: .drive.direct
+{
+	name: "drivedirect"
+	action_set: .set.driving
+}
+
+# Action stes.
+
+steam_controller_action_set: .set.ui
+{
+	name: "ui"
+
+	inputs[]: .mouse.move
+	inputs[]: .mouse.left
+	inputs[]: .mouse.right
+	inputs[]: .back
+	inputs[]: .pause
+	inputs[]: .navmap
+
+	inputs[]: .scrol_up
+	inputs[]: .scrol_dwn
+	inputs[]: .mapzoom_in
+	inputs[]: .mapzoom_out
+
+	inputs[]: .showmirrors
+	inputs[]: .showhud
+
+	inputs[]: .adjuster
+	inputs[]: .advmouse
+	inputs[]: .advpage0
+	inputs[]: .advpage1
+	inputs[]: .advpage2
+	inputs[]: .advpage3
+	inputs[]: .advpagen
+	inputs[]: .advpagep
+
+	inputs[]: .radio
+	inputs[]: .radionext
+	inputs[]: .radioprev
+	inputs[]: .radioup
+	inputs[]: .radiodown
+
+	inputs[]: .assistact1
+	inputs[]: .assistact2
+	inputs[]: .assistact3
+	inputs[]: .assistact4
+	inputs[]: .assistact5
+
+	inputs[]: .gar_man
+	inputs[]: .screenshot
+}
+
+steam_controller_action_set: .set.driving
+{
+	name: "driving"
+
+	inputs[]: .steering
+	inputs[]: .forward
+	inputs[]: .backward
+	inputs[]: .look.lr
+	inputs[]: .look.ud
+
+	inputs[]: .pause
+	inputs[]: .menu
+	inputs[]: .navmap
+
+	inputs[]: .activate
+	inputs[]: .attach
+	inputs[]: .engine
+	inputs[]: .lblinker
+	inputs[]: .rblinker
+	inputs[]: .light
+	inputs[]: .hblight
+	inputs[]: .wipers
+
+	inputs[]: .clutch
+	inputs[]: .gearup
+	inputs[]: .geardown
+	inputs[]: .gear0
+	inputs[]: .gearuphint
+	inputs[]: .geardownhint
+
+	inputs[]: .cruiectrl
+	inputs[]: .cruiectrlinc
+	inputs[]: .cruiectrldec
+	inputs[]: .cruiectrlres
+	inputs[]: .horn
+	inputs[]: .airhorn
+	inputs[]: .lighthorn
+	inputs[]: .flasher4way
+	inputs[]: .beacon
+	inputs[]: .camcycle
+	inputs[]: .cam1
+	inputs[]: .cam2
+	inputs[]: .cam3
+	inputs[]: .cam4
+	inputs[]: .cam5
+	inputs[]: .cam6
+	inputs[]: .cam7
+	inputs[]: .cam8
+	inputs[]: .camrotate
+	inputs[]: .camzoom
+	inputs[]: .display
+	inputs[]: .dashmapzoom
+	inputs[]: .tripreset
+
+	inputs[]: .transemi
+	inputs[]: .parkingbrake
+	inputs[]: .motorbrake
+	inputs[]: .engbraketog
+	inputs[]: .engbrakeup
+	inputs[]: .engbrakedwn
+	inputs[]: .trailerbrake
+	inputs[]: .retarderup
+	inputs[]: .retarderdown
+	inputs[]: .liftaxle
+	inputs[]: .liftaxlet
+	inputs[]: .diflock
+
+	inputs[]: .showmirrors
+	inputs[]: .showhud
+	inputs[]: .adjuster
+	inputs[]: .advmouse
+	inputs[]: .advpage0
+	inputs[]: .advpage1
+	inputs[]: .advpage2
+	inputs[]: .advpage3
+	inputs[]: .advpagen
+	inputs[]: .advpagep
+
+	inputs[]: .quicksave
+	inputs[]: .quickload
+
+	inputs[]: .radio
+	inputs[]: .radionext
+	inputs[]: .radioprev
+	inputs[]: .radioup
+	inputs[]: .radiodown
+
+	inputs[]: .lookleft
+	inputs[]: .lookright
+	inputs[]: .lookpos1
+	inputs[]: .lookpos2
+	inputs[]: .lookpos3
+	inputs[]: .lookpos4
+	inputs[]: .lookpos5
+	inputs[]: .lookpos6
+	inputs[]: .looksteer
+	inputs[]: .lookblink
+
+	inputs[]: .gar_man
+
+	inputs[]: .screenshot
+}
+
+# Shared by ui and driving
+
+steam_controller_input: .pause
+{
+	name: pause
+	type: button
+}
+
+steam_controller_input: .showmirrors
+{
+	name: showmirrors
+	type: button
+}
+
+steam_controller_input: .showhud
+{
+	name: showhud
+	type: button
+}
+
+steam_controller_input: .adjuster
+{
+	name: adjuster
+	type: button
+}
+
+steam_controller_input: .advmouse
+{
+	name: advmouse
+	type: button
+}
+
+steam_controller_input: .advpage0
+{
+	name: advpage0
+	type: button
+}
+
+steam_controller_input: .advpage1
+{
+	name: advpage1
+	type: button
+}
+
+steam_controller_input: .advpage2
+{
+	name: advpage2
+	type: button
+}
+
+steam_controller_input: .advpage3
+{
+	name: advpage3
+	type: button
+}
+
+steam_controller_input: .advpagen
+{
+	name: advpagen
+	type: button
+}
+
+steam_controller_input: .advpagep
+{
+	name: advpagep
+	type: button
+}
+
+steam_controller_input: .radio
+{
+	name: radio
+	type: button
+}
+
+steam_controller_input: .radionext
+{
+	name: radionext
+	type: button
+}
+
+steam_controller_input: .radioprev
+{
+	name: radioprev
+	type: button
+}
+
+steam_controller_input: .radioup
+{
+	name: radioup
+	type: button
+}
+
+steam_controller_input: .radiodown
+{
+	name: radiodown
+	type: button
+}
+
+steam_controller_input: .navmap
+{
+	name: navmap
+	type: button
+}
+
+steam_controller_input: .gar_man
+{
+	name: gar_man
+	type: button
+}
+
+steam_controller_input: .screenshot
+{
+	name: screenshot
+	type: button
+}
+
+# UI only
+
+steam_controller_input: .back
+{
+	name: back
+	type: button
+}
+
+steam_controller_input: .mouse.move
+{
+	name: mouse_rel_position
+	type: mouse
+}
+
+steam_controller_input: .mouse.left
+{
+	name: mouse_button_left
+	type: button
+}
+
+steam_controller_input: .mouse.right
+{
+	name: mouse_button_right
+	type: button
+}
+
+steam_controller_input: .scrol_up
+{
+	name: scrol_up
+	type: button
+}
+
+steam_controller_input: .scrol_dwn
+{
+	name: scrol_dwn
+	type: button
+}
+
+steam_controller_input: .mapzoom_in
+{
+	name: mapzoom_in
+	type: button
+}
+
+steam_controller_input: .mapzoom_out
+{
+	name: mapzoom_out
+	type: button
+}
+
+steam_controller_input: .assistact1
+{
+	name: assistact1
+	type: button
+}
+
+steam_controller_input: .assistact2
+{
+	name: assistact2
+	type: button
+}
+
+steam_controller_input: .assistact3
+{
+	name: assistact3
+	type: button
+}
+
+steam_controller_input: .assistact4
+{
+	name: assistact4
+	type: button
+}
+
+steam_controller_input: .assistact5
+{
+	name: assistact5
+	type: button
+}
+
+# Driving only
+
+steam_controller_input: .steering
+{
+	name: steering
+	type: vector_x
+}
+
+steam_controller_input: .forward
+{
+	name: aforward
+	type: axis
+}
+
+steam_controller_input: .backward
+{
+	name: abackward
+	type: axis
+}
+
+steam_controller_input: .clutch
+{
+	name: clutch
+	type: axis
+}
+
+steam_controller_input: .look.lr
+{
+	name: camlr
+	action_name: mouse_look
+	type: mouse_x
+}
+
+steam_controller_input: .look.ud
+{
+	name: camud
+	action_name: mouse_look
+	type: mouse_y
+}
+
+steam_controller_input: .gearup
+{
+	name: gearup
+	type: button
+}
+
+steam_controller_input: .geardown
+{
+	name: geardown
+	type: button
+}
+
+steam_controller_input: .gear0
+{
+	name: gear0
+	type: button
+}
+
+steam_controller_input: .gearuphint
+{
+	name: gearuphint
+	type: button
+}
+
+steam_controller_input: .geardownhint
+{
+	name: geardownhint
+	type: button
+}
+
+steam_controller_input: .transemi
+{
+	name: transemi
+	type: button
+}
+
+steam_controller_input: .engine
+{
+	name: engine
+	type: button
+}
+
+steam_controller_input: .parkingbrake
+{
+	name: parkingbrake
+	type: button
+}
+
+steam_controller_input: .motorbrake
+{
+	name: motorbrake
+	type: button
+}
+
+steam_controller_input: .engbraketog
+{
+	name: engbraketog
+	type: button
+}
+
+steam_controller_input: .engbrakeup
+{
+	name: engbrakeup
+	type: button
+}
+
+steam_controller_input: .engbrakedwn
+{
+	name: engbrakedwn
+	type: button
+}
+
+steam_controller_input: .trailerbrake
+{
+	name: trailerbrake
+	type: button
+}
+
+steam_controller_input: .retarderup
+{
+	name: retarderup
+	type: button
+}
+
+steam_controller_input: .retarderdown
+{
+	name: retarderdown
+	type: button
+}
+
+steam_controller_input: .liftaxle
+{
+	name: liftaxle
+	type: button
+}
+
+steam_controller_input: .liftaxlet
+{
+	name: liftaxlet
+	type: button
+}
+
+steam_controller_input: .diflock
+{
+	name: diflock
+	type: button
+}
+
+steam_controller_input: .lblinker
+{
+	name: lblinker
+	type: button
+}
+
+steam_controller_input: .rblinker
+{
+	name: rblinker
+	type: button
+}
+
+steam_controller_input: .flasher4way
+{
+	name: flasher4way
+	type: button
+}
+
+steam_controller_input: .light
+{
+	name: light
+	type: button
+}
+
+steam_controller_input: .hblight
+{
+	name: hblight
+	type: button
+}
+
+steam_controller_input: .beacon
+{
+	name: beacon
+	type: button
+}
+
+steam_controller_input: .horn
+{
+	name: horn
+	type: button
+}
+
+steam_controller_input: .airhorn
+{
+	name: airhorn
+	type: button
+}
+
+steam_controller_input: .lighthorn
+{
+	name: lighthorn
+	type: button
+}
+
+steam_controller_input: .wipers
+{
+	name: wipers
+	type: button
+}
+
+steam_controller_input: .cruiectrl
+{
+	name: cruiectrl
+	type: button
+}
+
+steam_controller_input: .cruiectrlinc
+{
+	name: cruiectrlinc
+	type: button
+}
+
+steam_controller_input: .cruiectrldec
+{
+	name: cruiectrldec
+	type: button
+}
+
+steam_controller_input: .cruiectrlres
+{
+	name: cruiectrlres
+	type: button
+}
+
+steam_controller_input: .display
+{
+	name: display
+	type: button
+}
+
+steam_controller_input: .dashmapzoom
+{
+	name: dashmapzoom
+	type: button
+}
+
+steam_controller_input: .tripreset
+{
+	name: tripreset
+	type: button
+}
+
+steam_controller_input: .camcycle
+{
+	name: camcycle
+	type: button
+}
+
+steam_controller_input: .cam1
+{
+	name: cam1
+	type: button
+}
+
+steam_controller_input: .cam2
+{
+	name: cam2
+	type: button
+}
+
+steam_controller_input: .cam3
+{
+	name: cam3
+	type: button
+}
+
+steam_controller_input: .cam4
+{
+	name: cam4
+	type: button
+}
+
+steam_controller_input: .cam5
+{
+	name: cam5
+	type: button
+}
+
+steam_controller_input: .cam6
+{
+	name: cam6
+	type: button
+}
+
+steam_controller_input: .cam7
+{
+	name: cam7
+	type: button
+}
+
+steam_controller_input: .cam8
+{
+	name: cam8
+	type: button
+}
+
+steam_controller_input: .camrotate
+{
+	name: camrotate
+	type: button
+}
+
+steam_controller_input: .camzoom
+{
+	name: camzoom
+	type: button
+}
+
+steam_controller_input: .lookleft
+{
+	name: lookleft
+	type: button
+}
+
+steam_controller_input: .lookright
+{
+	name: lookright
+	type: button
+}
+
+steam_controller_input: .lookpos1
+{
+	name: lookpos1
+	type: button
+}
+
+steam_controller_input: .lookpos2
+{
+	name: lookpos2
+	type: button
+}
+
+steam_controller_input: .lookpos3
+{
+	name: lookpos3
+	type: button
+}
+
+steam_controller_input: .lookpos4
+{
+	name: lookpos4
+	type: button
+}
+
+steam_controller_input: .lookpos5
+{
+	name: lookpos5
+	type: button
+}
+
+steam_controller_input: .lookpos6
+{
+	name: lookpos6
+	type: button
+}
+
+steam_controller_input: .looksteer
+{
+	name: looksteer
+	type: button
+}
+
+steam_controller_input: .lookblink
+{
+	name: lookblink
+	type: button
+}
+
+steam_controller_input: .activate
+{
+	name: activate
+	type: button
+}
+
+steam_controller_input: .attach
+{
+	name: attach
+	type: button
+}
+
+steam_controller_input: .menu
+{
+	name: menu
+	type: button
+}
+
+steam_controller_input: .quicksave
+{
+	name: quicksave
+	type: button
+}
+
+steam_controller_input: .quickload
+{
+	name: quickload
+	type: button
+}
+
+steam_controller_vibration: .vibration.steam
+{
+	types[]: 1 # Steam controller
+
+	combining_mode: max
+
+	left_motor_map[]: (0.0, 0.03, 0, 2000)
+	left_motor_map[]: (0.03, 1.0, 2000, 2000)
+	right_motor_map[]: (0.02, 0.15, 1900, 9000)
+	right_motor_map[]: (0.15, 1.0, 9000, 10000)
+}
+
+steam_controller_vibration: .vibration.xi
+{
+	types[]: 2 # X360
+	types[]: 3 # XB One
+	types[]: 4 # Generic XInput
+
+	left_motor_map[]: (0.0, 1.0, 0, 65535)
+	right_motor_map[]: (0.0, 1.0, 0, 65535)
+}
+
+steam_controller_vibration: .vibration.ps4
+{
+	types[]: 5 # PS4
+
+	left_motor_low_factor: 2.0
+	right_motor_high_factor: 2.0
+
+	left_motor_map[]: (0.0, 1.0, 0, 65535)
+	right_motor_map[]: (0.0, 1.0, 0, 65535)
+}
+
+steam_controller_vibration: .vibration.switch
+{
+	types[]: 10 # Switch
+
+	combining_mode: max
+
+	left_motor_map[]: (0.0, 0.03, 0, 2000)
+	left_motor_map[]: (0.03, 1.0, 2000, 2000)
+	right_motor_map[]: (0.02, 0.15, 1900, 9000)
+	right_motor_map[]: (0.15, 1.0, 9000, 10000)
+}
+
+}

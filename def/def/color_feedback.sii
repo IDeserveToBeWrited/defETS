@@ -1,0 +1,561 @@
+SiiNunit
+{
+########## Default ##########
+
+color_context : context.default {
+ layers[]: .layer.default.base
+}
+
+color_layer : .layer.default.base {
+ effects[]: .default.base
+}
+
+base_color_effect : .default.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+########## UI ##########
+
+color_context : context.ui {
+ layers[]: .layer.ui.base
+ layers[]: .layer.ui.bindings
+ layers[]: .layer.ui.actions
+}
+
+color_layer : .layer.ui.base {
+ effects[]: .ui.base
+}
+
+base_color_effect : .ui.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.ui.bindings {
+ effects[]: .ui.bindings
+}
+
+bindings_color_effect : .ui.bindings {
+ color: (1.0, 0.85, 0)
+
+ #mixes[]: "prv_itm" # keyboard.uarrow
+ #mixes[]: "nxt_itm" # keyboard.darrow
+ #mixes[]: "prv_ctrl"
+ #mixes[]: "nxt_ctrl" # keyboard.tab
+ #mixes[]: "mve_left" # keyboard.larrow
+ #mixes[]: "mve_right" # keyboard.rarrow
+ #mixes[]: "mve_up" # keyboard.uarrow
+ #mixes[]: "mve_down" # keyboard.darrow
+ mixes[]: "selectfcs" # keyboard.enter
+ mixes[]: "back" # keyboard.esc
+ mixes[]: "skip" # keyboard.esc
+ mixes[]: "menu" # keyboard.esc
+ mixes[]: "navmap" # keyboard.m
+ mixes[]: "radio" # keyboard.r
+ #mixes[]: "radionext" # keyboard.pgdn
+ #mixes[]: "radioprev" # keyboard.pgup
+ mixes[]: "radioup"
+ mixes[]: "radiodown"
+ mixes[]: "photosman" # keyboard.m
+ mixes[]: "gar_man" # keyboard.g
+}
+
+color_layer : .layer.ui.actions {
+ effects[]: .ui.jobdone
+}
+
+job_done_effect : .ui.jobdone {
+ animation_duration: 1.2
+ wave_height: 0.6
+ repeats: 20
+}
+
+########## GAME ##########
+
+color_context : context.game {
+ layers[]: .layer.game.base
+ layers[]: .layer.game.bindings
+ layers[]: .layer.game.toggles
+ layers[]: .layer.game.gauges
+ layers[]: .layer.game.actions
+}
+
+color_layer : .layer.game.base {
+ effects[]: .game.base
+}
+
+base_color_effect : .game.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.game.bindings {
+ effects[]: .game.bindings.basic
+ effects[]: .game.bindings.cameras
+ effects[]: .game.bindings.adviser
+ effects[]: .game.bindings.movement
+ effects[]: .game.bindings.interior
+ effects[]: .game.bindings.manual_gear
+ effects[]: .game.bindings.electrics
+}
+
+bindings_color_effect : .game.bindings.basic {
+ color: (1.0, 0.85, 0)
+
+ mixes[]: "back" # keyboard.esc
+ mixes[]: "skip" # keyboard.esc
+ mixes[]: "pause" # keyboard.pause
+ mixes[]: "menu" # keyboard.esc
+ mixes[]: "engine" # keyboard.e
+ mixes[]: "horn" # keyboard.h
+ mixes[]: "lighthorn" # keyboard.j
+ mixes[]: "engbraketog"
+ mixes[]: "engbrakeup"
+ mixes[]: "engbrakedwn"
+ mixes[]: "parkingbrake" # keyboard.space
+ mixes[]: "light" # keyboard.l
+ mixes[]: "flasher4way" # keyboard.f
+ mixes[]: "showmirrors" # keyboard.f2
+ mixes[]: "showhud" # keyboard.f3
+ mixes[]: "navmap" # keyboard.m
+ mixes[]: "radio" # keyboard.r
+ mixes[]: "radionext" # keyboard.pgdn
+ mixes[]: "radioprev" # keyboard.pgup
+ mixes[]: "radioup"
+ mixes[]: "radiodown"
+ mixes[]: "transemi"
+ mixes[]: "adjuster" # keyboard.f4
+ mixes[]: "advpage0" # keyboard.f5
+ mixes[]: "advpage1" # keyboard.f6
+ mixes[]: "advpage2" # keyboard.f7
+ mixes[]: "advpage3" # keyboard.f8
+ mixes[]: "advpagen" # keyboard.num0
+ mixes[]: "advpagep"
+ mixes[]: "advmouse" # keyboard.f1
+ mixes[]: "gar_man" # keyboard.g
+}
+
+bindings_color_effect : .game.bindings.cameras {
+ color: (0.4, 0.12, 0)
+
+ mixes[]: "lookleft" # keyboard.numslash
+ mixes[]: "lookright" # keyboard.nummultiply
+ mixes[]: "cam1" # keyboard.key1
+ mixes[]: "cam2" # keyboard.key2
+ mixes[]: "cam3" # keyboard.key3
+ mixes[]: "cam4" # keyboard.key4
+ mixes[]: "cam5" # keyboard.key5
+ mixes[]: "cam6" # keyboard.key6
+ mixes[]: "cam7" # keyboard.key7
+ mixes[]: "cam8" # keyboard.key8
+ mixes[]: "camcycle" # keyboard.key9
+}
+
+bindings_color_effect : .game.bindings.adviser {
+ color: (0.3, 0, 0.54)
+
+ mixes[]: "advmouse" # keyboard.f1
+ mixes[]: "showmirrors" # keyboard.f2
+ mixes[]: "showhud" # keyboard.f3
+ mixes[]: "adjuster" # keyboard.f4
+ mixes[]: "advpage0" # keyboard.f5
+ mixes[]: "advpage1" # keyboard.f6
+ mixes[]: "advpage2" # keyboard.f7
+ mixes[]: "advpage3" # keyboard.f8
+}
+
+bindings_color_effect : .game.bindings.movement {
+ color: (0, 1, 0.25)
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+}
+
+bindings_color_effect : .game.bindings.interior {
+ color: (0.4, 0.12, 0)
+ active_scope: interior
+
+ mixes[]: "camzoom"
+ mixes[]: "camfwd" # keyboard.num8
+ mixes[]: "camback" # keyboard.num5
+ mixes[]: "camleft" # keyboard.num4
+ mixes[]: "camright" # keyboard.num6
+ mixes[]: "camup" # keyboard.num9
+ mixes[]: "camdown" # keyboard.num3
+ mixes[]: "lookpos1" # keyboard.num5
+ mixes[]: "lookpos2" # keyboard.num9
+ mixes[]: "lookpos3" # keyboard.num7
+ mixes[]: "lookpos4" # keyboard.num6
+ mixes[]: "lookpos5" # keyboard.num4
+ mixes[]: "lookpos6" # keyboard.num8
+ mixes[]: "lookpos7"
+ mixes[]: "lookpos8"
+ mixes[]: "lookpos9"
+ mixes[]: "looksteer"
+ mixes[]: "lookblink"
+}
+
+bindings_color_effect : .game.bindings.manual_gear {
+ color: (1.0, 0.85, 0)
+ active_scope: manual_gear
+
+ mixes[]: "gearup" # keyboard.lshift | keyboard.rshift
+ mixes[]: "geardown" # keyboard.lctrl | keyboard.rctrl
+ mixes[]: "gear0"
+}
+
+bindings_color_effect : .game.bindings.electrics {
+ color: (1.0, 0.85, 0)
+ active_scope: electrics
+
+ mixes[]: "hblight" # keyboard.k
+ mixes[]: "lblinker" # keyboard.lbracket
+ mixes[]: "rblinker" # keyboard.rbracket
+ mixes[]: "wipers" # keyboard.p
+ mixes[]: "display" # keyboard.i
+ mixes[]: "retarderup" # keyboard.semicolon
+ mixes[]: "retarderdown" # keyboard.apostrophe
+ mixes[]: "motorbrake" # keyboard.b
+ mixes[]: "beacon" # keyboard.o
+ mixes[]: "diflock" # keyboard.v
+ mixes[]: "airhorn" # keyboard.n
+}
+
+color_layer : .layer.game.toggles {
+ effects[]: .game.toggles
+}
+
+toggles_color_effect : .game.toggles {
+ lblinker_color: (0, 1, 0)
+ rblinker_color: (0, 1, 0)
+ fwayflasher_color: (1, 0, 0)
+ parking_brake_color: (1, 0, 0)
+ wipers_slow_color: (0, 0.18, 1)
+ wipers_fast_color: (0, 0.5, 1)
+ wipers_fastest_color: (0, 0.9, 1)
+ beacon_color: (1, 0.42, 0)
+ parking_light_color: (0, 0.5, 0)
+ low_beam_color: (0, 1, 0)
+ high_beam_color: (0, 0, 1)
+ cruise_ctrl_passive_color: (1.0, 0.85, 0)
+ cruise_ctrl_active_color: (0, 0.5, 1)
+ lift_axle_passive_color: (1.0, 0.85, 0)
+ lift_axle_active_color: (0, 0.5, 1)
+ lift_axle_trailer_passive_color: (1.0, 0.85, 0)
+ lift_axle_trailer_active_color: (0, 0.5, 1)
+ differential_lock_color: (0, 0.5, 1)
+ active_camera_color: (1, 0.66, 0)
+ adviser_page_color: (0.76, 0, 1)
+ attach_passive_color: (1.0, 0.85, 0)
+ attach_active_color: (0, 1, 0)
+ coupling_active_color: (1, 0, 0)
+ activation_color: (0, 1, 0)
+ retarder_color: (0, 0.5, 1)
+ trailer_brake_passive_color: (1.0, 0.85, 0)
+ trailer_brake_active_color: (0, 0.5, 1)
+}
+
+color_layer : .layer.game.gauges {
+ effects[]: .game.gauge.speed
+}
+
+speed_color_effect : .game.gauge.speed {
+ color: (0, 1, 0)
+ color_speeding: (1, 0, 0)
+}
+
+color_layer : .layer.game.actions {
+ effects[]: .effect.game.hurry_up
+ effects[]: .effect.game.fine
+ effects[]: .effect.game.damage
+ effects[]: .effect.game.pumping
+}
+
+hurry_up_effect : .effect.game.hurry_up {
+ animation_duration: 2.0
+ color1: (0.1, 0.1, 0.1)
+ color2: (0.0, 0.0, 0.0)
+}
+
+police_color_effect : .effect.game.fine {
+ animation_duration: 0.4
+ repeats: 9
+ keys_color1: (0.0, 0.11, 0.82)
+ keys_color2: (0.0, 0.11, 0.82)
+ base_color1: (0.0, 0.11, 0.82)
+ base_color2: (0.05, 0.05, 0.05)
+ fade_out_duration: 0.5
+}
+
+damage_color_effect : .effect.game.damage {
+ threshold: 0.01
+ animation_duration: 0.6
+ main_color: (1.0, 0.0, 0)
+ fade_color: (0.45, 0.45, 0)
+ fade_out_duration: 0.5
+}
+
+gas_pumping_effect : .effect.game.pumping {
+ animation_duration: 1.2
+ pumping_color: (1.0, 1.0, 1.0)
+ full_color: (0, 1.0, 0)
+ fade_out_duration: 0.5
+}
+
+########## TUTORIAL (GAME) ##########
+
+color_context : context.tutorial {
+ layers[]: .layer.tutorial.base
+ layers[]: .layer.tutorial.bindings
+}
+
+color_layer : .layer.tutorial.base {
+ effects[]: .tutorial.base
+}
+
+base_color_effect : .tutorial.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.tutorial.bindings {
+ effects[]: .tutorial.bindings.init
+ effects[]: .tutorial.bindings.move
+ effects[]: .tutorial.bindings.cam1
+ effects[]: .tutorial.bindings.cam1_blink
+ effects[]: .tutorial.bindings.cam2
+ effects[]: .tutorial.bindings.cam2_blink
+ effects[]: .tutorial.bindings.adviser
+ effects[]: .tutorial.bindings.transport
+ effects[]: .tutorial.bindings.approach_mv
+ effects[]: .tutorial.bindings.approach_ad
+ effects[]: .tutorial.bindings.park
+ effects[]: .tutorial.toggles
+}
+
+tutorial_color_effect : .tutorial.bindings.adviser {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: adviser
+ blinking: true
+
+ mixes[]: "advmouse" # keyboard.f1
+}
+
+tutorial_color_effect : .tutorial.bindings.init {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: init
+ blinking: true
+
+ mixes[]: "engine" # keyboard.e
+}
+
+tutorial_color_effect : .tutorial.bindings.move {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: move
+ blinking: false
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
+}
+
+tutorial_color_effect : .tutorial.bindings.cam1 {
+ color: (1.0, 0.85, 0)
+ tutorial_stage: cam1
+ blinking: false
+
+ mixes[]: "cam1" # keyboard.key1
+ mixes[]: "cam3" # keyboard.key3
+}
+
+tutorial_color_effect : .tutorial.bindings.cam1_blink {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: cam1
+ blinking: true
+
+ mixes[]: "cam2" # keyboard.key2
+}
+
+tutorial_color_effect : .tutorial.bindings.cam2 {
+ color: (1.0, 0.85, 0)
+ tutorial_stage: cam2
+ blinking: false
+
+ mixes[]: "cam4" # keyboard.key4
+ mixes[]: "cam5" # keyboard.key5
+ mixes[]: "cam6" # keyboard.key6
+ mixes[]: "cam7" # keyboard.key7
+ mixes[]: "cam8" # keyboard.key8
+}
+
+tutorial_color_effect : .tutorial.bindings.cam2_blink {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: cam2
+ blinking: true
+
+ mixes[]: "activate" # keyboard.enter
+ mixes[]: "selectfcs" # keyboard.enter
+}
+
+tutorial_color_effect : .tutorial.bindings.transport {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: transport
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
+}
+
+tutorial_color_effect : .tutorial.bindings.approach_mv {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: approach
+ blinking: false
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
+}
+
+tutorial_color_effect : .tutorial.bindings.approach_ad {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: approach
+ blinking: false
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
+
+ mixes[]: "advpage0" # keyboard.f5
+}
+
+tutorial_color_effect : .tutorial.bindings.park {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: park
+ blinking: false
+
+ mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
+ mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
+ mixes[]: "dforward" # keyboard.uarrow | keyboard.w
+ mixes[]: "dbackward" # keyboard.darrow | keyboard.s
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
+}
+
+toggles_color_effect : .tutorial.toggles {
+ lblinker_color: (0, 1, 0)
+ rblinker_color: (0, 1, 0)
+ fwayflasher_color: (1, 0, 0)
+ parking_brake_color: (1, 0, 0)
+ wipers_slow_color: (0, 0.18, 1)
+ wipers_fast_color: (0, 0.5, 1)
+ wipers_fastest_color: (0, 0.9, 1)
+ beacon_color: (1, 0.42, 0)
+ parking_light_color: (0, 0, 1)
+ low_beam_color: (0, 1, 0)
+ high_beam_color: (0, 0, 1)
+ cruise_ctrl_passive_color: (1.0, 0.85, 0)
+ cruise_ctrl_active_color: (0, 0.5, 1)
+ lift_axle_passive_color: (1.0, 0.85, 0)
+ lift_axle_active_color: (0, 0.5, 1)
+ lift_axle_trailer_passive_color: (1.0, 0.85, 0)
+ lift_axle_trailer_active_color: (0, 0.5, 1)
+ differential_lock_color: (0, 0.5, 1)
+ #active_camera_color: (0, 0, 1)
+ #adviser_page_color: (0, 0, 1)
+ #attach_passive_color: (1.0, 0.85, 0)
+ attach_active_color: (0, 1, 0)
+ coupling_active_color: (1, 0, 0)
+ activation_color: (0, 1, 0)
+ retarder_color: (0, 0.5, 1)
+ trailer_brake_passive_color: (1.0, 0.85, 0)
+ trailer_brake_active_color: (0, 0.5, 1)
+}
+
+########## TUTORIAL (UI) ##########
+
+color_context : context.tutorial_ui {
+ layers[]: .layer.tutorial_ui.base
+ layers[]: .layer.tutorial_ui.bindings
+}
+
+color_layer : .layer.tutorial_ui.base {
+ effects[]: .tutorial_ui.base
+}
+
+base_color_effect : .tutorial_ui.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.tutorial_ui.bindings {
+ effects[]: .tutorial_ui.bindings.init
+ effects[]: .tutorial_ui.bindings.adviser.nav_page
+ effects[]: .tutorial_ui.bindings.adviser.job_page
+ effects[]: .tutorial_ui.bindings.adviser.outro
+ effects[]: .tutorial_ui.bindings.delivered
+}
+
+tutorial_color_effect : .tutorial_ui.bindings.init {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: init
+ blinking: true
+
+ mixes[]: "selectfcs" # keyboard.enter
+}
+
+tutorial_color_effect : .tutorial_ui.bindings.adviser.nav_page {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: adviser
+ adviser_stage: nav_page
+ blinking: true
+
+ mixes[]: "advpage1" # keyboard.f6
+}
+
+tutorial_color_effect : .tutorial_ui.bindings.adviser.job_page {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: adviser
+ adviser_stage: job_page
+ blinking: true
+
+ mixes[]: "advpage2" # keyboard.f7
+}
+
+tutorial_color_effect : .tutorial_ui.bindings.adviser.outro {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: adviser
+ adviser_stage: outro
+ blinking: true
+
+ mixes[]: "advmouse" # keyboard.f1
+}
+
+tutorial_color_effect : .tutorial_ui.bindings.delivered {
+ color: (0.21, 0.83, 0.2)
+ tutorial_stage: delivered
+ blinking: true
+
+ mixes[]: "selectfcs" # keyboard.enter
+}
+
+}

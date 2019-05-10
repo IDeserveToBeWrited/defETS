@@ -1,0 +1,506 @@
+SiiNunit
+{
+
+
+# __        ___                     _                    _     _ ___ 
+# \ \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| |__ \
+#  \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` | / /
+#   \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| ||_| 
+#    \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|(_) 
+#                                                                   
+# Where to add?
+
+#
+# Units common for both ATS and ETS add to the "ATS, ETS common" section.
+# - Always add to the both projects AND at the same position.
+#
+# Units specific for ETS add to the "ETS only" section.
+#
+
+                                                                                                                                              
+#     _  _____ ____     _____ _____ ____                                              
+#    / \|_   _/ ___|   | ____|_   _/ ___|    ___ ___  _ __ ___  _ __ ___   ___  _ __  
+#   / _ \ | | \___ \   |  _|   | | \___ \   / __/ _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \ 
+#  / ___ \| |  ___) |  | |___  | |  ___) | | (_| (_) | | | | | | | | | | | (_) | | | |
+# /_/   \_\_| |____( ) |_____| |_| |____/   \___\___/|_| |_| |_|_| |_| |_|\___/|_| |_|
+#                  |/                                                                
+# ATS, ETS common
+
+### TEMPORARY FOR NEW ANIMATIONS - Plz don't delete until we finish all the animations###
+
+
+mover_anim : mover_anim.n_angry {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/angry_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_angry
+}
+mover_anim : mover_anim.n_crss_hand {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/crosshand_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_cross_hand
+	group_tags[]:	n_idle
+}
+mover_anim : mover_anim.n_crss_hand2 {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/crosshand_idle2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_cross_hand
+	group_tags[]:	n_idle
+}
+mover_anim : mover_anim.n_handback {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/handback_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_handback
+	group_tags[]:	n_idle
+}
+mover_anim : mover_anim.n_handback2 {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/handback_idle2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_handback
+	group_tags[]:	n_idle
+}
+mover_anim : mover_anim.n_leaning {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/leaning_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_leaning
+}
+mover_anim : mover_anim.n_sitting_2 {
+	model_anim: "/model/mover/characters/new_generation/new/animations/universal/sitting_idle_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_sitting
+}
+mover_anim : mover_anim.n_sweeper {
+	model_anim: 	"/model/mover/characters/new_generation/new/animations/universal/sweeping_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_sweeper
+
+	props[]: mover_props.sweeper.n_broom
+}
+mover_anim : mover_anim.n_noter {
+	model_anim: 	"/model/mover/characters/new_generation/new/animations/universal/noter_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	n_noter
+
+	props[]: mover_props.noter.n_notes
+}
+
+### COW ###
+
+mover_anim : mover_anim.cow.eating {
+	model_anim: "/model/mover/animal/cow/cow_eating.pma"
+	group_tags[]: cow
+	group_tags[]: eating
+}
+mover_anim : mover_anim.cow.walk_eating {
+	model_anim: "/model/mover/animal/cow_walk_eating.pma"
+	group_tags[]: cow
+	group_tags[]: eat
+}
+mover_anim : mover_anim.cow.lean {
+	model_anim: "/model/mover/animal/cow_lean.pma"
+	group_tags[]: cow
+	group_tags[]: idle
+}
+mover_anim : mover_anim.cow.idle {
+	model_anim: "/model/mover/animal/cow/cow_idle_anim.pma"
+	group_tags[]: cow	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.cow.idle1 {
+	model_anim: "/model/mover/animal/cow/cow_idle_1_anim.pma"
+	group_tags[]: cow	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.cow.idle2 {
+	model_anim: "/model/mover/animal/cow/cow_idle_2_anim.pma"
+	group_tags[]: cow	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.calf.idle1 {
+	model_anim: "/model/mover/animal/cow/calf_idle_01.pma"
+	group_tags[]: calf	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.calf.idle2 {
+	model_anim: "/model/mover/animal/cow/calf_idle_02.pma"
+	group_tags[]: calf	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.coalf.idle3 {
+	model_anim: "/model/mover/animal/cow/calf_idle_03.pma"
+	group_tags[]: calf	
+	group_tags[]: idle
+}
+mover_anim : mover_anim.coalf.idle4 {
+	model_anim: "/model/mover/animal/cow/calf_idle_eat.pma"
+	group_tags[]: calf	
+	group_tags[]: idle
+	group_tags[]: eat
+}
+
+### HORSE ###
+
+mover_anim : mover_anim.horse.walk {
+	model_anim: "/model/mover/animal/animation/horse/walk_01.pma"
+	group_tags[]: horse	
+}
+mover_anim : mover_anim.horse.trott {
+	model_anim: "/model/mover/animal/animation/horse/trotting_01.pma"
+	group_tags[]: horse	
+}
+mover_anim : mover_anim.horse.run {
+	model_anim: "/model/mover/animal/animation/horse/run_01.pma"
+	group_tags[]: horse	
+}
+mover_anim : mover_anim.horse.eat {
+	model_anim: "/model/mover/animal/animation/horse/eating_01.pma"
+	group_tags[]: horse	
+}
+mover_anim : mover_anim.horse.nerv_eat {
+	model_anim: "/model/mover/animal/animation/horse/nerv_eating_01.pma"
+	group_tags[]: horse	
+}
+
+
+### EAGLES ###
+
+mover_anim : mover_anim.eagles_1 {
+	model_anim: "/model/mover/eagles.pma"
+    group_tags[]: eagles
+}
+mover_anim : mover_anim.eagles_2 {
+	model_anim: "/model/mover/eagles2.pma"
+    group_tags[]: eagles
+}
+
+
+### WALKING MAN WOMAN ###
+
+mover_anim : mover_anim.man.walk {
+	model_anim:		"/model/mover/characters/animations/man/walk/walk_01.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	walk
+}
+mover_anim : mover_anim.woman.walk {
+	model_anim:		"/model/mover/characters/animations/woman/walk/walk_01.pma"
+	group_tags[]:	human
+	group_tags[]:	woman
+	group_tags[]:	walk
+}
+
+
+### IDLE, WOMAN ###
+
+mover_anim : mover_anim.woman.idle {
+	model_anim:		"/model/mover/characters/animations/woman/idle/idle_01.pma"
+	group_tags[]:	human
+	group_tags[]:	woman
+	group_tags[]:	idle
+}
+
+
+### MAN CROSSING HAND ###
+
+mover_anim : mover_anim.cross_hand {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/crosshand_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	cross_hand
+	group_tags[]:	idle
+}
+mover_anim : mover_anim.cross_hand_2 {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/crosshand_idle_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	cross_hand
+	group_tags[]:	idle
+}
+mover_anim : mover_anim.man.cross_hand.ancient {
+	model_anim:		"/model/mover/characters/animations/man/idle/cros_hand_01.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	cross_hand
+	group_tags[]:	idle
+}
+
+
+### MAN HAND BACK ###
+
+mover_anim : mover_anim.hand_back {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/handback_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	hand_back
+	group_tags[]:	idle
+}
+mover_anim : mover_anim.hand_back_2 {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/handback_idle_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	hand_back
+	group_tags[]:	idle
+}
+mover_anim : mover_anim.man.hand_back.ancient {
+	model_anim:		"/model/mover/characters/animations/man/idle/hand_back_01.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	hand_back
+	group_tags[]:	idle
+}
+
+
+### MAN WHEEL CHANGE ###
+
+mover_anim : mover_anim.wheel_ch {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/wheel_change_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	wheel_ch
+}
+mover_anim : mover_anim.wheel_ch_2 {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/wheel_change_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	wheel_ch
+}
+
+
+### MAN LEANING ###
+
+mover_anim : mover_anim.leaning {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/leaning_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	leaning
+}
+mover_anim : mover_anim.man.leaning.ancient {
+	model_anim: "/model/mover/characters/animations/man/idle/leaning_01.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	leaning
+}
+
+
+### MAN SITTING ###
+
+mover_anim : mover_anim.sitting {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/sitting_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	sitting
+}
+mover_anim : mover_anim.sitting_2 {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/sitting_idle_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	sitting
+}
+mover_anim : mover_anim.man.sitting.ancient {
+	model_anim:		"/model/mover/characters/animations/man/idle_sitting/sitting_01.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	sitting
+}
+mover_anim : mover_anim.woman.sitting.ancient {
+	model_anim:		"/model/mover/characters/animations/woman/idle_sitting/sitting_01.pma"
+	group_tags[]:	human
+	group_tags[]:	woman
+	group_tags[]:	sitting
+}
+
+
+### MAN ANGRY ###
+
+mover_anim : mover_anim.angry {
+	model_anim: "/model/mover/characters/new_generation/animations/universal/angry_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	angry
+}
+mover_anim : mover_anim.man.angry.ancient {
+	model_anim:		"/model/mover/characters/animations/man/idle/angry_man.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	angry
+}
+
+
+### MAN SWEEPER ###
+
+mover_anim : mover_anim.sweeper {
+	model_anim: 	"/model/mover/characters/new_generation/animations/universal/sweeping_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	sweeper
+
+	props[]: mover_props.sweeper.broom
+}
+
+
+### MAN NOTER ###
+
+mover_anim : mover_anim.noter {
+	model_anim: 	"/model/mover/characters/new_generation/animations/universal/noter_idle_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	noter
+
+	props[]: mover_props.noter.notes
+}
+
+
+### MAN WASHER ###
+
+mover_anim : mover_anim.washer {
+	model_anim: 	"/model/mover/characters/new_generation/new/animations/universal/washing_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	washer
+
+	props[]: mover_props.washer.n_sponge
+}
+
+
+### MAN BLOWER ###
+
+mover_anim : mover_anim.blower {
+	model_anim:		"/model/mover/characters/new_generation/animations/worker/blower_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	blower
+
+	props[]: mover_props.blower.blower
+	props[]: mover_props.blower.screw
+}
+
+
+### MAN AGITATOR ###
+
+mover_anim : mover_anim.agitator {
+	model_anim:		"/model/mover/characters/new_generation/animations/worker/agitator_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	agitator
+
+	props[]: mover_props.agitator.smallmix
+	props[]: mover_props.agitator.bucket
+}
+
+
+### MAN NAVIGATION 1,2 ###
+
+mover_anim : mover_anim.navi_1 {
+	model_anim:		"/model/mover/characters/new_generation/animations/universal/navigation_1_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	navi_1
+}
+mover_anim : mover_anim.navi_2 {
+	model_anim:		"/model/mover/characters/new_generation/animations/universal/navigation_2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	navi_2
+}
+
+
+### MAN ROAD CUTTER ###
+
+mover_anim : mover_anim.road_cutter {
+	model_anim:		"/model/mover/characters/new_generation/animations/worker/road_cutting_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	road_cutter
+
+	props[]: mover_props.road_cutter.roadsaw
+}
+
+
+### MAN STRAP 1,2 ###
+
+mover_anim : mover_anim.strap_1 {
+	model_anim:		"/model/mover/characters/new_generation/animations/worker/strap1_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	strap_1
+}
+mover_anim : mover_anim.strap_2 {
+	model_anim:		"/model/mover/characters/new_generation/animations/worker/strap2_anim.pma"
+	group_tags[]:	human
+	group_tags[]:	man
+	group_tags[]:	strap_2
+}
+
+
+### GARDENER ###
+
+mover_anim : mover_anim.gardener {
+	model_anim:		"/model/mover/characters/animations/man/work/gardener.pma"
+	group_tags[]:	gardener	
+}
+
+
+### WHEELB SERVICE WORKER ###
+
+mover_anim : mover_anim.wheelb_sw {
+	model_anim: 	"/model/mover/characters/animations/man/work/walk_whl.pma"
+	group_tags[]:	wheelbs
+	group_tags[]:	wheelbw
+}
+
+
+### BASKETBALL PLAYER ###
+
+mover_anim : mover_anim.basket_pl {
+	model_anim: "/model/mover/characters/animations/man/sport/man_dribble.pma"
+	group_tags[]:	basket_pl
+}
+
+
+#  _____ _____ ____                _       
+# | ____|_   _/ ___|    ___  _ __ | |_   _ 
+# |  _|   | | \___ \   / _ \| '_ \| | | | |
+# | |___  | |  ___) | | (_) | | | | | |_| |
+# |_____| |_| |____/   \___/|_| |_|_|\__, |
+#                                    |___/
+# ETS only
+
+
+### BICYCLE MAN ###
+
+mover_anim : mover_anim.bicycle.man.anim {
+	model_anim: "/model/mover/crowd/bicycle_01.pma"
+    group_tags[]: bicycle_man
+}
+
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _                    
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )                   
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V                    
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| |                       
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|                       
+#  _         _   _            _                _             _                      __   _   _                _       __ 
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_ 
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|  
+#  _           __                        |___/     _ _               |___/                           _ _                 
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___           
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|          
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_         
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)        
+#                                                            |___/               |___/                                  
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+
+}

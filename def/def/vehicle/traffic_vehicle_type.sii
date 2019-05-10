@@ -10,16 +10,12 @@ SiiNunit
 #
 # Attributes:
 #
-# spawn_trailer_count - when spawning a vehicle of this type, the number of trailers will be randomly chosen from this array
-#
 # storage_path - path to list of traffic vehicle definitions for this type
 #
 
 traffic_vehicle_type : traffic.vehicle_type.car
 {
 	tags[]: "road"
-
-	attachable_trailer_type[]: simple
 
 	storage_path: "/def/vehicle/traffic_storage_car.sii"
 }
@@ -49,6 +45,13 @@ traffic_vehicle_type : traffic.vehicle_type.truck_city
 	storage_path: "/def/vehicle/traffic_storage_truck_city.sii"
 }
 
+traffic_vehicle_type : traffic.vehicle_type.truck_double
+{
+	tags[]: "road"
+
+	storage_path: "/def/vehicle/traffic_storage_truck_double.sii"
+}
+
 traffic_vehicle_type : traffic.vehicle_type.bus
 {
 	tags[]: "road"
@@ -58,8 +61,6 @@ traffic_vehicle_type : traffic.vehicle_type.bus
 
 traffic_vehicle_type : traffic.vehicle_type.slow
 {
-	attachable_trailer_type[]: simple
-
 	storage_path: "/def/vehicle/traffic_storage_slow.sii"
 }
 
@@ -82,14 +83,6 @@ traffic_vehicle_type : traffic.vehicle_type.train
 
 	tags[]: "rail_train"
 
-	spawn_trailer_count[]: 6
-	spawn_trailer_count[]: 7
-	spawn_trailer_count[]: 8
-	spawn_trailer_count[]: 9
-	spawn_trailer_count[]: 10
-
-	attachable_trailer_type[]: train_car
-
 	safe_distance: 1000
 
 	suspension_coef: 0.0
@@ -104,12 +97,6 @@ traffic_vehicle_type : traffic.vehicle_type.train_fast
 
 	tags[]: "rail_train"
 
-	spawn_trailer_count[]: 3
-	spawn_trailer_count[]: 4
-	spawn_trailer_count[]: 5
-
-	attachable_trailer_type[]: train_car
-
 	safe_distance: 1000
 
 	suspension_coef: 0.0
@@ -123,12 +110,6 @@ traffic_vehicle_type : traffic.vehicle_type.tram
 	speed_class: tram
 
 	tags[]: "rail_tram"
-
-	spawn_trailer_count[]: 1
-	spawn_trailer_count[]: 2
-	spawn_trailer_count[]: 3
-
-	attachable_trailer_type[]: tram_car
 
 	suspension_coef: 0.0
 	deceleration_limit: 8.0

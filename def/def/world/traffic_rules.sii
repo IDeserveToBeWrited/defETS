@@ -120,6 +120,22 @@ traffic_rule_data : traffic_rule.cross_end
 	additional_rules[]: traffic_rule.no_priority
 }
 
+traffic_rule_data : traffic_rule.limit_5
+{
+	name: "Speed limit 5"
+
+	rule: "speed_limit"
+	num_params[]: 5
+}
+
+traffic_rule_data : traffic_rule.limit_8
+{
+	name: "Speed limit 8"
+
+	rule: "speed_limit"
+	num_params[]: 8
+}
+
 traffic_rule_data : traffic_rule.limit_20
 {
 	name: "Speed limit 20"
@@ -159,6 +175,17 @@ traffic_rule_data : traffic_rule.limit_60
 	rule: "speed_limit"
 	num_params[]: 60
 }
+
+traffic_rule_data : traffic_rule.limit_60_t
+{
+	name: "Speed limit 60 (trucks only)"
+
+	rule: "speed_limit"
+	num_params[]: 60
+	str_params[]: "truck"
+	str_params[]: "truck_city"
+}
+
 
 traffic_rule_data : traffic_rule.limit_70
 {
@@ -214,6 +241,19 @@ traffic_rule_data : traffic_rule.limit_130
 
 	rule: "speed_limit"
 	num_params[]: 130
+}
+
+traffic_rule_data : traffic_rule.limit_100_60
+{
+	name: "Speed limit 100 (60 for trucks)"
+
+	rule: "speed_limit"
+	num_params[]: 100
+	num_params[]: 1		# 0 - include vehicle types (default), 1 - exclude vehicle types
+	str_params[]: "truck"
+	str_params[]: "truck_city"
+
+	additional_rules[]: traffic_rule.limit_60_t
 }
 
 traffic_rule_data : traffic_rule.urban_area
@@ -605,6 +645,20 @@ traffic_rule_data : traffic_rule.train_stop_f
 
 	rule: "stop"
 	num_params[]: 1000000.0
+}
+
+traffic_rule_data : traffic_rule.no_chng_in
+{
+	# No lane change in
+	rule: "property"
+	num_params[]: 0
+}
+
+traffic_rule_data : traffic_rule.no_chng_out
+{
+	# No lane change out
+	rule: "property"
+	num_params[]: 1
 }
 
 }

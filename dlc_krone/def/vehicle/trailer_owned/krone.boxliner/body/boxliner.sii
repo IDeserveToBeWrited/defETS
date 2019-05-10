@@ -3,33 +3,26 @@ SiiNunit
 accessory_trailer_body_data : cont.krone.boxliner.body
 {
 	name: "@@series_krone_box_liner@@"
-	price: 7000
+	price: 700
 	unlock: 0
 	icon: "body/krone/boxliner"
 
-	size: (2.55, 2.65, 12.2) # width, height, length (size of the body, internal)
-	total_size: (2.55, 4.0, 12.2) # width, height, length (size of the body + chassis)
+	size: (2.4384, 2.5908, 6.058) # width, height, length (internal size of the body)
+	total_size: (2.55, 4.0, 11.323) # width, height, length (size of the body + chassis)
 
-	volume: 80
+	volume: 40
 	body_type: container
 
 	# Mass of the container platform in KG.
 	#
-	# All is based on krone profiliner and profiliner trailer data
-	# http://www.krone-trailer.com/english/products/curtainsider/profi-liner/
-	# https://www.krone-trailer.com/english/products/refrigerated-semitrailer/cool-liner/
-	# Profiliner curtain 6160, profiliner without cooling unit 7600, with unit&tank 8360
-	#
-	# Base mass for curtain trailer is in chassis, bodies have only deltas to curtain body mass.
-	# Thus curtain has like 0, dryvan/insulated 1500, reefer 2200, moving floor +300 etc
-	# 7.8m body variants are smaller (count as x0.5)
+	# Base mass for container trailer is in chassis, bodies have only deltas to default body mass.
 
 	mass: 0
 
 	# visual data
 
 	model: "/vehicle/trailer_owned/upgrade/body/krone_boxliner/body_01.pmd"
-	#collision:  "/vehicle/trailer_owned/upgrade/body/krone_profiliner/body_01.pmc"
+	collision: "/vehicle/trailer_owned/upgrade/body/krone_boxliner/body_01.pmc"
 
 	#defaults[]: "/def/vehicle/trailer_owned/scs.box/accessory/f_body/cooler.sii"
 	#defaults[]: "/def/vehicle/trailer_owned/scs.box/accessory/markers/simple.sii"

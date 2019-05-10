@@ -9,9 +9,286 @@ SiiNunit
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 
 
-curve_model : curve.1 {
-	model_desc: "/model/railing/crash_barrier.pmd"
+
+curve_model : curve.mod_ger_1 {
+     name: "vezera bridge ger 1"                               
+     model_desc: "/model2/landmark/vezera_bridge_ger.pmd"
+     variation[]: "default | center:1 "
+     start_part[]: "start"  	
+     end_part[]: "end"
+}
+curve_model : curve.17  {
+	name:"quarry_terraces"
+	model_desc: "/model2/rock/quarry_terraces.pmd"
+	variation[]: "var1| p1, p2, p3, p4:1"
+  variation[]: "var2| p2, p3, p4, p1:1"
+  variation[]: "var3| p3, p4, p1, p2:1"
+  variation[]: "var4| p4, p1, p2, p3:1"
+  smooth_surface: true
+
+}
+curve_model : curve.18  {
+	name:"quarry_terraces_large"
+	model_desc: "/model2/rock/quarry_terraces_large.pmd"
+	variation[]: "var1| p1, p2, p3, p4:1"
+  variation[]: "var2| p2, p3, p4, p1:1"
+  variation[]: "var3| p3, p4, p1, p2:1"
+  variation[]: "var4| p4, p1, p2, p3:1"
+  smooth_surface: true
+
 }
 
 
+
+curve_model : curve.22 {
+  name:"hedge_buxus1_concrete"
+	model_desc: "/model2/vegetation/hedges/hedge1/hedge1curve1.pmd"
+
+	smooth_surface: true
+	
+	variation[]: "medium | center_small:20 | sw_cent3:1 | sw_cent5:1 | sw_cent2:1 | sw_cent4:1 | sw_cent1:1"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	variation[]: "medium_wild | sw_cent3:2 | sw_cent5:1 | sw_cent2:2 | sw_cent4:2 | sw_cent1:2"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	
+    variation[]: "Tall | center:20 | center2:1 | center3:1 | center4:1 | center5:1 | center6:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+		
+	variation[]: "tall_wild | center2, center3, center4, center5, center6, center3, center2, center5, center4:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+  		
+    variation[]: "tall_to_med | smalltop, center_small, topsmall, center:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 
+    variation[]: "med_to_tall | topsmall, center, smalltop, center_small:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "tall_to_medB | topsmallB, center_small, smalltopB:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "med_to_tallB | smalltopB, center, topsmallB, center_small:1"
+ 		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 	
+	#variation[]: "med_to_small | small_to_vs, vs_center, vs_to_small:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+  
+	#variation[]: "small_to_med | vs_to_small, center_small, small_to_vs, vs_center:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+ 
+	#variation[]: "small | vs_center, vs_center2:1"
+	#	start_part[]: "small_start" 
+	#	end_part[]: "small_end"
+ 
+		
+ 	dynamic_lod_desc[]: "/model2/vegetation/hedges/hedge1/hedge1curve1_lod1.pmd"
+	dynamic_lod_dist[]: 200.0	
+ }
+
+
+curve_model : curve.23 {
+  name:"hedge_buxus1_concrete_far"
+	model_desc: "/model2/vegetation/hedges/hedge1/hedge1curve1_lod1.pmd"
+
+	smooth_surface: true
+	
+	variation[]: "medium | center_small:20 | sw_cent3:1 | sw_cent5:1 | sw_cent2:1 | sw_cent4:1 | sw_cent1:1"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	variation[]: "medium_wild | sw_cent3:2 | sw_cent5:1 | sw_cent2:2 | sw_cent4:2 | sw_cent1:2"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	
+    variation[]: "Tall | center:20 | center2:1 | center3:1 | center4:1 | center5:1 | center6:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+		
+	variation[]: "tall_wild | center2, center3, center4, center5, center6, center3, center2, center5, center4:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+  		
+    variation[]: "tall_to_med | smalltop, center_small, topsmall, center:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 
+    variation[]: "med_to_tall | topsmall, center, smalltop, center_small:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "tall_to_medB | topsmallB, center_small, smalltopB:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "med_to_tallB | smalltopB, center, topsmallB, center_small:1"
+ 		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 	
+	#variation[]: "med_to_small | small_to_vs, vs_center, vs_to_small:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+  
+	#variation[]: "small_to_med | vs_to_small, center_small, small_to_vs, vs_center:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+ 
+	#variation[]: "small | vs_center, vs_center2:1"
+	#	start_part[]: "small_start" 
+	#	end_part[]: "small_end"
+ 
+
+ 
+ }
+
+
+curve_model : curve.24 {
+  name:"hedge_buxus1"
+	model_desc: "/model2/vegetation/hedges/hedge1/hedge1curve2.pmd"
+
+	smooth_surface: true
+	
+	variation[]: "medium | center_small:20 | sw_cent3:1 | sw_cent5:1 | sw_cent2:1 | sw_cent4:1 | sw_cent1:1"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	variation[]: "medium_wild | sw_cent3:2 | sw_cent5:1 | sw_cent2:2 | sw_cent4:2 | sw_cent1:2"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	
+    variation[]: "Tall | center:20 | center2:1 | center3:1 | center4:1 | center5:1 | center6:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+		
+	variation[]: "tall_wild | center2, center3, center4, center5, center6, center3, center2, center5, center4:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+  		
+    variation[]: "tall_to_med | smalltop, center_small, topsmall, center:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 
+    variation[]: "med_to_tall | topsmall, center, smalltop, center_small:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "tall_to_medB | topsmallB, center_small, smalltopB:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "med_to_tallB | smalltopB, center, topsmallB, center_small:1"
+ 		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 	
+	#variation[]: "med_to_small | small_to_vs, vs_center, vs_to_small:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+  
+	#variation[]: "small_to_med | vs_to_small, center_small, small_to_vs, vs_center:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+ 
+	#variation[]: "small | vs_center, vs_center2:1"
+	#	start_part[]: "small_start" 
+	#	end_part[]: "small_end"
+ 
+		
+ 	dynamic_lod_desc[]: "/model2/vegetation/hedges/hedge1/hedge1curve2_lod1.pmd"
+	dynamic_lod_dist[]: 200.0	
+ }
+
+
+curve_model : curve.25 {
+  name:"hedge_buxus1_far"
+	model_desc: "/model2/vegetation/hedges/hedge1/hedge1curve2_lod1.pmd"
+
+	smooth_surface: true
+	
+	variation[]: "medium | center_small:20 | sw_cent3:1 | sw_cent5:1 | sw_cent2:1 | sw_cent4:1 | sw_cent1:1"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	variation[]: "medium_wild | sw_cent3:2 | sw_cent5:1 | sw_cent2:2 | sw_cent4:2 | sw_cent1:2"
+		start_part[]: "med_start1 | med_start2"    
+		end_part[]: "med_end1 | med_end2"
+
+	
+    variation[]: "Tall | center:20 | center2:1 | center3:1 | center4:1 | center5:1 | center6:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+		
+	variation[]: "tall_wild | center2, center3, center4, center5, center6, center3, center2, center5, center4:1"
+		start_part[]: "tall_start1 | tall_start2"    
+		end_part[]: "tall_end1 | tall_end2"
+  		
+    variation[]: "tall_to_med | smalltop, center_small, topsmall, center:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 
+    variation[]: "med_to_tall | topsmall, center, smalltop, center_small:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "tall_to_medB | topsmallB, center_small, smalltopB:1"
+		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 		
+	variation[]: "med_to_tallB | smalltopB, center, topsmallB, center_small:1"
+ 		start_part[]: "med_start1 | med_start2 | tall_start1 | tall_start2"
+		end_part[]: "med_end1 | med_end2 | tall_end1 | tall_end2"
+ 	
+	#variation[]: "med_to_small | small_to_vs, vs_center, vs_to_small:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+  
+	#variation[]: "small_to_med | vs_to_small, center_small, small_to_vs, vs_center:1"
+	#	start_part[]: "med_start1 | med_start2 | small_start"
+	#	end_part[]: "med_end1 | med_end2 | small_end"
+ 	
+ 
+	#variation[]: "small | vs_center, vs_center2:1"
+	#	start_part[]: "small_start" 
+	#	end_part[]: "small_end"
+}
+curve_model : curve.blke_21 {
+	name:"sparse_trees"
+
+variation[]: "1 | tree_1:1 | tree_2:1 | tree_3:1 | tree_4:1" 
+variation[]: "2 | tree_1, tree_2, tree_3, tree_4, tree2, tree1, tree4, tree3:1" 
+
+	vegetation[]: "tree_1 : vegetmodel.sparse1 | 2.5:3.5 | -2:2 | 0.8:1.2 | 0:360" 
+	vegetation[]: "tree_2 : vegetmodel.sparse2 | 2.5:3.5 | -2:2 | 0.8:1.2 | 0:360" 
+	vegetation[]: "tree_3 : vegetmodel.sparse3 | 2.5:3.5 | -2:2 | 0.8:1.2 | 0:360" 
+	vegetation[]: "tree_4 : vegetmodel.sparse4 | 2.5:3.5 | -2:2 | 0.8:1.2 | 0:360" 
+}
+curve_model : curve.blke_22 {
+	name:"sparse_shrubs"
+
+variation[]: "1 | shrub1:1 | shrub2:1 | shrub3:1 | shrub4:1" 
+variation[]: "2 | shrub1, shrub2, shrub3, shrub4, shrub2, shrub1, shrub4, shrub3:1" 
+
+	vegetation[]: "shrub1 : vegetmodel.sparse.shrub1 | 2:5.6 | -1:1 | 0.8:1.2 | 0:360" 
+	vegetation[]: "shrub2 : vegetmodel.sparse.shrub2 | 2:5.6 | -1:1 | 0.8:1.2 | 0:360" 
+	vegetation[]: "shrub3 : vegetmodel.sparse.shrub3 | 2:5.6 | -1:1 | 0.8:1.2 | 0:360" 
+	vegetation[]: "shrub4 : vegetmodel.sparse.shrub4 | 2.5:6 | -1:1 | 0.8:1.2 | 0:360" 
+}
 }

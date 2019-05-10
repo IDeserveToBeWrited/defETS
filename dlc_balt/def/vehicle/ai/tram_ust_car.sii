@@ -1,15 +1,13 @@
 
-traffic_trailer : train_car.ust_car1
+traffic_trailer : tram_car.ust_car1
 {
 	accessories[]: .ust_car1.tchassis
 	accessories[]: .ust_car1.trwheel0
 	accessories[]: .ust_car1.trwheel1
 
 	displacement_limit: 0.0
-    
-    attachable_trailer[]: "train_car.ust_car2"
 
-
+	slave_trailer: .tram_car.ust_car2
 }
 vehicle_accessory: .ust_car1.tchassis
 {
@@ -27,15 +25,13 @@ vehicle_wheel_accessory: .ust_car1.trwheel1
 }
 
 
-traffic_trailer : train_car.ust_car2
+traffic_trailer : .tram_car.ust_car2
 {
 	accessories[]: .ust_car2.tchassis
 	accessories[]: .ust_car2.trwheel0
 	accessories[]: .ust_car2.trwheel1
 
 	displacement_limit: 0.0
-
-
 }
 vehicle_accessory: .ust_car2.tchassis
 {
