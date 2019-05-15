@@ -309,6 +309,18 @@ trigger_action : trig_action.show_item_r
 	num_params[]: 1
 }
 
+trigger_action : trig_action.play_anim
+{
+	name: "Play anim"
+
+	command: "play_anim"
+	
+	num_params[0]: 0 	# anim index
+	num_params[1]: 0.1 	# blend-in duration [sec] (default: 0.0)
+	num_params[2]: 0.1 	# blend-out duration [sec] (default: 0.0)
+	num_params[3]: 0 	# loop [0 - false, 1 - true] (default: 0)
+}
+
 trigger_action : trig_action.scene
 {
 	name: "Load cutscene"

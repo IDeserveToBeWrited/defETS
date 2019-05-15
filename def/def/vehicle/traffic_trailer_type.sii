@@ -20,22 +20,35 @@ traffic_trailer_type : traffic.trailer_type.semi_trailer
 	storage_path: "/def/vehicle/traffic_storage_semi_trailer.sii"
 }
 
-traffic_trailer_type : traffic.trailer_type.train_car
+traffic_trailer_type : traffic.trailer_type.double
+{
+	tags[]: "road"
+
+	storage_path: "/def/vehicle/traffic_storage_semi_trailer_double.sii"
+}
+
+
+traffic_trailer_type : traffic.trailer_type.train_car_c
 {
 	tags[]: "rail_train"
 
-	attachable_trailer_type[]: train_car
+	safe_distance: 1000
+
+	storage_path: "/def/vehicle/traffic_storage_train_car_cargo.sii"
+}
+
+traffic_trailer_type : traffic.trailer_type.train_car_sp
+{
+	tags[]: "rail_train"
 
 	safe_distance: 1000
 
-	storage_path: "/def/vehicle/traffic_storage_train_car.sii"
+	storage_path: "/def/vehicle/traffic_storage_train_car_special.sii"
 }
 
 traffic_trailer_type : traffic.trailer_type.tram_car
 {
 	tags[]: "rail_tram"
-
-	attachable_trailer_type[]: tram_car
 
 	storage_path: "/def/vehicle/traffic_storage_tram_car.sii"
 }
@@ -46,9 +59,9 @@ traffic_trailer_type : traffic.trailer_type.simple
 	storage_path: "/def/vehicle/traffic_storage_trailer_simple.sii"
 }
 
-traffic_trailer_type : traffic.trailer_type.parked
+traffic_trailer_type : traffic.trailer_type.special
 {
-	storage_path: "/def/vehicle/traffic_storage_trailer_parked.sii"
+	storage_path: "/def/vehicle/traffic_storage_trailer_special.sii"
 }
 }
 
