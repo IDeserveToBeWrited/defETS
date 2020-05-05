@@ -2,15 +2,27 @@ SiiNunit
 {
 accessory_engine_data : engine52.mercedes.actros2014.engine
 {
-	name: "OM 473 Euro VI"
+	name: "OM 473 Euro VI 380"
 	price: 20520
 	unlock: 14
 	info[]: "517 @@hp@@ (380@@kw@@)"
 	info[]: "2@@dg@@600 @@nm@@"
 	info[]: "1@@dg@@100 @@rpm@@"
-	icon: "engine_01"
+	icon: "engine/mercedes_om473"
+
 	torque: 2600
+	torque_curve[]: (300, 0)
+	torque_curve[]: (440, 0.5)
+	torque_curve[]: (800, 0.92)
+	torque_curve[]: (1000, 1)
+	torque_curve[]: (1200, 1)
+	torque_curve[]: (1400, 0.98)
+	torque_curve[]: (1900, 0.67)
+	torque_curve[]: (2000, 0.5)
+	torque_curve[]: (2200, 0)
+
 	rpm_limit: 2300
+	rpm_range_power_boost: (400, 300)
 	volume: 15.6
 	no_adblue_power_limit: 0.5
 

@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_interior_data: std_19_l.renault.t.interior
+{
+	name: "@@standard@@"
+	price: 13200
+	unlock: 0
+	icon: "interior/renault_t/standard"
+
+	model: "/vehicle/truck/renault_t/interior/model.pmd"
+	collision: "/vehicle/truck/renault_t/interior/model.pmc"
+	animated_model: "/vehicle/truck/renault_t/interior/anim.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: standard
+	variant: std_19_low
+
+@include "dashboard_color.sui"
+@include "animations.sui"
+
+@include "seat.sui"
+
+	dashboard_path: "/ui/dashboard/renault_t.sii"
+	gps_path: "/ui/gps.sii"
+
+	glass_panes[]: .renault.t.pane.front
+	glass_panes[]: .renault.t.pane.close
+	glass_panes[]: .renault.t.pane.far
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/renault_t/stock.pmd"
+	ext_variant: std_low
+	ext_look: standard
+
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/steering_w/standard.sii"
+
+	suitable_for[]: "sleeper.renault.t.cabin"
+
+}
+@include "glass.sui"
+}

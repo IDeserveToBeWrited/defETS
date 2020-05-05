@@ -1,174 +1,42 @@
 wander_camera: camera.wander
 {
 	# Wander mode attributes
-	movement_speed: 25.0f
-	rotation_speed: 1.4f
-	teleport_delay: 10.0f
+	# - seed if it is not set then it is generated randomly
+	# - freeze_environment whether should freeze environment. Default value is false.
+	movement_speed: 25.0f			# camera/truck movement speed
+	rotation_speed: 1.4f			# camera/truck rotation speed
+	teleport_delay: 10.0f			# camera teleport delay
+	detailed_dc_threshold: 45.0f		# FPS treshold for dc data collection max fps=45
+	seed: 1234				# seed value specify deterministic behavior selection on crossroads
+	# freeze_environment: true		# skybox-time freeze
+
+	# Variables which are used for file name.
+	#
+	# file name: {file_prefix}date_{machine_name}_version(revision)_{region_name}_{file_suffix}.cpr
+	#
+	# example: /home/20191104_144529_desktop_0.1.3(4a1434113528)_utah.cpr
+	#
+	# region_name: "utah"			# - region_name name of current region.
+	# machine_name: "desktop"		# - machine_name name of current machine.
+	# file_suffix: "night"			# - file_suffix optional suffix
+	# file_prefix: "/home/"			# - file_prefix default prefix is "/home/".
+	# append_data_to_file: "/home/camera_performace_data.cpr"	# - append_data_to_file if is set than all data are appended to this file.
 
 	# Every set describes location. All attributes must be present.
 	# - area_center is point when camera starts, then camera walks randomly.
-	#
 	# - area_radius defines allowed distance from center, if camera cross the distance its teleported back to center.
 	#               negative value means that no distance is defined and camera is never teleported back.
-	#
 	# - area_time defines how long (seconds) the camera will walk in given location before moving further.
 	#               negative value means that no time is defined and camera will walk in location forever.
-	#
 	# - area_ingame_time defines in-game time, which camera sets after teleport to area_center. Time format "HH MM"
+	#
+	# - area_weather defines weather (0 = nice, 1 = bad). Default value is 0 (nice).
+	# - area_countries_data[]: "washington". "utah"  wc running path is restricted to selected country-state only. Camera jump to area center on country border
 
-	area_names[]: "kristiansand"
-	area_centers[]: (-4453, 25, -43484)
+	area_names[]: "base_default"
+	area_centers[]: (14526.7, 82.26, 3575.39)
 	area_radii[]: 1500.0f
 	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Helsingborg"
-	area_centers[]: (9498.29, 30.9267, -30076.6)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Goteborg1"
-	area_centers[]: (8521.36, 24.0492, -39482.7)
-	area_radii[]: 1500.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Goteborg2"
-	area_centers[]: (6626.45, 42.7821, -40730)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Jonkoping"
-	area_centers[]: (14140, 13.0149, -39619.8)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Linkoping"
-	area_centers[]: (18494.1, 27.2583, -43242.2)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Vasteras"
-	area_centers[]: (21068.1, 24.7368, -50438)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Uppsala"
-	area_centers[]: (23966.5, 32.4153, -51796.8)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Orebro"
-	area_centers[]: (16965.2, 31.3604, -48528.6)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Kalmar"
-	area_centers[]: (20043.3, 17.7285, -34005.5)
-	area_radii[]: 1500.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Karlskrona"
-	area_centers[]: (16972, 10.821, -30967.5)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Frederikshavn"
-	area_centers[]: (2627.85, 16.9527, -38071.8)
-	area_radii[]: 800.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Hirsthals"
-	area_centers[]: (1278.83, 24.3507, -38693.7)
-	area_radii[]: 800.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Nynas"
-	area_centers[]: (25063.8, 25.0722, -46278.7)
-	area_radii[]: 800.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Odense"
-	area_centers[]: (1219.82, 30, -26061)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-    area_names[]: "malmo"
-	area_centers[]: ( 10492, 15, -27844)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Trelleborg"
-	area_centers[]: ( 10970, 5, -26032)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-	
-	area_names[]: "Stockholm"
-	area_centers[]: ( 24354, 25, -48111)
-	area_radii[]: 1500.0f
-	area_times[]: 1800.0f	
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Vaxjo"
-	area_centers[]: ( 15940.4, 29.6596, -34920.5)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f	
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Aalborg"
-	area_centers[]: (898.023, 25, -36046.6)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Kodan"
-	area_centers[]: (8087.96, 25, -27896.5)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f	
-	area_ingame_times []: "10 00"
-	
-	area_names[]: "Oslo"
-	area_centers[]: (4395.52, 6.466, -53418)
-	area_radii[]: 3000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-	
-	area_names[]: "bergen"
-	area_centers[]: (-10402.9, 4.05858, -55968.4)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-	
-	area_names[]: "stavanger"
-	area_centers[]: (-10548.7, 23.1833, -48257.7)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "Esbjerg"
-	area_centers[]: (-4620.31, 15, -27397.4)
-	area_radii[]: 1000.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
-
-	area_names[]: "inner malmo"
-	area_centers[]: ( 10492, 15, -27844)
-	area_radii[]: 750.0f
-	area_times[]: 1800.0f
-	area_ingame_times []: "10 00"
+	area_ingame_times[]: "10 00"
+	area_weather[]: 0
 }

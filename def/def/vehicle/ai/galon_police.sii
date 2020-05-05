@@ -1,0 +1,35 @@
+traffic_vehicle : traffic.galon_p
+{
+	accessories[]: .galon_p.chassis
+	accessories[]: .galon_p.fwheel
+	accessories[]: .galon_p.rwheel
+
+	max_speed: 160
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+	
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_ratio: 0.0
+	
+	vehicle_mass: 1600
+@include "drivers_generic_police.sui"	
+}
+
+vehicle_accessory: .galon_p.chassis
+{
+	data_path: "/def/vehicle/ai/galon/chassis_police.sii"
+}
+
+vehicle_wheel_accessory: .galon_p.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .galon_p.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}

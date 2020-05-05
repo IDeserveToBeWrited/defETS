@@ -1,0 +1,42 @@
+SiiNunit
+{
+accessory_interior_data: exc_19_h_uk.renault.t.interior
+{
+	name: "@@exclusive_uk@@"
+	price: 28800
+	unlock: 12
+	icon: "interior/renault_t/exclusive_uk"
+
+	model: "/vehicle/truck/renault_t/interior/uk/model_uk.pmd"
+	collision: "/vehicle/truck/renault_t/interior/uk/model_uk.pmc"
+	animated_model: "/vehicle/truck/renault_t/interior/uk/anim_uk.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: exclusive
+	variant: exc_19_high
+
+@include "dashboard_color.sui"
+@include "animations_uk.sui"
+
+@include "seat.sui"
+
+	dashboard_path: "/ui/dashboard/renault_t.sii"
+	gps_path: "/ui/gps.sii"
+	left_hand_traffic: true
+
+	glass_panes[]: .renault.t.pane.front
+	glass_panes[]: .renault.t.pane.close
+	glass_panes[]: .renault.t.pane.far
+
+
+	ext_model: "/vehicle/truck/upgrade/ext_interior/renault_t/stock_uk.pmd"
+	ext_variant: exc_high
+	ext_look: exclusive
+
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/steering_w/exclusive.sii"
+
+	suitable_for[]: "high_sleeper.renault.t.cabin"
+
+}
+@include "glass.sui"
+}

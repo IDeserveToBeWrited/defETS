@@ -9,330 +9,167 @@ SiiNunit
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 
 
-# Global Commands (used mostly in cutscenes):
-#
-# "play_sound"		- plays a sound
-#					str_params[0]: sound file path
-#					num_params[0]: sound volume [0.0 - 1.0] (default: 1.0)
-#
-# "play_music"		- plays a music
-#					str_params[0]: music file path
-#					num_params[0]: music volume [0.0 - 1.0] (default: 1.0)
-#					num_params[1]: fade in [0 - false, 1 - true] (default: true)
-#
-# "stop_music"		- stops the last played music
-#					num_params[0]: fade out [0 - false, 1 - true] (default: true)
-#
-# "create_win"		- creates an ui window
-#					str_params[0]: window name
-#					str_params[1]: window script path
-#
-# "show_win"		- shows an ui window
-#					str_params[0]: window name
-#					str_params[1]: window script path
-#
-# "set_win_text"	- sets the text of the specified ui element in the active window
-#					num_params[0]: id
-#					str_params[0]: window name
-#					str_params[1]: text
-#
-# "hide_win"		- hides an ui window
-#					str_params[0]: window name
-#
-# "cutscene"		- loads the specified cutscene at node[0] of the closest item found with specified tag
-#					str_params[0]: cutscene data name (from cutscene.sii)
-#					str_params[1]: origin item tag
-#					num_params[0]: autorun [0 - false, 1 - true] (default: false)
-#
-# "activate_hud"	- activates player hud
-#					num_params[0]: hud activation code
-#
-# "cam_enable"		- sets camera mode enabled state
-#					num_params[0]: camera mode
-#					num_params[1]: enabled [0 - false, 1 - true]
-#
-# "teleport"		- teleports the player to the first node of the closest camera point with specified tag
-#                   			str_params[0]: target camera point tag
-#
-# "game_state"		- adds or removes specified game state flags
-#					num_params[0]: add/remove [0 - remove, 1 - add]
-#					str_params[0 - n]: game state flags
-#
-# "pay_toll"		- immediately withdraws money from player's account to pay a toll
-#					num_params[0]: money in [EUR] to withdraw
-#
-# "set_toll"		- set tollgate parameters for tollgate hookups inside the trigger area
-#					str_params[0]: tollgate type
-#					num_params[0]: toll amount in [EUR]
-#
-# Target Commands:
-#
-# "play_anim"		- plays an animation
-#					num_params[0]: anim index
-#					num_params[1]: blend-in duration [sec] (default: 0.0)
-#					num_params[2]: blend-out duration [sec] (default: 0.0)
-#					num_params[3]: loop [0 - false, 1 - true] (default: 0)
-#
-# "set_visible"		- sets object visibility
-#					num_params[0]: visible [0 - false, 1 - true]
-#
-# "camera_point"	- switches the TV camera (if it is activated) to the target camera point
-#					num_params[0]: activation [0 - deactivate, 1 - activate]
-#
-#
-# "service_lock"	- locks/unlocks a service item
-#					num_params[0]: service item type
-#					num_params[1]: lock [0 - false, 1 - true]
-#
-# "achievement"		- unlock a trigger achievement
-#					str_params[0]: achievement trigger param (from achievements.sii)
-#
-#
-# HUD activation codes:
-#
-#	UIA_none				= 0 (deactivation)
-#	UIA_parking				= 3
-#
-#
-# Camera modes:
-#
-#	CAM_behind				= 1
-#	CAM_interior			= 2
-#	CAM_bumper				= 3
-#	CAM_window 				= 4
-#	CAM_cabin 				= 5
-#	CAM_wheel 				= 6
-#	CAM_top 				= 7
-#	CAM_top_fixed 			= 8
-#	CAM_tv 					= 9
-#	CAM_side 				= 10
-#	CAM_cinematic 			= 11
-#
-#
-# Service item types:
-#
-#	ST_gas_station			= 0
-#	ST_service				= 1
-#	ST_truck_dealer			= 2
-#	ST_custom_check			= 3
-#	ST_parking				= 4
-#	ST_recruitment			= 5
+########## Customizable actions ('command' is equal to unit name suffix) ##########
 
-trigger_action : trig_action.hud_parking
+# NOTE: 'str_params' for customizable actions are used only as tooltips in editor
+
+trigger_action : trig_action.achievement
 {
-	name: "Parking hud activation/deactivation"
+	name: "*Achievement"
+	command: "achievement"
 
-	command: "activate_hud"
-	num_params[]: 3
-
-	on_armed: true
-	on_activated: false
-	on_reset: false
-
-	additional_actions[]: trig_action.hud_deactiv
+	str_params[]: "[param1] Achievement trigger group name (from /def/achievements.sii)"
 }
 
-trigger_action : trig_action.hud_deactiv
+trigger_action : trig_action.cutscene
 {
-	name: "Hud deactivation"
+	name: "*Cutscene control"
+	command: "cutscene"
 
-	command: "activate_hud"
-	num_params[]: 0
-
-	on_armed: false
-	on_activated: false
-	on_reset: true
+	str_params[]: "[param1] Action type: 'load' | 'play' | 'play_once' | 'stop' | 'unload'"
+	str_params[]: "[param2] Cutscene data name (from /def/camera/cutscenes.sii) (Only for 'load' action)"
+	str_params[]: "[target] Camera point item at which the cutscene is loaded/played."
 }
 
-trigger_action : trig_action.cam7_on_off
+trigger_action : trig_action.trigger
 {
-	name: "Top camera mode enable/disable"
+	name: "*Trigger control"
+	command: "trigger"
 
-	command: "cam_enable"
-	num_params[]: 7
-	num_params[]: 0
-
-	on_armed: true
-	on_activated: false
-	on_reset: false
-
-	additional_actions[]: trig_action.cam7_on
+	str_params[]: "[param1] Action type: 'activate' (auto-reset) | 'disable' | 'enable'"
+	str_params[]: "[target] Trigger item to which the action is applied."
 }
 
-trigger_action : trig_action.cam7_on
-{
-	name: "Top camera mode enable"
+trigger_action : trig_action.mover {
+	name: "*Mover control"
+	command: "mover"
 
-	command: "cam_enable"
-	num_params[]: 7
-	num_params[]: 1
-
-	on_armed: false
-	on_activated: false
-	on_reset: true
+	str_params[]: "[param1] Action type (all auto-reset): 'move' | 'speed' | 'show' | 'hide' | 'transport' | 'animation'"
+	str_params[]: "[param2 : 'move'] Target node index"
+	str_params[]: "[param2 : 'speed'] Target speed"
+	str_params[]: "[param3 : 'speed'] Node index at which the target speed should be reached (default 0)"
+	str_params[]: "[target] Mover item to which the action is applied."
 }
 
-trigger_action : trig_action.sv_unlock
-{
-	name: "Unlock truck dealer"
+trigger_action : trig_action.hud_message {
+	name: "*HUD message"
+	command: "hud_message"
 
-	command: "service_lock"
-	num_params[]: 2
-	num_params[]: 0
+	str_params[]: "[param1] Text"
+	str_params[]: "[param2] Warning [0/1] - if set to 1, the message is shown as warning (default: 0)"
+	str_params[]: "[param3] Delay [s] - for how long the message is shown (default: 5 seconds)"
 }
 
-trigger_action : trig_action.pay_toll
-{
-	name: "Pay toll"
+trigger_action : trig_action.offence {
+	name: "*Report offence"
+	command: "offence"
 
-	command: "pay_toll"
-	num_params[]: 25
+	str_params[]: "[param1] Offence index (see /def/police_data.sii for available values)"
 }
 
-trigger_action : trig_action.toll_start
-{
-	name: "Tollgate start"
+# *** Supported check types ***
+#
+# Check succeeds if a just generated random number is smaller than given parameter.
+# Example: 'random 0.5' - should pass with cca 50% probability
+#
+# Check succeeds if the number of attached game actor's trailers matches given parameter.
+# If one number is provided, exact match is required. Two numbers are used as an interval.
+# Example: 'trailer_count 1-3' - game actor must have 1-3 attached trailers for the check to pass.
+#
+# Check succeeds if the total length of attached game actor's trailer chain matches given parameter.
+# If one number is provided, exact match is required. Two numbers are used as an interval.
+# Example: 'trailer_length 0' - game actor must not have an attached trailer for the check to pass.
+# Example: 'trailer_length 0 20' - game actor can have any number of trailers (including 'none') as long as their total length is less then 20 for the check to pass.
+#
+# Check succeeds if the value of given game cvar matches given parameter.
+# Example: 'cvar_g_pounds kg lb' - string cvar with name 'g_pounds' must be set to 'kg' or 'lb' for the check to pass.
+# Example: 'cvar_g_traffic 0' - numeric cvar with name 'g_traffic' must be set to '0' for the check to pass.
+# Example: 'cvar_g_traffic 1 100' - numeric cvar with name 'g_traffic' must be set to some value in interval <1;100> for the check to pass.
 
-	command: "set_toll"
-	str_params[]: "start"
+trigger_action : trig_action.check_and {
+	name: "*Check (all conditions)"
+	command: "check_and"
+
+	str_params[]: "[param1,2,...] Condition string in format: [check_type] [parameters]"
+	str_params[]: "[param1,2,...] Check types: 'random' | 'trailer_count' | 'trailer_length' | 'cvar'"
+	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state'"
+	str_params[]: "[param1,2,...] For info about individual check types, see /def/world/trigger_action.sii"
 }
 
-trigger_action : trig_action.toll_onetime
-{
-	name: "Tollgate one-time"
+trigger_action : trig_action.check_or {
+	name: "*Check (any condition)"
+	command: "check_or"
 
-	command: "set_toll"
-	str_params[]: "one_time"
+	str_params[]: "[param1,2,...] Condition string in format: [check_type] [parameters]"
+	str_params[]: "[param1,2,...] Check types: 'random' | 'trailer_count' | 'trailer_length' | 'cvar'"
+	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state'"
+	str_params[]: "[param1,2,...] For info about individual check types, see /def/world/trigger_action.sii"
 }
 
-trigger_action : trig_action.toll_end
-{
-	name: "Tollgate end"
+trigger_action : trig_action.state {
+	name: "*State control"
+	command: "state"
 
-	command: "set_toll"
-	str_params[]: "end"
+	str_params[]: "[param1] Action type: 'add' | 'remove'"
+	str_params[]: "[param2,3...] User defined states to perform action for."
 }
 
-trigger_action : trig_action.trg_disable
+trigger_action : trig_action.gate
 {
-	name: "Trigger disable"
+	name: "*Gate control"
+	command: "gate"
 
-	command: "_trigger"
-	num_params[]: 0
-}
-
-trigger_action : trig_action.trg_enable
-{
-	name: "Trigger enable"
-
-	command: "_trigger"
-	num_params[]: 1
-}
-
-trigger_action : trig_action.trg_enablea
-{
-	name: "Trigger enable (on armed)"
-
-	on_armed: true
-	on_activated: false
-	on_reset: false
-
-	command: "_trigger"
-	num_params[]: 0
-}
-
-trigger_action : trig_action.trg_disabler
-{
-	name: "Trigger disable (on reset)"
-
-	on_armed: false
-	on_activated: false
-	on_reset: true
-
-	command: "_trigger"
-	num_params[]: 1
-}
-
-trigger_action : trig_action.trg_activ
-{
-	name: "Trigger activate"
-
-	command: "_trigger"
-	num_params[]: 2
-}
-
-trigger_action : trig_action.trg_activf
-{
-	name: "Trigger activate (forced)"
-
-	command: "_trigger"
-	num_params[]: 3
-}
-
-trigger_action : trig_action.hide_item
-{
-	name: "Hide item"
-
-	command: "set_visible"
-	num_params[]: 0
-}
-
-trigger_action : trig_action.show_item
-{
-	name: "Show item"
-
-	command: "set_visible"
-	num_params[]: 1
-}
-
-trigger_action : trig_action.hide_item_a
-{
-	name: "Hide item (on armed)"
-
-	on_armed: true
-	on_activated: false
-	on_reset: false
-
-	command: "set_visible"
-	num_params[]: 0
-}
-
-trigger_action : trig_action.show_item_r
-{
-	name: "Show item (on reset)"
-
-	on_armed: false
-	on_activated: false
-	on_reset: true
-
-	command: "set_visible"
-	num_params[]: 1
+	str_params[]: "[param1] Action type: 'disable' (auto-reset) | 'lock' (auto-reset)"
+	str_params[]: "[note] Target gate(s) must be inside trigger area."
 }
 
 trigger_action : trig_action.play_anim
 {
-	name: "Play anim"
-
+	name: "*Play animation"
 	command: "play_anim"
-	
-	num_params[0]: 0 	# anim index
-	num_params[1]: 0.1 	# blend-in duration [sec] (default: 0.0)
-	num_params[2]: 0.1 	# blend-out duration [sec] (default: 0.0)
-	num_params[3]: 0 	# loop [0 - false, 1 - true] (default: 0)
+
+	str_params[]: "[target] Mover item to play the animation."
 }
 
-trigger_action : trig_action.scene
+trigger_action : trig_action.toll_start
 {
-	name: "Load cutscene"
+	name: "*Tollgate start (override hookups)"
+	command: "toll_start"
 
-	command: "cutscene"
+	str_params[]: "[param1] Toll amount paid immediately (EUR)"
+}
+
+trigger_action : trig_action.toll_onetime
+{
+	name: "*Tollgate one-time (override hookups)"
+	command: "toll_onetime"
+
+	str_params[]: "[param1] Toll amount paid immediately (EUR)"
+}
+
+trigger_action : trig_action.toll_end
+{
+	name: "*Tollgate end (override hookups)"
+	command: "toll_end"
+
+	str_params[]: "[param1] Toll amount per km of route from the corresponding start tollgate (EUR)"
+}
+
+########## Preset actions ##########
+
+trigger_action : trig_action.hud_parking
+{
+	name: "Parking HUD activation (auto reset)"
+
+	command: "hud_activate"
+	num_params[]: 3
 }
 
 trigger_action : trig_action.toll_01
 {
 	name: "toll Norway big default"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 19
 }
 
@@ -340,7 +177,7 @@ trigger_action : trig_action.toll_02
 {
 	name: "toll Norway small v4_s2_b2_i2"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 14.5
 }
 
@@ -348,7 +185,7 @@ trigger_action : trig_action.toll_03
 {
 	name: "toll Norway big pay_01"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 7
 }
 
@@ -356,7 +193,7 @@ trigger_action : trig_action.toll_04
 {
 	name: "toll Norway small v1_s1_b1_i1"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 10.5
 }
 
@@ -364,7 +201,7 @@ trigger_action : trig_action.toll_05
 {
 	name: "toll Norway big pay_02"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 7.5
 }
 
@@ -372,7 +209,7 @@ trigger_action : trig_action.toll_06
 {
 	name: "toll Norway small v3_s1_b2_i2"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 11.5
 }
 
@@ -380,7 +217,7 @@ trigger_action : trig_action.toll_07
 {
 	name: "toll Norway small v2_s2_b1_i1"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 93
 }
 
@@ -388,7 +225,7 @@ trigger_action : trig_action.toll_08
 {
 	name: "toll Sweden Oresund"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 172
 }
 
@@ -396,7 +233,7 @@ trigger_action : trig_action.toll_09
 {
 	name: "toll Denmark Storebelt"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 234
 }
 
@@ -404,15 +241,37 @@ trigger_action : trig_action.toll_10
 {
 	name: "toll Sweden Svinesund"
 
-	command: "pay_toll"
+	command: "_pay_toll"
 	num_params[]: 12
 }
 
-trigger_action : trig_action.achievement
-{
-	name: "Trigger achievement"
+trigger_action : trig_action.weigh {
+	name: "Weight request (mandatory)"
 
-	command: "achievement"
+	command: "weigh_req"
+
+	num_params[]: 1.0
+}
+
+trigger_action : trig_action.weight_check {
+	name: "Weigh check (default)"
+
+	command: "weigh_check"
+}
+
+
+trigger_action : trig_action.no_trl_disc
+{
+	name: "Disable trailer disconnection"
+	command: "trailer"
+
+	str_params[]: "no_disconnect"
+}
+
+trigger_action : trig_action.slow_time
+{
+	name: "Slow time (auto reset)"
+	command: "_slow_time"
 }
 
 }

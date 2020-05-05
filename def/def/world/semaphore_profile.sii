@@ -5,7 +5,8 @@ SiiNunit
 # base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
 # some string which is unlikely to conflict with other mod.
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1 {
+tr_semaphore_profile : tr_sem_prof.cr_1x1
+{
 
 	name: "crossroad 1x1"
 
@@ -33,7 +34,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1 {
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2 {
+tr_semaphore_profile : tr_sem_prof.cr_2x2
+{
 
 	name: "crossroad 2x2"
 
@@ -54,7 +56,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2 {
 	cycle[3]: 21.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_alt {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_alt
+{
 
 	name: "crossroad 2x2"
 
@@ -75,7 +78,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_alt {
 	cycle[3]: 0.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1 {
+tr_semaphore_profile : tr_sem_prof.cr_2x1
+{
 
 	name: "crossroad 2x1"
 
@@ -100,7 +104,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1 {
 	cycle[3]: 21.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1t {
+tr_semaphore_profile : tr_sem_prof.cr_1x1t
+{
 
 	name: "crossroad 1x1 turn t"
 
@@ -125,7 +130,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1t {
 	cycle[3]: 21.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1tx1 {
+tr_semaphore_profile : tr_sem_prof.cr_1tx1
+{
 
 	name: "crossroad 1 turn x1 t"
 
@@ -151,7 +157,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1tx1 {
 }
 
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2 {
+tr_semaphore_profile : tr_sem_prof.cr_1x2
+{
 
 	name: "crossroad 1x2"
 
@@ -179,7 +186,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2 {
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.ab_toll {
+tr_semaphore_profile : tr_sem_prof.ab_toll
+{
 
 	name: "tollgate - default"
 
@@ -200,8 +208,21 @@ tr_semaphore_profile : tr_sem_prof.ab_toll {
 	interval[]: (1.0, 3.0, 0.5, 1.5)
 	cycle[]: 0.0
 }
+tr_semaphore_profile : tr_sem_prof.ab_toll_no
+{
 
-tr_semaphore_profile : tr_sem_prof.border_short {
+	name: "tollgate - auto"
+
+	model[]: ""
+
+	type[0]: barrier_automatic
+
+	interval[]: (1.0, 3.0, 0.5, 1.5)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.border_short
+{
 
 	name: "border - short interval"
 
@@ -232,7 +253,7 @@ tr_semaphore_profile : tr_sem_prof.border_short {
 	model[22]: "border_l"
 	model[23]: "border_l"
 	model[24]: "border_l"
-	
+
 	model[25]: "border_ml"
 	model[26]: "border_ml"
 	model[27]: "border_ml"
@@ -242,11 +263,12 @@ tr_semaphore_profile : tr_sem_prof.border_short {
 	type[]: barrier_manual
 
 	interval[0]: (1.0, 3.0, 5.0, 1.5)
-	
+
 	cycle[]: 0.0
 }
 
-tr_semaphore_profile : tr_sem_prof.border_long {
+tr_semaphore_profile : tr_sem_prof.border_long
+{
 
 	name: "border - long interval"
 
@@ -255,7 +277,8 @@ tr_semaphore_profile : tr_sem_prof.border_long {
 	interval[0]: (1.0, 3.0, 10.0, 1.5)
 }
 
-tr_semaphore_profile : tr_sem_prof.crossing {
+tr_semaphore_profile : tr_sem_prof.crossing
+{
 
 	name: "road crossing - default"
 
@@ -288,12 +311,13 @@ tr_semaphore_profile : tr_sem_prof.crossing {
 	id_map[4]: 0
 }
 
-tr_semaphore_profile : tr_sem_prof.crossing_s {
+tr_semaphore_profile : tr_sem_prof.crossing_s
+{
 
 	name: "crossroad 2x1_fi"
 
 	inherited: tr_sem_prof.crossing
-	
+
 	model[0]: ""
 	model[1]: "crossing_r2"
 	model[2]: "crossing_l"
@@ -301,7 +325,8 @@ tr_semaphore_profile : tr_sem_prof.crossing_s {
 	model[4]: "crossing_l2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cross_tram {
+tr_semaphore_profile : tr_sem_prof.cross_tram
+{
 
 	name: "road crossing - tram"
 
@@ -321,7 +346,8 @@ tr_semaphore_profile : tr_sem_prof.cross_tram {
 	id_map[2]: 0
 }
 
-tr_semaphore_profile : tr_sem_prof.cross_ship {
+tr_semaphore_profile : tr_sem_prof.cross_ship
+{
 
 	name: "road crossing - ship"
 
@@ -332,7 +358,7 @@ tr_semaphore_profile : tr_sem_prof.cross_ship {
 
 	type[0]: barrier_distance
 	type[1]: barrier_distance
-	type[]: model_only
+	type[2]: model_only
 
 	model[0]: ""
 	model[1]: ""
@@ -357,7 +383,8 @@ tr_semaphore_profile : tr_sem_prof.cross_ship {
 	id_map[9]: 1
 }
 
-tr_semaphore_profile : tr_sem_prof.temporary {
+tr_semaphore_profile : tr_sem_prof.temporary
+{
 
 	name: "roadwork traffic light"
 
@@ -368,7 +395,8 @@ tr_semaphore_profile : tr_sem_prof.temporary {
 	type[]: traffic_light_blockable
 }
 
-tr_semaphore_profile : tr_sem_prof.temporary.f {
+tr_semaphore_profile : tr_sem_prof.temporary.f
+{
 
 	name: "roadwork traffic light"
 
@@ -379,7 +407,8 @@ tr_semaphore_profile : tr_sem_prof.temporary.f {
 	type[]: traffic_light_blockable
 }
 
-tr_semaphore_profile : tr_sem_prof.gas_car {
+tr_semaphore_profile : tr_sem_prof.gas_car
+{
 
 	name: "gas station - cars"
 
@@ -390,7 +419,8 @@ tr_semaphore_profile : tr_sem_prof.gas_car {
 	type[]: barrier_gas
 }
 
-tr_semaphore_profile : tr_sem_prof.gas_truck {
+tr_semaphore_profile : tr_sem_prof.gas_truck
+{
 
 	name: "gas station - trucks"
 
@@ -401,7 +431,8 @@ tr_semaphore_profile : tr_sem_prof.gas_truck {
 	type[]: barrier_gas
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.gb {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.gb
+{
 
 	name: "crossroad 1x1 uk"
 
@@ -412,28 +443,32 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.gb {
 	type[]: traffic_light
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.gb {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.gb
+{
 
 	name: "crossroad 1x2 uk"
 
 	inherited: tr_sem_prof.cr_1x1.gb
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.gb {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.gb
+{
 
 	name: "crossroad 2x1 uk"
 
 	inherited: tr_sem_prof.cr_1x1.gb
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.gb {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.gb
+{
 
 	name: "crossroad 2x2 uk"
 
 	inherited: tr_sem_prof.cr_1x1.gb
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.nl {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.nl
+{
 
 	name: "crossroad 1x1 nl"
 
@@ -448,7 +483,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.nl {
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.nl {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.nl
+{
 
 	name: "crossroad 2x2 nl"
 
@@ -463,7 +499,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.nl {
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.nl {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.nl
+{
 
 	name: "crossroad 2x1 nl"
 
@@ -478,12 +515,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.nl {
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.nl {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.nl
+{
 
 	name: "crossroad 1x2 nl"
 
 	inherited: tr_sem_prof.cr_1x2
-	
+
 	interval[]: (15.0, 2.0, 21.0, 0.0)
 
 	cycle: 4
@@ -493,7 +531,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.nl {
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.d {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.d
+{
 
 	name: "crossroad 1x1 nl"
 
@@ -508,7 +547,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.d {
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.d {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.d
+{
 
 	name: "crossroad 2x2 nl"
 
@@ -523,7 +563,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.d {
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.d {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.d
+{
 
 	name: "crossroad 2x1 nl"
 
@@ -538,7 +579,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.d {
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.d {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.d
+{
 
 	name: "crossroad 1x2 nl"
 
@@ -553,125 +595,146 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.d {
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.b {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.b
+{
 
 	name: "crossroad 1x1 b"
 	inherited: tr_sem_prof.cr_1x1.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.b {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.b
+{
 
 	name: "crossroad 2x2 b"
 	inherited: tr_sem_prof.cr_2x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.b {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.b
+{
 
 	name: "crossroad 2x1 b"
 	inherited: tr_sem_prof.cr_2x1.nl
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x2.b {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.b
+{
 
 	name: "crossroad 1x2 b"
 	inherited: tr_sem_prof.cr_1x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.i {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.i
+{
 
 	name: "crossroad 1x1 i"
 	inherited: tr_sem_prof.cr_1x1.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.i {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.i
+{
 
 	name: "crossroad 2x2 i"
 	inherited: tr_sem_prof.cr_2x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.i {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.i
+{
 
 	name: "crossroad 2x1 i"
 	inherited: tr_sem_prof.cr_2x1.nl
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x2.i {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.i
+{
 
 	name: "crossroad 1x2 i"
 	inherited: tr_sem_prof.cr_1x2.nl
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x1.l {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.l
+{
 
 	name: "crossroad 1x1 l"
 	inherited: tr_sem_prof.cr_1x1.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.l {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.l
+{
 
 	name: "crossroad 2x2 l"
 	inherited: tr_sem_prof.cr_2x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.l {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.l
+{
 
 	name: "crossroad 2x1 l"
 	inherited: tr_sem_prof.cr_2x1.nl
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x2.l {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.l
+{
 
 	name: "crossroad 1x2 l"
 	inherited: tr_sem_prof.cr_1x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.f {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.f
+{
 
 	name: "crossroad 1x1 f"
 	inherited: tr_sem_prof.cr_1x1.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.f {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.f
+{
 
 	name: "crossroad 2x2 f"
 	inherited: tr_sem_prof.cr_2x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.f {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.f
+{
 
 	name: "crossroad 2x1 f"
 	inherited: tr_sem_prof.cr_2x1.nl
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x2.f {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.f
+{
 
 	name: "crossroad 1x2 f"
 	inherited: tr_sem_prof.cr_1x2.nl
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.pl {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.pl
+{
 
 	name: "crossroad 1x1 pl"
 	inherited: tr_sem_prof.cr_1x1.d
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.pl {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.pl
+{
 
 	name: "crossroad 2x2 pl"
 	inherited: tr_sem_prof.cr_2x2.d
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.pl {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.pl
+{
 
 	name: "crossroad 2x1 pl"
 	inherited: tr_sem_prof.cr_2x1.d
 }
-tr_semaphore_profile : tr_sem_prof.cr_1x2.pl {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.pl
+{
 
 	name: "crossroad 1x2 pl"
 	inherited: tr_sem_prof.cr_1x2.d
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.dk {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.dk
+{
 
 	name: "crossroad 1x1 dk"
 	inherited: tr_sem_prof.cr_1x1
-	
+
 	model[0]: "single2"
 	model[1]: "single2"
 	model[2]: "single2"
@@ -695,36 +758,12 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.dk {
 	sleep_time_end: 0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.s {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.s
+{
 
 	name: "crossroad 1x1 se"
 	inherited: tr_sem_prof.cr_1x1
-	
-	model[0]: "single"
-	model[1]: "single"
-	model[2]: "single"
-	model[3]: "single"
 
-	model[4]: "single"
-	model[5]: "single"
-	model[6]: "single"
-	model[7]: "single"
-
-	id_map[0]: 0
-	id_map[1]: 1
-	id_map[2]: 2
-	id_map[3]: 3
-	id_map[4]: 0
-	id_map[5]: 1
-	id_map[6]: 2
-	id_map[7]: 3	
-}
-
-tr_semaphore_profile : tr_sem_prof.cr_1x1.n {
-
-	name: "crossroad 1x1 no"
-	inherited: tr_sem_prof.cr_1x1
-	
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: "single"
@@ -745,11 +784,38 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.n {
 	id_map[7]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.dk {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.n
+{
+
+	name: "crossroad 1x1 no"
+	inherited: tr_sem_prof.cr_1x1
+
+	model[0]: "single"
+	model[1]: "single"
+	model[2]: "single"
+	model[3]: "single"
+
+	model[4]: "single"
+	model[5]: "single"
+	model[6]: "single"
+	model[7]: "single"
+
+	id_map[0]: 0
+	id_map[1]: 1
+	id_map[2]: 2
+	id_map[3]: 3
+	id_map[4]: 0
+	id_map[5]: 1
+	id_map[6]: 2
+	id_map[7]: 3
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2.dk
+{
 
 	name: "crossroad 2x2 dk"
 	inherited: tr_sem_prof.cr_2x2
-	
+
 	model[0]: "city"
 	model[1]: "city"
 	model[2]: "city"
@@ -759,7 +825,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.dk {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: ""
 	model[9]: ""
 	model[10]: ""
@@ -775,11 +841,12 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.dk {
 	id_map[7]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.s {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.s
+{
 
 	name: "crossroad 2x2 se"
 	inherited: tr_sem_prof.cr_2x2
-	
+
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: "single"
@@ -789,11 +856,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.s {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: "single"
 	model[9]: "single"
 	model[10]: "single"
-	model[11]: "single"	
+	model[11]: "single"
 
 	id_map[0]: 0
 	id_map[1]: 1
@@ -809,17 +876,19 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.s {
 	id_map[11]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.n {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.n
+{
 
 	name: "crossroad 2x2 no"
 	inherited: tr_sem_prof.cr_2x2.s
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.dk {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.dk
+{
 
 	name: "crossroad 1x2 dk"
 	inherited: tr_sem_prof.cr_1x2
-	
+
 	model[0]: "single2"
 	model[1]: "city"
 	model[2]: "single2"
@@ -829,7 +898,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.dk {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: ""
 	model[9]: ""
 
@@ -842,14 +911,15 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.dk {
 	id_map[6]: 2
 	id_map[7]: 3
 	id_map[8]: 1
-	id_map[9]: 3	
+	id_map[9]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.s {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.s
+{
 
 	name: "crossroad 1x2 se"
 	inherited: tr_sem_prof.cr_1x2
-	
+
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: "single"
@@ -859,7 +929,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.s {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: "single"
 	model[9]: "single"
 
@@ -875,17 +945,19 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.s {
 	id_map[9]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.n {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.n
+{
 
 	name: "crossroad 1x2 no"
 	inherited: tr_sem_prof.cr_1x2.s
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.dk {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.dk
+{
 
 	name: "crossroad 2x1 dk"
 	inherited: tr_sem_prof.cr_2x1
-	
+
 	model[0]: "single2"
 	model[1]: "city"
 	model[2]: "single2"
@@ -895,7 +967,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.dk {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: ""
 	model[9]: ""
 
@@ -908,14 +980,15 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.dk {
 	id_map[6]: 2
 	id_map[7]: 3
 	id_map[8]: 1
-	id_map[9]: 3	
+	id_map[9]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.s {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.s
+{
 
 	name: "crossroad 2x1 se"
 	inherited: tr_sem_prof.cr_2x1
-	
+
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: "single"
@@ -925,7 +998,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.s {
 	model[5]: "single"
 	model[6]: "single"
 	model[7]: "single"
-	
+
 	model[8]: "single"
 	model[9]: "single"
 
@@ -941,13 +1014,15 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.s {
 	id_map[9]: 3
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.n {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.n
+{
 
 	name: "crossroad 2x1 no"
 	inherited: tr_sem_prof.cr_2x1.s
 }
 
-tr_semaphore_profile : tr_sem_prof.single {
+tr_semaphore_profile : tr_sem_prof.single
+{
 
 	name: "(old) traffic light - 1 lane"
 	model[]: "single"
@@ -966,7 +1041,8 @@ tr_semaphore_profile : tr_sem_prof.single {
 	cycle[3]: 21.0
 }
 
-tr_semaphore_profile : tr_sem_prof.single_l {
+tr_semaphore_profile : tr_sem_prof.single_l
+{
 
 	name: "(old) traffic light - 1 lane (left side)"
 	model[]: "single_l"
@@ -985,7 +1061,8 @@ tr_semaphore_profile : tr_sem_prof.single_l {
 	cycle[3]: 21.0
 }
 
-tr_semaphore_profile : tr_sem_prof.city {
+tr_semaphore_profile : tr_sem_prof.city
+{
 
 	name: "(old) traffic light - 2 lanes"
 	model[]: "city"
@@ -1010,7 +1087,8 @@ tr_semaphore_profile : tr_sem_prof.city {
 ### CROSS 1 x 1 ###
 ###################
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.lv
+{
 
 	name: "crossroad 1x1 lv"
 
@@ -1034,7 +1112,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.lv {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
+	cycle: 8
 	cycle[0]: 0.0
 	cycle[1]: 21.0
 	cycle[2]: 0.0
@@ -1048,12 +1126,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.lv {
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lv
+{
 
 	inherited: tr_sem_prof.cr_1x1.lv
 
 	name: "crossroad 1x1_lv"
-	
+
 	model[0]: "single"
 	model[1]: "sicity"
 	model[2]: "single"
@@ -1065,7 +1144,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.lt
+{
 
 	name: "crossroad 1x1 lt"
 
@@ -1073,7 +1153,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.lt {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lt
+{
 
 	name: "crossroad 1x1 lt"
 
@@ -1081,7 +1162,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.lt {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.est {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.est
+{
 
 	name: "crossroad 1x1 est"
 
@@ -1089,7 +1171,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.est
+{
 
 	name: "crossroad 1x1 est"
 
@@ -1097,7 +1180,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.ru
+{
 
 	name: "crossroad 1x1 ru"
 
@@ -1105,7 +1189,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.ru
+{
 
 	name: "crossroad 1x1 ru"
 
@@ -1113,7 +1198,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x1.fi
+{
 
 	name: "crossroad 1x1 fi"
 
@@ -1121,7 +1207,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.fi
+{
 
 	name: "crossroad 1x1 fi"
 
@@ -1129,7 +1216,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v1.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v2.fi
+{
 
 	inherited: tr_sem_prof.cr_1x1.lv
 
@@ -1145,7 +1233,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v2.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v3.fi
+{
 
 	inherited: tr_sem_prof.cr_1x1.lv
 
@@ -1161,12 +1250,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v3.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_v4 {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_v4
+{
 
 	inherited: tr_sem_prof.cr_1x1.lv
 
 	name: "crossroad 1x1_reversed"
-	
+
 	type[0]: traffic_light_major
 	type[1]: traffic_light_minor
 	type[2]: traffic_light_major
@@ -1175,11 +1265,11 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v4 {
 	type[5]: traffic_light
 	type[6]: traffic_light
 	type[7]: traffic_light
-	
+
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
-	
-	cycle: 4
+
+	cycle: 8
 	cycle[0]: 21.0
 	cycle[1]: 0.0
 	cycle[2]: 21.0
@@ -1191,12 +1281,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_v4 {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1_tr {
+tr_semaphore_profile : tr_sem_prof.cr_1x1_tr
+{
 
 	inherited: tr_sem_prof.cr_1x1.lv
 
 	name: "crossroad 1x1_tram"
-	
+
 	model[0]: "single"
 	model[1]: "singletr"
 	model[2]: "single"
@@ -1212,7 +1303,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_tr {
 ### CROSS 1 x 2 ###
 ###################
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.lv {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.lv
+{
 
 	name: "crossroad 1x2 lv"
 
@@ -1240,7 +1332,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.lv {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
+	cycle: 10
 	cycle[0]: 0.0
 	cycle[1]: 21.0
 	cycle[2]: 0.0
@@ -1256,12 +1348,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.lv {
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lv
+{
 
 	name: "crossroad 1x2 lv"
 
 	inherited: tr_sem_prof.cr_1x2.lv
-	
+
 	model[]: "city"
 	model[]: "sicity"
 	model[]: "city"
@@ -1275,12 +1368,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.lt {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.lt
+{
 
 	name: "crossroad 1x2 lt"
 
 	inherited: tr_sem_prof.cr_1x2.lv
-	
+
 	model[0]: "city_d"
 	model[1]: "single"
 	model[2]: "city_d"
@@ -1291,10 +1385,11 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.lt {
 	model[7]: ""
 	model[8]: ""
 	model[9]: ""
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lt
+{
 
 	name: "crossroad 1x2 lt"
 
@@ -1307,13 +1402,14 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.lt {
 	model[6]: "single"
 	model[7]: ""
 	model[8]: ""
-	model[9]: ""	
-	
+	model[9]: ""
+
 	inherited: tr_sem_prof.cr_1x2.lt
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.est {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.est
+{
 
 	name: "crossroad 1x2 est"
 
@@ -1321,7 +1417,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.est
+{
 
 	name: "crossroad 1x2 est"
 
@@ -1329,7 +1426,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.ru {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.ru
+{
 
 	name: "crossroad 1x2 ru"
 
@@ -1337,7 +1435,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.ru
+{
 
 	name: "crossroad 1x2 ru"
 
@@ -1345,7 +1444,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v1.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x2.fi
+{
 
 	name: "crossroad 1x2 fi"
 
@@ -1353,12 +1453,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v2.fi
+{
 
 	name: "crossroad 1x2_fi"
 
 	inherited: tr_sem_prof.cr_1x2.lv
-	
+
 	model[]: "sicity2"
 	model[]: "single2"
 	model[]: "sicity2"
@@ -1371,12 +1472,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v2.fi {
 	model[]: "single2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_v3.fi
+{
 
 	name: "crossroad 1x2_fi"
 
 	inherited: tr_sem_prof.cr_1x2.lv
-	
+
 	model[]: "city2"
 	model[]: "sicity2"
 	model[]: "city2"
@@ -1389,7 +1491,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_v3.fi {
 	model[]: "single2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_tram {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_tram
+{
 
 	name: "crossroad 1x2 tram"
 
@@ -1417,7 +1520,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_tram {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
+	cycle: 10
 	cycle[0]: 0.0
 	cycle[1]: 21.0
 	cycle[2]: 0.0
@@ -1433,12 +1536,13 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_tram {
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2_tr_v2 {
+tr_semaphore_profile : tr_sem_prof.cr_1x2_tr_v2
+{
 
 	name: "crossroad 1x2_tram"
 
 	inherited: tr_sem_prof.cr_1x2_tram
-	
+
 	model[0]: "city2"
 	model[1]: "single2"
 	model[2]: "city2"
@@ -1456,7 +1560,8 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2_tr_v2 {
 ### CROSS 2 x 1 ###
 ###################
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.lv
+{
 
 	name: "crossroad 2x1 lv"
 
@@ -1485,7 +1590,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.lv {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
+	cycle: 10
 	cycle[0]: 0.0
 	cycle[1]: 21.0
 	cycle[2]: 0.0
@@ -1496,16 +1601,17 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.lv {
 	cycle[7]: 21.0
 	cycle[8]: 21.0
 	cycle[9]: 21.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lv
+{
 
 	name: "crossroad 2x1 lv"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "sicity"
@@ -1522,10 +1628,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.lv
+{
 
 	name: "crossroad 2x1 lv"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "single"
@@ -1542,10 +1649,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.lv
+{
 
 	name: "crossroad 2x1 lv"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "single"
@@ -1562,10 +1670,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.lv
+{
 
 	name: "crossroad 2x1 lv"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "single"
@@ -1582,10 +1691,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.lt
+{
 
 	name: "crossroad 2x1 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "single"
@@ -1602,10 +1712,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.lt {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lt
+{
 
 	name: "crossroad 2x1 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x1.lv
 
 	model[0]: "sicity"
@@ -1621,28 +1732,32 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.lt {
 	model[10]: ""
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.lt
+{
 
 	name: "crossroad 2x1 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v2.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.lt
+{
 
 	name: "crossroad 2x1 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v3.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.lt
+{
 
 	name: "crossroad 2x1 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v4.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.est
+{
 
 	name: "crossroad 2x1 est"
 
@@ -1650,35 +1765,40 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.est
+{
 
 	name: "crossroad 2x1 est"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v1.lt
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.est
+{
 
 	name: "crossroad 2x1 est"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v2.lt
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.est
+{
 
 	name: "crossroad 2x1 est"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v3.lt
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.est
+{
 
 	name: "crossroad 2x1 est"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v4.lt
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.ru
+{
 
 	name: "crossroad 2x1 ru"
 
@@ -1686,55 +1806,62 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.ru
+{
 
 	name: "crossroad 2x1 ru"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v1.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.ru
+{
 
 	name: "crossroad 2x1 ru"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v2.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.ru
+{
 
 	name: "crossroad 2x1 ru"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v3.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.ru
+{
 
 	name: "crossroad 2x1 ru"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v4.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x1.fi
+{
 
 	name: "crossroad 2x1 fi"
 
 	inherited: tr_sem_prof.cr_2x1.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v1.fi
+{
 
 	name: "crossroad 2x1 fi"
-	
+
 	inherited: tr_sem_prof.cr_2x1_v1.lv
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.fi
+{
 
 	name: "crossroad 2x1_fi"
 
 	inherited: tr_sem_prof.cr_2x1.lv
-	
+
 	model[0]: "single2"
 	model[1]: "city2"
 	model[2]: "single2"
@@ -1749,12 +1876,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v2.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.fi
+{
 
 	name: "crossroad 2x1_fi"
 
 	inherited: tr_sem_prof.cr_2x1.lv
-	
+
 	model[0]: "single2"
 	model[1]: "single2"
 	model[2]: "single2"
@@ -1769,12 +1897,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v3.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.fi
+{
 
 	name: "crossroad 2x1_fi"
 
 	inherited: tr_sem_prof.cr_2x1.lv
-	
+
 	model[0]: "sicity"
 	model[1]: "city"
 	model[2]: "singletr"
@@ -1790,54 +1919,56 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_v4.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_v5 {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_v5
+{
 
 	name: "crossroad 2x1 v5"
 
 	inherited: tr_sem_prof.cr_2x1.lv
-	
-	model[0]:  "single"
-	model[1]:  "single"
-	model[2]:  "single"
-	model[3]:  "single"
-	model[4]:  "single"
-	model[5]:  "single"
-	model[6]:  "single"
-	model[7]:  "single"
-	model[8]:  "single"
-	model[9]:  "single"
+
+	model[0]: "single"
+	model[1]: "single"
+	model[2]: "single"
+	model[3]: "single"
+	model[4]: "single"
+	model[5]: "single"
+	model[6]: "single"
+	model[7]: "single"
+	model[8]: "single"
+	model[9]: "single"
 	model[10]: "single"
 
-	type[0]:  traffic_light_minor
-	type[1]:  traffic_light_major
-	type[2]:  traffic_light_minor
-	type[3]:  traffic_light_major
-	type[4]:  traffic_light
-	type[5]:  traffic_light
-	type[6]:  traffic_light
-	type[7]:  traffic_light
-	type[8]:  traffic_light_major
-	type[9]:  traffic_light_major
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light_major
+	type[9]: traffic_light_major
 	type[10]: traffic_light
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
-	cycle[0]:  0.0
-	cycle[1]:  21.0
-	cycle[2]:  0.0
-	cycle[3]:  21.0
-	cycle[4]:  0.0
-	cycle[5]:  21.0
-	cycle[6]:  0.0
-	cycle[7]:  21.0
-	cycle[8]:  21.0
-	cycle[9]:  21.0
+	cycle: 11
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 21.0
+	cycle[9]: 21.0
 	cycle[10]: 21.0
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_tram {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_tram
+{
 
 	name: "crossroad 2x1 tram"
 
@@ -1865,7 +1996,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_tram {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
+	cycle: 8
 	cycle[0]: 0.0
 	cycle[1]: 21.0
 	cycle[2]: 0.0
@@ -1874,18 +2005,19 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_tram {
 	cycle[5]: 21.0
 	cycle[6]: 0.0
 	cycle[7]: 21.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v2 {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v2
+{
 
 	name: "crossroad 2x1 tram"
 
 	inherited: tr_sem_prof.cr_2x1_tram
-	
+
 	model[0]: "city2"
 	model[1]: "city2"
 	model[2]: "city2"
@@ -1899,12 +2031,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v2 {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v3 {
+tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v3
+{
 
 	name: "crossroad 2x1 tram"
 
 	inherited: tr_sem_prof.cr_2x1_tram
-	
+
 	model[0]: "single"
 	model[1]: "city"
 	model[2]: "single"
@@ -1922,7 +2055,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_tr_v3 {
 ### CROSS 2 x 2 ###
 ###################
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.lv
+{
 
 	name: "crossroad 2x2 lv"
 
@@ -1940,48 +2074,49 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.lv {
 	model[11]: "single"
 	model[12]: "single"
 
-	type[0]:  traffic_light_minor
-	type[1]:  traffic_light_major
-	type[2]:  traffic_light_minor
-	type[3]:  traffic_light_major
-	type[4]:  traffic_light
-	type[5]:  traffic_light
-	type[6]:  traffic_light
-	type[7]:  traffic_light
-	type[8]:  traffic_light
-	type[9]:  traffic_light_minor
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light
+	type[9]: traffic_light_minor
 	type[10]: traffic_light_major
 	type[11]: traffic_light_minor
 	type[12]: traffic_light_major
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
-	cycle[0]:  0.0
-	cycle[1]:  21.0
-	cycle[2]:  0.0
-	cycle[3]:  21.0
-	cycle[4]:  0.0
-	cycle[5]:  21.0
-	cycle[6]:  0.0
-	cycle[7]:  21.0
-	cycle[8]:  0.0
-	cycle[9]:  0.0
+	cycle: 13
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 0.0
 	cycle[10]: 21.0
 	cycle[11]: 0.0
 	cycle[12]: 21.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lv
+{
 
 	name: "crossroad 2x2 lv"
 
-	inherited: tr_sem_prof.cr_2x2.lv	
-	
+	inherited: tr_sem_prof.cr_2x2.lv
+
 	model[0]: "sicity"
 	model[1]: "sicity"
 	model[2]: "sicity"
@@ -1995,13 +2130,14 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lv {
 	model[10]: "single"
 	model[11]: "single"
 	model[12]: "single"
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.lt
+{
 
 	name: "crossroad 2x2 lt"
-	
+
 	inherited: tr_sem_prof.cr_2x2.lv
 
 	model[0]: "city_d"
@@ -2020,12 +2156,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.lt {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lt
+{
 
 	name: "crossroad 2x2 lt"
 
-	inherited: tr_sem_prof.cr_2x2.lt	
-	
+	inherited: tr_sem_prof.cr_2x2.lt
+
 	model[0]: "sicity"
 	model[1]: "sicity"
 	model[2]: "sicity"
@@ -2039,25 +2176,28 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.lt {
 	model[10]: "single"
 	model[11]: "single"
 	model[12]: "single"
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.est
+{
 
 	name: "crossroad 2x2 est"
 
 	inherited: tr_sem_prof.cr_2x2.lt
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.est
+{
 
 	name: "crossroad 2x2 est"
 
-	inherited: tr_sem_prof.cr_2x2_v1.lt	
-	
+	inherited: tr_sem_prof.cr_2x2_v1.lt
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.ru
+{
 
 	name: "crossroad 2x2 ru"
 
@@ -2065,36 +2205,40 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.ru
+{
 
 	name: "crossroad 2x2 ru"
 
-	inherited: tr_sem_prof.cr_2x2_v1.lv	
-	
+	inherited: tr_sem_prof.cr_2x2_v1.lv
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x2.fi
+{
 
 	name: "crossroad 2x2 fi"
 
 	inherited: tr_sem_prof.cr_2x2.lv
-	
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v1.fi
+{
 
 	name: "crossroad 2x2 fi"
 
-	inherited: tr_sem_prof.cr_2x2_v1.lv	
-	
+	inherited: tr_sem_prof.cr_2x2_v1.lv
+
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v2.fi
+{
 
 	name: "crossroad 2x2_fi"
 
 	inherited: tr_sem_prof.cr_2x2.lv
-	
+
 	model[0]: "city2"
 	model[1]: "city2"
 	model[2]: "city2"
@@ -2110,12 +2254,13 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_v2.fi {
 	model[12]: "single2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_v3.fi
+{
 
 	name: "crossroad 2x2_fi"
 
 	inherited: tr_sem_prof.cr_2x2.lv
-	
+
 	model[0]: "sicity2"
 	model[1]: "sicity2"
 	model[2]: "sicity2"
@@ -2131,7 +2276,8 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_v3.fi {
 	model[12]: "single2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2_tram {
+tr_semaphore_profile : tr_sem_prof.cr_2x2_tram
+{
 
 	name: "crossroad 2x2 tram"
 
@@ -2146,7 +2292,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_tram {
 	model[8]: "single"
 	model[9]: "single"
 	model[10]: "singletr"
-	model[11]: "single"
+	model[11]: "singletr"
 	model[12]: "singletr"
 
 	type[0]: traffic_light_minor
@@ -2165,35 +2311,89 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_tram {
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
-	cycle: 4
-	cycle[0]:  0.0
-	cycle[1]:  21.0
-	cycle[2]:  0.0
-	cycle[3]:  21.0
-	cycle[4]:  0.0
-	cycle[5]:  21.0
-	cycle[6]:  0.0
-	cycle[7]:  21.0
-	cycle[8]:  0.0
-	cycle[9]:  0.0
+	cycle: 13
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 0.0
 	cycle[10]: 21.0
 	cycle[11]: 0.0
 	cycle[12]: 21.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 }
 
+tr_semaphore_profile : tr_sem_prof.cr_2x2_tramb
+{
+
+	name: "crossroad 2x2 tram alt"
+
+	model[0]: "city"
+	model[1]: "city"
+	model[2]: "city"
+	model[3]: "city"
+	model[4]: "single"
+	model[5]: "single"
+	model[6]: "single"
+	model[7]: "single"
+	model[8]: "single"
+	model[9]: "single"
+	model[10]: "singletr"
+	model[11]: "singletr"
+	model[12]: "singletr"
+
+	type[0]: traffic_light_major
+	type[1]: traffic_light_minor
+	type[2]: traffic_light_major
+	type[3]: traffic_light_minor
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light
+	type[9]: traffic_light_major
+	type[10]: traffic_light_minor
+	type[11]: traffic_light_major
+	type[12]: traffic_light_minor
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 13
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 0.0
+	cycle[10]: 21.0
+	cycle[11]: 0.0
+	cycle[12]: 21.0
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
+}
 
 ######################
 ### CROSS T1 x 1 T ###
 ######################
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t
+{
 
 	name: "cr_t1x1t"
 
-	
+
 	model[0]: "single"
 	model[1]: "city_str"
 	model[2]: "city_l"
@@ -2218,7 +2418,7 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t {
 	interval[3]: (15.0, 2.0, 41.0, 2.0)
 	interval[4]: (15.0, 2.0, 41.0, 2.0)
 	interval[5]: (33.0, 2.0, 23.0, 2.0)
-	interval[6]: (15.0, 2.0, 41.0, 2.0)	
+	interval[6]: (15.0, 2.0, 41.0, 2.0)
 	interval[7]: (10.0, 2.0, 46.0, 2.0)
 
 	cycle[0]: 0.0
@@ -2229,18 +2429,19 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t {
 	cycle[5]: 39.0
 	cycle[6]: 21.0
 	cycle[7]: 39.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 }
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t.lv
+{
 
 	name: "cr_t1x1t lv"
 
 	inherited: tr_sem_prof.cr_t1x1t
-	
+
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: ""
@@ -2252,13 +2453,14 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.lv
+{
 
 	name: "cr_t1x1t lv"
 
-	inherited: tr_sem_prof.cr_t1x1t.lv	
+	inherited: tr_sem_prof.cr_t1x1t.lv
 
-	
+
 	model[0]: "sicity"
 	model[1]: "city_str"
 	model[2]: "city_l"
@@ -2271,12 +2473,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t.est
+{
 
 	name: "cr_t1x1t est"
 
 	inherited: tr_sem_prof.cr_t1x1t.lv
-	
+
 	model[0]: "single"
 	model[1]: "single"
 	model[2]: ""
@@ -2288,12 +2491,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.est
+{
 
 	name: "cr_t1x1t est"
 
 	inherited: tr_sem_prof.cr_t1x1t.lv
-	
+
 	model[0]: "sicity"
 	model[1]: "city_str"
 	model[2]: "city_l"
@@ -2305,21 +2509,24 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t.fi
+{
 
 	name: "cr_t1x1t fi"
 
 	inherited: tr_sem_prof.cr_t1x1t.est
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.fi
+{
 
 	name: "cr_t1x1t fi"
 
 	inherited: tr_sem_prof.cr_t1x1t_v1.est
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v2.fi
+{
 
 	name: "cr_t1x1t fi"
 	inherited: tr_sem_prof.cr_t1x1t.est
@@ -2335,12 +2542,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v2.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v3.fi
+{
 
 	name: "cr_t1x1t fi"
 
 	inherited: tr_sem_prof.cr_t1x1t.est
-	
+
 	model[0]: "sicity2"
 	model[1]: "city_str2"
 	model[2]: "city_l2"
@@ -2351,39 +2559,44 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v3.fi {
 	model[7]: "duo_left2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t.lt
+{
 
 	name: "cr_t1x1t lt"
 
-	inherited: tr_sem_prof.cr_t1x1t.est	
+	inherited: tr_sem_prof.cr_t1x1t.est
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.lt
+{
 
 	name: "cr_t1x1t lt"
 
-	inherited: tr_sem_prof.cr_t1x1t_v1.est	
+	inherited: tr_sem_prof.cr_t1x1t_v1.est
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t.ru
+{
 
 	name: "cr_t1x1t ru"
 
 	inherited: tr_sem_prof.cr_t1x1t.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1t_v1.ru
+{
 
 	name: "cr_t1x1t ru"
 
-	inherited: tr_sem_prof.cr_t1x1t_v1.lv	
+	inherited: tr_sem_prof.cr_t1x1t_v1.lv
 }
 
 #######################
 ### CROSS T1 x T1 T ###
 #######################
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t
+{
 
 	name: "cr_t1xt1t"
 
@@ -2410,15 +2623,15 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t {
 	type[7]: traffic_light
 	type[8]: traffic_light
 	type[9]: traffic_light
-	
+
 	interval[0]: (15.0, 2.0, 41.0, 2.0)
 	interval[1]: (33.0, 2.0, 23.0, 2.0)
 	interval[2]: (10.0, 2.0, 46.0, 2.0)
 	interval[3]: (33.0, 2.0, 23.0, 2.0)
-	interval[4]: (15.0, 2.0, 41.0, 2.0)	
+	interval[4]: (15.0, 2.0, 41.0, 2.0)
 	interval[5]: (15.0, 2.0, 41.0, 2.0)
 	interval[6]: (33.0, 2.0, 23.0, 2.0)
-	interval[7]: (10.0, 2.0, 46.0, 2.0)	
+	interval[7]: (10.0, 2.0, 46.0, 2.0)
 	interval[8]: (33.0, 2.0, 23.0, 2.0)
 	interval[9]: (15.0, 2.0, 41.0, 2.0)
 
@@ -2432,17 +2645,18 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t {
 	cycle[7]: 21.0
 	cycle[8]: 39.0
 	cycle[9]: 0.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 }
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.lv
+{
 
 	name: "cr_t1xt1t lv"
 
-	inherited: tr_sem_prof.cr_t1xt1t	
+	inherited: tr_sem_prof.cr_t1xt1t
 
 	model[0]: "single"
 	model[1]: "single"
@@ -2457,12 +2671,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.lv
+{
 
 	name: "cr_t1xt1t lv"
 
-	inherited: tr_sem_prof.cr_t1xt1t.lv	
-	
+	inherited: tr_sem_prof.cr_t1xt1t.lv
+
 	model[0]: "city_str"
 	model[1]: "city_str"
 	model[2]: "city_l"
@@ -2476,21 +2691,24 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.lt
+{
 
 	name: "cr_t1xt1t lt"
 
 	inherited: tr_sem_prof.cr_t1xt1t.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.lt
+{
 
 	name: "cr_t1xt1t lt"
 
 	inherited: tr_sem_prof.cr_t1xt1t_v1.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.est
+{
 
 	name: "cr_t1xt1t est"
 
@@ -2498,7 +2716,8 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.est
+{
 
 	name: "cr_t1xt1t est"
 
@@ -2506,14 +2725,16 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.est {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.ru {
- 
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.ru
+{
+
 	name: "cr_t1xt1t ru"
 
 	inherited: tr_sem_prof.cr_t1xt1t.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.ru
+{
 
 	name: "cr_t1xt1t ru"
 
@@ -2521,14 +2742,16 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.ru {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t.fi
+{
 
 	name: "cr_t1xt1t fi"
 
 	inherited: tr_sem_prof.cr_t1xt1t.lv
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.fi
+{
 
 	name: "cr_t1xt1t fi"
 
@@ -2536,12 +2759,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v1.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v2.fi
+{
 
 	name: "cr_t1xt1t fi"
 
 	inherited: tr_sem_prof.cr_t1xt1t.lv
-	
+
 	model[0]: "single2"
 	model[1]: "single2"
 	model[2]: ""
@@ -2554,12 +2778,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v2.fi {
 	model[9]: "duo_left2"
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v3.fi
+{
 
 	name: "cr_t1xt1t fi"
 
 	inherited: tr_sem_prof.cr_t1xt1t.lv
-	
+
 	model[0]: "city_str2"
 	model[1]: "city_str2"
 	model[2]: "city_l2"
@@ -2576,7 +2801,8 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1t_v3.fi {
 ### CROSS T1 x 1 ###
 ####################
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1 {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1
+{
 
 	name: "cr_t1x1"
 
@@ -2605,19 +2831,19 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1 {
 	type[9]: traffic_light
 	type[10]: traffic_light
 	type[11]: traffic_light
-	
+
 	interval[0]: (15.0, 2.0, 41.0, 2.0)
 	interval[1]: (15.0, 2.0, 41.0, 2.0)
 	interval[2]: (15.0, 2.0, 41.0, 2.0)
 	interval[3]: (15.0, 2.0, 41.0, 2.0)
-	interval[4]: (10.0, 2.0, 46.0, 2.0)	
+	interval[4]: (10.0, 2.0, 46.0, 2.0)
 	interval[5]: (10.0, 2.0, 46.0, 2.0)
 	interval[6]: (15.0, 2.0, 41.0, 2.0)
 	interval[7]: (15.0, 2.0, 41.0, 2.0)
 	interval[8]: (15.0, 2.0, 41.0, 2.0)
 	interval[9]: (15.0, 2.0, 41.0, 2.0)
-	interval[10]: (10.0, 2.0, 46.0, 2.0)	
-	interval[11]: (10.0, 2.0, 46.0, 2.0)	
+	interval[10]: (10.0, 2.0, 46.0, 2.0)
+	interval[11]: (10.0, 2.0, 46.0, 2.0)
 
 	cycle[0]: 0.0
 	cycle[1]: 21.0
@@ -2631,16 +2857,17 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1 {
 	cycle[9]: 21.0
 	cycle[10]: 39.0
 	cycle[11]: 39.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.lv
+{
 
 	name: "cr_t1x1 lv"
-	
-	inherited: tr_sem_prof.cr_t1x1	
+
+	inherited: tr_sem_prof.cr_t1x1
 
 	model[0]: "single"
 	model[1]: "sicity"
@@ -2657,12 +2884,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lv
+{
 
 	name: "cr_t1xt1t lv"
 
-	inherited: tr_sem_prof.cr_t1x1.lv	
-	
+	inherited: tr_sem_prof.cr_t1x1.lv
+
 	model[0]: "single"
 	model[1]: "city_str"
 	model[2]: "single"
@@ -2678,80 +2906,89 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lv {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.lt
+{
 
 	name: "cr_t1x1 lt"
 
-	inherited: tr_sem_prof.cr_t1x1.lv	
+	inherited: tr_sem_prof.cr_t1x1.lv
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lt
+{
 
 	name: "cr_t1xt1t lt"
 
-	inherited: tr_sem_prof.cr_t1x1_v1.lv	
-	
+	inherited: tr_sem_prof.cr_t1x1_v1.lv
+
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.est
+{
 
 	name: "cr_t1x1 est"
 
-	inherited: tr_sem_prof.cr_t1x1.lv	
+	inherited: tr_sem_prof.cr_t1x1.lv
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.est
+{
 
 	name: "cr_t1xt1t est"
 
-	inherited: tr_sem_prof.cr_t1x1_v1.lv	
-	
+	inherited: tr_sem_prof.cr_t1x1_v1.lv
+
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.ru
+{
 
 	name: "cr_t1x1 ru"
 
-	inherited: tr_sem_prof.cr_t1x1.lv	
+	inherited: tr_sem_prof.cr_t1x1.lv
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.ru
+{
 
 	name: "cr_t1xt1t ru"
 
-	inherited: tr_sem_prof.cr_t1x1_v1.lv	
-	
+	inherited: tr_sem_prof.cr_t1x1_v1.lv
+
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1.fi {
-
-	name: "cr_t1x1 fi"
-
-	inherited: tr_sem_prof.cr_t1x1.lv	
-
-}
-
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.fi {
-
-	name: "cr_t1xt1t fi"
-
-	inherited: tr_sem_prof.cr_t1x1_v1.lv	
-	
-
-}
-
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.fi
+{
 
 	name: "cr_t1x1 fi"
 
 	inherited: tr_sem_prof.cr_t1x1.lv
-	
+
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.fi
+{
+
+	name: "cr_t1xt1t fi"
+
+	inherited: tr_sem_prof.cr_t1x1_v1.lv
+
+
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v2.fi
+{
+
+	name: "cr_t1x1 fi"
+
+	inherited: tr_sem_prof.cr_t1x1.lv
+
 	model[0]: "single2"
 	model[1]: "single2"
 	model[2]: "single2"
@@ -2767,12 +3004,13 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1_v2.fi {
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1x1_v3.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1x1_v3.fi
+{
 
 	name: "cr_t1xt1t fi"
 
-	inherited: tr_sem_prof.cr_t1x1.lv	
-	
+	inherited: tr_sem_prof.cr_t1x1.lv
+
 	model[0]: "single2"
 	model[1]: "city_str2"
 	model[2]: "single2"
@@ -2793,20 +3031,21 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1_v3.fi {
 ### CROSS T1 x T1 ###
 #####################
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1 {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1
+{
 
 	name: "cr_t1xt1"
 
-	model[0]:  "city_str"
-	model[1]:  "city_str"
-	model[2]:  "city_str"
-	model[3]:  "city_str"
-	model[4]:  "city_l"
-	model[5]:  "city_l"
-	model[6]:  "city_l"
-	model[7]:  "city_l"
-	model[8]:  "duo_str"
-	model[9]:  "duo_str"
+	model[0]: "city_str"
+	model[1]: "city_str"
+	model[2]: "city_str"
+	model[3]: "city_str"
+	model[4]: "city_l"
+	model[5]: "city_l"
+	model[6]: "city_l"
+	model[7]: "city_l"
+	model[8]: "duo_str"
+	model[9]: "duo_str"
 	model[10]: "duo_str"
 	model[11]: "duo_str"
 	model[12]: "duo_left"
@@ -2818,17 +3057,17 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1 {
 	model[18]: "sicity_l"
 	model[19]: "sicity_l"
 
-	
-	type[0]:  traffic_light_minor
-	type[1]:  traffic_light_major
-	type[2]:  traffic_light_minor
-	type[3]:  traffic_light_major
-	type[4]:  traffic_light_minor
-	type[5]:  traffic_light_major
-	type[6]:  traffic_light_minor
-	type[7]:  traffic_light_major
-	type[8]:  traffic_light
-	type[9]:  traffic_light
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: traffic_light_minor
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+	type[7]: traffic_light_major
+	type[8]: traffic_light
+	type[9]: traffic_light
 	type[10]: traffic_light
 	type[11]: traffic_light
 	type[12]: traffic_light
@@ -2841,18 +3080,18 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1 {
 	type[19]: traffic_light
 
 
-	interval[0]:  (15.0, 2.0, 59.0, 2.0)
-	interval[1]:  (15.0, 2.0, 59.0, 2.0)
-	interval[2]:  (15.0, 2.0, 59.0, 2.0)
-	interval[3]:  (15.0, 2.0, 59.0, 2.0)
-	interval[4]:  (10.0, 2.0, 64.0, 2.0)
-	interval[5]:  (10.0, 2.0, 64.0, 2.0)
-	interval[6]:  (10.0, 2.0, 64.0, 2.0)
-	interval[7]:  (10.0, 2.0, 64.0, 2.0)
-	interval[8]:  (15.0, 2.0, 59.0, 2.0)
-	interval[9]:  (15.0, 2.0, 59.0, 2.0)	
-	interval[10]: (15.0, 2.0, 59.0, 2.0)	
-	interval[11]: (15.0, 2.0, 59.0, 2.0)	
+	interval[0]: (15.0, 2.0, 59.0, 2.0)
+	interval[1]: (15.0, 2.0, 59.0, 2.0)
+	interval[2]: (15.0, 2.0, 59.0, 2.0)
+	interval[3]: (15.0, 2.0, 59.0, 2.0)
+	interval[4]: (10.0, 2.0, 64.0, 2.0)
+	interval[5]: (10.0, 2.0, 64.0, 2.0)
+	interval[6]: (10.0, 2.0, 64.0, 2.0)
+	interval[7]: (10.0, 2.0, 64.0, 2.0)
+	interval[8]: (15.0, 2.0, 59.0, 2.0)
+	interval[9]: (15.0, 2.0, 59.0, 2.0)
+	interval[10]: (15.0, 2.0, 59.0, 2.0)
+	interval[11]: (15.0, 2.0, 59.0, 2.0)
 	interval[12]: (10.0, 2.0, 64.0, 2.0)
 	interval[13]: (10.0, 2.0, 64.0, 2.0)
 	interval[14]: (10.0, 2.0, 64.0, 2.0)
@@ -2862,18 +3101,18 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1 {
 	interval[18]: (10.0, 2.0, 64.0, 2.0)
 	interval[19]: (10.0, 2.0, 64.0, 2.0)
 
-	
-	
-	cycle[0]:  0.0
-	cycle[1]:  39.0
-	cycle[2]:  0.0
-	cycle[3]:  39.0
-	cycle[4]:  18.0
-	cycle[5]:  57.0
-	cycle[6]:  18.0
-	cycle[7]:  57.0
-	cycle[8]:  0.0
-	cycle[9]:  39.0
+
+
+	cycle[0]: 0.0
+	cycle[1]: 39.0
+	cycle[2]: 0.0
+	cycle[3]: 39.0
+	cycle[4]: 18.0
+	cycle[5]: 57.0
+	cycle[6]: 18.0
+	cycle[7]: 57.0
+	cycle[8]: 0.0
+	cycle[9]: 39.0
 	cycle[10]: 0.0
 	cycle[11]: 39.0
 	cycle[12]: 18.0
@@ -2884,29 +3123,30 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1 {
 	cycle[17]: 57.0
 	cycle[18]: 18.0
 	cycle[19]: 57.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1.lv {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1.lv
+{
 
 	name: "cr_t1xt1 lv"
 
-	inherited: tr_sem_prof.cr_t1xt1	
-	
-	model[0]:  "city_str"
-	model[1]:  "city_str"
-	model[2]:  "city_str"
-	model[3]:  "city_str"
-	model[4]:  "city_l"
-	model[5]:  "city_l"
-	model[6]:  "city_l"
-	model[7]:  "city_l"
-	model[8]:  "duo_str"
-	model[9]:  "duo_str"
+	inherited: tr_sem_prof.cr_t1xt1
+
+	model[0]: "city_str"
+	model[1]: "city_str"
+	model[2]: "city_str"
+	model[3]: "city_str"
+	model[4]: "city_l"
+	model[5]: "city_l"
+	model[6]: "city_l"
+	model[7]: "city_l"
+	model[8]: "duo_str"
+	model[9]: "duo_str"
 	model[10]: "duo_str"
 	model[11]: "duo_str"
 	model[12]: "duo_left"
@@ -2922,62 +3162,67 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1.lv {
 
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1.lt {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1.lt
+{
 
 	name: "cr_t1xt1 lt"
 
-	inherited: tr_sem_prof.cr_t1xt1.lv	
+	inherited: tr_sem_prof.cr_t1xt1.lv
 
 }
 
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1.est {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1.est
+{
 
 	name: "cr_t1xt1 est"
 
-	inherited: tr_sem_prof.cr_t1xt1.lv	
+	inherited: tr_sem_prof.cr_t1xt1.lv
 
 }
 
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1.ru {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1.ru
+{
 
 	name: "cr_t1xt1 ru"
 
-	inherited: tr_sem_prof.cr_t1xt1.lv	
+	inherited: tr_sem_prof.cr_t1xt1.lv
 
 }
 
 
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1.fi {
-
-	name: "cr_t1xt1 fi"
-
-	inherited: tr_sem_prof.cr_t1xt1.lv	
-
-}
-
-
-
-tr_semaphore_profile : tr_sem_prof.cr_t1xt1_v2.fi {
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1.fi
+{
 
 	name: "cr_t1xt1 fi"
 
 	inherited: tr_sem_prof.cr_t1xt1.lv
 
-	model[0]:  "city_str2"
-	model[1]:  "city_str2"
-	model[2]:  "city_str2"
-	model[3]:  "city_str2"
-	model[4]:  "city_l2"
-	model[5]:  "city_l2"
-	model[6]:  "city_l2"
-	model[7]:  "city_l2"
-	model[8]:  "duo_str2"
-	model[9]:  "duo_str2"
+}
+
+
+
+tr_semaphore_profile : tr_sem_prof.cr_t1xt1_v2.fi
+{
+
+	name: "cr_t1xt1 fi"
+
+	inherited: tr_sem_prof.cr_t1xt1.lv
+
+	model[0]: "city_str2"
+	model[1]: "city_str2"
+	model[2]: "city_str2"
+	model[3]: "city_str2"
+	model[4]: "city_l2"
+	model[5]: "city_l2"
+	model[6]: "city_l2"
+	model[7]: "city_l2"
+	model[8]: "duo_str2"
+	model[9]: "duo_str2"
 	model[10]: "duo_str2"
 	model[11]: "duo_str2"
 	model[12]: "duo_left2"
@@ -2987,7 +3232,7 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1_v2.fi {
 	model[16]: "single_l2"
 	model[17]: "single_l2"
 	model[18]: "single_l2"
-	model[19]: "single_l2"	
+	model[19]: "single_l2"
 
 }
 
@@ -2996,37 +3241,38 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xt1_v2.fi {
 ### CROSS T1 x R1 ###
 #####################
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xr1 {
+tr_semaphore_profile : tr_sem_prof.cr_t1xr1
+{
 
 	name: "cr_t1xr1"
 
-	model[0]:  "single"
-	model[1]:  "city_str"
-	model[2]:  "single"
-	model[3]:  "city_str"
-	model[4]:  "city_l"
-	model[5]:  "city_l"
-	model[6]:  "single"
-	model[7]:  "duo_str"
-	model[8]:  "single"
-	model[9]:  "duo_str"
+	model[0]: "single"
+	model[1]: "city_str"
+	model[2]: "single"
+	model[3]: "city_str"
+	model[4]: "city_l"
+	model[5]: "city_l"
+	model[6]: "single"
+	model[7]: "duo_str"
+	model[8]: "single"
+	model[9]: "duo_str"
 	model[10]: "duo_left"
 	model[11]: "duo_left"
 	model[12]: "single_l"
 	model[13]: "single_l"
 
 
-	
-	type[0]:  traffic_light_minor
-	type[1]:  traffic_light_major
-	type[2]:  traffic_light_minor
-	type[3]:  traffic_light_major
-	type[4]:  traffic_light
-	type[5]:  traffic_light
-	type[6]:  traffic_light
-	type[7]:  traffic_light
-	type[8]:  traffic_light
-	type[9]:  traffic_light
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light
+	type[9]: traffic_light
 	type[10]: traffic_light
 	type[11]: traffic_light
 	type[12]: traffic_light
@@ -3034,60 +3280,61 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xr1 {
 
 
 
-	interval[0]:  (15.0, 2.0, 41.0, 2.0)
-	interval[1]:  (10.0, 2.0, 46.0, 2.0)
-	interval[2]:  (15.0, 2.0, 41.0, 2.0)
-	interval[3]:  (10.0, 2.0, 46.0, 2.0)
-	interval[4]:  (10.0, 2.0, 46.0, 2.0)
-	interval[5]:  (10.0, 2.0, 46.0, 2.0)
-	interval[6]:  (15.0, 2.0, 41.0, 2.0)
-	interval[7]:  (10.0, 2.0, 46.0, 2.0)
-	interval[8]:  (15.0, 2.0, 41.0, 2.0)
-	interval[9]:  (10.0, 2.0, 46.0, 2.0)	
-	interval[10]: (10.0, 2.0, 46.0, 2.0)	
-	interval[11]: (10.0, 2.0, 46.0, 2.0)	
+	interval[0]: (15.0, 2.0, 41.0, 2.0)
+	interval[1]: (10.0, 2.0, 46.0, 2.0)
+	interval[2]: (15.0, 2.0, 41.0, 2.0)
+	interval[3]: (10.0, 2.0, 46.0, 2.0)
+	interval[4]: (10.0, 2.0, 46.0, 2.0)
+	interval[5]: (10.0, 2.0, 46.0, 2.0)
+	interval[6]: (15.0, 2.0, 41.0, 2.0)
+	interval[7]: (10.0, 2.0, 46.0, 2.0)
+	interval[8]: (15.0, 2.0, 41.0, 2.0)
+	interval[9]: (10.0, 2.0, 46.0, 2.0)
+	interval[10]: (10.0, 2.0, 46.0, 2.0)
+	interval[11]: (10.0, 2.0, 46.0, 2.0)
 	interval[12]: (10.0, 2.0, 46.0, 2.0)
 	interval[13]: (10.0, 2.0, 46.0, 2.0)
 
 
 
-	
-	cycle[0]:  0.0
-	cycle[1]:  21.0
-	cycle[2]:  0.0
-	cycle[3]:  21.0
-	cycle[4]:  39.0
-	cycle[5]:  39.0
-	cycle[6]:  0.0
-	cycle[7]:  21.0
-	cycle[8]:  0.0
-	cycle[9]:  21.0
+
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 39.0
+	cycle[5]: 39.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 21.0
 	cycle[10]: 39.0
 	cycle[11]: 39.0
 	cycle[12]: 39.0
 	cycle[13]: 39.0
-	
+
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
 
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_t1xr1_v2 {
+tr_semaphore_profile : tr_sem_prof.cr_t1xr1_v2
+{
 
 	name: "cr_t1xr1 v2"
 
-	inherited: tr_sem_prof.cr_t1xr1	
-	
-	model[0]:  "single2"
-	model[1]:  "city_str2"
-	model[2]:  "single2"
-	model[3]:  "city_str2"
-	model[4]:  "city_l2"
-	model[5]:  "city_l2"
-	model[6]:  "single2"
-	model[7]:  "duo_str2"
-	model[8]:  "single2"
-	model[9]:  "duo_str2"
+	inherited: tr_sem_prof.cr_t1xr1
+
+	model[0]: "single2"
+	model[1]: "city_str2"
+	model[2]: "single2"
+	model[3]: "city_str2"
+	model[4]: "city_l2"
+	model[5]: "city_l2"
+	model[6]: "single2"
+	model[7]: "duo_str2"
+	model[8]: "single2"
+	model[9]: "duo_str2"
 	model[10]: "duo_left2"
 	model[11]: "duo_left2"
 	model[12]: "single_l2"
@@ -3095,5 +3342,384 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xr1_v2 {
 
 }
 
+
+tr_semaphore_profile : tr_sem_prof.bd_gen_sh
+{
+
+	name: "border_short - generic"
+
+	inherited: tr_sem_prof.border_short
+
+	model[0]: "bd_gen"
+	model[1]: "bd_gen"
+	model[2]: "bd_gen"
+	model[3]: "bd_gen"
+	model[4]: "bd_gen"
+	model[5]: "bd_gen"
+	model[6]: "bd_gen"
+	model[7]: "bd_gen"
+	model[8]: "bd_gen"
+	model[9]: "bd_gen"
+	model[10]: "bd_gen"
+	model[11]: "bd_gen"
+	model[12]: "bd_gen"
+	model[13]: "bd_gen"
+	model[14]: "bd_gen"
+	model[15]: "bd_gen"
+	model[16]: "bd_gen"
+	model[17]: "bd_gen"
+	model[18]: "bd_gen"
+	model[19]: "bd_gen"
+	model[20]: "bd_gen"
+	model[21]: "bd_gen"
+	model[22]: "bd_gen"
+	model[23]: "bd_gen"
+	model[24]: "bd_gen"
+	model[25]: "bd_gen"
+	model[26]: "bd_gen"
+	model[27]: "bd_gen"
+	model[28]: "bd_gen"
+	model[29]: "bd_gen"
+
+
+}
+tr_semaphore_profile : tr_sem_prof.bd_gen_lg
+{
+
+	name: "border_long - generic"
+
+	inherited: tr_sem_prof.border_long
+
+	model[0]: "bd_gen"
+	model[1]: "bd_gen"
+	model[2]: "bd_gen"
+	model[3]: "bd_gen"
+	model[4]: "bd_gen"
+	model[5]: "bd_gen"
+	model[6]: "bd_gen"
+	model[7]: "bd_gen"
+	model[8]: "bd_gen"
+	model[9]: "bd_gen"
+	model[10]: "bd_gen"
+	model[11]: "bd_gen"
+	model[12]: "bd_gen"
+	model[13]: "bd_gen"
+	model[14]: "bd_gen"
+	model[15]: "bd_gen"
+	model[16]: "bd_gen"
+	model[17]: "bd_gen"
+	model[18]: "bd_gen"
+	model[19]: "bd_gen"
+	model[20]: "bd_gen"
+	model[21]: "bd_gen"
+	model[22]: "bd_gen"
+	model[23]: "bd_gen"
+	model[24]: "bd_gen"
+	model[25]: "bd_gen"
+	model[26]: "bd_gen"
+	model[27]: "bd_gen"
+	model[28]: "bd_gen"
+	model[29]: "bd_gen"
+
+
+}
+tr_semaphore_profile : tr_sem_prof.bd_gen_sh_c
+{
+
+	name: "border_short - generic_car"
+
+	inherited: tr_sem_prof.border_short
+
+	model[0]: "bd_gen_car"
+	model[1]: "bd_gen_car"
+	model[2]: "bd_gen_car"
+	model[3]: "bd_gen_car"
+	model[4]: "bd_gen_car"
+	model[5]: "bd_gen_car"
+	model[6]: "bd_gen_car"
+	model[7]: "bd_gen_car"
+	model[8]: "bd_gen_car"
+	model[9]: "bd_gen_car"
+	model[10]: "bd_gen_car"
+	model[11]: "bd_gen_car"
+
+
+}
+tr_semaphore_profile : tr_sem_prof.bd_gen_lg_c
+{
+
+	name: "border_long - generic_car"
+
+	inherited: tr_sem_prof.border_long
+
+	model[0]: "bd_gen_car"
+	model[1]: "bd_gen_car"
+	model[2]: "bd_gen_car"
+	model[3]: "bd_gen_car"
+	model[4]: "bd_gen_car"
+	model[5]: "bd_gen_car"
+	model[6]: "bd_gen_car"
+	model[7]: "bd_gen_car"
+	model[8]: "bd_gen_car"
+	model[9]: "bd_gen_car"
+	model[10]: "bd_gen_car"
+	model[11]: "bd_gen_car"
+
+
+}
+tr_semaphore_profile : tr_sem_prof.ab_bd_def
+{
+
+	name: "border_default"
+
+	inherited: tr_sem_prof.ab_toll
+
+	model[]: "bd_gen"
+}
+tr_semaphore_profile : tr_sem_prof.ab_bd_def_o
+{
+
+	name: "border_default_offset"
+
+	inherited: tr_sem_prof.ab_bd_def
+
+	model[]: "bd_gen"
+
+	model_offset[]: (0, 0.9, 0)
+
+
+
+}
+tr_semaphore_profile : tr_sem_prof.border_light
+{
+
+	name: "border_gate_light"
+
+	model[]: "border_lgt"
+
+	type: 2
+	type[0]: traffic_light_blockable
+	type[1]: traffic_light_blockable
+
+	interval[]: (10.0, 0.0, 15.0, 0.0)
+
+	cycle: 2
+	cycle[0]: 0.0
+	cycle[1]: 25.0
+}
+tr_semaphore_profile : tr_sem_prof.ab_light
+{
+
+	name: "border_light_autopass"
+
+	model[]: "border_lgt"
+
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 3.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+tr_semaphore_profile : tr_sem_prof.ab_plus_bd
+{
+
+	name: "border_autopass_plus_short"
+
+	inherited: tr_sem_prof.border_short
+
+	interval[]: (1.0, 3.0, 0.0, 2.0)
+	cycle[]: 0.0
+
+	model[0]: "bd_gen"
+	model[1]: "bd_gen"
+	model[2]: "bd_gen"
+	model[3]: "bd_gen"
+	model[4]: "bd_gen"
+	model[5]: "bd_gen"
+	model[6]: "bd_gen"
+	model[7]: "bd_gen"
+	model[8]: "bd_gen"
+	model[9]: "bd_gen"
+	model[10]: "bd_gen"
+	model[11]: "bd_gen"
+	model[12]: "border_lgt"
+	model[13]: "border_lgt"
+	model[14]: "border_lgt"
+	model[15]: "border_lgt"
+	model[16]: "border_lgt"
+	model[17]: "border_lgt"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_automatic
+	type[7]: barrier_automatic
+	type[8]: barrier_automatic
+	type[9]: barrier_automatic
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: model_only
+	type[13]: model_only
+	type[14]: model_only
+	type[15]: model_only
+	type[16]: model_only
+	type[17]: model_only
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_automatic
+	type[21]: barrier_automatic
+	type[22]: barrier_automatic
+	type[23]: barrier_automatic
+	type[24]: barrier_automatic
+	type[25]: barrier_automatic
+
+	id_map: 26
+	id_map[0]: 0
+	id_map[1]: 1
+	id_map[2]: 2
+	id_map[3]: 3
+	id_map[4]: 4
+	id_map[5]: 5
+	id_map[6]: 6
+	id_map[7]: 7
+	id_map[8]: 8
+	id_map[9]: 9
+	id_map[10]: 10
+	id_map[11]: 11
+	id_map[12]: 6
+	id_map[13]: 7
+	id_map[14]: 8
+	id_map[15]: 9
+	id_map[16]: 10
+	id_map[17]: 11
+	id_map[18]: 18
+	id_map[19]: 19
+	id_map[20]: 20
+	id_map[21]: 21
+	id_map[22]: 22
+	id_map[23]: 23
+	id_map[24]: 24
+	id_map[25]: 25
+}
+tr_semaphore_profile : tr_sem_prof.ab_cal_bd
+{
+
+	name: "border_calafat"
+
+	inherited: tr_sem_prof.border_short
+
+	model[0]: "bd_gen"
+	model[1]: "bd_gen"
+	model[2]: "bd_gen"
+	model[3]: "bd_gen"
+	model[4]: "bd_gen"
+	model[5]: "bd_gen"
+	model[6]: "border_lgt"
+	model[7]: "border_lgt"
+	model[8]: "border_lgt"
+	model[9]: "border_lgt"
+	model[10]: "border_lgt"
+	model[11]: "border_lgt"
+	model[12]: "bd_gen"
+	model[13]: "bd_gen"
+	model[14]: "bd_gen"
+	model[15]: "bd_gen"
+	model[16]: "bd_gen"
+	model[17]: "bd_gen"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: model_only
+	type[7]: model_only
+	type[8]: model_only
+	type[9]: model_only
+	type[10]: model_only
+	type[11]: model_only
+	type[12]: barrier_manual
+	type[13]: barrier_manual
+	type[14]: barrier_manual
+	type[15]: barrier_manual
+	type[16]: barrier_manual
+	type[17]: barrier_manual
+
+	id_map: 18
+	id_map[0]: 0
+	id_map[1]: 1
+	id_map[2]: 2
+	id_map[3]: 3
+	id_map[4]: 4
+	id_map[5]: 5
+	id_map[6]: 0
+	id_map[7]: 1
+	id_map[8]: 2
+	id_map[9]: 3
+	id_map[10]: 4
+	id_map[11]: 5
+	id_map[12]: 12
+	id_map[13]: 13
+	id_map[14]: 14
+	id_map[15]: 15
+	id_map[16]: 16
+	id_map[17]: 17
+
+}
+tr_semaphore_profile : tr_sem_prof.ab_pl_bd_tr
+{
+
+	name: "border_autopass_plus_short_tr"
+
+	inherited: tr_sem_prof.border_short
+
+	interval[]: (1.0, 3.0, 1.5, 2.0)
+	cycle[]: 0.0
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_automatic
+	type[7]: barrier_automatic
+	type[8]: barrier_automatic
+	type[9]: barrier_automatic
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+
+
+	model[0]: "bd_gen"
+	model[1]: "bd_gen"
+	model[2]: "bd_gen"
+	model[3]: "bd_gen"
+	model[4]: "bd_gen"
+	model[5]: "bd_gen"
+	model[6]: "bd_gen"
+	model[7]: "bd_gen"
+	model[8]: "bd_gen"
+	model[9]: "bd_gen"
+	model[10]: "bd_gen"
+	model[11]: "bd_gen"
+	model[12]: "brd_lgt_tr"
+	model[13]: "brd_lgt_tr"
+	model[14]: "brd_lgt_tr"
+	model[15]: "brd_lgt_tr"
+	model[16]: "brd_lgt_tr"
+	model[17]: "brd_lgt_tr"
+
 }
 
+
+}

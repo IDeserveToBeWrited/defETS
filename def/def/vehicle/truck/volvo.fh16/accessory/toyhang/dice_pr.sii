@@ -1,0 +1,69 @@
+SiiNunit
+{
+accessory_addon_int_data : dice_pr.volvo.fh16.toyhang
+{
+	steam_inventory_id: 63
+	name: "@@winning_dice@@"
+	price: 140
+	unlock: 0
+	icon: "toyhang/dice_pr"
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toyhang/fastening.pmd"
+	data[]: .dice_pr1.phys_data
+	data[]: .dice_pr2.phys_data
+}
+physics_toy_data : .dice_pr1.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toyhang/dice_pr/dice_pr.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toyhang/dice_pr/dice_pr.pmc"
+
+	toy_type: "TT_rope"			# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.15				# toy mass
+	linear_damping: 0.2				# damping of swinging of toy
+	linear_stiffness: 1.55				# rope - influences rope springing
+
+	locator_hook_offset: (0.0f, -0.008f, 0.0f)		# offset of connection point on hook against toy locator
+	rest_position_offset: (0.04f, 0.0f, 0.0f)		# artificial offset to the toy at rest position
+								# (nonzero e.g. when more toys push against each other)
+	rest_rotation_offset: (45.1f, 12.1f, 0.0f)		# artificial offset to the toy at rest position
+								# (nonzero e.g. when more toys push against each other)
+
+	# definitions valid only for toys with rope
+	rope_width: 0.002			# width of rope
+	rope_length: 0.10				# lengt of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset: 0.0				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset: 0.0				# double_rope - distance between rope tingles at toy
+	rope_resolution: 3				# number of inner nodes of rope, except end nodes with anchores
+	rope_linear_density: 0.5435				# density, i.e. weight of rope per 1 m of length
+	position_iterations: 4				# number of iterations in position solver
+	node_damping: 0.2				# rope node velocity damping
+
+	rope_material: "/material/ropes/cable_white.mat"
+}
+physics_toy_data : .dice_pr2.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toyhang/dice_pr/dice_pr.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toyhang/dice_pr/dice_pr.pmc"
+
+	toy_type: "TT_rope"			# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.14				# toy mass
+	linear_damping: 0.2				# damping of swinging of toy
+	linear_stiffness: 1.55				# rope - influences rope springing
+
+	locator_hook_offset: (0.0f, -0.008f, 0.0f)		# offset of connection point on hook against toy locator
+	rest_position_offset: (-0.04f, 0.0f, 0.0f)		# artificial offset to the toy at rest position
+								# (nonzero e.g. when more toys push against each other)
+
+	# definitions valid only for toys with rope
+	rope_width: 0.002			# width of rope
+	rope_length: 0.15			# lengt of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset: 0.0				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset: 0.0				# double_rope - distance between rope tingles at toy
+	rope_resolution: 3				# number of inner nodes of rope, except end nodes with anchores
+	rope_linear_density: 0.5435				# density, i.e. weight of rope per 1 m of length
+	position_iterations: 4				# number of iterations in position solver
+	node_damping: 0.2				# rope node velocity damping
+
+	rope_material: "/material/ropes/cable_white.mat"
+}
+}

@@ -1,0 +1,59 @@
+SiiNunit
+{
+accessory_truck_data : vehicle.renault.t
+{
+	info[]: "@@brand_renault@@"
+	info[]: "@@series_renault_t@@"
+
+	behind_camera: camera.behind.basic
+	interior_camera: camera.interior.renault.t
+	interior_camera_oculus: camera.interior.renault.t.oculus
+	bumper_camera: camera.bumper.basic
+	window_camera: camera.window.basic
+	cabin_camera: camera.cabin.basic
+	wheel_camera: camera.wheel.basic
+	top_camera: camera.top.basic
+	tv_camera: camera.tv.basic
+	wander_camera: camera.wander
+	debug_camera: camera.debug
+
+	fallback[]: "chassis|4x2.sii"
+	fallback[]: "cabin|high_sleeper.sii"
+	fallback[]: "interior|standard_high.sii"
+	fallback[]: "engine|dti11_380.sii"
+	fallback[]: "transmission|at2612f.sii"
+	fallback[]: "f_tire|1.sii"
+	fallback[]: "f_disc|front_disc_02_matt_gray.sii"
+	fallback[]: "f_hub|front_hub_01.sii"
+	fallback[]: "f_nuts|front_nuts_01_steel.sii"
+	fallback[]: "r_tire|1.sii"
+	fallback[]: "r_disc|rear_disc_01_matt_gray.sii"
+	fallback[]: "r_hub|rear_hub_01.sii"
+	fallback[]: "r_nuts|rear_nuts_01_steel.sii"
+	fallback[]: "paint_job|color1.sii"
+	fallback[]: "head_light|standard.sii"
+	fallback[]: "accessory|steering_w/standard.sii"
+
+	#chassis
+	require[]: doorstep
+	require[]: f_light_chs
+
+	#cabin n chassis
+	require[]: mirror
+	require[]: doorhndl
+	require[]: s_mirror
+	require[]: f_fender_cab
+	require[]: f_fender_chs
+	require[]: f_intake_chs
+	require[]: f_inlay_chs
+	require[]: f_bumper
+	require[]: f_wnd_frame
+	require[]: s_strip
+	require[]: sideskirt
+	require[]: r_fender
+	require[]: filter
+
+	#interior
+	require[]: steering_w
+}
+}

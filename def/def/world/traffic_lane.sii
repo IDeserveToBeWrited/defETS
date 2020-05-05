@@ -48,6 +48,20 @@ traffic_lane_data : traffic_lane.road.expressway
 	traffic_rules[]: traffic_rule.s_police
 }
 
+traffic_lane_data : traffic_lane.road.expressway.full_in_out
+{
+	speed_class: expressway
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
 traffic_lane_data : traffic_lane.road.motorway
 {
 	speed_class: motorway
@@ -70,7 +84,7 @@ traffic_lane_data : traffic_lane.road.motorway.low_density
 traffic_lane_data : traffic_lane.road.unlimited
 {
 	# NOTE: This lane type exists only for backward compatibility.
-	# It is used as a fallback, when it is not possible to determine traffic lane type 
+	# It is used as a fallback, when it is not possible to determine traffic lane type
 	# from obsolete road look attributes
 
 	speed_class: none
@@ -79,6 +93,11 @@ traffic_lane_data : traffic_lane.road.unlimited
 traffic_lane_data : traffic_lane.no_vehicles
 {
 	speed_class: local_road
+}
+
+traffic_lane_data : traffic_lane.slow_road
+{
+	speed_class: slow_road
 }
 
 traffic_lane_data : traffic_lane.no_vehicles.dirt
@@ -138,5 +157,15 @@ traffic_lane_data : traffic_lane.road.local.tram
 	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
 
 }
+
+traffic_lane_data : traffic_lane.road.expressway.bus_transit
+{
+	speed_class: expressway
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.bus_transit
+	traffic_rules[]: traffic_rule.s_bus_t
+}
+
 
 }

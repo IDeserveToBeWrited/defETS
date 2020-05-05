@@ -31,6 +31,9 @@ traffic_vehicle_type : traffic.vehicle_type.car_city
 
 traffic_vehicle_type : traffic.vehicle_type.truck
 {
+	speed_class: truck
+	license_plate_type: truck
+
 	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_truck.sii"
@@ -39,6 +42,7 @@ traffic_vehicle_type : traffic.vehicle_type.truck
 traffic_vehicle_type : traffic.vehicle_type.truck_city
 {
 	speed_class: truck
+	license_plate_type: truck
 
 	tags[]: "city_centre"
 
@@ -47,11 +51,9 @@ traffic_vehicle_type : traffic.vehicle_type.truck_city
 
 traffic_vehicle_type : traffic.vehicle_type.truck_double
 {
-	
 	speed_class: truck
-	
 	license_plate_type: truck
-	
+
 	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_truck_double.sii"
@@ -59,9 +61,21 @@ traffic_vehicle_type : traffic.vehicle_type.truck_double
 
 traffic_vehicle_type : traffic.vehicle_type.bus
 {
+	speed_class: bus
+	license_plate_type: bus
+
 	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_bus.sii"
+}
+
+# Bus rapid transit system
+traffic_vehicle_type : traffic.vehicle_type.bus_transit
+{
+	speed_class: bus
+	license_plate_type: bus_transit
+	
+	storage_path: "/def/vehicle/traffic_storage_bus_transit.sii"
 }
 
 traffic_vehicle_type : traffic.vehicle_type.slow
@@ -73,9 +87,6 @@ traffic_vehicle_type : traffic.vehicle_type.police
 {
 	speed_class: car
 	license_plate_type: police
-
-	lp_variant_front: "police_front"
-	lp_variant_rear: "police_rear"
 
 	tags[]: "road"
 
@@ -128,8 +139,8 @@ traffic_vehicle_type : traffic.vehicle_type.escort_front
 
 	storage_path: "/def/vehicle/traffic_storage_escort_front.sii"
 
-	license_plate_type: car
 	speed_class: car
+	license_plate_type: car
 
 	deceleration_limit: 6.0
 
@@ -142,8 +153,8 @@ traffic_vehicle_type : traffic.vehicle_type.escort_back
 
 	storage_path: "/def/vehicle/traffic_storage_escort_back.sii"
 
-	license_plate_type: car
 	speed_class: car
+	license_plate_type: car
 
 	deceleration_limit: 6.0
 

@@ -251,6 +251,35 @@ traffic_rule_data : traffic_rule.s_bus_h
 	num_params[]: 2		# count limit
 }
 
+traffic_rule_data : traffic_rule.s_bus_t
+{
+	# name: "Spawn density bus rapid transit"
+
+	rule: "density"
+
+	str_params[]: "bus_transit"
+
+	num_params[]: 6.0	# 06:00
+	num_params[]: 0.8	# frequency
+	num_params[]: 3	# count limit
+
+	num_params[]: 11.0	# 11:00
+	num_params[]: 0.8	# frequency
+	num_params[]: 2		# count limit
+
+	num_params[]: 16.0	# 16:00
+	num_params[]: 0.8	# frequency
+	num_params[]: 3	# count limit
+
+	num_params[]: 20.0	# 20:00
+	num_params[]: 0.5	# frequency
+	num_params[]: 3	# count limit
+
+	num_params[]: 0.0	# 00:00
+	num_params[]: 0.07	# frequency
+	num_params[]: 2		# count limit
+}
+
 traffic_rule_data : traffic_rule.s_police
 {
 	# name: "Spawn density police"

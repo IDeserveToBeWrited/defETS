@@ -1,0 +1,33 @@
+traffic_vehicle : traffic.forklift
+{
+	accessories[]: .forklift.chassis
+	accessories[]: .forklift.fwheel
+	accessories[]: .forklift.rwheel
+
+	max_speed: 15
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	spawn_ratio: 0.0
+
+	vehicle_mass: 1600
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .forklift.chassis
+{
+	data_path: "/def/vehicle/ai/forklift/chassis.sii"
+}
+
+vehicle_wheel_accessory: .forklift.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_forklift.sii"
+}
+
+vehicle_wheel_accessory: .forklift.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_forklift.sii"
+}

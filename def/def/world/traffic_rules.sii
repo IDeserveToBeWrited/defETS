@@ -264,6 +264,29 @@ traffic_rule_data : traffic_rule.urban_area
 	num_params[]: 5
 }
 
+traffic_rule_data : traffic_rule.no_trailer
+{
+	name: "No trailer area"
+	rule: "actor_access"
+	num_params[]: 0 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 0 	# no change to vehicle access
+	num_params[]: 1 	# set trailer access
+	str_params[]: "road"
+}
+
+traffic_rule_data : traffic_rule.car_only
+{
+	name: "Cars only (no trailers)"
+	rule: "actor_access"
+	num_params[]: 1 # 0 - disallow, 1 - allow
+	num_params[]: 1 # 0 - inclusive, 1 - exclusive
+	str_params[]: "car"
+	str_params[]: "car_city"
+
+	additional_rules[]: traffic_rule.no_trailer
+}
+
 traffic_rule_data : traffic_rule.no_trucks
 {
 	name: "No trucks area"
@@ -306,6 +329,17 @@ traffic_rule_data : traffic_rule.buses_only
 	num_params[]: 1 	# set vehicle access
 	num_params[]: 0 	# no change to trailer access
 	str_params[]: "bus"
+}
+
+traffic_rule_data : traffic_rule.bus_transit
+{
+	name: "Allow bus transit only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
+	str_params[]: "bus_transit"
 }
 
 traffic_rule_data : traffic_rule.border_area
@@ -567,6 +601,15 @@ traffic_rule_data : traffic_rule.physics
 	num_params[]: 25
 }
 
+traffic_rule_data : traffic_rule.speed_bump
+{
+	name: "Speed bump"
+	rule: "speed_limit"
+	num_params[]: 20
+
+	additional_rules[]: traffic_rule.physics
+}
+
 traffic_rule_data : traffic_rule.overtake_alw
 {
 	# Allow overtaking
@@ -664,6 +707,15 @@ traffic_rule_data : traffic_rule.no_chng_out
 	# No lane change out
 	rule: "property"
 	num_params[]: 1
+}
+
+traffic_rule_data : traffic_rule.no_pl_limit
+{
+	name: "Disable player speed limit"
+
+	# No player speed limit
+	rule: "property"
+	num_params[]: 30
 }
 
 }
