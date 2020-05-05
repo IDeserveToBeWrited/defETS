@@ -4,20 +4,17 @@ traffic_vehicle : traffic.ust_loco
 	accessories[]: .ust_loco.fwheel
 	accessories[]: .ust_loco.rwheel
 
-	max_speed: 50
+	max_speed: 75
 
-	sound_move[]: "/sound/ai/tram_engine.ogg"
-	sound_horn[]: "/sound/ai/tram_horn.ogg"
-	
+	vehicle_mass: 16000	# 38t whole tram (3 parts) + cca 100ppl
+	engine_power: 125
+
 	spawn_ratio: 0.0
 
-	vehicle_mass: 100000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 20000
-
 	trailer_chains[]: "tram_car.ust_car1"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
 
 	displacement_limit: 0.0
 
@@ -26,6 +23,7 @@ traffic_vehicle : traffic.ust_loco
 	lod_dist[]: 200
 
 	spawn_condition[]: .traffic.ust_loco.condition.city
+
 }
 vehicle_accessory: .ust_loco.chassis
 {

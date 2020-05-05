@@ -8,18 +8,13 @@ traffic_vehicle : traffic.hkl_loco
 
 	max_speed: 80
 
-
-	sound_move[]: "/sound/ai/tram_engine.ogg"
-	sound_horn[]: "/sound/ai/tram_horn.ogg"
-
-
-	vehicle_mass: 60000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 5000
+	vehicle_mass: 22000	# 42t whole tram
+	engine_power: 520	# 8x65kW
 
 	trailer_chains[]: "train_car.hkl_car1 | train_car.hkl_car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
 
 	displacement_limit: 0.0
 
@@ -27,9 +22,8 @@ traffic_vehicle : traffic.hkl_loco
 	lod_dist[]: 130
 
 	spawn_condition[]: .traffic.hkl_loco.condition.city
-
-
 }
+
 vehicle_accessory: .hkl_loco.chassis
 {
 	data_path: "/def/vehicle/ai/tram_hkl/chassis_locomotive.sii"

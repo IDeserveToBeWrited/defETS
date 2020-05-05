@@ -1,6 +1,6 @@
 glass_pane_data : .mercedes.actros_09.pane.front
 {
-	locator: front_glass
+	locator: f_glasspane
 	size: (2.8, 1.0)
 	edge_angle: 20
 	wipers[]: .mercedes.actros_09.pane.wiper1
@@ -22,27 +22,33 @@ wiper_data : .mercedes.actros_09.pane.wiper2
 	length: 0.775
 }
 
-glass_pane_data : .mercedes.actros_09.pane.close
+glass_pane_data : .mercedes.actros_09.pane.left
 {
-	locator: close_glass
-	size: (1.0, 1.0)
+	locator: l_glasspane
+	size: (0.92, 0.78)
 
+	openable_window_bone: win_open_l1
+	openable_window_mask: "/vehicle/truck/mercedes_actros_2009/interior/win_mask_l.mask"
+	
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }
 
-glass_pane_data : .mercedes.actros_09.pane.far
+glass_pane_data : .mercedes.actros_09.pane.right
 {
-	locator: far_glass
-	size: (1.0, 1.0)
+	locator: r_glasspane
+	size: (0.92, 0.78)
 
+	openable_window_bone: win_open_r1
+	openable_window_mask: "/vehicle/truck/mercedes_actros_2009/interior/win_mask_r.mask"
+	
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }
 
 glass_pane_data : .mercedes.actros_09.pane.top
 {
-	locator: top_glass
+	locator: t_glasspane
 	size: (0.8, 0.6)
 	
   	drop_size_minimum: 0.008

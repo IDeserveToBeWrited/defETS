@@ -2,17 +2,25 @@ SiiNunit
 {
 accessory_chassis_data : .chassis
 {
-	detail_model: "/vehicle/trailer_eu/scs_flatbed/flat_bed.pmd"  # player only
-	model: "/vehicle/trailer_eu/scs_flatbed/flat_bed_lod_01.pmd" # traffic
+	detail_model: "/vehicle/trailer_eu/scs_flatbed/flat_bed.pmd"
+	model: "/vehicle/trailer_eu/scs_flatbed/flat_bed_lod_01.pmd"
 	lods[]: "/vehicle/trailer_eu/scs_flatbed/flat_bed_lod_02.pmd"
 	lods[]: "/vehicle/trailer_eu/scs_flatbed/flat_bed_lod_03.pmd"
 	collision: "/vehicle/trailer_eu/scs_flatbed/flat_bed.pmc"
+	variant: default
+	look: yellow
 
 	trailer_brace_model: "/vehicle/trailer_eu/scs_box/curtain_sider/trailer_brace.pmd"
 	trailer_brace_anim: "/vehicle/trailer_eu/scs_box/curtain_sider/trailer_brace.pma"
 
-	trailer_brace_up_sound: "/sound/truck/trailer_brace_up.ogg"
-	trailer_brace_down_sound: "/sound/truck/trailer_brace_down.ogg"
+	extended_shadow_texture: "/vehicle/trailer_eu/scs_box/curtain_sider/shadow_3ax.tobj"
+	extended_shadow_intensity: 1.45
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+
+	ui_shadow: "/vehicle/trailer_eu/scs_box/curtain_sider/shadow_3ax.pmd"
+
+	trailer_mass: 5800.0
 
 	residual_travel[]: 0.12
 	residual_travel[]: 0.12
@@ -21,18 +29,5 @@ accessory_chassis_data : .chassis
 	liftable_axle[]: false
 	liftable_axle[]: false
 	liftable_axle[]: true
-
-	trailer_mass: 5800.0
-
-	variant: default
-	look: yellow
-
-	extended_shadow_texture: "/vehicle/trailer_eu/scs_box/curtain_sider/shadow_3ax.tobj"
-	extended_shadow_intensity: 1.45
-	extended_shadow_fadeout_start: 10
-	extended_shadow_fadeout_length: 0
-
-	ui_shadow: "/vehicle/trailer_eu/scs_box/curtain_sider/shadow_3ax.pmd"
 }
 }
-

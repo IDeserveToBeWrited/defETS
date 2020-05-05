@@ -1,6 +1,6 @@
 glass_pane_data : .iveco.stralis.pane.front
 {
-	locator: front_glass
+	locator: f_glasspane
 	size: (2.5, 0.9)
 	edge_angle: 20
 	wipers[]: .iveco.stralis.pane.wiper1
@@ -23,20 +23,44 @@ wiper_data : .iveco.stralis.pane.wiper2
 }
 
 
-glass_pane_data : .iveco.stralis.pane.close
+glass_pane_data : .iveco.stralis.pane.left
 {
-	locator: close_glass
-	size: (1.0, 1.0)
+	locator: l_glasspane
+	size: (0.49, 0.75)
+	
+	openable_window_bone: win_open_l1
+	openable_window_mask: "/vehicle/truck/iveco_stralis/interior/win_mask_l.mask"
 
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }
 
-glass_pane_data : .iveco.stralis.pane.far
+glass_pane_data : .iveco.stralis.pane.right
 {
-	locator: far_glass
-	size: (1.0, 1.0)
+	locator: r_glasspane
+	size: (0.49, 0.75)
+	
+	openable_window_bone: win_open_r1
+	openable_window_mask: "/vehicle/truck/iveco_stralis/interior/win_mask_r.mask"
+	
+  	drop_size_minimum: 0.008
+	drop_size_maximum: 0.020
+}
 
+glass_pane_data : .iveco.stralis.pane.left_static
+{
+	locator: l1_glasspane
+	size: (0.385, 0.792)
+
+  	drop_size_minimum: 0.008
+	drop_size_maximum: 0.020
+}
+
+glass_pane_data : .iveco.stralis.pane.right_static
+{
+	locator: r1_glasspane
+	size: (0.385, 0.792)
+	
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }

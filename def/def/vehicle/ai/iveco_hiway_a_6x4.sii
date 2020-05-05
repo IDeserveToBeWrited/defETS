@@ -9,7 +9,13 @@ traffic_vehicle : traffic.ivecoh_a6x4
 	max_speed: 90
 	trailer_chains[]: "semi_trailer"
 
-	engine_torque: 2150
+	vehicle_mass: 8429
+	engine_power: 373
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_3.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
 
 	#color from upgrade shop
 	color[]: (0.4982, 0.0472, 0.0103) #orange
@@ -22,13 +28,12 @@ traffic_vehicle : traffic.ivecoh_a6x4
 	color[]: (0.4564, 0.0051, 0.008) #red
 	color[]: (0.0331, 0.1046, 0.0497) #green
 	color[]: (0.8307, 0.8307, 0.8307) #white
-	
+
 	lod_dist[]: 70
 	# add lod in between
 	lod_dist[]: 130
 	lod_dist[]: 200
 
-	vehicle_mass: 8429
 @include "drivers_generic.sui"	
 }
 
@@ -36,13 +41,11 @@ vehicle_accessory: .ivecoh_a6x4.chassis
 {
 	data_path: "/def/vehicle/ai/truck/iveco.hiway/a6x4.sii"
 }
-
 vehicle_wheel_accessory: .ivecoh_a6x4.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-
 vehicle_wheel_accessory: .ivecoh_a6x4.rwheel
 {
 	offset: 0

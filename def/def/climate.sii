@@ -87,4 +87,25 @@ climate_profile : climate.desert {
 	map_offset: (16660.0, 4150.0)
 	map_factor: (-1.71570875e-4, 1.729241463e-4)
 }
+
+climate_profile : climate.albedo {
+	bad_weather_factor: 0.0
+	wetting_factor: 0.1
+	drying_factor: 0.01
+
+	// Globe coordinates (in degrees) are based on map position:
+	// latitude = map_origin[0] + (map_z - map_offset[0]) * map_factor[0]
+	// longitude = map_origin[1] + (map_x - map_offset[1]) * map_factor[1]
+	//
+	// If advanced map projection is used (eg lambert) projection is applied on coordinates accordingly.
+
+	map_projection: lambert_conic
+	standard_paralel_1: 37
+	standard_paralel_2: 65
+
+	map_origin: (50, 15)
+	map_offset: (16660.0, 4150.0)
+	map_factor: (-1.71570875e-4, 1.729241463e-4)
+}
+
 }

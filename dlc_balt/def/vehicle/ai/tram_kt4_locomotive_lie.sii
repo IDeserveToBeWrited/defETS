@@ -4,25 +4,23 @@ traffic_vehicle : traffic.kt4_loco_lie
 	accessories[]: .kt4_loco_lie.fwheel
 	accessories[]: .kt4_loco_lie.rwheel
 
-	max_speed: 50
+	max_speed: 65
 
-	vehicle_mass: 100000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 20000
+	vehicle_mass: 14000	# 20t whole tram + cca 80ppl
+	engine_power: 160	# 4x40kW
 
 	trailer_chains[]: "train_car.kt4_car_lie"
 
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+
 	displacement_limit: 0.0
     
-   
 	lod_dist[]: 70
 	lod_dist[]: 130
 	lod_dist[]: 200
     
 	spawn_condition[]: .traffic.kt4_loco_lie.condition.city
-
 }
 
 vehicle_accessory: .kt4_loco_lie.chassis
@@ -43,6 +41,4 @@ traffic_spawn_condition: .traffic.kt4_loco_lie.condition.city
 	# spawn only near city with specified name
 	type: city
 	str_param[]: "liepaja"
-
 }
-

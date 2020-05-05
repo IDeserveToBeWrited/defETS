@@ -5,17 +5,14 @@ traffic_vehicle : traffic.dr1_lt
 	accessories[]: .dr1_lt.fwheel
 	accessories[]: .dr1_lt.rwheel
 
-
 	max_speed: 120
 
-	vehicle_mass: 72000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 35000
+	vehicle_mass: 170000	# 340t train
+	engine_power: 1472	# 2x736kW
 
-	
 	trailer_chains[]: "train_car.dr1_car_lt 2-4 | train_car.dr1_last_lt"
+
+	sound_move[]: "/sound/traffic/train_diesel.soundref"
 
 	displacement_limit: 0.0
 
@@ -24,7 +21,6 @@ traffic_vehicle : traffic.dr1_lt
 	lod_dist[]: 70
 	lod_dist[]: 130
 	lod_dist[]: 200
-
 }
 
 vehicle_accessory: .dr1_lt.chassis
@@ -52,18 +48,14 @@ traffic_vehicle : traffic.dr1_lv
 	accessories[]: .dr1_lv.fwheel
 	accessories[]: .dr1_lv.rwheel
 
-
 	max_speed: 120
 
-	vehicle_mass: 72000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 35000
-	
-	
+	vehicle_mass: 170000	# 340t train
+	engine_power: 1472	# 2x736kW
+
 	trailer_chains[]: "train_car.dr1_car_lv 2-4 | train_car.dr1_last_lv"
-	
+
+	sound_move[]: "/sound/traffic/train_diesel.soundref"
 
 	displacement_limit: 0.0
 
@@ -72,7 +64,6 @@ traffic_vehicle : traffic.dr1_lv
 	lod_dist[]: 70
 	lod_dist[]: 130
 	lod_dist[]: 200
-
 }
 
 vehicle_accessory: .dr1_lv.chassis
@@ -91,5 +82,3 @@ vehicle_wheel_accessory: .dr1_lv.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
-
-

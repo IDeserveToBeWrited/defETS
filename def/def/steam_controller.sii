@@ -12,9 +12,11 @@ steam_controller_config: .main
 	contexts[]: .drive.automatic
 	contexts[]: .drive.manual
 	contexts[]: .drive.direct
+	contexts[]: .uiwalk
 
 	action_sets[]: .set.ui
 	action_sets[]: .set.driving
+	action_sets[]: .set.walking
 
 	inputs[]: .pause
 
@@ -91,6 +93,10 @@ steam_controller_config: .main
 	inputs[]: .cruiectrlinc
 	inputs[]: .cruiectrldec
 	inputs[]: .cruiectrlres
+	inputs[]: .rwinopen
+	inputs[]: .rwinclose
+	inputs[]: .lwinopen
+	inputs[]: .lwinclose
 	inputs[]: .display
 	inputs[]: .dashmapzoom
 	inputs[]: .tripreset
@@ -120,6 +126,15 @@ steam_controller_config: .main
 	inputs[]: .menu
 	inputs[]: .quicksave
 	inputs[]: .quickload
+
+	inputs[]: .walk.forward
+	inputs[]: .walk.backward
+	inputs[]: .walk.left
+	inputs[]: .walk.right
+	inputs[]: .walk.crouch
+	inputs[]: .walk.run
+	inputs[]: .walk.look.lr
+	inputs[]: .walk.look.ud
 
 	vibrations[]: .vibration.steam
 	vibrations[]: .vibration.xi
@@ -170,6 +185,12 @@ steam_controller_input_context: .drive.direct
 {
 	name: "drivedirect"
 	action_set: .set.driving
+}
+
+steam_controller_input_context: .uiwalk
+{
+	name: "uiwalk"
+	action_set: .set.walking
 }
 
 # Action stes.
@@ -285,6 +306,11 @@ steam_controller_action_set: .set.driving
 	inputs[]: .liftaxlet
 	inputs[]: .diflock
 
+	inputs[]: .rwinopen
+	inputs[]: .rwinclose
+	inputs[]: .lwinopen
+	inputs[]: .lwinclose
+
 	inputs[]: .showmirrors
 	inputs[]: .showhud
 	inputs[]: .adjuster
@@ -317,6 +343,29 @@ steam_controller_action_set: .set.driving
 	inputs[]: .lookblink
 
 	inputs[]: .gar_man
+
+	inputs[]: .screenshot
+}
+
+steam_controller_action_set: .set.walking
+{
+	name: "walking"
+
+	inputs[]: .mouse.move
+	inputs[]: .mouse.left
+	inputs[]: .mouse.right
+	inputs[]: .back
+	inputs[]: .walk.forward
+	inputs[]: .walk.backward
+	inputs[]: .walk.left
+	inputs[]: .walk.right
+	inputs[]: .walk.crouch
+	inputs[]: .walk.run
+	inputs[]: .walk.look.lr
+	inputs[]: .walk.look.ud
+
+	inputs[]: .scrol_up
+	inputs[]: .scrol_dwn
 
 	inputs[]: .screenshot
 }
@@ -749,6 +798,30 @@ steam_controller_input: .cruiectrlres
 	type: button
 }
 
+steam_controller_input: .rwinopen
+{
+	name: rwinopen
+	type: button
+}
+
+steam_controller_input: .rwinclose
+{
+	name: rwinclose
+	type: button
+}
+
+steam_controller_input: .lwinopen
+{
+	name: lwinopen
+	type: button
+}
+
+steam_controller_input: .lwinclose
+{
+	name: lwinclose
+	type: button
+}
+
 steam_controller_input: .display
 {
 	name: display
@@ -921,6 +994,58 @@ steam_controller_input: .quickload
 {
 	name: quickload
 	type: button
+}
+
+# Walking
+
+steam_controller_input: .walk.forward
+{
+	name: camwalk_for
+	type: button
+}
+
+steam_controller_input: .walk.backward
+{
+	name: camwalk_back
+	type: button
+}
+
+steam_controller_input: .walk.left
+{
+	name: camwalk_left
+	type: button
+}
+
+steam_controller_input: .walk.right
+{
+	name: camwalk_righ
+	type: button
+}
+
+steam_controller_input: .walk.crouch
+{
+	name: camwalk_crou
+	type: button
+}
+
+steam_controller_input: .walk.run
+{
+	name: camwalk_run
+	type: button
+}
+
+steam_controller_input: .walk.look.lr
+{
+	name: camwalk_lr
+	action_name: mouse_look
+	type: mouse_x
+}
+
+steam_controller_input: .walk.look.ud
+{
+	name: camwalk_ud
+	action_name: mouse_look
+	type: mouse_y
 }
 
 steam_controller_vibration: .vibration.steam

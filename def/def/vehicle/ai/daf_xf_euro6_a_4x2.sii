@@ -8,7 +8,13 @@ traffic_vehicle : traffic.daf_e6_a4x2
 	max_speed: 90
 	trailer_chains[]: "semi_trailer"
 
-	engine_torque: 2300
+	vehicle_mass: 7472
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
 	#color from upgrade shop
 	#color[]: (0.1433, 0.159, 0.1916) #blue
@@ -22,7 +28,6 @@ traffic_vehicle : traffic.daf_e6_a4x2
 	lod_dist[]: 130
 	lod_dist[]: 200
 
-	vehicle_mass: 7472
 @include "drivers_generic.sui"	
 }
 
@@ -30,13 +35,11 @@ vehicle_accessory: .daf_e6_a4x2.chassis
 {
 	data_path: "/def/vehicle/ai/truck/daf.xf_euro6/a4x2.sii"
 }
-
 vehicle_wheel_accessory: .daf_e6_a4x2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-
 vehicle_wheel_accessory: .daf_e6_a4x2.rwheel
 {
 	offset: 0

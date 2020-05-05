@@ -8,7 +8,13 @@ traffic_vehicle : traffic.vlv12_a4x2
 	max_speed: 90
 	trailer_chains[]: "semi_trailer"
 
-	engine_torque: 2300
+	vehicle_mass: 7710
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
 
 	#color from upgrade shop
 	color[]: (0.0343, 0.0343, 0.0343) #black
@@ -23,7 +29,6 @@ traffic_vehicle : traffic.vlv12_a4x2
 	lod_dist[]: 130
 	lod_dist[]: 200
 
-	vehicle_mass: 7710
 @include "drivers_generic.sui"	
 }
 
@@ -31,13 +36,11 @@ vehicle_accessory: .vlv12_a4x2.chassis
 {
 	data_path: "/def/vehicle/ai/truck/volvo.fh16_2012/a4x2.sii"
 }
-
 vehicle_wheel_accessory: .vlv12_a4x2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-
 vehicle_wheel_accessory: .vlv12_a4x2.rwheel
 {
 	offset: 0

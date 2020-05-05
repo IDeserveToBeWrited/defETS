@@ -9,7 +9,13 @@ traffic_vehicle : traffic.vlv09_c6x4
 	max_speed: 90
 	trailer_chains[]: "semi_trailer"
 
-	engine_torque: 2800
+	vehicle_mass: 9463
+	engine_power: 373
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_3.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
 	#color from upgrade shop
 	color[]: (0.0343, 0.0343, 0.0343) #black
@@ -24,7 +30,6 @@ traffic_vehicle : traffic.vlv09_c6x4
 	lod_dist[]: 130
 	lod_dist[]: 200
 
-	vehicle_mass: 9463
 @include "drivers_generic.sui"	
 }
 
@@ -32,13 +37,11 @@ vehicle_accessory: .vlv09_c6x4.chassis
 {
 	data_path: "/def/vehicle/ai/truck/volvo.fh16/c6x4.sii"
 }
-
 vehicle_wheel_accessory: .vlv09_c6x4.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-
 vehicle_wheel_accessory: .vlv09_c6x4.rwheel
 {
 	offset: 0

@@ -1,12 +1,12 @@
-glass_pane_data : .daf.xf.pane.front
+glass_pane_data : .daf.xf.pane.f_glasspane
 {
-	locator: front_glass
+	locator: f_glasspane
 	size: (2.7, 0.9)
 	edge_angle: 20
 	wipers[]: .daf.xf.pane.wiper1
 	wipers[]: .daf.xf.pane.wiper2
 	wipers[]: .daf.xf.pane.wiper3
-	
+
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }
@@ -29,19 +29,43 @@ wiper_data : .daf.xf.pane.wiper3
 	length: 0.58
 }
 
-glass_pane_data : .daf.xf.pane.close
+glass_pane_data : .daf.xf.pane.l_glasspane
 {
-	locator: close_glass
-	size: (1.0, 1.0)
+	locator: l_glasspane
+	size: (0.67, 0.73)
+
+  	drop_size_minimum: 0.008
+	drop_size_maximum: 0.020
+
+	openable_window_bone: win_open_l1
+	openable_window_mask: "/vehicle/truck/daf_xf/interior/win_mask_l.mask"
+}
+
+glass_pane_data : .daf.xf.pane.l1_glasspane
+{
+	locator: l1_glasspane
+	size: (0.27, 0.73)
 
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
 }
 
-glass_pane_data : .daf.xf.pane.far
+glass_pane_data : .daf.xf.pane.r_glasspane
 {
-	locator: far_glass
-	size: (1.0, 1.0)
+	locator: r_glasspane
+	size: (0.67, 0.73)
+
+  	drop_size_minimum: 0.008
+	drop_size_maximum: 0.020
+
+	openable_window_bone: win_open_r1
+	openable_window_mask: "/vehicle/truck/daf_xf/interior/win_mask_r.mask"
+}
+
+glass_pane_data : .daf.xf.pane.r1_glasspane
+{
+	locator: r1_glasspane
+	size: (0.27, 0.73)
 
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020

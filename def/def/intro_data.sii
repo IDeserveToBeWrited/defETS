@@ -4,6 +4,7 @@ SiiNunit
 intro_screen_data : .intro.data
 {
 	layer[]: .intro.layer.video
+	layer[]: .intro.layer.text
 }
 
 intro_screen_layer : .intro.layer.video
@@ -19,7 +20,7 @@ intro_screen_item : .intro.item.0
 {
 	pml: "<img src=/material/ui/white.mat xscale=stretch_full yscale=stretch color=$ALPHA$000000>"
 	fade_in_time: 1.0
-	show_time: 4.00
+	show_time: 4.50
 	fade_out_time: 1.0
 	scene_fade: true
 }
@@ -49,4 +50,26 @@ intro_screen_item : .intro.item.3
 	fade_out_time: 0.0
 }
 
+intro_screen_layer : .intro.layer.text
+{
+ 	item[]:	.intro.txt.0
+	item[]:	.intro.txt.1
+	text_id: 110
+}
+
+intro_screen_item : .intro.txt.0
+{
+	pml: ""
+	fade_in_time: 0.0
+	show_time: 13.20
+	fade_out_time: 0.0
+}
+intro_screen_item : .intro.txt.1
+{
+ 	pml: "<color value=$ALPHA$FFFFFF><align hstyle=center><font face=/font/small.font xscale=0.85 yscale=0.85>All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission.<br>The MAN\xc2\xae trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o.<br>\"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o.<br>The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license.<br>The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license.</font></align><ret><align vstyle=bottom left=30 bottom=-13><img src=/material/ui/logo/bullet.mat width=93 height=45 ka=left></align><align vstyle=bottom hstyle=right right=-34 bottom=-6><img src=/material/ui/logo/ogg.mat width=32 height=32 ka=right><offset hshift=12 vshift=-8><img src=/material/ui/logo/fmod.mat width=93 height=45 ka=right></align>"
+	fade_in_time: 1.0
+	show_time: 1.8
+	fade_out_time: 1.0
+	scene_fade: false
+}
 }

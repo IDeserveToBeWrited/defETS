@@ -1,6 +1,6 @@
-glass_pane_data : .renault.t.pane.front
+glass_pane_data : .renault.t.pane.f_glasspane
 {
-	locator: front_glass
+	locator: f_glasspane
 	size: (2.8, 1.0)
 	edge_angle: 20
 	wipers[]: .renault.t.pane.wiper1
@@ -22,20 +22,26 @@ wiper_data : .renault.t.pane.wiper2
 	length: 0.65
 }
 
-glass_pane_data : .renault.t.pane.close
+glass_pane_data : .renault.t.pane.l_glasspane
 {
-	locator: close_glass
-	size: (0.9, 0.9)
+	locator: l_glasspane
+	size: (0.86, 0.85)
 
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
+
+	openable_window_bone: win_open_l1
+	openable_window_mask: "/vehicle/truck/renault_t/interior/win_mask_l.mask"
 }
 
-glass_pane_data : .renault.t.pane.far
+glass_pane_data : .renault.t.pane.r_glasspane
 {
-	locator: far_glass
-	size: (0.9, 0.9)
+	locator: r_glasspane
+	size: (0.86, 0.85)
 
   	drop_size_minimum: 0.008
 	drop_size_maximum: 0.020
+
+	openable_window_bone: win_open_r1
+	openable_window_mask: "/vehicle/truck/renault_t/interior/win_mask_r.mask"
 }

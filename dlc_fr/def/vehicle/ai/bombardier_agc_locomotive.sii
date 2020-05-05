@@ -6,15 +6,14 @@ traffic_vehicle : traffic.bombar_agc
 	accessories[]: .bombar_agc.rwheel2
 	accessories[]: .bombar_agc.rwheel3
 
-	max_speed: 120
+	max_speed: 160
 
-	vehicle_mass: 100000
-	gearbox[]: (0, 1)
-	gearbox[]: (10, 0.9)
-	gear_ratio: 10
-	engine_torque: 20000
+	vehicle_mass: 85000	# 170t whole train
+	engine_power: 1900
 
 	trailer_chains[]: "train_car.bombar_agc.car 1-3 | train_car.bombar_agc.onelast | train_car.bombar_agc.rear"
+
+	sound_move[]: "/sound/traffic/train_diesel.soundref"
 
 	spawn_ratio: 0
 
@@ -24,7 +23,6 @@ traffic_vehicle : traffic.bombar_agc
 	# add lod in between
 	lod_dist[]: 130
 	lod_dist[]: 200
-
 }
 
 vehicle_accessory: .bombar_agc.chassis
