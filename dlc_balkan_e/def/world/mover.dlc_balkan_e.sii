@@ -1,0 +1,46 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+mover_model : mover.ferry_blke
+{
+	mover_name: "ferry_river_blke"
+	model_desc: "/prefab2/ferry_river/ferry_river_blke.pmd"
+	model_coll: "/prefab2/ferry_river/ferry_river_blke.pmc"
+}
+mover_model : mover.cable_car
+{
+	mover_name: "cable_car_1_cart"
+	model_desc: "/model2/landmark/cable_car_1_cart_bg_blke.pmd"
+
+	lods[0]: "/model2/landmark/cable_car_1_cart_bg_blke_lod1.pmd"
+	lods[1]: "/model2/landmark/cable_car_1_cart_bg_blke_lod2.pmd"
+
+	lod_dist[0]: 60
+	lod_dist[1]: 70
+}
+mover_model : mover.cable_car_1
+{
+	mover_name: "cable_car_1_cart_full"
+	model_desc: "/model2/landmark/cable_car_1_cart_full_bg_blke.pmd"
+
+	lods[0]: "/model2/landmark/cable_car_1_cart_full_bg_blke_lod1.pmd"
+	lods[1]: "/model2/landmark/cable_car_1_cart_full_bg_blke_lod2.pmd"
+
+	lod_dist[0]: 60
+	lod_dist[1]: 70
+}
+mover_model : mover.xray_blke
+{
+	mover_name: "xray_kapikule_blke"
+	model_desc: "/prefab2/border_crossing/kapikule/xray_anim_tr_blke.pmd"
+	model_coll: "/prefab2/border_crossing/kapikule/xray_anim_tr_blke.pmc"
+}
+
+}

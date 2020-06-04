@@ -1,0 +1,52 @@
+traffic_vehicle : traffic.train_gc65d
+{
+	accessories[]: .train_gc65d.chassis
+	accessories[]: .train_gc65d.fwheel
+	accessories[]: .train_gc65d.rwheel
+	accessories[]: .train_gc65d.rwheel1
+	accessories[]: .train_gc65d.rwheel2
+
+	max_speed: 120
+
+	vehicle_mass: 109000
+	engine_power: 1582
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_car.w_passenger 2 | train_car.w_passenger 2 | train_car.w_passenger 1-2"
+
+	sound_move[]: "/sound/traffic/train_diesel.soundref"
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+}
+
+vehicle_accessory: .train_gc65d.chassis
+{
+	data_path: "/def/vehicle/ai/train_gc65d/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .train_gc65d.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .train_gc65d.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_gc65d.rwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_gc65d.rwheel2
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

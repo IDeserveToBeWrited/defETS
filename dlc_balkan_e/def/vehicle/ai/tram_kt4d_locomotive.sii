@@ -1,0 +1,102 @@
+traffic_vehicle : traffic.tramkt4d.cluj
+{
+	accessories[]: .tramkt4d.cluj.chassis
+	accessories[]: .tramkt4d.cluj.fwheel
+	accessories[]: .tramkt4d.cluj.rwheel
+
+	max_speed: 65
+
+	vehicle_mass: 14000	# 20t whole tram + cca 80ppl
+	engine_power: 160	# 4x40kW
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_car.tramkt4d_car.cluj"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+	
+	spawn_condition[]: .traffic.tramkt4d.cluj.condition.city
+}
+
+vehicle_accessory: .tramkt4d.cluj.chassis
+{
+	data_path: "/def/vehicle/ai/tram_kt4d/chassis_cluj.sii"
+}
+
+vehicle_wheel_accessory: .tramkt4d.cluj.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .tramkt4d.cluj.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.tramkt4d.cluj.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "cluj_napoca"
+}
+
+
+traffic_vehicle : traffic.tramkt4d.galati
+{
+	accessories[]: .tram_kt4d.galati.chassis
+	accessories[]: .tram_kt4d.galati.fwheel
+	accessories[]: .tram_kt4d.galati.rwheel
+
+	max_speed: 65
+
+	vehicle_mass: 14000	# 20t whole tram + cca 80ppl
+	engine_power: 160	# 4x40kW
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_car.tramkt4d_car.galati"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	spawn_condition[]: .traffic.tram_kt4d.galati.condition.city
+}
+
+vehicle_accessory: .tram_kt4d.galati.chassis
+{
+	data_path: "/def/vehicle/ai/tram_kt4d/chassis_galati.sii"
+}
+
+vehicle_wheel_accessory: .tram_kt4d.galati.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .tram_kt4d.galati.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.tram_kt4d.galati.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "galati"
+}

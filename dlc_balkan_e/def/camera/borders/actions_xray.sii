@@ -1,0 +1,50 @@
+SiiNunit
+{
+
+#
+# See '/base/def/world/trigger_action.sii' for available commands
+#
+
+cutscene_action : .action.sound
+{
+	cutscene_time: 0.0
+
+	command: "sound"
+
+	str_params[]: "/sound/music/cutscene_border_xray.soundref"
+}
+
+cutscene_action : .action.xray.move
+{
+	cutscene_time: 1
+
+	command: "mover"
+
+	str_params[]: "speed"
+	num_params[]: 3.6
+
+	target_range: 50
+	target_tags[]: xray
+}
+
+cutscene_action : .action.xray.sound
+{
+	cutscene_time: 0
+
+	command: "sound"
+
+	str_params[]: "/sound/music/cutscene_border_xray.soundref"
+}
+
+
+cutscene_action : .action.xray.msg
+{
+	cutscene_time: 12
+
+	command: "hud_message"
+
+	str_params[]: "@@xray_control_passed@@"
+	num_params[]: 4.0
+}
+
+}

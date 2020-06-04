@@ -1,0 +1,71 @@
+accessory_hookup_int_data : volvo_cup.addon_hookup
+{
+	name: "Volvo Mug"
+	price: 90
+	unlock: 0
+	icon: "interior_decors/toystand/volvo_mug"
+	suitable_for[]: "set_dashbrd"
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/mug_volvo_tuning/mug_volvo.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toystand/mug_volvo_tuning/mug_volvo.pmc"
+}
+
+
+accessory_hookup_int_data : toy_f16.addon_hookup
+{
+	name: "Volvo FH16 2009 Model 1:50"
+	price: 350
+	unlock: 0
+	icon: "interior_decors/toystand/toy_f16"
+	suitable_for[]: "set_dashbrd"
+
+	model:	"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16/volvo_fh16_body.pmd"
+	coll:	"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16/volvo_fh16_body.pmc"
+
+	data[]: .toy_f16.phys_data
+}
+
+physics_toy_data : .toy_f16.phys_data
+{
+
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16/volvo_fh16_head.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16/volvo_fh16_head.pmc"
+
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.6			# toy mass
+	locator_hook_offset:	(0.0f, 0.0233f, -0.0276f)
+
+
+	angular_stiffness:	(500.0, 500.0)
+	angular_damping:	(5.0, 5.0)
+	angular_amplitude:	(3.0, 3.0, 0.0)
+}
+
+accessory_hookup_int_data : toy_fh16_12.addon_hookup
+{
+	name: "Volvo FH16 2012 Model 1:50"
+	price: 350
+	unlock: 0
+	icon: "interior_decors/toystand/toy_f16_12"
+	suitable_for[]: "set_dashbrd"
+
+	model:	"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16_2012/volvo_fh16_2012_body.pmd"
+	coll:	"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16_2012/volvo_fh16_2012_body.pmc"
+
+	data[]: .toy_fh16_12.phys_data
+}
+
+physics_toy_data : .toy_fh16_12.phys_data
+{
+
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16_2012/volvo_fh16_2012_head.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/toy_fh16_2012/volvo_fh16_2012_head.pmc"
+
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.6			# toy mass
+	locator_hook_offset:	(0.0f, 0.0233f, -0.0276f)
+
+	angular_stiffness:	(500.0, 500.0)
+	angular_damping:	(5.0, 5.0)
+	angular_amplitude:	(3.0, 3.0, 0.0)
+}

@@ -1,7 +1,7 @@
 @ECHO OFF
 
 :: Location for extraction
-SET LOCATION=X:\defETS
+SET LOCATION=C:\Users\doode\Documents\defETS
 MKDIR %LOCATION%
 :: Location to SCS Extractor
 SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2\scs_extractor.exe"
@@ -13,6 +13,23 @@ SET ZIP="C:\Program Files\7-Zip\7z.exe"
 :: Extract archives
 ECHO Extracting def archive
 %EXTRACTOR% def.scs %LOCATION%\def >NUL
+
+
+
+:: dlc_balkan_e
+ECHO Extracting dlc_balkan_e archive
+%EXTRACTOR% dlc_balkan_e.scs %LOCATION%\dlc_balkan_e >NUL
+
+RMDIR "%LOCATION%\dlc_balkan_e\automat" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\map" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\material" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\model" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\model2" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\prefab2" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\road_template" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\unit" /s /q
+RMDIR "%LOCATION%\dlc_balkan_e\vehicle" /s /q
+DEL %LOCATION%\dlc_balkan_e\dlc_balkan_e.manifest.sii
 
 
 
@@ -330,15 +347,26 @@ DEL %LOCATION%\dlc_trailers\dlc_trailers.manifest.sii
 :: dlc_vikings
 ECHO Extracting dlc_vikings archive
 %EXTRACTOR% dlc_vikings.scs %LOCATION%\dlc_vikings >NUL
+
 RMDIR "%LOCATION%\dlc_vikings\material" /s /q
 RMDIR "%LOCATION%\dlc_vikings\vehicle" /s /q
 DEL %LOCATION%\dlc_vikings\dlc_vikings.manifest.sii
+
+
+:: dlc_volvo_tuning_pack
+ECHO Extracting dlc_volvo_tuning_pack archive
+%EXTRACTOR% dlc_volvo_tuning_pack.scs %LOCATION%\dlc_volvo_tuning_pack >NUL
+RMDIR "%LOCATION%\dlc_volvo_tuning_pack\automat" /s /q
+RMDIR "%LOCATION%\dlc_volvo_tuning_pack\material" /s /q
+RMDIR "%LOCATION%\dlc_volvo_tuning_pack\vehicle" /s /q
+DEL %LOCATION%\dlc_volvo_tuning_pack\dlc_volvo_tuning_pack.manifest.sii
 
 
 
 :: dlc_winter
 ECHO Extracting dlc_winter archive
 %EXTRACTOR% dlc_winter.scs %LOCATION%\dlc_winter >NUL
+
 RMDIR "%LOCATION%\dlc_winter\automat" /s /q
 RMDIR "%LOCATION%\dlc_winter\material" /s /q
 RMDIR "%LOCATION%\dlc_winter\vehicle" /s /q

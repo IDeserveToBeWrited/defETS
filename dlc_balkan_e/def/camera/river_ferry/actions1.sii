@@ -1,0 +1,87 @@
+SiiNunit
+{
+
+#
+# See '/base/def/world/trigger_action.sii' for available commands
+#
+
+cutscene_action : .action.move_start
+{
+	cutscene_time: 0.0
+
+	command: "mover"
+
+	str_params[]: "move"
+	num_params[]: 0
+
+	target_range: 100
+	target_tags[]: ferry
+	target_tags[]: smardan
+}
+
+cutscene_action : .action.hide_other
+{
+	cutscene_time: 0.0
+
+	command: "mover"
+
+	str_params[]: "hide"
+
+	target_range: 100
+	target_tags[]: ferry
+	target_tags[]: bralia
+}
+
+cutscene_action : .action.sound
+{
+	cutscene_time: 0.0
+
+	command: "sound"
+
+	str_params[]: "/sound/music/cutscene_ferry_1.soundref"
+}
+
+cutscene_action : .action.transport
+{
+	cutscene_time: 0.0
+
+	command: "mover"
+
+	str_params[]: "transport"
+
+	target_range: 100
+	target_tags[]: ferry
+	target_tags[]: smardan
+}
+
+cutscene_action : .action.speed
+{
+	cutscene_time: 0.1
+
+	command: "mover"
+
+	str_params[]: "speed"
+	num_params[]: 10
+	num_params[]: 1
+
+	target_range: 100
+	target_tags[]: ferry
+	target_tags[]: smardan
+}
+
+cutscene_action : .action.3
+{
+	cutscene_time: 26.0
+
+	command: "mover"
+
+	str_params[]: "speed"
+	num_params[]: 0
+	num_params[]: 10
+
+	target_range: 100
+	target_tags[]: ferry
+	target_tags[]: smardan
+}
+
+}

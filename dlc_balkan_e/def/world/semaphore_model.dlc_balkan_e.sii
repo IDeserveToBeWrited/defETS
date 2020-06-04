@@ -1,0 +1,198 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+
+
+tr_semaphore_model : tr_sem_mdl.single.ro
+{
+	name: "single_ro"
+
+	model_desc: "/model/traffic_light/single_ro.pmd"
+	model_coll: "/model/traffic_light/single_ro.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.city.ro
+{
+	name: "city_ro"
+
+	model_desc: "/model/traffic_light/city_ro.pmd"
+	model_coll: "/model/traffic_light/city_ro.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.singlecity.ro
+{
+	name: "singlecity_ro"
+
+	model_desc: "/model/traffic_light/singlecity_ro.pmd"
+	model_coll: "/model/traffic_light/singlecity_ro.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.single.bg
+{
+	name: "single_bg"
+
+	model_desc: "/model/traffic_light/single_bg.pmd"
+	model_coll: "/model/traffic_light/single_bg.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.city.bg
+{
+	name: "city_bg"
+
+	model_desc: "/model/traffic_light/city_bg.pmd"
+	model_coll: "/model/traffic_light/city_bg.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.singlecity.bg
+{
+	name: "singlecity_bg"
+
+	model_desc: "/model/traffic_light/singlecity_bg.pmd"
+	model_coll: "/model/traffic_light/singlecity_bg.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.single.tr
+{
+	name: "single_tr"
+
+	model_desc: "/model/traffic_light/single_tr.pmd"
+	model_coll: "/model/traffic_light/single_tr.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.single_str.tr
+{
+	name: "single_tr"
+
+	model_desc: "/model/traffic_light/single_stripe_tr.pmd"
+	model_coll: "/model/traffic_light/single_stripe_tr.pmc"
+}
+
+
+tr_semaphore_model : tr_sem_mdl.city.tr
+{
+	name: "city_tr"
+
+	model_desc: "/model/traffic_light/city_tr.pmd"
+	model_coll: "/model/traffic_light/city_tr.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.city_str.tr
+{
+	name: "city_stripe_tr"
+
+	model_desc: "/model/traffic_light/city_stripe_tr.pmd"
+	model_coll: "/model/traffic_light/city_stripe_tr.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.city_str_mir.tr
+{
+	name: "city_stripe_mirrored_tr"
+
+	model_desc: "/model/traffic_light/city_stripe_mirrored_tr.pmd"
+	model_coll: "/model/traffic_light/city_stripe_mirrored_tr.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.singlecity.tr
+{
+	name: "singlecity_tr"
+
+	model_desc: "/model/traffic_light/singlecity_tr.pmd"
+	model_coll: "/model/traffic_light/singlecity_tr.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.crossing_r.bg
+{
+
+	name: "level_right_bg"
+
+	model_desc: "/prefab2/level_crossing/level_right_anim_01_bg.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_anim_01_bg.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/level_crossing/r_down_bg.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/r_up_bg.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+	#sound
+    sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+}
+
+tr_semaphore_model : tr_sem_mdl.crossing_r.tr {
+
+	name: "level_right_tr"
+
+	model_desc: "/prefab2/level_crossing/level_right_anim_01_tr.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_anim_01_tr.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/level_crossing/r_down_tr.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/r_up_tr.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+	
+	#sound
+    sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+
+}
+
+tr_semaphore_model : tr_sem_mdl.crossing_r.ro {
+
+	name: "level_right_ro"
+
+	model_desc: "/prefab2/level_crossing/level_right_anim_01_ro.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_anim_01_ro.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/prefab2/level_crossing/r_down_ro.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/r_up_ro.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+	
+	#sound
+    sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+
+}
+}
