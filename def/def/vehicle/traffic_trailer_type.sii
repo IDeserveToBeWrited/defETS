@@ -8,68 +8,79 @@ SiiNunit
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 #
-# Attributes:
+# NOTE: Default traffic trailer storage path is '/def/vehicle/traffic_storage_trailer_(type).sii'
 #
-# storage_path - path to list of traffic vehicle definitions for this type
+# For example, for trailer type 'semi' the path will be:
+# '/def/vehicle/traffic_storage_trailer_semi.sii'
 #
+# NOTE: The trailer type is considered 'default' trailer type for vehicle types with matching name. (e.g. "car", "truck_semi")
 
-traffic_trailer_type : traffic.trailer_type.semi_trailer
+############# COMMON TRAILER GROUPS - RANDOM SELECTION ALLOWED #############
+
+# trailers suitable for semi-trucks
+traffic_trailer_type : traffic.trailer_type.truck_semi
 {
 	tags[]: "road"
 
-	storage_path: "/def/vehicle/traffic_storage_semi_trailer.sii"
+	storage_path: "/def/vehicle/traffic_storage_trailer_semi.sii"
 }
 
-traffic_trailer_type : traffic.trailer_type.double
+# trailers suitable for semi-trucks with 'non-standard' long trailer chain
+traffic_trailer_type : traffic.trailer_type.truck_long
 {
 	tags[]: "road"
 
-	storage_path: "/def/vehicle/traffic_storage_semi_trailer_double.sii"
+	storage_path: "/def/vehicle/traffic_storage_trailer_long.sii"
 }
 
-
-traffic_trailer_type : traffic.trailer_type.train_car_c
+# cargo train cars
+traffic_trailer_type : traffic.trailer_type.train_cargo
 {
 	tags[]: "rail_train"
 
 	safe_distance: 1000
-
-	storage_path: "/def/vehicle/traffic_storage_train_car_cargo.sii"
 }
 
-traffic_trailer_type : traffic.trailer_type.train_car_sp
+############# TRAILER GROUPS FOR VARIOUS VEHICLE TYPES - EXPLICIT SELECTION ONLY #############
+
+# trailers suitable for cars/vans
+traffic_trailer_type : traffic.trailer_type.car
 {
-	tags[]: "rail_train"
-
-	safe_distance: 1000
-
-	storage_path: "/def/vehicle/traffic_storage_train_car_special.sii"
+	tags[]: "road"
 }
 
-traffic_trailer_type : traffic.trailer_type.tram_car
+# trailers suitable for buses - typically, rear parts of articulated buses (permanently attached)
+traffic_trailer_type : traffic.trailer_type.bus
+{
+	tags[]: "road"
+}
+
+# trailers suitable for trucks
+traffic_trailer_type : traffic.trailer_type.truck
+{
+	tags[]: "road"
+}
+
+# trailers suitable for trams - tram cars - standalone or articulated
+traffic_trailer_type : traffic.trailer_type.tram
 {
 	tags[]: "rail_tram"
-
-	storage_path: "/def/vehicle/traffic_storage_tram_car.sii"
 }
 
-traffic_trailer_type : traffic.trailer_type.simple
+# train cars - standalone or articulated (passenger and non-standard cargo)
+traffic_trailer_type : traffic.trailer_type.train
 {
-	tags[]: "road"
-	storage_path: "/def/vehicle/traffic_storage_trailer_simple.sii"
+	tags[]: "rail_train"
+
+	safe_distance: 1000
 }
 
-traffic_trailer_type : traffic.trailer_type.special
+############# TRAILERS FOR CUSTOM AREAS - EXPLICIT SELECTION ONLY #############
+
+# trailers not fitting in any other type
+traffic_trailer_type : traffic.trailer_type.custom
 {
-	tags[]: "road"
-	storage_path: "/def/vehicle/traffic_storage_trailer_special.sii"
-}
-traffic_trailer_type : traffic.trailer_type.bus_transit
-{
-	tags[]: "road"
-	license_plate_type: bus_transit
-	storage_path: "/def/vehicle/traffic_storage_trailer_bus_transit.sii"
-}
+	tags[]: "custom_all"
 }
 
-
+}

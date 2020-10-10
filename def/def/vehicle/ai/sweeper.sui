@@ -1,0 +1,41 @@
+traffic_vehicle : traffic.sweeper
+{
+	accessories[]: .sweeper.chassis
+	accessories[]: .sweeper.fwheel
+	accessories[]: .sweeper.rwheel
+
+	max_speed: 15
+
+	vehicle_mass: 15000
+	engine_power: 200
+
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	color[]: (1.000, 0.150, 0.001) #orange
+	color[]: (0.850, 0.850, 0.850) #white
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .sweeper.chassis
+{
+	data_path: "/def/vehicle/ai/sweeper/chassis.sii"
+}
+
+vehicle_wheel_accessory: .sweeper.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_sweeper.sii"
+}
+
+vehicle_wheel_accessory: .sweeper.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_sweeper.sii"
+}

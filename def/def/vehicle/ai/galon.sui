@@ -1,0 +1,37 @@
+traffic_vehicle : traffic.galon
+{
+	accessories[]: .galon.chassis
+	accessories[]: .galon.fwheel
+	accessories[]: .galon.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	spawn_ratio: 0.01
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .galon.chassis
+{
+	data_path: "/def/vehicle/ai/galon/chassis.sii"
+}
+
+vehicle_wheel_accessory: .galon.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .galon.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}

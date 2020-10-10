@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.merc_act_b
+{
+	accessories[]: .merc_act_b.chassis
+	accessories[]: .merc_act_b.fwheel
+	accessories[]: .merc_act_b.rwheel
+	accessories[]: .merc_act_b.rwheel2
+	accessories[]: .merc_act_b.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 9516
+	engine_power: 373
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_3.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.151, 0.0104, 0.0057) #red
+	color[]: (0.3185, 0.2979, 0.2591) #gray
+	color[]: (0.0528, 0.0528, 0.0578) #blue gray
+	color[]: (0.1916, 0.1949, 0.214) #light grey
+	color[]: (0.1529, 0.0975, 0.0666) #gray
+	color[]: (0.7083, 0.7083, 0.7083) #white
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .merc_act_b.chassis
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros/a6x4.sii"
+}
+vehicle_wheel_accessory: .merc_act_b.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .merc_act_b.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .merc_act_b.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .merc_act_b.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros/accessory/trlr_cables/stock.sii"
+}

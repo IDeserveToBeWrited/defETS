@@ -1,0 +1,51 @@
+traffic_vehicle : traffic.tram_gt4
+{
+	accessories[]: .tram_gt4.chassis
+	accessories[]: .tram_gt4.fwheel
+	accessories[]: .tram_gt4.rwheel
+
+	max_speed: 65
+
+	vehicle_mass: 14000	# 20t whole tram + cca 80ppl
+	engine_power: 200	# 2x100kW
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_car.tramgt4_car1"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	spawn_condition[]: .traffic.tram_gt4.condition.city
+}
+
+vehicle_accessory: .tram_gt4.chassis
+{
+	data_path: "/def/vehicle/ai/tram_gt4/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .tram_gt4.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .tram_gt4.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.tram_gt4.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "iasi"
+}

@@ -359,6 +359,25 @@ road_look : road.template13
 #																		#
 #########################################################################
 
+road_look : road.fr1
+{
+	name: "fr road 2 narrow one way tmpl"
+	template_right: "/road_template/fr/fr_road_2_narrow_one_way.pmd"
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+
+	compatible_edges_left[]: fr_sh_15
+	compatible_edges_left[]: fr_sh_asp
+	
+	compatible_edges_right[]: fr_sh_15
+	compatible_edges_right[]: fr_sh_asp
+
+	shoulder_space_left: 0.25
+	shoulder_space_right: 0.25
+
+}
+
 road_look : road.template14
 {
 	name: "fr hw 2 lanes one way tmpl"
@@ -570,6 +589,7 @@ road_look : road.template22
 
 	template_variants_right[]: .tmpl_var.road.template22
 
+	compatible_edges_right[]: fr_sh_asp
 	compatible_edges_right[]: fr_sw_3m_a
 	compatible_edges_right[]: fr_sw_3m_b
 	compatible_edges_right[]: fr_sw_3m_c

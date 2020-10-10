@@ -2850,4 +2850,102 @@ curve_model : curve.dlc_blke_109
 	end_part[]: "end"
 
 }
+
+curve_model : curve.2t003
+{
+	model_desc: "/model2/fences/metal/fence_netting_01_wire_wall_lowbase_north_crv.pmd"
+	category: "base"
+	name: "fence netting 01 wire wall lowbase north crv"
+
+	variation: 2
+	variation[0]: "short | center1 : 1.0 | center2 : 1.0 | center1,center2 : 1.0"
+	variation[1]: "long | center3 : 1.0"
+
+	start_part: 1
+	start_part[0]: "start1"
+
+	end_part: 1
+	end_part[0]: "end1"
+}
+
+curve_model : curve.2300a
+{
+	model_desc: "/model2/tunnel/tunnel_hw3_ger.pmd"
+	name: "tunnel hw3 ger"
+
+	variation: 3
+	start_part: 3
+	end_part: 3
+	variation[0]: "default | c1,c4,c2,c5,c3,c4,c1,c5,c2,c4,c3,c5 : 1.0"
+	start_part[0]: "s1"
+	end_part[0]: "e1"
+	variation[1]: "sos | c1,c4,c2,c5,c6,c4,c1,c5,c2,c4,c3,c5 : 1.0"
+	start_part[1]: "s1"
+	end_part[1]: "e1"
+	variation[2]: "emergency | c1,c4,c2,c5,c7,c4,c1,c5,c2,c4,c3,c5 : 1.0"
+	start_part[2]: "s1"
+	end_part[2]: "e1"
+
+	high_tess: 0
+}
+curve_model : curve.dlc_blke_98
+{
+	name: "sidewalk_stripe_terrain_3m_blke"
+	model_desc: "/model2/props/road/sidewalk_stripe_terrain_3m_blke.pmd"
+	variation[]: "4x2m | c1 : 1.0"
+	variation[]: "2x2m | cs1 : 1.0"
+	variation[]: "1x2m | csh1,csh2 : 1.0"
+	variation[]: "to_2m_L | to2ml : 1.0"
+	variation[]: "to_2m_R | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3 | s4corner90"
+	start_part[]: "s1 | s2 | s3 | s4corner90"
+	start_part[]: "s1 | s2 | s3 | s4corner90"
+	start_part[]: "s1 | s2 | s3 | s4corner90"
+	start_part[]: "s1 | s2 | s3 | s4corner90"
+
+	end_part[]: "e1 | e2 | e3 | e4corner90"
+	end_part[]: "e1 | e2 | e3 | e4corner90"
+	end_part[]: "e1 | e2 | e3 | e4corner90"
+	end_part[]: "e1 | e2 | e3 | e4corner90"
+	end_part[]: "e1 | e2 | e3 | e4corner90"
+
+	dynamic_lod_desc[]: "/model2/props/road/sidewalk_stripe_terrain_3m_blke_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.genoa_1h001
+{
+	model_desc: "/model2/landmark/genoa/genoa_bridge_deck_01_it.pmd"
+	name: "genoa bridge deck 01 it"
+
+	variation: 4
+	variation[0]: "default | vca : 1.0 | vcb : 1.0"
+	variation[1]: "bottom_only | vcd : 1.0"
+	variation[2]: "bot_grn2neut | vcd_g2n : 1.0"
+	variation[3]: "bot_neut2red | vcd_n2r : 1.0"
+
+	start_part: 1
+	start_part[0]: "vsa"
+
+	end_part: 1
+	end_part[0]: "vea"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
+
+curve_model : curve.genoa_1p001
+{
+	model_desc: "/model2/landmark/genoa/genoa_bridge_deck_02_it.pmd"
+	name: "genoa bridge deck 02 it"
+
+	variation: 1
+	variation[0]: "bottom_only | vca : 1.0"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
 }

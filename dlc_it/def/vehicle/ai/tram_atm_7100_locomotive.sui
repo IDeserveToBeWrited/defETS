@@ -1,0 +1,205 @@
+## NEAPOL
+
+traffic_vehicle : traffic.atm_7100_n1
+{
+	accessories[]: .atm_7100_n1.chassis
+	accessories[]: .atm_7100_n1.fwheel
+	accessories[]: .atm_7100_n1.rwheel
+
+	max_speed: 70 
+
+	vehicle_mass: 42000	# 42t each wagon (loaded)
+	engine_power: 2120	# 4x106kW each wagon, 5 wagons
+
+	trailer_chains[]: "train_car.atm_7100_n2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+	spawn_ratio: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+
+	spawn_condition[]: .traffic.atm_7100_n1.condition.city
+	variant[]: traffic.atm_7100_m1
+	variant[]: traffic.atm_7100_m21
+}
+
+vehicle_accessory: .atm_7100_n1.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/chassis_01_n.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_n1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_n1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.atm_7100_n1.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "napoli"
+}
+
+## SASSARI
+
+traffic_vehicle : traffic.atm_7100_s1
+{
+	accessories[]: .atm_7100_s1.chassis
+	accessories[]: .atm_7100_s1.fwheel
+	accessories[]: .atm_7100_s1.rwheel
+
+	max_speed: 70 
+
+	vehicle_mass: 42000	# 42t each wagon (loaded)
+	engine_power: 2120	# 4x106kW each wagon, 5 wagons
+
+	trailer_chains[]: "train_car.atm_7100_s2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+	spawn_ratio: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+
+	spawn_condition[]: .traffic.atm_7100_s1.condition.city
+}
+
+vehicle_accessory: .atm_7100_s1.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/chassis_01_s.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_s1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_s1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.atm_7100_s1.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "sassari"
+}
+
+
+## MILANO_1
+
+traffic_vehicle : traffic.atm_7100_m1
+{
+	accessories[]: .atm_7100_m1.chassis
+	accessories[]: .atm_7100_m1.fwheel
+	accessories[]: .atm_7100_m1.rwheel
+
+	max_speed: 70 
+
+	vehicle_mass: 42000	# 42t each wagon (loaded)
+	engine_power: 2120	# 4x106kW each wagon, 5 wagons
+
+	trailer_chains[]: "train_car.atm_7100_m2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	
+	spawn_condition[]: .traffic.atm_7100_m1.condition.city
+}
+
+vehicle_accessory: .atm_7100_m1.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/chassis_01_m1.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_m1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_m1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.atm_7100_m1.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "milano"
+}
+
+## MILANO_2
+
+traffic_vehicle : traffic.atm_7100_m21
+{
+	accessories[]: .atm_7100_m21.chassis
+	accessories[]: .atm_7100_m21.fwheel
+	accessories[]: .atm_7100_m21.rwheel
+
+	max_speed: 70
+
+	vehicle_mass: 42000	# 42t each wagon (loaded)
+	engine_power: 2120	# 4x106kW each wagon, 5 wagons
+
+	trailer_chains[]: "train_car.atm_7100_m22"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+
+	spawn_condition[]: .traffic.atm_7100_m2.condition.city
+}
+
+vehicle_accessory: .atm_7100_m21.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/chassis_01_m2.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_m21.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100_m21.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.atm_7100_m2.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "milano"
+}

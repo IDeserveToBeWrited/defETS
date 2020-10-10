@@ -26,9 +26,13 @@ trigger_action : trig_action.cutscene
 	name: "*Cutscene control"
 	command: "cutscene"
 
-	str_params[]: "[param1] Action type: 'load' | 'play' | 'play_once' | 'stop' | 'unload'"
-	str_params[]: "[param2] Cutscene data name (from /def/camera/cutscenes.sii) (Only for 'load' action)"
-	str_params[]: "[target] Camera point item at which the cutscene is loaded/played."
+	str_params[]: "[param1] Action type: 'load' | 'play' | 'play_once' | 'stop' | 'unload' | 'create'"
+	str_params[]: "[param2 : 'load'] Cutscene data name (from /def/camera/cutscenes.sii)"
+	str_params[]: "[param2 : 'create'] Custom cutscene name (as token)"
+	str_params[]: "[param3 : 'create'] Ordered list of camera path item tags and transitions: 'tag1 [fade_in_duration [fade_out_duration]] | ...'"
+	str_params[]: "[param4 : 'create'] Additional cutscene optional attributes: [shuffle] [loop] [actions]"
+	str_params[]: "[param5+ : 'create'] Cutscene action definition: 'command time [param1 [param2 ...]]'"
+	str_params[]: "[target] Item(s) (camera point, camera path) to perform actions at."
 }
 
 trigger_action : trig_action.trigger

@@ -34,8 +34,11 @@ editor_data : .edit_data {
 	sub_mode_types[]: 38 #traffic_area_item"
 	sub_mode_types[]: 41 #trajectory
 	sub_mode_types[]: 34 #trigger_item"
+	sub_mode_types[]: 45 #camera_path_item"
 
 	map_import_offset: (-43402, 0, -28089)
+
+
 
 	bcg_map_name[]: "/map/europe.mbd"
 	bcg_material[]: "/material/editor/europe.mat"
@@ -44,12 +47,27 @@ editor_data : .edit_data {
 	bcg_offset_x[]: 10500
 	bcg_offset_y[]: -7090
 
+	bcg_map_name[]: "/map/europe_reskin.mbd"
+	bcg_material[]: "/material/editor/europe.mat"
+	bcg_size_x[]: 207656
+	bcg_size_y[]: 174375
+	bcg_offset_x[]: 10500
+	bcg_offset_y[]: -7090
+
+	bcg_map_name[]: "/map/iberia/europe_iberia_layout.mbd"
+	bcg_material[]: "/material/editor/europe.mat"
+	bcg_size_x[]: 207656
+	bcg_size_y[]: 174375
+	bcg_offset_x[]: 10500
+	bcg_offset_y[]: -7090
 
 
 
+# For INTERNAL members: Please for added custom map use "/mod_internal/base/def/editor_data_custom.sii".
+# This one below going to be overriden.
 
-
-@include "/custom/editor_data.sii"
+# For MODERS: Custom maps should be added to file below.
+@include "editor_data_custom.sui"
 	
 }
 }

@@ -1,0 +1,51 @@
+traffic_vehicle : traffic.towncity
+{
+	accessories[]: .towncity.chassis
+	accessories[]: .towncity.fwheel
+	accessories[]: .towncity.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 9000
+	engine_power: 200
+
+	trailer_chains[]: "traffic.trailer.towncity_t"
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	spawn_ratio: 1.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	spawn_condition[]: .traffic.towncity.condition.city
+
+	tags[]: rapid_trans
+}
+
+vehicle_accessory: .towncity.chassis
+{
+	data_path: "/def/vehicle/ai/towncity/chassis.sii"
+}
+
+vehicle_wheel_accessory: .towncity.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .towncity.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.towncity.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "istanbul"
+}
+

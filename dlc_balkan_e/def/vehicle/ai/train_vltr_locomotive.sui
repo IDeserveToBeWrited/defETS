@@ -1,0 +1,53 @@
+traffic_vehicle : traffic.train_vltr
+{
+	accessories[]: .train_vltr.chassis
+	accessories[]: .train_vltr.fwheel
+	accessories[]: .train_vltr.rwheel
+	accessories[]: .train_vltr.rwheel1
+	accessories[]: .train_vltr.rwheel2
+
+	max_speed: 160
+
+	vehicle_mass: 82000
+	engine_power: 3860
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_car.vltr_car1 4-5"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 1.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+}
+
+vehicle_accessory: .train_vltr.chassis
+{
+	data_path: "/def/vehicle/ai/train_vltr/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .train_vltr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .train_vltr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_vltr.rwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_vltr.rwheel2
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

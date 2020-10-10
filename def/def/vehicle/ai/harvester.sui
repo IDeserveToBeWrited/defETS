@@ -1,0 +1,41 @@
+traffic_vehicle : traffic.harvester
+{
+	accessories[]: .harvester.chassis
+	accessories[]: .harvester.fwheel
+	accessories[]: .harvester.rwheel
+
+	max_speed: 40
+
+	vehicle_mass: 19000
+	engine_power: 300
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	allow_parked: false
+
+	tags[]: slow
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .harvester.chassis
+{
+	data_path: "/def/vehicle/ai/harvester/chassis.sii"
+}
+
+vehicle_wheel_accessory: .harvester.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_harvester.sii"
+}
+
+vehicle_wheel_accessory: .harvester.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_harvester.sii"
+}

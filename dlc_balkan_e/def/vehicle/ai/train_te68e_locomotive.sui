@@ -1,0 +1,54 @@
+traffic_vehicle : traffic.train_te68e
+{
+	accessories[]: .train_te68e.chassis
+	accessories[]: .train_te68e.fwheel
+	accessories[]: .train_te68e.rwheel
+	accessories[]: .train_te68e.rwheel1
+	accessories[]: .train_te68e.rwheel2
+
+	max_speed: 140
+
+	vehicle_mass: 86000
+	engine_power: 5000
+
+	spawn_ratio: 0.0
+
+	trailer_chains[]: "train_cargo 2-3 | train_cargo 2-3 | train_cargo 2-3"
+	trailer_chains[]: "train_car.vltr_car1 4-5"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+}
+
+vehicle_accessory: .train_te68e.chassis
+{
+	data_path: "/def/vehicle/ai/train_te68e/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .train_te68e.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .train_te68e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_te68e.rwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_te68e.rwheel2
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

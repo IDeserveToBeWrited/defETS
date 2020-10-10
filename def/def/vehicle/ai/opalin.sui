@@ -1,0 +1,237 @@
+traffic_vehicle : traffic.opalin
+{
+	accessories[]: .opalin.chassis
+	accessories[]: .opalin.fwheel
+	accessories[]: .opalin.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 12000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.0103, 0.0171, 0.0835) # blue
+
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_ratio: 0.01
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .opalin.chassis
+{
+	data_path: "/def/vehicle/ai/opalin/chassis.sii"
+}
+
+vehicle_wheel_accessory: .opalin.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
+}
+
+vehicle_wheel_accessory: .opalin.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
+}
+
+traffic_vehicle : traffic.opalin_p
+{
+	accessories[]: .opalin_p.chassis
+	accessories[]: .opalin_p.fwheel
+	accessories[]: .opalin_p.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 12000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.0103, 0.0171, 0.0835) #blue
+
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .opalin_p.chassis
+{
+	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
+}
+
+vehicle_wheel_accessory: .opalin_p.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
+}
+
+vehicle_wheel_accessory: .opalin_p.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
+}
+
+traffic_vehicle : traffic.opalin_tr
+{
+	accessories[]: .opalin_tr.chassis
+	accessories[]: .opalin_tr.fwheel
+	accessories[]: .opalin_tr.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 12000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+
+	prefer_variant: true
+	variant[]: traffic.opalin_tr_ed
+	variant[]: traffic.opalin_tr_td
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_ratio: 0.0
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .opalin_tr.chassis
+{
+	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
+}
+
+traffic_vehicle : traffic.opalin_tr_ed
+{
+	accessories[]: .opalin_tr_ed.chassis
+	accessories[]: .opalin_tr_ed.fwheel
+	accessories[]: .opalin_tr_ed.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 12000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	allow_parked: false
+
+	spawn_condition[]: .traffic.opalin_tr_ed.edirne.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .opalin_tr_ed.chassis
+{
+	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr_ed.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr_ed.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
+}
+traffic_spawn_condition: .traffic.opalin_tr_ed.edirne.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "edirne"
+}
+
+traffic_vehicle : traffic.opalin_tr_td
+{
+	accessories[]: .opalin_tr_td.chassis
+	accessories[]: .opalin_tr_td.fwheel
+	accessories[]: .opalin_tr_td.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 12000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+
+	color[]: (0.9535, 0.7785, 0.0000) #yellow
+
+	allow_parked: false
+
+	spawn_condition[]: .traffic.opalin_tr_td.tekirdag.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .opalin_tr_td.chassis
+{
+	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr_td.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
+}
+
+vehicle_wheel_accessory: .opalin_tr_td.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
+}
+traffic_spawn_condition: .traffic.opalin_tr_td.tekirdag.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "tekirdag"
+}

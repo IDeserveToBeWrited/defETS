@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.scania_str_c
+{
+	accessories[]: .scania_str_c.chassis
+	accessories[]: .scania_str_c.fwheel
+	accessories[]: .scania_str_c.rwheel
+	accessories[]: .scania_str_c.rwheel2
+	accessories[]: .scania_str_c.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 9000
+	engine_power: 373
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_3.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.3659, 0.3463, 0.3053) #light brown
+	color[]: (0.151, 0.0017, 0.0075) #red
+	color[]: (0, 0.1122, 0.0354) #green
+	color[]: (0.0085, 0.0193, 0.0595) #dark blue
+	color[]: (0.2379, 0.0101, 0.0101) #red
+	color[]: (0.8307, 0.8307, 0.8307) #white
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .scania_str_c.chassis
+{
+	data_path: "/def/vehicle/ai/truck/scania.sline/c6x4.sii"
+}
+vehicle_wheel_accessory: .scania_str_c.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .scania_str_c.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .scania_str_c.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .scania_str_c.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/scania.sline/accessory/trlr_cables/stock.sii"
+}

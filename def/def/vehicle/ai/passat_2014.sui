@@ -1,0 +1,96 @@
+traffic_vehicle : traffic.passat_2014
+{
+	accessories[]: .passat_2014.chassis
+	accessories[]: .passat_2014.fwheel
+	accessories[]: .passat_2014.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	color[]: (0.1844, 0, 0.0085) #red
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0761, 0.0512, 0.0331) #brown
+	#color[]: (0.1022, 0.1714, 0.2422) #light blue
+	color[]: (0, 0.0527, 0.2177) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.7713, 0.7631, 0.7227) #white	
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .passat_2014.chassis
+{
+	data_path: "/def/vehicle/ai/passat_2014/chassis.sii"
+}
+
+vehicle_wheel_accessory: .passat_2014.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/25_alu_vw_front.sii"
+}
+
+vehicle_wheel_accessory: .passat_2014.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/25_alu_vw_rear.sii"
+}
+# XXXXXXXXXXXXXXXXXXXXXXXXXX passat hook XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.passat_2014.hook
+{
+	accessories[]: .passat_2014.hook.chassis
+	accessories[]: .passat_2014.hook.fwheel
+	accessories[]: .passat_2014.hook.rwheel
+
+	max_speed: 80
+
+	trailer_chains[]: "trailer.ai_car.ontour"
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	color[]: (0.1844, 0, 0.0085) #red
+	color[]: (0.0006, 0.0021, 0.0043) #black
+	color[]: (0.0761, 0.0512, 0.0331) #brown
+	color[]: (0.1022, 0.1714, 0.2422) #light blue
+	color[]: (0, 0.0527, 0.2177) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_ratio: 0.1
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .passat_2014.hook.chassis
+{
+	data_path: "/def/vehicle/ai/passat_2014/hook.sii"
+}
+
+vehicle_wheel_accessory: .passat_2014.hook.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/25_alu_vw_front.sii"
+}
+
+vehicle_wheel_accessory: .passat_2014.hook.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/25_alu_vw_rear.sii"
+}

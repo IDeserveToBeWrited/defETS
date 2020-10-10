@@ -1,0 +1,49 @@
+traffic_vehicle : traffic.metro_buc
+{
+	accessories[]: .metro_buc.chassis
+	accessories[]: .metro_buc.fwheel
+	accessories[]: .metro_buc.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 18000	# 82t whole train
+	engine_power: 360	# 8x45 kW
+
+	trailer_chains[]: "train_car.metro_buc_c1 4 | train_car.metro_buc_c2"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 1.0
+
+	spawn_ratio: 0.0
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+	spawn_condition[]: .traffic.metro_buc.condition.city
+}
+
+vehicle_accessory: .metro_buc.chassis
+{
+	data_path: "/def/vehicle/ai/metro_buc/chassis_l.sii"
+}
+
+vehicle_wheel_accessory: .metro_buc.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .metro_buc.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.metro_buc.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "bucuresti"
+}

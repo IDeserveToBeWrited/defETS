@@ -8,136 +8,200 @@ SiiNunit
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 #
-# Attributes:
 #
-# storage_path - path to list of traffic vehicle definitions for this type
+# NOTE: Default traffic vehicle storage path is '/def/vehicle/traffic_storage_(type).sii'
 #
+# For example, for vehicle type 'truck' the path will be:
+# '/def/vehicle/traffic_storage_truck.sii'
+#
+# NOTE: The order of 3 basic vehicle type 'groups' (car*, truck*, bus*) is important.
+# The first type of each group is considered 'default type' for that group (currently: car, truck, bus).
+# These defaults are mainly used to keep backward compatibility with versions where the vehicle types were hardcoded
 
+
+########### CAR #############
+
+# common cars and vans (<3.5t) automatically spawned at most roads
 traffic_vehicle_type : traffic.vehicle_type.car
 {
-	tags[]: "road"
+	speed_class: car
+	license_plate_type: car
 
-	storage_path: "/def/vehicle/traffic_storage_car.sii"
+	tags[]: road
+	tags[]: car_all
 }
 
+# cars driving inside specific area only (downtown / city_centre in large cities)
 traffic_vehicle_type : traffic.vehicle_type.car_city
 {
 	speed_class: car
+	license_plate_type: car
 
-	tags[]: "city_centre"
-
-	storage_path: "/def/vehicle/traffic_storage_car_city.sii"
+	tags[]: city_centre
+	tags[]: car_all
 }
 
+# cars not spawned automatically - usually stationary (event, parked) cars or cars driving inside custom areas
+traffic_vehicle_type : traffic.vehicle_type.car_custom
+{
+	speed_class: car
+	license_plate_type: car
+
+	tags[]: car_all
+	tags[]: custom_all
+}
+
+########### TRUCK #############
+
+# common trucks (semi and non-semi) for which special rules apply, for example weigh stations, truck lanes, etc.
 traffic_vehicle_type : traffic.vehicle_type.truck
 {
 	speed_class: truck
 	license_plate_type: truck
 
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_truck.sii"
+	tags[]: road
+	tags[]: truck_all
 }
 
+# trucks with excessively long trailer chain (spawning only at 'multi-lane' high-speed roads)
+traffic_vehicle_type : traffic.vehicle_type.truck_long
+{
+	speed_class: truck
+	license_plate_type: truck
+
+	tags[]: road
+	tags[]: truck_all
+}
+
+# trucks driving inside specific area only (downtown / city_centre in large cities)
 traffic_vehicle_type : traffic.vehicle_type.truck_city
 {
 	speed_class: truck
-	license_plate_type: truck
+	license_plate_type: truck_city
 
-	tags[]: "city_centre"
-
-	storage_path: "/def/vehicle/traffic_storage_truck_city.sii"
+	tags[]: city_centre
+	tags[]: truck_all
 }
 
-traffic_vehicle_type : traffic.vehicle_type.truck_double
+# trucks not spawned automatically - usually stationary (event, parked) trucks or trucks driving inside custom areas
+traffic_vehicle_type : traffic.vehicle_type.truck_custom
 {
 	speed_class: truck
 	license_plate_type: truck
 
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_truck_double.sii"
+	tags[]: truck_all
+	tags[]: custom_all
 }
 
+
+########### BUS #############
+
+# vehicle for 8+ people - intercity buses
 traffic_vehicle_type : traffic.vehicle_type.bus
 {
 	speed_class: bus
 	license_plate_type: bus
 
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_bus.sii"
+	tags[]: road
+	tags[]: bus_all
 }
 
-# Bus rapid transit system
-traffic_vehicle_type : traffic.vehicle_type.bus_transit
+# buses driving inside specific area only (downtown / city_centre in large cities)
+traffic_vehicle_type : traffic.vehicle_type.bus_city
 {
 	speed_class: bus
-	license_plate_type: bus_transit
-	
-	storage_path: "/def/vehicle/traffic_storage_bus_transit.sii"
+	license_plate_type: bus
+
+	tags[]: city_centre
+	tags[]: bus_all
 }
 
-traffic_vehicle_type : traffic.vehicle_type.slow
+# buses not spawned automatically - usually stationary (event, parked) buses or buses driving inside custom areas
+traffic_vehicle_type : traffic.vehicle_type.bus_custom
 {
-	storage_path: "/def/vehicle/traffic_storage_slow.sii"
+	speed_class: bus
+	license_plate_type: bus
+
+	tags[]: bus_all
+	tags[]: custom_all
 }
 
+
+########### RAIL #############
+
+# railed vehicles driving inside urban areas (typically city-specific models)
+traffic_vehicle_type : traffic.vehicle_type.tram
+{
+	tags[]: rail_tram
+
+	speed_class: tram
+
+	suspension_coef: 0.0
+	deceleration_limit: 8.0
+}
+
+# all non-electric locomotives - both passenger and cargo trains
+traffic_vehicle_type : traffic.vehicle_type.train
+{
+	tags[]: rail_train
+
+	speed_class: train
+
+	safe_distance: 1000
+	suspension_coef: 0.0
+	deceleration_limit: 3.0
+}
+
+# all electric locomotives - both passenger and cargo trains
+traffic_vehicle_type : traffic.vehicle_type.train_wire
+{
+	tags[]: rail_train
+
+	speed_class: train
+
+	safe_distance: 1000
+	suspension_coef: 0.0
+	deceleration_limit: 3.0
+}
+
+
+########### EMERGENCY #############
+
+# police cars spawning automatically at most roads - by default highway patrol ('state police') , Municipal police cars in urban areas (where available)
 traffic_vehicle_type : traffic.vehicle_type.police
 {
 	speed_class: car
 	license_plate_type: police
 
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_police.sii"
+	tags[]: road
 }
 
-traffic_vehicle_type : traffic.vehicle_type.train
+# Firefighter vehicles - driving inside specific area only (downtown / city_centre in large cities)
+traffic_vehicle_type : traffic.vehicle_type.fire
 {
-	speed_class: train
+	speed_class: truck
+	license_plate_type: truck
 
-	tags[]: "rail_train"
-
-	safe_distance: 1000
-
-	suspension_coef: 0.0
-	deceleration_limit: 3.0
-
-	storage_path: "/def/vehicle/traffic_storage_train.sii"
+	tags[]: road
 }
 
-traffic_vehicle_type : traffic.vehicle_type.train_fast
+# ambulances - driving inside specific area only (downtown / city_centre in large cities)
+traffic_vehicle_type : traffic.vehicle_type.medical
 {
-	speed_class: train
+	speed_class: truck
+	license_plate_type: car
 
-	tags[]: "rail_train"
-
-	safe_distance: 1000
-
-	suspension_coef: 0.0
-	deceleration_limit: 3.0
-
-	storage_path: "/def/vehicle/traffic_storage_train_high_speed.sii"
+	tags[]: road
 }
 
-traffic_vehicle_type : traffic.vehicle_type.tram
-{
-	speed_class: tram
 
-	tags[]: "rail_tram"
+########### OTHER #############
 
-	suspension_coef: 0.0
-	deceleration_limit: 8.0
-
-	storage_path: "/def/vehicle/traffic_storage_tram.sii"
-}
-
+# front escort vehicles (exclusive for Special transport missions)
 traffic_vehicle_type : traffic.vehicle_type.escort_front
 {
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_escort_front.sii"
+	tags[]: road
+	tags[]: escort_all
 
 	speed_class: car
 	license_plate_type: car
@@ -147,11 +211,11 @@ traffic_vehicle_type : traffic.vehicle_type.escort_front
 	cache_size: 0
 }
 
+# rear escort vehicles (exclusive for Special transport missions)
 traffic_vehicle_type : traffic.vehicle_type.escort_back
 {
-	tags[]: "road"
-
-	storage_path: "/def/vehicle/traffic_storage_escort_back.sii"
+	tags[]: road
+	tags[]: escort_all
 
 	speed_class: car
 	license_plate_type: car
@@ -160,24 +224,11 @@ traffic_vehicle_type : traffic.vehicle_type.escort_back
 
 	cache_size: 0
 }
-traffic_vehicle_type : traffic.vehicle_type.event
-{
-	license_plate_type: car
-	storage_path: "/def/vehicle/traffic_storage_event.sii"
-}
-traffic_vehicle_type : traffic.vehicle_type.parked
-{
-	license_plate_type: car
-	storage_path: "/def/vehicle/traffic_storage_parked.sii"
-}
-traffic_vehicle_type : traffic.vehicle_type.emergency
-{
-	tags[]: "road"
 
-	license_plate_type: car
-
-	storage_path: "/def/vehicle/traffic_storage_emergency.sii"
+# vehicles not fitting in any other type
+traffic_vehicle_type : traffic.vehicle_type.custom
+{
+	tags[]: "custom_all"
 }
-
 
 }

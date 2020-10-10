@@ -1,6 +1,12 @@
 SiiNunit
 {
 
+##############################
+# NOTE: To hide OBSOLETE movers from content browser, use mover_name prefix: "__"
+# For example:
+# 'mover_name: "mover"'  --->  'mover_name: "__mover"'
+##############################
+
 mover_model : mover.bic_man_01
 {
 	mover_name: "__bicycle_man_01"
@@ -3904,7 +3910,10 @@ mover_model : mover.fire_idle
 mover_model : mover.fire_walk
 {
 	mover_name: "__firefighter_walk"
-	model_desc: "/model/mover/characters/firefighter_walk.pmd"
+
+	# Model 'firefighter_walk' was removed since all it contained was a non-existing hookup.
+	# Use 'firefighter_idle' as a fallback model (this mover should not be used anyway)
+	model_desc: "/model/mover/characters/firefighter_idle.pmd"
 	pedestrian: true
 }
 mover_model : mover.fire_lea

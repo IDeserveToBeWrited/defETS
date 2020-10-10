@@ -217,8 +217,8 @@ default_setup_entry : _nameless.ATI.Radeon.HD.4550.3
 
 # Generated stuf.
 
-@include "default_gfx_setup_gen_nv.sii"
-@include "default_gfx_setup_gen_ati.sii"
+@include "default_gfx_setup_gen_nv.sui"
+@include "default_gfx_setup_gen_ati.sui"
 
 # Defined configurations - special
 
@@ -228,6 +228,7 @@ default_setup_config : _nameless.config.default
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 1
 	hdr: true
 	shadows_quality: 2 # Dithered single sample
 
@@ -261,6 +262,7 @@ default_setup_config : _nameless.config.minimum
 	deferred_mirrors: false
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: false
 	shadows_quality: 0
 
@@ -298,6 +300,7 @@ default_setup_config : _nameless.config.deferred.lower
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: true
 	shadows_quality: 2
 
@@ -331,6 +334,7 @@ default_setup_config : _nameless.config.deferred.medium
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 1
 	hdr: true
 	shadows_quality: 3
 
@@ -375,6 +379,7 @@ default_setup_config : _nameless.config.nv.gtx.460 # TODO: Check performance on 
 	mirror_view_distance: 160.0
 
 	mlaa: true
+	ssao_quality: 2
 	hdr: true
 	shadows_quality: 4
 
@@ -415,6 +420,7 @@ default_setup_config : _nameless.config.nv.gtx.285 # TODO: Check performance on 
 	mirror_view_distance: 160.0
 
 	mlaa: true
+	ssao_quality: 2
 	hdr: true
 	shadows_quality: 4
 
@@ -455,6 +461,7 @@ default_setup_config : _nameless.config.nv.gtx.250 # TODO: Check performance on 
 	mirror_view_distance: 160.0
 
 	mlaa: true
+	ssao_quality: 2
 	hdr: true
 	shadows_quality: 4
 
@@ -495,6 +502,7 @@ default_setup_config : _nameless.config.ati.hd.4850 # TODO: Check performance on
 	mirror_view_distance: 160.0
 
 	mlaa: true
+	ssao_quality: 2
 	hdr: true
 	shadows_quality: 4
 
@@ -535,6 +543,7 @@ default_setup_config : _nameless.config.nv.gt.220 # TODO: Check performance on t
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 1
 	hdr: true
 	shadows_quality: 3
 
@@ -574,6 +583,7 @@ default_setup_config : _nameless.config.nv.gtx.7800 # TODO: Check performance on
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: true
 	shadows_quality: 0
 
@@ -613,6 +623,7 @@ default_setup_config : _nameless.config.nv.gt.7600 # TODO: Check performance on 
 	deferred_mirrors: false
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: false
 	shadows_quality: 0
 
@@ -652,6 +663,7 @@ default_setup_config : _nameless.config.ati.hd.4550 # TODO: Check performance on
 	deferred_mirrors: true
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: true
 	shadows_quality: 0
 
@@ -691,6 +703,7 @@ default_setup_config : _nameless.config.nv.gs.8400 # TODO: Check performance on 
 	deferred_mirrors: false
 
 	mlaa: false
+	ssao_quality: 0
 	hdr: false
 	shadows_quality: 0
 
