@@ -73,6 +73,21 @@ traffic_lane_data : traffic_lane.road.motorway
 	traffic_rules[]: traffic_rule.s_police
 }
 
+traffic_lane_data : traffic_lane.road.motorway.full_in_out
+{
+	speed_class: motorway
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+
 traffic_lane_data : traffic_lane.road.motorway.low_density
 {
 	speed_class: motorway

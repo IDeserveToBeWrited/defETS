@@ -595,9 +595,16 @@ traffic_rule_data : traffic_rule.physics
 
 traffic_rule_data : traffic_rule.speed_bump
 {
-	name: "[various] Speed bump"
+	name: "[various] Speed bump (limit 20)"
 	rule: "speed_limit"
 	num_params[]: 20
+
+	additional_rules[]: traffic_rule.physics
+}
+
+traffic_rule_data : traffic_rule.speed_bump2
+{
+	name: "[various] Speed bump (no limit)"
 
 	additional_rules[]: traffic_rule.physics
 }

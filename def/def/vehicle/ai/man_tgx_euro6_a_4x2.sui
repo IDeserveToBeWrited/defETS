@@ -1,0 +1,54 @@
+traffic_vehicle : traffic.man_e6_a4x2
+{
+	accessories[]: .man_e6_a4x2.chassis
+	accessories[]: .man_e6_a4x2.fwheel
+	accessories[]: .man_e6_a4x2.rwheel
+	accessories[]: .man_e6_a4x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 7327
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0664, 0.0664, 0.0664) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2458, 0.0134, 0.013) #red
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.9911, 0.5906, 0.0781) #yellow
+	color[]: (0.0103, 0.0171, 0.0835) #blue
+
+	lod_dist[]: 70
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .man_e6_a4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/a4x2.sii"
+}
+vehicle_wheel_accessory: .man_e6_a4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man_e6_a4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .man_e6_a4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/accessory/trlr_cables/stock.sii"
+}

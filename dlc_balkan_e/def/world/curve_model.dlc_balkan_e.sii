@@ -46,21 +46,40 @@ curve_model : curve.dlc_blke_9
 
 curve_model : curve.dlc_blke_10
 {
-	name: "fence concrete 03 ro blke crv"
 	model_desc: "/model2/fences/fence_concrete_03_ro_blke_crv.pmd"
-	variation[]: "default | center : 1.0"
-	dynamic_lod_desc[]: "/model2/fences/fence_concrete_03_ro_blke_crv_lod1.pmd"
-	dynamic_lod_dist[]: 40
-	start_part[]: "start"
-	end_part[]: "end"
+	name: "fence concrete 03 ro blke crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | center1 : 1.0"
+	start_part[0]: "center1"
+	end_part[0]: "center1"
+
+	overlay: 1
+	overlay[0]: "center1 | ovr1 : 1.0"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/fences/fence_concrete_03_ro_blke_crv_lod1.pmd"
+	dynamic_lod_dist[0]: 40
 }
 
 curve_model : curve.dlc_blke_12
 {
-	name: "fence brick 02 bg blke crv"
 	model_desc: "/model2/fences/fence_brick_02_bg_blke_crv.pmd"
-	variation[]: "default | center : 1.0"
+	name: "fence brick 02 bg blke crv"
 
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | center : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+
+	high_tess: 0
 }
 
 curve_model : curve.dlc_blke_15
@@ -117,10 +136,12 @@ curve_model : curve.dlc_blke_21
 	model_desc: "/model2/lamp/lamp_03_ro_blke_crv.pmd"
 	variation[0]: "default | center1 : 1.0"
 	variation[1]: "advert | center2 : 1.0"
-	start_part[]: "start1"
+	start_part[0]: "start1"
+	start_part[1]: "start1"
 	fixed_inner_start[0]: start2
 	fixed_inner_start[1]: start2
-	end_part[]: "end1"
+	end_part[0]: "end1"
+	end_part[1]: "end1"
 	fixed_inner_end[0]: end2
 	fixed_inner_end[1]: end2
 	fixed_step: 35
@@ -159,14 +180,24 @@ curve_model : curve.dlc_blke_25
 
 curve_model : curve.dlc_blke_26
 {
-	name: "fence brick 01 tr blke crv"
 	model_desc: "/model2/fences/fence_brick_01_tr_blke_crv.pmd"
-	variation[]: "default | cent_a : 1.0 | cent_b : 1.0 | cent_c : 1.0"
+	name: "fence brick 01 tr blke crv"
 
-	color_variant[]: "light: 255,255,255"
-	color_variant[]: "dark: 182,182,182"
-	start_part[]: "start"
-	end_part[]: "end"
+	color_variant: 2
+	color_variant[0]: "light: 255,255,255"
+	color_variant[1]: "dark: 182,182,182"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "stepped_geo | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
 }
 
 curve_model : curve.dlc_blke_27
@@ -224,6 +255,8 @@ curve_model : curve.dlc_blke_34
 	variation[]: "default | center1 : 1.0"
 	variation[]: "middle | cent_big : 1.0"
 	start_part[]: "strt"
+	start_part[]: "strt"
+	end_part[]: "end"
 	end_part[]: "end"
 
 }
@@ -238,6 +271,9 @@ curve_model : curve.dlc_blke_36
 	dynamic_lod_dist[]: 50.0
 	start_part[]: "start"
 	end_part[]: "end"
+	start_part[]: "start"
+	end_part[]: "end"
+
 
 }
 
@@ -270,6 +306,9 @@ curve_model : curve.dlc_blke_39
 	name: "stone barrier 01 blke"
 	model_desc: "/model2/barrier/stone/stone_barrier_01_blke.pmd"
 	variation[]: "default | center1 : 6.0 | center2 : 1.0 | center3 : 3.0"
+	start_part[]: ""
+	end_part[]: ""
+
 }
 
 curve_model : curve.dlc_blke_40
@@ -283,12 +322,20 @@ curve_model : curve.dlc_blke_40
 
 curve_model : curve.dlc_blke_41
 {
-	name: "sidewalk wall 01 blke"
 	model_desc: "/model2/walls/sidewalk_wall_01_blke.pmd"
-	variation[]: "default | center1 : 3.0 | center2 : 2.0 | center3 : 1.0"
-	variation[]: "ResitaT | centerS,centerAO1,centerAO2,centerAO3,centerAO1,centerAO3,centerAO2,centerAO1,centerAO2,centerAO3,centerAO1,centerE : 1.0"
-	start_part[]: "start1"
-	end_part[]: "end1"
+	name: "sidewalk wall 01 blke"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center1 : 3.0 | center2 : 2.0 | center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "resitat | centers,centerao1,centerao2,centerao3,centerao1,centerao3,centerao2,centerao1,centerao2,centerao3,centerao1,centere : 1.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+
+	high_tess: 0
 }
 
 curve_model : curve.dlc_blke_42
@@ -319,28 +366,6 @@ curve_model : curve.dlc_blke_43
 	dynamic_lod_dist[0]: 100
 	dynamic_lod_desc[1]: "/model2/building/shop/shop_02_tr_blke_lod2.pmd"
 	dynamic_lod_dist[1]: 200
-}
-
-curve_model : curve.dlc_blke_44
-{
-	model_desc: "/model2/bridge/footbridge_01_blke.pmd"
-	name: "footbridge_01_blke"
-
-	variation: 3
-	variation[0]: "center | cen1 : 1.0"
-	variation[1]: "ramp | cen1,cen3 : 1.0"
-	variation[2]: "pillar | cen2 : 1.0"
-
-	start_part: 1
-	start_part[0]: "s1 | s2 | s3 | s4 | s5 | s6 | s7 | s7 | s_ramp"
-
-	end_part: 1
-	end_part[0]: "e1 | e2 | e3 | e4 | e5 | e6 | e7"
-
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/bridge/footbridge_01_blke_lod1.pmd"
-	dynamic_lod_dist[0]: 250
 }
 
 curve_model : curve.dlc_blke_45
@@ -392,8 +417,8 @@ curve_model : curve.dlc_blke_49
 	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
 	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
 	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
-	variation[]: "to_2m_L | to2ml : 1.0"
-	variation[]: "to_2m_R | to2mr : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
 
 	start_part[]: "s1 | s2 | s3"
 	start_part[]: "s1 | s2 | s3"
@@ -422,8 +447,8 @@ curve_model : curve.dlc_blke_51
 	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
 	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
 	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
-	variation[]: "to_2m_L | to2ml : 1.0"
-	variation[]: "to_2m_R | to2mr : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
 
 	start_part[]: "s1 | s2 | s3"
 	start_part[]: "s1 | s2 | s3"
@@ -451,8 +476,8 @@ curve_model : curve.dlc_blke_52
 	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
 	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
 	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
-	variation[]: "to_2m_L | to2ml : 1.0"
-	variation[]: "to_2m_R | to2mr : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
 
 	start_part[]: "s1 | s2 | s3"
 	start_part[]: "s1 | s2 | s3"
@@ -480,8 +505,8 @@ curve_model : curve.dlc_blke_53
 	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
 	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
 	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
-	variation[]: "to_2m_L | to2ml : 1.0"
-	variation[]: "to_2m_R | to2mr : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
 
 	start_part[]: "s1 | s2 | s3"
 	start_part[]: "s1 | s2 | s3"
@@ -508,6 +533,15 @@ curve_model : curve.dlc_blke_54
 	variation[]: "2m | c2,c2a : 1.0"
 	variation[]: "4m | c4,c4a : 1.0"
 	variation[]: "8m | c8 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
 
 	color_variant[]: "default: 255,255,255"
 	color_variant[]: "sand: 236,235,216"
@@ -522,6 +556,16 @@ curve_model : curve.dlc_blke_55
 	variation[]: "2m | c2,c2a : 1.0"
 	variation[]: "4m | c4,c4a : 1.0"
 	variation[]: "8m | c8 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+
 
 	color_variant[]: "default: 255,255,255"
 	color_variant[]: "sand: 236,235,216"
@@ -594,6 +638,16 @@ curve_model : curve.dlc_blke_59
 	variation[]: "15m | c15 : 1.0"
 	variation[]: "14m | c14 : 1.0"
 	variation[]: "10m | c10 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+
 
 	color_variant[]: "default: 255,255,255"
 	color_variant[]: "green: 142,162,142"
@@ -602,13 +656,20 @@ curve_model : curve.dlc_blke_59
 
 curve_model : curve.dlc_blke_62
 {
-	name: "factory_hall_02_blke"
 	model_desc: "/model2/building/industry/factory_hall_02_blke.pmd"
-	variation[]: "two_side | center1_H : 1.0 | center2_H : 1.0 | center3_H : 1.0 | center4_H : 1.0 | center5_H : 1.0"
-	variation[]: "one_side | center1_L : 1.0 | center2_L : 1.0 | center3_L : 1.0 | center4_L : 1.0 | center5_L : 1.0"
-	start_part[]: "start_HI | start_LOW"
-	end_part[]: "end_HI | end_LOW"
+	name: "factory_hall_02_blke"
 
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "two_side | center1_h : 1.0 | center2_h : 1.0 | center3_h : 1.0 | center4_h : 1.0 | center5_h : 1.0"
+	start_part[0]: "start_hi | start_low"
+	end_part[0]: "end_hi | end_low"
+	variation[1]: "one_side | center1_l : 1.0 | center2_l : 1.0 | center3_l : 1.0 | center4_l : 1.0 | center5_l : 1.0"
+	start_part[1]: "start_hi | start_low"
+	end_part[1]: "end_hi | end_low"
+
+	high_tess: 0
 }
 
 curve_model : curve.dlc_blke_63
@@ -642,24 +703,35 @@ curve_model : curve.dlc_blke_64
 	variation: 2
 	variation[0]: "default | cent1 : 1.0 | cent2 : 1.0 | cent3 : 1.0 | cent4 : 1.0 | cent5 : 1.0 | cent6 : 1.0 | cent7 : 1.0 | cent8 : 1.0 | cent9 : 1.0 | cent10 : 1.0"
 	variation[1]: "blank_spaces | cent1 : 1.0 | cent2 : 1.0 | cent3 : 1.0 | cent4 : 1.0 | cent5 : 1.0 | cent6 : 1.0 | cent7 : 1.0 | cent8 : 1.0 | cent9 : 1.0 | cent10 : 1.0 | cent11 : 1.0"
+	start_part: 2
+	start_part[0]: ""
+	start_part[1]: ""
+	end_part: 2
+	end_part[0]: ""
+	end_part[1]: ""
 }
 
 curve_model : curve.dlc_blke_68
 {
-	name: "fence_metal_04_tr_blke"
 	model_desc: "/model2/fences/fence_metal_04_tr_blke.pmd"
+	name: "fence_metal_04_tr_blke"
 
-	variation[]: "5m | c1 : 1.0"
-	variation[]: "1m | c1a : 1.0"
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "5m | c1 : 1.0"
+	start_part[0]: "s1"
+	end_part[0]: "e1"
+	variation[1]: "1m | c1a : 1.0"
+	start_part[1]: "s2"
+	end_part[1]: "e2"
 
-	start_part[]: "s1"
-	start_part[]: "s1"
-	end_part[]: "e1"
-	end_part[]: "e1"
+	high_tess: 0
 
-	dynamic_lod_desc[]: "/model2/fences/fence_metal_04_tr_blke_lod1.pmd"
-	dynamic_lod_dist[]: 50
-
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/fences/fence_metal_04_tr_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
 }
 
 curve_model : curve.dlc_blke_70
@@ -718,9 +790,13 @@ curve_model : curve.dlc_blke_78
 {
 	name: "barrier concrete 01 ro blke crv"
 	model_desc: "/model2/railing/barrier/barrier_concrete_01_ro_blke_crv.pmd"
-	variation[]: "Yellow | centery : 1.0"
-	variation[]: "Black | centerb : 1.0"
-	variation[]: "Mix | centery : 5.0 | centerb : 8.0"
+	variation[]: "yellow | centery : 1.0"
+	variation[]: "black | centerb : 1.0"
+	variation[]: "mix | centery : 5.0 | centerb : 8.0"
+	start_part[]: "starty | startb"
+	end_part[]: "endy | endb"
+	start_part[]: "starty | startb"
+	end_part[]: "endy | endb"
 	start_part[]: "starty | startb"
 	end_part[]: "endy | endb"
 
@@ -780,6 +856,8 @@ curve_model : curve.dlc_blke_85
 	model_desc: "/model2/fences/fence_metal_03_tr_blke_crv.pmd"
 	variation[]: "default | center : 1.0 | cent_a : 1.0 | cent_b : 1.0"
 	variation[]: "holes | cent_a : 2.0 | cent_b : 2.0 | centH_a : 1.0 | centH_b : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
 	start_part[]: "start"
 	end_part[]: "end"
 }
@@ -850,6 +928,20 @@ curve_model : curve.dlc_blke_92
 	variation[4]: "parking | park_cent_1,park_cent_2,park_cent_3 : 1.0"
 	variation[5]: "warn | warn_cent_1 : 1.0"
 	variation[6]: "cross | cross_cent_1,cross_cent_2 : 1.0"
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	start_part[4]: ""
+	start_part[5]: ""
+	start_part[6]: ""
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+	end_part[4]: ""
+	end_part[5]: ""
+	end_part[6]: ""
 
 }
 
@@ -888,12 +980,12 @@ curve_model : curve.dlc_blke_99
 {
 	name: "fence glass 01 blke"
 	model_desc: "/model2/fences/fence_glass_01_blke.pmd"
-	variation[0]: "Glass | centerG1 : 4.0 | centerG2 : 1.0 | centerG3 : 2.0"
-	variation[1]: "NoGlass | centerNG1 : 4.0 | centerNG2 : 2.0 | centerNG3 : 2.0"
-	start_part[0]: "startG"
-	end_part[0]: "endG"
-	start_part[1]: "startNG"
-	end_part[1]: "endNG"
+	variation[0]: "glass | centerG1 : 4.0 | centerG2 : 1.0 | centerG3 : 2.0"
+	variation[1]: "noglass | centerNG1 : 4.0 | centerNG2 : 2.0 | centerNG3 : 2.0"
+	start_part[0]: "startg"
+	end_part[0]: "endg"
+	start_part[1]: "startng"
+	end_part[1]: "endng"
 }
 
 curve_model : curve.dlc_blke_100
@@ -904,6 +996,14 @@ curve_model : curve.dlc_blke_100
 	variation[1]: "1m | c1_1m : 3.0 | c2_1m : 3.0 | c3_1m : 1.0 | c4_1m : 1.0 | c5_1m : 8.0"
 	variation[2]: "2m | c1_2m : 3.0 | c2_2m : 3.0 | c3_2m : 1.0 | c4_2m : 1.0 | c5_2m : 8.0"
 	variation[3]: "3m | c1_3m : 3.0 | c2_3m : 3.0 | c3_3m : 1.0 | c4_3m : 1.0 | c5_3m : 8.0"
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
 
 }
 
@@ -933,7 +1033,7 @@ curve_model : curve.dlc_blke_103
 {
 	name: "gas_roof_01_blke"
 	model_desc: "/model2/building/gas_station/gas_roof_01_blke.pmd"
-	variation[]: "Default | c1,c2,c3,c4 : 1.0"
+	variation[]: "default | c1,c2,c3,c4 : 1.0"
 
 	start_part[]: "s1"
 	end_part[]: "e1"
@@ -973,6 +1073,8 @@ curve_model : curve.dlc_blke_106
 	name: "concrete barrier cube 01 blke crv"
 	model_desc: "/model2/barrier/concrete_barrier_cube_01_blke_crv.pmd"
 	variation[]: "default | center : 1.0"
+	start_part[]: ""
+	end_part[]: ""
 	fixed_step: 2
 
 }
@@ -984,6 +1086,14 @@ curve_model : curve.dlc_blke_108
 	variation[]: "2 | cent1,cent1,cent2 : 1.0"
 	variation[]: "3 | cent3 : 1.0"
 	variation[]: "4 | cent4 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
 
 }
 curve_model : curve.blke_0h001
@@ -1013,40 +1123,43 @@ curve_model : curve.blke_07001
 	category: "dlc_blke"
 	name: "concrete wall 02 blke"
 
-	color_variant: 5
+	color_variant: 6
 	color_variant[0]: "sand dark: 194,184,148"
 	color_variant[1]: "sand: 236,235,216"
 	color_variant[2]: "red: 237,126,126"
 	color_variant[3]: "default: 255,255,255"
 	color_variant[4]: "green: 106,226,166"
+	color_variant[5]: "blue: 182,198,232"
 
 	variation: 8
 	start_part: 8
 	end_part: 8
 	variation[0]: "1mx8m | c1mx8m : 1.0"
-	start_part[0]: "s1mx4m"
-	end_part[0]: "e1mx4m"
+	start_part[0]: "s1mx4m | s1mx1m"
+	end_part[0]: "e1mx4m | e1mx1m"
 	variation[1]: "1mx4m | c1mx4m : 1.0 | c1mx4mv2 : 1.0"
-	start_part[1]: "s1mx4m"
-	end_part[1]: "e1mx4m"
+	start_part[1]: "s1mx4m | s1mx1m"
+	end_part[1]: "e1mx4m | e1mx1m"
 	variation[2]: "1mx2m | c1mx2m : 1.0 | c1mx2mv2 : 1.0"
-	start_part[2]: "s1mx4m"
-	end_part[2]: "e1mx4m"
+	start_part[2]: "s1mx4m | s1mx1m"
+	end_part[2]: "e1mx4m | e1mx1m"
 	variation[3]: "1mx1m | c1mx1m : 2.0 | c1mx1mv2 : 5.0 | c1mx1mv3 : 3.0"
-	start_part[3]: "s1mx4m"
-	end_part[3]: "e1mx4m"
+	start_part[3]: "s1mx4m | s1mx1m"
+	end_part[3]: "e1mx4m | e1mx1m"
 	variation[4]: "2mx4m | c2mx4m : 5.0 | c2mx4mv2 : 1.0 | c2mx4mv3 : 4.0"
-	start_part[4]: "s2mx4m"
-	end_part[4]: "e2mx4m"
+	start_part[4]: "s2mx4m | s2mx1m"
+	end_part[4]: "e2mx4m | e2mx1m"
 	variation[5]: "2mx1m | c2mx1m : 5.0 | c2mx1mv2 : 2.0 | c2mx1mv3 : 3.0"
-	start_part[5]: "s2mx4m"
-	end_part[5]: "e2mx4m"
+	start_part[5]: "s2mx4m | s2mx1m"
+	end_part[5]: "e2mx4m | e2mx1m"
 	variation[6]: "2mx2m | c2mx2m : 1.0 | c2mx2mv2 : 1.0"
-	start_part[6]: "s2mx4m"
-	end_part[6]: "e2mx4m"
+	start_part[6]: "s2mx4m | s2mx1m"
+	end_part[6]: "e2mx4m | e2mx1m"
 	variation[7]: "2mx8m | c2mx8m : 1.0"
-	start_part[7]: "s2mx4m"
-	end_part[7]: "e2mx4m"
+	start_part[7]: "s2mx4m | s2mx1m"
+	end_part[7]: "e2mx4m | e2mx1m"
+
+	high_tess: 0
 }
 curve_model : curve.blke_0g002
 {
@@ -1186,6 +1299,9 @@ curve_model : curve.dlc_blke_111
 	name: "blke_rail_curve"
 	model_desc: "/model2/props/road/blke_rail_curve.pmd"
 	variation[]: "default | center1,center2,center3 : 1.0"
+	start_part[]: ""
+
+	end_part[]: ""
 
 }
 
@@ -1345,6 +1461,10 @@ curve_model : curve.blke_07002
 
 	variation: 1
 	variation[0]: "default | start1,center1,end1 : 1.0"
+	start_part: 1
+	start_part[0]: ""
+	end_part: 1
+	end_part[0]: ""
 }
 curve_model : curve.blke_07003
 {
@@ -1383,6 +1503,47 @@ curve_model : curve.blke_0g005
 	variation[15]: "food_08 | cent_16 : 1.0"
 	variation[16]: "food_08_v2 | cent_17 : 1.0"
 	variation[17]: "food_09 | cent_18 : 1.0"
+
+	start_part: 18
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	start_part[4]: ""
+	start_part[5]: ""
+	start_part[6]: ""
+	start_part[7]: ""
+	start_part[8]: ""
+	start_part[9]: ""
+	start_part[10]: ""
+	start_part[11]: ""
+	start_part[12]: ""
+	start_part[13]: ""
+	start_part[14]: ""
+	start_part[15]: ""
+	start_part[16]: ""
+	start_part[17]: ""
+
+	end_part: 18
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+	end_part[4]: ""
+	end_part[5]: ""
+	end_part[6]: ""
+	end_part[7]: ""
+	end_part[8]: ""
+	end_part[9]: ""
+	end_part[10]: ""
+	end_part[11]: ""
+	end_part[12]: ""
+	end_part[13]: ""
+	end_part[14]: ""
+	end_part[15]: ""
+	end_part[16]: ""
+	end_part[17]: ""
+
 
 	#dynamic_lod_desc: 1
 	#dynamic_lod_dist: 1
@@ -1466,7 +1627,7 @@ curve_model : curve.dlc_blke_112
 	name: "antiskid_stripe_r1_blke"
 	model_desc: "/model2/props/street/antiskid_stripe_r1_blke.pmd"
 
-	variation[0]: "Default | center_t_1,center_t_2,center_t_3,center_t_4,center_t_5,center_t_6 : 1.0"
+	variation[0]: "default | center_t_1,center_t_2,center_t_3,center_t_4,center_t_5,center_t_6 : 1.0"
 	variation[1]: "thin | center1,center2 : 1.0"
 
 	start_part[0]: "start1_t"
@@ -1480,16 +1641,24 @@ curve_model : curve.blke_0u001
 	model_desc: "/model2/fences/fence_plaster_ro_blke.pmd"
 	name: "fence plaster ro blke"
 
+	color_variant: 2
+	color_variant[0]: "default: 236,235,216"
+	color_variant[1]: "white: 255,255,255"
+
 	variation: 3
-	variation[0]: "just_wall | vCa : 1.0 | vCd : 5.0"
-	variation[1]: "doorway | vCb : 0.0"
-	variation[2]: "gate | vCc : 0.0"
+	start_part: 3
+	end_part: 3
+	variation[0]: "just_wall | vca : 1.0 | vcd : 5.0"
+	start_part[0]: "vsa"
+	end_part[0]: "vea"
+	variation[1]: "doorway | vcb : 0.0"
+	start_part[1]: "vsa"
+	end_part[1]: "vea"
+	variation[2]: "gate | vcc : 0.0"
+	start_part[2]: "vsa"
+	end_part[2]: "vea"
 
-	start_part: 1
-	start_part[0]: "vSa"
-
-	end_part: 1
-	end_part[0]: "vEa"
+	high_tess: 0
 }
 curve_model : curve.blke_07005
 {
@@ -1595,6 +1764,11 @@ curve_model : curve.blke_1r001
 	variation: 1
 	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0"
 
+	start_part: 1
+	start_part[0]: ""
+	end_part: 1
+	end_part[0]: ""
+
 	dynamic_lod_desc: 2
 	dynamic_lod_dist: 2
 	dynamic_lod_desc[0]: "/model2/props/country/graveyard_01_ro_blke_lod1.pmd"
@@ -1612,9 +1786,11 @@ curve_model : curve.blke_1k001
 	variation: 1
 	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0 | c12 : 1.0 | c13 : 1.0 | c14 : 1.0 | c15 : 1.0 | c11 : 1.0"
 
-	start_part: 0
+	start_part: 1
+	start_part[0]: ""
 
-	end_part: 0
+	end_part: 1
+	end_part[0]: ""
 
 	dynamic_lod_desc: 2
 	dynamic_lod_dist: 2
@@ -1656,6 +1832,56 @@ curve_model : curve.blke_0g006
 	variation[21]: "serv_03_v01 | cent_22 : 1.0"
 	variation[22]: "serv_03_v02 | cent_23 : 1.0"
 
+	start_part: 23
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	start_part[4]: ""
+	start_part[5]: ""
+	start_part[6]: ""
+	start_part[7]: ""
+	start_part[8]: ""
+	start_part[9]: ""
+	start_part[10]: ""
+	start_part[11]: ""
+	start_part[12]: ""
+	start_part[13]: ""
+	start_part[14]: ""
+	start_part[15]: ""
+	start_part[16]: ""
+	start_part[17]: ""
+	start_part[18]: ""
+	start_part[19]: ""
+	start_part[20]: ""
+	start_part[21]: ""
+	start_part[22]: ""
+
+	end_part: 23
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+	end_part[4]: ""
+	end_part[5]: ""
+	end_part[6]: ""
+	end_part[7]: ""
+	end_part[8]: ""
+	end_part[9]: ""
+	end_part[10]: ""
+	end_part[11]: ""
+	end_part[12]: ""
+	end_part[13]: ""
+	end_part[14]: ""
+	end_part[15]: ""
+	end_part[16]: ""
+	end_part[17]: ""
+	end_part[18]: ""
+	end_part[19]: ""
+	end_part[20]: ""
+	end_part[21]: ""
+	end_part[22]: ""
+
 	#dynamic_lod_desc: 1
 	#dynamic_lod_dist: 1
 	#dynamic_lod_desc[0]: "/model2/props/street/advert/advert_board_05_tr_blke_lod1.pmd"
@@ -1672,11 +1898,17 @@ curve_model : curve.blke_20001
 	variation[2]: "mini | c4 : 1.0"
 	variation[3]: "no_doors | c2 : 1.0 | c3 : 1.0 | c1 : 1.0 | c5 : 1.0"
 
-	start_part: 1
+	start_part: 4
 	start_part[0]: "s1 | s2"
+	start_part[1]: "s1 | s2"
+	start_part[2]: "s1 | s2"
+	start_part[3]: "s1 | s2"
 
-	end_part: 1
+	end_part: 4
 	end_part[0]: "e1 | e2"
+	end_part[1]: "e1 | e2"
+	end_part[2]: "e1 | e2"
+	end_part[3]: "e1 | e2"
 
 	dynamic_lod_desc: 1
 	dynamic_lod_dist: 1
@@ -1703,6 +1935,14 @@ curve_model : curve.blke_0g007
 	variation: 2
 	variation[0]: "houses | center01 : 1.0 | center02 : 1.0 | center03 : 1.0 | center04 : 1.0 | center05 : 1.0 | center06 : 1.0 | center07 : 1.0 | center08 : 1.0 | center09 : 1.0 | center10 : 1.0"
 	variation[1]: "zero_parts | center01 : 1.0 | center02 : 1.0 | center03 : 1.0 | center04 : 1.0 | center05 : 1.0 | center06 : 1.0 | center07 : 1.0 | center08 : 1.0 | center09 : 1.0 | center10 : 1.0 | center11 : 1.0"
+
+	start_part: 2
+	start_part[0]: ""
+	start_part[1]: ""
+
+	end_part: 2
+	end_part[0]: ""
+	end_part[1]: ""
 }
 curve_model : curve.blke_0j001
 {
@@ -1713,11 +1953,13 @@ curve_model : curve.blke_0j001
 	variation[0]: "def | c1 : 1.0"
 	variation[1]: "def1 | c2 : 1.0"
 
-	start_part: 1
+	start_part: 2
 	start_part[0]: "s1 | s2"
+	start_part[1]: "s1 | s2"
 
-	end_part: 1
+	end_part: 2
 	end_part[0]: "e1 | e2"
+	end_part[1]: "e1 | e2"
 }
 curve_model : curve.blke_2o001
 {
@@ -1730,11 +1972,17 @@ curve_model : curve.blke_2o001
 	variation[2]: "light_min | a0b : 5.0 | a1b : 5.0 | a2b : 1.0 | a3b : 2.0 | a4b : 7.0 | a5b : 2.0 | a6b : 1.0 | a7b : 5.0 | a8b : 1.0 | a9b : 5.0 | a10b : 5.0 | a11b : 5.0 | a12b : 5.0 | a13b : 5.0"
 	variation[3]: "medium_min | b0b : 1.0 | b1b : 2.0 | b2b : 1.0 | b3b : 1.0 | b4b : 1.0 | b5b : 6.0 | b6b : 1.0 | b7b : 6.0 | b8b : 6.0"
 
-	start_part: 1
+	start_part: 4
 	start_part[0]: "start | start_minim"
+	start_part[1]: "start | start_minim"
+	start_part[2]: "start | start_minim"
+	start_part[3]: "start | start_minim"
 
-	end_part: 1
+	end_part: 4
 	end_part[0]: "end | end_minim"
+	end_part[1]: "end | end_minim"
+	end_part[2]: "end | end_minim"
+	end_part[3]: "end | end_minim"
 
 }
 curve_model : curve.blke_0g008
@@ -1781,13 +2029,84 @@ curve_model : curve.blke_0g008
 	variation[35]: "law02 | cent_35 : 1.0"
 	variation[36]: "law03 | cent_36 : 1.0"
 
-	start_part: 2
-	start_part[0]: "str_01"
-	start_part[1]: "str_02"
+	start_part: 37
+	start_part[0]: "str_01 | str_02"
+	start_part[1]: "str_01 | str_02"
+	start_part[2]: "str_01 | str_02"
+	start_part[3]: "str_01 | str_02"
+	start_part[4]: "str_01 | str_02"
+	start_part[5]: "str_01 | str_02"
+	start_part[6]: "str_01 | str_02"
+	start_part[7]: "str_01 | str_02"
+	start_part[8]: "str_01 | str_02"
+	start_part[9]: "str_01 | str_02"
+	start_part[10]: "str_01 | str_02"
+	start_part[11]: "str_01 | str_02"
+	start_part[12]: "str_01 | str_02"
+	start_part[13]: "str_01 | str_02"
+	start_part[14]: "str_01 | str_02"
+	start_part[15]: "str_01 | str_02"
+	start_part[16]: "str_01 | str_02"
+	start_part[17]: "str_01 | str_02"
+	start_part[18]: "str_01 | str_02"
+	start_part[19]: "str_01 | str_02"
+	start_part[20]: "str_01 | str_02"
+	start_part[21]: "str_01 | str_02"
+	start_part[22]: "str_01 | str_02"
+	start_part[23]: "str_01 | str_02"
+	start_part[24]: "str_01 | str_02"
+	start_part[25]: "str_01 | str_02"
+	start_part[26]: "str_01 | str_02"
+	start_part[27]: "str_01 | str_02"
+	start_part[28]: "str_01 | str_02"
+	start_part[29]: "str_01 | str_02"
+	start_part[30]: "str_01 | str_02"
+	start_part[31]: "str_01 | str_02"
+	start_part[32]: "str_01 | str_02"
+	start_part[33]: "str_01 | str_02"
+	start_part[34]: "str_01 | str_02"
+	start_part[35]: "str_01 | str_02"
+	start_part[36]: "str_01 | str_02"
 
-	end_part: 2
-	end_part[0]: "end_01"
-	end_part[1]: "end_02"
+
+	end_part: 37
+	end_part[0]: "end_01 | end_02"
+	end_part[1]: "end_01 | end_02"
+	end_part[2]: "end_01 | end_02"
+	end_part[3]: "end_01 | end_02"
+	end_part[4]: "end_01 | end_02"
+	end_part[5]: "end_01 | end_02"
+	end_part[6]: "end_01 | end_02"
+	end_part[7]: "end_01 | end_02"
+	end_part[8]: "end_01 | end_02"
+	end_part[9]: "end_01 | end_02"
+	end_part[10]: "end_01 | end_02"
+	end_part[11]: "end_01 | end_02"
+	end_part[12]: "end_01 | end_02"
+	end_part[13]: "end_01 | end_02"
+	end_part[14]: "end_01 | end_02"
+	end_part[15]: "end_01 | end_02"
+	end_part[16]: "end_01 | end_02"
+	end_part[17]: "end_01 | end_02"
+	end_part[18]: "end_01 | end_02"
+	end_part[19]: "end_01 | end_02"
+	end_part[20]: "end_01 | end_02"
+	end_part[21]: "end_01 | end_02"
+	end_part[22]: "end_01 | end_02"
+	end_part[23]: "end_01 | end_02"
+	end_part[24]: "end_01 | end_02"
+	end_part[25]: "end_01 | end_02"
+	end_part[26]: "end_01 | end_02"
+	end_part[27]: "end_01 | end_02"
+	end_part[28]: "end_01 | end_02"
+	end_part[29]: "end_01 | end_02"
+	end_part[30]: "end_01 | end_02"
+	end_part[31]: "end_01 | end_02"
+	end_part[32]: "end_01 | end_02"
+	end_part[33]: "end_01 | end_02"
+	end_part[34]: "end_01 | end_02"
+	end_part[35]: "end_01 | end_02"
+	end_part[36]: "end_01 | end_02"
 
 	#dynamic_lod_desc: 1
 	#dynamic_lod_dist: 1
@@ -1812,11 +2131,32 @@ curve_model : curve.blke_0g009
 	variation[8]: "long09 | cent_09 : 1.0"
 	variation[9]: "long10 | cent_10 : 1.0"
 
-	start_part: 1
+	start_part: 10
 	start_part[0]: "str_01 | str_02"
+	start_part[1]: "str_01 | str_02"
+	start_part[2]: "str_01 | str_02"
+	start_part[3]: "str_01 | str_02"
+	start_part[4]: "str_01 | str_02"
+	start_part[5]: "str_01 | str_02"
+	start_part[6]: "str_01 | str_02"
+	start_part[7]: "str_01 | str_02"
+	start_part[8]: "str_01 | str_02"
+	start_part[9]: "str_01 | str_02"
 
-	end_part: 1
+
+
+	end_part: 10
 	end_part[0]: "end_01 | end_02"
+	end_part[1]: "end_01 | end_02"
+	end_part[2]: "end_01 | end_02"
+	end_part[3]: "end_01 | end_02"
+	end_part[4]: "end_01 | end_02"
+	end_part[5]: "end_01 | end_02"
+	end_part[6]: "end_01 | end_02"
+	end_part[7]: "end_01 | end_02"
+	end_part[8]: "end_01 | end_02"
+	end_part[9]: "end_01 | end_02"
+
 	#dynamic_lod_desc: 1
 	#dynamic_lod_dist: 1
 	#dynamic_lod_desc[0]: "/model2/props/street/advert/advert_board_06_tr_blke_lod1.pmd"
@@ -1832,11 +2172,13 @@ curve_model : curve.blke_10001
 	variation[0]: "center5m | center5m : 1.0"
 	variation[1]: "center15m | center15m : 1.0"
 
-	start_part: 1
+	start_part: 2
 	start_part[0]: "start5m | start15m"
+	start_part[1]: "start5m | start15m"
 
-	end_part: 1
+	end_part: 2
 	end_part[0]: "end5m | end15m"
+	end_part[1]: "end5m | end15m"
 
 	dynamic_lod_desc: 3
 	dynamic_lod_dist: 3

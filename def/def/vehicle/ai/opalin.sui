@@ -24,6 +24,8 @@ traffic_vehicle : traffic.opalin
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
 	spawn_ratio: 0.01
+	
+	variant[]: .traffic.opalin_p
 
 	allow_parked: false
 
@@ -47,7 +49,7 @@ vehicle_wheel_accessory: .opalin.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
 
-traffic_vehicle : traffic.opalin_p
+traffic_vehicle : .traffic.opalin_p
 {
 	accessories[]: .opalin_p.chassis
 	accessories[]: .opalin_p.fwheel
@@ -111,8 +113,8 @@ traffic_vehicle : traffic.opalin_tr
 	lod_dist[]: 100
 
 	prefer_variant: true
-	variant[]: traffic.opalin_tr_ed
-	variant[]: traffic.opalin_tr_td
+	variant[]: .traffic.opalin_tr_ed
+	variant[]: .traffic.opalin_tr_td
 
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
@@ -140,7 +142,7 @@ vehicle_wheel_accessory: .opalin_tr.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
 
-traffic_vehicle : traffic.opalin_tr_ed
+traffic_vehicle : .traffic.opalin_tr_ed
 {
 	accessories[]: .opalin_tr_ed.chassis
 	accessories[]: .opalin_tr_ed.fwheel
@@ -188,7 +190,7 @@ traffic_spawn_condition: .traffic.opalin_tr_ed.edirne.condition.city
 	str_param[]: "edirne"
 }
 
-traffic_vehicle : traffic.opalin_tr_td
+traffic_vehicle : .traffic.opalin_tr_td
 {
 	accessories[]: .opalin_tr_td.chassis
 	accessories[]: .opalin_tr_td.fwheel

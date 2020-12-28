@@ -1140,13 +1140,13 @@ mover_model : mover.pckshv
 mover_model : mover.event1
 {
 	mover_name: "air_ambulance"
-	model_desc: "/model/vehicle/event/air_ambulance_anim.pmd"
-	model_anim: "/model/vehicle/event/air_ambulance_anim.pma"
+	model_desc: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim.pmd"
+	model_anim: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim.pma"
 	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
 	sound_max_dist: 100
 
-	lods[0]: "/model/vehicle/event/air_ambulance_anim_lod1.pmd"
-	lods[1]: "/model/vehicle/event/air_ambulance_anim_lod2.pmd"
+	lods[0]: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim_lod1.pmd"
+	lods[1]: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim_lod2.pmd"
 
 	lod_dist[0]: 50
 	lod_dist[1]: 100
@@ -1347,7 +1347,33 @@ mover_model : mover.trig_view
 {
 	mover_name: "viewpoint trigger visualization"
 	model_desc: "/model/activation/interestingplaces.pmd"
+
 	model_anim: "/model/activation/interestingplaces.pma"
 }
+mover_model : mover.pt_ibe
+{
+	mover_name: "flag_potugal_ibe"
+	model_desc: "/model2/mover/flags/country/flag_pt_ibe.pmd"
+	model_anim: "/model2/mover/flags/flag.pma"
+	model_coll: "/model2/mover/flags/country/flag_pt_ibe.pmc"
 
+}
+mover_model : mover.es_ibe
+{
+	mover_name: "flag_spain_ibe"
+	model_desc: "/model2/mover/flags/country/flag_es_ibe.pmd"
+	model_anim: "/model2/mover/flags/flag.pma"
+	model_coll: "/model2/mover/flags/country/flag_es_ibe.pmc"
+
+
+}
+mover_model : mover.cg_tr_01
+{
+	mover_name: "cg_train_01"
+	model_desc: "/model2/mover/train/cargo_train_01_sc.pmd"
+	sound_path[]: "/sound/world/mover.bank#mover/train_1"
+	sound_path[]: "/sound/world/mover.bank#mover/train_2"
+	sound_min_dist: 20
+	sound_max_dist: 200
+}
 }
