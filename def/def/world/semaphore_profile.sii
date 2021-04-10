@@ -3722,4 +3722,138 @@ tr_semaphore_profile : tr_sem_prof.ab_pl_bd_tr
 }
 
 
+tr_semaphore_profile : tr_sem_prof.cr_2x1_round
+{
+
+	name: "crossroad 2x1"
+
+	model[0]: "single"
+	model[1]: "single"
+	model[2]: "single"
+	model[3]: "single"
+	model[4]: ""
+	model[5]: "single"
+	model[6]: "single"
+
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 7
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 78.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.ba_toll
+{
+
+	name: "tollgate"
+
+	model[]: "ba_toll"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.es_toll
+{
+
+	name: "tollgate"
+
+	model[]: "es_toll"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.pt_toll
+{
+
+	name: "tollgate"
+
+	model[]: "pt_toll"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
 }

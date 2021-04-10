@@ -1,0 +1,39 @@
+traffic_vehicle : traffic.transit_amb.tr
+{
+	accessories[]: .transit_amb.tr.chassis
+	accessories[]: .transit_amb.tr.fwheel
+	accessories[]: .transit_amb.tr.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 70
+	lod_dist[]: 110
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transit_amb.tr.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/amb_tr.sii"
+}
+
+vehicle_wheel_accessory: .transit_amb.tr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_amb.tr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}

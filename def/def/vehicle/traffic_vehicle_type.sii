@@ -21,7 +21,7 @@ SiiNunit
 
 ########### CAR #############
 
-# common cars and vans (<3.5t) automatically spawned at most roads
+# common cars (weight < 3.5t, height < 2.1m) automatically spawned at most roads
 traffic_vehicle_type : traffic.vehicle_type.car
 {
 	speed_class: car
@@ -53,7 +53,7 @@ traffic_vehicle_type : traffic.vehicle_type.car_custom
 
 ########### TRUCK #############
 
-# common trucks (semi and non-semi) for which special rules apply, for example weigh stations, truck lanes, etc.
+# Common 'heavy' trucks (> 11t) for which special rules apply, for example weigh stations, truck lanes, etc.
 traffic_vehicle_type : traffic.vehicle_type.truck
 {
 	speed_class: truck
@@ -63,7 +63,27 @@ traffic_vehicle_type : traffic.vehicle_type.truck
 	tags[]: truck_all
 }
 
-# trucks with excessively long trailer chain (spawning only at 'multi-lane' high-speed roads)
+# Light trucks, very big cars (3.5t - 7.5t) - heavier than standard cars, but still eligible for 'car' country speed limits.
+# Typically too big to spawn at standard parking places for cars. Otherwise, spawns similarly to cars.
+traffic_vehicle_type : traffic.vehicle_type.truck_light
+{
+	speed_class: car
+	license_plate_type: car
+
+	tags[]: road
+}
+
+# Medium trucks (7.5t - 12t) - lighter than 'heavy' trucks, but generally lower 'truck' speed limits already apply.
+traffic_vehicle_type : traffic.vehicle_type.truck_medium
+{
+	speed_class: truck
+	license_plate_type: truck
+
+	tags[]: road
+	tags[]: truck_all
+}
+
+# Heavy trucks with excessively long trailer chain (spawning only at 'multi-lane' high-speed roads)
 traffic_vehicle_type : traffic.vehicle_type.truck_long
 {
 	speed_class: truck

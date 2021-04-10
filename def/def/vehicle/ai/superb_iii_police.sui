@@ -1,9 +1,11 @@
+
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-traffic_vehicle : traffic.superb.police
+
+traffic_vehicle : traffic.superb.pol_ee
 {
-	accessories[]: .superb.police.chassis
-	accessories[]: .superb.police.fwheel
-	accessories[]: .superb.police.rwheel
+	accessories[]: .superb.pol_ee.chassis
+	accessories[]: .superb.pol_ee.fwheel
+	accessories[]: .superb.pol_ee.rwheel
 
 	max_speed: 160
 
@@ -18,34 +20,34 @@ traffic_vehicle : traffic.superb.police
 
 	spawn_ratio: 0
 
-	variant[]: traffic.superb.police_old
+	variant[]: traffic.superb.pol_ee_old
 
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .superb.police.chassis
+vehicle_accessory: .superb.pol_ee.chassis
 {
-	data_path: "/def/vehicle/ai/superb_iii/police.sii"
+	data_path: "/def/vehicle/ai/superb_iii/pol_ee.sii"
 }
 
-vehicle_wheel_accessory: .superb.police.fwheel
+vehicle_wheel_accessory: .superb.pol_ee.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
 }
 
-vehicle_wheel_accessory: .superb.police.rwheel
+vehicle_wheel_accessory: .superb.pol_ee.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
 }
 
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX police old XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-traffic_vehicle : traffic.superb.police_old
+traffic_vehicle : traffic.superb.pol_ee_old
 {
-	accessories[]: .superb.police_old.chassis
-	accessories[]: .superb.police_old.fwheel
-	accessories[]: .superb.police_old.rwheel
+	accessories[]: .superb.pol_ee_old.chassis
+	accessories[]: .superb.pol_ee_old.fwheel
+	accessories[]: .superb.pol_ee_old.rwheel
 
 	max_speed: 160
 
@@ -63,18 +65,59 @@ traffic_vehicle : traffic.superb.police_old
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .superb.police_old.chassis
+vehicle_accessory: .superb.pol_ee_old.chassis
 {
-	data_path: "/def/vehicle/ai/superb_iii/police_old.sii"
+	data_path: "/def/vehicle/ai/superb_iii/pol_ee_old.sii"
 }
 
-vehicle_wheel_accessory: .superb.police_old.fwheel
+vehicle_wheel_accessory: .superb.pol_ee_old.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
 }
 
-vehicle_wheel_accessory: .superb.police_old.rwheel
+vehicle_wheel_accessory: .superb.pol_ee_old.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}
+
+traffic_vehicle : traffic.superb.pol_pt_gnr
+{
+	accessories[]: .superb.pol_pt_gnr.chassis
+	accessories[]: .superb.pol_pt_gnr.fwheel
+	accessories[]: .superb.pol_pt_gnr.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+	prefer_variant: true
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .superb.pol_pt_gnr.chassis
+{
+	data_path: "/def/vehicle/ai/superb_iii/pol_pt_gnr.sii"
+}
+
+vehicle_wheel_accessory: .superb.pol_pt_gnr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .superb.pol_pt_gnr.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"

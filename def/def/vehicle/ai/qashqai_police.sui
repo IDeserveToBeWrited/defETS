@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.qashqai.pol_es_es
+{
+	accessories[]: .qashqai.pol_es_es.chassis
+	accessories[]: .qashqai.pol_es_es.fwheel
+	accessories[]: .qashqai.pol_es_es.rwheel
+
+	max_speed: 150
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	tags[]: pol_city
+
+	base: traffic.ortiz_combi.pol_es_es
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_condition[]: .traffic.qashqai.pol_es_es.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .qashqai.pol_es_es.chassis
+{
+	data_path: "/def/vehicle/ai/qashqai/pol_es_es.sii"
+}
+
+vehicle_wheel_accessory: .qashqai.pol_es_es.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_17in.sii"
+}
+
+vehicle_wheel_accessory: .qashqai.pol_es_es.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_17in.sii"
+}
+
+traffic_spawn_condition: .traffic.qashqai.pol_es_es.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "madrid"
+	str_param[]: "seville"
+	str_param[]: "valencia"
+	str_param[]: "malaga"
+	str_param[]: "cordoba"
+	str_param[]: "salamanca"
+	str_param[]: "murcia"
+	str_param[]: "albacete"
+	str_param[]: "almeria"
+}

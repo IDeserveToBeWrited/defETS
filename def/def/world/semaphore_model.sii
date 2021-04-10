@@ -2652,4 +2652,88 @@ tr_semaphore_model : tr_sem_mdl.brd_lgt_tr
 	model_coll: "/model/sign/traffic_light/border_gate_light_tr.pmc"
 
 }
+tr_semaphore_model : tr_sem_mdl.ba_toll
+{
+
+	name: "ba_toll"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_ba_ibe_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_ba_ibe_anim.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/model2/props/street/animated/t_small_dwn_ba.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/t_smal_up_ba.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+}
+
+tr_semaphore_model : tr_sem_mdl.es_toll
+{
+
+	name: "es_toll"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_es_ibe_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_es_ibe_anim.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/model2/props/street/animated/t_small_dwn_es.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/t_smal_up_es.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+}
+
+tr_semaphore_model : tr_sem_mdl.pt_toll
+{
+
+	name: "pt_toll"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_pt_ibe_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_pt_ibe_anim.pmc"
+
+	state_anim: 4
+	state_collision: 4
+
+	# orange_to_red
+	state_anim[0]: ""
+	state_collision[0]: false
+
+	# red
+	state_anim[1]: "/model2/props/street/animated/t_small_dwn_pt.pma"
+	state_collision[1]: true
+
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/t_smal_up_pt.pma"
+	state_collision[2]: true
+
+	# green
+	state_anim[3]: ""
+	state_collision[3]: false
+
+}
 }

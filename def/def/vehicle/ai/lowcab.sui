@@ -28,7 +28,6 @@ traffic_vehicle : traffic.lowcab
 	# BLUE
 	color[]: (0.0685, 0.1248, 0.1812)
 
-	allow_parked: false
 
 	variant[]: traffic.lowcab_dvan
 	variant[]: traffic.lowcab_dvan2
@@ -89,7 +88,6 @@ traffic_vehicle : traffic.lowcab_dvan
 	color[]: (0.7084, 0.7084, 0.7084)
 	color[]: (0.6, 0.6, 0.6)
 
-	allow_parked: false
 
 @include "drivers_generic.sui"
 }
@@ -140,7 +138,7 @@ traffic_vehicle : traffic.lowcab_dvan2
 	color[]: (0.7084, 0.7084, 0.7084)
 	color[]: (0.6, 0.6, 0.6)
 
-	allow_parked: false
+
 
 @include "drivers_generic.sui"
 }
@@ -198,7 +196,6 @@ traffic_vehicle : traffic.lowcab_fbed
 	#silver
 	color[]: (0.3662, 0.3277, 0.2788)
 
-	allow_parked: false
 
 @include "drivers_generic.sui"
 }
@@ -256,7 +253,6 @@ traffic_vehicle : traffic.lowcab_fbed1
 	#silver
 	color[]: (0.3662, 0.3277, 0.2788)
 
-	allow_parked: false
 
 @include "drivers_generic.sui"
 }
@@ -314,8 +310,6 @@ traffic_vehicle : traffic.lowcab_fbed2
 	#silver
 	color[]: (0.3662, 0.3277, 0.2788)
 
-	allow_parked: false
-
 @include "drivers_generic.sui"
 }
 
@@ -372,7 +366,7 @@ traffic_vehicle : traffic.lowcab_fbed3
 	#silver
 	color[]: (0.3662, 0.3277, 0.2788)
 
-	allow_parked: false
+
 
 @include "drivers_generic.sui"
 }
@@ -423,7 +417,7 @@ traffic_vehicle : traffic.lowcab_dumpt
 	#silver
 	color[]: (0.3662, 0.3277, 0.2788)
 
-	allow_parked: false
+
 
 @include "drivers_generic.sui"
 }
@@ -478,7 +472,6 @@ traffic_vehicle : traffic.lowcab_dumpd
 	color[]: (0.3185, 0, 0.0006)
 	color[]: (0.3423, 0, 0.0143)
 
-	allow_parked: false
 
 @include "drivers_generic.sui"
 }
@@ -499,3 +492,531 @@ vehicle_wheel_accessory: .lowcab_dumpd.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
+
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Billboard Boxes ( default ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab_box
+{
+	accessories[]: .lowcab_box.chassis
+	accessories[]: .lowcab_box.fwheel
+	accessories[]: .lowcab_box.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+	# prefer_variant: true
+
+	variant[]: traffic.lowcab_box.r_eu_01
+	variant[]: traffic.lowcab_box.r_eu_02
+	variant[]: traffic.lowcab_box.r_eu_03
+	variant[]: traffic.lowcab_box.r_eu_04
+	variant[]: traffic.lowcab_box.r_ibe_01
+	variant[]: traffic.lowcab_box.r_ibe_02
+	variant[]: traffic.lowcab_box.r_ibe_03
+	variant[]: traffic.lowcab_box.r_ibe_04
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_eu_01.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+
+traffic_vehicle : traffic.lowcab_box.r_eu_01
+{
+
+	accessories[]: .lowcab_box.r_eu_01.chassis
+	accessories[]: .lowcab_box.r_eu_01.fwheel
+	accessories[]: .lowcab_box.r_eu_01.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_eu_01.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_eu_01.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_01.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_01.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_eu_02
+{
+
+	accessories[]: .lowcab_box.r_eu_02.chassis
+	accessories[]: .lowcab_box.r_eu_02.fwheel
+	accessories[]: .lowcab_box.r_eu_02.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_eu_02.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_eu_02.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_02.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_02.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_eu_03
+{
+
+	accessories[]: .lowcab_box.r_eu_03.chassis
+	accessories[]: .lowcab_box.r_eu_03.fwheel
+	accessories[]: .lowcab_box.r_eu_03.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_eu_03.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_eu_03.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_03.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_03.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_eu_04
+{
+
+	accessories[]: .lowcab_box.r_eu_04.chassis
+	accessories[]: .lowcab_box.r_eu_04.fwheel
+	accessories[]: .lowcab_box.r_eu_04.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_eu_04.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_eu_04.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_04.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_eu_04.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+
+traffic_vehicle : traffic.lowcab_box.r_ibe_01
+{
+
+	accessories[]: .lowcab_box.r_ibe_01.chassis
+	accessories[]: .lowcab_box.r_ibe_01.fwheel
+	accessories[]: .lowcab_box.r_ibe_01.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+	spawn_condition[]: .traffic.lowcab_box.r_ibe_01.condition.country
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_ibe_01.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_ibe_01.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_01.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_01.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_spawn_condition: .traffic.lowcab_box.r_ibe_01.condition.country
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: country
+    str_param[]: "spain"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_ibe_02
+{
+
+	accessories[]: .lowcab_box.r_ibe_02.chassis
+	accessories[]: .lowcab_box.r_ibe_02.fwheel
+	accessories[]: .lowcab_box.r_ibe_02.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+	spawn_condition[]: .traffic.lowcab_box.r_ibe_02.condition.country
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_ibe_02.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_ibe_02.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_02.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_02.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_spawn_condition: .traffic.lowcab_box.r_ibe_02.condition.country
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: country
+    str_param[]: "spain"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_ibe_03
+{
+
+	accessories[]: .lowcab_box.r_ibe_03.chassis
+	accessories[]: .lowcab_box.r_ibe_03.fwheel
+	accessories[]: .lowcab_box.r_ibe_03.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+	spawn_condition[]: .traffic.lowcab_box.r_ibe_03.condition.country
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_ibe_03.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_ibe_03.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_03.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_03.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_spawn_condition: .traffic.lowcab_box.r_ibe_03.condition.country
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: country
+    str_param[]: "spain"
+}
+
+traffic_vehicle : traffic.lowcab_box.r_ibe_04
+{
+
+	accessories[]: .lowcab_box.r_ibe_04.chassis
+	accessories[]: .lowcab_box.r_ibe_04.fwheel
+	accessories[]: .lowcab_box.r_ibe_04.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	lod_dist[]: 53
+	lod_dist[]: 70
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+
+	spawn_condition[]: .traffic.lowcab_box.r_ibe_04.condition.country
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_ibe_04.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_ibe_04.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_04.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_ibe_04.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_spawn_condition: .traffic.lowcab_box.r_ibe_04.condition.country
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: country
+    str_param[]: "spain"
+}
+

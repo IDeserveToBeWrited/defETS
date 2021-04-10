@@ -1,0 +1,148 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+license_plate_data : .lp.car
+{
+	type: car
+
+	# There was change of LP format in march 2020. But as we can't make two different layouts (texture backgrounds)
+	# we decide to use older format only as new LPs is only a minority so far.
+	# In future we will switch to new format.
+
+	templates[]: "00-11-00  "
+#	templates[]: "A1 00 11"
+
+	def0[]: "0"
+	def0[]: "1"
+	def0[]: "2"
+	def0[]: "3"
+	def0[]: "4"
+	def0[]: "5"
+	def0[]: "6"
+	def0[]: "7"
+	def0[]: "8"
+	def0[]: "9"
+
+	def1[]: "A"
+	def1[]: "B"
+	def1[]: "C"
+	def1[]: "D"
+	def1[]: "E"
+	def1[]: "F"
+	def1[]: "G"
+	def1[]: "H"
+	def1[]: "I"
+	def1[]: "J"
+	def1[]: "L"
+	def1[]: "M"
+	def1[]: "N"
+	def1[]: "O"
+	def1[]: "P"
+	def1[]: "Q"
+	def1[]: "R"
+	def1[]: "S"
+	def1[]: "T"
+	def1[]: "U"
+	def1[]: "V"
+	def1[]: "X"
+	def1[]: "Z"
+}
+
+license_plate_data : .lp.trailer
+{
+	type: trailer
+
+	# simplified series limits
+	# L up to 209999
+	# C,P,AV up to 99999
+	# BR,E,SE,VI up to 9999
+	# GD,LE,VC up to ~3000, not enough templates, so we use 2099 as maximum and re-use L tokens
+	# SA,VR up to 999, not enough templates, use the above
+	# other: not enough data used 
+
+	templates[]: "L-20000  "
+	templates[]: "L-20000  "
+	templates[]: "L-20000  "
+	templates[]: "3-10000  "
+	templates[]: "3-10000  "
+	templates[]: "4-1000  "
+	templates[]: "5-200  "
+
+	def0[]: "0"
+	def0[]: "1"
+	def0[]: "2"
+	def0[]: "3"
+	def0[]: "4"
+	def0[]: "5"
+	def0[]: "6"
+	def0[]: "7"
+	def0[]: "8"
+	def0[]: "9"
+
+	def1[]: "1"
+	def1[]: "2"
+	def1[]: "3"
+	def1[]: "4"
+	def1[]: "5"
+	def1[]: "6"
+	def1[]: "7"
+	def1[]: "8"
+	def1[]: "9"
+
+	def2[]: "20"
+	def2[]: "19"
+	def2[]: "18"
+	def2[]: "17"
+	def2[]: "16"
+
+	def3[]: "C"
+	def3[]: "P"
+	def3[]: "AV"
+
+	def4[]: "BR"
+	def4[]: "E"
+	def4[]: "SE"
+	def4[]: "VI"
+
+	def5[]: "AN"
+	def5[]: "BE"
+	def5[]: "BG"
+	def5[]: "BR"
+	def5[]: "CB"
+	def5[]: "FA"
+	def5[]: "GD"
+	def5[]: "H"
+	def5[]: "PT"
+	def5[]: "SA"
+	def5[]: "VC"
+	def5[]: "VR"
+
+#	def2[]: "AN"
+#	def2[]: "AV"
+#	def2[]: "BE"
+#	def2[]: "BG"
+#	def2[]: "BR"
+#	def2[]: "C"
+#	def2[]: "CB"
+#	def2[]: "E"
+#	def2[]: "FA"
+#	def2[]: "GD"
+#	def2[]: "H"
+#	def2[]: "L"
+#	def2[]: "P"
+#	def2[]: "PT"
+#	def2[]: "SA"
+#	def2[]: "SE"
+#	def2[]: "VC"
+#	def2[]: "VR"
+#	def2[]: "VI"
+}
+
+}

@@ -1,0 +1,204 @@
+################################### Police Spain ###################################
+
+traffic_vehicle : traffic.ortiz_combi.pol_es_es
+{
+	accessories[]: .ortiz_combi.pol_es_es.chassis
+	accessories[]: .ortiz_combi.pol_es_es.fwheel
+	accessories[]: .ortiz_combi.pol_es_es.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+
+	spawn_ratio: 0
+
+	prefer_variant: true
+
+	variant[]: traffic.ortiz_combi.pol_es_ca
+	variant[]: traffic.ortiz_combi.pol_es_ba
+	variant[]: traffic.ortiz_combi.pol_es_na
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ortiz_combi.pol_es_es.chassis
+{
+	data_path: "/def/vehicle/ai/ortiz_combi/pol_es_es.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_es.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_es.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in.sii"
+}
+
+################################### Police Catalonia ###################################
+
+traffic_vehicle : traffic.ortiz_combi.pol_es_ca
+{
+	accessories[]: .ortiz_combi.pol_es_ca.chassis
+	accessories[]: .ortiz_combi.pol_es_ca.fwheel
+	accessories[]: .ortiz_combi.pol_es_ca.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+
+	license_plate_type: police_cat
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	spawn_condition[]: .traffic.ortiz_combi.pol_es_ca.condition.region
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ortiz_combi.pol_es_ca.chassis
+{
+	data_path: "/def/vehicle/ai/ortiz_combi/pol_es_ca.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_ca.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_ca.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in.sii"
+}
+
+traffic_spawn_condition: .traffic.ortiz_combi.pol_es_ca.condition.region
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: region
+    str_param[]: "catalonia"
+}
+
+################################### Police Navarre ###################################
+
+traffic_vehicle : traffic.ortiz_combi.pol_es_na
+{
+	accessories[]: .ortiz_combi.pol_es_na.chassis
+	accessories[]: .ortiz_combi.pol_es_na.fwheel
+	accessories[]: .ortiz_combi.pol_es_na.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+	
+	license_plate_type: car
+
+	spawn_condition[]: .traffic.ortiz_combi.pol_es_na.condition.region
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ortiz_combi.pol_es_na.chassis
+{
+	data_path: "/def/vehicle/ai/ortiz_combi/pol_es_na.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_na.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_na.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in.sii"
+}
+
+traffic_spawn_condition: .traffic.ortiz_combi.pol_es_na.condition.region
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: region
+    str_param[]: "navarre"
+}
+
+################################### Police Basque ###################################
+
+traffic_vehicle : traffic.ortiz_combi.pol_es_ba
+{
+	accessories[]: .ortiz_combi.pol_es_ba.chassis
+	accessories[]: .ortiz_combi.pol_es_ba.fwheel
+	accessories[]: .ortiz_combi.pol_es_ba.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 40
+	lod_dist[]: 70
+
+	license_plate_type: police_bas
+
+	spawn_condition[]: .traffic.ortiz_combi.pol_es_ba.condition.region
+
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ortiz_combi.pol_es_ba.chassis
+{
+	data_path: "/def/vehicle/ai/ortiz_combi/pol_es_ba.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_ba.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in.sii"
+}
+
+vehicle_wheel_accessory: .ortiz_combi.pol_es_ba.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in.sii"
+}
+
+traffic_spawn_condition: .traffic.ortiz_combi.pol_es_ba.condition.region
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: region
+    str_param[]: "basque"
+}

@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.octavia_iii.police
+traffic_vehicle : traffic.octavia_iii.police_cz
 {
-	accessories[]: .octavia_iii.police.chassis
-	accessories[]: .octavia_iii.police.fwheel
-	accessories[]: .octavia_iii.police.rwheel
+	accessories[]: .octavia_iii.police_cz.chassis
+	accessories[]: .octavia_iii.police_cz.fwheel
+	accessories[]: .octavia_iii.police_cz.rwheel
 
 	max_speed: 160
 
@@ -12,26 +12,158 @@ traffic_vehicle : traffic.octavia_iii.police
 
 	lod_dist[]: 50
 	lod_dist[]: 80
-	lod_dist[]: 100
+	#lod_dist[]: 100
 
 	spawn_ratio: 0
 
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .octavia_iii.police.chassis
+vehicle_accessory: .octavia_iii.police_cz.chassis
 {
-	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis_police.sii"
+	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis_police_cz.sii"
 }
 
-vehicle_wheel_accessory: .octavia_iii.police.fwheel
+vehicle_wheel_accessory: .octavia_iii.police_cz.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_17in.sii"
 }
 
-vehicle_wheel_accessory: .octavia_iii.police.rwheel
+vehicle_wheel_accessory: .octavia_iii.police_cz.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_17in.sii"
+}
+
+traffic_vehicle : traffic.octavia_iii.police_lt
+{
+	accessories[]: .octavia_iii.police_lt.chassis
+	accessories[]: .octavia_iii.police_lt.fwheel
+	accessories[]: .octavia_iii.police_lt.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+	#lod_dist[]: 100
+
+
+	spawn_ratio: 0
+
+	variant[]: traffic.octavia_iii.police_lt_n
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .octavia_iii.police_lt.chassis
+{
+	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis_police_lt.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lt.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lt.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}
+
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+traffic_vehicle : traffic.octavia_iii.police_lt_n
+{
+	accessories[]: .octavia_iii.police_lt_n.chassis
+	accessories[]: .octavia_iii.police_lt_n.fwheel
+	accessories[]: .octavia_iii.police_lt_n.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+	#lod_dist[]: 100
+
+
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .octavia_iii.police_lt_n.chassis
+{
+	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis_police_lt_n.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lt_n.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lt_n.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}
+
+
+
+
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+traffic_vehicle : traffic.octavia_iii.police_lis
+{
+	accessories[]: .octavia_iii.police_lis.chassis
+	accessories[]: .octavia_iii.police_lis.fwheel
+	accessories[]: .octavia_iii.police_lis.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	tags[]: pol_city
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	base: traffic.superb.pol_pt_gnr
+
+	lod_dist[]: 50
+	lod_dist[]: 80
+
+
+	spawn_condition[]: .traffic.octavia_iii.police_lis.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .octavia_iii.police_lis.chassis
+{
+	data_path: "/def/vehicle/ai/skoda_octavia_iii/chassis_police_lis.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lis.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .octavia_iii.police_lis.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}
+traffic_spawn_condition: .traffic.octavia_iii.police_lis.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+	str_param[]: "lisboa"
 }

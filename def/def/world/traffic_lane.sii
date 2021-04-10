@@ -20,6 +20,7 @@ traffic_lane_data : traffic_lane.road.local.no_overtake
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_trl_r
 	traffic_rules[]: traffic_rule.s_truck_l
 	traffic_rules[]: traffic_rule.s_bus_l
 	traffic_rules[]: traffic_rule.s_police
@@ -31,6 +32,7 @@ traffic_lane_data : traffic_lane.road.local
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_trl_r
 	traffic_rules[]: traffic_rule.s_truck_l
 	traffic_rules[]: traffic_rule.s_bus_l
 	traffic_rules[]: traffic_rule.s_police
@@ -41,8 +43,12 @@ traffic_lane_data : traffic_lane.road.expressway
 {
 	speed_class: expressway
 
+	rank: 150
+
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
 	traffic_rules[]: traffic_rule.s_truck_h
 	traffic_rules[]: traffic_rule.s_bus_h
 	traffic_rules[]: traffic_rule.s_police
@@ -51,6 +57,8 @@ traffic_lane_data : traffic_lane.road.expressway
 traffic_lane_data : traffic_lane.road.expressway.full_in_out
 {
 	speed_class: expressway
+
+	rank: 100
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
@@ -66,8 +74,12 @@ traffic_lane_data : traffic_lane.road.motorway
 {
 	speed_class: motorway
 
+	rank: 250
+
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
 	traffic_rules[]: traffic_rule.s_truck_h
 	traffic_rules[]: traffic_rule.s_bus_h
 	traffic_rules[]: traffic_rule.s_police
@@ -76,6 +88,8 @@ traffic_lane_data : traffic_lane.road.motorway
 traffic_lane_data : traffic_lane.road.motorway.full_in_out
 {
 	speed_class: motorway
+
+	rank: 230
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
@@ -91,6 +105,8 @@ traffic_lane_data : traffic_lane.road.motorway.full_in_out
 traffic_lane_data : traffic_lane.road.motorway.low_density
 {
 	speed_class: motorway
+
+	rank: 200
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
@@ -176,6 +192,8 @@ traffic_lane_data : traffic_lane.road.local.tram
 traffic_lane_data : traffic_lane.road.expressway.bus_transit
 {
 	speed_class: expressway
+
+	rank: 100
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.bus_transit

@@ -756,11 +756,6 @@ curve_model : curve.dlc_blke_33
 	end_part[4]: "end1 | end2 | end3"
 
 	high_tess: 0
-
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/distribution/canal_01_blke_lod1.pmd"
-	dynamic_lod_dist[0]: 100
 }
 
 curve_model : curve.dlc_blke_35
@@ -1116,39 +1111,45 @@ curve_model : curve.6
 }
 curve_model : curve.7
 {
-	name: "sidewalk_2m_terrain_blke"
 	model_desc: "/model2/props/road/sidewalk_terrain_blke.pmd"
-	variation[]: "4x2m | c1 : 1.0"
-	variation[]: "2x2m | cs1 : 1.0"
-	variation[]: "1x2m | csh1,csh2 : 1.0"
-	variation[]: "drivewey_2m | dw4m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 cs1 : 1.0"
-	variation[]: "drivewey_4m | dw6m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 : 1.0"
-	variation[]: "to_2m_L | to2ml : 1.0"
-	variation[]: "to_2m_R | to2mr : 1.0"
+	name: "sidewalk_2m_terrain_blke"
 
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
-	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	color_variant: 3
+	color_variant[0]: "default: 255,255,255"
+	color_variant[1]: "medium: 229,229,229"
+	color_variant[2]: "dark: 208,208,208"
 
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
-	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation: 7
+	start_part: 7
+	end_part: 7
+	variation[0]: "4x2m | c1 : 1.0"
+	start_part[0]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[0]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[1]: "2x2m | cs1 : 1.0"
+	start_part[1]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[1]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[2]: "1x2m | csh1,csh2 : 1.0"
+	start_part[2]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[2]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[3]: "drivewey_2m | dw4m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 cs1 : 1.0"
+	start_part[3]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[3]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[4]: "drivewey_4m | dw6m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 : 1.0"
+	start_part[4]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[4]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[5]: "to_2m_L | to2ml : 1.0"
+	start_part[5]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[5]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	variation[6]: "to_2m_R | to2mr : 1.0"
+	start_part[6]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	end_part[6]: "e1 | e2 | e3 | e4corner90 | e5corner45"
 
+	high_tess: 0
 
-	color_variant[]: "default: 255,255,255"
-	color_variant[]: "medium: 229,229,229"
-	color_variant[]: "dark: 208,208,208"
-
-	dynamic_lod_desc[]: "/model2/props/road/sidewalk_terrain_blke_lod1.pmd"
-	dynamic_lod_dist[]: 100
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/road/sidewalk_terrain_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 150
 }
 curve_model : curve.8
 {
@@ -1500,31 +1501,39 @@ curve_model : curve.21
 }
 curve_model : curve.blke20
 {
-	name: "hillside_blke"
 	model_desc: "/model2/rock/hillside_blke.pmd"
+	name: "hillside_blke"
 
-	variation[]: "sandy | sandy1,sandy2,sandy3 : 1.0"
-	variation[]: "rough | rocky1,rocky2,rocky3,mix1 : 1.0"
-	variation[]: "mix | sandy1,rocky1,sandy2,rocky2,sandy3,rocky3,mix1 : 1.0"
-	variation[]: "random | sandy1 : 1.0 | sandy2 : 1.0 | sandy3 : 1.0 | rocky1 : 1.0 | rocky2 : 1.0 | rocky3 : 1.0 | mix1 : 1.0 | cliff : 1.0"
-	variation[]: "cliff_only | cliff_big : 1.0 | cliff : 1.0"
-	variation[]: "roots | roots1 : 1.0"
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "sandy | sandy1,sandy2,sandy3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "rough | rocky1,rocky2,rocky3,mix1 : 1.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+	variation[2]: "mix | sandy1,rocky1,sandy2,rocky2,sandy3,rocky3,mix1 : 1.0"
+	start_part[2]: "start1"
+	end_part[2]: "end1"
+	variation[3]: "random | sandy1 : 1.0 | sandy2 : 1.0 | sandy3 : 1.0 | rocky1 : 1.0 | rocky2 : 1.0 | rocky3 : 1.0 | mix1 : 1.0 | cliff : 1.0"
+	start_part[3]: "start1"
+	end_part[3]: "end1"
+	variation[4]: "cliff_only | cliff_big : 1.0 | cliff : 1.0"
+	start_part[4]: "start1"
+	end_part[4]: "end1"
+	variation[5]: "roots | roots1 : 1.0"
+	start_part[5]: "start1"
+	end_part[5]: "end1"
 
-
-	start_part[]: "start1"
-	start_part[]: "start1"
-	start_part[]: "start1"
-	start_part[]: "start1"
-	start_part[]: "start1"
-	start_part[]: "start1"
-
-	end_part[]: "end1"
-	end_part[]: "end1"
-	end_part[]: "end1"
-	end_part[]: "end1"
-	end_part[]: "end1"
-	end_part[]: "end1"
-
+	high_tess: 1
+	high_tess[0]: "sandy"
+    high_tess[1]: "rough"
+    high_tess[2]: "mix"
+    high_tess[3]: "random"
+    high_tess[4]: "cliff_only"
+    high_tess[5]: "roots"
+       
 	smooth_surface: true
 }
 curve_model : curve.blke23
@@ -1985,6 +1994,9 @@ curve_model : curve.blke_0f002
 	model_desc: "/model2/dirt/crosswalk_03.pmd"
 	name: "crosswalk 03"
 
+	color_variant[]: "white: 255,255,255"
+	color_variant[]: "yellow: 251,230,113"
+
 	variation: 4
 	variation[0]: "used | c1_new : 4.0 | c2_new : 4.0 | c3_new : 6.0 | c4_new : 6.0 | c6_old : 1.0 | c4_old : 2.0 | c5_old : 2.0"
 	variation[1]: "broken | c1_old : 2.0 | c2_old : 2.0 | c3_old : 2.0 | c4_old : 3.0 | c5_old : 3.0 | c6_old : 4.0"
@@ -2287,7 +2299,7 @@ curve_model : curve.dlc_blke_79
 	dynamic_lod_desc: 1
 	dynamic_lod_dist: 1
 	dynamic_lod_desc[0]: "/model2/walls/wall_stone_01_blke_lod1.pmd"
-	dynamic_lod_dist[0]: 100
+	dynamic_lod_dist[0]: 150
 }
 
 
@@ -4017,15 +4029,22 @@ curve_model : curve.ibe_0w002
 	variation: 3
 	start_part: 3
 	end_part: 3
-	variation[0]: "green | c1 : 5.0 | c2 : 2.0"
-	start_part[0]: "s1 | s2"
-	end_part[0]: "e1 | e2"
-	variation[1]: "blue | c1b : 5.0 | c2b : 2.0"
-	start_part[1]: "s1b | s2b"
-	end_part[1]: "e1b | e2b"
-	variation[2]: "white | c1w : 5.0 | c2w : 2.0"
-	start_part[2]: "s1w | s2w"
-	end_part[2]: "e1w | e2w"
+	variation[0]: "green | center1 : 5.0 | center2 : 2.0"
+	start_part[0]: "start1 | start2"
+	end_part[0]: "end1 | end2"
+	variation[1]: "blue | center3 : 5.0 | center4 : 2.0"
+	start_part[1]: "start3 | start4"
+	end_part[1]: "end3 | end4"
+	variation[2]: "white | center5 : 5.0 | center6 : 2.0"
+	start_part[2]: "start5 | start6"
+	end_part[2]: "end5 | end6"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_concrete_02_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
 }
 
 curve_model : curve.ibe_0w00b
@@ -4036,15 +4055,20 @@ curve_model : curve.ibe_0w00b
 	variation: 2
 	start_part: 2
 	end_part: 2
-	variation[0]: "default | vca : 0.0"
-	start_part[0]: "vsa | vsb"
-	end_part[0]: "vea | veb | vec"
+	variation[0]: "default | vcb : 1.0"
+	start_part[0]: "vsa | vsb | vsc"
+	end_part[0]: "vea | veb | vec | ved"
 	variation[1]: "var2 | vca : 1.0"
-	start_part[1]: "vsa | vsb"
-	end_part[1]: "vea | veb | vec"
+	start_part[1]: "vsa | vsb | vsc"
+	end_part[1]: "vea | veb | vec | ved"
 
 	high_tess: 1
 	high_tess[0]: "default"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_02_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
 }
 curve_model : curve.ibe_0z005
 {
@@ -4155,12 +4179,13 @@ curve_model : curve.0m00d
 	variation: 1
 	start_part: 1
 	end_part: 1
-	variation[0]: "default | center1 : 1.0"
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0"
 	start_part[0]: "start1"
 	end_part[0]: "end1"
 
-	overlay: 1
+	overlay: 2
 	overlay[0]: "center1 | ovr1 : 1.0"
+	overlay[1]: "center2 | ovr1 : 1.0"
 
 	high_tess: 0
 }
@@ -4237,6 +4262,150 @@ curve_model : curve.0m00h
 	high_tess: 0
 }
 
+curve_model : curve.0m00i
+{
+	model_desc: "/model2/lamp/lamp_balt_elektro_04_crv.pmd"
+	name: "lamp balt elektro 04 crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	fixed_inner_start: 1
+	fixed_inner_end: 1
+	variation[0]: "default | center1 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	fixed_inner_start[0]: "ins1"
+	fixed_inner_end[0]: "ine1"
+
+	high_tess: 0
+
+	fixed_step: 30.0
+}
+
+curve_model : curve.0m00j
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_double_01_ru_balt_crv.pmd"
+	name: "crash barrier double 01 ru balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center3 : 1.0 | center4 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00k
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_double_03_ru_balt_crv.pmd"
+	name: "crash barrier double 03 ru balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center3 : 1.0 | center4 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00l
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_ru_balt_crv.pmd"
+	name: "crash barrier ru balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00m
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_rusty_01_lt_balt_crv.pmd"
+	name: "crash barrier rusty 01 lt balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00n
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_rusty_01_ru_balt_crv.pmd"
+	name: "crash barrier rusty 01 ru balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00o
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_concrete_bw_ru_balt_crv.pmd"
+	name: "crash barrier concrete bw ru balt crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v5m | center1 : 1.0 | center2 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "v15m | center3 : 1.0 | center4 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.0m00p
+{
+	model_desc: "/model2/props/construction/balt_concrete_decal_crv.pmd"
+	name: "balt concrete decal crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "v1 | center1 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+
+	high_tess: 0
+}
+
 curve_model : curve.ibe_11004
 {
 	model_desc: "/model2/props/storage/cork_heap_01_ibe.pmd"
@@ -4265,10 +4434,3429 @@ curve_model : curve.ibe_11004
 
 	high_tess: 0
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
 	dynamic_lod_desc[0]: "/model2/props/storage/cork_heap_01_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 40
+	dynamic_lod_dist[0]: 30
+	dynamic_lod_desc[1]: "/model2/props/storage/cork_heap_01_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 100
 }
 
+curve_model : curve.dlc_blke_81
+{
+
+	name: "mid factory hall 04 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_factory_hall_04_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+
+	start_part[]: "start1 | start2"
+	end_part[]: "end1 | end2"
+
+}
+curve_model : curve.dlc_blke_83
+{
+	name: "mid factory hall 06 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_factory_hall_06_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+}
+curve_model : curve.dlc_blke_17
+{
+	model_desc: "/model2/distribution/pipes_01high_blke.pmd"
+	name: "pipes 01 high blke"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center : 1.0 | center1 : 1.0 | center_2 : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+	variation[1]: "single | centerv2 : 1.0 | center1v2 : 1.0 | center2v2 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/distribution/pipes_01high_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+curve_model : curve.dlc_blke_18
+{
+	model_desc: "/model2/distribution/pipes_01low_blke.pmd"
+	name: "pipes 01 low blke"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center : 1.0 | center1 : 1.0 | center_2 : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+	variation[1]: "single | centerv2 : 1.0 | center1v2 : 1.0 | center2v2 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/distribution/pipes_01low_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+curve_model : curve.dlc_blke_54
+{
+	name: "concrete_wall_01_blke"
+	model_desc: "/model2/walls/concrete_wall_01_blke.pmd"
+	variation[]: "1m | c1 : 1.0 | c1a : 1.0 | c1b : 1.0 | c1c : 1.0 | c1d : 1.0 | c1e : 1.0 | c1f : 1.0 | c1g : 1.0 | c1h : 1.0 | c1i : 1.0"
+	variation[]: "2m | c2,c2a : 1.0"
+	variation[]: "4m | c4,c4a : 1.0"
+	variation[]: "8m | c8 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "sand: 236,235,216"
+
+}
+
+curve_model : curve.dlc_blke_63
+{
+	model_desc: "/model2/bridge/bridge_pillar_row_blke.pmd"
+	name: "bridge pillar row blke"
+
+	color_variant: 3
+	color_variant[0]: "default: 255,255,255"
+	color_variant[1]: "green: 142,162,142"
+	color_variant[2]: "sand: 236,235,216"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | c1 : 1.0 | c2 : 1.0 | c3 : 1.0"
+	start_part[0]: "s1"
+	end_part[0]: "e1"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/bridge/bridge_pillar_row_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 70
+}
+
+curve_model : curve.dlc_ibe_1
+{
+	name: "pillar_bridge_01_ibe"
+	model_desc: "/model2/bridge/pillar_bridge_01_ibe.pmd"
+
+	variation: 6
+	variation[0]: "p_p_lattice | c1 : 1.0 | c2 : 1.0"
+	variation[1]: "w_w_ceiling | c3 : 1.0 | c4 : 1.0"
+	variation[2]: "w_w_deep | c5 : 1.0 | c6 : 1.0"
+	variation[3]: "p_p_lattice2 | c7 : 1.0"
+	variation[4]: "w_w_ceiling2 | c8 : 1.0"
+	variation[5]: "w_w_deep2 | c9 : 1.0"
+
+	start_part: 6
+	start_part[0]: "s1"
+	start_part[1]: "s2"
+	start_part[2]: "s3"
+	start_part[3]: "s4"
+	start_part[4]: "s5"
+	start_part[5]: "s6"
+
+	end_part: 6
+	end_part[0]: "e1"
+	end_part[1]: "e2"
+	end_part[2]: "e3"
+	end_part[3]: "e4"
+	end_part[4]: "e5"
+	end_part[5]: "e6"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/bridge/pillar_bridge_01_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+curve_model : curve.ibe_0w001
+{
+	model_desc: "/model2/building/administration/admin_es/admin_04_es_ibe.pmd"
+	name: "admin 04 es ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | c1 : 1.0"
+	start_part[0]: "s | s2"
+	end_part[0]: "e | e2"
+	variation[1]: "door | c2 : 1.0"
+	start_part[1]: "s2 | s"
+	end_part[1]: "e2 | e"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/administration/admin_es/admin_04_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+	dynamic_lod_desc[1]: "/model2/building/administration/admin_es/admin_04_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+
+curve_model : curve.ibe_10001
+{
+	model_desc: "/model2/building/administration/logistic_es/logistic_13_es_ibe.pmd"
+	name: "logistic 13 es ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | vca : 1.0 | vcb : 1.0 | vcc : 1.0 | vcd : 1.0 | vce : 1.0 | vcf : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea | veb"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/administration/logistic_es/logistic_13_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+	dynamic_lod_desc[1]: "/model2/building/administration/logistic_es/logistic_13_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 160
+
+}
+curve_model : curve.ibe_12001
+{
+	model_desc: "/model2/props/street/car_cover_01_ibe.pmd"
+	name: "car cover 01 ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "original | center : 1.0 | center_1_2 : 2.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+	variation[1]: "var2 | center_2 : 1.0 | center_2_2 : 2.0"
+	start_part[1]: "start_2"
+	end_part[1]: "end_2"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/car_cover_01_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+curve_model : curve.ibe_0z001
+{
+	model_desc: "/model2/power_line/power_line_1x_01_es_ibe.pmd"
+	name: "power line 1x 01 es ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	fixed_inner_start: 1
+	fixed_inner_end: 1
+	variation[0]: "default | center1 : 1.0"
+	start_part[0]: "start1 | start2"
+	end_part[0]: "end1 | end2"
+	fixed_inner_start[0]: "start3"
+	fixed_inner_end[0]: "end3"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/power_line/power_line_1x_01_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/power_line/power_line_1x_01_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+
+	fixed_step: 30.0
+}
+curve_model : curve.ibe_12003
+{
+	model_desc: "/model2/building/administration/logistic_es/logistic_11_es_ibe.pmd"
+	name: "logistic 11 es ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "original | vca : 1.0 | vcb : 1.0 | vcc : 1.0"
+	start_part[0]: "vsa"
+	end_part[0]: "vea"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/administration/logistic_es/logistic_11_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+}
+
+curve_model : curve.ibe_12006
+{
+	model_desc: "/model2/fences/fence_tarp_01_ibe.pmd"
+	name: "fence tarp 01 ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1 | start2"
+	end_part[0]: "end1 | end2"
+	variation[1]: "step | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[1]: "start3 | start4"
+	end_part[1]: "end3 | end4"
+
+	overlay: 10
+	overlay[0]: "center1 | ovr1 : 1.0"
+	overlay[1]: "center2 | ovr1 : 1.0"
+	overlay[2]: "center3 | ovr1 : 1.0"
+	overlay[3]: "end1 | ovr1 : 1.0"
+	overlay[4]: "center4 | ovr1 : 1.0"
+	overlay[5]: "center5 | ovr1 : 1.0"
+	overlay[6]: "center6 | ovr1 : 1.0"
+	overlay[7]: "end2 | ovr1 : 1.0"
+	overlay[8]: "end4 | ovr1 : 1.0"
+	overlay[9]: "end3 | ovr1 : 1.0"
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_1200b
+{
+	model_desc: "/model2/walls/wall_brick_03_ibe.pmd"
+	name: "wall brick 03 ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "v0 | vca : 1.0 | vcb : 1.0 | vcc : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea"
+	variation[1]: "no_pillar | vcd : 1.0 | vce : 1.0 | vcf : 1.0"
+	start_part[1]: "vsc | vsd"
+	end_part[1]: "veb"
+}
+
+curve_model : curve.ibe_1200e
+{
+	model_desc: "/model2/walls/wall_concrete_02_ibe.pmd"
+	name: "wall concrete 02 ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "v0 | center1 : 2.0 | center2 : 2.0 | center3 : 2.0 | center4 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/walls/wall_concrete_02_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 70
+}
+
+curve_model : curve.ibe_1m002
+{
+	model_desc: "/model2/building/shop/shop_02_main_ibe.pmd"
+	category: "dlc_iberia"
+	name: "shop 02 main ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | vca : 1.0 | vcb : 1.0 | vcc : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea | veb"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/shop/shop_02_main_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/shop/shop_02_main_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+
+curve_model : curve.ibe_0w009
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_double_01_es_ibe.pmd"
+	name: "crash barrier double 01 es ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | vca : 0.0"
+	start_part[0]: "vsa | vsb | vsc | vsd"
+	end_part[0]: "vea | veb | vec | ved | vee"
+	variation[1]: "smaller | vca2 : 1.0"
+	start_part[1]: "vsa | vsb | vsc | vsd"
+	end_part[1]: "vea | veb | vec | ved | vee"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_double_01_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+curve_model : curve.ibe_0w00a
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_double_02_es_ibe.pmd"
+	name: "crash barrier double 02 es ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | center1 : 1.0"
+	start_part[0]: "start1 | start2 | start3"
+	end_part[0]: "end1 | end2 | end3"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_double_02_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+curve_model : curve.ibe_0w00h
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_01_es_ibe_crv.pmd"
+	name: "crash barrier 01 es ibe crv"
+
+	variation: 10
+	start_part: 10
+	end_part: 10
+	variation[0]: "default | vca : 0.0"
+	start_part[0]: "vsa | vsb | vsc"
+	end_part[0]: "vea | veb | vec | ved"
+	variation[1]: "bollard | vcb : 0.0"
+	start_part[1]: "vsa | vsb | vsc"
+	end_part[1]: "vea | veb | vec | ved"
+	variation[2]: "bollard2 | vca,vcb : 1.0"
+	start_part[2]: "vsa | vsb | vsc"
+	end_part[2]: "vea | veb | vec | ved"
+	variation[3]: "bollard3 | vca,vca,vca,vcb : 1.0"
+	start_part[3]: "vsa | vsb | vsc"
+	end_part[3]: "vea | veb | vec | ved"
+	variation[4]: "bollard4 | vca,vca,vca,vca,vca,vca,vca,vca,vcb : 1.0"
+	start_part[4]: "vsa | vsb | vsc"
+	end_part[4]: "vea | veb | vec | ved"
+	variation[5]: "default_s | vca2 : 1.0"
+	start_part[5]: "vsa | vsb | vsc"
+	end_part[5]: "vea | veb | vec | ved"
+	variation[6]: "bollard_s | vcb2 : 1.0"
+	start_part[6]: "vsa | vsb | vsc"
+	end_part[6]: "vea | veb | vec | ved"
+	variation[7]: "bollard2_s | vca2,vcb2 : 1.0"
+	start_part[7]: "vsa | vsb | vsc"
+	end_part[7]: "vea | veb | vec | ved"
+	variation[8]: "bollard3_s | vca2,vca2,vca2,vcb2 : 1.0"
+	start_part[8]: "vsa | vsb | vsc"
+	end_part[8]: "vea | veb | vec | ved"
+	variation[9]: "bollard4_s | vca2,vca2,vca2,vca2,vca2,vca2,vca2,vca2,vcb2 : 1.0"
+	start_part[9]: "vsa | vsb | vsc"
+	end_part[9]: "vea | veb | vec | ved"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_01_es_ibe_crv_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+curve_model : curve.ibe_10002
+{
+	model_desc: "/model2/building/administration/logistic_es/logistic_14_es_ibe.pmd"
+	name: "logistic 14 es ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | vca : 1.0 | vcb : 1.0 | vcc : 1.0 | vcd : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea | veb"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/administration/logistic_es/logistic_14_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+	dynamic_lod_desc[1]: "/model2/building/administration/logistic_es/logistic_14_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 160
+}
+
+curve_model : curve.ibe_1j001
+{
+	model_desc: "/model2/building/logistic/warehouse_03a_ibe.pmd"
+	name: "warehouse 03a ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "wall | vCa1 : 1.0 | vCb1 : 1.0 | vCc1 : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+	variation[1]: "roof | vCa : 1.0 | vCb : 1.0 | vCc : 1.0"
+	start_part[1]: "start"
+	end_part[1]: "end"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/logistic/warehouse_03a_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/logistic/warehouse_03a_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+
+curve_model : curve.ibe_20001
+{
+	model_desc: "/model2/railing/barrier/wall_set_2m_ibe.pmd"
+	name: "wall set 2m ibe"
+
+	variation: 7
+	start_part: 7
+	end_part: 7
+	variation[0]: "concrete1 | c1 : 4.0 | c2 : 2.0 | c3 : 4.0"
+	start_part[0]: "s1"
+	end_part[0]: "e1"
+	variation[1]: "stones | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0"
+	start_part[1]: "s2"
+	end_part[1]: "e2"
+	variation[2]: "stepped | c1step : 1.0 | c2step : 1.0 | c3step : 1.0"
+	start_part[2]: "s1step"
+	end_part[2]: "e1step"
+	variation[3]: "concrete2 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0"
+	start_part[3]: "s3"
+	end_part[3]: "e3"
+	variation[4]: "concrete3 | c11 : 1.0 | c12 : 1.0 | c13 : 1.0"
+	start_part[4]: "s4"
+	end_part[4]: "e4"
+	variation[5]: "concrete_h | c1h : 1.0 | c2h : 1.0 | c3h : 1.0"
+	start_part[5]: "s1h"
+	end_part[5]: "e1h"
+	variation[6]: "plaster | c14 : 1.0 | c15 : 1.0 | c16 : 1.0"
+	start_part[6]: "s5"
+	end_part[6]: "e5"
+
+	high_tess: 1
+	high_tess[0]: "concrete_h"
+}
+curve_model : curve.ibe_20003
+{
+	model_desc: "/model2/railing/barrier/wall_set_5m_slope_ibe.pmd"
+	name: "wall set 5m slope ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "c1 | c1 : 1.0 | c2 : 1.0 | c3 : 1.0"
+	start_part[0]: "s1 | s2"
+	end_part[0]: "e1 | e2"
+	variation[1]: "c4 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0"
+	start_part[1]: "s3 | s4"
+	end_part[1]: "e3 | e4"
+}
+curve_model : curve.ibe_20004
+{
+	model_desc: "/model2/railing/barrier/wall_set_12m_ibe.pmd"
+	name: "wall set 12m ibe"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "concrete1 | c1 : 1.0 | c2 : 1.0 | c3 : 1.0"
+	start_part[0]: "s1 | s2 | s6"
+	end_part[0]: "e1 | e2 | e6"
+	variation[1]: "stones | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0"
+	start_part[1]: "s3 | s4 | s5"
+	end_part[1]: "e3 | e4 | e5"
+	variation[2]: "stepped | c1step : 1.0 | c2step : 1.0 | c3step : 1.0"
+	start_part[2]: "s1step | s2step | s6step"
+	end_part[2]: "e1step | e2step | e6step"
+	variation[3]: "concrete2 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0"
+	start_part[3]: "s7 | s8 | s9 | s8v2"
+	end_part[3]: "e7 | e8 | e9 | e8v2"
+	variation[4]: "concrete3 | c11 : 1.0 | c12 : 1.0 | c13 : 1.0"
+	start_part[4]: "s10 | s11 | s12"
+	end_part[4]: "e10 | e11 | e12"
+	variation[5]: "plaster | c14 : 1.0 | c15 : 1.0 | c16 : 1.0"
+	start_part[5]: "s13 | s14 | s15"
+	end_part[5]: "e13 | e14 | e15"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
+curve_model : curve.ibe_20005
+{
+	model_desc: "/model2/railing/barrier/wall_set_12m_slope_ibe.pmd"
+	name: "wall set 12m slope ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "c1 | c1 : 1.0 | c2 : 1.0 | c3 : 1.0"
+	start_part[0]: "s1 | s2"
+	end_part[0]: "e1 | e2"
+	variation[1]: "c4 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0"
+	start_part[1]: "s3 | s4"
+	end_part[1]: "e3 | e4"
+}
+
+curve_model : curve.ibe_0z008
+{
+	model_desc: "/model2/walls/wall_brick_05_ibe.pmd"
+	name: "wall brick 05 ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "low | center1 : 0.1 | center2 : 0.5 | center3 : 1.0"
+	start_part[0]: "start1 | start2"
+	end_part[0]: "end1 | end2"
+	variation[1]: "high | center4 : 0.2 | center5 : 0.8 | center6 : 1.0"
+	start_part[1]: "start1 | start2"
+	end_part[1]: "end1 | end2"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/walls/wall_brick_05_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+curve_model : curve.ibe_1h001
+{
+	model_desc: "/model2/building/logistic/warehouse_02_ibe.pmd"
+	name: "warehouse 02 ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | vca : 1.0 | vcb : 1.0 | vcc : 1.0"
+	start_part[0]: "vsa"
+	end_part[0]: "vea"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/logistic/warehouse_02_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/logistic/warehouse_02_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+curve_model : curve.ibe_07001
+{
+	model_desc: "/model2/railing/barrier/crash_barrier_concrete_01_ibe.pmd"
+	category: "dlc_iberia"
+	name: "crash barrier concrete 01 ibe"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "center_15m | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[0]: "start1 | start2 | start3"
+	end_part[0]: "end1 | end2 | end3"
+	variation[1]: "center_5m | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[1]: "start1 | start2 | start3"
+	end_part[1]: "end1 | end2 | end3"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/crash_barrier_concrete_01_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 70
+}
+
+curve_model : curve.ibe_10009
+{
+	model_desc: "/model2/tunnel/ibe_round_tunnel_road_1_01.pmd"
+	name: "ibe round tunnel road 1 01"
+
+	variation: 3
+	variation[0]: "default | c1,c2,c3,c4 : 1.0"
+	variation[1]: "vent | c1,c2,c5,c4 : 1.0"
+	variation[2]: "emergency | c1,c2,c6,c4 : 1.0"
+
+	start_part: 3
+	start_part[0]: "s1"
+	start_part[1]: "s1"
+	start_part[2]: "s1"
+
+	end_part: 3
+	end_part[0]: "e1"
+	end_part[1]: "e1"
+	end_part[2]: "e1"
+}
+
+curve_model : curve.ibe_14004
+{
+	model_desc: "/model2/props/road/sidewalk_stripe_terrain_1m_ibe.pmd"
+	name: "sidewalk stripe terrain 1m ibe"
+
+	variation: 6
+	variation[0]: "4m | c1 : 1.0"
+	variation[1]: "2m | cs1 : 1.0"
+	variation[2]: "1m | csh1,csh2 : 1.0"
+	variation[3]: "4m_decal | c1_d : 1.0"
+	variation[4]: "2m_decal | cs1_d : 1.0"
+	variation[5]: "1m_decal | csh1_d,csh2_d : 1.0"
+
+	start_part: 6
+	start_part[0]: "s1 | s2 | s3"
+	start_part[1]: "s1 | s2 | s3"
+	start_part[2]: "s1 | s2 | s3"
+	start_part[3]: "s1 | s2 | s3"
+	start_part[4]: "s1 | s2 | s3"
+	start_part[5]: "s1 | s2 | s3"
+
+
+	end_part: 6
+	end_part[0]: "e1 | e2 | e3"
+	end_part[1]: "e1 | e2 | e3"
+	end_part[2]: "e1 | e2 | e3"
+	end_part[3]: "e1 | e2 | e3"
+	end_part[4]: "e1 | e2 | e3"
+	end_part[5]: "e1 | e2 | e3"
+
+	dynamic_lod_desc[]: "/model2/props/road/sidewalk_stripe_terrain_1m_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14005
+{
+	model_desc: "/model2/props/road/sidewalk_stripe_terrain_3m_ibe.pmd"
+	name: "sidewalk stripe terrain 3m ibe"
+
+	variation: 5
+	variation[0]: "4x2m | c1 : 1.0"
+	variation[1]: "2x2m | cs1 : 1.0"
+	variation[2]: "1x2m | csh1,csh2 : 1.0"
+	variation[3]: "to_2m_l | to2ml : 1.0"
+	variation[4]: "to_2m_r | to2mr : 1.0"
+
+	start_part: 5
+	start_part[0]: "s1 | s2 | s3 | s4corner90 | s4corner27 | s5 | s6 | s6_mir"
+	start_part[1]: "s1 | s2 | s3 | s4corner90 | s4corner27 | s5 | s6 | s6_mir"
+	start_part[2]: "s1 | s2 | s3 | s4corner90 | s4corner27 | s5 | s6 | s6_mir"
+	start_part[3]: "s1 | s2 | s3 | s4corner90 | s4corner27 | s5 | s6 | s6_mir"
+	start_part[4]: "s1 | s2 | s3 | s4corner90 | s4corner27 | s5 | s6 | s6_mir"
+
+
+	end_part: 5
+	end_part[0]: "e1 | e2 | e3 | e4corner90 | e4corner27 | e5 | e6 | e6_mir"
+	end_part[1]: "e1 | e2 | e3 | e4corner90 | e4corner27 | e5 | e6 | e6_mir"
+	end_part[2]: "e1 | e2 | e3 | e4corner90 | e4corner27 | e5 | e6 | e6_mir"
+	end_part[3]: "e1 | e2 | e3 | e4corner90 | e4corner27 | e5 | e6 | e6_mir"
+	end_part[4]: "e1 | e2 | e3 | e4corner90 | e4corner27 | e5 | e6 | e6_mir"
+
+	dynamic_lod_desc[]: "/model2/props/road/sidewalk_stripe_terrain_3m_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14006
+{
+	model_desc: "/model2/props/road/sidewalk_stripe_terrain_2m_ibe.pmd"
+	name: "sidewalk stripe terrain 2m ibe"
+
+	variation: 5
+	variation[0]: "4x2m | c1 : 1.0"
+	variation[1]: "2x2m | cs1 : 1.0"
+	variation[2]: "1x2m | csh1,csh2 : 1.0"
+	variation[3]: "to_2m_l | to2ml : 1.0"
+	variation[4]: "to_2m_r | to2mr : 1.0"
+
+	start_part: 5
+	start_part[0]: "s1 | s2 | s3 | s4corner90 | s5corner45 | s6"
+	start_part[1]: "s1 | s2 | s3 | s4corner90 | s5corner45 | s6"
+	start_part[2]: "s1 | s2 | s3 | s4corner90 | s5corner45 | s6"
+	start_part[3]: "s1 | s2 | s3 | s4corner90 | s5corner45 | s6"
+	start_part[4]: "s1 | s2 | s3 | s4corner90 | s5corner45 | s6"
+
+
+	end_part: 5
+	end_part[0]: "e1 | e2 | e3 | e4corner90 | e5corner45 | e6"
+	end_part[1]: "e1 | e2 | e3 | e4corner90 | e5corner45 | e6"
+	end_part[2]: "e1 | e2 | e3 | e4corner90 | e5corner45 | e6"
+	end_part[3]: "e1 | e2 | e3 | e4corner90 | e5corner45 | e6"
+	end_part[4]: "e1 | e2 | e3 | e4corner90 | e5corner45 | e6"
+
+
+	dynamic_lod_desc[]: "/model2/props/road/sidewalk_stripe_terrain_2m_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14009
+{
+	model_desc: "/model2/props/road/sidewalk_swc_3m_ibe.pmd"
+	name: "sidewalk swc 3m ibe"
+
+	variation[]: "4m | css1,css2 : 1.0"
+	variation[]: "2m | cs1,cs2,cs3,cs4 : 1.0"
+	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
+	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_8m | dw10m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14011
+{
+	name: "sidewalk_2m_terrain_ibe"
+	model_desc: "/model2/props/road/sidewalk_terrain_ibe.pmd"
+
+	variation[]: "4x2m | c1 : 1.0"
+	variation[]: "2x2m | cs1 : 1.0"
+	variation[]: "1x2m | csh1,csh2 : 1.0"
+	variation[]: "drivewey_2m | dw4m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 cs1 : 1.0"
+	variation[]: "drivewey_4m | dw6m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 : 1.0"
+	variation[]: "drivewey_8m | dw10m,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1,cs1 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+	start_part[]: "s1 | s2 | s3 | s4corner90 | s5corner45"
+
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+	end_part[]: "e1 | e2 | e3 | e4corner90 | e5corner45"
+
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 229,229,229"
+	color_variant[]: "dark: 208,208,208"
+
+	dynamic_lod_desc[]: "/model2/props/road/sidewalk_terrain_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14013
+{
+	model_desc: "/model2/props/road/ibe_lines_sp.pmd"
+	name: "ibe lines sp"
+
+	color_variant[]: "white: 255,255,255"
+	color_variant[]: "yellow: 251,230,113"
+
+	variation[0]: "parking | full_cent_1,full_cent_2,full_cent_3 : 1.0"
+	variation[1]: "cross | ross_mid_1,ross_mid_2 : 1.0"
+	variation[2]: "stop | stop_mid_1,stop_mid_2,stop_mid_3 : 1.0"
+	variation[3]: "give_road | gvr_mid_1,gvr_mid_2,gvr_mid_3 : 1.0"
+	variation[4]: "broken | brk_mid_1,brk_mid_2,brk_mid_3,brk_mid_4,brk_mid_5,brk_mid_6,brk_mid_7,brk_mid_8 : 1.0"
+	variation[5]: "single | full_cent_1,full_cent_2,full_cent_3 : 1.0"
+	variation[6]: "city | city,city1,city2,city3 : 1.0"
+	variation[7]: "warn | wrn_cent_1,wrn_cent_2 : 1.0"
+	variation[8]: "exit | exit_mid_1,exit_mid_2,exit_mid_3 : 1.0"
+	variation[9]: "hw1_rumble | hw1_rum : 1.0"
+	variation[10]: "hw2_rumble | hw2_rum : 1.0"
+	variation[11]: "hw3_rumble | hw3_rum : 1.0"
+	variation[12]: "hw4_rumble | hw4_rum : 1.0"
+	variation[13]: "parking_hw | full_ct_h_1,full_ct_h_2,full_ct_h_3 : 1.0"
+	variation[14]: "slw_dwn_hw1 | slw_hw1 : 1.0"
+	variation[15]: "slw_dwn_hw2 | slw_hw2 : 1.0"
+	variation[16]: "slw_dwn_hw3 | slw_hw3 : 1.0"
+	variation[17]: "slw_dwn_hw4 | slw_hw4 : 1.0"
+	variation[18]: "stripe | str_m1,str_m2,str_m3 : 1.0"
+	variation[19]: "highway | highway : 1.0"
+	variation[20]: "highway_hw1 | highway_1 : 1.0"
+	variation[21]: "rumble | rumble_lin : 1.0"
+
+	start_part[0]: "p_s | p_s30 | p_s30i | p_s45 | p_s45i | p_s60 | p_s60i | p_s75 | p_s75i"
+	start_part[1]: ""
+	start_part[2]: "stp_s | stp_s30 | stp_s30i | stp_s45 | stp_s45i | stp_s60 | stp_s60i | stp_s75 | stp_s75i"
+	start_part[3]: ""
+	start_part[4]: ""
+	start_part[5]: "sng_s | sng_s30 | sng_s30i | sng_s45 | sng_s45i | sng_s60 | sng_s60i | sng_s75 | sng_s75i"
+	start_part[6]: ""
+	start_part[7]: ""
+	start_part[8]: ""
+	start_part[9]: ""
+	start_part[10]: ""
+	start_part[11]: ""
+	start_part[12]: ""
+	start_part[13]: "phw_s | phw_s30 | phw_s30i | phw_s45 | phw_s45i | phw_s60 | phw_s60i | phw_s75 | phw_s75i"
+	start_part[14]: ""
+	start_part[15]: ""
+	start_part[16]: ""
+	start_part[17]: ""
+	start_part[18]: "str_s | str_s30 | str_s30i | str_s45 | str_s45i | str_s60 | str_s60i"
+	start_part[19]: "highway_s"
+	start_part[20]: "highway_1s"
+	start_part[21]: ""
+
+	end_part[0]: "p_e | p_e30 | p_e30i | p_e45 | p_e45i | p_e60 | p_e60i | p_e75 | p_e75i"
+	end_part[1]: ""
+	end_part[2]: "stp_e | stp_e30 | stp_e30i | stp_e45 | stp_e45i | stp_e60 | stp_e60i | stp_e75 | stp_e75i"
+	end_part[3]: ""
+	end_part[4]: ""
+	end_part[5]: "sng_e | sng_e30 | sng_e30i | sng_e45 | sng_e45i | sng_e60 | sng_e60i | sng_e75 | sng_e75i"
+	end_part[6]: ""
+	end_part[7]: ""
+	end_part[8]: ""
+	end_part[9]: ""
+	end_part[10]: ""
+	end_part[11]: ""
+	end_part[12]: ""
+	end_part[13]: "phw_e | phw_e30 | phw_e30i | phw_e45 | phw_e45i | phw_e60 | phw_e60i | phw_e75 | phw_e75i"
+	end_part[14]: ""
+	end_part[15]: ""
+	end_part[16]: ""
+	end_part[17]: ""
+	end_part[18]: "str_e | str_e30 | str_e30i | str_e45 | str_e45i | str_e60 | str_e60i"
+	end_part[19]: "highway_e"
+	end_part[20]: "highway_1e"
+	end_part[21]: ""
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_14016
+{
+	model_desc: "/model2/props/road/ibe_road_decal.pmd"
+	name: "ibe road decal"
+
+	variation[0]: "default | center1,center2,center3,center4,center5,center6,center7,center8,center9,center10,center11,center12,center13,center14,center15,center16 : 1.0"
+	variation[1]: "decal_2m | center_2m_1,center_2m_2,center_2m_3,center_2m_4,center_2m_5,center_2m_6,center_2m_7,center_2m_8 : 1.0"
+	variation[2]: "decal_4m | center_4m_1,center_4m_2,center_4m_3,center_4m_4 : 1.0"
+	variation[3]: "decal_8m | center_8m_1,center_8m_2 : 1.0"
+
+	start_part[0]: "start1"
+	start_part[1]: "start1"
+	start_part[2]: "start1"
+	start_part[3]: "start1"
+
+	end_part[0]: "end1"
+	end_part[1]: "end1"
+	end_part[2]: "end1"
+	end_part[3]: "end1"
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_09003
+{
+	model_desc: "/model2/tunnel/ibe_hw2_one_way_round_tunnel.pmd"
+	name: "ibe hw2 one way round tunnel"
+
+	variation: 4
+	variation[0]: "default | c1,c2,c3,c4,c5,c10,c7,c8,c1,c2,c3,c4,c9,c6,c11,c12 : 1.0"
+	variation[1]: "covered | c17,c18,c19,c20 : 1.0"
+	variation[2]: "emergency | c13,c14,c15,c16 : 1.0"
+	variation[3]: "fabric | c21,c22,c23,c24 : 1.0"
+
+	start_part: 4
+	start_part[0]: "s1 | s2 | s3 | s4 | s5"
+	start_part[1]: "s1 | s2 | s3 | s4 | s5"
+	start_part[2]: ""
+	start_part[3]: "s6"
+
+	end_part: 4
+	end_part[0]: "e1 | e2 | e3 | e4 | e5"
+	end_part[1]: "e1 | e2 | e3 | e4 | e5"
+	end_part[2]: ""
+	end_part[3]: "e6"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/tunnel/ibe_hw2_one_way_round_tunnel_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+
+	smooth_surface: true
+}
+curve_model : curve.ibe_2t002
+{
+	model_desc: "/model2/building/shop/car_wash_01_ibe.pmd"
+	category: "dlc_iberia"
+	name: "car wash 01 ibe"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "var1 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1 | start2"
+	end_part[0]: "end1 | end2"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/car_wash_01_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+curve_model : curve.ibe_23016
+{
+	model_desc: "/model2/bridge/ibe_rail_arch_bridge.pmd"
+	name: "ibe rail arch bridge"
+
+	variation: 7
+	variation[0]: "v1 | c1,c2,c3,c4 : 1.0"
+	variation[1]: "v1_to_v2 | c5,c6,c7 : 1.0"
+	variation[2]: "v2 | c8 : 1.0 | c9 : 1.0"
+	variation[3]: "v2_to_v1 | c10,c11,c12 : 1.0"
+	variation[4]: "v1_red | c13,c14,c15,c16 : 1.0"
+	variation[5]: "v1_to_v2_red | c17,c18,c19 : 1.0"
+	variation[6]: "v2_to_v1_red | c20,c21,c22 : 1.0"
+
+	start_part: 7
+	start_part[0]: "s1"
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	start_part[4]: "s2"
+	start_part[5]: ""
+	start_part[6]: ""
+
+	end_part: 7
+	end_part[0]: "e1"
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+	end_part[4]: "e2"
+	end_part[5]: ""
+	end_part[6]: ""
+
+	fixed_inner_start: 0
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_1n001
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1a.pmd"
+	name: "ibe roadcliffrock curve 1a"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n002
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1b_slope.pmd"
+	name: "ibe roadcliffrock curve 1b slope"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n003
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1c.pmd"
+	name: "ibe roadcliffrock curve 1c"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n004
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1d_slope.pmd"
+	name: "ibe roadcliffrock curve 1d slope"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n005
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1a_short.pmd"
+	name: "ibe roadcliffrock curve 1a short"
+
+	variation: 18
+	start_part: 18
+	end_part: 18
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca,_v5cb,_v5cc : 1.0 | _v5cb,_v5cc,_v5ca : 1.0 | _v5cc,_v5ca,_v5cb : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+	variation[6]: "16_to_32 | _v6ca,_v5ca,_v5cb,_v5cc,_v5cb,_v5ca,_v5cc : 1.0"
+	start_part[6]: "_v0sa"
+	end_part[6]: "_v5ea"
+	variation[7]: "32_to_16 | _v7ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[7]: "_v5sa"
+	end_part[7]: "_v5ea"
+	variation[8]: "8_to_16_top | _v10ca,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[8]: "_v8sa"
+	end_part[8]: "_v9ea"
+	variation[9]: "16_to_8_top | _v10cb,_v8ca,_v8cb,_v8cc,_v8cb,_v8ca,_v8cc : 1.0"
+	start_part[9]: "_v9sa"
+	end_part[9]: "_v8ea"
+	variation[10]: "8_to_16 | _v11ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[10]: "_v3sa"
+	end_part[10]: "_v0ea"
+	variation[11]: "16_to_8 | _v11cb,_v3ca,_v3cb,_v3cc,_v3cb,_v3ca,_v3cc : 1.0"
+	start_part[11]: "_v0sa"
+	end_part[11]: "_v3ea"
+	variation[12]: "16_to_32_top | _v12ca,_v13ca,_v13cb,_v13cc,_v13cb,_v13ca,_v13cc : 1.0"
+	start_part[12]: "_v9sa"
+	end_part[12]: "_v13ea"
+	variation[13]: "32_to_16_top | _v12cb,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[13]: "_v13sa"
+	end_part[13]: "_v9ea"
+	variation[14]: "even_32m_top | _v13ca,_v13cb,_v13cc : 1.0"
+	start_part[14]: "_v13sa"
+	end_part[14]: "_v13ea"
+	variation[15]: "even_8m_top | _v8ca,_v8cb,_v8cc : 1.0"
+	start_part[15]: "_v8sa"
+	end_part[15]: "_v8ea"
+	variation[16]: "even_16m_top | _v9ca,_v9cb,_v9cc : 1.0"
+	start_part[16]: "_v9sa"
+	end_part[16]: "_v9ea"
+	variation[17]: "32m_tunnel | _v14ca : 1.0"
+	start_part[17]: ""
+	end_part[17]: ""
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n006
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1b_slope_short.pmd"
+	name: "ibe roadcliffrock curve 1b slope short"
+
+	variation: 17
+	start_part: 17
+	end_part: 17
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca,_v5cb,_v5cc : 1.0 | _v5cb,_v5cc,_v5ca : 1.0 | _v5cc,_v5ca,_v5cb : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+	variation[6]: "16_to_32 | _v6ca,_v5ca,_v5cb,_v5cc,_v5cb,_v5ca,_v5cc : 1.0"
+	start_part[6]: "_v0sa"
+	end_part[6]: "_v5ea"
+	variation[7]: "32_to_16 | _v7ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[7]: "_v5sa"
+	end_part[7]: "_v5ea"
+	variation[8]: "8_to_16_top | _v10ca,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[8]: "_v8sa"
+	end_part[8]: "_v9ea"
+	variation[9]: "16_to_8_top | _v10cb,_v8ca,_v8cb,_v8cc,_v8cb,_v8ca,_v8cc : 1.0"
+	start_part[9]: "_v9sa"
+	end_part[9]: "_v8ea"
+	variation[10]: "8_to_16 | _v11ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[10]: "_v3sa"
+	end_part[10]: "_v0ea"
+	variation[11]: "16_to_8 | _v11cb,_v3ca,_v3cb,_v3cc,_v3cb,_v3ca,_v3cc : 1.0"
+	start_part[11]: "_v0sa"
+	end_part[11]: "_v3ea"
+	variation[12]: "16_to_32_top | _v12ca,_v13ca,_v13cb,_v13cc,_v13cb,_v13ca,_v13cc : 1.0"
+	start_part[12]: "_v9sa"
+	end_part[12]: "_v13ea"
+	variation[13]: "32_to_16_top | _v12cb,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[13]: "_v13sa"
+	end_part[13]: "_v9ea"
+	variation[14]: "even_32m_top | _v13ca,_v13cb,_v13cc : 1.0"
+	start_part[14]: "_v13sa"
+	end_part[14]: "_v13ea"
+	variation[15]: "even_8m_top | _v8ca,_v8cb,_v8cc : 1.0"
+	start_part[15]: "_v8sa"
+	end_part[15]: "_v8ea"
+	variation[16]: "even_16m_top | _v9ca,_v9cb,_v9cc : 1.0"
+	start_part[16]: "_v9sa"
+	end_part[16]: "_v9ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n007
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1c_short.pmd"
+	name: "ibe roadcliffrock curve 1c short"
+
+	variation: 17
+	start_part: 17
+	end_part: 17
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca,_v5cb,_v5cc : 1.0 | _v5cb,_v5cc,_v5ca : 1.0 | _v5cc,_v5ca,_v5cb : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+	variation[6]: "16_to_32 | _v6ca,_v5ca,_v5cb,_v5cc,_v5cb,_v5ca,_v5cc : 1.0"
+	start_part[6]: "_v0sa"
+	end_part[6]: "_v5ea"
+	variation[7]: "32_to_16 | _v7ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[7]: "_v5sa"
+	end_part[7]: "_v5ea"
+	variation[8]: "8_to_16_top | _v10ca,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[8]: "_v8sa"
+	end_part[8]: "_v9ea"
+	variation[9]: "16_to_8_top | _v10cb,_v8ca,_v8cb,_v8cc,_v8cb,_v8ca,_v8cc : 1.0"
+	start_part[9]: "_v9sa"
+	end_part[9]: "_v8ea"
+	variation[10]: "8_to_16 | _v11ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[10]: "_v3sa"
+	end_part[10]: "_v0ea"
+	variation[11]: "16_to_8 | _v11cb,_v3ca,_v3cb,_v3cc,_v3cb,_v3ca,_v3cc : 1.0"
+	start_part[11]: "_v0sa"
+	end_part[11]: "_v3ea"
+	variation[12]: "16_to_32_top | _v12ca,_v13ca,_v13cb,_v13cc,_v13cb,_v13ca,_v13cc : 1.0"
+	start_part[12]: "_v9sa"
+	end_part[12]: "_v13ea"
+	variation[13]: "32_to_16_top | _v12cb,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[13]: "_v13sa"
+	end_part[13]: "_v9ea"
+	variation[14]: "even_32m_top | _v13ca,_v13cb,_v13cc : 1.0"
+	start_part[14]: "_v13sa"
+	end_part[14]: "_v13ea"
+	variation[15]: "even_8m_top | _v8ca,_v8cb,_v8cc : 1.0"
+	start_part[15]: "_v8sa"
+	end_part[15]: "_v8ea"
+	variation[16]: "even_16m_top | _v9ca,_v9cb,_v9cc : 1.0"
+	start_part[16]: "_v9sa"
+	end_part[16]: "_v9ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n008
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1d_slope_short.pmd"
+	name: "ibe roadcliffrock curve 1d slope short"
+
+	variation: 17
+	start_part: 17
+	end_part: 17
+	variation[0]: "even_16m | _v0ca,_v0cb,_v0cc : 1.0 | _v0cb,_v0cc,_v0ca : 1.0 | _v0cc,_v0ca,_v0cb : 1.0"
+	start_part[0]: "_v0sa"
+	end_part[0]: "_v0ea"
+	variation[1]: "even_16m_2 | _v1ca,_v1cb,_v1cc : 1.0 | _v1cb,_v1cc,_v1ca : 1.0 | _v1cc,_v1ca,_v1cb : 1.0"
+	start_part[1]: "_v0sa"
+	end_part[1]: "_v0ea"
+	variation[2]: "uneven_16m | _v2ca : 1.0 | _v2cb : 1.0"
+	start_part[2]: "_v0sa"
+	end_part[2]: "_v0ea"
+	variation[3]: "even_8m | _v3ca,_v3cb,_v3cc : 1.0 | _v3cb,_v3cc,_v3ca : 1.0 | _v3cc,_v3ca,_v3cb : 1.0"
+	start_part[3]: "_v3sa"
+	end_part[3]: "_v3ea"
+	variation[4]: "uneven_8m | _v4ca,_v4cb,_v4cc : 1.0 | _v4cb,_v4cc,_v4ca : 1.0 | _v4cc,_v4ca,_v4cb : 1.0"
+	start_part[4]: "_v4sa"
+	end_part[4]: "_v4ea"
+	variation[5]: "even_32m | _v5ca,_v5cb,_v5cc : 1.0 | _v5cb,_v5cc,_v5ca : 1.0 | _v5cc,_v5ca,_v5cb : 1.0"
+	start_part[5]: "_v5sa"
+	end_part[5]: "_v5ea"
+	variation[6]: "16_to_32 | _v6ca,_v5ca,_v5cb,_v5cc,_v5cb,_v5ca,_v5cc : 1.0"
+	start_part[6]: "_v0sa"
+	end_part[6]: "_v5ea"
+	variation[7]: "32_to_16 | _v7ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[7]: "_v5sa"
+	end_part[7]: "_v5ea"
+	variation[8]: "8_to_16_top | _v10ca,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[8]: "_v8sa"
+	end_part[8]: "_v9ea"
+	variation[9]: "16_to_8_top | _v10cb,_v8ca,_v8cb,_v8cc,_v8cb,_v8ca,_v8cc : 1.0"
+	start_part[9]: "_v9sa"
+	end_part[9]: "_v8ea"
+	variation[10]: "8_to_16 | _v11ca,_v0ca,_v0cb,_v0cc,_v0cb,_v0ca,_v0cc : 1.0"
+	start_part[10]: "_v3sa"
+	end_part[10]: "_v0ea"
+	variation[11]: "16_to_8 | _v11cb,_v3ca,_v3cb,_v3cc,_v3cb,_v3ca,_v3cc : 1.0"
+	start_part[11]: "_v0sa"
+	end_part[11]: "_v3ea"
+	variation[12]: "16_to_32_top | _v12ca,_v13ca,_v13cb,_v13cc,_v13cb,_v13ca,_v13cc : 1.0"
+	start_part[12]: "_v9sa"
+	end_part[12]: "_v13ea"
+	variation[13]: "32_to_16_top | _v12cb,_v9ca,_v9cb,_v9cc,_v9cb,_v9ca,_v9cc : 1.0"
+	start_part[13]: "_v13sa"
+	end_part[13]: "_v9ea"
+	variation[14]: "even_32m_top | _v13ca,_v13cb,_v13cc : 1.0"
+	start_part[14]: "_v13sa"
+	end_part[14]: "_v13ea"
+	variation[15]: "even_8m_top | _v8ca,_v8cb,_v8cc : 1.0"
+	start_part[15]: "_v8sa"
+	end_part[15]: "_v8ea"
+	variation[16]: "even_16m_top | _v9ca,_v9cb,_v9cc : 1.0"
+	start_part[16]: "_v9sa"
+	end_part[16]: "_v9ea"
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n009
+{
+	model_desc: "/model2/rock/ibe_rock_rough1a.pmd"
+	name: "ibe rock rough1a"
+
+	variation: 4
+	start_part: 4
+	end_part: 4
+	variation[0]: "8m | v0ca,v0cb,v0cc : 1.0 | v0cb,v0cc,v0ca : 1.0 | v0cc,v0ca,v0cb : 1.0"
+	start_part[0]: "v0sa"
+	end_part[0]: "v0ea"
+	variation[1]: "16m | v2ca,v2cb,v2cc : 1.0 | v2cb,v2cc,v2ca : 1.0 | v2cc,v2ca,v2cb : 1.0"
+	start_part[1]: "v2sa"
+	end_part[1]: "v2ea"
+	variation[2]: "16m_top | v3ca,v3cb,v3cc : 1.0 | v3cb,v3ca,v3cc : 1.0 | v3cc,v3cb,v3ca : 1.0"
+	start_part[2]: "v3sa"
+	end_part[2]: "v3ea"
+	variation[3]: "8m_top | v1ca,v1cb,v1cc : 1.0 | v1cb,v1cc,v1ca : 1.0 | v1cc,v1ca,v1cb : 1.0"
+	start_part[3]: "v1sa"
+	end_part[3]: "v1ea"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/ibe_rock_rough1a_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+	dynamic_lod_desc[1]: "/model2/rock/ibe_rock_rough1a_lod2.pmd"
+	dynamic_lod_dist[1]: 180
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n00a
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1e.pmd"
+	name: "ibe roadcliffrock curve 1e"
+
+	variation: 8
+	start_part: 8
+	end_part: 8
+	variation[0]: "8m | p8m_1,p8m_2,p8m_3,p8m_4 : 1.0 | p8m_4,p8m_3,p8m_2,p8m_1 : 1.0 | p8m_2,p8m_1,p8m_4,p8m_3 : 1.0 | p8m_3,p8m_4,p8m_1,p8m_2 : 1.0"
+	start_part[0]: "p8m_s"
+	end_part[0]: "p8m_e"
+	variation[1]: "8m_top | p8m_1_top,p8m_2_top,p8m_3_top,p8m_4_top : 1.0 | p8m_4_top,p8m_3_top,p8m_2_top,p8m_1_top : 1.0 | p8m_2_top,p8m_1_top,p8m_4_top,p8m_3_top : 1.0 | p8m_3_top,p8m_4_top,p8m_1_top,p8m_2_top : 1.0"
+	start_part[1]: "p8m_s_top"
+	end_part[1]: "p8m_e_top"
+	variation[2]: "16m | p16m_1,p16m_2,p16m_3,p16m_4 : 1.0 | p16m_4,p16m_3,p16m_2,p16m_1 : 1.0 | p16m_2,p16m_1,p16m_4,p16m_3 : 1.0 | p16m_3,p16m_4,p16m_1,p16m_2 : 1.0"
+	start_part[2]: "p16m_s"
+	end_part[2]: "p16m_e"
+	variation[3]: "16m_top | p16m_1_top,p16m_2_top,p16m_3_top,p16m_4_top : 1.0 | p16m_4_top,p16m_3_top,p16m_2_top,p16m_1_top : 1.0 | p16m_2_top,p16m_1_top,p16m_4_top,p16m_3_top : 1.0 | p16m_3_top,p16m_4_top,p16m_1_top,p16m_2_top : 1.0"
+	start_part[3]: "p16m_s_top"
+	end_part[3]: "p16m_e_top"
+	variation[4]: "8_to_16 | p8_16,p16m_1,p16m_2,p16m_3,p16m_4,p16m_2,p16m_1,p16m_4,p16m_3 : 1.0"
+	start_part[4]: "p8m_s"
+	end_part[4]: "p16m_e"
+	variation[5]: "16_to_8 | p16_8,p8m_1,p8m_2,p8m_3,p8m_4,p8m_2,p8m_1,p8m_4,p8m_3 : 1.0"
+	start_part[5]: "p16m_s"
+	end_part[5]: "p8m_e"
+	variation[6]: "8_to_16_top | p8_16_top,p16m_1_top,p16m_2_top,p16m_3_top,p16m_4_top,p16m_2_top,p16m_1_top,p16m_4_top,p16m_3_top : 1.0"
+	start_part[6]: "p8m_s_top"
+	end_part[6]: "p16m_e_top"
+	variation[7]: "16_to_8_top | p16_8_top,p8m_1_top,p8m_2_top,p8m_3_top,p8m_4_top,p8m_2_top,p8m_1_top,p8m_4_top,p8m_3_top : 1.0"
+	start_part[7]: "p16m_s_top"
+	end_part[7]: "p8m_e_top"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1n00b
+{
+	model_desc: "/model2/rock/ibe_roadcliffrock_curve_1e_regular.pmd"
+	name: "ibe roadcliffrock curve 1e regular"
+
+	variation: 8
+	start_part: 8
+	end_part: 8
+	variation[0]: "8m | p8m_1,p8m_2,p8m_3,p8m_4 : 1.0 | p8m_4,p8m_3,p8m_2,p8m_1 : 1.0 | p8m_2,p8m_1,p8m_4,p8m_3 : 1.0 | p8m_3,p8m_4,p8m_1,p8m_2 : 1.0"
+	start_part[0]: "p8m_s"
+	end_part[0]: "p8m_e"
+	variation[1]: "8m_top | p8m_1_top,p8m_2_top,p8m_3_top,p8m_4_top : 1.0 | p8m_4_top,p8m_3_top,p8m_2_top,p8m_1_top : 1.0 | p8m_2_top,p8m_1_top,p8m_4_top,p8m_3_top : 1.0 | p8m_3_top,p8m_4_top,p8m_1_top,p8m_2_top : 1.0"
+	start_part[1]: "p8m_s_top"
+	end_part[1]: "p8m_e_top"
+	variation[2]: "16m | p16m_1,p16m_2,p16m_3,p16m_4 : 1.0 | p16m_4,p16m_3,p16m_2,p16m_1 : 1.0 | p16m_2,p16m_1,p16m_4,p16m_3 : 1.0 | p16m_3,p16m_4,p16m_1,p16m_2 : 1.0"
+	start_part[2]: "p16m_s"
+	end_part[2]: "p16m_e"
+	variation[3]: "16m_top | p16m_1_top,p16m_2_top,p16m_3_top,p16m_4_top : 1.0 | p16m_4_top,p16m_3_top,p16m_2_top,p16m_1_top : 1.0 | p16m_2_top,p16m_1_top,p16m_4_top,p16m_3_top : 1.0 | p16m_3_top,p16m_4_top,p16m_1_top,p16m_2_top : 1.0"
+	start_part[3]: "p16m_s_top"
+	end_part[3]: "p16m_e_top"
+	variation[4]: "8_to_16 | p8_16,p16m_1,p16m_2,p16m_3,p16m_4,p16m_2,p16m_1,p16m_4,p16m_3 : 1.0"
+	start_part[4]: "p8m_s"
+	end_part[4]: "p16m_e"
+	variation[5]: "16_to_8 | p16_8,p8m_1,p8m_2,p8m_3,p8m_4,p8m_2,p8m_1,p8m_4,p8m_3 : 1.0"
+	start_part[5]: "p16m_s"
+	end_part[5]: "p8m_e"
+	variation[6]: "8_to_16_top | p8_16_top,p16m_1_top,p16m_2_top,p16m_3_top,p16m_4_top,p16m_2_top,p16m_1_top,p16m_4_top,p16m_3_top : 1.0"
+	start_part[6]: "p8m_s_top"
+	end_part[6]: "p16m_e_top"
+	variation[7]: "16_to_8_top | p16_8_top,p8m_1_top,p8m_2_top,p8m_3_top,p8m_4_top,p8m_2_top,p8m_1_top,p8m_4_top,p8m_3_top : 1.0"
+	start_part[7]: "p16m_s_top"
+	end_part[7]: "p8m_e_top"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1x001
+{
+	model_desc: "/model2/rock/ibe_rock_cut2_slope.pmd"
+	name: "ibe_rock_cut2_slope"
+
+	variation: 4
+	start_part: 4
+	end_part: 4
+	variation[0]: "pattern1 | center1,center2,center3,center4,center5,center6,center7,center8,center9 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "random | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 2.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+	variation[2]: "nt_pattern1 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0 | center17 : 1.0 | center18 : 1.0 | center19 : 1.0"
+	start_part[2]: "start11"
+	end_part[2]: "end11"
+	variation[3]: "nt_random | center11,center12,center13,center14,center15,center16,center17,center18,center19 : 1.0"
+	start_part[3]: "start11"
+	end_part[3]: "end11"
+
+	smooth_surface: true
+
+	dynamic_lod_desc[]: "/model2/rock/ibe_rock_cut2_slope_lod1.pmd"
+	dynamic_lod_dist[]: 200
+}
+
+curve_model : curve.ibe_1x002
+{
+	model_desc: "/model2/rock/ibe_rock_cut2.pmd"
+	name: "ibe_rock_cut2"
+
+	variation: 4
+	start_part: 4
+	end_part: 4
+	variation[0]: "pattern1 | center1,center2,center3,center4,center5,center6,center7,center8,center9 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "random | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 2.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+	variation[2]: "nt_pattern1 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0 | center17 : 1.0 | center18 : 1.0 | center19 : 1.0"
+	start_part[2]: "start11"
+	end_part[2]: "end11"
+	variation[3]: "nt_random | center11,center12,center13,center14,center15,center16,center17,center18,center19 : 1.0"
+	start_part[3]: "start11"
+	end_part[3]: "end11"
+
+	smooth_surface: true
+
+	dynamic_lod_desc[]: "/model2/rock/ibe_rock_cut2_lod1.pmd"
+	dynamic_lod_dist[]: 200
+}
+curve_model : curve.ibe_1x003
+{
+	model_desc: "/model2/rock/ibe_rock_bedrock.pmd"
+	name: "ibe_rock_bedrock"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "short | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center1,center2,center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "top | center4,center5 : 1.0 | center6,center5,center4 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/rock/ibe_rock_bedrock_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+
+	smooth_surface: true
+}
+curve_model : curve.ibe_1x004
+{
+	name: "ibe_rock_blocky_2"
+	model_desc: "/model2/rock/ibe_rock_blocky1_b.pmd"
+
+	variation[]: "8m | v_8m_c1_a : 1.0 | v_8m_c1_b : 1.0 | v_8m_c1_c : 1.0 | v_8m_c1_d : 1.0 | v_8m_c1_e : 1.0 | v_8m_c2_a : 1.0 | v_8m_c2_b : 1.0 | v_8m_c2_c : 1.0 | v_8m_c2_d : 1.0"
+	start_part[]: "v_8m_e1_a"
+	end_part[]: "v_8m_e1_b"
+
+	variation[]: "8m_crack | v_8m_c3_a : 1.0"
+	start_part[]: "v_8m_e1_a"
+	end_part[]: "v_8m_e1_b"
+
+	variation[]: "8m_jagged | v_8m_c2_e,v_8m_c1_b,v_8m_c2_c,v_8m_c1_a,v_8m_c2_d,v_8m_c1_c,v_8m_c1_e : 1.0 | v_8m_c2_e,v_8m_c1_c,v_8m_c2_d,v_8m_c1_b,v_8m_c2_a,v_8m_c1_d,v_8m_c1_a : 1.0 | v_8m_c2_e,v_8m_c1_d,v_8m_c2_a,v_8m_c1_c,v_8m_c2_b,v_8m_c1_e,v_8m_c1_b : 1.0"
+	start_part[]: "v_8m_e1_a"
+	end_part[]: "v_8m_e1_b"
+
+	variation[]: "16m | v_16m_c1_a : 1.0 | v_16m_c1_b : 1.0 | v_16m_c2_a : 1.0 | v_16m_c2_b : 1.0 | v_16m_c2_c : 1.0 | v_16m_c2_d : 1.0"
+	start_part[]: "v_16m_e1_a"
+	end_part[]: "v_16m_e1_b"
+
+	variation[]: "16m_8m_16m | v_16m_c4_a : 1.0"
+	start_part[]: "v_16m_e1_a"
+	end_part[]: "v_16m_e1_b"
+
+	variation[]: "16m_convex | v_16m_c4_b,v_16m_c1_a,v_16m_c2_a,v_16m_c1_b,v_16m_c2_b,v_16m_c2_b,v_16m_c1_b,v_16m_c2_d,v_16m_c2_a : 1.0"
+	start_part[]: "v_16m_e1_a"
+	end_part[]: "v_16m_e1_b"
+
+
+	variation[]: "16m_jagged | v_16m_c4_c,v_16m_c1_a,v_16m_c2_a,v_16m_c1_b,v_16m_c2_b,v_16m_c2_b,v_16m_c1_b,v_16m_c2_d,v_16m_c2_a : 1.0 | v_16m_c4_c,v_16m_c1_b,v_16m_c2_b,v_16m_c1_a,v_16m_c2_d,v_16m_c2_c,v_16m_c1_b,v_16m_c2_a,v_16m_c2_c : 1.0 | v_16m_c4_c,v_16m_c2_a,v_16m_c2_c,v_16m_c1_b,v_16m_c1_a,v_16m_c2_a,v_16m_c1_b,v_16m_c2_c,v_16m_c2_a : 1.0"
+	start_part[]: "v_16m_e1_a"
+	end_part[]: "v_16m_e1_b"
+
+	variation[]: "16m_to_8m | f_16_to_8,v_8m_c1_a,v_8m_c2_c,v_8m_c1_b,v_8m_c2_a,v_8m_c1_e,v_8m_c1_d,v_8m_c1_a,v_8m_c2_b,v_8m_c1_b : 1.0 | f_16_to_8,v_8m_c1_b,v_8m_c2_a,v_8m_c1_c,v_8m_c2_b,v_8m_c1_a,v_8m_c1_e,v_8m_c1_a,v_8m_c2_c,v_8m_c1_d : 1.0 | f_16_to_8,v_8m_c1_c,v_8m_c2_d,v_8m_c1_a,v_8m_c2_c,v_8m_c1_d,v_8m_c1_b,v_8m_c1_a,v_8m_c2_a,v_8m_c1_e : 1.0"
+	start_part[]: "v_16m_e1_a"
+	end_part[]: "v_8m_e1_b"
+
+	variation[]: "8m_to_16m | f_8_to_16,v_16m_c1_a,v_16m_c2_a,v_16m_c1_b,v_16m_c2_b,v_16m_c2_b,v_16m_c1_b,v_16m_c2_d,v_16m_c2_a : 1.0 | f_8_to_16,v_16m_c1_b,v_16m_c2_b,v_16m_c1_a,v_16m_c2_d,v_16m_c2_c,v_16m_c1_b,v_16m_c2_a,v_16m_c2_c : 1.0 | f_8_to_16,v_16m_c2_a,v_16m_c2_c,v_16m_c1_b,v_16m_c1_a,v_16m_c2_a,v_16m_c1_b,v_16m_c2_c,v_16m_c2_a : 1.0"
+	start_part[]: "v_8m_e1_a"
+	end_part[]: "v_16m_e1_b"
+
+	smooth_surface: true
+
+	dynamic_lod_desc[]: "/model2/rock/ibe_rock_blocky1_b_lod1.pmd"
+	dynamic_lod_dist[]: 150
+
+}
+
+
+curve_model : curve.ibe_1x005
+{
+	name: "ibe_rock_sediment_2"
+	model_desc: "/model2/rock/ibe_rock_sediment_2.pmd"
+	variation[]: "var1 | c1 : 1.0 | c2 : 1.0"
+
+	variation[]: "var2abc | c3,c4,c5 : 1.0"
+	variation[]: "var2bca | c4,c5,c3 : 1.0"
+	variation[]: "var2cab | c5,c3,c4 : 1.0"
+
+	variation[]: "var3abc | c6,c7,c8 : 1.0"
+	variation[]: "var3bca | c7,c8,c6 : 1.0"
+	variation[]: "var3cab | c8,c6,c7 : 1.0"
+
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+	start_part[]: "s1 | s2 | s5"
+
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+	end_part[]: "e1 | e2 | e5"
+
+
+	smooth_surface: true
+
+	dynamic_lod_desc[]: "/model2/rock/ibe_rock_sediment_2_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+}
+
+curve_model : curve.ibe_1x006
+{
+	name: "orange trees"
+
+
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.orange1.ibe | 4.0 : 5.6 | -0.1 : 0.1 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.orange2.ibe | 4.0 : 5.6 | -0.1 : 0.1 | 0.8 : 1.2 | 0.0 : 360.0"
+}
+
+curve_model : curve.ibe_1f001
+{
+	model_desc: "/model2/rock/ibe_rock_rough1b.pmd"
+	name: "ibe rock rough1b"
+
+	variation: 8
+	start_part: 8
+	end_part: 8
+	variation[0]: "ter_16 | v1cc,v1cd,v1ce,v1cf,v1cg,v1ch,v1ci,v1cj : 1.0"
+	start_part[0]: "v1sa"
+	end_part[0]: "v1ea"
+	variation[1]: "ter_8 | v2ca,v2cb,v2cc,v2cd : 1.0"
+	start_part[1]: "v2sa"
+	end_part[1]: "v2ea"
+	variation[2]: "ter_16_to_8 | v1ca,v2ca,v2cb,v2cc,v2cd,v2ca,v2cb,v2cc,v2cd : 1.0"
+	start_part[2]: "v1sa"
+	end_part[2]: "v2ea"
+	variation[3]: "ter_8_to_16 | v1cb,v1cc,v1cd,v1ce,v1cf,v1cg,v1ch,v1ci,v1cj : 1.0"
+	start_part[3]: "v2sa"
+	end_part[3]: "v1ea"
+	variation[4]: "top_16 | v3cc,v3cd,v3ce,v3cf,v3cg,v3ch,v3ci,v3cj : 1.0"
+	start_part[4]: "v3sa"
+	end_part[4]: "v3ea"
+	variation[5]: "top_8 | v4ca,v4cb,v4cc,v4cd : 1.0"
+	start_part[5]: "v4sa"
+	end_part[5]: "v4ea"
+	variation[6]: "top_16_to_8 | v3ca,v4ca,v4cb,v4cc,v4cd,v4ca,v4cb,v4cc,v4cd : 1.0"
+	start_part[6]: "v3sa"
+	end_part[6]: "v4ea"
+	variation[7]: "top_8_to_16 | v3cb,v3cc,v3cd,v3ce,v3cf,v3cg,v3ch,v3ci,v3cj : 1.0"
+	start_part[7]: "v4sa"
+	end_part[7]: "v3ea"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/ibe_rock_rough1b_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+	dynamic_lod_desc[1]: "/model2/rock/ibe_rock_rough1b_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1f002
+{
+	model_desc: "/model2/rock/ibe_rock_rough1c.pmd"
+	name: "ibe rock rough1c"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "ter_8m | vca,vcb,vcc,vcd,vce,vch,vcg,vcf : 1.0 | vcc,vcb,vca,vcd,vcf,vce,vch,vcg : 1.0 | vcb,vcd,vcc,vca,vcg,vcf,vce,vch : 1.0 | vci1,vci2,vch,vcg,vcb,vcc,vce,vca,vcf,vcd : 1.0 | vcj1,vcj2,vcf,vce,vcc,vca,vcg,vcb,vcd,vch : 1.0 | vca,vcg,vcb,vcd,vch,vci1,vci2,vcf,vce,vcc : 1.0 | vca,vcf,vcd,vcj1,vcj2,vch,vcg,vcb,vcc,vce : 1.0 | vce,vcc,vca,vcg,vci1,vci2,ca,vcf,vcd,vcj1,vcj2 : 1.0"
+	start_part[0]: "vsa"
+	end_part[0]: "vea"
+	variation[1]: "top_8m | v2ca,v2cb,v2cc,v2cd,v2ce,v2ch,v2cg,v2cf : 1.0 | v2cc,v2cb,v2ca,v2cd,v2cf,v2ce,v2ch,v2cg : 1.0 | v2cb,v2cd,v2cc,v2ca,v2cg,v2cf,v2ce,v2ch : 1.0 | v2ci1,v2ci2,v2ch,v2cg,v2cb,v2cc,v2ce,v2ca,v2cf,v2cd : 1.0 | v2cj1,v2cj2,v2cf,v2ce,v2cc,v2ca,v2cg,v2cb,v2cd,v2ch : 1.0 | v2ca,v2cg,v2cb,v2cd,v2ch,v2ci1,v2ci2,v2cf,v2ce,v2cc : 1.0 | v2ca,v2cf,v2cd,v2cj1,v2cj2,v2ch,v2cg,v2cb,v2cc,v2ce : 1.0 | v2ce,v2cc,v2ca,v2cg,v2ci1,v2ci2,v2ca,v2cf,v2cd,v2cj1,v2cj2 : 1.0"
+	start_part[1]: "v2sa"
+	end_part[1]: "v2ea"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/ibe_rock_rough1c_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+	dynamic_lod_desc[1]: "/model2/rock/ibe_rock_rough1c_lod2.pmd"
+	dynamic_lod_dist[1]: 180
+}
+
+curve_model : curve.ibe_1x008
+{
+	name: "ibe shrubs maquis"
+	variation[]: "1 | shrub1 : 1.0 | shrub2 : 1.0 | shrub5 : 1.0 | shrub6 : 1.5"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "shrub1 : vegetmodel.shrub_brush1 | 1.5 : 2.6 | -1.0 : 1.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "shrub2 : vegetmodel.shrub_brush2 | 1.5 : 2.6 | -1.0 : 1.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "shrub5 : vegetmodel.shrub_brush5 | 1.5 : 2.6 | -1.0 : 1.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "shrub6 : vegetmodel.shrub_brush6 | 2.0 : 3.0 | -1.0 : 1.0 | 1.0 : 1.4 | 0.0 : 360.0"
+}
+curve_model : curve.ibe_1x09
+{
+	name: "bushes ibe"
+
+
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0 | tree4 : 1.0 | tree5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.bush1.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.bush2.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.bush3.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree4 : vegetmodel.bush4.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree5 : vegetmodel.bush5.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+}
+curve_model : curve.ibe_1x010
+{
+	name: "olive trees ibe"
+
+
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0 | tree4 : 1.0 | tree5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.olive1.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.olive2.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.olive3.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree4 : vegetmodel.olive4.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree5 : vegetmodel.olive5.ibe | 4.0 : 5.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+}
+curve_model : curve.ibe_1x011
+{
+	name: "orange trees small"
+
+
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.orange3.ibe | 4.0 : 5.6 | -0.1 : 0.1 | 0.8 : 1.2 | 0.0 : 180.0"
+	vegetation[]: "tree2 : vegetmodel.orange3.ibe | 4.0 : 5.6 | -0.1 : 0.1 | 0.8 : 1.2 | 180.0 : 360.0"
+}
+
+curve_model : curve.ibe_1x012
+{
+	model_desc: "/model2/rock/ibe_rock_bank1.pmd"
+	name: "ibe rock bank 1"
+
+	variation[]: "1 | center1 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	high_tess: 1
+	high_tess[0]: "1"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/ibe_rock_bank1_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+	dynamic_lod_desc[1]: "/model2/rock/ibe_rock_bank1_lod2.pmd"
+	dynamic_lod_dist[1]: 125
+}
+
+curve_model : curve.ibe_1x013
+{
+	model_desc: "/model2/rock/ibe_marble_mine1.pmd"
+	name: "ibe marble mine1"
+
+	variation: 3
+	variation[0]: "smooth | center1 : 1.0"
+	variation[1]: "varied | center2,center3,center4 : 1.0"
+	variation[2]: "rough | center10,center11,center12,center13 : 1.0"
+
+	start_part: 3
+	start_part[0]: "start1"
+	start_part[1]: "start1"
+	start_part[2]: "start1"
+
+	end_part: 3
+	end_part[0]: "end1"
+	end_part[1]: "end1"
+	end_part[2]: "end1"
+
+	high_tess: 0
+}
+
+curve_model : curve.ibe_1z001
+{
+	name: "arundo donax tall ibe"
+	variation[]: "1 | tree_1 : 1.0 | tree_2 : 1.0 | tree_3 : 1.0 | tree_4 : 1.0 | tree_5 : 1.0 | tree_6 : 1.0 | tree_6 : 1.3 | tree_7 : 0.1 | tree_8 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree_1 : vegetmodel.arundo.donax1.ibe | 1.0 : 2.5 | -1.0 : 1.1 | 0.7 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_2 : vegetmodel.arundo.donax2.ibe | 1.7 : 3.2 | -1.0 : 1.1 | 0.8 : 1.0 | 0.0 : 50.0"
+	vegetation[]: "tree_3 : vegetmodel.arundo.donax3.ibe | 1.2 : 2.8 | -1.0 : 1.1 | 0.5 : 1.3 | 0.0 : 360.0"
+	vegetation[]: "tree_4 : vegetmodel.arundo.donax4.ibe | 1.1 : 2.6 | -1.0 : 1.2 | 0.8 : 1.5 | 0.0 : 360.0"
+	vegetation[]: "tree_5 : vegetmodel.arundo.donax5.ibe | 1.2 : 2.5 | -1.0 : 1.2 | 0.6 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_6 : vegetmodel.arundo.donax6.ibe | 1.0 : 2.2 | -1.0 : 1.2 | 0.6 : 1.4 | 0.0 : 360.0"
+	vegetation[]: "tree_7 : vegetmodel.arundo.donax7.ibe | 2.5 : 2.8 | -1.0 : 1.2 | 0.6 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "tree_8 : vegetmodel.arundo.donax8.ibe | 2.5 : 2.8 | -1.0 : 1.2 | 0.7 : 1.1 | 0.0 : 360.0"
+
+
+}
+
+curve_model : curve.ibe_1z002
+{
+
+	name: "arundo donax small ibe"
+
+	variation[]: "2 | tree_3 : 1.0 | tree_4 : 1.0 | tree_6 : 1.0 | tree_9 : 1.3 | tree_10 : 1.3"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree_3 : vegetmodel.arundo.donax3.ibe | 1.7 : 2.8 | -1.3 : 1.1 | 0.4 : 0.8 | 0.0 : 360.0"
+	vegetation[]: "tree_4 : vegetmodel.arundo.donax4.ibe | 1.7 : 2.6 | -1.3 : 1.2 | 0.5 : 0.8 | 0.0 : 360.0"
+	vegetation[]: "tree_6 : vegetmodel.arundo.donax6.ibe | 1.7 : 2.2 | -1.2 : 1.2 | 0.5 : 0.8 | 0.0 : 360.0"
+	vegetation[]: "tree_9 : vegetmodel.arundo.donax9.ibe | 1.7 : 2.5 | -1.2 : 1.2 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "tree_10 : vegetmodel.arundo.donax10.ibe | 1.6 : 3.2 | -1.3 : 1.2 | 0.8 : 1.0 | 0.0 : 360.0"
+}
+
+curve_model : curve.ibe_1z003
+{
+	name: "spanish broom dense ibe"
+
+	variation[]: "1 | tree_1 : 1.1 | tree_2 : 1.0 | tree_3 : 1.0 | tree_4 : 1.2 | tree_5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree_1 : vegetmodel.spanish.broom.medium2.ibe | 1.5 : 2.8 | -1.5 : 1.5 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_2 : vegetmodel.spanish.broom.medium1.ibe | 1.5 : 2.8 | -1.5 : 1.5 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_3 : vegetmodel.spanish.broom.medium3.ibe | 1.5 : 3.0 | -1.5 : 1.5 | 0.7 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_4 : vegetmodel.spanish.broom.big1.ibe | 1.8 : 3.0 | -1.5 : 1.5 | 0.7 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "tree_5 : vegetmodel.spanish.broom.small3.ibe | 1.8 : 3.0 | -1.5 : 1.5 | 0.8 : 1.3 | 0.0 : 360.0"
+}
+
+curve_model : curve.ibe_1z004
+{
+	name: "spanish broom sparse ibe"
+
+	variation[]: "1 | tree_1 : 1.2 | tree_2 : 1.2 | tree_3 : 1.2 | tree_4 : 1.0 | tree_5 : 1.0 | tree_6 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree_1 : vegetmodel.spanish.broom.small1.ibe | 1.0 : 4.8 | -1.5 : 1.5 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_2 : vegetmodel.spanish.broom.small2.ibe | 1.0 : 4.8 | -1.5 : 1.5 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree_3 : vegetmodel.spanish.broom.small3.ibe | 1.0 : 5.0 | -1.5 : 1.5 | 0.6 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "tree_4 : vegetmodel.spanish.broom.medium1.ibe | 1.5 : 6.0 | -1.5 : 1.5 | 0.6 : 0.9 | 0.0 : 360.0"
+	vegetation[]: "tree_5 : vegetmodel.spanish.broom.medium2.ibe | 1.5 : 6.0 | -1.5 : 1.5 | 0.6 : 0.9 | 0.0 : 360.0"
+	vegetation[]: "tree_6 : vegetmodel.spanish.broom.medium3.ibe | 1.5 : 6.0 | -1.5 : 1.5 | 0.6 : 0.9 | 0.0 : 360.0"
+}
+
+curve_model : curve.ibe_2x3005
+{
+	name: "pine wide dense ibe"
+	variation[]: "1 | tree_1 : 0.9 | tree_2 : 1.0 | tree_3 : 1.0 | tree_4 : 0.9"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree_1 : vegetmodel.pine7.ibe | 5.0 : 7.0 | -8.0 : 8.0 | 0.8 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "tree_2 : vegetmodel.pine8.ibe | 7.0 : 9.0 | -10.0 : 10.0 | 0.8 : 1.1 | -60.0 : 60.0"
+	vegetation[]: "tree_3 : vegetmodel.pine9.ibe | 7.0 : 9.0 | -10.0 : 10.0 | 0.8 : 1.1 | -60.0 : 60.0"
+	vegetation[]: "tree_4 : vegetmodel.pine5.ibe | 5.0 : 7.0 | -4.0 : 4.0 | 1.0 : 1.2 | 0.0 : 360.0"
+}
+curve_model : curve.ibe_23008
+{
+
+	name: "cork trees wild"
+
+
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0 | tree4 : 1.0 | tree5 : 1.0 | tree6 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.cork1.ibe | 20.0 : 20.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.cork2.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.cork3.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree4 : vegetmodel.cork4.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree5 : vegetmodel.cork5.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree6 : vegetmodel.cork6.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+}
+curve_model : curve.ibe_23009
+{
+
+	name: "cork trees harvested"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0 | tree4 : 1.0 | tree5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.cork1.harv.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.cork2.harv.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.cork3.harv.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree4 : vegetmodel.cork4.harv.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree5 : vegetmodel.cork5.harv.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+
+}
+curve_model : curve.ibe_23010
+{
+
+	name: "eucalyptus small curve"
+
+	variation[]: "1 | tree1 : 2.0 | tree2 : 2.0 | tree3 : 2.0 | tree4 : 1.0 | tree5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.eucalypt1.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.eucalypt2.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.eucalypt3.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.8 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "tree4 : vegetmodel.eucalypt6.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.6 : 0.8 | 0.0 : 360.0"
+	vegetation[]: "tree5 : vegetmodel.eucalypt8.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 0.6 : 0.8 | 0.0 : 360.0"
+
+
+}
+curve_model : curve.ibe_23011
+{
+
+	name: "eucalyptus medium curve"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.eucalypt4.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 1.0 : 1.5 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.eucalypt5.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 1.0 : 1.5 | 0.0 : 360.0"
+	vegetation[]: "tree3 : vegetmodel.eucalypt7.small.ibe | 12.0 : 8.6 | -2.0 : 2.0 | 1.0 : 1.5 | 0.0 : 360.0"
+
+}
+curve_model : curve.ibe_23012
+{
+
+	name: "cyprus small ibe"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.cypress1a.small.ibe | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.5 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.cypress1b.small.ibe | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.5 | 0.0 : 360.0"
+
+}
+curve_model : curve.ibe_23013
+{
+
+	name: "cypress tall ibe"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.cypress2a.small.ibe | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.5 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.cypress2b.small.ibe | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.5 | 0.0 : 360.0"
+
+}
+curve_model : curve.ibe_23015
+{
+
+	name: "bush green dry ibe"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.bush5green.ibe | 1.4 : 1.2 | 0.2 : 0.2 | 0.3 : 0.5 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.bush4green.ibe | 1.4 : 1.2 | 0.2 : 0.2 | 0.5 : 0.8 | 0.0 : 360.0"
+
+}
+curve_model : curve.ibe_23017
+{
+	name: "pines rounded small"
+
+	variation[]: "1 | tree1 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.pine.rounded2 | 4.4 : 4.2 | 0.1 : 0.1 | 0.2 : 0.3 | 0.0 : 360.0"
+
+}
+
+
+curve_model : curve.ibe_2d001
+{
+	model_desc: "/model2/rock/hills/ibe_hillside_eroded1.pmd"
+	name: "ibe hillside eroded1"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "random | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+
+	high_tess: 1
+	high_tess[0]: "random"
+
+	smooth_surface: true
+}
+curve_model : curve.ibe_2u018
+{
+	name: "planes"
+
+	variation[]: "1 | tree1 : 1.0 | tree2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "tree1 : vegetmodel.plane4 | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "tree2 : vegetmodel.plane5 | 12.0 : 8.6 | -0.1 : 0.1 | 1.0 : 1.0 | 0.0 : 360.0"
+}
+curve_model : curve.2u022
+{
+	name: "weed line curve"
+
+	variation[]: "green | grass1 : 1.0 | grass2 : 1.0 | grass3 : 1.0 | grass4 : 1.0 | grass5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+
+	variation[]: "semigreen | grass6 : 1.0 | grass7 : 1.0 | grass8 : 1.0 | grass9 : 1.0 | grass10 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	variation[]: "dry | grass11 : 1.0 | grass12 : 1.0 | grass13 : 1.0 | grass14 : 1.0 | grass15 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	vegetation[]: "grass1 : vegetmodel.grass.line.green1 | 0.5 : 0.3 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass2 : vegetmodel.grass.line.green2 | 0.3 : 0.1 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass3 : vegetmodel.grass.line.green3 | 0.5 : 0.3 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass4 : vegetmodel.grass.line.green4 | 0.3 : 0.1 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass5 : vegetmodel.grass.line.green5 | 0.5 : 0.3 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+
+	vegetation[]: "grass6 : vegetmodel.grass.line.dry1 | 0.3 : 0.1 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass7 : vegetmodel.grass.line.dry2 | 0.5 : 0.3 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass8 : vegetmodel.grass.line.dry3 | 0.5 : 0.1 | -0.1 : 0.1 | 0.5 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "grass9 : vegetmodel.grass.line.dry4 | 0.1 : 0.3 | -0.1 : 0.1 | 0.2 : 0.4 | 0.0 : 360.0"
+	vegetation[]: "grass10 : vegetmodel.grass.line.dry5 | 0.3 : 0.1 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+
+	vegetation[]: "grass11 : vegetmodel.grass.line.dry6 | 0.3 : 0.1 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+	vegetation[]: "grass12 : vegetmodel.grass.line.dry7 | 0.5 : 0.3 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+	vegetation[]: "grass13 : vegetmodel.grass.line.dry8 | 0.3 : 0.1 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+	vegetation[]: "grass14 : vegetmodel.grass.line.dry9 | 0.1 : 0.3 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+	vegetation[]: "grass15 : vegetmodel.grass.line.dry10 | 0.3 : 0.5 | -0.1 : 0.1 | 0.2 : 0.5 | 0.0 : 360.0"
+}
+
+
+curve_model : curve.ibe_1x009
+{
+	model_desc: "/model2/rock/ibe_layered_lake_bank_1.pmd"
+	name: "ibe layered lake bank"
+
+	variation: 2
+	variation[0]: "1 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	variation[1]: "2 | center1,center2,center3,center4,center5,center6 : 1.0"
+
+	high_tess: 2
+	high_tess[0]: "1"
+	high_tess[1]: "2"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/ibe_layered_lake_bank_1_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+	dynamic_lod_desc[1]: "/model2/rock/ibe_layered_lake_bank_1_lod2.pmd"
+	dynamic_lod_dist[1]: 250
+}
+
+curve_model : curve.ibe_1p001
+{
+	model_desc: "/model2/rock/rock_rough1b_rockfall_nets.pmd"
+	name: "rock rough1b rockfall nets"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "ter_16 | v1cc,v1cd,v1ce,v1cf,v1cg,v1ch,v1ci,v1cj : 1.0"
+	start_part[0]: "v1sa"
+	end_part[0]: "v1ea"
+	variation[1]: "top_16 | v3cc,v3cd,v3ce,v3cf,v3cg,v3ch,v3ci,v3cj : 1.0"
+	start_part[1]: "v3sa"
+	end_part[1]: "v3ea"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/rock/rock_rough1b_rockfall_nets_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+	dynamic_lod_desc[1]: "/model2/rock/rock_rough1b_rockfall_nets_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+
+	smooth_surface: true
+}
+
+curve_model : curve.ibe_1p002
+{
+	model_desc: "/model2/rock/roadcliffrock_curve_1e_rockfall_nets.pmd"
+	name: "roadcliffrock curve 1e rockfall nets"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "16m | p16m_1,p16m_2,p16m_3,p16m_4 : 1.0 | p16m_4,p16m_3,p16m_2,p16m_1 : 1.0 | p16m_2,p16m_1,p16m_4,p16m_3 : 1.0 | p16m_3,p16m_4,p16m_1,p16m_2 : 1.0"
+	start_part[0]: "p16m_s"
+	end_part[0]: "p16m_e"
+	variation[1]: "16m_top | p16m_1_top,p16m_2_top,p16m_3_top,p16m_4_top : 1.0 | p16m_4_top,p16m_3_top,p16m_2_top,p16m_1_top : 1.0 | p16m_2_top,p16m_1_top,p16m_4_top,p16m_3_top : 1.0 | p16m_3_top,p16m_4_top,p16m_1_top,p16m_2_top : 1.0"
+	start_part[1]: "p16m_s_top"
+	end_part[1]: "p16m_e_top"
+
+	high_tess: 0
+
+	smooth_surface: true
+}
+curve_model : curve.dlc_blke_7
+{
+	name: "fence metal 03 bg blke crv"
+	model_desc: "/model2/fences/fence_metal_03_bg_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | c_a : 1.0 | c_b : 1.0"
+	dynamic_lod_desc[]: "/model2/fences/fence_metal_03_bg_blke_crv_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_8
+{
+	name: "fence concrete 02 ro blke crv"
+	model_desc: "/model2/fences/fence_concrete_02_ro_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | center2 : 1.0 | center3 : 1.0"
+	dynamic_lod_desc[]: "/model2/fences/fence_concrete_02_ro_blke_crv_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_9
+{
+	name: "fence metal 01 bg blke crv"
+	model_desc: "/model2/fences/fence_metal_01_bg_blke_crv.pmd"
+	variation[]: "default | center : 1.0"
+	dynamic_lod_desc[]: "/model2/fences/fence_metal_01_bg_blke_crv_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_12
+{
+	model_desc: "/model2/fences/fence_brick_02_bg_blke_crv.pmd"
+	name: "fence brick 02 bg blke crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | center : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+
+	high_tess: 0
+}
+
+curve_model : curve.dlc_blke_15
+{
+	name: "conveyor belt elevated 01 blke"
+	model_desc: "/model2/distribution/conveyor_belt_elevated_01_blke.pmd"
+	variation[]: "default | center : 55.0 | center1a : 45.0"
+	dynamic_lod_desc[]: "/model2/distribution/conveyor_belt_elevated_01_blke_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	start_part[]: "start"
+	end_part[]: "end"
+
+}
+
+
+curve_model : curve.dlc_blke_23
+{
+	name: "fence concrete 01 ro blke crv"
+	model_desc: "/model2/fences/fence_concrete_01_ro_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | center2 : 1.0"
+	dynamic_lod_desc[]: "/model2/fences/fence_concrete_01_ro_blke_crv_lod1.pmd"
+	dynamic_lod_dist[]: 50.0
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_25
+{
+	name: "fence concrete 01 bg blke crv"
+	model_desc: "/model2/fences/fence_concrete_01_bg_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_26
+{
+	model_desc: "/model2/fences/fence_brick_01_tr_blke_crv.pmd"
+	name: "fence brick 01 tr blke crv"
+
+	color_variant: 2
+	color_variant[0]: "light: 255,255,255"
+	color_variant[1]: "dark: 182,182,182"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "stepped_geo | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[1]: "start2"
+	end_part[1]: "end2"
+
+	high_tess: 0
+}
+
+curve_model : curve.dlc_blke_29
+{
+	name: "fence concrete 01 tr blke crv"
+	model_desc: "/model2/fences/fence_concrete_01_tr_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | center2 : 2.0 | center3 : 3.0"
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_32
+{
+	name: "conveyor belt elevated 02 blke"
+	model_desc: "/model2/distribution/conveyor_belt_elevated_02_blke.pmd"
+	variation[]: "default | center : 1.0 | center_a : 1.0 | center_b : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+	dynamic_lod_desc[]: "/model2/distribution/conveyor_belt_elevated_02_blke_lod1.pmd"
+	dynamic_lod_dist[]: 50.0
+
+}
+
+curve_model : curve.dlc_blke_36
+{
+	name: "conveyor belt elevated 03 blke"
+	model_desc: "/model2/distribution/conveyor_belt_elevated_03_blke.pmd"
+	variation[]: "default | center : 1.0 | center_a : 1.0"
+	variation[]: "clean | center : 1.0"
+	dynamic_lod_desc[]: "/model2/distribution/conveyor_belt_elevated_03_blke_lod1.pmd"
+	dynamic_lod_dist[]: 50.0
+	start_part[]: "start"
+	end_part[]: "end"
+	start_part[]: "start"
+	end_part[]: "end"
+
+
+}
+
+curve_model : curve.dlc_blke_42
+{
+	name: "concrete wall high rail 01 blke"
+	model_desc: "/model2/walls/concrete_wall_high_rail_01_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 3.0 | center3 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+}
+
+curve_model : curve.dlc_blke_45
+{
+	name: "mid factory hall 01 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_factory_hall_01_blke.pmd"
+	variation[]: "default | center1,center2 : 1.0 | center3,center4 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+}
+
+curve_model : curve.dlc_blke_46
+{
+	name: "mid factory hall 02 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_factory_hall_02_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+}
+
+curve_model : curve.dlc_blke_47
+{
+	name: "mid industry hall 03 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_industry_hall_03_blke.pmd"
+	variation[]: "default | center1,center2,center5 : 1.0 | center3,center1,center6 : 1.0 | center3,center4,center6 : 1.0"
+	start_part[]: "start1 | start2"
+	end_part[]: "end1 | end2"
+}
+
+curve_model : curve.dlc_blke_55
+{
+	name: "concrete_wall_01_wide_blke"
+	model_desc: "/model2/walls/concrete_wall_01_wide_blke.pmd"
+	variation[]: "1m | c1 : 1.0 | c1a : 1.0 | c1b : 1.0 | c1c : 1.0 | c1d : 1.0 | c1e : 1.0 | c1f : 1.0 | c1g : 1.0 | c1h : 1.0 | c1i : 1.0"
+	variation[]: "2m | c2,c2a : 1.0"
+	variation[]: "4m | c4,c4a : 1.0"
+	variation[]: "8m | c8 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "sand: 236,235,216"
+
+}
+
+curve_model : curve.dlc_blke_58
+{
+	name: "bridge crane 01 blke"
+	model_desc: "/model2/crane/bridge_crane_01_blke.pmd"
+	variation[]: "default | center : 1.0"
+	start_part[]: "start | start_roof"
+	end_part[]: "end"
+	dynamic_lod_desc[]: "/model2/crane/bridge_crane_01_blke_lod1.pmd"
+	dynamic_lod_dist[]: 130
+}
+
+curve_model : curve.dlc_blke_59
+{
+	name: "bridge beams_blke"
+	model_desc: "/model2/bridge/bridge_beams_blke.pmd"
+
+	variation[]: "16m | c16 : 1.0"
+	variation[]: "15m | c15 : 1.0"
+	variation[]: "14m | c14 : 1.0"
+	variation[]: "10m | c10 : 1.0"
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+	start_part[]: ""
+
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+	end_part[]: ""
+
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "green: 142,162,142"
+	color_variant[]: "sand: 236,235,216"
+}
+
+curve_model : curve.dlc_blke_62
+{
+	model_desc: "/model2/building/industry/factory_hall_02_blke.pmd"
+	name: "factory_hall_02_blke"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "two_side | center1_h : 1.0 | center2_h : 1.0 | center3_h : 1.0 | center4_h : 1.0 | center5_h : 1.0"
+	start_part[0]: "start_hi | start_low"
+	end_part[0]: "end_hi | end_low"
+	variation[1]: "one_side | center1_l : 1.0 | center2_l : 1.0 | center3_l : 1.0 | center4_l : 1.0 | center5_l : 1.0"
+	start_part[1]: "start_hi | start_low"
+	end_part[1]: "end_hi | end_low"
+
+	high_tess: 0
+}
+
+curve_model : curve.dlc_blke_64
+{
+	model_desc: "/model2/panorama/generic_city_street_01_blke.pmd"
+	name: "generic_city_street_01_blke"
+
+	variation: 2
+	variation[0]: "default | cent1 : 1.0 | cent2 : 1.0 | cent3 : 1.0 | cent4 : 1.0 | cent5 : 1.0 | cent6 : 1.0 | cent7 : 1.0 | cent8 : 1.0 | cent9 : 1.0 | cent10 : 1.0"
+	variation[1]: "blank_spaces | cent1 : 1.0 | cent2 : 1.0 | cent3 : 1.0 | cent4 : 1.0 | cent5 : 1.0 | cent6 : 1.0 | cent7 : 1.0 | cent8 : 1.0 | cent9 : 1.0 | cent10 : 1.0 | cent11 : 1.0"
+	start_part: 2
+	start_part[0]: ""
+	start_part[1]: ""
+	end_part: 2
+	end_part[0]: ""
+	end_part[1]: ""
+}
+
+curve_model : curve.dlc_blke_68
+{
+	model_desc: "/model2/fences/fence_metal_04_tr_blke.pmd"
+	name: "fence_metal_04_tr_blke"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "5m | c1 : 1.0"
+	start_part[0]: "s1"
+	end_part[0]: "e1"
+	variation[1]: "1m | c1a : 1.0"
+	start_part[1]: "s2"
+	end_part[1]: "e2"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/fences/fence_metal_04_tr_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+curve_model : curve.dlc_blke_70
+{
+	name: "factory_hall_01a_blke"
+	model_desc: "/model2/building/industry/factory_hall_01a_blke.pmd"
+	variation[]: "default | part_1 : 1.0 | part_2 : 1.0 | part_3 : 1.0 | part_4 : 1.0 | part_5 : 1.0"
+	start_part[]: "start_1 | start_2 | start_3 | st1_clear | st2_clear | st3_clear"
+	end_part[]: "end_1 | end_2 | end_3 | end1_clear | end2_clear | end3_clear"
+}
+
+curve_model : curve.dlc_blke_71
+{
+	name: "factory_hall_01b_blke"
+	model_desc: "/model2/building/industry/factory_hall_01b_blke.pmd"
+	variation[]: "default | part_1 : 5.0 | part_2 : 1.0 | part_3 : 5.0 | part_4 : 1.0 | part_5 : 5.0 | part_6 : 2.0"
+	start_part[]: "start_1 | start_2 | start_3 | start1clea | start2clea | start3clea"
+	end_part[]: "end_1 | end_2 | end_3 | end1_clear | end2_clear | end3_clear"
+
+}
+
+curve_model : curve.dlc_blke_72
+{
+	name: "factory_hall_01c_blke"
+	model_desc: "/model2/building/industry/factory_hall_01c_blke.pmd"
+	variation[]: "default | part_1 : 1.0 | part_2 : 1.0 | part_3 : 1.0 | part_4 : 1.0 | part_5 : 1.0"
+	start_part[]: "start_1 | start_2 | start_3 | start1clea | start2clea | start3clea"
+	end_part[]: "end_1 | end_2 | end_3 | end1_clear | end2_clear | end3_clear"
+}
+
+curve_model : curve.dlc_blke_76
+{
+	name: "concrete_barrier_cube_01_blke"
+	model_desc: "/model2/barrier/concrete_barrier_cube_01_blke.pmd"
+	variation[]: "whiteyellow | c1 : 2.0 | c2 : 2.0 | c3 : 2.0 | c4 : 4.0"
+
+	start_part[]: "s1"
+	fixed_inner_start[]: "s2"
+	end_part[]: "e1"
+	fixed_inner_end[]: "e1"
+	fixed_step: 6
+
+}
+
+curve_model : curve.dlc_blke_78
+{
+	name: "barrier concrete 01 ro blke crv"
+	model_desc: "/model2/railing/barrier/barrier_concrete_01_ro_blke_crv.pmd"
+	variation[]: "yellow | centery : 1.0"
+	variation[]: "black | centerb : 1.0"
+	variation[]: "mix | centery : 5.0 | centerb : 8.0"
+	start_part[]: "starty | startb"
+	end_part[]: "endy | endb"
+	start_part[]: "starty | startb"
+	end_part[]: "endy | endb"
+	start_part[]: "starty | startb"
+	end_part[]: "endy | endb"
+
+
+}
+
+curve_model : curve.dlc_blke_80
+{
+	name: "mid_factory_hall_07_blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_factory_hall_07_blke.pmd"
+	variation[]: "default | center1 : 3.0 | center2 : 1.0"
+	start_part[]: "start | start2"
+	end_part[]: "end"
+
+}
+
+curve_model : curve.dlc_blke_82
+{
+	name: "fence_wooden_wall_01_blke"
+	model_desc: "/model2/barrier/fence_wooden_wall_01_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+}
+curve_model : curve.dlc_blke_85
+{
+	name: "fence metal 03 tr blke crv"
+	model_desc: "/model2/fences/fence_metal_03_tr_blke_crv.pmd"
+	variation[]: "default | center : 1.0 | cent_a : 1.0 | cent_b : 1.0"
+	variation[]: "holes | cent_a : 2.0 | cent_b : 2.0 | centH_a : 1.0 | centH_b : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+	start_part[]: "start"
+	end_part[]: "end"
+}
+
+curve_model : curve.dlc_blke_86
+{
+	model_desc: "/model2/fences/fence_wooden_02_ro_blke_crv.pmd"
+	name: "fence wooden 02 ro blke crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "default | cent_d1 : 1.0 | cent_d2 : 1.0"
+	start_part[0]: "startdef"
+	end_part[0]: "enddef"
+	variation[1]: "looks | cent_l1 : 1.0 | cent_l2 : 1.0"
+	start_part[1]: "startlook"
+	end_part[1]: "endlook"
+}
+curve_model : curve.dlc_blke_87
+{
+	name: "mid car factory hall 01 blke"
+	model_desc: "/model2/mid_city_buildings/industry/mid_car_factory_hall_01_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+}
+curve_model : curve.dlc_blke_95
+{
+	name: "shipyard pier blke"
+	model_desc: "/prefab2/depot/shipyard/shipyard_pier_blke.pmd"
+	variation[]: "default | center : 1.0 | center1 : 1.0 | center2 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+	dynamic_lod_desc[]: "/prefab2/depot/shipyard/shipyard_pier_blke_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+curve_model : curve.dlc_blke_97
+{
+	name: "shipyard rails blke"
+	model_desc: "/prefab2/depot/shipyard/shipyard_rails_blke.pmd"
+	variation[]: "default | center : 1.0 | center1 : 1.0 | center2 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+	dynamic_lod_desc[]: "/prefab2/depot/shipyard/shipyard_rails_blke_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.dlc_blke_99
+{
+	name: "fence glass 01 blke"
+	model_desc: "/model2/fences/fence_glass_01_blke.pmd"
+	variation[0]: "glass | centerG1 : 4.0 | centerG2 : 1.0 | centerG3 : 2.0"
+	variation[1]: "noglass | centerNG1 : 4.0 | centerNG2 : 2.0 | centerNG3 : 2.0"
+	start_part[0]: "startg"
+	end_part[0]: "endg"
+	start_part[1]: "startng"
+	end_part[1]: "endng"
+}
+
+curve_model : curve.dlc_blke_100
+{
+	name: "blke_pavement_decal"
+	model_desc: "/model2/props/road/blke_pavement_decal.pmd"
+	variation[0]: "5m | c1_5m : 3.0 | c2_5m : 3.0 | c3_5m : 1.0 | c4_5m : 1.0 | c5_5m : 8.0"
+	variation[1]: "1m | c1_1m : 3.0 | c2_1m : 3.0 | c3_1m : 1.0 | c4_1m : 1.0 | c5_1m : 8.0"
+	variation[2]: "2m | c1_2m : 3.0 | c2_2m : 3.0 | c3_2m : 1.0 | c4_2m : 1.0 | c5_2m : 8.0"
+	variation[3]: "3m | c1_3m : 3.0 | c2_3m : 3.0 | c3_3m : 1.0 | c4_3m : 1.0 | c5_3m : 8.0"
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+
+}
+
+curve_model : curve.dlc_blke_101
+{
+	name: "fence_metal_01_pole_bg_blke"
+	model_desc: "/model2/fences/fence_metal_01_pole_bg_blke.pmd"
+	variation[0]: "default | center : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+}
+
+curve_model : curve.dlc_blke_102
+{
+	name: "conveyor belt 01 blke"
+	model_desc: "/model2/distribution/conveyor_belt_01_blke.pmd"
+	variation[]: "default | center : 1.0"
+	start_part[]: "start"
+	end_part[]: "end_0 | end_1"
+	dynamic_lod_desc[]: "/model2/distribution/conveyor_belt_01_blke_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/model2/distribution/conveyor_belt_01_blke_lod2.pmd"
+	dynamic_lod_dist[]: 100
+
+}
+curve_model : curve.dlc_blke_103
+{
+	name: "gas_roof_01_blke"
+	model_desc: "/model2/building/gas_station/gas_roof_01_blke.pmd"
+	variation[]: "default | c1,c2,c3,c4 : 1.0"
+
+	start_part[]: "s1"
+	end_part[]: "e1"
+}
+
+curve_model : curve.dlc_blke_105
+{
+	name: "warehouse 03 blke"
+	model_desc: "/model2/building/logistic/warehouse_03_blke.pmd"
+	variation[]: "default | center1 : 1.0 | center2 : 1.0"
+	start_part[]: "start | start2"
+	end_part[]: "end | end2"
+	dynamic_lod_desc[]: "/model2/building/logistic/warehouse_03_blke_lod1.pmd"
+	dynamic_lod_dist[]: 75
+}
+
+curve_model : curve.dlc_blke_106
+{
+	name: "concrete barrier cube 01 blke crv"
+	model_desc: "/model2/barrier/concrete_barrier_cube_01_blke_crv.pmd"
+	variation[]: "default | center : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	fixed_step: 2
+
+}
+curve_model : curve.blke_07001
+{
+	model_desc: "/model2/walls/concrete_wall_02_blke.pmd"
+	category: "dlc_blke"
+	name: "concrete wall 02 blke"
+
+	color_variant: 7
+	color_variant[0]: "sand dark: 194,184,148"
+	color_variant[1]: "sand: 236,235,216"
+	color_variant[2]: "red: 237,126,126"
+	color_variant[3]: "default: 255,255,255"
+	color_variant[4]: "green: 106,226,166"
+	color_variant[5]: "blue: 182,198,232"
+	color_variant[6]: "light green: 171,255,223"
+
+	variation: 8
+	start_part: 8
+	end_part: 8
+	variation[0]: "1mx8m | c1mx8m : 1.0"
+	start_part[0]: "s1mx4m | s1mx1m"
+	end_part[0]: "e1mx4m | e1mx1m"
+	variation[1]: "1mx4m | c1mx4m : 1.0 | c1mx4mv2 : 1.0"
+	start_part[1]: "s1mx4m | s1mx1m"
+	end_part[1]: "e1mx4m | e1mx1m"
+	variation[2]: "1mx2m | c1mx2m : 1.0 | c1mx2mv2 : 1.0"
+	start_part[2]: "s1mx4m | s1mx1m"
+	end_part[2]: "e1mx4m | e1mx1m"
+	variation[3]: "1mx1m | c1mx1m : 2.0 | c1mx1mv2 : 5.0 | c1mx1mv3 : 3.0"
+	start_part[3]: "s1mx4m | s1mx1m"
+	end_part[3]: "e1mx4m | e1mx1m"
+	variation[4]: "2mx4m | c2mx4m : 5.0 | c2mx4mv2 : 1.0 | c2mx4mv3 : 4.0"
+	start_part[4]: "s2mx4m | s2mx1m"
+	end_part[4]: "e2mx4m | e2mx1m"
+	variation[5]: "2mx1m | c2mx1m : 5.0 | c2mx1mv2 : 2.0 | c2mx1mv3 : 3.0"
+	start_part[5]: "s2mx4m | s2mx1m"
+	end_part[5]: "e2mx4m | e2mx1m"
+	variation[6]: "2mx2m | c2mx2m : 1.0 | c2mx2mv2 : 1.0"
+	start_part[6]: "s2mx4m | s2mx1m"
+	end_part[6]: "e2mx4m | e2mx1m"
+	variation[7]: "2mx8m | c2mx8m : 1.0"
+	start_part[7]: "s2mx4m | s2mx1m"
+	end_part[7]: "e2mx4m | e2mx1m"
+
+	high_tess: 0
+}
+curve_model : curve.dlc_blke_111
+{
+	name: "blke_rail_curve"
+	model_desc: "/model2/props/road/blke_rail_curve.pmd"
+	variation[]: "default | center1,center2,center3 : 1.0"
+	start_part[]: ""
+
+	end_part[]: ""
+
+}
+
+curve_model : curve.blke_07004
+{
+	model_desc: "/model2/barrier/concrete_fence_02_blke.pmd"
+	category: "dlc_blke"
+	name: "concrete_fence_02_blke"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "5m_both | c5m_both : 1.0"
+	start_part[0]: "s5m_both | s5m_column"
+	end_part[0]: "e5m_both | e5m_column"
+	variation[1]: "5m_railing | c1a : 1.0"
+	start_part[1]: "s5m_rail | s_nocolumn"
+	end_part[1]: "e5m_rail | e_nocolumn"
+	variation[2]: "5m_base | c1 : 1.0"
+	start_part[2]: "s5m_base"
+	end_part[2]: "e5m_base"
+	variation[3]: "1m_both | c1m_both : 1.0"
+	start_part[3]: "s1m_both | s1m_column"
+	end_part[3]: "e1m_both | e1m_column"
+	variation[4]: "1m_railing | c2a : 1.0"
+	start_part[4]: "s1m_rail | s_nocolumn"
+	end_part[4]: "e1m_rail | e_nocolumn"
+	variation[5]: "1m_base | c2 : 1.0"
+	start_part[5]: "s1m_base"
+	end_part[5]: "e1m_base"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/barrier/concrete_fence_02_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 40
+	dynamic_lod_desc[1]: "/model2/barrier/concrete_fence_02_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 250
+}
+
+curve_model : curve.0700i
+{
+	model_desc: "/model2/railing/barrier/railing_bridge_04_pt_ibe_crv.pmd"
+	name: "railing bridge 04 pt ibe crv"
+
+	variation: 2
+	start_part: 2
+	end_part: 2
+	variation[0]: "center5m | center1 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "center15m | center2 : 1.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/railing/barrier/railing_bridge_04_pt_ibe_crv_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+	dynamic_lod_desc[1]: "/model2/railing/barrier/railing_bridge_04_pt_ibe_crv_lod2.pmd"
+	dynamic_lod_dist[1]: 140
+}
+
+curve_model : curve.blke_070041
+{
+	model_desc: "/model2/barrier/concrete_fence_02_low_blke.pmd"
+	category: "dlc_blke"
+	name: "concrete_fence_02_low_blke"
+
+	variation: 6
+	start_part: 6
+	end_part: 6
+	variation[0]: "5m_both | c5m_both : 1.0"
+	start_part[0]: "s5m_both"
+	end_part[0]: "e5m_both"
+	variation[1]: "5m_railing | c1a : 1.0"
+	start_part[1]: "s5m_rail | s_nocolumn"
+	end_part[1]: "e5m_rail | e_nocolumn"
+	variation[2]: "5m_base | c1 : 1.0"
+	start_part[2]: "s5m_base"
+	end_part[2]: "e5m_base"
+	variation[3]: "1m_both | c1m_both : 1.0"
+	start_part[3]: "s1m_both | s1m_column"
+	end_part[3]: "e1m_both | e1m_column"
+	variation[4]: "1m_railing | c2a : 1.0"
+	start_part[4]: "s1m_rail | s_nocolumn"
+	end_part[4]: "e1m_rail | e_nocolumn"
+	variation[5]: "1m_base | c2 : 1.0"
+	start_part[5]: "s1m_base"
+	end_part[5]: "e1m_base"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/barrier/concrete_fence_02_low_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 60
+	dynamic_lod_desc[1]: "/model2/barrier/concrete_fence_02_low_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 180
+}
+
+curve_model : curve.dlc_blke_112
+{
+	name: "antiskid_stripe_r1_blke"
+	model_desc: "/model2/props/street/antiskid_stripe_r1_blke.pmd"
+
+	variation[0]: "default | center_t_1,center_t_2,center_t_3,center_t_4,center_t_5,center_t_6 : 1.0"
+	variation[1]: "thin | center1,center2 : 1.0"
+
+	start_part[0]: "start1_t"
+	end_part[0]: "end1_t"
+
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+}
+curve_model : curve.blke_0u001
+{
+	model_desc: "/model2/fences/fence_plaster_ro_blke.pmd"
+	name: "fence plaster ro blke"
+
+	color_variant: 2
+	color_variant[0]: "default: 236,235,216"
+	color_variant[1]: "white: 255,255,255"
+
+	variation: 3
+	start_part: 3
+	end_part: 3
+	variation[0]: "just_wall | vca : 1.0 | vcd : 5.0"
+	start_part[0]: "vsa"
+	end_part[0]: "vea"
+	variation[1]: "doorway | vcb : 0.0"
+	start_part[1]: "vsa"
+	end_part[1]: "vea"
+	variation[2]: "gate | vcc : 0.0"
+	start_part[2]: "vsa"
+	end_part[2]: "vea"
+
+	high_tess: 0
+}
+curve_model : curve.blke_1i001
+{
+	model_desc: "/model2/props/country/graveyard_02_ro_blke.pmd"
+	category: "blke"
+	name: "graveyard 02 ro blke"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0 | c11 : 1.0 | c12 : 1.0 | c13 : 1.0"
+	start_part[0]: "c4 | c7 | c11 | c12"
+	end_part[0]: "c11 | c12 | c4 | c7"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/props/country/graveyard_02_ro_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/props/country/graveyard_02_ro_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+
+
+	fixed_step: 3.0
+}
+curve_model : curve.blke_1i002
+{
+	model_desc: "/model2/props/country/graveyard_03_ro_blke.pmd"
+	category: "dlc_blke"
+	name: "graveyard 03 ro blke"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0 | c11 : 1.0 | c12 : 1.0 | c13 : 1.0"
+	start_part[0]: "c1 | c2 | c3 | c4 | c7 | c8"
+	end_part[0]: "c10 | c11 | c12 | c1 | c2"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/props/country/graveyard_03_ro_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/props/country/graveyard_03_ro_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+
+	fixed_step: 3.0
+}
+curve_model : curve.blke_1r001
+{
+	model_desc: "/model2/props/country/graveyard_01_ro_blke.pmd"
+	category: "dlc_blke"
+	name: "graveyard 01 ro blke"
+
+	variation: 1
+	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0"
+
+	start_part: 1
+	start_part[0]: ""
+	end_part: 1
+	end_part[0]: ""
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/props/country/graveyard_01_ro_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/props/country/graveyard_01_ro_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+
+}
+curve_model : curve.blke_1k001
+{
+	model_desc: "/model2/props/country/graveyard_01_tr_blke.pmd"
+	category: "dlc_blke"
+	name: "graveyard 01 tr blke"
+
+	variation: 1
+	variation[0]: "def | c1 : 1.0 | c2 : 1.0 | c3 : 1.0 | c4 : 1.0 | c5 : 1.0 | c6 : 1.0 | c7 : 1.0 | c8 : 1.0 | c9 : 1.0 | c10 : 1.0 | c12 : 1.0 | c13 : 1.0 | c14 : 1.0 | c15 : 1.0 | c11 : 1.0"
+
+	start_part: 1
+	start_part[0]: ""
+
+	end_part: 1
+	end_part[0]: ""
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/props/country/graveyard_01_tr_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/props/country/graveyard_01_tr_blke_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+
+
+	fixed_step: 0.0
+}
+curve_model : curve.blke_20001
+{
+	model_desc: "/model2/building/logistic/logistic_small_01_blke.pmd"
+	name: "logistic small 01 blke"
+
+	variation: 4
+	variation[0]: "default | c1 : 10.0 | c2 : 2.0 | c3 : 5.0 | c4 : 2.0 | c5 : 5.0"
+	variation[1]: "small | c1,c5,c1,c4 : 1.0"
+	variation[2]: "mini | c4 : 1.0"
+	variation[3]: "no_doors | c2 : 1.0 | c3 : 1.0 | c1 : 1.0 | c5 : 1.0"
+
+	start_part: 4
+	start_part[0]: "s1 | s2"
+	start_part[1]: "s1 | s2"
+	start_part[2]: "s1 | s2"
+	start_part[3]: "s1 | s2"
+
+	end_part: 4
+	end_part[0]: "e1 | e2"
+	end_part[1]: "e1 | e2"
+	end_part[2]: "e1 | e2"
+	end_part[3]: "e1 | e2"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/logistic/logistic_small_01_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+curve_model : curve.blke_0g007
+{
+	model_desc: "/model2/panorama/generic_city_street_01b_blke.pmd"
+	name: "generic city street 01b blke"
+
+	variation: 2
+	variation[0]: "houses | center01 : 1.0 | center02 : 1.0 | center03 : 1.0 | center04 : 1.0 | center05 : 1.0 | center06 : 1.0 | center07 : 1.0 | center08 : 1.0 | center09 : 1.0 | center10 : 1.0"
+	variation[1]: "zero_parts | center01 : 1.0 | center02 : 1.0 | center03 : 1.0 | center04 : 1.0 | center05 : 1.0 | center06 : 1.0 | center07 : 1.0 | center08 : 1.0 | center09 : 1.0 | center10 : 1.0 | center11 : 1.0"
+
+	start_part: 2
+	start_part[0]: ""
+	start_part[1]: ""
+
+	end_part: 2
+	end_part[0]: ""
+	end_part[1]: ""
+}
+curve_model : curve.blke_2o001
+{
+	model_desc: "/model2/props/road/blke_road_overlays.pmd"
+	name: "blke road overlays"
+
+	variation: 4
+	variation[0]: "light | a0a : 5.0 | a1a : 5.0 | a2a : 1.0 | a3a : 2.0 | a4a : 7.0 | a5a : 2.0 | a6a : 1.0 | a7a : 5.0 | a8a : 1.0 | a9a : 5.0 | a10a : 5.0 | a11a : 5.0 | a12a : 5.0 | a13a : 5.0"
+	variation[1]: "medium | b0a : 1.0 | b1a : 2.0 | b2a : 1.0 | b3a : 1.0 | b4a : 1.0 | b5a : 6.0 | b6a : 1.0 | b7a : 6.0 | b8a : 6.0"
+	variation[2]: "light_min | a0b : 5.0 | a1b : 5.0 | a2b : 1.0 | a3b : 2.0 | a4b : 7.0 | a5b : 2.0 | a6b : 1.0 | a7b : 5.0 | a8b : 1.0 | a9b : 5.0 | a10b : 5.0 | a11b : 5.0 | a12b : 5.0 | a13b : 5.0"
+	variation[3]: "medium_min | b0b : 1.0 | b1b : 2.0 | b2b : 1.0 | b3b : 1.0 | b4b : 1.0 | b5b : 6.0 | b6b : 1.0 | b7b : 6.0 | b8b : 6.0"
+
+	start_part: 4
+	start_part[0]: "start | start_minim"
+	start_part[1]: "start | start_minim"
+	start_part[2]: "start | start_minim"
+	start_part[3]: "start | start_minim"
+
+	end_part: 4
+	end_part[0]: "end | end_minim"
+	end_part[1]: "end | end_minim"
+	end_part[2]: "end | end_minim"
+	end_part[3]: "end | end_minim"
+
+}
+curve_model : curve.dlc_blke_89
+{
+	name: "old_rail_bridge_02_blke"
+	model_desc: "/model2/bridge/old_rail_bridge_02_blke.pmd"
+	variation[]: "default | center : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+	dynamic_lod_desc[]: "/model2/bridge/old_rail_bridge_02_blke_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.dlc_blke_51
+{
+	name: "sidewalk_sw_c_3m_blke"
+	model_desc: "/model2/props/road/sidewalk_swc_3m_blke.pmd"
+	variation[]: "4m | c1,c2 : 1.0"
+	variation[]: "2m | cs1,cs2,cs3,cs4 : 1.0"
+	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
+	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+}
+
+curve_model : curve.dlc_blke_52
+{
+	name: "sidewalk_sw_c1_3m_blke"
+	model_desc: "/model2/props/road/sidewalk_swc1_3m_blke.pmd"
+	variation[]: "4m | c1,c2 : 1.0"
+	variation[]: "2m | cs1,cs2,cs3,cs4 : 1.0"
+	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
+	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+}
+
+curve_model : curve.dlc_blke_53
+{
+	name: "sidewalk_sw_d_3m_blke"
+	model_desc: "/model2/props/road/sidewalk_swd_3m_blke.pmd"
+	variation[]: "4m | c1,c2 : 1.0"
+	variation[]: "2m | cs1,cs2,cs3,cs4 : 1.0"
+	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
+	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+}
+
+curve_model : curve.dlc_blke_75
+{
+	name: "concrete_barrier_two_color_01_blke"
+	model_desc: "/model2/barrier/concrete_barrier_two_color_01_blke.pmd"
+	variation[]: "whiteyellow | c1,c2 : 1.0 | c3,c4 : 1.0 | c5,c6 : 1.0"
+
+	start_part[]: "s1 | s2"
+	end_part[]: "e1 | e2"
+
+}
+curve_model : curve.balt_0z001
+{
+	model_desc: "/model2/power_line/tram_trolley_onesided_01_dense_balt_crv.pmd"
+	name: "tram trolley onesided 01 dense balt crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	fixed_inner_start: 1
+	fixed_inner_end: 1
+	variation[0]: "defaults | vca : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea | veb"
+	fixed_inner_start[0]: "vsa_in"
+	fixed_inner_end[0]: "vea_in"
+
+	fixed_step: 10.0
+}
+
+curve_model : curve.balt_0z005
+{
+	model_desc: "/model2/power_line/wooden_wire_01b_balt_crv.pmd"
+	name: "wooden wire 01b balt crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	fixed_inner_start: 1
+	fixed_inner_end: 1
+	variation[0]: "default | vca : 1.0"
+	start_part[0]: "vsa | vsb"
+	end_part[0]: "vea | veb"
+	fixed_inner_start[0]: "vsa_in"
+	fixed_inner_end[0]: "vea_in"
+
+	fixed_step: 30.0
+}
+
+curve_model : curve.dlc_blke_34
+{
+	name: "ruse bridge bg blke"
+	model_desc: "/prefab2/border_crossing/ruse_giurgiu/ruse_bridge_bg_blke.pmd"
+	variation[]: "default | center1 : 1.0"
+	variation[]: "middle | cent_big : 1.0"
+	start_part[]: "strt"
+	start_part[]: "strt"
+	end_part[]: "end"
+	end_part[]: "end"
+
+}
+
+curve_model : curve.dlc_blke_49
+{
+	name: "sidewalk_sw_a_3m_blke"
+	model_desc: "/model2/props/road/sidewalk_swa_3m_blke.pmd"
+	variation[]: "4m | c1,c2 : 1.0"
+	variation[]: "2m | cs1,cs2,cs3,cs4 : 1.0"
+	variation[]: "1m | csh1,csh2,csh3,csh4,csh5,csh6,csh7,csh8 : 1.0"
+	variation[]: "drivewey_2m | dw4m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "drivewey_4m | dw6m,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2,c1,c2 : 1.0"
+	variation[]: "to_2m_l | to2ml : 1.0"
+	variation[]: "to_2m_r | to2mr : 1.0"
+
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+	start_part[]: "s1 | s2 | s3"
+
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+	end_part[]: "e1 | e2 | e3"
+
+}
+
+curve_model : curve.dlc_blke_92
+{
+	name: "blke_lines_bg"
+	model_desc: "/model2/props/road/blke_lines_bg.pmd"
+
+	variation[0]: "full | full_cent_1,full_cent_2,full_cent_3 : 1.0"
+	variation[1]: "broken | br_cent_1 : 1.0"
+	variation[2]: "city | city_cent_1 : 1.0"
+	variation[3]: "warn_city | warn_cent_ct : 1.0"
+	variation[4]: "parking | park_cent_1,park_cent_2,park_cent_3 : 1.0"
+	variation[5]: "warn | warn_cent_1 : 1.0"
+	variation[6]: "cross | cross_cent_1,cross_cent_2 : 1.0"
+	start_part[0]: ""
+	start_part[1]: ""
+	start_part[2]: ""
+	start_part[3]: ""
+	start_part[4]: ""
+	start_part[5]: ""
+	start_part[6]: ""
+	end_part[0]: ""
+	end_part[1]: ""
+	end_part[2]: ""
+	end_part[3]: ""
+	end_part[4]: ""
+	end_part[5]: ""
+	end_part[6]: ""
+
+}
+
+curve_model : curve.dlc_blke_110
+{
+	name: "wall_anchor_blke"
+	model_desc: "/model2/walls/anchor_wall_blke.pmd"
+	variation[]: "default | center3,center2,center1,center3,center2 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+}
+
+curve_model : curve.ibe_14001
+{
+	model_desc: "/model2/props/road/ibe_01_drain.pmd"
+	category: "dlc_iberia"
+	name: "ibe 01 drain"
+
+	variation: 3
+	start_part: 3
+	end_part: 3
+
+	variation[0]: "default | c1 : 0.0 | c2 : 0.0 | c3 : 0.0"
+	variation[1]: "mid_2m | c1_2m : 0.0 | c2_2m : 0.0 | c3_2m : 0.0"
+	variation[2]: "mid_5m | c1_5m : 0.0 | c2_5m : 0.0 | c3_5m : 0.0"
+
+	start_part[0]: "s1 | s2 | s3"
+	start_part[1]: "s1_2m"
+	start_part[2]: "s1_5m"
+
+	end_part[0]: "e1 | e2 | e3"
+	end_part[1]: "e1_2m"
+	end_part[2]: "e1_5m"
+}
+
+curve_model : curve.ibe_0i001
+{
+	model_desc: "/model2/railing/barrier/barrier_concrete_01_ibe.pmd"
+	name: "barrier concrete 01 ibe"
+
+	variation: 3
+	start_part: 3
+	end_part: 3
+	variation[0]: "mixed | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[0]: "start1"
+	end_part[0]: "end1"
+	variation[1]: "new | center1 : 1.0 | center2 : 1.0"
+	start_part[1]: "start1"
+	end_part[1]: "end1"
+	variation[2]: "old | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[2]: "start1"
+	end_part[2]: "end1"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/railing/barrier/barrier_concrete_01_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+curve_model : curve.blke_0g003
+{
+	model_desc: "/model2/props/street/advert/advert_board_02_tr_blke.pmd"
+	name: "advert board 02 tr blke"
+
+	variation: 20
+	start_part: 20
+	end_part: 20
+	variation[0]: "food_01 | cent_01 : 1.0"
+	start_part[0]: "start"
+	end_part[0]: "end"
+	variation[1]: "food_02 | cent_02 : 1.0"
+	start_part[1]: "start"
+	end_part[1]: "end"
+	variation[2]: "food_03 | cent_03 : 1.0"
+	start_part[2]: "start"
+	end_part[2]: "end"
+	variation[3]: "food_04 | cent_04 : 1.0"
+	start_part[3]: "start"
+	end_part[3]: "end"
+	variation[4]: "coffee | cent_05 : 1.0"
+	start_part[4]: "start"
+	end_part[4]: "end"
+	variation[5]: "food_05 | cent_06 : 1.0"
+	start_part[5]: "start"
+	end_part[5]: "end"
+	variation[6]: "foodshop | cent_07 : 1.0"
+	start_part[6]: "start"
+	end_part[6]: "end"
+	variation[7]: "carpetshop | cent_08 : 1.0"
+	start_part[7]: "start"
+	end_part[7]: "end"
+	variation[8]: "papershop | cent_09 : 1.0"
+	start_part[8]: "start"
+	end_part[8]: "end"
+	variation[9]: "furniture | cent_10 : 1.0"
+	start_part[9]: "start"
+	end_part[9]: "end"
+	variation[10]: "jewellery_01 | cent_11 : 1.0"
+	start_part[10]: "start"
+	end_part[10]: "end"
+	variation[11]: "jewellery_02 | cent_12 : 1.0"
+	start_part[11]: "start"
+	end_part[11]: "end"
+	variation[12]: "health_01 | cent_13 : 1.0"
+	start_part[12]: "start"
+	end_part[12]: "end"
+	variation[13]: "bank_01 | cent_14 : 1.0"
+	start_part[13]: "start"
+	end_part[13]: "end"
+	variation[14]: "bank_02 | cent_15 : 1.0"
+	start_part[14]: "start"
+	end_part[14]: "end"
+	variation[15]: "bank_03 | cent_16 : 1.0"
+	start_part[15]: "start"
+	end_part[15]: "end"
+	variation[16]: "bank_04 | cent_17 : 1.0"
+	start_part[16]: "start"
+	end_part[16]: "end"
+	variation[17]: "property | cent_18 : 1.0"
+	start_part[17]: "start"
+	end_part[17]: "end"
+	variation[18]: "notary | cent_19 : 1.0"
+	start_part[18]: "start"
+	end_part[18]: "end"
+	variation[19]: "void | cent_0 : 1.0"
+	start_part[19]: "start"
+	end_part[19]: "end"
+
+	#dynamic_lod_desc: 1
+	#dynamic_lod_dist: 1
+	#dynamic_lod_desc[0]: "/model2/props/street/advert/advert_board_02_tr_blke_lod1.pmd"
+	#dynamic_lod_dist[0]: 160
+}
 }

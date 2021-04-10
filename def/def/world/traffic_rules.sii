@@ -112,11 +112,21 @@ traffic_rule_data : traffic_rule.no_priority
 	num_params[]: 0
 }
 
+traffic_rule_data : traffic_rule.impl_reset
+{
+	# name: "Implicit speed limit reset"
+
+	rule: "speed_limit"
+	num_params[]: 0
+	num_params[]: 1
+	str_params[]: "implicit"
+}
+
 traffic_rule_data : traffic_rule.cross_end
 {
 	# name: "[prefab] Crossroad end (reset speed limit and priority)"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 	additional_rules[]: traffic_rule.no_priority
 }
 
@@ -256,8 +266,18 @@ traffic_rule_data : traffic_rule.limit_100_60
 
 traffic_rule_data : traffic_rule.urban_area
 {
-	rule: "property"
-	num_params[]: 5
+	rule: "lane"
+	str_params[]: "urban_area"
+	str_params[]: "area"
+}
+
+traffic_rule_data : traffic_rule.no_road
+{
+	name: "[access] No road vehicles"
+	rule: "actor_access"
+	num_params[]: 0 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "road"
 }
 
 traffic_rule_data : traffic_rule.no_trailer
@@ -281,6 +301,15 @@ traffic_rule_data : traffic_rule.car_only
 	str_params[]: "car_city"
 
 	additional_rules[]: traffic_rule.no_trailer
+}
+
+traffic_rule_data : traffic_rule.no_cars
+{
+	name: "[access] No cars area"
+	rule: "actor_access"
+	num_params[]: 0 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "car_all"
 }
 
 traffic_rule_data : traffic_rule.no_trucks
@@ -309,7 +338,7 @@ traffic_rule_data : traffic_rule.no_buses
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "bus"
+	str_params[]: "bus_all"
 }
 
 traffic_rule_data : traffic_rule.buses_only
@@ -342,12 +371,22 @@ traffic_rule_data : traffic_rule.border_area
 	additional_rules[]: traffic_rule.s_truck_h
 }
 
+traffic_rule_data : traffic_rule.s_no_train
+{
+	name: "[spawn] Disable train spawn"
+
+	additional_rules[]: traffic_rule.s_train_d
+	additional_rules[]: traffic_rule.s_train_f_d
+}
+
 traffic_rule_data : traffic_rule.city_xl_area
 {
 	name: "[spawn/urban] Large city - very high traffic density"
 
 	additional_rules[]: traffic_rule.urban_area
 	additional_rules[]: traffic_rule.s_car_uh
+	additional_rules[]: traffic_rule.s_trl_u
+	additional_rules[]: traffic_rule.s_trm_u
 	additional_rules[]: traffic_rule.s_truck_u
 	additional_rules[]: traffic_rule.s_police_u
 	additional_rules[]: traffic_rule.s_bus_h
@@ -361,6 +400,8 @@ traffic_rule_data : traffic_rule.city_area
 
 	additional_rules[]: traffic_rule.urban_area
 	additional_rules[]: traffic_rule.s_car_u
+	additional_rules[]: traffic_rule.s_trl_u
+	additional_rules[]: traffic_rule.s_trm_u
 	additional_rules[]: traffic_rule.s_truck_u
 	additional_rules[]: traffic_rule.s_police_u
 	additional_rules[]: traffic_rule.s_bus_l
@@ -390,35 +431,56 @@ traffic_rule_data : traffic_rule.city_centre
 	additional_rules[]: traffic_rule.s_truck_c_u
 }
 
+traffic_rule_data : traffic_rule.ind_area
+{
+	name: "[spawn/access] Industrial area (commercial vehicles, no cars or buses)"
+
+	additional_rules[]: traffic_rule.no_cars
+	additional_rules[]: traffic_rule.no_buses
+	additional_rules[]: traffic_rule.s_trl_u
+	additional_rules[]: traffic_rule.s_trm_u
+	additional_rules[]: traffic_rule.s_truck_u
+}
+
+traffic_rule_data : traffic_rule.urban_start
+{
+	rule: "lane"
+	str_params[]: "urban_area"
+	str_params[]: "start"
+}
+
+traffic_rule_data : traffic_rule.urban_end
+{
+	rule: "lane"
+	str_params[]: "urban_area"
+	str_params[]: "end"
+}
+
 traffic_rule_data : traffic_rule.city_start
 {
 	name: "[sign] City start"
-	rule: "property"
-	num_params[]: 11
+	additional_rules[]: traffic_rule.urban_start
 	additional_rules[]: traffic_rule.limit_end
 }
 
 traffic_rule_data : traffic_rule.city_end
 {
 	name: "[sign] City end"
-	rule: "property"
-	num_params[]: 6
+	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_end
 }
 
 traffic_rule_data : traffic_rule.city_end_70
 {
 	name: "[sign] City end + limit 70"
-	rule: "property"
-	num_params[]: 6
+	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_70
 }
 
 traffic_rule_data : traffic_rule.city_end_90
 {
 	name: "[sign] City end + limit 90"
-	rule: "property"
-	num_params[]: 6
+	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_90
 }
 
@@ -438,16 +500,64 @@ traffic_rule_data : traffic_rule.major_road_e
 	additional_rules[]: traffic_rule.major_road
 }
 
-traffic_rule_data : traffic_rule.motorway
+traffic_rule_data : traffic_rule.motorway_st2
 {
 	name: "[sign] Motorway start"
+
+	rule: "lane"
+	str_params[]: "motorway"
+	str_params[]: "start"
+}
+
+traffic_rule_data : traffic_rule.motorway_st
+{
+	name: "[sign] Motorway start (cancel local limits)"
+
+	rule: "lane"
+	str_params[]: "motorway"
+	str_params[]: "start"
 
 	additional_rules[]: traffic_rule.limit_end
 }
 
-traffic_rule_data : traffic_rule.motorway_end
+traffic_rule_data : traffic_rule.motorway_en2
 {
 	name: "[sign] Motorway end"
+
+	rule: "lane"
+	str_params[]: "motorway"
+	str_params[]: "end"
+}
+
+traffic_rule_data : traffic_rule.motorway_end
+{
+	name: "[sign] Motorway end (cancel local limits)"
+
+	rule: "lane"
+	str_params[]: "motorway"
+	str_params[]: "end"
+
+	additional_rules[]: traffic_rule.limit_end
+}
+
+traffic_rule_data : traffic_rule.expressw_st
+{
+	name: "[sign] Expressway start"
+
+	rule: "lane"
+	str_params[]: "expressway"
+	str_params[]: "start"
+
+	additional_rules[]: traffic_rule.limit_end
+}
+
+traffic_rule_data : traffic_rule.expressw_end
+{
+	name: "[sign] Expressway end"
+
+	rule: "lane"
+	str_params[]: "expressway"
+	str_params[]: "end"
 
 	additional_rules[]: traffic_rule.limit_end
 }
@@ -458,7 +568,7 @@ traffic_rule_data : traffic_rule.lane_join
 	rule: "property"
 	num_params[]: 17
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.lane_split
@@ -472,14 +582,14 @@ traffic_rule_data : traffic_rule.lane_add_o
 {
 	# name: "[prefab] New outer lane added"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.lane_add_i
 {
 	# name: "[prefab] New inner lane added"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.no_ai_turn
@@ -546,7 +656,7 @@ traffic_rule_data : traffic_rule.allow_slow
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "truck_custom"
+	str_params[]: "custom_all"
 
 	additional_rules[]: traffic_rule.s_slow
 }
@@ -559,12 +669,29 @@ traffic_rule_data : traffic_rule.road
 	str_params[]: "road"
 }
 
+traffic_rule_data : traffic_rule.lights_on
+{
+	rule: "lights"
+	str_params[]: "front"
+}
+
 traffic_rule_data : traffic_rule.rail_train
 {
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 1 	# set trailer access
+	num_params[]: 0 	# disable player access
 	str_params[]: "rail_train"
+
+	additional_rules[]: traffic_rule.lights_on
+}
+
+traffic_rule_data : traffic_rule.train_cross
+{
+	# name: [prefab] Train crossing
+	additional_rules[]: traffic_rule.rail_train
 }
 
 traffic_rule_data : traffic_rule.rail_tram
@@ -573,7 +700,12 @@ traffic_rule_data : traffic_rule.rail_tram
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 1 	# set trailer access
+	num_params[]: 0 	# disable player access
 	str_params[]: "rail_tram"
+
+	additional_rules[]: traffic_rule.lights_on
 }
 
 traffic_rule_data : traffic_rule.road_tram
@@ -713,6 +845,12 @@ traffic_rule_data : traffic_rule.no_pl_limit
 	# No player speed limit
 	rule: "property"
 	num_params[]: 30
+}
+
+traffic_rule_data : traffic_rule.toll_small
+{
+	# name: "[prefab] Toll gate for small vehicles (cars)"
+	additional_rules[]: traffic_rule.car_only
 }
 
 }

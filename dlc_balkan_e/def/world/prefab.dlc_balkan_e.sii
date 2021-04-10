@@ -541,13 +541,15 @@ prefab_model : prefab.dlc_blke_29
 	corner3[]: blke51
 	corner3[]: blke52
 
+	semaphore_profile[]: cr_2x2_v1
+
 }
 prefab_model : prefab.dlc_blke_30
 {
 	model_desc: "/prefab2/cross_temp/blke/blke_r2_x_r2_sw_round_narrow_tmpl.pmd"
 	prefab_desc: "/prefab2/cross_temp/blke/blke_r2_x_r2_sw_round_narrow_tmpl.ppd"
 	category: "dlc_blke"
-	
+
 	semaphore_profile[]: cr_2x2_r2
 
 	corner0[]: blke256
@@ -846,6 +848,9 @@ prefab_model : prefab.dlc_blke_56
 	corner2[]: blke484
 	corner2[]: blke487
 
+	traffic_rules_input[0]: "impl_reset"
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 
 prefab_model : prefab.dlc_blke_57
@@ -860,6 +865,16 @@ prefab_model : prefab.dlc_blke_58
 	model_desc: "/prefab2/fork_temp/blke/blke_hw2-hw1_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_hw2-hw1_joint_tmpl.ppd"
 	category: "dlc_blke"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "lane_join"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: ""
+	traffic_rules_output[3]: "lane_split"
+
+	disable_traffic_curve_rules: true
 }
 
 prefab_model : prefab.dlc_blke_59
@@ -913,6 +928,9 @@ prefab_model : prefab.dlc_blke_65
 	corner2[]: blke493
 	corner2[]: blke573
 
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 
 prefab_model : prefab.dlc_blke_66
@@ -929,6 +947,10 @@ prefab_model : prefab.dlc_blke_66
 
 	corner2[]: blke574
 	corner2[]: blke575
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 
 prefab_model : prefab.dlc_blke_67
@@ -1220,6 +1242,7 @@ prefab_model : prefab.dlc_blke_98
 	corner2[]: blke412
 	corner2[]: blke415
 
+
 }
 
 prefab_model : prefab.dlc_blke_99
@@ -1396,27 +1419,6 @@ prefab_model : prefab.dlc_blke_111
 
 	corner2[]: blke526
 }
-
-prefab_model : prefab.31bus
-{
-	model_desc: "/prefab2/bus_station/bus_station_01_blke.pmd"
-	prefab_desc: "/prefab2/bus_station/bus_station_01_blke.ppd"
-
-	dynamic_lod_desc[]: "/prefab2/bus_station/bus_station_01_blke_lod1.pmd"
-	dynamic_lod_dist[]: 100
-	category: "dlc_blke"
-	use_perlin: false
-}
-prefab_model : prefab.dlc_blke_112
-{
-	model_desc: "/prefab2/depot/supermarket/supermarket_01_blke.pmd"
-	prefab_desc: "/prefab2/depot/supermarket/supermarket_01_blke.ppd"
-	category: "dlc_blke"
-	dynamic_lod_desc[]: "/prefab2/depot/supermarket/supermarket_01_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150
-	use_perlin: false
-}
-
 
 prefab_model : prefab.dlc_blke_113
 {
@@ -1758,6 +1760,8 @@ prefab_model : prefab.dlc_blke_139
 	corner3[]: blke51
 	corner3[]: blke52
 
+	semaphore_profile[]: cr_2x1_v1
+
 }
 
 prefab_model : prefab.dlc_blke_140
@@ -1843,6 +1847,8 @@ prefab_model : prefab.dlc_blke_143
 
 	corner2[]: blke245
 	corner2[]: blke320
+
+	semaphore_profile[]: cr_2x2_v1
 
 }
 
@@ -2042,6 +2048,8 @@ prefab_model : prefab.dlc_blke_153
 	corner0[]: blke139
 	corner0[]: blke140
 
+	semaphore_profile[]: cr_2x1_v1
+
 }
 
 prefab_model : prefab.dlc_blke_154
@@ -2063,7 +2071,7 @@ prefab_model : prefab.dlc_blke_155
 	category: "dlc_blke"
 	use_perlin: false
 	dynamic_lod_desc[]: "/prefab2/border_crossing/kapikule/border_kapikule_gate_3x2_civil_tr_blke_lod1.pmd"
-	dynamic_lod_dist[]: 250	
+	dynamic_lod_dist[]: 250
 }
 
 prefab_model : prefab.dlc_blke_156
@@ -2214,7 +2222,7 @@ prefab_model : prefab.dlc_blke_168
 	prefab_desc: "/prefab2/border_crossing/kapikule/border_kapikule_complete_check_tr_blke.ppd"
 	category: "dlc_blke"
 	use_perlin: false
-	
+
 	dynamic_lod_desc[]: "/prefab2/border_crossing/kapikule/border_kapikule_complete_check_tr_blke_lod1.pmd"
 	dynamic_lod_dist[]: 200
 
@@ -2370,16 +2378,6 @@ prefab_model : prefab.dlc_blke_165
 
 }
 
-prefab_model : prefab.dlc_blke_177
-{
-	model_desc: "/prefab2/depot/construction/construction_01_blke.pmd"
-	prefab_desc: "/prefab2/depot/construction/construction_01_blke.ppd"
-	dynamic_lod_desc[]: "/prefab2/depot/construction/construction_01_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150
-	category: "dlc_blke"
-
-}
-
 prefab_model : prefab.dlc_blke_178
 {
 	model_desc: "/prefab2/cross_temp/blke/blke_rail2_x_road1_y_01.pmd"
@@ -2401,6 +2399,10 @@ prefab_model : prefab.dlc_blke_178
 	corner2[]: blke309
 	corner3[]: blke308
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
+	traffic_rules_input[2]: ""
+	traffic_rules_input[3]: "train_cross"
 }
 
 prefab_model : prefab.dlc_blke_179
@@ -2583,6 +2585,10 @@ prefab_model : prefab.dlc_blke_190
 	corner2[]: blke297
 	corner3[]: blke292
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
+	traffic_rules_input[2]: ""
+	traffic_rules_input[3]: "train_cross"
 }
 
 prefab_model : prefab.dlc_blke_191
@@ -2944,6 +2950,8 @@ prefab_model : prefab.dlc_blke_212
 	corner2[]: blke300
 	corner3[]: blke301
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
 }
 
 prefab_model : prefab.dlc_blke_213
@@ -2967,6 +2975,8 @@ prefab_model : prefab.dlc_blke_213
 	corner2[]: blke305
 	corner3[]: blke304
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
 }
 
 prefab_model : prefab.dlc_blke_214
@@ -3200,6 +3210,10 @@ prefab_model : prefab.dlc_blke_225
 	model_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_tmpl_mirrored_exit_lane.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_tmpl_mirrored_exit_lane.ppd"
 	category: "dlc_blke"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 
 prefab_model : prefab.dlc_blke_226
@@ -3233,16 +3247,6 @@ prefab_model : prefab.dlc_blke_228
 	model_desc: "/prefab2/fork_temp/blke/blke_hw2-hw2_exit_left_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_hw2-hw2_exit_left_tmpl.ppd"
 	category: "dlc_blke"
-}
-
-prefab_model : prefab.dlc_blke_229
-{
-	model_desc: "/prefab2/depot/beverage_factory/beverage_factory_blke.pmd"
-	prefab_desc: "/prefab2/depot/beverage_factory/beverage_factory_blke.ppd"
-	dynamic_lod_desc[]: "/prefab2/depot/beverage_factory/beverage_factory_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150
-	category: "dlc_blke"
-	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_230
@@ -3296,6 +3300,7 @@ prefab_model : prefab.dlc_blke_234
 	model_desc: "/prefab2/gas_station/gas_small_road_01_blke.pmd"
 	prefab_desc: "/prefab2/gas_station/gas_small_road_01_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 	use_semaphores: true
 	dynamic_lod_desc[]: "/prefab2/gas_station/gas_small_road_01_blke_lod1.pmd"
 	dynamic_lod_dist[]: 194
@@ -3340,6 +3345,11 @@ prefab_model : prefab.dlc_blke_239
 	corner1[]: blke292
 	corner2[]: blke297
 	corner3[]: blke292
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
+	traffic_rules_input[2]: ""
+	traffic_rules_input[3]: "train_cross"
 }
 
 prefab_model : prefab.dlc_blke_240
@@ -3348,6 +3358,7 @@ prefab_model : prefab.dlc_blke_240
 	prefab_desc: "/prefab2/tollgate/tollgate_hw3_tr_blke.ppd"
 	dynamic_lod_desc[]: "/prefab2/tollgate/tollgate_hw3_tr_blke_lod1.pmd"
 	dynamic_lod_dist[]: 200
+	use_perlin: false
 	category: "dlc_blke"
 	slow_time: true
 }
@@ -3358,6 +3369,7 @@ prefab_model : prefab.dlc_blke_241
 	prefab_desc: "/prefab2/border_crossing/border_durankulak_gate_bg_blke.ppd"
 	dynamic_lod_desc[]: "/prefab2/border_crossing/border_durankulak_gate_bg_blke_lod1.pmd"
 	dynamic_lod_dist[]: 150
+	use_perlin: false
 	category: "dlc_blke"
 }
 
@@ -3392,6 +3404,7 @@ prefab_model : prefab.dlc_blke_244
 {
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_gate_civil_bg_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_gate_civil_bg_blke.ppd"
+    use_perlin: false
 	category: "dlc_blke"
 }
 
@@ -3400,6 +3413,7 @@ prefab_model : prefab.dlc_blke_245
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_gate_truck_bg_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_gate_truck_bg_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_247
@@ -3407,6 +3421,7 @@ prefab_model : prefab.dlc_blke_247
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_gate_tr_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_gate_tr_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_248
@@ -3414,6 +3429,7 @@ prefab_model : prefab.dlc_blke_248
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_enter_01_tr_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_enter_01_tr_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_249
@@ -3421,6 +3437,7 @@ prefab_model : prefab.dlc_blke_249
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_enter_02_tr_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_hamzabeyli_enter_02_tr_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_251
@@ -3447,16 +3464,6 @@ prefab_model : prefab.dlc_blke_252
 
 }
 
-prefab_model : prefab.dlc_blke_255
-{
-	model_desc: "/prefab2/gas_station/gas_station_car_01_blke.pmd"
-	prefab_desc: "/prefab2/gas_station/gas_station_car_01_blke.ppd"
-	category: "dlc_blke"
-	use_semaphores: true
-	dynamic_lod_desc[]: "/prefab2/gas_station/gas_station_car_01_blke_lod1.pmd"
-	dynamic_lod_dist[]: 194
-	slow_time: true
-}
 prefab_model : prefab.dlc_blke_256
 {
 	model_desc: "/prefab2/fork_temp/blke/blke_tram_1_split_tmpl.pmd"
@@ -3470,7 +3477,7 @@ prefab_model : prefab.dlc_blke_257
 	prefab_desc: "/prefab2/depot/forklift_factory/forklift_factory_blke.ppd"
 	category: "dlc_blke"
 	dynamic_lod_desc[]: "/prefab2/depot/forklift_factory/forklift_factory_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150	
+	dynamic_lod_dist[]: 150
 	use_perlin: false
 }
 
@@ -3479,6 +3486,7 @@ prefab_model : prefab.dlc_blke_258
 	model_desc: "/prefab2/border_crossing/border_durankulak_gate_ro_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/border_durankulak_gate_ro_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_259
@@ -3510,19 +3518,8 @@ prefab_model : prefab.dlc_blke_262
 	model_desc: "/prefab2/cross_temp/blke/blke_hw2_join_short_round_tmpl.pmd"
 	prefab_desc: "/prefab2/cross_temp/blke/blke_hw2_join_short_round_tmpl.ppd"
 	category: "dlc_blke"
-	
-	semaphore_profile[]: cr_2x2r_alt
-}
 
-prefab_model : prefab.dlc_blke_265
-{
-	model_desc: "/prefab2/gas_station/gas_station_car_03_blke.pmd"
-	prefab_desc: "/prefab2/gas_station/gas_station_car_03_blke.ppd"
-	category: "dlc_blke"
-	use_semaphores: true
-	dynamic_lod_desc[]: "/prefab2/gas_station/gas_station_car_03_blke_lod1.pmd"
-	dynamic_lod_dist[]: 194
-	slow_time: true
+	semaphore_profile[]: cr_2x2r_alt
 }
 
 prefab_model : prefab.dlc_blke_266
@@ -3616,6 +3613,10 @@ prefab_model : prefab.dlc_blke_270
 	model_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_narrow_mirrored_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_narrow_mirrored_tmpl.ppd"
 	category: "dlc_blke"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 prefab_model : prefab.dlc_blke_271
 {
@@ -3626,6 +3627,10 @@ prefab_model : prefab.dlc_blke_271
 	corner0[]: blke589
 	corner1[]: blke591
 	corner2[]: blke590
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "lane_join"
+	traffic_rules_input[2]: ""
 }
 
 prefab_model : prefab.dlc_blke_272
@@ -3686,6 +3691,10 @@ prefab_model : prefab.dlc_blke_273
 	model_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_narrow_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_hw2_exit_joint_narrow_tmpl.ppd"
 	category: "dlc_blke"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "lane_join"
+	traffic_rules_input[2]: ""
 }
 
 prefab_model : prefab.dlc_blke_274
@@ -3697,6 +3706,10 @@ prefab_model : prefab.dlc_blke_274
 	corner0[]: blke591
 	corner1[]: blke589
 	corner2[]: blke592
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 prefab_model : prefab.dlc_blke_276
 {
@@ -3902,20 +3915,8 @@ prefab_model : prefab.dlc_blke_290
 	corner3[]: blke50
 	corner3[]: blke51
 	corner3[]: blke52
-	
-	semaphore_profile[]: cr_2x2_alt
-}
 
-prefab_model : prefab.dlc_blke_293
-{
-	model_desc: "/prefab2/depot/glass_factory/glass_factory_blke.pmd"
-	prefab_desc: "/prefab2/depot/glass_factory/glass_factory_blke.ppd"
-	dynamic_lod_desc[]: "/prefab2/depot/glass_factory/glass_factory_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150
-	dynamic_lod_desc[]: "/prefab2/depot/glass_factory/glass_factory_blke_lod2.pmd"
-	dynamic_lod_dist[]: 300
-	category: "dlc_blke"
-	use_perlin: false
+	semaphore_profile[]: cr_2x2_alt
 }
 
 prefab_model : prefab.dlc_blke_294
@@ -3930,28 +3931,6 @@ prefab_model : prefab.dlc_blke_295
 	model_desc: "/prefab2/fork_temp/blke/blke_r1_exit_mirrored_oneway_ruse.pmd"
 	prefab_desc: "/prefab2/fork_temp/blke/blke_r1_exit_mirrored_oneway_ruse.ppd"
 	category: "dlc_blke"
-}
-
-prefab_model : prefab.dlc_blke_296
-{
-	model_desc: "/prefab2/depot/steel_works/steel_works_factory_blke.pmd"
-	prefab_desc: "/prefab2/depot/steel_works/steel_works_factory_blke.ppd"
-	category: "dlc_blke"
-	use_perlin: false
-	dynamic_lod_desc[]: "/prefab2/depot/steel_works/steel_works_factory_blke_lod1.pmd"
-	dynamic_lod_dist[]: 200
-}
-
-prefab_model : prefab.dlc_blke_298
-{
-	model_desc: "/prefab2/depot/shipyard/shipyard_blke.pmd"
-	prefab_desc: "/prefab2/depot/shipyard/shipyard_blke.ppd"
-	dynamic_lod_desc[]: "/prefab2/depot/shipyard/shipyard_blke_lod1.pmd"
-	dynamic_lod_dist[]: 150
-	dynamic_lod_desc[]: "/prefab2/depot/shipyard/shipyard_blke_lod2.pmd"
-	dynamic_lod_dist[]: 250
-	category: "dlc_blke"
-	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_299
@@ -4005,15 +3984,6 @@ prefab_model : prefab.dlc_blke_301
 	corner1[]: blke73
 	corner1[]: blke76
 
-}
-
-prefab_model : prefab.dlc_blke_302
-{
-	model_desc: "/prefab2/depot/quarry/quarry_blke.pmd"
-	prefab_desc: "/prefab2/depot/quarry/quarry_blke.ppd"
-	dynamic_lod_desc[]: "/prefab2/depot/quarry/quarry_blke_lod1.pmd"
-	dynamic_lod_dist[]: 200
-	category: "dlc_blke"
 }
 
 prefab_model : prefab.dlc_blke_304
@@ -4070,6 +4040,7 @@ prefab_model : prefab.dlc_blke_309
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_xray_twoway_bg_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_xray_twoway_bg_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_310
@@ -4077,6 +4048,7 @@ prefab_model : prefab.dlc_blke_310
 	model_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_xray_oneway_bg_blke.pmd"
 	prefab_desc: "/prefab2/border_crossing/hamzabeyli/border_lesovo_xray_oneway_bg_blke.ppd"
 	category: "dlc_blke"
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_311
@@ -4092,6 +4064,7 @@ prefab_model : prefab.dlc_blke_312
 	prefab_desc: "/prefab2/tollgate/tollgate_small_hw3_tr_blke.ppd"
 	dynamic_lod_desc[]: "/prefab2/tollgate/tollgate_small_hw3_tr_blke_lod1.pmd"
 	dynamic_lod_dist[]: 200
+	use_perlin: false
 	category: "dlc_blke"
 	slow_time: true
 }
@@ -4271,6 +4244,7 @@ prefab_model : prefab.dlc_blke_326
 	prefab_desc: "/prefab2/tollgate/weigh_station_tr_blke.ppd"
 	category: "dlc_blke"
 	slow_time: true
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_327
@@ -4279,6 +4253,7 @@ prefab_model : prefab.dlc_blke_327
 	prefab_desc: "/prefab2/tollgate/weigh_station_small_tr_blke.ppd"
 	category: "dlc_blke"
 	slow_time: true
+	use_perlin: false
 }
 
 prefab_model : prefab.dlc_blke_328
@@ -4288,7 +4263,7 @@ prefab_model : prefab.dlc_blke_328
 	category: "dlc_blke"
 
 	semaphore_profile[]: cr_2x2_tramb
-	
+
 }
 
 prefab_model : prefab.dlc_blke_329
@@ -4481,15 +4456,15 @@ prefab_model : prefab.dlc_blke_338
 }
 
 prefab_model : prefab.blke_339
-{ 
-	name: "blke r2 one way x r1 t tmpl" 
-	model_desc: "/prefab2/cross_temp/blke/blke_r2_one_way_x_r1_t_tmpl.pmd" 
-	prefab_desc: "/prefab2/cross_temp/blke/blke_r2_one_way_x_r1_t_tmpl.ppd" 
-	category: "dlc_blke" 
-	
-	corner0[]: blke_14002 
-	corner1[]: blke_14001 
-	corner2[]: blke_14003 
+{
+	name: "blke r2 one way x r1 t tmpl"
+	model_desc: "/prefab2/cross_temp/blke/blke_r2_one_way_x_r1_t_tmpl.pmd"
+	prefab_desc: "/prefab2/cross_temp/blke/blke_r2_one_way_x_r1_t_tmpl.ppd"
+	category: "dlc_blke"
+
+	corner0[]: blke_14002
+	corner1[]: blke_14001
+	corner2[]: blke_14003
 
 }
 

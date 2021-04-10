@@ -927,7 +927,7 @@ mover_model : mover.yachts
 {
 	mover_name: "yachts_moving"
 	model_desc: "/model2/mover/yachts_moving_01_fr.pmd"
-	model_anim: "/model2/mover/ships_anim.pma"
+	model_anim: "/model2/mover/yachts_moving_01_fr.pma"
 
 }
 
@@ -935,7 +935,7 @@ mover_model : mover.yachts_02
 {
 	mover_name: "yachts_moving_02"
 	model_desc: "/model2/mover/yachts_moving_02_fr.pmd"
-	model_anim: "/model2/mover/ships_anim_new.pma"
+	model_anim: "/model2/mover/yachts_moving_02_fr.pma"
 }
 mover_model : mover.flag_batisse
 {
@@ -1091,7 +1091,7 @@ mover_model : mover.yachts_03
 {
 	mover_name: "yachts_moving_03_fr"
 	model_desc: "/model2/mover/yachts_moving_03_fr.pmd"
-	model_anim: "/model2/mover/ships_anim_for_03.pma"
+	model_anim: "/model2/mover/yachts_moving_03_fr.pma"
 
 }
 
@@ -1376,4 +1376,76 @@ mover_model : mover.cg_tr_01
 	sound_min_dist: 20
 	sound_max_dist: 200
 }
+mover_model : mover.cessna_toff
+{
+	mover_name: "cessna takeoff"
+	model_desc: "/model/aircraft/cessna_anim.pmd"
+	model_anim: "/model/aircraft/cesna_takeoff.pma"
+#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
+#	sound_max_dist: 100
+
+	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
+	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
 }
+mover_model : mover.cessna_land
+{
+	mover_name: "cessna landing"
+	model_desc: "/model/aircraft/cessna_anim.pmd"
+	model_anim: "/model/aircraft/cesna_landing.pma"
+#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
+#	sound_max_dist: 100
+
+	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
+	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+}
+mover_model : mover.cessna_fly
+{
+	mover_name: "cessna flying"
+	model_desc: "/model/aircraft/cessna_anim.pmd"
+	model_anim: "/model/aircraft/cesna_flying.pma"
+#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
+#	sound_max_dist: 100
+
+	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
+	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+}
+
+#########################################################################
+#	DLC IBERIA
+#########################################################################
+
+mover_model : mover.w_tower_ibe
+{
+	mover_name: "wind tower ibe anim"
+	model_desc: "/model2/distribution/wind_tower_ibe.pmd"
+	model_anim: "/model2/distribution/wind_twr_skeleton.pma"
+	sound_path[]: "/sound/world/mover.bank#mover/wind_powerplant"
+#	sound_max_dist: 100
+
+	lods[0]: "/model2/distribution/wind_tower_ibe_lod1.pmd"
+	lods[1]: "/model2/distribution/wind_tower_ibe_lod2.pmd"
+
+
+	lod_dist[0]: 90
+	lod_dist[1]: 140
+}
+
+mover_model : mover.over_brd2
+{
+	mover_name: "barrier_toll_oversize_01_ibe"
+	model_desc: "/model2/railing/barrier/barrier_toll_oversize_01_ibe.pmd"
+	model_coll: "/model2/railing/barrier/barrier_toll_oversize_01_ibe.pmc"
+	tags[]: "rail_train"
+}
+
+}
+

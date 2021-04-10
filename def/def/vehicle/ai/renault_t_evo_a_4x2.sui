@@ -1,0 +1,57 @@
+traffic_vehicle : traffic.renault_t4x2.evo
+{
+	accessories[]: .renault_t4x2.evo.chassis
+	accessories[]: .renault_t4x2.evo.fwheel
+	accessories[]: .renault_t4x2.evo.rwheel
+	accessories[]: .renault_t4x2.evo.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 7587
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.552012, 0.007499, 0.000000) #candyred
+	color[]: (0.552012, 0.007499, 0.000000) #candyred
+	color[]: (0.490619, 0.586686, 0.754993) #tha
+	color[]: (0.1443, 0.1165, 0.0381) #bronzeautumn
+	color[]: (0.006, 0.006, 0.006) #blackshadow
+	color[]: (0.0027, 0.0284, 0.1384) #stormyblue
+	color[]: (0.198, 0.008, 0.0033) #redsunset
+	color[]: (0.5393, 0.5582, 0.584) #brightlywhite
+
+	lod_dist[]: 70
+	# add lod in between
+	lod_dist[]: 130
+	lod_dist[]: 200
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .renault_t4x2.evo.chassis
+{
+	data_path: "/def/vehicle/ai/truck/renault.t/evo_a4x2.sii"
+}
+vehicle_wheel_accessory: .renault_t4x2.evo.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .renault_t4x2.evo.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .renault_t4x2.evo.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/renault.t/accessory/trlr_cables/stock.sii"
+}

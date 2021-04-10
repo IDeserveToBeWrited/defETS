@@ -44,6 +44,7 @@ trajectory_rule_data : .traj_rule
 	rules[]: .r31
 	rules[]: .r32
 	rules[]: .r33
+	rules[]: .r34
 }
 
 trajectory_rule : .r0
@@ -349,6 +350,15 @@ trajectory_rule : .r33
 	rule: not_spawn
 
 	param1_name: "Range:"
+}
+
+trajectory_rule : .r34
+{
+	name: "PLAYER: Escorts waiting nearby message"
+	rule: pl_mess_near
+
+	param1_name: "Activation:"
+	param2_name: "Hit:"
 }
 
 }

@@ -976,12 +976,20 @@ prefab_model : prefab.dlc_balt_108
 	model_desc: "/prefab2/fork_temp/balt/balt_hw2_exit_joint_mirrored_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw2_exit_joint_mirrored_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 prefab_model : prefab.dlc_balt_109
 {
 	model_desc: "/prefab2/fork_temp/balt/balt_hw2_exit_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw2_exit_joint_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 prefab_model : prefab.dlc_balt_110
 {
@@ -994,6 +1002,10 @@ prefab_model : prefab.dlc_balt_111
 	model_desc: "/prefab2/fork_temp/balt/balt_hw3_exit_joint_mirrored_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw3_exit_joint_mirrored_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 prefab_model : prefab.dlc_balt_112
 {
@@ -1018,6 +1030,10 @@ prefab_model : prefab.dlc_balt_116
 	model_desc: "/prefab2/fork_temp/balt/balt_r2_one_way_joint.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_r2_one_way_joint.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "lane_join"
+	traffic_rules_input[2]: "impl_reset"
 }
 prefab_model : prefab.dlc_balt_117
 {
@@ -1043,6 +1059,10 @@ prefab_model : prefab.dlc_balt_120
 	model_desc: "/prefab2/fork_temp/balt/balt_hw3_exit_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw3_exit_joint_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 prefab_model : prefab.dlc_balt_121
 {
@@ -1112,6 +1132,10 @@ prefab_model : prefab.dlc_balt_132
 	model_desc: "/prefab2/fork_temp/balt/balt_hw2_one_way_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw2_one_way_joint_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: "impl_reset"
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 prefab_model : prefab.dlc_balt_133
 {
@@ -1191,6 +1215,7 @@ prefab_model : prefab.dlc_balt_151
 	category: "dlc_balt"
 	slow_time: true
 	use_semaphores: true
+	use_perlin: false
 	dynamic_lod_desc[]: "/prefab2/gas_station/gas_small_road_01_balt_lod1.pmd"
 	dynamic_lod_dist[]: 213
 }
@@ -1263,6 +1288,9 @@ prefab_model : prefab.dlc_balt_166
 
 	semaphore_profile[]: crossing_s
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
+
 }
 prefab_model : prefab.dlc_balt_167
 {
@@ -1277,6 +1305,9 @@ prefab_model : prefab.dlc_balt_167
 
 	semaphore_profile[]: crossing_s
 
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
+
 }
 prefab_model : prefab.dlc_balt_168
 {
@@ -1290,6 +1321,9 @@ prefab_model : prefab.dlc_balt_168
 	corner3[]: ba314
 
 	semaphore_profile[]: crossing_s
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "train_cross"
 
 }
 prefab_model : prefab.dlc_balt_170
@@ -1366,18 +1400,27 @@ prefab_model : prefab.dlc_balt_179
 	category: "dlc_balt"
 	slow_time: true
 	use_semaphores: true
+	use_perlin: false
 }
 prefab_model : prefab.dlc_balt_180
 {
 	model_desc: "/prefab2/fork_temp/balt/balt_hw4_exit_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw4_exit_joint_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: ""
+	traffic_rules_input[2]: "lane_join"
 }
 prefab_model : prefab.dlc_balt_181
 {
 	model_desc: "/prefab2/fork_temp/balt/balt_hw4_exit_joint_mirrored_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw4_exit_joint_mirrored_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: "lane_split"
 }
 prefab_model : prefab.dlc_balt_182
 {
@@ -1386,6 +1429,7 @@ prefab_model : prefab.dlc_balt_182
 	category: "dlc_balt"
 	slow_time: true
 	use_semaphores: true
+	use_perlin: false
 }
 prefab_model : prefab.dlc_balt_183
 {
@@ -1563,6 +1607,16 @@ prefab_model : prefab.dlc_balt_210
 	model_desc: "/prefab2/fork_temp/balt/balt_hw2-hw1_joint_tmpl.pmd"
 	prefab_desc: "/prefab2/fork_temp/balt/balt_hw2-hw1_joint_tmpl.ppd"
 	category: "dlc_balt"
+
+	traffic_rules_input[0]: ""
+	traffic_rules_input[1]: "lane_join"
+
+	traffic_rules_output[0]: ""
+	traffic_rules_output[1]: ""
+	traffic_rules_output[2]: ""
+	traffic_rules_output[3]: "lane_split"
+
+	disable_traffic_curve_rules: true
 }
 
 prefab_model : prefab.dlc_balt_211
@@ -1633,15 +1687,6 @@ prefab_model : prefab.dlc_balt_220
 
 }
 
-prefab_model : prefab.dlc_balt_226
-{
-	model_desc: "/prefab2/chemical_factory/chemical_factory_balt.pmd"
-	prefab_desc: "/prefab2/chemical_factory/chemical_factory_balt.ppd"
-	category: "dlc_balt"
-	dynamic_lod_desc[]: "/prefab2/chemical_factory/chemical_factory_balt_lod1.pmd"
-	dynamic_lod_dist[]: 210
-	use_perlin: false
-}
 prefab_model : prefab.dlc_balt_229
 {
 	model_desc: "/prefab2/cross_temp/balt/roundabout/balt_r2_x_r2_round_narrow_tmpl.pmd"
@@ -2139,8 +2184,6 @@ prefab_model : prefab.dlc_balt_258
 	corner3[]: ba2
 	corner3[]: ba3
 
-	semaphore_profile[]: cr_2x2_v2
-
 }
 
 prefab_model : prefab.dlc_balt_259
@@ -2232,6 +2275,7 @@ prefab_model : prefab.dlc_balt_266
 	model_desc: "/prefab2/border_crossing/border_narva_01_balt.pmd"
 	prefab_desc: "/prefab2/border_crossing/border_narva_01_balt.ppd"
 	category: "dlc_balt"
+	use_perlin: false
 	dynamic_lod_desc[]: "/prefab2/border_crossing/border_narva_01_balt_lod1.pmd"
 	dynamic_lod_dist[]: 113
 	slow_time: true
@@ -2289,6 +2333,7 @@ prefab_model : prefab.dlc_balt_272
 	model_desc: "/prefab2/ports/naantali_port_01_balt.pmd"
 	prefab_desc: "/prefab2/ports/naantali_port_01_balt.ppd"
 	category: "dlc_balt"
+	use_perlin: false
 
 }
 prefab_model : prefab.dlc_balt_273
@@ -2404,12 +2449,6 @@ prefab_model : prefab.dlc_balt_278
 	category: "dlc_balt"
 }
 
-prefab_model : prefab.dlc_balt_279
-{
-	model_desc: "/prefab2/fork_temp/balt/balt_exit_road_joint_short_tmpl.pmd"
-	prefab_desc: "/prefab2/fork_temp/balt/balt_exit_road_joint_short_tmpl_ru.ppd"
-	category: "dlc_balt"
-}
 prefab_model : prefab.dlc_balt_282
 {
 	model_desc: "/prefab2/bridge/bridge_of_queen_louise_balt.pmd"
@@ -2419,11 +2458,5 @@ prefab_model : prefab.dlc_balt_282
 	dynamic_lod_dist[]: 150
 }
 
-prefab_model : prefab.dlc_balt_283
-{
-	model_desc: "/prefab2/cross_temp/balt/balt_r1_narrow_x_r1_t_enter_tmpl.pmd"
-	prefab_desc: "/prefab2/cross_temp/balt/balt_r1_narrow_x_r1_t_enter_tmpl_no_turn.ppd"
-	category: "dlc_balt"
-}
 
 }

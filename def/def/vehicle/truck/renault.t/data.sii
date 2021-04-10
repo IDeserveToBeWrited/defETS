@@ -18,8 +18,8 @@ accessory_truck_data : vehicle.renault.t
 	debug_camera: camera.debug
 
 	fallback[]: "chassis|4x2.sii"
-	fallback[]: "cabin|high_sleeper.sii"
-	fallback[]: "interior|standard_high.sii"
+	fallback[]: "cabin|sleeper.sii"
+	fallback[]: "interior|standard_low.sii"
 	fallback[]: "engine|dti11_380.sii"
 	fallback[]: "transmission|at2612f.sii"
 	fallback[]: "f_tire|1.sii"
@@ -31,29 +31,32 @@ accessory_truck_data : vehicle.renault.t
 	fallback[]: "r_hub|rear_hub_01.sii"
 	fallback[]: "r_nuts|rear_nuts_01_steel.sii"
 	fallback[]: "paint_job|color1.sii"
-	fallback[]: "head_light|standard.sii"
+	fallback[]: "head_light|led.sii"
 	fallback[]: "accessory|steering_w/standard.sii"
 
-	#chassis
-	require[]: doorstep
-	require[]: f_light_chs
+	defaults[]: "/def/vehicle/truck/renault.t/head_light/standard.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/paint_job/color0.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/doorhndl/shape1.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/doorstep/shape1.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_bumper/plastic_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_fender_chs/plastic_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_inlay_chs/plastic_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_intake_chs/plastic_gray_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_light_chs/led_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_light_top/stock_evo.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/f_wnd_frame/plastic.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/filter/plastic.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/mirror/shape1.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/s_strip/plastic.sii"
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/trlr_cables/stock.sii"
 
-	#cabin n chassis
-	require[]: mirror
-	require[]: doorhndl
-	require[]: s_mirror
-	require[]: f_fender_cab
-	require[]: f_fender_chs
-	require[]: f_intake_chs
-	require[]: f_inlay_chs
-	require[]: f_bumper
-	require[]: f_wnd_frame
-	require[]: s_strip
-	require[]: sideskirt
-	require[]: r_fender
-	require[]: filter
+	# pin override
 
-	#interior
-	require[]: steering_w
+	pin_group[]: f_light_top
+	pin_look[]: custom_acc
+	pin_offset[]: (-1.1, 0, 0)
+	pin_dir[]: (-1, 0, 0)
+	pin_dir_uk[]: (-1, 0, 0)
+	double_sided[]: true
 }
 }

@@ -1,0 +1,54 @@
+traffic_vehicle : traffic.captur.pol_pt_psp
+{
+	base: traffic.superb.pol_pt_gnr
+
+	accessories[]: .captur.pol_pt_psp.chassis
+	accessories[]: .captur.pol_pt_psp.fwheel
+	accessories[]: .captur.pol_pt_psp.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1200
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	lod_dist[]: 60
+	lod_dist[]: 110
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+    spawn_condition[]: .traffic.captur.pol_pt_psp.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .captur.pol_pt_psp.chassis
+{
+	data_path: "/def/vehicle/ai/captur/pol_pt_psp.sii"
+}
+
+vehicle_wheel_accessory: .captur.pol_pt_psp.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_4.sii"
+}
+
+vehicle_wheel_accessory: .captur.pol_pt_psp.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_4.sii"
+}
+
+traffic_spawn_condition: .traffic.captur.pol_pt_psp.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "lisboa"
+	str_param[]: "coimbra"
+	str_param[]: "porto"
+	str_param[]: "faro"
+}
