@@ -1,0 +1,36 @@
+traffic_trailer : traffic.trailer.car_trans_o
+{
+	accessories[]: .traffic.car_trans_o.tchassis
+	accessories[]: .traffic.car_trans_o.trwheel0
+	accessories[]: .traffic.car_trans_o.trwheel1
+	accessories[]: .traffic.car_trans_o.cargo
+	cargo_mass: 9900
+
+	tags[]: low
+	tags[]: carrier
+	tags[]: carr_car
+	tags[]: cargo
+	tags[]: medium
+
+}
+
+vehicle_accessory: .traffic.car_trans_o.tchassis
+{
+	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
+}
+
+vehicle_wheel_accessory: .traffic.car_trans_o.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+}
+
+vehicle_wheel_accessory: .traffic.car_trans_o.trwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+}
+vehicle_accessory: .traffic.car_trans_o.cargo
+{
+	data_path: "/def/vehicle/trailer/car_transporter/cargo_cars_ortiz_combi.sii"
+}
