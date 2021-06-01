@@ -1,0 +1,40 @@
+accessory_hookup_int_data :  penn_tria_gy.addon_hookup
+{
+	name: "@@goodyear_pennant@@"
+	price: 75
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toyglass/pennant_goodyear/pennant_goodyear"
+
+	model: "/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toyglass/sucker_01.pmc"
+
+	data[]: .pennant_gy.phys_data
+
+	suitable_for[]: "set_glass"
+}
+
+physics_toy_data : .pennant_gy.phys_data
+{
+	phys_model:		"/vehicle/truck/upgrade/interior_decors/toyglass/pennant_goodyear/pennant_goodyear.pmd"   
+	phys_model_coll:	"/vehicle/truck/upgrade/interior_decors/toyglass/pennant_goodyear/pennant_goodyear.pmc"
+	phys_model_look: default
+
+	rope_material: 		"/material/ropes/rope_black.mat"
+
+	toy_type:		"TT_double_rope"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:		0.1				# toy mass
+	linear_damping:		0.99
+
+	linear_stiffness: 	1.0				# rope - influences rope springing
+	locator_hook_offset:	(0.0f, 0.0015f, -0.0035f)	# offset of connection point on hook against toy locator
+
+	# definitions valid only for toys with rope
+	rope_width:		0.002				# width of rope
+	rope_length:		0.05				# length of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset:	0.005				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset:	0.045				# double_rope - distance between rope tingles at toy
+	rope_resolution:	3				# number of inner nodes of rope, except end nodes with anchors
+	rope_linear_density:	1.0				# density, i.e. weight of rope per 1 m of length
+	position_iterations:	4				# number of iterations in position solver
+	node_damping:		0.99				# rope node velocity damping
+}
