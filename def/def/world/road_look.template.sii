@@ -1498,6 +1498,10 @@ road_look : road.balt10
 	name: "balt road 1 tmpl"
 	template_right: "/road_template/balt/balt_road_1.pmd"
 
+	add_parts_right[]: decal_01
+	add_parts_right[]: decal_02
+	add_parts_right[]: decal_03
+
 	lanes_left[]: traffic_lane.road.local.no_overtake
 	lanes_right[]: traffic_lane.road.local.no_overtake
 
@@ -1553,6 +1557,10 @@ road_look : road.balt11
 
 	lanes_left[]: traffic_lane.no_vehicles
 	lanes_right[]: traffic_lane.no_vehicles
+
+	add_parts_right[]: decal_01
+	add_parts_right[]: decal_02
+	add_parts_right[]: decal_03
 
 	lane_offsets_left[]: (-1, 0.0)
 	lane_offsets_right[]: (-1, 0.0)
@@ -1992,8 +2000,6 @@ road_look : road.ger8
 	compatible_edges_left[]: ger_sh_15
 	compatible_edges_left[]: ger_curb_15
 	compatible_edges_left[]: ger_sh_as_15
-
-
 }
 
 road_look : road.ger9
@@ -2424,6 +2430,40 @@ road_look : road.ger23
 	shoulder_space_right: 0.25
 }
 
+road_look : road.ger23b
+{
+	name: "ger road 3 tmpl one lane tram"
+	template_right: "/road_template/ger/ger_road_3_tram.pmd"
+
+	add_parts_right[]: parking_at
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+
+
+	compatible_edges_right[]: ger_sw_3m_a
+	compatible_edges_right[]: ger_sw_3m_b
+	compatible_edges_right[]: ger_sw_3m_c
+	compatible_edges_right[]: ger_sw_3m_c1
+	compatible_edges_right[]: ger_sw_3m_d
+	compatible_edges_right[]: ger_sh_15
+	compatible_edges_right[]: ger_curb_15
+	compatible_edges_right[]: ger_sh_as_15
+
+	compatible_edges_left[]: ger_sw_3m_a
+	compatible_edges_left[]: ger_sw_3m_b
+	compatible_edges_left[]: ger_sw_3m_c
+	compatible_edges_left[]: ger_sw_3m_c1
+	compatible_edges_left[]: ger_sw_3m_d
+	compatible_edges_left[]: ger_sh_15
+	compatible_edges_left[]: ger_curb_15
+	compatible_edges_left[]: ger_sh_as_15
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.25
+}
+
 road_look : road.ger24
 {
 	name: "ger road 2 plus 1 tmpl"
@@ -2502,6 +2542,8 @@ road_look : road.ger26
 	template_right: "/road_template/ger/ger_road_1_plus_1.pmd"
 
 	add_parts_right[]: parking_at
+	add_parts_right[]: hatch_at
+	add_parts_right[]: single_at
 
 	lanes_left[]: traffic_lane.road.local.no_overtake
 	lanes_right[]: traffic_lane.road.local.no_overtake
@@ -2600,6 +2642,184 @@ road_look : road.ger28
 	shoulder_space_left: 0.0
 	shoulder_space_right: 3.5
 
+}
+
+road_look : road.ger29
+{
+	name: "ger road 2 no offset tmpl"
+	template_right: "/road_template/ger/ger_road_2.pmd"
+	template_left: "/road_template/ger/ger_road_2.pmd"
+
+	road_offset: 0.0
+
+	add_parts_right[]: parking_at
+	add_parts_right[]: prk_at_nooff
+
+	add_parts_left[]: parking_at
+	add_parts_left[]: prk_at_nooff
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+
+	compatible_edges_right[]: ger_sw_3m_a
+	compatible_edges_right[]: ger_sw_3m_b
+	compatible_edges_right[]: ger_sw_3m_c
+	compatible_edges_right[]: ger_sw_3m_c1
+	compatible_edges_right[]: ger_sw_3m_d
+	compatible_edges_right[]: ger_sh_15
+	compatible_edges_right[]: ger_curb_15
+	compatible_edges_right[]: ger_sh_as_15
+
+	compatible_edges_left[]: ger_sw_3m_a
+	compatible_edges_left[]: ger_sw_3m_b
+	compatible_edges_left[]: ger_sw_3m_c
+	compatible_edges_left[]: ger_sw_3m_c1
+	compatible_edges_left[]: ger_sw_3m_d
+	compatible_edges_left[]: ger_sh_15
+	compatible_edges_left[]: ger_curb_15
+	compatible_edges_left[]: ger_sh_as_15
+}
+
+road_look : road.ger30
+{
+	name: "ger road 2 no offset tram tmpl"
+	template_right: "/road_template/ger/ger_road_2_tram.pmd"
+	add_parts_right[]: parking
+	add_parts_right[]: prk_nooff
+
+
+	template_left: "/road_template/ger/ger_road_2_tram.pmd"
+	add_parts_left[]: parking
+	add_parts_left[]: prk_nooff
+
+	road_offset: 4.75
+
+	lanes_right[]: traffic_lane.road.local.no_overtake.tram
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.local.no_overtake.tram
+	lanes_left[]: traffic_lane.road.expressway
+
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+
+	compatible_edges_right[]: ger_sw_3m_a
+	compatible_edges_right[]: ger_sw_3m_b
+	compatible_edges_right[]: ger_sw_3m_c
+	compatible_edges_right[]: ger_sw_3m_c1
+	compatible_edges_right[]: ger_sw_3m_d
+	compatible_edges_right[]: ger_sh_15
+	compatible_edges_right[]: ger_curb_15
+	compatible_edges_right[]: ger_sh_as_15
+
+	compatible_edges_left[]: ger_sw_3m_a
+	compatible_edges_left[]: ger_sw_3m_b
+	compatible_edges_left[]: ger_sw_3m_c
+	compatible_edges_left[]: ger_sw_3m_c1
+	compatible_edges_left[]: ger_sw_3m_d
+	compatible_edges_left[]: ger_sh_15
+	compatible_edges_left[]: ger_curb_15
+	compatible_edges_left[]: ger_sh_as_15
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+}
+
+road_look : road.ger31
+{
+	name: "at road 2 city narrow tmpl"
+	template_right: "/road_template/ger/ger_road_2_1.pmd"
+	template_left: "/road_template/ger/ger_road_2_1.pmd"
+
+	road_offset: 5.75
+
+	add_parts_right[]: parking_at
+	add_parts_left[]: parking_at
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+
+
+
+	compatible_edges_right[]: ger_sw_3m_a
+	compatible_edges_right[]: ger_sw_3m_b
+	compatible_edges_right[]: ger_sw_3m_c
+	compatible_edges_right[]: ger_sw_3m_c1
+	compatible_edges_right[]: ger_sw_3m_d
+	compatible_edges_right[]: ger_sh_15
+	compatible_edges_right[]: ger_curb_15
+	compatible_edges_right[]: ger_sh_as_15
+
+	compatible_edges_left[]: ger_sw_3m_a
+	compatible_edges_left[]: ger_sw_3m_b
+	compatible_edges_left[]: ger_sw_3m_c
+	compatible_edges_left[]: ger_sw_3m_c1
+	compatible_edges_left[]: ger_sw_3m_d
+	compatible_edges_left[]: ger_sh_15
+	compatible_edges_left[]: ger_curb_15
+	compatible_edges_left[]: ger_sh_as_15
+}
+
+road_look : road.ger32
+{
+	name: "at road 2 no offset tmpl"
+	template_right: "/road_template/ger/ger_road_2_1.pmd"
+	template_left: "/road_template/ger/ger_road_2_1.pmd"
+
+	road_offset: 4.75
+
+	add_parts_right[]: parking_at
+	add_parts_right[]: prk_at_nooff
+
+	add_parts_left[]: parking_at
+	add_parts_left[]: prk_at_nooff
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_left[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+	lane_offsets_right[]: (-4.75, 0.0)
+
+	compatible_edges_right[]: ger_sw_3m_a
+	compatible_edges_right[]: ger_sw_3m_b
+	compatible_edges_right[]: ger_sw_3m_c
+	compatible_edges_right[]: ger_sw_3m_c1
+	compatible_edges_right[]: ger_sw_3m_d
+	compatible_edges_right[]: ger_sh_15
+	compatible_edges_right[]: ger_curb_15
+	compatible_edges_right[]: ger_sh_as_15
+
+	compatible_edges_left[]: ger_sw_3m_a
+	compatible_edges_left[]: ger_sw_3m_b
+	compatible_edges_left[]: ger_sw_3m_c
+	compatible_edges_left[]: ger_sw_3m_c1
+	compatible_edges_left[]: ger_sw_3m_d
+	compatible_edges_left[]: ger_sh_15
+	compatible_edges_left[]: ger_curb_15
+	compatible_edges_left[]: ger_sh_as_15
 }
 
 road_look : road.balt12
@@ -4845,7 +5065,7 @@ road_look : road.template64
 
 	shoulder_space_left: 0.0
 	shoulder_space_right: 0.0
-	
+
 	invisible: true
 }
 

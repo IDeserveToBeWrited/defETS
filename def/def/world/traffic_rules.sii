@@ -686,6 +686,7 @@ traffic_rule_data : traffic_rule.rail_train
 	str_params[]: "rail_train"
 
 	additional_rules[]: traffic_rule.lights_on
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.train_cross
@@ -706,6 +707,7 @@ traffic_rule_data : traffic_rule.rail_tram
 	str_params[]: "rail_tram"
 
 	additional_rules[]: traffic_rule.lights_on
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.road_tram
@@ -723,6 +725,19 @@ traffic_rule_data : traffic_rule.physics
 	# name: "[prefab] Force physics"
 	rule: "property"
 	num_params[]: 25
+}
+
+traffic_rule_data : traffic_rule.private_area
+{
+	# name: "[various] Private area"
+	rule: "property"
+	num_params[]: 15
+}
+
+# Temporarily left for backward compatibility
+traffic_rule_data : traffic_rule.private_road
+{
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.speed_bump
@@ -763,6 +778,8 @@ traffic_rule_data : traffic_rule.es_fr_only
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "escort_front"
+
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.es_ba_only
@@ -772,6 +789,8 @@ traffic_rule_data : traffic_rule.es_ba_only
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "escort_back"
+
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.escort_only
@@ -781,6 +800,8 @@ traffic_rule_data : traffic_rule.escort_only
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "escort_all"
+
+	additional_rules[]: traffic_rule.private_area
 }
 
 traffic_rule_data : traffic_rule.no_escort

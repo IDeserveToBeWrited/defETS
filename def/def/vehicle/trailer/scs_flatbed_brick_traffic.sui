@@ -1,22 +1,27 @@
-traffic_trailer : traffic.trailer.scs_brick_r 
+traffic_trailer : traffic.trailer.scs_brick_r
 {
 	accessories[]: .scs_brick_r.chassis
 	accessories[]: .scs_brick_r.rwheel
 	accessories[]: .scs_brick_r.rwheel2
 	accessories[]: .scs_brick_r.rwheel3
 	accessories[]: .scs_brick_r.cargo
-	
+	accessories[]: .scs_brick_r.paint_job
+
 	tags[]: low
-	tags[]: flatbed 
+	tags[]: flatbed
 	tags[]: brick
 	tags[]: medium
 	tags[]: cargo
 	tags[]: construct
-	
+
 	variant[]: .traffic.trailer.scs_brick_b
 	variant[]: traffic.trailer.flat_bed.tubes
 	variant[]: traffic.trailer.flat_bed.hp_tank
 	variant[]: traffic.trailer.flat_bed.empty
+	variant[]: traffic.trailer.flat_bed.metal_pipes
+	variant[]: traffic.trailer.flat_bed.metal_coil
+    	variant[]: traffic.trailer.flat_bed.rebars
+    	variant[]: traffic.trailer.flat_bed.c_centering
 }
 
 vehicle_accessory: .scs_brick_r.chassis
@@ -45,29 +50,34 @@ vehicle_accessory: .scs_brick_r.cargo
 {
     	data_path: "/def/vehicle/trailer_cargo/scs_brick/plant_substrate_13.sii"
 }
+vehicle_paint_job_accessory: .scs_brick_r.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_brick/custom_paint_job/red.sii"
+}
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_trailer : .traffic.trailer.scs_brick_b 
+traffic_trailer : .traffic.trailer.scs_brick_b
 {
 	accessories[]: .scs_brick_b.chassis
 	accessories[]: .scs_brick_b.rwheel
 	accessories[]: .scs_brick_b.rwheel2
 	accessories[]: .scs_brick_b.rwheel3
 	accessories[]: .scs_brick_b.cargo
-	
+	accessories[]: .scs_brick_b.paint_job
+
 	tags[]: low
-	tags[]: flatbed 
+	tags[]: flatbed
 	tags[]: brick
 	tags[]: medium
 	tags[]: cargo
 	tags[]: construct
-	
+
 }
 
 vehicle_accessory: .scs_brick_b.chassis
 {
-    	data_path: "/def/vehicle/trailer/scs_brick/blue.sii"
+    	data_path: "/def/vehicle/trailer/scs_brick/red.sii"
 }
 
 vehicle_wheel_accessory: .scs_brick_b.rwheel
@@ -91,6 +101,10 @@ vehicle_accessory: .scs_brick_b.cargo
 {
     	data_path: "/def/vehicle/trailer_cargo/scs_brick/bricks_13.sii"
 }
+vehicle_paint_job_accessory: .scs_brick_b.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_brick/custom_paint_job/blue.sii"
+}
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -101,14 +115,15 @@ traffic_trailer : traffic.trailer.flat_bed.tubes
 	accessories[]: .flat_bed_t.tubes.trwheel1
 	accessories[]: .flat_bed_t.tubes.trwheel2
 	accessories[]: .flat_bed_t.tubes.cargo
-	
+	accessories[]: .flat_bed_t.tubes.paint_job
+
 	tags[]: low
-	tags[]: flatbed 
+	tags[]: flatbed
 	tags[]: tubes
 	tags[]: construct
 	tags[]: medium
 	tags[]: cargo
-	
+
 }
 
 
@@ -140,6 +155,10 @@ vehicle_accessory: .flat_bed_t.tubes.cargo
 {
     	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/tubes.sii"
 }
+vehicle_paint_job_accessory: .flat_bed_t.tubes.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/blue.sii"
+}
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -150,14 +169,15 @@ traffic_trailer : traffic.trailer.flat_bed.hp_tank
 	accessories[]: .flat_bed_t.hp_tank.trwheel1
 	accessories[]: .flat_bed_t.hp_tank.trwheel2
 	accessories[]: .flat_bed_t.hp_tank.cargo
-	
+	accessories[]: .flat_bed_t.hp_tank.paint_job
+
 	tags[]: low
-	tags[]: flatbed 
+	tags[]: flatbed
 	tags[]: hp_tank
 	tags[]: construct
 	tags[]: medium
 	tags[]: cargo
-	
+
 }
 
 
@@ -165,7 +185,7 @@ traffic_trailer : traffic.trailer.flat_bed.hp_tank
 
 vehicle_accessory: .flat_bed_t.hp_tank.tchassis
 {
-    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed_g.sii"
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
 }
 
 vehicle_wheel_accessory: .flat_bed_t.hp_tank.trwheel0
@@ -189,7 +209,10 @@ vehicle_accessory: .flat_bed_t.hp_tank.cargo
 {
     	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/hi_pressure_tank.sii"
 }
-
+vehicle_paint_job_accessory: .flat_bed_t.hp_tank.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/red.sii"
+}
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -199,9 +222,10 @@ traffic_trailer : traffic.trailer.flat_bed.empty
 	accessories[]: .flat_bed_t.empty.trwheel0
 	accessories[]: .flat_bed_t.empty.trwheel1
 	accessories[]: .flat_bed_t.empty.trwheel2
-	
+	accessories[]: .flat_bed_t.empty.paint_job
+
 	tags[]: low
-	tags[]: flatbed 
+	tags[]: flatbed
 	tags[]: brick
 	tags[]: medium
 	tags[]: empty
@@ -210,7 +234,7 @@ traffic_trailer : traffic.trailer.flat_bed.empty
 
 vehicle_accessory: .flat_bed_t.empty.tchassis
 {
-    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed_r.sii"
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
 }
 
 vehicle_wheel_accessory: .flat_bed_t.empty.trwheel0
@@ -229,4 +253,193 @@ vehicle_wheel_accessory: .flat_bed_t.empty.trwheel2
 {
 	offset: 4
     	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+vehicle_paint_job_accessory: .flat_bed_t.empty.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/green.sii"
+}
+
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+ traffic_trailer : traffic.trailer.flat_bed.metal_pipes
+{
+	accessories[]: .flat_bed.metal_pipes.tchassis
+	accessories[]: .flat_bed.metal_pipes.trwheel0
+	accessories[]: .flat_bed.metal_pipes.trwheel1
+	accessories[]: .flat_bed.metal_pipes.trwheel2
+	accessories[]: .flat_bed.metal_pipes.cargo
+	accessories[]: .flat_bed.metal_pipes.paint_job
+	
+	tags[]: low
+	tags[]: flatbed 
+	tags[]: pipes
+	tags[]: medium
+	tags[]: cargo
+}
+
+vehicle_accessory: .flat_bed.metal_pipes.tchassis
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_pipes.trwheel0
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_pipes.trwheel1
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_pipes.trwheel2
+{
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+vehicle_accessory: .flat_bed.metal_pipes.cargo
+{
+    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/metal_pipes.sii"
+}
+vehicle_paint_job_accessory: .flat_bed.metal_pipes.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/blue.sii"
+}
+
+ # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ traffic_trailer : traffic.trailer.flat_bed.metal_coil
+{
+	accessories[]: .flat_bed.metal_coil.tchassis
+	accessories[]: .flat_bed.metal_coil.trwheel0
+	accessories[]: .flat_bed.metal_coil.trwheel1
+	accessories[]: .flat_bed.metal_coil.trwheel2
+	accessories[]: .flat_bed.metal_coil.cargo
+	accessories[]: .flat_bed.metal_coil.paint_job
+	
+	tags[]: low
+	tags[]: flatbed 
+	tags[]: coil
+	tags[]: medium
+	tags[]: cargo
+}
+
+vehicle_accessory: .flat_bed.metal_coil.tchassis
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_coil.trwheel0
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_coil.trwheel1
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.metal_coil.trwheel2
+{
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+vehicle_accessory: .flat_bed.metal_coil.cargo
+{
+    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/metal_coil.sii"
+}
+vehicle_paint_job_accessory: .flat_bed.metal_coil.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/green.sii"
+}
+
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+traffic_trailer : traffic.trailer.flat_bed.c_centering
+{
+	accessories[]: .flat_bed.c_centering.tchassis
+	accessories[]: .flat_bed.c_centering.trwheel0
+	accessories[]: .flat_bed.c_centering.trwheel1
+	accessories[]: .flat_bed.c_centering.trwheel2
+	accessories[]: .flat_bed.c_centering.cargo
+	accessories[]: .flat_bed.c_centering.paint_job
+}
+
+
+vehicle_accessory: .flat_bed.c_centering.tchassis
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.c_centering.trwheel0
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.c_centering.trwheel1
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.c_centering.trwheel2
+{
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+vehicle_accessory: .flat_bed.c_centering.cargo
+{
+    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/concrete_centering.sii"
+}
+vehicle_paint_job_accessory: .flat_bed.c_centering.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/red.sii"
+} 
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+traffic_trailer : traffic.trailer.flat_bed.rebars
+{
+	accessories[]: .flat_bed.rebars.tchassis
+	accessories[]: .flat_bed.rebars.trwheel0
+	accessories[]: .flat_bed.rebars.trwheel1
+	accessories[]: .flat_bed.rebars.trwheel2
+	accessories[]: .flat_bed.rebars.cargo
+	accessories[]: .flat_bed.rebars.paint_job
+}
+
+
+vehicle_accessory: .flat_bed.rebars.tchassis
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.rebars.trwheel0
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.rebars.trwheel1
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .flat_bed.rebars.trwheel2
+{
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+vehicle_accessory: .flat_bed.rebars.cargo
+{
+    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/rebars.sii"
+}
+vehicle_paint_job_accessory: .flat_bed.rebars.paint_job
+{
+    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/blue.sii"
 }

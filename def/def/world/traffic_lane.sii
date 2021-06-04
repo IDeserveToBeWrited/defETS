@@ -112,18 +112,11 @@ traffic_lane_data : traffic_lane.road.motorway.low_density
 	traffic_rules[]: traffic_rule.s_car_l
 }
 
-traffic_lane_data : traffic_lane.road.unlimited
-{
-	# NOTE: This lane type exists only for backward compatibility.
-	# It is used as a fallback, when it is not possible to determine traffic lane type
-	# from obsolete road look attributes
-
-	speed_class: none
-}
-
 traffic_lane_data : traffic_lane.no_vehicles
 {
 	speed_class: local_road
+
+	traffic_rules[]: traffic_rule.private_area
 }
 
 traffic_lane_data : traffic_lane.slow_road
@@ -135,6 +128,7 @@ traffic_lane_data : traffic_lane.no_vehicles.dirt
 {
 	speed_class: local_road
 
+	traffic_rules[]: traffic_rule.private_area
 	traffic_rules[]: traffic_rule.physics
 }
 

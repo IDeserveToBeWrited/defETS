@@ -1,0 +1,67 @@
+SiiNunit
+{
+
+economy: .economy
+{
+    new_game: false
+    player: .player
+    bank: .bank
+    game_progress: .progress
+    event_queue: .events
+    police_ctrl: .police
+    mail_ctrl: .mailbox
+    delivery_log: .delivery_log
+    experience_points: 100000
+
+# Starting time in minutes.
+
+    game_time: 600
+
+
+}
+
+bank: .bank
+{
+    money_account: 500000
+    app_enabled: false
+}
+
+
+game_progress: .progress
+{
+}
+
+
+economy_event_queue: .events
+{
+}
+
+police_ctrl: .police
+{
+}
+
+
+mail_ctrl: .mailbox
+{
+}
+
+delivery_log: .delivery_log
+{
+}
+
+player: .player
+{
+    trucks[]: start.truck.mp_002e
+    assigned_truck: start.truck.mp_002e
+    my_truck: start.truck.mp_002e
+    truck_profit_logs[]: .log
+    assigned_trailer: trailer.overweight.digger
+    assigned_trailer_connected: true
+}
+
+profit_log: .log
+{
+}
+
+@include "02_scania_r_2016.sii"
+}
