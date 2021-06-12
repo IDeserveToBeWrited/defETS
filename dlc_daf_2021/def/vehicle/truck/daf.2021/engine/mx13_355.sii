@@ -1,0 +1,41 @@
+SiiNunit
+{
+accessory_engine_data : mx13_355.daf.2021.engine
+{
+	name: "MX-13 355"
+	price: 19800
+	unlock: 14
+	info[]: "483 @@hp@@ (355@@kw@@)"
+	info[]: "2@@dg@@350/2@@dg@@500 @@nm@@"
+	info[]: "900-1@@dg@@365 @@rpm@@"
+	icon: "engine/paccar_mx13"
+
+	torque: 2350
+	secondary_torque: 2500
+
+	torque_curve[]: (300, 0)
+	torque_curve[]: (500, 0.5)
+	torque_curve[]: (900, 1)
+	torque_curve[]: (1365, 1)
+	torque_curve[]: (1600, 0.89)
+	torque_curve[]: (1800, 0.72)
+	torque_curve[]: (2400, 0)
+
+	secondary_torque_curve[]: (300, 0)
+	secondary_torque_curve[]: (500, 0.5)
+	secondary_torque_curve[]: (900, 1)
+	secondary_torque_curve[]: (1125, 1)
+	secondary_torque_curve[]: (1400, 0.95)
+	secondary_torque_curve[]: (1600, 0.85)
+	secondary_torque_curve[]: (1800, 0.67)
+	secondary_torque_curve[]: (2400, 0)
+
+	rpm_limit: 2200
+	volume: 12.9
+	no_adblue_power_limit: 0.5
+
+@include "sound.sui"
+
+	overrides[]: "/def/vehicle/truck/daf.2021/accessory/badge/badge_480.sii"
+}
+}

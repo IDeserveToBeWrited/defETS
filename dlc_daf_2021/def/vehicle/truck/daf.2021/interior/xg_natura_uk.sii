@@ -1,0 +1,43 @@
+SiiNunit
+{
+accessory_interior_data: xg_nat_uk.daf.2021.interior
+{
+	name: "Natura UK"
+	price: 38160
+	unlock: 16
+	icon: "truck/daf_2021/accessory/interior_daf_2021_natura_uk"
+
+	model: "/vehicle/truck/daf_2021/interior/uk/xg.pmd"
+	collision: "/vehicle/truck/daf_2021/interior/uk/xg.pmc"
+
+	animated_model: "/vehicle/truck/daf_2021/interior/uk/anim.pmd"
+
+	look: Default
+	variant: natura
+
+@include "animations_uk.sui"
+@include "sound.sui"
+
+	dashboard_path: "/ui/dashboard/daf_2021_mph.sii"
+	gps_path: "/ui/gps.sii"
+	left_hand_traffic: true
+
+	glass_panes[]: .daf.2021.r.pane.front
+	glass_panes[]: .daf.2021.r.pane.left
+	glass_panes[]: .daf.2021.r.pane.right
+
+	ext_model: "/vehicle/truck/daf_2021/interior/external/xg.pmd"
+	ext_look: natura
+	ext_variant: cabin_uk
+
+
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/steering_w/oak.sii"
+
+	suitable_for[]: "xg.daf.2021.cabin"
+
+
+
+@include "dashboard_color.sui"
+}
+@include "glass.sui"
+}

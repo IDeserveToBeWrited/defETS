@@ -1,0 +1,45 @@
+SiiNunit
+{
+accessory_engine_data : mx11_300.daf.2021.engine
+{
+	name: "MX-11 300"
+	price: 12600
+	unlock: 2
+	info[]: "408 @@hp@@ (300@@kw@@)"
+	info[]: "2@@dg@@000/2@@dg@@100 @@nm@@"
+	info[]: "900-1@@dg@@400 @@rpm@@"
+	icon: "engine/paccar_mx11"
+
+	torque: 2000
+	secondary_torque: 2100
+
+	torque_curve[]: (300, 0)
+	torque_curve[]: (500, 0.5)
+	torque_curve[]: (900, 1)
+	torque_curve[]: (1400, 1)
+	torque_curve[]: (1600, 0.89)
+	torque_curve[]: (1800, 0.72)
+	torque_curve[]: (2400, 0)
+
+	secondary_torque_curve[]: (300, 0)
+	secondary_torque_curve[]: (500, 0.5)
+	secondary_torque_curve[]: (900, 1)
+	secondary_torque_curve[]: (1125, 1)
+	secondary_torque_curve[]: (1400, 0.95)
+	secondary_torque_curve[]: (1600, 0.85)
+	secondary_torque_curve[]: (1800, 0.67)
+	secondary_torque_curve[]: (2400, 0)
+
+	rpm_limit: 2200
+	rpm_range_low_gear: (800, 1500)
+	rpm_range_high_gear: (900, 1300)
+	rpm_range_power: (1300, 1800)
+
+	volume: 10.8
+	no_adblue_power_limit: 0.5
+
+@include "sound.sui"
+
+	overrides[]: "/def/vehicle/truck/daf.2021/accessory/badge/badge_410.sii"
+}
+}
