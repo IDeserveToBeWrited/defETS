@@ -8,8 +8,8 @@ road_look : road.balt2
 	name: "balt hw 2 lanes one way playeronly tmpl"
 	template_right: "/road_template/balt/balt_hw_2_lanes_one_way.pmd"
 
-
-
+	add_parts_right[]: parking_ru
+	
 	lanes_right[]: traffic_lane.no_vehicles
 	lanes_right[]: traffic_lane.road.motorway
 
@@ -29,7 +29,8 @@ road_look : road.balt3
 	template_right: "/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
 	template_left: "/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
 
-
+	add_parts_right[]: parking_ru
+	add_parts_left[]: parking_ru
 
 	road_offset: 2
 
@@ -222,6 +223,7 @@ road_look : road.balt41
 	compatible_edges_left[]: ba_sw_3m_c
 	compatible_edges_left[]: ba_sw_3m_c1
 	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_dec
 
 	compatible_edges_right[]: ba_na_sh_15
 	compatible_edges_right[]: ba_no_sh_15
@@ -233,6 +235,7 @@ road_look : road.balt41
 	compatible_edges_right[]: ba_sw_3m_c
 	compatible_edges_right[]: ba_sw_3m_c1
 	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_dec
 
 	shoulder_space_left: 0.0
 	shoulder_space_right: 0.0
@@ -244,7 +247,8 @@ road_look : road.balt15
 	template_right: "/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
 	template_left: "/road_template/balt/balt_hw_2_lanes_two_ways.pmd"
 
-
+	add_parts_right[]: parking_ru
+	add_parts_left[]: parking_ru
 
 	road_offset: 5
 
@@ -571,6 +575,8 @@ road_look : road.balt34
 	lanes_right[]: traffic_lane.road.expressway
 	lanes_right[]: traffic_lane.road.expressway
 	lanes_right[]: traffic_lane.road.expressway
+	
+	add_parts_right[]: parking_ru
 
 	compatible_edges_right[]: ba_sw_3m_a
 	compatible_edges_right[]: ba_sw_3m_b
@@ -594,6 +600,9 @@ road_look : road.balt42
 	template_left: "/road_template/balt/balt_road_3.pmd"
 
 	road_offset: 10.5
+	
+	add_parts_right[]: parking_ru
+	add_parts_left[]: parking_ru
 
 	lane_offsets_left[]: (-9.0, 0.0)
 	lane_offsets_left[]: (-9.0, 0.0)
@@ -637,12 +646,119 @@ road_look : road.balt42
 	shoulder_space_right: 0.5
 }
 
+road_look : road.balt45
+{
+	name: "balt road 3 no offset tmpl"
+	template_right: "/road_template/balt/balt_road_3.pmd"
+	template_left: "/road_template/balt/balt_road_3.pmd"
+
+	road_offset: 9.5
+	
+	add_parts_right[]: parking_ru
+	add_parts_right[]: prk_nooff_ru
+	add_parts_left[]: parking_ru
+	add_parts_left[]: prk_nooff_ru
+
+	lane_offsets_left[]: (-9.5, 0.0)
+	lane_offsets_left[]: (-9.5, 0.0)
+	lane_offsets_left[]: (-9.5, 0.0)
+
+	lane_offsets_right[]: (-9.5, 0.0)
+	lane_offsets_right[]: (-9.5, 0.0)
+	lane_offsets_right[]: (-9.5, 0.0)
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sh_asp_15
+
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_sh_asp_15
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+}
+
+road_look : road.balt46
+{
+	name: "balt road 3 5m offset tmpl"
+	template_right: "/road_template/balt/balt_road_3.pmd"
+	template_left: "/road_template/balt/balt_road_3.pmd"
+
+	road_offset: 14.5
+	
+	add_parts_right[]: parking_ru
+	add_parts_left[]: parking_ru
+
+	lane_offsets_left[]: (-9.5, 0.0)
+	lane_offsets_left[]: (-9.5, 0.0)
+	lane_offsets_left[]: (-9.5, 0.0)
+
+
+	lane_offsets_right[]: (-9.5, 0.0)
+	lane_offsets_right[]: (-9.5, 0.0)
+	lane_offsets_right[]: (-9.5, 0.0)
+
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_right[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+	lanes_left[]: traffic_lane.road.expressway
+
+	compatible_edges_right[]: ba_sw_3m_a
+	compatible_edges_right[]: ba_sw_3m_b
+	compatible_edges_right[]: ba_sw_3m_c
+	compatible_edges_right[]: ba_sw_3m_c1
+	compatible_edges_right[]: ba_sw_3m_d
+	compatible_edges_right[]: ba_na_sh_15
+	compatible_edges_right[]: ba_no_sh_15
+	compatible_edges_right[]: ba_wi_sh_15
+	compatible_edges_right[]: ba_curb_15
+	compatible_edges_right[]: ba_sh_asp_15
+
+	compatible_edges_left[]: ba_sw_3m_a
+	compatible_edges_left[]: ba_sw_3m_b
+	compatible_edges_left[]: ba_sw_3m_c
+	compatible_edges_left[]: ba_sw_3m_c1
+	compatible_edges_left[]: ba_sw_3m_d
+	compatible_edges_left[]: ba_na_sh_15
+	compatible_edges_left[]: ba_no_sh_15
+	compatible_edges_left[]: ba_wi_sh_15
+	compatible_edges_left[]: ba_curb_15
+	compatible_edges_left[]: ba_sh_asp_15
+
+	shoulder_space_left: 0.5
+	shoulder_space_right: 0.5
+}
+
 road_look : road.balt35
 {
 	name: "balt hw 2 lanes one way tmpl"
 	template_right: "/road_template/balt/balt_hw_2_lanes_one_way.pmd"
 
-
+	add_parts_right[]: parking_ru
 
 	lanes_right[]: traffic_lane.road.motorway
 	lanes_right[]: traffic_lane.road.motorway
