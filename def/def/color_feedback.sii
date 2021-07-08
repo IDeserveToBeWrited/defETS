@@ -31,10 +31,11 @@ base_color_effect : .ui.base {
 }
 
 color_layer : .layer.ui.bindings {
- effects[]: .ui.bindings
+ effects[]: .ui.bindings.base
+ effects[]: .ui.bindings.multiplayer
 }
 
-bindings_color_effect : .ui.bindings {
+bindings_color_effect : .ui.bindings.base {
  color: (1.0, 0.85, 0)
 
  #mixes[]: "prv_itm" # keyboard.uarrow
@@ -57,6 +58,14 @@ bindings_color_effect : .ui.bindings {
  mixes[]: "radiodown"
  mixes[]: "photosman" # keyboard.m
  mixes[]: "gar_man" # keyboard.g
+}
+
+bindings_color_effect : .ui.bindings.multiplayer {
+ color: (1.0, 0.85, 0)
+ active_scope: multiplayer
+
+ mixes[]: "sb_activate" # keyboard.tab
+ mixes[]: "sb_swap" # keyboard.caps
 }
 
 color_layer : .layer.ui.actions {
@@ -95,6 +104,7 @@ color_layer : .layer.game.bindings {
  effects[]: .game.bindings.interior
  effects[]: .game.bindings.manual_gear
  effects[]: .game.bindings.electrics
+ effects[]: .game.bindings.multiplayer
 }
 
 bindings_color_effect : .game.bindings.basic {
@@ -127,6 +137,7 @@ bindings_color_effect : .game.bindings.basic {
  mixes[]: "advpage1" # keyboard.f6
  mixes[]: "advpage2" # keyboard.f7
  mixes[]: "advpage3" # keyboard.f8
+ mixes[]: "advpage4" # keyboard.f9
  mixes[]: "advpagen" # keyboard.num0
  mixes[]: "advpagep"
  mixes[]: "advmouse" # keyboard.f1
@@ -160,6 +171,7 @@ bindings_color_effect : .game.bindings.adviser {
  mixes[]: "advpage1" # keyboard.f6
  mixes[]: "advpage2" # keyboard.f7
  mixes[]: "advpage3" # keyboard.f8
+ mixes[]: "advpage4" # keyboard.f9
 }
 
 bindings_color_effect : .game.bindings.movement {
@@ -219,6 +231,16 @@ bindings_color_effect : .game.bindings.electrics {
  mixes[]: "beacon" # keyboard.o
  mixes[]: "diflock" # keyboard.v
  mixes[]: "airhorn" # keyboard.n
+}
+
+bindings_color_effect : .game.bindings.multiplayer {
+ color: (1.0, 0.85, 0)
+ active_scope: multiplayer
+
+ mixes[]: "mpptt" # keyboard.x
+ mixes[]: "chat_act" # keyboard.y
+ mixes[]: "quick_chat" # keyboard.q
+ mixes[]: "name_tags" # keyboard.z
 }
 
 color_layer : .layer.game.toggles {
