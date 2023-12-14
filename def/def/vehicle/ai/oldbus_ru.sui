@@ -1,0 +1,618 @@
+################################ white green ###################################
+################################ empty ###################################
+
+traffic_vehicle : traffic.oldbus_wg_e
+{
+	accessories[]: .oldbus_wg_e.chassis
+	accessories[]: .oldbus_wg_e.fwheel
+	accessories[]: .oldbus_wg_e.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	
+	tags[]: city
+
+	spawn_ratio: 0
+	
+
+
+spawn_condition[]: .traffic.oldbus_wg_e.not.moscow
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wg_e.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wg_empty.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_e.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wg_e.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+
+################################ few people ###################################
+
+traffic_vehicle : traffic.oldbus_wg_f
+{
+	accessories[]: .oldbus_wg_f.chassis
+	accessories[]: .oldbus_wg_f.fwheel
+	accessories[]: .oldbus_wg_f.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	tags[]: city
+	tags[]: passenger
+
+	spawn_ratio: 0
+
+
+spawn_condition[]: .traffic.oldbus_wg_f.not.moscow
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wg_f.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wg_few.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_f.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_f.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wg_f.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+################################ more people ###################################
+
+traffic_vehicle : traffic.oldbus_wg_m
+{
+	accessories[]: .oldbus_wg_m.chassis
+	accessories[]: .oldbus_wg_m.fwheel
+	accessories[]: .oldbus_wg_m.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	tags[]: city
+	tags[]: passenger
+
+	spawn_ratio: 0
+
+
+	spawn_condition[]: .traffic.oldbus_wg_m.not.moscow
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wg_m.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wg_more.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_m.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wg_m.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wg_m.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+
+################################ moscow  ###################################
+################################# empty #################################
+
+traffic_vehicle : traffic.oldbus_mos_e
+{
+	accessories[]: .oldbus_mos_e.chassis
+	accessories[]: .oldbus_mos_e.fwheel
+	accessories[]: .oldbus_mos_e.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	tags[]: city
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+spawn_condition[]: .traffic.oldbus_mos_e.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_mos_e.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/moscow_empty.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_e.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+traffic_spawn_condition: .traffic.oldbus_mos_e.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "moscow"
+}
+################################ moscow  ###################################
+################################# few #################################
+
+traffic_vehicle : traffic.oldbus_mos_f
+{
+	accessories[]: .oldbus_mos_f.chassis
+	accessories[]: .oldbus_mos_f.fwheel
+	accessories[]: .oldbus_mos_f.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+	tags[]: passenger
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+
+spawn_condition[]: .traffic.oldbus_mos_f.condition.city
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_mos_f.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/moscow_few.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_f.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_f.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+traffic_spawn_condition: .traffic.oldbus_mos_f.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "moscow"
+}
+################################ moscow  ###################################
+################################# more #################################
+
+traffic_vehicle : traffic.oldbus_mos_m
+{
+	accessories[]: .oldbus_mos_m.chassis
+	accessories[]: .oldbus_mos_m.fwheel
+	accessories[]: .oldbus_mos_m.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+	tags[]: passenger
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+
+spawn_condition[]: .traffic.oldbus_mos_m.condition.city
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_mos_m.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/moscow_more.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_m.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_mos_m.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+traffic_spawn_condition: .traffic.oldbus_mos_m.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "moscow"
+}
+################################ white blue ###################################
+################################ empty ###################################
+
+traffic_vehicle : traffic.oldbus_wb_e
+{
+	accessories[]: .oldbus_wb_e.chassis
+	accessories[]: .oldbus_wb_e.fwheel
+	accessories[]: .oldbus_wb_e.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	tags[]: city
+
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+
+	spawn_condition[]: .traffic.oldbus_wb_e.not.moscow
+
+@include "drivers_generic.sui"
+
+}
+
+vehicle_accessory: .oldbus_wb_e.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wb_empty.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_e.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wb_e.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+
+
+################################ white blue ###################################
+################################ few ###################################
+
+traffic_vehicle : traffic.oldbus_wb_f
+{
+	accessories[]: .oldbus_wb_f.chassis
+	accessories[]: .oldbus_wb_f.fwheel
+	accessories[]: .oldbus_wb_f.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+	tags[]: passenger
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+
+	spawn_condition[]: .traffic.oldbus_wb_f.not.moscow
+
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wb_f.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wb_few.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_f.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_f.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+traffic_spawn_condition: .traffic.oldbus_wb_f.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+
+################################ white blue ###################################
+################################ more ###################################
+
+traffic_vehicle : traffic.oldbus_wb_m
+{
+	accessories[]: .oldbus_wb_m.chassis
+	accessories[]: .oldbus_wb_m.fwheel
+	accessories[]: .oldbus_wb_m.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+	tags[]: passenger
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.oldbus_wb_m.not.moscow
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wb_m.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wb_more.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_m.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wb_m.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wb_m.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+
+################################ white red ###################################
+################################ empty ###################################
+
+traffic_vehicle : traffic.oldbus_wr_e
+{
+	accessories[]: .oldbus_wr_e.chassis
+	accessories[]: .oldbus_wr_e.fwheel
+	accessories[]: .oldbus_wr_e.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	tags[]: city
+
+	spawn_ratio: 0
+
+
+	spawn_condition[]: .traffic.oldbus_wr_e.not.moscow
+
+#@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wr_e.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wr_empty.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_e.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wr_e.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+################################ white red ###################################
+################################ few ###################################
+
+traffic_vehicle : traffic.oldbus_wr_f
+{
+	accessories[]: .oldbus_wr_f.chassis
+	accessories[]: .oldbus_wr_f.fwheel
+	accessories[]: .oldbus_wr_f.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 18000
+
+	tags[]: city
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+
+	spawn_condition[]: .traffic.oldbus_wr_f.not.moscow
+
+@include "drivers_generic.sui"
+
+}
+
+vehicle_accessory: .oldbus_wr_f.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wr_few.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_f.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_f.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wr_f.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}
+################################ white red ###################################
+################################ more ###################################
+
+traffic_vehicle : traffic.oldbus_wr_m
+{
+	accessories[]: .oldbus_wr_m.chassis
+	accessories[]: .oldbus_wr_m.fwheel
+	accessories[]: .oldbus_wr_m.rwheel
+
+	max_speed: 100
+
+	tags[]: city
+	tags[]: passenger
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.oldbus_wr_m.not.moscow
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .oldbus_wr_m.chassis
+{
+	data_path: "/def/vehicle/ai/oldbus/wr_more.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_m.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .oldbus_wr_m.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.oldbus_wr_m.not.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!"
+	str_param[]: "moscow"
+}

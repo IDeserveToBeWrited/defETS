@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.p_3204_1
+traffic_vehicle : traffic.p_3204
 {
-	accessories[]: .p_3204_1.chassis
-	accessories[]: .p_3204_1.fwheel
-	accessories[]: .p_3204_1.rwheel
+	accessories[]: .p_3204.chassis
+	accessories[]: .p_3204.fwheel
+	accessories[]: .p_3204.rwheel
 
 	max_speed: 130
 
@@ -11,8 +11,8 @@ traffic_vehicle : traffic.p_3204_1
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
+
+	tags[]: mini
 
 	color[]: (0.0595, 0.3005, 0.7912) #blue
 	color[]: (0.3662, 0.0251, 0.0144) #red
@@ -21,44 +21,89 @@ traffic_vehicle : traffic.p_3204_1
 
 	spawn_ratio: 0.0
 
-	variant[]: traffic.p_3204_2
-
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_1.chassis
+vehicle_accessory: .p_3204.chassis
 {
-	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
+	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_1.fwheel
+vehicle_wheel_accessory: .p_3204.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_1.rwheel
+vehicle_wheel_accessory: .p_3204.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+
+traffic_vehicle : traffic.p_3204.pass
+{
+	accessories[]: .p_3204.pass.chassis
+	accessories[]: .p_3204.pass.fwheel
+	accessories[]: .p_3204.pass.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	tags[]: mini
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	color[]: (0.0595, 0.3005, 0.7912) #blue
+	color[]: (0.3662, 0.0251, 0.0144) #red
+	color[]: (0.0212, 0.2195, 0.2232) #green
+	color[]: (1, 1, 1) 				#white
+
+	spawn_ratio: 0.0
+
+	variant[]: traffic.p_3204.pass2
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204.pass.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
+}
+
+vehicle_wheel_accessory: .p_3204.pass.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204.pass.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
 
 
-traffic_vehicle : traffic.p_3204_2
+traffic_vehicle : traffic.p_3204.pass2
 {
-	accessories[]: .p_3204_2.chassis
-	accessories[]: .p_3204_2.fwheel
-	accessories[]: .p_3204_2.rwheel
+	accessories[]: .p_3204.pass2.chassis
+	accessories[]: .p_3204.pass2.fwheel
+	accessories[]: .p_3204.pass2.rwheel
 
 	max_speed: 130
+
+	tags[]: mini
+	tags[]: passenger
 
 	vehicle_mass: 1700
 
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
 
 	color[]: (0.0595, 0.3005, 0.7912) #blue
 	color[]: (0.3662, 0.0251, 0.0144) #red
@@ -68,18 +113,18 @@ traffic_vehicle : traffic.p_3204_2
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_2.chassis
+vehicle_accessory: .p_3204.pass2.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers2.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_2.fwheel
+vehicle_wheel_accessory: .p_3204.pass2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_2.rwheel
+vehicle_wheel_accessory: .p_3204.pass2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
@@ -99,8 +144,8 @@ traffic_vehicle : traffic.p_3204_tr
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
+
+	tags[]: mini
 
 	color[]: (0.9, 0.9, 0.9) 				#white
 
@@ -108,19 +153,23 @@ traffic_vehicle : traffic.p_3204_tr
 
 	prefer_variant: true
 
+	variant[]: .traffic.p_3204_t_e0
 	variant[]: .traffic.p_3204_t_e1
 	variant[]: .traffic.p_3204_t_e2
+	variant[]: .traffic.p_3204_t_i0
 	variant[]: .traffic.p_3204_t_i1
 	variant[]: .traffic.p_3204_t_i2
+	variant[]: .traffic.p_3204_t_t0
 	variant[]: .traffic.p_3204_t_t1
 	variant[]: .traffic.p_3204_t_t2
+
 
 @include "drivers_generic.sui"
 }
 
 vehicle_accessory: .p_3204_tr.chassis
 {
-	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
+	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
 vehicle_wheel_accessory: .p_3204_tr.fwheel
@@ -135,6 +184,54 @@ vehicle_wheel_accessory: .p_3204_tr.rwheel
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
 
+traffic_vehicle : .traffic.p_3204_t_e0
+{
+	accessories[]: .p_3204_t_e0.chassis
+	accessories[]: .p_3204_t_e0.fwheel
+	accessories[]: .p_3204_t_e0.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	tags[]: mini
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	color[]: (0.9, 0.9, 0.9) 				#white
+
+	spawn_ratio: 0.01
+
+	spawn_condition[]: .traffic.p_3204_t_e0.edirne.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_t_e0.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_e0.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_e0.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+traffic_spawn_condition: .traffic.p_3204_t_e0.edirne.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "edirne"
+}
 
 traffic_vehicle : .traffic.p_3204_t_e1
 {
@@ -146,15 +243,14 @@ traffic_vehicle : .traffic.p_3204_t_e1
 
 	vehicle_mass: 1700
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
 
 	color[]: (0.9, 0.9, 0.9) 				#white
-
-	spawn_ratio: 0.0
 
 	spawn_condition[]: .traffic.p_3204_t_e1.edirne.condition.city
 
@@ -195,11 +291,12 @@ traffic_vehicle : .traffic.p_3204_t_e2
 
 	vehicle_mass: 1700
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
 	
 	color[]: (0.9, 0.9, 0.9) 				#white
 
@@ -231,6 +328,57 @@ traffic_spawn_condition: .traffic.p_3204_t_e2.edirne.condition.city
 	str_param[]: "edirne"
 }
 
+traffic_vehicle : .traffic.p_3204_t_i0
+{
+	accessories[]: .p_3204_t_i0.chassis
+	accessories[]: .p_3204_t_i0.fwheel
+	accessories[]: .p_3204_t_i0.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	tags[]: mini
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	spawn_ratio: 0.01
+
+	color[]: (0.8711, 0.8421, 0.5493) #yellow
+	color[]: (0.3743, 0.6977, 0.8349) #sky
+
+	spawn_condition[]: .traffic.p_3204_t_i0.istanbul.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_t_i0.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_i0.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_i0.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+traffic_spawn_condition: .traffic.p_3204_t_i0.istanbul.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "istanbul"
+}
+
+
+
 
 traffic_vehicle : .traffic.p_3204_t_i1
 {
@@ -242,16 +390,15 @@ traffic_vehicle : .traffic.p_3204_t_i1
 
 	vehicle_mass: 1700
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
 
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
-
-	spawn_ratio: 0.0
 
 	spawn_condition[]: .traffic.p_3204_t_i1.istanbul.condition.city
 
@@ -295,8 +442,9 @@ traffic_vehicle : .traffic.p_3204_t_i2
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
+
+	tags[]: mini
+	tags[]: passenger
 
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
@@ -330,6 +478,58 @@ traffic_spawn_condition: .traffic.p_3204_t_i2.istanbul.condition.city
 }
 
 
+traffic_vehicle : .traffic.p_3204_t_t0
+{
+	accessories[]: .p_3204_t_t0.chassis
+	accessories[]: .p_3204_t_t0.fwheel
+	accessories[]: .p_3204_t_t0.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: mini
+
+	spawn_ratio: 0.01
+
+	color[]: (0.8711, 0.8421, 0.5493) #yellow
+	color[]: (0.3743, 0.6977, 0.8349) #sky
+	color[]: (0.2761, 0.9156, 0.3323) #green
+	color[]: (1.0000, 0.3414, 0.0775) #orange
+
+	spawn_condition[]: .traffic.p_3204_t_t0.tekirdag.condition.city
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_t_t0.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_t0.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_t_t0.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+traffic_spawn_condition: .traffic.p_3204_t_t0.tekirdag.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "tekirdag"
+}
+
+
 traffic_vehicle : .traffic.p_3204_t_t1
 {
 	accessories[]: .p_3204_t_t1.chassis
@@ -343,15 +543,14 @@ traffic_vehicle : .traffic.p_3204_t_t1
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
+
+	tags[]: mini
+	tags[]: passenger
 
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
 	color[]: (0.2761, 0.9156, 0.3323) #green
 	color[]: (1.0000, 0.3414, 0.0775) #orange
-
-	spawn_ratio: 0.0
 
 	spawn_condition[]: .traffic.p_3204_t_t1.tekirdag.condition.city
 
@@ -395,8 +594,9 @@ traffic_vehicle : .traffic.p_3204_t_t2
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 40
-	lod_dist[]: 70
+
+	tags[]: mini
+	tags[]: passenger
 
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
@@ -429,4 +629,186 @@ traffic_spawn_condition: .traffic.p_3204_t_t2.tekirdag.condition.city
 	# spawn only near city with specified name
 	type: city
 	str_param[]: "tekirdag"
+}
+
+
+traffic_vehicle : traffic.p_3204_ru
+{
+	accessories[]: .p_3204_ru.chassis
+	accessories[]: .p_3204_ru.fwheel
+	accessories[]: .p_3204_ru.rwheel
+
+	max_speed: 130
+
+	tags[]: mini
+	tags[]: passenger
+
+	vehicle_mass: 1700
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	color[]: (0.9, 0.9, 0.9) 				#white
+
+	spawn_ratio: 0.0
+	
+	variant[]: .traffic.p_3204_ru2
+	variant[]: .traffic.p_3204_ru3
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_ru.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/ru1.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+
+
+
+
+traffic_vehicle : .traffic.p_3204_ru2
+{
+	accessories[]: .p_3204_ru2.chassis
+	accessories[]: .p_3204_ru2.fwheel
+	accessories[]: .p_3204_ru2.rwheel
+
+	max_speed: 130
+
+	tags[]: mini
+	tags[]: passenger
+
+	vehicle_mass: 1700
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	color[]: (0.9, 0.9, 0.9) 				#white
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_ru2.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/ru2.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+
+
+
+traffic_vehicle : .traffic.p_3204_ru3
+{
+	accessories[]: .p_3204_ru3.chassis
+	accessories[]: .p_3204_ru3.fwheel
+	accessories[]: .p_3204_ru3.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: mini
+	tags[]: passenger
+
+	color[]: (0.9, 0.9, 0.9) 				#white
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_ru3.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/ru3.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru3.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ru3.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
+}
+
+
+
+
+traffic_vehicle : traffic.p_3204_ba
+{
+	accessories[]: .p_3204_ba.chassis
+	accessories[]: .p_3204_ba.fwheel
+	accessories[]: .p_3204_ba.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 1700
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: mini
+	tags[]: city
+	tags[]: passenger
+
+	color[]: (0.9, 0.9, 0.9) 				#white
+
+	spawn_ratio: 0.0
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .p_3204_ba.chassis
+{
+	data_path: "/def/vehicle/ai/p_3204/ba.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ba.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .p_3204_ba.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }

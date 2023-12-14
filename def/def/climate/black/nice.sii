@@ -8,13 +8,15 @@ sun_profile : black.nice.01 {
  temperature: 1
  temperature[0]: 25
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/black/black0_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/black/black0_c.tobj"
+ skybox_texture[0]: "/asset/skybox/black/black0_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/black/black0_c.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
  ambient[0]: (&38d1b717, &38d1b717, &38d1b717)
  diffuse: 1
@@ -27,8 +29,12 @@ sun_profile : black.nice.01 {
  env_static_mod[0]: &3f000000
  sky_color: 1
  sky_color[0]: (1, 1, 1)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (0, 0, 0)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
  sun_color[0]: (1, 1, 1)
  sun_opacity: 1
@@ -37,6 +43,12 @@ sun_profile : black.nice.01 {
  sun_halo_color[0]: (0, 0, 0)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (0, 0, 0)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: 1
  fog_color: 1
  fog_color[0]: (1, 1, 1)
  fog_color2: 1
@@ -59,6 +71,8 @@ sun_profile : black.nice.01 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -88,7 +102,7 @@ sun_profile : black.nice.01 {
  min_scale: 1
  min_scale[0]: &40b1c621
  max_scale: 1
- max_scale[0]: &40b1c27c
+ max_scale[0]: &40b1c621
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -113,23 +127,6 @@ sun_profile : black.nice.01 {
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 1
- target_white[0]: 1
- sunshaft_strength: 0
 }
 
 }

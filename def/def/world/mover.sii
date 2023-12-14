@@ -170,6 +170,12 @@ mover_model : mover.boeing747
 	model_desc: "/model/aircraft/b747/b747_anim.pmd"
 	sound_path[]: "/sound/world/mover.bank#mover/boeing_rolling_loop"
 }
+# mover_model : mover.boe747c
+# {
+# 	mover_name: "Boeing 747 rolling close"
+# 	model_desc: "/model/aircraft/747/747.pmd"
+# 	sound_path[]: "/sound/world/mover.bank#mover/boeing_rolling_loop"
+# }
 mover_model : mover.b747_l_take
 {
 	mover_name: "Boeing 747 takeoff"
@@ -182,11 +188,18 @@ mover_model : mover.b747_l_land
 	mover_name: "Boeing 747 landing"
 	model_desc: "/model/aircraft/b747/b747_anim.pmd"
 	model_anim: "/model/aircraft/b747/b747_landing.pma"
+	sound_path[]: "/sound/world/mover.bank#mover/boeing_loop_1"
 }
 mover_model : mover.boeing737
 {
 	mover_name: "Boeing 737 rolling"
 	model_desc: "/model/aircraft/b737/b737_anim.pmd"
+	sound_path[]: "/sound/world/mover.bank#mover/boeing_rolling_loop"
+}
+mover_model : mover.boe737c
+{
+	mover_name: "Boeing 737 rolling close"
+	model_desc: "/model/aircraft/737/737.pmd"
 	sound_path[]: "/sound/world/mover.bank#mover/boeing_rolling_loop"
 }
 mover_model : mover.b737_l_take
@@ -201,6 +214,7 @@ mover_model : mover.b737_l_land
 	mover_name: "Boeing 737 landing"
 	model_desc: "/model/aircraft/b737/b737_anim.pmd"
 	model_anim: "/model/aircraft/b737/b737_landing.pma"
+	sound_path[]: "/sound/world/mover.bank#mover/boeing_loop_1"
 }
 mover_model : mover.b737_lod
 {
@@ -260,12 +274,7 @@ mover_model : mover.wavesgroup2
 	model_desc: "/model/water/waves2.pmd"
 	model_anim: "/model/water/wave_group2.pma"
 }
-mover_model : mover.windsock
-{
-	mover_name: "wind sock"
-	model_desc: "/model/mover/wind_sock.pmd"
-	model_anim: "/model/mover/wind_sock.pma"
-}
+
 mover_model : mover.plane_flat
 {
 	mover_name: "plane_flat"
@@ -294,24 +303,24 @@ mover_model : mover.vent2_uk
 	model_desc: "/model/railing/tunnel/hw2_tunnel_rounded_vents_uk.pmd"
 	model_anim: "/model/railing/tunnel/rotors_uk.pma"
 }
-mover_model : mover.cow_e
-{
-	mover_name: "cow_eating"
-	model_desc: "/model/mover/animal/cow_eating.pmd"
-	model_anim: "/model/mover/animal/cow_eating.pma"
-}
-mover_model : mover.cow_we
-{
-	mover_name: "cow_walk_eating"
-	model_desc: "/model/mover/animal/cow_walk_eating.pmd"
-	model_anim: "/model/mover/animal/cow_walk_eating.pma"
-}
-mover_model : mover.cow_l
-{
-	mover_name: "cow_lean"
-	model_desc: "/model/mover/animal/cow_lean.pmd"
-	model_anim: "/model/mover/animal/cow_lean.pma"
-}
+# mover_model : mover.cow_e
+# {
+# 	mover_name: "cow_eating"
+# 	model_desc: "/model/mover/animal/cow_eating.pmd"
+# 	model_anim: "/model/mover/animal/cow_eating.pma"
+# }
+# mover_model : mover.cow_we
+# {
+# 	mover_name: "cow_walk_eating"
+# 	model_desc: "/model/mover/animal/cow_walk_eating.pmd"
+# 	model_anim: "/model/mover/animal/cow_walk_eating.pma"
+# }
+# mover_model : mover.cow_l
+# {
+# 	mover_name: "cow_lean"
+# 	model_desc: "/model/mover/animal/cow_lean.pmd"
+# 	model_anim: "/model/mover/animal/cow_lean.pma"
+# }
 mover_model : mover.horses
 {
 	mover_name: "horses"
@@ -1136,22 +1145,6 @@ mover_model : mover.pckshv
 	model_anim: "/model2/mover/machine/pickaxe_shovel.pma"
 }
 
-
-mover_model : mover.event1
-{
-	mover_name: "air_ambulance"
-	model_desc: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim.pmd"
-	model_anim: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim.pma"
-	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
-	sound_max_dist: 100
-
-	lods[0]: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim_lod1.pmd"
-	lods[1]: "/model2/vehicle/aircraft/helicopter/animated/air_ambulance_anim_lod2.pmd"
-
-	lod_dist[0]: 50
-	lod_dist[1]: 100
-}
-
 mover_model : mover.event2
 {
 	mover_name: "jet_flyover"
@@ -1343,13 +1336,6 @@ mover_model : mover.towingship2
 	lod_dist[1]: 300
 
 }
-mover_model : mover.trig_view
-{
-	mover_name: "viewpoint trigger visualization"
-	model_desc: "/model/activation/interestingplaces.pmd"
-
-	model_anim: "/model/activation/interestingplaces.pma"
-}
 mover_model : mover.pt_ibe
 {
 	mover_name: "flag_potugal_ibe"
@@ -1366,15 +1352,6 @@ mover_model : mover.es_ibe
 	model_coll: "/model2/mover/flags/country/flag_es_ibe.pmc"
 
 
-}
-mover_model : mover.cg_tr_01
-{
-	mover_name: "cg_train_01"
-	model_desc: "/model2/mover/train/cargo_train_01_sc.pmd"
-	sound_path[]: "/sound/world/mover.bank#mover/train_1"
-	sound_path[]: "/sound/world/mover.bank#mover/train_2"
-	sound_min_dist: 20
-	sound_max_dist: 200
 }
 mover_model : mover.cessna_toff
 {
@@ -1455,6 +1432,145 @@ mover_model : mover.over_brd2
 	model_desc: "/model2/railing/barrier/barrier_toll_oversize_01_ibe.pmd"
 	model_coll: "/model2/railing/barrier/barrier_toll_oversize_01_ibe.pmc"
 	tags[]: "rail_train"
+}
+
+mover_model : mover.flag_elc
+{
+	mover_name: "flag_elcano_ibe"
+	model_desc: "/model2/mover/flags/company/elcano_ibe.pmd"
+	model_anim: "/model2/mover/flags/flag.pma"
+	model_coll: "/model2/mover/flags/company/elcano_ibe.pmc"
+
+}
+
+#########################################################################
+#	BASE - STEEL WORKS FACTORY
+#########################################################################
+
+mover_model : mover.sw_prop_01
+{
+	mover_name: "steel factory prop 01"
+	model_desc: "/prefab2/depot/steel_works/steel_works_prop_01_at.pmd"
+
+}
+
+mover_model : mover.sw_prop_02
+{
+	mover_name: "steel factory prop 02"
+	model_desc: "/prefab2/depot/steel_works/steel_works_prop_02_at.pmd"
+
+}
+
+
+#########################################################################
+#	BASE - GENERIC
+#########################################################################
+
+mover_model : mover.xray_blke
+{
+	mover_name: "xray_kapikule_blke"
+	model_desc: "/prefab2/border_crossing/kapikule/xray_anim_tr_blke.pmd"
+	model_coll: "/prefab2/border_crossing/kapikule/xray_anim_tr_blke.pmc"
+}
+
+mover_model : mover.tol_br_b_rus
+{
+	mover_name: "barrier toll edge 01 closed"
+	model_desc: "/model2/railing/barrier/barrier_toll_edge_01_closed.pmd"
+	model_coll: "/model2/railing/barrier/barrier_toll_edge_01_closed.pmc"
+	tags[]: "rail_train"
+
+}
+
+
+mover_model : mover.air_box_01
+{
+	mover_name: "airport box 01 de"
+
+	model_desc: "/prefab2/depot/airport_cargo/airport_box_01_de.pmd"
+
+	lods[0]: "/prefab2/depot/airport_cargo/airport_box_01_de_lod1.pmd"
+
+	lod_dist[0]: 50
+}
+
+
+mover_model : mover.steamer01
+{
+	mover_name: "ship steamer 01 ch"
+	model_desc: "/model2/ship/ship_steamer_01_ch.pmd"
+}
+
+mover_model : mover.rlw_crn_de
+{
+	mover_name: "railway terminal crane 01 de"
+	model_desc: "/prefab2/depot/railway_terminal/railway_terminal_crane_01_de.pmd"
+#	model_anim: "/model2/distribution/wind_twr_skeleton.pma"
+#	sound_path[]: "/sound/world/mover.bank#mover/wind_powerplant"
+#	sound_max_dist: 100
+
+	lods[0]: "/prefab2/depot/railway_terminal/railway_terminal_crane_01_de_lod1.pmd"
+	lods[1]: "/prefab2/depot/railway_terminal/railway_terminal_crane_01_de_lod2.pmd"
+
+
+	lod_dist[0]: 30
+	lod_dist[1]: 100
+}
+
+### EU flag medium 1x4 ###
+mover_model : mover.flag_14
+{
+	mover_name: "flag medium 1x4 blkw"
+	model_anim: "/model2/mover/flags/country/flag_medium_1x4_blkw_mov.pma"
+    model_desc: "/model2/mover/flags/country/flag_medium_1x4_blkw_mov.pmd"
+	model_coll: "/model2/mover/flags/country/flag_medium_1x4_blkw_mov.pmc"
+}
+
+### EU flag banner long small ###
+mover_model : mover.flag_bs
+{
+	mover_name: "banner long small 01 blkw"
+	model_anim: "/model2/mover/flags/company/banner_long_small_01_blkw_mov.pma"
+    model_desc: "/model2/mover/flags/company/banner_long_small_01_blkw_mov.pmd"
+	model_coll: "/model2/mover/flags/company/banner_long_small_01_blkw_mov.pmc"
+}
+
+### EU flag banner long large ###
+mover_model : mover.flag_bl
+{
+	mover_name: "banner long large 01 blkw"
+	model_anim: "/model2/mover/flags/company/banner_long_large_01_blkw_mov.pma"
+    model_desc: "/model2/mover/flags/company/banner_long_large_01_blkw_mov.pmd"
+	model_coll: "/model2/mover/flags/company/banner_long_large_01_blkw_mov.pmc"
+}
+
+mover_model : mover.rod_a_01
+{
+	mover_name: "aluminium_rods_01_mov"
+
+	model_desc: "/model2/props/factory/aluminium_rods_01_blkw_mov.pmd"
+	model_coll: "/model2/props/factory/aluminium_rods_01_blkw_mov.pmc"
+
+	lods[0]: "/model2/props/factory/aluminium_rods_01_blkw_mov_lod1.pmd"
+	lods[1]: "/model2/props/factory/aluminium_rods_01_blkw_mov_lod2.pmd"
+
+	lod_dist[0]: 20
+	lod_dist[1]: 40
+}
+
+mover_model : mover.wagon
+{
+	mover_name: "wagon"
+	model_desc: "/model/vehicle/train/wagon_coal.pmd"
+
+
+	lods[0]: "/model/vehicle/train/wagon_coal_lod1.pmd"
+	lods[1]: "/model/vehicle/train/wagon_coal_lod2.pmd"
+
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+
 }
 
 }

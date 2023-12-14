@@ -1,0 +1,389 @@
+#
+#	CARRIAGE 0
+#
+
+traffic_trailer : train_car.incentro.fr.car1
+{
+	accessories[]: .incentro.fr.car1.tchassis
+	accessories[]: .incentro.fr.car1.trwheel0
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	prefer_variant: true
+	variant[]: train_car.incentro.fr.car1.brest
+	variant[]: train_car.incentro.fr.car1.clermont
+	variant[]: train_car.incentro.fr.car1.nantes
+	variant[]: train_car.incentro.fr.car1.toulouse
+	variant[]: train_car.incentro.fr.car1.orleans
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car1.brest
+{
+	accessories[]: .incentro.fr.car1.tchassis.brest
+	accessories[]: .incentro.fr.car1.trwheel0.brest
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car1.brest.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis.brest
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1_brest.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0.brest
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+
+traffic_spawn_condition: .train_car.incentro.fr.car1.brest.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "brest"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car1.clermont
+{
+	accessories[]: .incentro.fr.car1.tchassis.clermont
+	accessories[]: .incentro.fr.car1.trwheel0.clermont
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car1.clermont.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis.clermont
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1_clermont.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0.clermont
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car1.clermont.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "clermont"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car1.nantes
+{
+	accessories[]: .incentro.fr.car1.tchassis.nantes
+	accessories[]: .incentro.fr.car1.trwheel0.nantes
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car1.nantes.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis.nantes
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1_nantes.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0.nantes
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car1.nantes.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "nantes"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car1.orleans
+{
+	accessories[]: .incentro.fr.car1.tchassis.orleans
+	accessories[]: .incentro.fr.car1.trwheel0.orleans
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car1.orleans.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis.orleans
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1_orleans.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0.orleans
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car1.orleans.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "orleans"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car1.toulouse
+{
+	accessories[]: .incentro.fr.car1.tchassis.toulouse
+	accessories[]: .incentro.fr.car1.trwheel0.toulouse
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car1.toulouse.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car1.tchassis.toulouse
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car1_toulouse.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car1.trwheel0.toulouse
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car1.toulouse.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "toulouse"
+}
+
+#
+#	CARRIAGE 1
+#
+
+traffic_trailer : train_car.incentro.fr.car2
+{
+	accessories[]: .incentro.fr.car2.tchassis
+	accessories[]: .incentro.fr.car2.trwheel0
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	prefer_variant: true
+	variant[]: train_car.incentro.fr.car2.brest
+	variant[]: train_car.incentro.fr.car2.clermont
+	variant[]: train_car.incentro.fr.car2.nantes
+	variant[]: train_car.incentro.fr.car2.toulouse
+	variant[]: train_car.incentro.fr.car2.orleans
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car2.brest
+{
+	accessories[]: .incentro.fr.car2.tchassis.brest
+	accessories[]: .incentro.fr.car2.trwheel0.brest
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car2.brest.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis.brest
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2_brest.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0.brest
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car2.brest.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "brest"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car2.clermont
+{
+	accessories[]: .incentro.fr.car2.tchassis.clermont
+	accessories[]: .incentro.fr.car2.trwheel0.clermont
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car2.clermont.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis.clermont
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2_clermont.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0.clermont
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+
+traffic_spawn_condition: .train_car.incentro.fr.car2.clermont.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "clermont"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car2.nantes
+{
+	accessories[]: .incentro.fr.car2.tchassis.nantes
+	accessories[]: .incentro.fr.car2.trwheel0.nantes
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car2.nantes.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis.nantes
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2_nantes.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0.nantes
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car2.nantes.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "nantes"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car2.orleans
+{
+	accessories[]: .incentro.fr.car2.tchassis.orleans
+	accessories[]: .incentro.fr.car2.trwheel0.orleans
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car2.orleans.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis.orleans
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2_orleans.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0.orleans
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car2.orleans.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "orleans"
+}
+
+
+traffic_trailer : train_car.incentro.fr.car2.toulouse
+{
+	accessories[]: .incentro.fr.car2.tchassis.toulouse
+	accessories[]: .incentro.fr.car2.trwheel0.toulouse
+
+	vehicle_mass: 14000
+	cargo_mass: 4000
+
+	sound_move: "/sound/traffic/tram_1.soundref"
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .train_car.incentro.fr.car2.toulouse.condition.city
+}
+
+vehicle_accessory: .incentro.fr.car2.tchassis.toulouse
+{
+	data_path: "/def/vehicle/ai/incentro/chassis_car2_toulouse.sii"
+}
+vehicle_wheel_accessory: .incentro.fr.car2.trwheel0.toulouse
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .train_car.incentro.fr.car2.toulouse.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "toulouse"
+}

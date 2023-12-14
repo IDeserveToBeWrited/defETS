@@ -1,0 +1,45 @@
+SiiNunit
+{
+sign_board_template : _nameless.a1f.8960 {
+ board_name: "at dynamic weigh lane other"
+ width: &3f933333
+ height: &3f933333
+ model_name: ""
+ items: 1
+ items[0]: _nameless.ce9.6c90
+ dynamic_attributes: 1
+ dynamic_attributes[0]: _nameless.cef.28d0
+}
+
+sign_template_image : _nameless.ce9.6c90 {
+ atlas_path: "/def/sign/atlas/dynamic_signs_at.sii"
+ image_idx: nil
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2149580799
+ area_name: ""
+ area_idx: nil
+ coords_l: &3c83fb60
+ coords_r: &3f9078c3
+ coords_t: &3f910d08
+ coords_b: &3ca90ca0
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.cef.28d0 {
+ conditions: 2
+ conditions[0]: "road_event weigh"
+ conditions[1]: default
+ values: 2
+ values[0]: dynamic_LED_red_X_cross_at
+ values[1]: dynamic_LED_green_arrow_at
+ traffic_rules: 0
+ item_id: 2149580799
+ attr_name: image_idx
+}
+
+}

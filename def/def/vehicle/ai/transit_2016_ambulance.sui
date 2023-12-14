@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.transit_amb.tr
+traffic_vehicle : traffic.transit_2016.amb_tr
 {
-	accessories[]: .transit_amb.tr.chassis
-	accessories[]: .transit_amb.tr.fwheel
-	accessories[]: .transit_amb.tr.rwheel
+	accessories[]: .transit_2016.amb_tr.chassis
+	accessories[]: .transit_2016.amb_tr.fwheel
+	accessories[]: .transit_2016.amb_tr.rwheel
 
 	max_speed: 120
 
@@ -11,8 +11,6 @@ traffic_vehicle : traffic.transit_amb.tr
 	sound_move[]: "/sound/traffic/car_normal_2.soundref"
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 
 	license_plate_type: official
 
@@ -21,18 +19,288 @@ traffic_vehicle : traffic.transit_amb.tr
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .transit_amb.tr.chassis
+vehicle_accessory: .transit_2016.amb_tr.chassis
 {
 	data_path: "/def/vehicle/ai/transit_2016/amb_tr.sii"
 }
 
-vehicle_wheel_accessory: .transit_amb.tr.fwheel
+vehicle_wheel_accessory: .transit_2016.amb_tr.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
 }
 
-vehicle_wheel_accessory: .transit_amb.tr.rwheel
+vehicle_wheel_accessory: .transit_2016.amb_tr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
+
+##################################### yaroslavl ##################################################
+traffic_vehicle : traffic.transit_2016.amb_ru_yar
+{
+	accessories[]: .transit_2016.amb_ru_yar.chassis
+	accessories[]: .transit_2016.amb_ru_yar.fwheel
+	accessories[]: .transit_2016.amb_ru_yar.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	base: traffic.crafter.ru
+
+
+	spawn_condition[]: .traffic.transit_2016.amb_ru_yar.condition.city
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+traffic_spawn_condition: .traffic.transit_2016.amb_ru_yar.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "yaroslavl"
+}
+
+vehicle_accessory: .transit_2016.amb_ru_yar.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/amb_ru_yar.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_yar.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_yar.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
+##################################### moscow ##################################################
+traffic_vehicle : traffic.transit_2016.amb_ru_mo
+{
+	accessories[]: .transit_2016.amb_ru_mo.chassis
+	accessories[]: .transit_2016.amb_ru_mo.fwheel
+	accessories[]: .transit_2016.amb_ru_mo.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	base: traffic.crafter.ru
+
+
+	spawn_condition[]: .traffic.transit_2016.amb_ru_mo.condition.city
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+traffic_spawn_condition: .traffic.transit_2016.amb_ru_mo.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "moscow"
+}
+
+vehicle_accessory: .transit_2016.amb_ru_mo.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/amb_ru_mo.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_mo.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_mo.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
+##################################### n_novgorod ##################################################
+traffic_vehicle : traffic.transit_2016.amb_ru_nn
+{
+	accessories[]: .transit_2016.amb_ru_nn.chassis
+	accessories[]: .transit_2016.amb_ru_nn.fwheel
+	accessories[]: .transit_2016.amb_ru_nn.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	base: traffic.crafter.ru
+
+
+	spawn_condition[]: .traffic.transit_2016.amb_ru_nn.condition.city
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+traffic_spawn_condition: .traffic.transit_2016.amb_ru_nn.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "n_novgorod"
+}
+
+vehicle_accessory: .transit_2016.amb_ru_nn.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/amb_ru_nn.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_nn.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.amb_ru_nn.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
+
+##################### al ######################################
+traffic_vehicle : traffic.transit_2016.al
+{
+	accessories[]: .transit_2016.al.chassis
+	accessories[]: .transit_2016.al.fwheel
+	accessories[]: .transit_2016.al.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transit_2016.al.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/al.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.al.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.al.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+##################### me ######################################
+traffic_vehicle : traffic.transit_2016.me
+{
+	accessories[]: .transit_2016.me.chassis
+	accessories[]: .transit_2016.me.fwheel
+	accessories[]: .transit_2016.me.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transit_2016.me.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/me.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.me.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.me.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+##################### ba ######################################
+traffic_vehicle : traffic.transit_2016.ba
+{
+	accessories[]: .transit_2016.ba.chassis
+	accessories[]: .transit_2016.ba.fwheel
+	accessories[]: .transit_2016.ba.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	license_plate_type: official
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transit_2016.ba.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/ba.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.ba.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_2016.ba.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"

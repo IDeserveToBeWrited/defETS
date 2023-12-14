@@ -1,0 +1,44 @@
+SiiNunit
+{
+accessory_interior_data: ind_gm_uk.man.tgx_2020.interior
+{
+	name: "Individual Lion S UK"
+	price: 31080
+	unlock: 12
+	icon: "truck/man_tgx_2020/accessory/ind"
+	part_type: factory
+
+	model: "/vehicle/truck/man_tgx_2020/interior/uk/gm.pmd"
+	collision: "/vehicle/truck/man_tgx_2020/interior/uk/gm.pmc"
+	animated_model: "/vehicle/truck/man_tgx_2020/interior/uk/anim/anim.pmd"
+	active_mirrors_part: a_s_mirrors
+	passive_mirrors_part: p_s_mirrors
+	look: Default
+	variant: ind
+	left_hand_traffic: true
+
+@include "animations_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+@include "computers_mph.sui"
+
+	glass_panes[]: .man.tgx_2020.pane.front
+	glass_panes[]: .man.tgx_2020.pane.left
+	glass_panes[]: .man.tgx_2020.pane.right
+	glass_panes[]: .man.tgx_2020.pane.top
+
+	ext_model: "/vehicle/truck/man_tgx_2020/interior/external/gm.pmd"
+	ext_variant: cabin_uk
+	ext_look: ind
+
+	suitable_for[]: "gm.man.tgx_2020.cabin"
+
+	overrides[]: "/def/vehicle/truck/man.tgx_2020/accessory/badge_c/individual.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "glass_gm.sui"
+@include "sound_effects_units.sui"
+}

@@ -1,0 +1,43 @@
+SiiNunit
+{
+sign_board_template : _nameless.a2e.5460 {
+ board_name: "at dynamic weigh traffic jam"
+ width: &3fe00000
+ height: &3fe00000
+ model_name: ""
+ items: 1
+ items[0]: _nameless.cdb.d940
+ dynamic_attributes: 1
+ dynamic_attributes[0]: _nameless.9fa.3ed0
+}
+
+sign_template_image : _nameless.cdb.d940 {
+ atlas_path: "/def/sign/atlas/dynamic_signs_at.sii"
+ image_idx: nil
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 1290928128
+ area_name: ""
+ area_idx: nil
+ coords_l: 0
+ coords_r: &3fe00000
+ coords_t: &3fe00000
+ coords_b: 0
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.9fa.3ed0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: dynamic_LED_traffic_jam_at
+ traffic_rules: 0
+ item_id: 1290928128
+ attr_name: image_idx
+}
+
+}

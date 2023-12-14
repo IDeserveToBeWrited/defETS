@@ -1,0 +1,40 @@
+########################## russian border #######################
+
+traffic_vehicle : traffic.ava_469.pol_ru_cus
+{
+	accessories[]: .ava_469.pol_ru_cus.chassis
+	accessories[]: .ava_469.pol_ru_cus.fwheel
+	accessories[]: .ava_469.pol_ru_cus.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+
+	allow_parked: true
+
+
+	spawn_ratio: 0
+
+	tags[]: customs
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ava_469.pol_ru_cus.chassis
+{
+	data_path: "/def/vehicle/ai/ava_469/ru_cus.sii"
+}
+
+vehicle_wheel_accessory: .ava_469.pol_ru_cus.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_o.sii"
+}
+
+vehicle_wheel_accessory: .ava_469.pol_ru_cus.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_o.sii"
+}

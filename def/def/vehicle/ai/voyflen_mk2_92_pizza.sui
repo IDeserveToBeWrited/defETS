@@ -1,0 +1,43 @@
+############### Default ########################
+
+traffic_vehicle : traffic.mk2_pizza
+{
+	accessories[]: .mk2_pizza.chassis
+	accessories[]: .mk2_pizza.fwheel
+	accessories[]: .mk2_pizza.rwheel
+	
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+	
+	
+	spawn_ratio: 0
+
+	tags[]: cheap
+	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mk2_pizza.chassis
+{
+	data_path: "/def/vehicle/ai/voyflen_mk2_92/chassis_pizza.sii"
+}
+
+vehicle_wheel_accessory: .mk2_pizza.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in.sii"
+}
+
+vehicle_wheel_accessory: .mk2_pizza.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in.sii"
+}
+

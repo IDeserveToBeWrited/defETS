@@ -1,0 +1,108 @@
+# Configuration of the sound effects for the interior reverb and the windows opening sound equalizations.
+#
+# .effect.reverb.window.closed / .opened = Reverb settings for fully closed / opened windows.
+# .effect.equalizer.windows.closed / .opened = 3-eq settings for fully closed / opened windows for central (interior) sound.
+# .effect.add.window_eq.closed / .opened = 3-eq settings for additive sound of fully closed / opened window. (Applied for left/right windows independently.)
+#
+# Sfx reverb parameters:
+#	decay_time		- Decay Time       	: Reverberation decay time at low-frequencies in milliseconds.  Ranges from 100.0 to 20000.0. Default is 1500.
+#	early_delay		- Early Delay     	: Delay time of first reflection in milliseconds.  Ranges from 0.0 to 300.0.  Default is 20.
+#	late_delay		- Reverb Delay    	: Late reverberation delay time relative to first reflection in milliseconds.  Ranges from 0.0 to 100.0.  Default is 40.
+#	hf_reference		- HF Reference     	: Reference frequency for high-frequency decay in Hz.  Ranges from 20.0 to 20000.0. Default is 5000.
+#	hf_decay_ratio: 	- Decay HF Ratio   	: High-frequency decay time relative to decay time in percent.  Ranges from 10.0 to 100.0. Default is 50.
+#	diffusion		- Diffusion        	: Reverberation diffusion (echo density) in percent.  Ranges from 0.0 to 100.0.  Default is 100.
+#	density			- Density          	: Reverberation density (modal density) in percent.  Ranges from 0.0 to 100.0.  Default is 100.
+#	low_shelf_frequency	- Low Shelf Frequency	: Transition frequency of low-shelf filter in Hz.  Ranges from 20.0 to 1000.0. Default is 250.
+#	low_shelf_gain		- Low Shelf Gain   	: Gain of low-shelf filter in dB.  Ranges from -36.0 to 12.0.  Default is 0.
+#	high_cut		- High Cut         	: Cutoff frequency of low-pass filter in Hz.  Ranges from 20.0 to 20000.0. Default is 20000.
+#	early_late_mix		- Early/Late Mix   	: Blend ratio of late reverb to early reflections in percent.  Ranges from 0.0 to 100.0.  Default is 50.
+#	wet_level		- Wet Level        	: Reverb signal level in dB.  Ranges from -80.0 to 20.0.  Default is -6.
+#	dry_level		- Dry Level        	: Dry signal level in dB.  Ranges from -80.0 to 20.0.  Default is 0.
+#
+# Sfx 3-equalizer
+#	low_gain		- Low frequency gain. Units: Decibels Range: [-80, 10] Default: 0
+#	mid_gain		- Mid frequency gain. Units: Decibels Range: [-80, 10] Default: 0
+#	high_gain		- High frequency gain. Units: Decibels Range: [-80, 10] Default: 0
+#	low_crossover		- Low-to-mid crossover frequency. Units: Hertz Range: [10, 22000] Default: 400
+#	high_crossover		- Mid-to-high crossover frequency. Units: Hertz Range: [10, 22000] Default: 4000
+#	crossover_slope		- Crossover Slope where 0 is 12dB/Octave, 1 is 24dB/Octave and 2 is 48dB/Octave.
+#
+#	Please be very careful when setting a large difference boundaries for the low_crossover, high_crossover parameters on the same equalizer.
+#	Large differences can generate unwanted sound patterns.
+
+sound_reverb_data : .effect.reverb.window.closed	
+{
+	decay_time: 130.0
+	early_delay: 0.0
+	late_delay: 0.0
+	hf_reference: 1300.0
+	hf_decay_ratio: 65.0
+	diffusion: 30.0
+	density: 30.0
+	low_shelf_frequency: 250.0
+	low_shelf_gain: 0.0
+	high_cut: 8000.0
+	early_late_mix: 40.0
+	wet_level: -12.0
+	dry_level: -2.5
+}
+
+sound_reverb_data : .effect.reverb.window.opened
+{
+	decay_time: 250.0
+	early_delay: 2.0
+	late_delay: 3.0
+	hf_reference: 5000.0
+	hf_decay_ratio: 30.0
+	diffusion: 40.0
+	density: 30.0
+	low_shelf_frequency: 500.0
+	low_shelf_gain: -20.0
+	high_cut: 14000.0
+	early_late_mix: 50.0
+	wet_level: -10.0
+	dry_level: 0.0
+}
+
+sound_three_eq_data : .effect.equalizer.cabin.inside
+{
+	low_gain: -5.0
+	mid_gain: -9.0
+	high_gain: -20.0
+	low_crossover: 500.0
+	high_crossover: 6000.0
+	crossover_slope: 1
+}
+
+sound_three_eq_data : .effect.equalizer.cabin.outside
+{
+	low_gain: 0.0
+	mid_gain: 0.0
+	high_gain: 0.0
+	low_crossover: 400.0
+	high_crossover: 22000.0
+	crossover_slope: 1
+}
+
+sound_three_eq_data : .effect.add.window_eq.closed
+{
+	low_gain: -1.0
+	mid_gain: -11.0
+	high_gain: -18.0
+	low_crossover: 400.0
+	high_crossover: 4000.0
+	crossover_slope: 1
+}
+
+sound_three_eq_data : .effect.add.window_eq.opened
+{
+	low_gain: 0.0
+	mid_gain: 0.0
+	high_gain: 0.0
+	low_crossover: 400.0
+	high_crossover: 4000.0
+	crossover_slope: 1
+}
+
+
+

@@ -26,6 +26,76 @@ SiiNunit
 #                  |/
 # ATS, ETS common
 
+##########################################
+# HUMANS / WOMAN/MAN / GASSTATION SELLER #
+##########################################
+
+mover_anim : mover_anim.wgassid1
+{
+	model_anim: "/asset/animation/woman/gasstation_crew_girl_ani_idle01.pma"
+	group_tags[]: wseller
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.wgassid2
+{
+	model_anim: "/asset/animation/woman/gasstation_crew_girl_ani_idle02.pma"
+	group_tags[]: wseller
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.mgassid1
+{
+	model_anim: "/asset/animation/man/gasstation_crew_boy_ani_idle_01.pma"
+	group_tags[]: mseller
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.mgassid2
+{
+	model_anim: "/asset/animation/man/gasstation_crew_boy_ani_idle_02.pma"
+	group_tags[]: mseller
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+
+### SAW MAN ###
+
+mover_anim : mover_anim.man.saw
+{
+	model_anim: "/model/mover/characters/animations/man/work/firefighter_saw.pma"
+	group_tags[]: human
+	group_tags[]: man
+	group_tags[]: saw
+	sound_path: "/sound/world/mover.bank#mover/saw_wood_1"
+
+	props[]: mover_props.saw.saw
+}
+
+### FISHERMAN FISHING ###
+
+mover_anim : mover_anim.fishing1
+{
+	model_anim: "/model/mover/characters/new_generation/new/animations/customs/stand_fishing.pma"
+	group_tags[]: human
+	group_tags[]: man
+	group_tags[]: stand
+	group_tags[]: fishing
+}
+
+mover_anim : mover_anim.fishing2
+{
+	model_anim: "/model/mover/characters/new_generation/new/animations/customs/sit_fishing.pma"
+	group_tags[]: human
+	group_tags[]: man
+	group_tags[]: sit
+	group_tags[]: fishing
+}
+
 mover_anim : mover_anim.motorboat
 {
 	model_anim: "/model2/mover/motorboat_anim.pma"
@@ -153,76 +223,77 @@ mover_anim : mover_anim.n_noter
 	props[]: mover_props.noter.n_notes
 }
 
-### COW ###
-
-mover_anim : mover_anim.cow.eating
-{
-	model_anim: "/model/mover/animal/cow/cow_eating.pma"
-	group_tags[]: cow
-	group_tags[]: eating
-}
-mover_anim : mover_anim.cow.walk_eating
-{
-	model_anim: "/model/mover/animal/cow_walk_eating.pma"
-	group_tags[]: cow
-	group_tags[]: eat
-}
-mover_anim : mover_anim.cow.lean
-{
-	model_anim: "/model/mover/animal/cow_lean.pma"
-	group_tags[]: cow
-	group_tags[]: idle
-}
-mover_anim : mover_anim.cow.idle
-{
-	model_anim: "/model/mover/animal/cow/cow_idle_anim.pma"
-	group_tags[]: cow
-	group_tags[]: idle
-}
-mover_anim : mover_anim.cow.idle1
-{
-	model_anim: "/model/mover/animal/cow/cow_idle_1_anim.pma"
-	group_tags[]: cow
-	group_tags[]: idle
-}
-mover_anim : mover_anim.cow.idle2
-{
-	model_anim: "/model/mover/animal/cow/cow_idle_2_anim.pma"
-	group_tags[]: cow
-	group_tags[]: idle
-}
-mover_anim : mover_anim.calf.idle1
-{
-	model_anim: "/model/mover/animal/cow/calf_idle_01.pma"
-	group_tags[]: calf
-	group_tags[]: idle
-}
-mover_anim : mover_anim.calf.idle2
-{
-	model_anim: "/model/mover/animal/cow/calf_idle_02.pma"
-	group_tags[]: calf
-	group_tags[]: idle
-}
-mover_anim : mover_anim.coalf.idle3
-{
-	model_anim: "/model/mover/animal/cow/calf_idle_03.pma"
-	group_tags[]: calf
-	group_tags[]: idle
-}
-mover_anim : mover_anim.coalf.idle4
-{
-	model_anim: "/model/mover/animal/cow/calf_idle_eat.pma"
-	group_tags[]: calf
-	group_tags[]: idle
-	group_tags[]: eat
-}
-#################################### COWS_HERD_ANIM
-mover_anim : mover_anim.cows.herd
-{
-	model_anim: "/model/mover/animal/cow/cow_herd_01.pma"
-	group_tags[]: cows_herd
-}
+# ### COW ###
+# 
+# mover_anim : mover_anim.cow.eating
+# {
+# 	model_anim: "/model/mover/animal/cow/cow_eating.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: eating
+# }
+# mover_anim : mover_anim.cow.walk_eating
+# {
+# 	model_anim: "/model/mover/animal/cow_walk_eating.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: eat
+# }
+# mover_anim : mover_anim.cow.lean
+# {
+# 	model_anim: "/model/mover/animal/cow_lean.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.cow.idle
+# {
+# 	model_anim: "/model/mover/animal/cow/cow_idle_anim.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.cow.idle1
+# {
+# 	model_anim: "/model/mover/animal/cow/cow_idle_1_anim.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.cow.idle2
+# {
+# 	model_anim: "/model/mover/animal/cow/cow_idle_2_anim.pma"
+# 	group_tags[]: cow
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.calf.idle1
+# {
+# 	model_anim: "/model/mover/animal/cow/calf_idle_01.pma"
+# 	group_tags[]: calf
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.calf.idle2
+# {
+# 	model_anim: "/model/mover/animal/cow/calf_idle_02.pma"
+# 	group_tags[]: calf
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.coalf.idle3
+# {
+# 	model_anim: "/model/mover/animal/cow/calf_idle_03.pma"
+# 	group_tags[]: calf
+# 	group_tags[]: idle
+# }
+# mover_anim : mover_anim.coalf.idle4
+# {
+# 	model_anim: "/model/mover/animal/cow/calf_idle_eat.pma"
+# 	group_tags[]: calf
+# 	group_tags[]: idle
+# 	group_tags[]: eat
+# }
+# #################################### COWS_HERD_ANIM
+# mover_anim : mover_anim.cows.herd
+# {
+# 	model_anim: "/model/mover/animal/cow/cow_herd_01.pma"
+# 	group_tags[]: cows_herd
+# }
 ####################################
+
 ### HORSE ###
 
 mover_anim : mover_anim.horse.walk
@@ -499,6 +570,7 @@ mover_anim : mover_anim.blower
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: blower
+	sound_path: "/sound/world/sound.bank#sound/leaf_blower"
 
 	props[]: mover_props.blower.blower
 	props[]: mover_props.blower.screw
@@ -513,6 +585,7 @@ mover_anim : mover_anim.agitator
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: agitator
+	sound_path: "/sound/world/sound.bank#sound/hand_mixer"
 
 	props[]: mover_props.agitator.smallmix
 	props[]: mover_props.agitator.bucket
@@ -545,6 +618,8 @@ mover_anim : mover_anim.road_cutter
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: road_cutter
+	sound_path: "/sound/world/sound.bank#sound/saw_on_asphalt_2"
+
 
 	props[]: mover_props.road_cutter.roadsaw
 }
@@ -589,6 +664,7 @@ mover_anim : mover_anim.man.photo
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: photo
+	sound_path: "/sound/world/sound.bank#sound/camera_shoot_1"
 
 	props[]: mover_props.photo.camera
 }
@@ -611,6 +687,7 @@ mover_anim : mover_anim.man.reporter.self
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: report_self
+	sound_path: "/sound/world/sound.bank#sound/reporter_man_1"
 
 	props[]: mover_props.report_self.microphone
 	props[]: mover_props.report_self.files
@@ -630,6 +707,7 @@ mover_anim : mover_anim.woman.reporter.self
 	group_tags[]: human
 	group_tags[]: woman
 	group_tags[]: report_self
+	sound_path: "/sound/world/sound.bank#sound/reporter_woman_1"
 
 	props[]: mover_props.report_self.microphone
 	props[]: mover_props.report_self.files
@@ -643,6 +721,7 @@ mover_anim : mover_anim.man.selfie_cell
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: selfie_cell
+	sound_path: "/sound/world/sound.bank#sound/camera_shoot_2"
 
 	props[]: mover_props.selfie_cell.cellphone
 }
@@ -652,6 +731,7 @@ mover_anim : mover_anim.wom.selfie_cell
 	group_tags[]: human
 	group_tags[]: woman
 	group_tags[]: selfie_cell
+	sound_path: "/sound/world/sound.bank#sound/camera_shoot_2"
 
 	props[]: mover_props.selfie_cell.cellphone
 }
@@ -665,6 +745,7 @@ mover_anim : mover_anim.man.selfie_stick
 	group_tags[]: human
 	group_tags[]: man
 	group_tags[]: selfie_stick
+	sound_path: "/sound/world/sound.bank#sound/camera_shoot_2"
 
 	props[]: mover_props.selfie_stick.stick
 }
@@ -674,6 +755,7 @@ mover_anim : mover_anim.wom.selfie_stick
 	group_tags[]: human
 	group_tags[]: woman
 	group_tags[]: selfie_stick
+	sound_path: "/sound/world/sound.bank#sound/camera_shoot_2"
 
 	props[]: mover_props.selfie_stick.stick
 }
@@ -685,6 +767,7 @@ mover_anim : mover_anim.gardener
 {
 	model_anim: "/model/mover/characters/animations/man/work/gardener.pma"
 	group_tags[]: gardener
+	sound_path: "/sound/world/mover.bank#mover/lawn_mower"
 }
 
 
@@ -704,6 +787,7 @@ mover_anim : mover_anim.basket_pl
 {
 	model_anim: "/model/mover/characters/animations/man/sport/man_dribble.pma"
 	group_tags[]: basket_pl
+	sound_path: "/sound/world/mover.bank#mover/basketball_concrete_1"
 }
 
 
@@ -726,9 +810,9 @@ mover_anim : mover_anim.bicycle.man.anim
 
 mover_anim : mover_anim.tow_scene
 {
-	model_anim: "/model2/vehicle/event/animated/tow_scene_anim.pma"
+	model_anim: "/model/event/animated/tow_scene_anim.pma"
 	group_tags[]: tow_scene
-	action: true
+	anim_type: action
 }
 
 mover_anim : mover_anim.n_cus_search
@@ -769,6 +853,56 @@ mover_anim : mover_anim.n_cus_walk
 	group_tags[]: dog_walk
 
 }
+mover_anim : mover_anim.mixer_work
+{
+	model_anim: "/model/mover/characters/animations/man/work/mixerman.pma"
+	group_tags[]: man
+	group_tags[]: worker
+	group_tags[]: mixerman
+	sound_path: "/sound/world/sound.bank#sound/mixer"
+
+	props[]: mover_props.mix_pr
+}
+
+### HORSE CART Moved from Balkan_e ###
+
+mover_anim : mover_anim.cart.walk
+{
+	model_anim: "/model2/mover/cart01_walk_anim.pma"
+	group_tags[]: cart
+}
+mover_anim : mover_anim.cart.walk2
+{
+	model_anim: "/model2/mover/cart02_walk_anim.pma"
+	group_tags[]: cart2
+}
+mover_anim : mover_anim.cart.static1
+{
+	model_anim: "/model2/mover/cart02_nervous_anim.pma"
+	group_tags[]: static1
+}
+mover_anim : mover_anim.cart.static2
+{
+	model_anim: "/model2/mover/cart02_headup_anim.pma"
+	group_tags[]: static1
+}
+mover_anim : mover_anim.cart.static3
+{
+	model_anim: "/model2/mover/cart02_headdown_anim.pma"
+	group_tags[]: static1
+}
+
+#################################################################################################
+###           EXCAVATOR   simple mover / shifted to nescript (look for mover_action.sii       ###
+#################################################################################################
+
+# mover_anim : mover_anim.exc
+# {
+# 	model_anim: "/model/mover/machine/excavator_mov_v1.pma"
+# 	group_tags[]: excavator
+# #	sound_path: "/sound/world/sound.bank#sound/mixer"
+# }
+
 
 
 #   ____ _               _      _ ___        ___                     _                    _     _ _ _
@@ -791,5 +925,146 @@ mover_anim : mover_anim.n_cus_walk
 # in the beginning of the def
 # before adding any units.
 
+####################################
+# ---moved from mod_char_reskin--- #
+####################################
+
+### STANDING IDLES ###
+
+mover_anim : mover_anim.standing1
+{
+	model_anim: "/asset/animation/man/meso_standing_idle_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: standing_x
+}
+
+mover_anim : mover_anim.standing2
+{
+	model_anim: "/asset/animation/man/meso_standing_idle_02.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: standing_x
+}
+
+mover_anim : mover_anim.standing3
+{
+	model_anim: "/asset/animation/man/meso_standing_idle_03.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: standing_x
+}
+
+mover_anim : mover_anim.standing4
+{
+	model_anim: "/asset/animation/man/meso_standing_idle_04.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: cross_hand_x
+	group_tags[]: standing_x
+}
+
+mover_anim : mover_anim.standing5
+{
+	model_anim: "/asset/animation/man/meso_standing_idle_05.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: back_hand_x
+	group_tags[]: standing_x
+}
+
+### ANGRY IDLES ###
+
+mover_anim : mover_anim.angry1
+{
+	model_anim: "/asset/animation/man/meso_standing_angry_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: angry_x
+}
+
+### LEANING IDLES ###
+
+mover_anim : mover_anim.leaning1
+{
+	model_anim: "/asset/animation/man/meso_leaning_idle_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: leaning_x
+}
+
+mover_anim : mover_anim.leaning2
+{
+	model_anim: "/asset/animation/man/meso_leaning_idle_02.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: leaning_x
+}
+
+### BORDER OFFICER SPECIALS ###
+
+mover_anim : mover_anim.bor_search
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/customs/customs_truck_search.pma"
+	model_anim: "/asset/animation/man/meso_border_mirror_walking_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: tr_search_x
+
+	props[]: mover_props.bor_mir_wlk
+}
+
+mover_anim : mover_anim.bor_tablet
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/customs/customs_tablet.pma"
+	model_anim: "/asset/animation/man/meso_noter_idle_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: cus_tablet_x
+
+	props[]: mover_props.bor_tablet
+}
+
+mover_anim : mover_anim.bor_mirrid
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/customs/idle_with_mirror.pma"
+	model_anim: "/asset/animation/man/meso_border_mirror_idle_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: cus_mirrid_x
+
+	props[]: mover_props.bor_mir_idl
+}
+
+mover_anim : mover_anim.bor_walk
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/customs/dog_handler_walk.pma"
+	model_anim: "/asset/animation/man/meso_border_dog_walking_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: dog_walk_x
+
+	props[]: mover_props.bor_ger_dog
+
+}
+
+mover_anim : mover_anim.bor_walk2
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/customs/dog_handler_walk.pma"
+	model_anim: "/asset/animation/man/meso_border_dog_walking_01.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: walk_x
+
+}
+
+mover_anim : mover_anim.bor_sitting
+{
+	#model_anim: "/model/mover/characters/new_generation/new/animations/universal/sitting_idle_2_anim.pma"
+	model_anim: "/asset/animation/man/meso_sitting_idle_02.pma"
+	group_tags[]: human_x
+	group_tags[]: man_x
+	group_tags[]: sitting_x
+}
 
 }

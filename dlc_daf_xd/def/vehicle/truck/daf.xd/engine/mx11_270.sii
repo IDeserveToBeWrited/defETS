@@ -1,0 +1,44 @@
+SiiNunit
+{
+accessory_engine_data : mx11_270.daf.xd.engine
+{
+	name: "MX-11 270"
+	price: 12000
+	unlock: 0
+	info[]: "367 @@hp@@ (270@@kw@@)"
+	info[]: "1@@dg@@800/1@@dg@@950 @@nm@@"
+	info[]: "900-1@@dg@@400 @@rpm@@"
+	icon: "engine/paccar_mx11"
+	part_type: factory
+
+	torque: 1800
+	secondary_torque: 1950
+
+	torque_curve[]: (300, 0)
+	torque_curve[]: (500, 0.5)
+	torque_curve[]: (900, 1)
+	torque_curve[]: (1400, 1)
+	torque_curve[]: (1600, 0.89)
+	torque_curve[]: (1800, 0.69)
+	torque_curve[]: (2400, 0)
+
+	secondary_torque_curve[]: (300, 0)
+	secondary_torque_curve[]: (500, 0.5)
+	secondary_torque_curve[]: (900, 1)
+	secondary_torque_curve[]: (1125, 1)
+	secondary_torque_curve[]: (1400, 0.92)
+	secondary_torque_curve[]: (1600, 0.82)
+	secondary_torque_curve[]: (1800, 0.64)
+	secondary_torque_curve[]: (2400, 0)
+
+	rpm_limit: 2200
+	rpm_range_low_gear: (800, 1500)
+	rpm_range_high_gear: (900, 1300)
+	rpm_range_power: (1300, 1800)
+
+	volume: 10.8
+	no_adblue_power_limit: 0.5
+
+@include "sound.sui"
+}
+}

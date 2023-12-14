@@ -1,0 +1,47 @@
+traffic_vehicle : traffic.huracan.pol_it
+{
+	accessories[]: .huracan.pol_it.chassis
+	accessories[]: .huracan.pol_it.fwheel
+	accessories[]: .huracan.pol_it.rwheel
+
+	max_speed: 260
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_sport_2.soundref"
+
+	spawn_ratio: 0 
+
+	color[]: (1, 1, 1)
+
+	tags[]: highway 
+
+@include "drivers_generic_police.sui"	
+
+spawn_condition[]: .huracan.pol_it.condition.city
+
+}
+
+vehicle_accessory: .huracan.pol_it.chassis
+{
+	data_path: "/def/vehicle/ai/huracan/chassis_pol_it.sii"
+}
+
+vehicle_wheel_accessory: .huracan.pol_it.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/huracan_front.sii"
+}
+
+vehicle_wheel_accessory: .huracan.pol_it.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/huracan_rear.sii"
+}
+
+traffic_spawn_condition: .huracan.pol_it.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "?*"
+}

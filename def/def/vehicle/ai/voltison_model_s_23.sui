@@ -1,0 +1,44 @@
+# XXXXXXXXXXXXXXXXXXX sedan XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.voltison.s_23.sedan
+{
+	accessories[]: .voltison.s_23.sedan.chassis
+	accessories[]: .voltison.s_23.sedan.fwheel
+	accessories[]: .voltison.s_23.sedan.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.7713, 0.7631, 0.7227) #white
+
+	tags[]: expensive
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .voltison.s_23.sedan.chassis
+{
+	data_path: "/def/vehicle/ai/voltison_model_s_23/chassis_sedan.sii"
+}
+
+vehicle_wheel_accessory: .voltison.s_23.sedan.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_front.sii"
+}
+
+vehicle_wheel_accessory: .voltison.s_23.sedan.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_rear.sii"
+}

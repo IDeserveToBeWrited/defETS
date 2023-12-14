@@ -14,8 +14,6 @@ traffic_vehicle : traffic.lowcab
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -29,14 +27,19 @@ traffic_vehicle : traffic.lowcab
 	color[]: (0.0685, 0.1248, 0.1812)
 
 
-	variant[]: traffic.lowcab_dvan
-	variant[]: traffic.lowcab_dvan2
-	variant[]: traffic.lowcab_fbed
-	variant[]: traffic.lowcab_fbed1
-	variant[]: traffic.lowcab_fbed2
-	variant[]: traffic.lowcab_fbed3
-	variant[]: traffic.lowcab_dumpt
-	variant[]: traffic.lowcab_dumpd
+	variant[]: traffic.lowcab.dryvan
+	variant[]: traffic.lowcab.dryvan_lift
+
+	variant[]: traffic.lowcab_fbed.load1
+	variant[]: traffic.lowcab_fbed.load2
+
+	variant[]: traffic.lowcab_shutt
+	variant[]: traffic.lowcab_shutt.load1
+	variant[]: traffic.lowcab_shutt.load2
+	
+	variant[]: traffic.lowcab_dump.lime
+	variant[]: traffic.lowcab_dump.gravel
+	variant[]: traffic.lowcab_dump.sand
 
 @include "drivers_generic.sui"
 }
@@ -60,11 +63,11 @@ vehicle_wheel_accessory: .lowcab.rwheel
 
 #XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Dry Van XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_vehicle : traffic.lowcab_dvan
+traffic_vehicle : traffic.lowcab.dryvan
 {
-	accessories[]: .lowcab_dvan.chassis
-	accessories[]: .lowcab_dvan.fwheel
-	accessories[]: .lowcab_dvan.rwheel
+	accessories[]: .lowcab.dryvan.chassis
+	accessories[]: .lowcab.dryvan.fwheel
+	accessories[]: .lowcab.dryvan.rwheel
 
 	tags[]: sm_truck
 
@@ -78,8 +81,7 @@ traffic_vehicle : traffic.lowcab_dvan
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
+
 
 	# WHITE/GRAY
 	color[]: (0.9, 0.9, 0.9)
@@ -92,29 +94,31 @@ traffic_vehicle : traffic.lowcab_dvan
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .lowcab_dvan.chassis
+vehicle_accessory: .lowcab.dryvan.chassis
 {
-	data_path: "/def/vehicle/ai/lowcab/chassis_dvan.sii"
+	data_path: "/def/vehicle/ai/lowcab/chassis_dryvan.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dvan.fwheel
+vehicle_wheel_accessory: .lowcab.dryvan.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dvan.rwheel
+vehicle_wheel_accessory: .lowcab.dryvan.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
 
 
-traffic_vehicle : traffic.lowcab_dvan2
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Lift House Mover XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab.dryvan_lift
 {
-	accessories[]: .lowcab_dvan2.chassis
-	accessories[]: .lowcab_dvan2.fwheel
-	accessories[]: .lowcab_dvan2.rwheel
+	accessories[]: .lowcab.dryvan_lift.chassis
+	accessories[]: .lowcab.dryvan_lift.fwheel
+	accessories[]: .lowcab.dryvan_lift.rwheel
 
 	tags[]: sm_truck
 
@@ -128,8 +132,7 @@ traffic_vehicle : traffic.lowcab_dvan2
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
+
 
 	# WHITE/GRAY
 	color[]: (0.9, 0.9, 0.9)
@@ -143,83 +146,27 @@ traffic_vehicle : traffic.lowcab_dvan2
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .lowcab_dvan2.chassis
+vehicle_accessory: .lowcab.dryvan_lift.chassis
 {
-	data_path: "/def/vehicle/ai/lowcab/chassis_dvan2.sii"
+	data_path: "/def/vehicle/ai/lowcab/chassis_dryvan_lift.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dvan2.fwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
-}
-
-vehicle_wheel_accessory: .lowcab_dvan2.rwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
-}
-
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Flatbed - Load 1 ( Boxed Fruits ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-traffic_vehicle : traffic.lowcab_fbed
-{
-	accessories[]: .lowcab_fbed.chassis
-	accessories[]: .lowcab_fbed.fwheel
-	accessories[]: .lowcab_fbed.rwheel
-
-	tags[]: sm_truck
-
-	max_speed: 120
-
-	vehicle_mass: 8000
-
-	engine_power: 140
-
-	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
-	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
-	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
-
-	lod_dist[]: 53
-	lod_dist[]: 70
-
-	# WHITE/GRAY
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.7084, 0.7084, 0.7084)
-	color[]: (0.6, 0.6, 0.6)
-	# YELLOW
-	color[]: (0.9909, 0.5522, 0.017)
-	# BLUE
-	color[]: (0.0685, 0.1248, 0.1812)
-	#silver
-	color[]: (0.3662, 0.3277, 0.2788)
-
-
-@include "drivers_generic.sui"
-}
-
-vehicle_accessory: .lowcab_fbed.chassis
-{
-	data_path: "/def/vehicle/ai/lowcab/chassis_fbed.sii"
-}
-
-vehicle_wheel_accessory: .lowcab_fbed.fwheel
+vehicle_wheel_accessory: .lowcab.dryvan_lift.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_fbed.rwheel
+vehicle_wheel_accessory: .lowcab.dryvan_lift.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
 
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Flatbed + Shutters - Load 2 ( Construction Materials ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_vehicle : traffic.lowcab_fbed1
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Pickup/Shutters XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab_shutt
 {
 	accessories[]: .lowcab_shutt.chassis
 	accessories[]: .lowcab_shutt.fwheel
@@ -237,9 +184,7 @@ traffic_vehicle : traffic.lowcab_fbed1
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
-
+	
 	# WHITE/GRAY
 	color[]: (0.9, 0.9, 0.9)
 	color[]: (0.9, 0.9, 0.9)
@@ -274,13 +219,13 @@ vehicle_wheel_accessory: .lowcab_shutt.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
 
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Flatbed + Shutters - Load 3 ( Mixed ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Shutters with Construction Equipment XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_vehicle : traffic.lowcab_fbed2
+traffic_vehicle : traffic.lowcab_shutt.load1
 {
-	accessories[]: .lowcab_fbed2.chassis
-	accessories[]: .lowcab_fbed2.fwheel
-	accessories[]: .lowcab_fbed2.rwheel
+	accessories[]: .lowcab_shutt.load1.chassis
+	accessories[]: .lowcab_shutt.load1.fwheel
+	accessories[]: .lowcab_shutt.load1.rwheel
 
 	tags[]: sm_truck
 
@@ -294,8 +239,171 @@ traffic_vehicle : traffic.lowcab_fbed2
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
+	
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# YELLOW
+	color[]: (0.9909, 0.5522, 0.017)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+	#silver
+	color[]: (0.3662, 0.3277, 0.2788)
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_shutt.load1.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_shutt_load1.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_shutt.load1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_shutt.load1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant shutters with Construction Equipment XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab_shutt.load2
+{
+	accessories[]: .lowcab_shutt.load2.chassis
+	accessories[]: .lowcab_shutt.load2.fwheel
+	accessories[]: .lowcab_shutt.load2.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	engine_power: 140
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# YELLOW
+	color[]: (0.9909, 0.5522, 0.017)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+	#silver
+	color[]: (0.3662, 0.3277, 0.2788)
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_shutt.load2.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_shutt_load2.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_shutt.load2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_shutt.load2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Fruits XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab_fbed.load1
+{
+	accessories[]: .lowcab_fbed.load1.chassis
+	accessories[]: .lowcab_fbed.load1.fwheel
+	accessories[]: .lowcab_fbed.load1.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	engine_power: 140
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.7084, 0.7084, 0.7084)
+	color[]: (0.6, 0.6, 0.6)
+	# YELLOW
+	color[]: (0.9909, 0.5522, 0.017)
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+	#silver
+	color[]: (0.3662, 0.3277, 0.2788)
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_fbed.load1.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_fbed_load1.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_fbed.load1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_fbed.load1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Wire coils XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.lowcab_fbed.load2
+{
+	accessories[]: .lowcab_fbed.load2.chassis
+	accessories[]: .lowcab_fbed.load2.fwheel
+	accessories[]: .lowcab_fbed.load2.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	engine_power: 140
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
 
 	# WHITE/GRAY
 	color[]: (0.9, 0.9, 0.9)
@@ -313,30 +421,31 @@ traffic_vehicle : traffic.lowcab_fbed2
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .lowcab_fbed2.chassis
+vehicle_accessory: .lowcab_fbed.load2.chassis
 {
-	data_path: "/def/vehicle/ai/lowcab/chassis_shutt2.sii"
+	data_path: "/def/vehicle/ai/lowcab/chassis_shutt_load2.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_fbed2.fwheel
+vehicle_wheel_accessory: .lowcab_fbed.load2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_fbed2.rwheel
+vehicle_wheel_accessory: .lowcab_fbed.load2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
 
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Flatbed - Load 4 ( Cable Rolls ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_vehicle : traffic.lowcab_fbed3
+
+
+traffic_vehicle : traffic.lowcab_dump.lime
 {
-	accessories[]: .lowcab_fbed3.chassis
-	accessories[]: .lowcab_fbed3.fwheel
-	accessories[]: .lowcab_fbed3.rwheel
+	accessories[]: .lowcab_dump.lime.chassis
+	accessories[]: .lowcab_dump.lime.fwheel
+	accessories[]: .lowcab_dump.lime.rwheel
 
 	tags[]: sm_truck
 
@@ -350,66 +459,6 @@ traffic_vehicle : traffic.lowcab_fbed3
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
-
-	# WHITE/GRAY
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.9, 0.9, 0.9)
-	color[]: (0.7084, 0.7084, 0.7084)
-	color[]: (0.6, 0.6, 0.6)
-	# YELLOW
-	color[]: (0.9909, 0.5522, 0.017)
-	# BLUE
-	color[]: (0.0685, 0.1248, 0.1812)
-	#silver
-	color[]: (0.3662, 0.3277, 0.2788)
-
-
-
-@include "drivers_generic.sui"
-}
-
-vehicle_accessory: .lowcab_fbed3.chassis
-{
-	data_path: "/def/vehicle/ai/lowcab/chassis_fbed_r.sii"
-}
-
-vehicle_wheel_accessory: .lowcab_fbed3.fwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
-}
-
-vehicle_wheel_accessory: .lowcab_fbed3.rwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
-}
-
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Dump Tailer ( blue ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-traffic_vehicle : traffic.lowcab_dumpt
-{
-	accessories[]: .lowcab_dumpt.chassis
-	accessories[]: .lowcab_dumpt.fwheel
-	accessories[]: .lowcab_dumpt.rwheel
-
-	tags[]: sm_truck
-
-	max_speed: 120
-
-	vehicle_mass: 8000
-
-	engine_power: 140
-
-	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
-	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
-	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
-
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	# WHITE/GRAY
 	color[]: (0.7084, 0.7084, 0.7084)
@@ -422,30 +471,30 @@ traffic_vehicle : traffic.lowcab_dumpt
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .lowcab_dumpt.chassis
+vehicle_accessory: .lowcab_dump.lime.chassis
 {
-	data_path: "/def/vehicle/ai/lowcab/chassis_d.sii"
+	data_path: "/def/vehicle/ai/lowcab/chassis_dump_lime.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dumpt.fwheel
+vehicle_wheel_accessory: .lowcab_dump.lime.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dumpt.rwheel
+vehicle_wheel_accessory: .lowcab_dump.lime.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }
 
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX variant Dump Tailer ( default ) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-traffic_vehicle : traffic.lowcab_dumpd
+
+traffic_vehicle : traffic.lowcab_dump.gravel
 {
-	accessories[]: .lowcab_dumpd.chassis
-	accessories[]: .lowcab_dumpd.fwheel
-	accessories[]: .lowcab_dumpd.rwheel
+	accessories[]: .lowcab_dump.gravel.chassis
+	accessories[]: .lowcab_dump.gravel.fwheel
+	accessories[]: .lowcab_dump.gravel.rwheel
 
 	tags[]: sm_truck
 
@@ -459,8 +508,6 @@ traffic_vehicle : traffic.lowcab_dumpd
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	# BLUE
 	color[]: (0.0685, 0.1248, 0.1812)
@@ -476,18 +523,68 @@ traffic_vehicle : traffic.lowcab_dumpd
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .lowcab_dumpd.chassis
+vehicle_accessory: .lowcab_dump.gravel.chassis
 {
-	data_path: "/def/vehicle/ai/lowcab/chassis_d1.sii"
+	data_path: "/def/vehicle/ai/lowcab/chassis_dump_gravel.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dumpd.fwheel
+vehicle_wheel_accessory: .lowcab_dump.gravel.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
 }
 
-vehicle_wheel_accessory: .lowcab_dumpd.rwheel
+vehicle_wheel_accessory: .lowcab_dump.gravel.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+
+traffic_vehicle : traffic.lowcab_dump.sand
+{
+	accessories[]: .lowcab_dump.sand.chassis
+	accessories[]: .lowcab_dump.sand.fwheel
+	accessories[]: .lowcab_dump.sand.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	engine_power: 140
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	# BLUE
+	color[]: (0.0685, 0.1248, 0.1812)
+	color[]: (0.0112, 0.0772, 0.258)
+	color[]: (0.0296, 0.0685, 0.1912)
+	color[]: (0.0284, 0.0467, 0.0723)
+	# RED/ORANGE
+	color[]: (0.2581, 0.0221, 0.0097)
+	color[]: (0.3185, 0, 0.0006)
+	color[]: (0.3423, 0, 0.0143)
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_dump.sand.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_dump_sand.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_dump.sand.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_dump.sand.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
@@ -511,9 +608,6 @@ traffic_vehicle : traffic.lowcab_box
 	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
-
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -576,8 +670,6 @@ traffic_vehicle : traffic.lowcab_box.r_eu_01
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -630,9 +722,6 @@ traffic_vehicle : traffic.lowcab_box.r_eu_02
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
-
 	engine_power: 140
 
 	# WHITE/GRAY
@@ -684,8 +773,6 @@ traffic_vehicle : traffic.lowcab_box.r_eu_03
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -738,8 +825,6 @@ traffic_vehicle : traffic.lowcab_box.r_eu_04
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -793,8 +878,6 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_01
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -854,8 +937,6 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_02
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -915,8 +996,6 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_03
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 
@@ -976,8 +1055,6 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_04
 	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 53
-	lod_dist[]: 70
 
 	engine_power: 140
 

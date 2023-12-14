@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.galon_p
+traffic_vehicle : traffic.galon.pol_ro
 {
-	accessories[]: .galon_p.chassis
-	accessories[]: .galon_p.fwheel
-	accessories[]: .galon_p.rwheel
+	accessories[]: .galon.pol_ro.chassis
+	accessories[]: .galon.pol_ro.fwheel
+	accessories[]: .galon.pol_ro.rwheel
 
 	max_speed: 160
 
@@ -10,8 +10,6 @@ traffic_vehicle : traffic.galon_p
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
 	
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
@@ -20,18 +18,18 @@ traffic_vehicle : traffic.galon_p
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .galon_p.chassis
+vehicle_accessory: .galon.pol_ro.chassis
 {
-	data_path: "/def/vehicle/ai/galon/chassis_police.sii"
+	data_path: "/def/vehicle/ai/galon/chassis_pol_ro.sii"
 }
 
-vehicle_wheel_accessory: .galon_p.fwheel
+vehicle_wheel_accessory: .galon.pol_ro.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
 }
 
-vehicle_wheel_accessory: .galon_p.rwheel
+vehicle_wheel_accessory: .galon.pol_ro.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"

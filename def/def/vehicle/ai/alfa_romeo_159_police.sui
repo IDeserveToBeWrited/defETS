@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.a_romeo_159.police
+traffic_vehicle : traffic.a_romeo_159.pol_it_gen
 {
-	accessories[]: .a_romeo_159.police.chassis
-	accessories[]: .a_romeo_159.police.fwheel
-	accessories[]: .a_romeo_159.police.rwheel
+	accessories[]: .a_romeo_159.pol_it_gen.chassis
+	accessories[]: .a_romeo_159.pol_it_gen.fwheel
+	accessories[]: .a_romeo_159.pol_it_gen.rwheel
 
 	max_speed: 160
 
@@ -10,28 +10,72 @@ traffic_vehicle : traffic.a_romeo_159.police
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 80
-	lod_dist[]: 100
-
+	prefer_variant: true 
+	
 	spawn_ratio: 0
 
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .a_romeo_159.police.chassis
+vehicle_accessory: .a_romeo_159.pol_it_gen.chassis
 {
-	data_path: "/def/vehicle/ai/alfa_romeo_159/chassis_police.sii"
+	data_path: "/def/vehicle/ai/alfa_romeo_159/chassis_pol_it_gen.sii"
 }
 
-vehicle_wheel_accessory: .a_romeo_159.police.fwheel
+vehicle_wheel_accessory: .a_romeo_159.pol_it_gen.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
 }
 
-vehicle_wheel_accessory: .a_romeo_159.police.rwheel
+vehicle_wheel_accessory: .a_romeo_159.pol_it_gen.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"
 }
+
+
+traffic_vehicle : traffic.a_romeo_159.pol_it
+{
+	accessories[]: .a_romeo_159.pol_it.chassis
+	accessories[]: .a_romeo_159.pol_it.fwheel
+	accessories[]: .a_romeo_159.pol_it.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	base: traffic.a_romeo_159.pol_it_gen
+
+	spawn_condition[]: .a_romeo_159.pol_it.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .a_romeo_159.pol_it.chassis
+{
+	data_path: "/def/vehicle/ai/alfa_romeo_159/chassis_pol_it.sii"
+}
+
+vehicle_wheel_accessory: .a_romeo_159.pol_it.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
+}
+
+vehicle_wheel_accessory: .a_romeo_159.pol_it.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"
+}
+
+
+traffic_spawn_condition: .a_romeo_159.pol_it.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "?*"
+}
+

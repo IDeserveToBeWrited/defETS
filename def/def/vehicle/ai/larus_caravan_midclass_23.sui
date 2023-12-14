@@ -1,0 +1,127 @@
+# XXXXXXXXXXXXXXXXXXX larus caravan XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.larus
+{
+	accessories[]: .larus.chassis
+	accessories[]: .larus.fwheel
+	accessories[]: .larus.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	color[]: (0.723, 0.6583, 0.491)
+
+	spawn_ratio: 0.3
+	
+
+	tags[]: caravan
+	
+	
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .larus.chassis
+{
+	data_path: "/def/vehicle/ai/larus_caravan_midclass_23/chassis_caravan.sii"
+}
+
+vehicle_wheel_accessory: .larus.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .larus.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_rear.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXX larus caravan rack XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.larus.rack
+{
+	accessories[]: .larus.rack.chassis
+	accessories[]: .larus.rack.fwheel
+	accessories[]: .larus.rack.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	color[]: (0.723, 0.6583, 0.491)
+
+	spawn_ratio: 0.3
+
+
+	tags[]: caravan
+
+	allow_parked: true
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .larus.rack.chassis
+{
+	data_path: "/def/vehicle/ai/larus_caravan_midclass_23/chassis_caravan_rack.sii"
+}
+
+vehicle_wheel_accessory: .larus.rack.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .larus.rack.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_rear.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXX larus caravan roof XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.larus.roof
+{
+	accessories[]: .larus.roof.chassis
+	accessories[]: .larus.roof.fwheel
+	accessories[]: .larus.roof.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	color[]: (0.723, 0.6583, 0.491)
+
+	tags[]: caravan
+
+	spawn_ratio: 0.3
+
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .larus.roof.chassis
+{
+	data_path: "/def/vehicle/ai/larus_caravan_midclass_23/chassis_caravan_roof.sii"
+}
+
+vehicle_wheel_accessory: .larus.roof.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
+}
+
+vehicle_wheel_accessory: .larus.roof.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/29_steel_rear.sii"
+}

@@ -230,6 +230,28 @@ default_input_entry : input.steer.genius.maxfire.grandias.12
 	configs[]: "steering.configured"
 }
 
+default_input_entry : input.steer.ps4.gamepad
+{
+	group: 1
+	weight: 90
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
+default_input_entry : input.steer.ps5.gamepad
+{
+	group: 1
+	weight: 95
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.relative <1> x"
+	configs[]: "steering.configured"
+}
+
 # Joystics
 
 default_input_entry : input.steer.saitek.x52.pro.flight
@@ -829,6 +851,30 @@ default_input_entry : input.pedals.genius.maxfighter.f17
 	configs[]: "pedals.configured"
 }
 
+default_input_entry : input.pedals.ps4.gamepad
+{
+	group: 10
+	weight: 70
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "traccelerate <1> ry 0"
+	configs[]: "brake <1> rx 0"
+	configs[]: "pedals.configured"
+}
+
+default_input_entry : input.pedals.ps5.gamepad
+{
+	group: 10
+	weight: 75
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "traccelerate <1> ry 0"
+	configs[]: "brake <1> rx 0"
+	configs[]: "pedals.configured"
+}
+
 # Default fallback
 
 default_input_entry : input.pedals.generic.joy
@@ -1101,6 +1147,26 @@ default_input_entry : input.look.saitek.pro.gamer.command.unit
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{80C006A3-0000-0000-0000-504944564944}'"
 
 	configs[]: "look.xy <1>"
+}
+
+default_input_entry : input.look.ps4.gamepad
+{
+	group: 30
+	weight: 80
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.gamepad <1>"
+}
+
+default_input_entry : input.look.ps5.gamepad
+{
+	group: 30
+	weight: 85
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.gamepad <1>"
 }
 
 # Default fallback
@@ -1597,63 +1663,47 @@ default_input_entry : input.gearbox.hshifter.switch.default
 
 # Gamepads
 
-default_input_entry : input.menu.xinput.gamepad
+default_input_entry : input.ui_joy.xinput.gamepad
 {
 	group: 70
 	weight: 170
 
 	names[]: "xinput.'xinput_gamepad_'"
-
-    # b12 = start
-	configs[]: "menu <1> 12"
-	configs[]: "ui_back <1> 12"
 }
 
-default_input_entry : input.menu.x360.gamepad
+default_input_entry : input.ui_joy.x360.gamepad
 {
 	group: 70
 	weight: 160
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
-
-	configs[]: "menu <1> 8"
-	configs[]: "ui_back <1> 8"
 }
 
-default_input_entry : input.menu.xbone.gamepad
+default_input_entry : input.ui_joy.xbone.gamepad
 {
 	group: 70
 	weight: 157
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
-
-	configs[]: "menu <1> 8"
-	configs[]: "ui_back <1> 8"
 }
 
-default_input_entry : input.menu.xbone7.gamepad
+default_input_entry : input.ui_joy.xbone7.gamepad
 {
 	group: 70
 	weight: 156
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
-
-	configs[]: "menu <1> 8"
-	configs[]: "ui_back <1> 8"
 }
 
-default_input_entry : input.menu.xone.gamepad
+default_input_entry : input.ui_joy.xone.gamepad
 {
 	group: 70
 	weight: 155
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
-
-	configs[]: "menu <1> 8"
-	configs[]: "ui_back <1> 8"
 }
 
-default_input_entry : input.menu.logitech.rumblepad.2.usb
+default_input_entry : input.ui_joy.logitech.rumblepad.2.usb
 {
 	group: 70
 	weight: 150
@@ -1664,7 +1714,7 @@ default_input_entry : input.menu.logitech.rumblepad.2.usb
 	configs[]: "ui_back <1> 3"
 }
 
-default_input_entry : input.menu.logitech.f710.x
+default_input_entry : input.ui_joy.logitech.f710.x
 {
 	group: 70
 	weight: 140
@@ -1675,7 +1725,7 @@ default_input_entry : input.menu.logitech.f710.x
 	configs[]: "ui_back <1> 3"
 }
 
-default_input_entry : input.menu.logitech.f710.di
+default_input_entry : input.ui_joy.logitech.f710.di
 {
 	group: 70
 	weight: 130
@@ -1684,6 +1734,88 @@ default_input_entry : input.menu.logitech.f710.di
 
 	configs[]: "menu <1> 3"
 	configs[]: "ui_back <1> 3"
+}
+
+default_input_entry : input.ui_joy.ps4.gamepad
+{
+	group: 70
+	weight: 150
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	# Square = b1, Cross = b2, Circle = b3, Triangle = b4
+	# L1 = b5, R1 = b6, L2 = rx/b7, R2 = ry/b8
+	# Share = b9, Options = b10
+	# Left Joy = x/y, Right Joy = y/rz
+	# Left Joy Press = b11, Right Joy Press = b12
+	configs[]: "ui_back b3"
+	configs[]: "selectfcs b2"
+	configs[]: "shortcut1 b1"
+	configs[]: "shortcut2 b4"
+	configs[]: "nav_prv b5"
+	configs[]: "nav_nxt b6"
+	configs[]: "sec_prv rx"
+	configs[]: "sec_nxt ry"
+	configs[]: "scroll_j_x z"
+	configs[]: "scroll_j_y rz"
+	configs[]: "j_mappan_x z"
+	configs[]: "j_mappan_y rz"
+	configs[]: "j_mapzom_in ry"
+	configs[]: "j_mapzom_out rx"
+	configs[]: "j_cam_lk_lr z"
+	configs[]: "j_cam_lk_ud rz"
+	configs[]: "j_cam_mv_lr x"
+	configs[]: "j_cam_mv_ud y"
+	configs[]: "j_trzoom_in ry"
+	configs[]: "j_trzoom_out rx"
+	configs[]: "photoup b8"
+	configs[]: "photodown b7"
+	configs[]: "photosnap b1"
+	configs[]: "photosman b9"
+	configs[]: "photo_hctrl b11"
+	configs[]: "photores b12"
+	configs[]: "camwalk_crou b11"
+}
+
+default_input_entry : input.ui_joy.ps5.gamepad
+{
+	group: 70
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	# Square = b1, Cross = b2, Circle = b3, Triangle = b4
+	# L1 = b5, R1 = b6, L2 = rx/b7, R2 = ry/b8
+	# Share = b9, Options = b10
+	# Left Joy = x/y, Right Joy = y/rz
+	# Left Joy Press = b11, Right Joy Press = b12
+	configs[]: "ui_back b3"
+	configs[]: "selectfcs b2"
+	configs[]: "shortcut1 b1"
+	configs[]: "shortcut2 b4"
+	configs[]: "nav_prv b5"
+	configs[]: "nav_nxt b6"
+	configs[]: "sec_prv rx"
+	configs[]: "sec_nxt ry"
+	configs[]: "scroll_j_x z"
+	configs[]: "scroll_j_y rz"
+	configs[]: "j_mappan_x z"
+	configs[]: "j_mappan_y rz"
+	configs[]: "j_mapzom_in ry"
+	configs[]: "j_mapzom_out rx"
+	configs[]: "j_cam_lk_lr z"
+	configs[]: "j_cam_lk_ud rz"
+	configs[]: "j_cam_mv_lr x"
+	configs[]: "j_cam_mv_ud y"
+	configs[]: "j_trzoom_in ry"
+	configs[]: "j_trzoom_out rx"
+	configs[]: "photoup b8"
+	configs[]: "photodown b7"
+	configs[]: "photosnap b1"
+	configs[]: "photosman b9"
+	configs[]: "photo_hctrl b11"
+	configs[]: "photores b12"
+	configs[]: "camwalk_crou b11"
 }
 
 
@@ -1695,6 +1827,9 @@ default_input_entry : input.misc.xinput.gamepad
 	weight: 170
 
 	names[]: "xinput.'xinput_gamepad_'"
+
+	# b12 = start
+	configs[]: "menu <1> 12"
 
 	# b5 = LB, b6 = RB
 	configs[]: "blinkers <1> b5 b6"
@@ -1716,17 +1851,6 @@ default_input_entry : input.misc.xinput.gamepad
 	configs[]: "light <1> pov1_left"
 	configs[]: "wippers <1> pov1_right"
 	configs[]: "navmap <1> pov1_down"
-
-	# focused select
-	configs[]: "selectfcs <1> b3"
-
-	# scroll
-	configs[]: "scroll_up <1> lt"
-	configs[]: "scroll_down <1> rt"
-
-	# zoom
-	configs[]: "zoom_in <1> rt"
-	configs[]: "zoom_out <1> lt"
 }
 
 default_input_entry : input.misc.x360.gamepad
@@ -1736,6 +1860,7 @@ default_input_entry : input.misc.x360.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
 
+	configs[]: "menu <1> 8"
 	configs[]: "blinkers <1> b5 b6"
 	configs[]: "advisor <1> b7"
 	configs[]: "activate <1> b1"
@@ -1752,6 +1877,7 @@ default_input_entry : input.misc.xbone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
 
+	configs[]: "menu <1> 8"
 	configs[]: "blinkers <1> b5 b6"
 	configs[]: "advisor <1> b7"
 	configs[]: "activate <1> b1"
@@ -1768,6 +1894,7 @@ default_input_entry : input.misc.xbone7.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
 
+	configs[]: "menu <1> 8"
 	configs[]: "blinkers <1> b5 b6"
 	configs[]: "advisor <1> b7"
 	configs[]: "activate <1> b1"
@@ -1784,6 +1911,7 @@ default_input_entry : input.misc.xone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
 
+	configs[]: "menu <1> 8"
 	configs[]: "blinkers <1> b5 b6"
 	configs[]: "advisor <1> b7"
 	configs[]: "activate <1> b1"
@@ -1791,6 +1919,62 @@ default_input_entry : input.misc.xone.gamepad
 	configs[]: "attach <1> pov1_up"
 	configs[]: "light <1> pov1_left"
 	configs[]: "wippers <1> pov1_right"
+}
+
+default_input_entry : input.misc.ps4.gamepad
+{
+	group: 80
+	weight: 154
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	# Options = b10, Share = b9
+	configs[]: "menu <1> 10"
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b9"
+
+	# Square = b1, Cross = b2, Circle = B3, Triangle = B4
+	configs[]: "activate <1> b2"
+	configs[]: "camera1 <1> b3"
+	configs[]: "cruise <1> b1"
+	configs[]: "attach <1> b4"
+
+	# b11 = left stick press, b12 = right stick press
+	configs[]: "horn <1> b11"
+	configs[]: "engine <1> b12"
+
+	configs[]: "cameranext <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+	configs[]: "navmap <1> pov1_down"
+}
+
+default_input_entry : input.misc.ps5.gamepad
+{
+	group: 80
+	weight: 155
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	# Options = b10, Share = b9
+	configs[]: "menu <1> 10"
+	configs[]: "blinkers <1> b5 b6"
+	configs[]: "advisor <1> b9"
+
+	# Square = b1, Cross = b2, Circle = B3, Triangle = B4
+	configs[]: "activate <1> b2"
+	configs[]: "camera1 <1> b3"
+	configs[]: "cruise <1> b1"
+	configs[]: "attach <1> b4"
+
+	# b11 = left stick press, b12 = right stick press
+	configs[]: "horn <1> b11"
+	configs[]: "engine <1> b12"
+
+	configs[]: "cameranext <1> pov1_up"
+	configs[]: "light <1> pov1_left"
+	configs[]: "wippers <1> pov1_right"
+	configs[]: "navmap <1> pov1_down"
 }
 
 ############################ Various information about controllers, intended to be used for standalone queries #############################
@@ -2003,6 +2187,26 @@ default_input_entry : input.info.genius.maxfire.grandias.12
 	weight: 1
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{10001345-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.ps4.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "is.gamepad"
+}
+
+default_input_entry : input.info.ps5.gamepad
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
 
 	configs[]: "is.gamepad"
 }
@@ -2411,44 +2615,151 @@ default_input_config : icfg.drive.gearupdown
 	values[]: "reverse=semantical.reverse?0"
 }
 
-# Configuration of the menu button.
-
 default_input_config : icfg.menu
 {
 	values[]: "menu=keyboard.esc?0 | <1>.b<2>?0 | semantical.menu?0"
 }
+
+# Configuration of the menu buttons for ui_joy devices.
+# Values should contain templates for ui_joy configs that are appendeded into the mix.
+
 default_input_config : icfg.ui_back
 {
-	values[]: "back=keyboard.esc?0 | <1>.b<2>?0 | semantical.back?0"
-	values[]: "skip=keyboard.esc?0 | <1>.b<2>?0"
+	values[]: "back=ui_joy.<1>?0"
+	values[]: "skip=ui_joy.<1>?0"
 }
-
-# Configuration of various functionalities
 
 default_input_config: icfg.selectfcs
 {
-	values[]: "selectfcs=keyboard.enter?0 | keyboard.numenter?0 | <1>.<2>?0"
+	values[]: "selectfcs=ui_joy.<1>?0"
 }
 
-default_input_config: icfg.scroll_up
+default_input_config: icfg.shortcut1
 {
-	values[]: "scrol_up=mouse.wheel_up?0 | <1>.<2>?0 | semantical.scrol_up?0"
+	values[]: "shortcut_1=ui_joy.<1>?0"
 }
 
-default_input_config: icfg.scroll_down
+default_input_config: icfg.shortcut2
 {
-	values[]: "scrol_dwn=mouse.wheel_down?0 | <1>.<2>?0 | semantical.scrol_dwn?0"
+	values[]: "shortcut_2=ui_joy.<1>?0"
 }
 
-default_input_config: icfg.zoom_in
+default_input_config: icfg.nav_prv
 {
-	values[]: "mapzoom_in=mouse.wheel_up?0 | <1>.<2>?0 | semantical.mapzoom_in?0"
+	values[]: "joy_nav_prv=bool(ui_joy.<1>?0)"
 }
 
-default_input_config: icfg.zoom_out
+default_input_config: icfg.nav_nxt
 {
-	values[]: "mapzoom_out=mouse.wheel_down?0 | <1>.<2>?0 | semantical.mapzoom_out?0"
+	values[]: "joy_nav_nxt=bool(ui_joy.<1>?0)"
 }
+
+default_input_config: icfg.sec_prv
+{
+	values[]: "joy_sec_prv=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.sec_nxt
+{
+	values[]: "joy_sec_nxt=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.scroll_j_x
+{
+	values[]: "scroll_j_x=deadzone(ui_joy.<1>?0, c_lr_dz)"
+}
+
+default_input_config: icfg.scroll_j_y
+{
+	values[]: "scroll_j_y=deadzone(ui_joy.<1>?0, c_ud_dz)"
+}
+
+default_input_config: icfg.j_mappan_x
+{
+	values[]: "j_mappan_x=deadzone(ui_joy.<1>?0, c_lr_dz)"
+}
+
+default_input_config: icfg.j_mappan_y
+{
+	values[]: "j_mappan_y=deadzone(ui_joy.<1>?0, c_ud_dz)"
+}
+
+default_input_config: icfg.j_mapzom_in
+{
+	values[]: "j_mapzom_in=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.j_mapzom_out
+{
+	values[]: "j_mapzom_out=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.j_cam_lk_lr
+{
+	values[]: "j_cam_lk_lr=deadzone(ui_joy.<1>?0, c_lr_dz)"
+}
+
+default_input_config: icfg.j_cam_lk_ud
+{
+	values[]: "j_cam_lk_ud=deadzone(ui_joy.<1>?0, c_ud_dz)"
+}
+
+default_input_config: icfg.j_cam_mv_lr
+{
+	values[]: "j_cam_mv_lr=deadzone(ui_joy.<1>?0, c_lr_dz)"
+}
+
+default_input_config: icfg.j_cam_mv_ud
+{
+	values[]: "j_cam_mv_ud=deadzone(ui_joy.<1>?0, c_ud_dz)"
+}
+
+default_input_config: icfg.j_trzoom_in
+{
+	values[]: "j_trzoom_in=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.j_trzoom_out
+{
+	values[]: "j_trzoom_out=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photoup
+{
+	values[]: "photoup=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photodown
+{
+	values[]: "photodown=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photosnap
+{
+	values[]: "photosnap=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photosman
+{
+	values[]: "photosman=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photo_hctrl
+{
+	values[]: "photo_hctrl=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.photores
+{
+	values[]: "photores=bool(ui_joy.<1>?0)"
+}
+
+default_input_config: icfg.camwalk_crou
+{
+	values[]: "camwalk_crou=bool(ui_joy.<1>?0)"
+}
+
+# Configuration of various functionalities
 
 default_input_config: icfg.blinkers
 {
@@ -2483,7 +2794,7 @@ default_input_config: icfg.light
 
 default_input_config: icfg.wippers
 {
-	values[]: "wippers=keyboard.p?0 | <1>.<2>?0 | semantical.wippers?0"
+	values[]: "wipers=keyboard.p?0 | <1>.<2>?0 | semantical.wipers?0"
 }
 
 default_input_config: icfg.horn

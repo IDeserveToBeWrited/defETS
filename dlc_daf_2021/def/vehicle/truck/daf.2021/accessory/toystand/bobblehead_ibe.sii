@@ -1,0 +1,35 @@
+SiiNunit
+{
+
+accessory_addon_int_data : bhead_ibe.daf.2021.toystand
+{
+	name: "@@iberian_mask_bobblehead@@"
+	price: 110
+	unlock: 0
+	icon: "toystand/bbhead_ibe"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/bobblehead_ibe.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toystand/bobblehead_h_ibe.pmc"
+
+	steam_inventory_id: 89
+	data[]: .t_bb_ibe.phys_data
+}
+
+physics_toy_data : .t_bb_ibe.phys_data
+{
+
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/bobblehead_h_ibe.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/bobblehead_h_ibe.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.010f, 0.102f, 0.002f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (30.0, 30.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+
+}

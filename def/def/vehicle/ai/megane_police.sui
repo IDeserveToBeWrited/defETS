@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.megane.police
+traffic_vehicle : traffic.megane.pol_fr_gen
 {
-	accessories[]: .megane.police.chassis
-	accessories[]: .megane.police.fwheel
-	accessories[]: .megane.police.rwheel
+	accessories[]: .megane.pol_fr_gen.chassis
+	accessories[]: .megane.pol_fr_gen.fwheel
+	accessories[]: .megane.pol_fr_gen.rwheel
 
 	max_speed: 160
 
@@ -11,27 +11,77 @@ traffic_vehicle : traffic.megane.police
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 	sound_move[]: "/sound/traffic/car_normal_3.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
-
 	spawn_ratio: 0
+
+	prefer_variant: true
+	
+	variant[]: traffic.megane.pol_fr
+
+	
 
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .megane.police.chassis
+vehicle_accessory: .megane.pol_fr_gen.chassis
 {
-	data_path: "/def/vehicle/ai/renault_megane/chassis_police.sii"
+	data_path: "/def/vehicle/ai/megane/chassis_fr_gen.sii"
 }
 
-vehicle_wheel_accessory: .megane.police.fwheel
+vehicle_wheel_accessory: .megane.pol_fr_gen.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_4.sii"
+}
+
+vehicle_wheel_accessory: .megane.pol_fr_gen.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_4.sii"
+}
+
+
+
+traffic_vehicle : traffic.megane.pol_fr
+{
+	accessories[]: .megane.pol_fr.chassis
+	accessories[]: .megane.pol_fr.fwheel
+	accessories[]: .megane.pol_fr.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	spawn_condition[]: .megane.pol_fr.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .megane.pol_fr.chassis
+{
+	data_path: "/def/vehicle/ai/megane/chassis_fr.sii"
+}
+
+vehicle_wheel_accessory: .megane.pol_fr.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_16in_2.sii"
 }
 
-vehicle_wheel_accessory: .megane.police.rwheel
+vehicle_wheel_accessory: .megane.pol_fr.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_16in_2.sii"
 }
+
+traffic_spawn_condition: .megane.pol_fr.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "?*"
+}
+
+
+

@@ -1,0 +1,44 @@
+traffic_vehicle : traffic.voltse
+{
+	accessories[]: .voltse.chassis
+	accessories[]: .voltse.fwheel
+	accessories[]: .voltse.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_electric_1.soundref"
+
+
+	color[]: (0, 0.1122, 0.0354) #green
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.5902, 0.4279, 0.0168) #yellow
+	color[]: (0, 0.0527, 0.2177) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	tags[]: expensive
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .voltse.chassis
+{
+	data_path: "/def/vehicle/ai/voltison_sedan/chassis.sii"
+}
+
+vehicle_wheel_accessory: .voltse.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_front.sii"
+}
+
+vehicle_wheel_accessory: .voltse.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_rear.sii"
+}

@@ -1,0 +1,50 @@
+###########################
+##
+##  steam locomotive - default
+##
+###########################
+
+traffic_vehicle : traffic.steaml
+{
+	accessories[]: .steaml.chassis
+	accessories[]: .steaml.fwheel
+	accessories[]: .steaml.rwheel
+
+	max_speed: 35
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_car.streaml_slc | train_car.streaml_slc | train_car.streaml_sl | train_car.streaml_sl | train_car.streaml_bus"
+
+	sound_move[]: "/sound/traffic/train_steam_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1
+
+	spawn_condition[]: .traffic.steaml.spawn.condition
+}
+traffic_spawn_condition: .traffic.steaml.spawn.condition
+{
+	type: area
+	str_param[]: "xmas"
+}
+
+vehicle_accessory: .steaml.chassis
+{
+	data_path: "/def/vehicle/ai/steam_locomotive/chassis.sii"
+}
+
+vehicle_wheel_accessory: .steaml.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .steaml.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+

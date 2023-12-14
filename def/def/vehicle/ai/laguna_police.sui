@@ -1,8 +1,8 @@
-traffic_vehicle: traffic.laguna.police
+traffic_vehicle: traffic.laguna.pol_lv_old
 {
-	accessories[]: .laguna.police.chassis
-	accessories[]: .laguna.police.fwheel
-	accessories[]: .laguna.police.rwheel
+	accessories[]: .laguna.pol_lv_old.chassis
+	accessories[]: .laguna.pol_lv_old.fwheel
+	accessories[]: .laguna.pol_lv_old.rwheel
 
 	max_speed: 180
 
@@ -10,8 +10,6 @@ traffic_vehicle: traffic.laguna.police
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
 
 	color[]: (1, 1, 1) #white
 
@@ -20,18 +18,57 @@ traffic_vehicle: traffic.laguna.police
 @include "drivers_generic_police.sui"
 }
 
-vehicle_accessory: .laguna.police.chassis
+vehicle_accessory: .laguna.pol_lv_old.chassis
 {
-	data_path: "/def/vehicle/ai/laguna/police.sii"
+	data_path: "/def/vehicle/ai/laguna/police_lv_old.sii"
 }
 
-vehicle_wheel_accessory: .laguna.police.fwheel
+vehicle_wheel_accessory: .laguna.pol_lv_old.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
 }
 
-vehicle_wheel_accessory: .laguna.police.rwheel
+vehicle_wheel_accessory: .laguna.pol_lv_old.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"
+}
+
+
+
+traffic_vehicle: traffic.laguna.pol_lv
+{
+	accessories[]: .laguna.pol_lv.chassis
+	accessories[]: .laguna.pol_lv.fwheel
+	accessories[]: .laguna.pol_lv.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0.0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .laguna.pol_lv.chassis
+{
+	data_path: "/def/vehicle/ai/laguna/police_lv.sii"
+}
+
+vehicle_wheel_accessory: .laguna.pol_lv.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_l.sii"
+}
+
+vehicle_wheel_accessory: .laguna.pol_lv.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_l.sii"

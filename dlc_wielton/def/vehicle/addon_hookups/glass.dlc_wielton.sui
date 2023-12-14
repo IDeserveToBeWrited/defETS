@@ -1,0 +1,41 @@
+accessory_hookup_int_data :  p_wielton.addon_hookup
+{
+	name: "@@wielton_pennant@@"
+	price: 150
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toyglass/pennant_wielton"
+	part_type: licensed
+
+	model:			"/vehicle/truck/upgrade/interior_decors/toyglass/sucker_wielton.pmd"
+	coll:	                "/vehicle/truck/upgrade/interior_decors/toyglass/sucker_wielton.pmc"
+
+	data[]: .p_wielton.phys_data
+	suitable_for[]: "set_glass"
+}
+
+physics_toy_data : .p_wielton.phys_data
+{
+	phys_model:		"/vehicle/truck/upgrade/interior_decors/toyglass/pennant_wielton.pmd"
+	phys_model_coll:	"/vehicle/truck/upgrade/interior_decors/toyglass/pennant_wielton.pmc"     
+  
+	rope_material:		"/material/ropes/rope_black.mat"
+
+	toy_type:		"TT_double_rope"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:		0.1				# toy mass
+	linear_damping:		0.99
+
+	linear_stiffness: 	1.0				# rope - influences rope springing
+	locator_hook_offset:	(0.0f, 0.0015f, -0.0035f)	# offset of connection point on hook against toy locator
+
+	# definitions valid only for toys with rope
+	rope_width:		0.002				# width of rope
+	rope_length:		0.06				# length of rope, in the case of double_rope, distance between hook and toy
+	rope_hook_offset:	0.06				# double_rope - distance between hooks, locator is in the middle
+	rope_toy_offset:	0.047				# double_rope - distance between rope tingles at toy
+	rope_resolution:	3				# number of inner nodes of rope, except end nodes with anchors
+	rope_linear_density:	1.0				# density, i.e. weight of rope per 1 m of length
+	position_iterations:	4				# number of iterations in position solver
+	node_damping:		0.99				# rope node velocity damping
+}
+
+ 

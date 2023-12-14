@@ -39,7 +39,11 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2
 
 	name: "crossroad 2x2"
 
-	model[]: "city"
+	model[0]: "city"
+	model[1]: "city"
+	model[2]: "city"
+	model[3]: "city"
+	model[4]: ""
 
 	type[0]: traffic_light_minor
 	type[1]: traffic_light_major
@@ -54,6 +58,73 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2
 	cycle[1]: 21.0
 	cycle[2]: 0.0
 	cycle[3]: 21.0
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2_gntry
+{
+
+	name: "crossroad 2x2 gantry"
+
+	model[0]: ""
+	model[1]: ""
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+	model[5]: ""
+	model[6]: ""
+	model[7]: ""
+	model[8]: ""
+	model[9]: ""
+	model[10]: "city"
+	model[11]: "city"
+	model[12]: "city"
+	model[13]: "city"
+	model[14]: "sa"
+	model[15]: "sa"
+	model[16]: "sa_horiz"
+	model[17]: "sa_horiz"
+	model[18]: ""
+
+	type[0]: traffic_light
+	type[1]: traffic_light
+	type[2]: traffic_light
+	type[3]: traffic_light
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light
+	type[9]: traffic_light
+	type[10]: traffic_light_minor
+	type[11]: traffic_light_major
+	type[12]: traffic_light_minor
+	type[13]: traffic_light_major
+	type[14]: traffic_light_minor
+	type[15]: traffic_light_major
+	type[16]: traffic_light
+	type[17]: traffic_light
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 21.0
+	cycle[10]: 0.0
+	cycle[11]: 21.0
+	cycle[12]: 0.0
+	cycle[13]: 21.0
+	cycle[14]: 0.0
+	cycle[15]: 21.0
+	cycle[16]: 0.0
+	cycle[17]: 21.0
+
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2_alt
@@ -102,6 +173,96 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1
 	cycle[1]: 21.0
 	cycle[2]: 0.0
 	cycle[3]: 21.0
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x1_turn
+{
+
+	name: "crossroad 2x1"
+
+	model[0]: "single"
+	model[1]: "city_str"
+	model[2]: "city_l"
+	model[3]: "city"
+	model[4]: "single"
+	model[5]: "duo_str"
+	model[6]: "single"
+	model[7]: "duo_left"
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_major
+	type[3]: traffic_light_major
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+
+	interval[0]: (15.0, 2.0, 41.0, 2.0)
+	interval[1]: (33.0, 2.0, 23.0, 2.0)
+	interval[2]: (10.0, 2.0, 46.0, 2.0)
+	interval[3]: (15.0, 2.0, 41.0, 2.0)
+	interval[4]: (15.0, 2.0, 41.0, 2.0)
+	interval[5]: (33.0, 2.0, 23.0, 2.0)
+	interval[6]: (15.0, 2.0, 41.0, 2.0)
+	interval[7]: (10.0, 2.0, 46.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 39.0
+	cycle[2]: 39.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 39.0
+	cycle[6]: 21.0
+	cycle[7]: 39.0
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2_turn
+{
+
+	name: "crossroad 2x1"
+
+	model[0]: "city"
+	model[1]: "city_str"
+	model[2]: "city_l"
+	model[3]: "city"
+	model[4]: "single"
+	model[5]: "duo_str"
+	model[6]: "single"
+	model[7]: "duo_left"
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_major
+	type[3]: traffic_light_major
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+
+	interval[0]: (15.0, 2.0, 41.0, 2.0)
+	interval[1]: (33.0, 2.0, 23.0, 2.0)
+	interval[2]: (10.0, 2.0, 46.0, 2.0)
+	interval[3]: (15.0, 2.0, 41.0, 2.0)
+	interval[4]: (15.0, 2.0, 41.0, 2.0)
+	interval[5]: (33.0, 2.0, 23.0, 2.0)
+	interval[6]: (15.0, 2.0, 41.0, 2.0)
+	interval[7]: (10.0, 2.0, 46.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 39.0
+	cycle[2]: 39.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 39.0
+	cycle[6]: 21.0
+	cycle[7]: 39.0
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1t
@@ -155,7 +316,6 @@ tr_semaphore_profile : tr_sem_prof.cr_1tx1
 	cycle[2]: 0.0
 	cycle[3]: 21.0
 }
-
 
 tr_semaphore_profile : tr_sem_prof.cr_1x2
 {
@@ -310,6 +470,41 @@ tr_semaphore_profile : tr_sem_prof.crossing
 	id_map[3]: 0
 	id_map[4]: 0
 }
+
+tr_semaphore_profile : tr_sem_prof.crossing_smp
+{
+
+	name: "road crossing - simple"
+
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	interval[]: (100.0, 500.0, 300.0, 50.0)
+	cycle[]: 3.0
+
+	type[0]: barrier_distance
+	type[1]: model_only
+	type[2]: model_only
+	type[3]: model_only
+	type[4]: model_only
+
+	model[0]: ""
+	model[1]: "crossing_r_s"
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+
+	id_map[0]: 0
+	id_map[1]: 0
+	id_map[2]: 0
+	id_map[3]: 0
+	id_map[4]: 0
+}
+
 
 tr_semaphore_profile : tr_sem_prof.crossing_s
 {
@@ -467,7 +662,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.uk
 	inherited: tr_sem_prof.cr_1x1.uk
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.netherlands 
+tr_semaphore_profile : tr_sem_prof.cr_1x1.netherlands
 {
 
 	name: "crossroad 1x1 nl"
@@ -483,7 +678,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.netherlands
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.netherlands 
+tr_semaphore_profile : tr_sem_prof.cr_2x2.netherlands
 {
 
 	name: "crossroad 2x2 nl"
@@ -499,7 +694,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.netherlands
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.netherlands 
+tr_semaphore_profile : tr_sem_prof.cr_2x1.netherlands
 {
 
 	name: "crossroad 2x1 nl"
@@ -515,7 +710,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.netherlands
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.netherlands 
+tr_semaphore_profile : tr_sem_prof.cr_1x2.netherlands
 {
 
 	name: "crossroad 1x2 nl"
@@ -531,7 +726,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x2.netherlands
 	cycle[3]: 19.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x1.germany 
+tr_semaphore_profile : tr_sem_prof.cr_1x1.germany
 {
 
 	name: "crossroad 1x1 nl"
@@ -547,12 +742,29 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.germany
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x2.germany 
+tr_semaphore_profile : tr_sem_prof.cr_2x2.germany
 {
 
 	name: "crossroad 2x2 nl"
 
 	inherited: tr_sem_prof.cr_2x2
+
+	model[0]: "city"
+	model[1]: "city"
+	model[2]: "city"
+	model[3]: "city"
+	model[4]: ""
+	model[5]: "single"
+	model[6]: "single"
+	model[7]: ""
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light
+	type[6]: traffic_light
 
 	interval[]: (15.0, 2.0, 22.0, 1.0)
 
@@ -561,9 +773,12 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2.germany
 	cycle[1]: 20.0
 	cycle[2]: 0.0
 	cycle[3]: 20.0
+	cycle[4]: 0.0
+	cycle[5]: 20.0
+	cycle[6]: 0.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_2x1.germany 
+tr_semaphore_profile : tr_sem_prof.cr_2x1.germany
 {
 
 	name: "crossroad 2x1 nl"
@@ -579,7 +794,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1.germany
 	cycle[3]: 20.0
 }
 
-tr_semaphore_profile : tr_sem_prof.cr_1x2.germany 
+tr_semaphore_profile : tr_sem_prof.cr_1x2.germany
 {
 
 	name: "crossroad 1x2 nl"
@@ -599,134 +814,134 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1.belgium
 {
 
 	name: "crossroad 1x1 b"
-	inherited: tr_sem_prof.cr_1x1.netherlands 
+	inherited: tr_sem_prof.cr_1x1.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2.belgium
 {
 
 	name: "crossroad 2x2 b"
-	inherited: tr_sem_prof.cr_2x2.netherlands 
+	inherited: tr_sem_prof.cr_2x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x1.belgium
 {
 
 	name: "crossroad 2x1 b"
-	inherited: tr_sem_prof.cr_2x1.netherlands 
+	inherited: tr_sem_prof.cr_2x1.netherlands
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x2.belgium
 {
 
 	name: "crossroad 1x2 b"
-	inherited: tr_sem_prof.cr_1x2.netherlands 
+	inherited: tr_sem_prof.cr_1x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1.italy
 {
 
 	name: "crossroad 1x1 i"
-	inherited: tr_sem_prof.cr_1x1.netherlands 
+	inherited: tr_sem_prof.cr_1x1.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2.italy
 {
 
 	name: "crossroad 2x2 i"
-	inherited: tr_sem_prof.cr_2x2.netherlands 
+	inherited: tr_sem_prof.cr_2x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x1.italy
 {
 
 	name: "crossroad 2x1 i"
-	inherited: tr_sem_prof.cr_2x1.netherlands 
+	inherited: tr_sem_prof.cr_2x1.netherlands
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x2.italy
 {
 
 	name: "crossroad 1x2 i"
-	inherited: tr_sem_prof.cr_1x2.netherlands 
+	inherited: tr_sem_prof.cr_1x2.netherlands
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x1.luxembourg
 {
 
 	name: "crossroad 1x1 l"
-	inherited: tr_sem_prof.cr_1x1.netherlands 
+	inherited: tr_sem_prof.cr_1x1.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2.luxembourg
 {
 
 	name: "crossroad 2x2 l"
-	inherited: tr_sem_prof.cr_2x2.netherlands 
+	inherited: tr_sem_prof.cr_2x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x1.luxembourg
 {
 
 	name: "crossroad 2x1 l"
-	inherited: tr_sem_prof.cr_2x1.netherlands 
+	inherited: tr_sem_prof.cr_2x1.netherlands
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x2.luxembourg
 {
 
 	name: "crossroad 1x2 l"
-	inherited: tr_sem_prof.cr_1x2.netherlands 
+	inherited: tr_sem_prof.cr_1x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1.france
 {
 
 	name: "crossroad 1x1 f"
-	inherited: tr_sem_prof.cr_1x1.netherlands 
+	inherited: tr_sem_prof.cr_1x1.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2.france
 {
 
 	name: "crossroad 2x2 f"
-	inherited: tr_sem_prof.cr_2x2.netherlands 
+	inherited: tr_sem_prof.cr_2x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x1.france
 {
 
 	name: "crossroad 2x1 f"
-	inherited: tr_sem_prof.cr_2x1.netherlands 
+	inherited: tr_sem_prof.cr_2x1.netherlands
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x2.france
 {
 
 	name: "crossroad 1x2 f"
-	inherited: tr_sem_prof.cr_1x2.netherlands 
+	inherited: tr_sem_prof.cr_1x2.netherlands
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1.poland
 {
 
 	name: "crossroad 1x1 pl"
-	inherited: tr_sem_prof.cr_1x1.germany 
+	inherited: tr_sem_prof.cr_1x1.germany
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x2.poland
 {
 
 	name: "crossroad 2x2 pl"
-	inherited: tr_sem_prof.cr_2x2.germany 
+	inherited: tr_sem_prof.cr_2x2.germany
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_2x1.poland
 {
 
 	name: "crossroad 2x1 pl"
-	inherited: tr_sem_prof.cr_2x1.germany 
+	inherited: tr_sem_prof.cr_2x1.germany
 }
 tr_semaphore_profile : tr_sem_prof.cr_1x2.poland
 {
 
 	name: "crossroad 1x2 pl"
-	inherited: tr_sem_prof.cr_1x2.germany 
+	inherited: tr_sem_prof.cr_1x2.germany
 }
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1.denmark
@@ -1298,6 +1513,7 @@ tr_semaphore_profile : tr_sem_prof.cr_1x1_tr
 	model[7]: ""
 
 }
+
 
 ###################
 ### CROSS 1 x 2 ###
@@ -2294,6 +2510,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_tram
 	model[10]: "singletr"
 	model[11]: "singletr"
 	model[12]: "singletr"
+	model[13]: ""
 
 	type[0]: traffic_light_minor
 	type[1]: traffic_light_major
@@ -2308,6 +2525,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_tram
 	type[10]: traffic_light_major
 	type[11]: traffic_light_minor
 	type[12]: traffic_light_major
+	type[13]: traffic_light
 
 	interval[]: (15.0, 2.0, 23.0, 2.0)
 
@@ -2325,6 +2543,106 @@ tr_semaphore_profile : tr_sem_prof.cr_2x2_tram
 	cycle[10]: 21.0
 	cycle[11]: 0.0
 	cycle[12]: 21.0
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
+}
+
+tr_semaphore_profile : tr_sem_prof.rnd_bern
+{
+	name: "roundabout tram bern"
+
+	model[0]: "singletr"
+	type[0]: traffic_light_minor
+	cycle[0]: 21.0
+
+	model[1]: "collumn"
+	type[1]: traffic_light_minor
+	cycle[1]: 0.0
+
+	model[2]: "collumn"
+	type[2]: traffic_light
+	cycle[2]: 0.0
+
+	# default
+	model[3]: ""
+	type[3]: traffic_light
+	cycle[3]: 0.0
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2_tr_g
+{
+
+	name: "crossroad 2x2 tram gantry"
+
+	model[0]: ""
+	model[1]: ""
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+	model[5]: ""
+	model[6]: ""
+	model[7]: ""
+	model[8]: ""
+	model[9]: ""
+	model[10]: "singletr"
+	model[11]: "singletr"
+	model[12]: "singletr"
+	model[13]: ""
+	model[14]: ""
+	model[15]: ""
+	model[16]: ""
+	model[17]: ""
+	model[18]: ""
+	model[19]: ""
+	model[20]: "city"
+	model[21]: "city"
+	model[22]: "city"
+	model[23]: "city"
+	model[24]: "sa"
+	model[25]: "sa"
+	model[26]: "sa_horiz"
+	model[27]: "sa_horiz"
+	model[28]: ""
+
+	type[0]: traffic_light
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 13
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 0.0
+	cycle[10]: 21.0
+	cycle[11]: 0.0
+	cycle[12]: 21.0
+	cycle[13]: 0.0
+	cycle[14]: 21.0
+	cycle[15]: 0.0
+	cycle[16]: 21.0
+	cycle[17]: 0.0
+	cycle[18]: 21.0
+	cycle[19]: 0.0
+	cycle[20]: 0.0
+	cycle[21]: 21.0
+	cycle[22]: 0.0
+	cycle[23]: 21.0
+	cycle[24]: 0.0
+	cycle[25]: 21.0
+	cycle[26]: 0.0
+	cycle[27]: 21.0
 
 	sleep_time_start: 1410 # 23:30
 	sleep_time_end: 180 # 03:00
@@ -2862,6 +3180,22 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1
 	sleep_time_end: 180 # 03:00
 }
 
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.austria
+{
+
+	name: "cr_t1x1 au"
+
+	inherited: tr_sem_prof.cr_t1x1
+
+	model[0]: "single"
+	model[1]: "city_str"
+	model[2]: "single"
+	model[3]: "city_str"
+	model[4]: "city_l"
+	model[5]: "city_l"
+
+}
+
 tr_semaphore_profile : tr_sem_prof.cr_t1x1.latvia
 {
 
@@ -2914,6 +3248,8 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1.lithuania
 	inherited: tr_sem_prof.cr_t1x1.latvia
 
 }
+
+
 
 tr_semaphore_profile : tr_sem_prof.cr_t1x1_v1.lithuania
 {
@@ -3023,6 +3359,22 @@ tr_semaphore_profile : tr_sem_prof.cr_t1x1_v3.finland
 	model[9]: "duo_str2"
 	model[10]: "duo_left2"
 	model[11]: "duo_left2"
+
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_t1x1.switzerland
+{
+
+	name: "cr_t1x1 ch"
+
+	inherited: tr_sem_prof.cr_t1x1
+
+	model[0]: "single"
+	model[1]: "city_str"
+	model[2]: "single"
+	model[3]: "city_str"
+	model[4]: "city_l"
+	model[5]: "city_l"
 
 }
 
@@ -3346,7 +3698,7 @@ tr_semaphore_profile : tr_sem_prof.cr_t1xr1_v2
 tr_semaphore_profile : tr_sem_prof.bd_gen_sh
 {
 
-	name: "border_short - generic"
+	name: "border_short - generic (do_not_use)"
 
 	inherited: tr_sem_prof.border_short
 
@@ -3386,7 +3738,7 @@ tr_semaphore_profile : tr_sem_prof.bd_gen_sh
 tr_semaphore_profile : tr_sem_prof.bd_gen_lg
 {
 
-	name: "border_long - generic"
+	name: "border_long - generic (do_not_use)"
 
 	inherited: tr_sem_prof.border_long
 
@@ -3426,7 +3778,7 @@ tr_semaphore_profile : tr_sem_prof.bd_gen_lg
 tr_semaphore_profile : tr_sem_prof.bd_gen_sh_c
 {
 
-	name: "border_short - generic_car"
+	name: "border_short - generic_car (do_not_use)"
 
 	inherited: tr_sem_prof.border_short
 
@@ -3448,7 +3800,7 @@ tr_semaphore_profile : tr_sem_prof.bd_gen_sh_c
 tr_semaphore_profile : tr_sem_prof.bd_gen_lg_c
 {
 
-	name: "border_long - generic_car"
+	name: "border_long - generic_car (do_not_use)"
 
 	inherited: tr_sem_prof.border_long
 
@@ -3470,7 +3822,7 @@ tr_semaphore_profile : tr_sem_prof.bd_gen_lg_c
 tr_semaphore_profile : tr_sem_prof.ab_bd_def
 {
 
-	name: "border_default"
+	name: "border_default (do_not_use)"
 
 	inherited: tr_sem_prof.ab_toll
 
@@ -3523,7 +3875,7 @@ tr_semaphore_profile : tr_sem_prof.ab_light
 tr_semaphore_profile : tr_sem_prof.ab_plus_bd
 {
 
-	name: "border_autopass_plus_short"
+	name: "border_autopass_plus_short (do_not_use)"
 
 	inherited: tr_sem_prof.border_short
 
@@ -3760,7 +4112,7 @@ tr_semaphore_profile : tr_sem_prof.cr_2x1_round
 tr_semaphore_profile : tr_sem_prof.ba_toll
 {
 
-	name: "tollgate"
+	name: "tollgate ba"
 
 	model[]: "ba_toll"
 
@@ -3793,7 +4145,7 @@ tr_semaphore_profile : tr_sem_prof.ba_toll
 tr_semaphore_profile : tr_sem_prof.es_toll
 {
 
-	name: "tollgate"
+	name: "tollgate es"
 
 	model[]: "es_toll"
 
@@ -3826,7 +4178,7 @@ tr_semaphore_profile : tr_sem_prof.es_toll
 tr_semaphore_profile : tr_sem_prof.pt_toll
 {
 
-	name: "tollgate"
+	name: "tollgate pt"
 
 	model[]: "pt_toll"
 
@@ -3854,6 +4206,1355 @@ tr_semaphore_profile : tr_sem_prof.pt_toll
 	interval[]: (1.0, 1.0, 0.5, 1.5)
 	cycle[]: 0.0
 
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2.austria
+{
+
+	name: "crossroad 2x2"
+
+	model[0]: "city"
+	model[1]: "city"
+	model[2]: "city"
+	model[3]: "city"
+	model[4]: ""
+	model[5]: "collumn"
+	model[6]: "collumn"
+	model[7]: "collumn"
+	model[8]: "collumn"
+	model[9]: ""
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+	type[7]: traffic_light_major
+	type[8]: traffic_light_minor
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 8
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+
+
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2_hang
+{
+
+	name: "crossroad 2x2"
+
+	model[0]: ""
+	model[1]: ""
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+	model[5]: ""
+	model[6]: ""
+	model[7]: ""
+	model[8]: ""
+	model[9]: ""
+	model[10]: ""
+	model[11]: ""
+	model[12]: ""
+	model[13]: ""
+	model[14]: ""
+	model[15]: ""
+	model[16]: ""
+	model[17]: ""
+	model[18]: ""
+	model[19]: ""
+	model[20]: "hang"
+	model[21]: "hang"
+	model[22]: "collumn"
+	model[23]: "collumn"
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+	type[7]: traffic_light_major
+	type[8]: traffic_light_minor
+	type[9]: traffic_light_major
+	type[10]: traffic_light_minor
+	type[11]: traffic_light_major
+	type[12]: traffic_light_minor
+	type[13]: traffic_light_major
+	type[14]: traffic_light_minor
+	type[15]: traffic_light_major
+	type[16]: traffic_light_minor
+	type[17]: traffic_light_major
+	type[18]: traffic_light_minor
+	type[19]: traffic_light_major
+	type[20]: traffic_light_minor
+	type[21]: traffic_light_major
+	type[22]: traffic_light_minor
+	type[23]: traffic_light_major
+	type[24]: traffic_light_minor
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 21.0
+	cycle[10]: 0.0
+	cycle[11]: 21.0
+	cycle[12]: 0.0
+	cycle[13]: 21.0
+	cycle[14]: 0.0
+	cycle[15]: 21.0
+	cycle[16]: 0.0
+	cycle[17]: 21.0
+	cycle[18]: 0.0
+	cycle[19]: 21.0
+	cycle[20]: 0.0
+	cycle[21]: 21.0
+	cycle[22]: 0.0
+	cycle[23]: 21.0
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x2_hang.austria
+{
+
+	name: "crossroad 2x2"
+
+	model[0]: ""
+	model[1]: ""
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+	model[5]: ""
+	model[6]: ""
+	model[7]: ""
+	model[8]: ""
+	model[9]: ""
+	model[10]: ""
+	model[11]: ""
+	model[12]: ""
+	model[13]: ""
+	model[14]: ""
+	model[15]: ""
+	model[16]: ""
+	model[17]: ""
+	model[18]: ""
+	model[19]: ""
+	model[20]: "hang"
+	model[21]: "hang"
+	model[22]: "collumn"
+	model[23]: "collumn"
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+	type[7]: traffic_light_major
+	type[8]: traffic_light_minor
+	type[9]: traffic_light_major
+	type[10]: traffic_light_minor
+	type[11]: traffic_light_major
+	type[12]: traffic_light_minor
+	type[13]: traffic_light_major
+	type[14]: traffic_light_minor
+	type[15]: traffic_light_major
+	type[16]: traffic_light_minor
+	type[17]: traffic_light_major
+	type[18]: traffic_light_minor
+	type[19]: traffic_light_major
+	type[20]: traffic_light_minor
+	type[21]: traffic_light_major
+	type[22]: traffic_light_minor
+	type[23]: traffic_light_major
+	type[24]: traffic_light_minor
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 21.0
+	cycle[10]: 0.0
+	cycle[11]: 21.0
+	cycle[12]: 0.0
+	cycle[13]: 21.0
+	cycle[14]: 0.0
+	cycle[15]: 21.0
+	cycle[16]: 0.0
+	cycle[17]: 21.0
+	cycle[18]: 0.0
+	cycle[19]: 21.0
+	cycle[20]: 0.0
+	cycle[21]: 21.0
+	cycle[22]: 0.0
+	cycle[23]: 21.0
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_1x2.austria
+{
+
+	name: "crossroad 1x2"
+
+	model[0]: "city"
+	model[1]: "single"
+	model[2]: "city"
+	model[3]: "single"
+	model[4]: ""
+	model[5]: "collumn"
+	model[6]: "collumn"
+	model[7]: ""
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 8
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+
+	sleep_time_start: 1410 # 23:30
+	sleep_time_end: 180 # 03:00
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x1.austria
+{
+
+	name: "crossroad 2x1"
+
+	model[0]: "single"
+	model[1]: "city"
+	model[2]: "single"
+	model[3]: "city"
+	model[4]: ""
+	model[5]: "collumn"
+	model[6]: "collumn"
+	model[7]: ""
+
+	type[0]: traffic_light_minor
+	type[1]: traffic_light_major
+	type[2]: traffic_light_minor
+	type[3]: traffic_light_major
+	type[4]: model_only
+	type[5]: traffic_light_major
+	type[6]: traffic_light_minor
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle: 8
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+}
+
+tr_semaphore_profile : tr_sem_prof.cr_2x1_gntry
+{
+
+	name: "crossroad 2x1 gantry"
+
+	model[0]: ""
+	model[1]: ""
+	model[2]: ""
+	model[3]: ""
+	model[4]: ""
+	model[5]: ""
+	model[6]: ""
+	model[7]: ""
+	model[8]: ""
+	model[9]: ""
+	model[10]: "single"
+	model[11]: "city"
+	model[12]: "single"
+	model[13]: "city"
+	model[14]: "sa"
+	model[15]: "sa"
+	model[16]: "sa_horiz"
+	model[17]: "sa_horiz"
+	model[18]: ""
+
+	type[0]: traffic_light
+	type[1]: traffic_light
+	type[2]: traffic_light
+	type[3]: traffic_light
+	type[4]: traffic_light
+	type[5]: traffic_light
+	type[6]: traffic_light
+	type[7]: traffic_light
+	type[8]: traffic_light
+	type[9]: traffic_light
+	type[10]: traffic_light_minor
+	type[11]: traffic_light_major
+	type[12]: traffic_light_minor
+	type[13]: traffic_light_major
+	type[14]: traffic_light_minor
+	type[15]: traffic_light_major
+	type[16]: traffic_light
+	type[17]: traffic_light
+
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)
+
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 0.0
+	cycle[3]: 21.0
+	cycle[4]: 0.0
+	cycle[5]: 21.0
+	cycle[6]: 0.0
+	cycle[7]: 21.0
+	cycle[8]: 0.0
+	cycle[9]: 21.0
+	cycle[10]: 0.0
+	cycle[11]: 21.0
+	cycle[12]: 0.0
+	cycle[13]: 21.0
+	cycle[14]: 0.0
+	cycle[15]: 21.0
+	cycle[16]: 0.0
+	cycle[17]: 21.0
+}
+
+
+tr_semaphore_profile : tr_sem_prof.bd_gen_sh_m
+{
+
+	name: "border_short - generic - mirror (do_not_use)"
+
+	inherited: tr_sem_prof.border_short
+
+	model[]: "bd_gen_m"
+}
+
+tr_semaphore_profile : tr_sem_prof.bd_gen_lg_m
+{
+
+	name: "border_long - generic - mirror (do_not_use)"
+
+	inherited: tr_sem_prof.border_long
+
+	model[]: "bd_gen_m"
+}
+
+tr_semaphore_profile : tr_sem_prof.b_gen_sh_cm
+{
+
+	name: "border_short - generic_car - mirror (do_not_use)"
+
+	inherited: tr_sem_prof.border_short
+
+	model[0]: "bd_gen_car_m"
+	model[1]: "bd_gen_car_m"
+	model[2]: "bd_gen_car_m"
+	model[3]: "bd_gen_car_m"
+	model[4]: "bd_gen_car_m"
+	model[5]: "bd_gen_car_m"
+	model[6]: "bd_gen_car_m"
+	model[7]: "bd_gen_car_m"
+	model[8]: "bd_gen_car_m"
+	model[9]: "bd_gen_car_m"
+	model[10]: "bd_gen_car_m"
+	model[11]: "bd_gen_car_m"
+
+
+}
+
+tr_semaphore_profile : tr_sem_prof.b_gen_lg_cm
+{
+
+	name: "border_long - generic_car - mirror (do_not_use)"
+
+	inherited: tr_sem_prof.border_long
+
+	model[0]: "bd_gen_car_m"
+	model[1]: "bd_gen_car_m"
+	model[2]: "bd_gen_car_m"
+	model[3]: "bd_gen_car_m"
+	model[4]: "bd_gen_car_m"
+	model[5]: "bd_gen_car_m"
+	model[6]: "bd_gen_car_m"
+	model[7]: "bd_gen_car_m"
+	model[8]: "bd_gen_car_m"
+	model[9]: "bd_gen_car_m"
+	model[10]: "bd_gen_car_m"
+	model[11]: "bd_gen_car_m"
+
+
+}
+
+tr_semaphore_profile : tr_sem_prof.ab_pl_bd_m
+{
+
+	name: "border_autopass_plus_short_mirror (do_not_use)"
+
+	inherited: tr_sem_prof.ab_plus_bd
+
+	model[0]: "bd_gen_m"
+	model[1]: "bd_gen_m"
+	model[2]: "bd_gen_m"
+	model[3]: "bd_gen_m"
+	model[4]: "bd_gen_m"
+	model[5]: "bd_gen_m"
+	model[6]: "bd_gen_m"
+	model[7]: "bd_gen_m"
+	model[8]: "bd_gen_m"
+	model[9]: "bd_gen_m"
+	model[10]: "bd_gen_m"
+	model[11]: "bd_gen_m"
+	model[12]: "border_lgt"
+	model[13]: "border_lgt"
+	model[14]: "border_lgt"
+	model[15]: "border_lgt"
+	model[16]: "border_lgt"
+	model[17]: "border_lgt"
+
+}
+tr_semaphore_profile : tr_sem_prof.at_toll
+{
+
+	name: "tollgate at 01"
+
+	model[]: "at_toll"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_automatic
+	type[21]: barrier_automatic
+	type[22]: barrier_automatic
+	type[23]: barrier_automatic
+	type[24]: barrier_automatic
+	type[25]: barrier_automatic
+	type[26]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.at_toll_b
+{
+
+	name: "tollgate at 02"
+
+	model[]: "at_toll_b"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_automatic
+	type[21]: barrier_automatic
+	type[22]: barrier_automatic
+	type[23]: barrier_automatic
+	type[24]: barrier_automatic
+	type[25]: barrier_automatic
+	type[26]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.rus_toll_b
+{
+
+	name: "tollgate rus 01"
+
+	model[]: "rus_toll_b"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_automatic
+	type[21]: barrier_automatic
+	type[22]: barrier_automatic
+	type[23]: barrier_automatic
+	type[24]: barrier_automatic
+	type[25]: barrier_automatic
+	type[26]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.rus_toll_c
+{
+
+	name: "tollgate rus 02"
+
+	model[]: "rus_toll_c"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+
+
+	interval[]: (1.0, 1.0, 0.5, 1.5)
+	cycle[]: 0.0
+
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1c_mr
+{
+
+	name: "bar_hr_01_car_man_right"
+
+	model[]: "bar_sr_02"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1c_ar
+{
+
+	name: "bar_hr_01_car_auto_right"
+
+	model[]: "bar_sr_02"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1c_ml
+{
+
+	name: "bar_hr_01_car_man_left"
+
+	model[]: "bar_sl_02"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1c_al
+{
+
+	name: "bar_hr_01_car_auto_left"
+
+	model[]: "bar_sl_02"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1_mr
+{
+
+	name: "bar_hr_01_man_right"
+
+	model[]: "bar_lr_02"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1_ar
+{
+
+	name: "bar_hr_01_auto_right"
+
+	model[]: "bar_lr_02"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1_ml
+{
+
+	name: "bar_hr_01_man_left"
+
+	model[]: "bar_ll_02"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_hr1_al
+{
+
+	name: "bar_hr_01_auto_left"
+
+	model[]: "bar_ll_02"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1_ml
+{
+
+	name: "bar_si_01_man_left"
+
+	model[]: "bar_ll_03"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1_al
+{
+
+	name: "bar_si_01_auto_left"
+
+	model[]: "bar_ll_03"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1_mr
+{
+
+	name: "bar_si_01_man_right"
+
+	model[]: "bar_lr_03"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1_ar
+{
+
+	name: "bar_si_01_auto_right"
+
+	model[]: "bar_lr_03"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1c_mr
+{
+
+	name: "bar_si_01_car_man_right"
+
+	model[]: "bar_sr_03"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1c_ar
+{
+
+	name: "bar_si_01_car_auto_right"
+
+	model[]: "bar_sr_03"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1c_ml
+{
+
+	name: "bar_si_01_car_man_left"
+
+	model[]: "bar_sl_03"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_si1c_al
+{
+
+	name: "bar_si_01_car_auto_left"
+
+	model[]: "bar_sl_03"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1c_mr
+{
+
+	name: "bar_xk_01_car_man_right"
+
+	model[]: "bar_sr_04"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1c_ar
+{
+
+	name: "bar_xk_01_car_auto_right"
+
+	model[]: "bar_sr_04"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1c_ml
+{
+
+	name: "bar_xk_01_car_man_left"
+
+	model[]: "bar_sl_04"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1c_al
+{
+
+	name: "bar_xk_01_car_auto_left"
+
+	model[]: "bar_sl_04"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1_mr
+{
+
+	name: "bar_xk_01_man_right"
+
+	model[]: "bar_lr_04"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1_ar
+{
+
+	name: "bar_xk_01_auto_right"
+
+	model[]: "bar_lr_04"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1_ml
+{
+
+	name: "bar_xk_01_man_left"
+
+	model[]: "bar_ll_04"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_xk1_al
+{
+
+	name: "bar_xk_01_auto_left"
+
+	model[]: "bar_ll_04"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_ll_1_a
+{
+
+	name: "bar_gen_long_left_01_auto"
+
+	model[]: "bar_ll_01"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_ll_1_m
+{
+
+	name: "bar_gen_long_left_01_man"
+
+	model[]: "bar_ll_01"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_lr_1_a
+{
+
+	name: "bar_gen_long_right_01_auto"
+
+	model[]: "bar_lr_01"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_lr_1_m
+{
+
+	name: "bar_gen_long_right_01_man"
+
+	model[]: "bar_lr_01"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_sl_1_a
+{
+
+	name: "bar_gen_short_left_01_auto"
+
+	model[]: "bar_sl_01"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_sl_1_m
+{
+
+	name: "bar_gen_short_left_01_man"
+
+	model[]: "bar_sl_01"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_sr_1_a
+{
+
+	name: "bar_gen_short_right_01_auto"
+
+	model[]: "bar_sr_01"
+
+	#type[]: barrier_manual
+	type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.br_g_sr_1_m
+{
+
+	name: "bar_gen_short_right_01_man"
+
+	model[]: "bar_sr_01"
+
+	type[]: barrier_manual
+	#type[]: barrier_automatic
+
+	interval[]: (1.0, 1.0, 3.0, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.tol_g_l_sp
+{
+
+# 0 - 9 short man
+# 10 - 19 short auto
+# 20 - 24 long man
+# 25+ long auto
+
+	name: "tollgate generic left (specific)"
+
+	model[0]: "bar_sl_01"
+	model[1]: "bar_sl_01"
+	model[2]: "bar_sl_01"
+	model[3]: "bar_sl_01"
+	model[4]: "bar_sl_01"
+	model[5]: "bar_sl_01"
+	model[6]: "bar_sl_01"
+	model[7]: "bar_sl_01"
+	model[8]: "bar_sl_01"
+	model[9]: "bar_sl_01"
+	model[10]: "bar_sl_01"
+	model[11]: "bar_sl_01"
+	model[12]: "bar_sl_01"
+	model[13]: "bar_sl_01"
+	model[14]: "bar_sl_01"
+	model[15]: "bar_sl_01"
+	model[16]: "bar_sl_01"
+	model[17]: "bar_sl_01"
+	model[18]: "bar_sl_01"
+	model[19]: "bar_sl_01"
+	model[20]: "bar_ll_01"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_manual
+	type[21]: barrier_manual
+	type[22]: barrier_manual
+	type[23]: barrier_manual
+	type[24]: barrier_manual
+	type[25]: barrier_automatic
+
+	interval[0]: (1.0, 1.0, 3.0, 1.0)
+	interval[1]: (1.0, 1.0, 3.0, 1.0)
+	interval[2]: (1.0, 1.0, 3.0, 1.0)
+	interval[3]: (1.0, 1.0, 3.0, 1.0)
+	interval[4]: (1.0, 1.0, 3.0, 1.0)
+	interval[5]: (1.0, 1.0, 3.0, 1.0)
+	interval[6]: (1.0, 1.0, 3.0, 1.0)
+	interval[7]: (1.0, 1.0, 3.0, 1.0)
+	interval[8]: (1.0, 1.0, 3.0, 1.0)
+	interval[9]: (1.0, 1.0, 3.0, 1.0)
+	interval[10]: (1.0, 1.0, 0.5, 1.0)
+	interval[11]: (1.0, 1.0, 0.5, 1.0)
+	interval[12]: (1.0, 1.0, 0.5, 1.0)
+	interval[13]: (1.0, 1.0, 0.5, 1.0)
+	interval[14]: (1.0, 1.0, 0.5, 1.0)
+	interval[15]: (1.0, 1.0, 0.5, 1.0)
+	interval[16]: (1.0, 1.0, 0.5, 1.0)
+	interval[17]: (1.0, 1.0, 0.5, 1.0)
+	interval[18]: (1.0, 1.0, 0.5, 1.0)
+	interval[19]: (1.0, 1.0, 0.5, 1.0)
+	interval[20]: (1.0, 1.0, 3.0, 1.0)
+	interval[21]: (1.0, 1.0, 3.0, 1.0)
+	interval[22]: (1.0, 1.0, 3.0, 1.0)
+	interval[23]: (1.0, 1.0, 3.0, 1.0)
+	interval[24]: (1.0, 1.0, 3.0, 1.0)
+	interval[25]: (1.0, 1.0, 0.5, 1.0)
+
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.tol_g_r_sp
+{
+
+# 0 - 9 short man
+# 10 - 19 short auto
+# 20 - 24 long man
+# 25+ long auto
+
+	name: "tollgate generic right (specific)"
+
+	model[0]: "bar_sr_01"
+	model[1]: "bar_sr_01"
+	model[2]: "bar_sr_01"
+	model[3]: "bar_sr_01"
+	model[4]: "bar_sr_01"
+	model[5]: "bar_sr_01"
+	model[6]: "bar_sr_01"
+	model[7]: "bar_sr_01"
+	model[8]: "bar_sr_01"
+	model[9]: "bar_sr_01"
+	model[10]: "bar_sr_01"
+	model[11]: "bar_sr_01"
+	model[12]: "bar_sr_01"
+	model[13]: "bar_sr_01"
+	model[14]: "bar_sr_01"
+	model[15]: "bar_sr_01"
+	model[16]: "bar_sr_01"
+	model[17]: "bar_sr_01"
+	model[18]: "bar_sr_01"
+	model[19]: "bar_sr_01"
+	model[20]: "bar_lr_01"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_manual
+	type[21]: barrier_manual
+	type[22]: barrier_manual
+	type[23]: barrier_manual
+	type[24]: barrier_manual
+	type[25]: barrier_automatic
+
+	interval[0]: (1.0, 1.0, 3.0, 1.0)
+	interval[1]: (1.0, 1.0, 3.0, 1.0)
+	interval[2]: (1.0, 1.0, 3.0, 1.0)
+	interval[3]: (1.0, 1.0, 3.0, 1.0)
+	interval[4]: (1.0, 1.0, 3.0, 1.0)
+	interval[5]: (1.0, 1.0, 3.0, 1.0)
+	interval[6]: (1.0, 1.0, 3.0, 1.0)
+	interval[7]: (1.0, 1.0, 3.0, 1.0)
+	interval[8]: (1.0, 1.0, 3.0, 1.0)
+	interval[9]: (1.0, 1.0, 3.0, 1.0)
+	interval[10]: (1.0, 1.0, 0.5, 1.0)
+	interval[11]: (1.0, 1.0, 0.5, 1.0)
+	interval[12]: (1.0, 1.0, 0.5, 1.0)
+	interval[13]: (1.0, 1.0, 0.5, 1.0)
+	interval[14]: (1.0, 1.0, 0.5, 1.0)
+	interval[15]: (1.0, 1.0, 0.5, 1.0)
+	interval[16]: (1.0, 1.0, 0.5, 1.0)
+	interval[17]: (1.0, 1.0, 0.5, 1.0)
+	interval[18]: (1.0, 1.0, 0.5, 1.0)
+	interval[19]: (1.0, 1.0, 0.5, 1.0)
+	interval[20]: (1.0, 1.0, 3.0, 1.0)
+	interval[21]: (1.0, 1.0, 3.0, 1.0)
+	interval[22]: (1.0, 1.0, 3.0, 1.0)
+	interval[23]: (1.0, 1.0, 3.0, 1.0)
+	interval[24]: (1.0, 1.0, 3.0, 1.0)
+	interval[25]: (1.0, 1.0, 0.5, 1.0)
+
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.tol_hr_l_sp
+{
+
+# 0 - 9 short man
+# 10 - 19 short auto
+# 20 - 24 long man
+# 25+ long auto
+
+	name: "tollgate HR left (specific)"
+
+	model[0]: "bar_sl_02"
+	model[1]: "bar_sl_02"
+	model[2]: "bar_sl_02"
+	model[3]: "bar_sl_02"
+	model[4]: "bar_sl_02"
+	model[5]: "bar_sl_02"
+	model[6]: "bar_sl_02"
+	model[7]: "bar_sl_02"
+	model[8]: "bar_sl_02"
+	model[9]: "bar_sl_02"
+	model[10]: "bar_sl_02"
+	model[11]: "bar_sl_02"
+	model[12]: "bar_sl_02"
+	model[13]: "bar_sl_02"
+	model[14]: "bar_sl_02"
+	model[15]: "bar_sl_02"
+	model[16]: "bar_sl_02"
+	model[17]: "bar_sl_02"
+	model[18]: "bar_sl_02"
+	model[19]: "bar_sl_02"
+	model[20]: "bar_ll_02"
+
+	type[0]: barrier_manual
+	type[1]: barrier_manual
+	type[2]: barrier_manual
+	type[3]: barrier_manual
+	type[4]: barrier_manual
+	type[5]: barrier_manual
+	type[6]: barrier_manual
+	type[7]: barrier_manual
+	type[8]: barrier_manual
+	type[9]: barrier_manual
+	type[10]: barrier_automatic
+	type[11]: barrier_automatic
+	type[12]: barrier_automatic
+	type[13]: barrier_automatic
+	type[14]: barrier_automatic
+	type[15]: barrier_automatic
+	type[16]: barrier_automatic
+	type[17]: barrier_automatic
+	type[18]: barrier_automatic
+	type[19]: barrier_automatic
+	type[20]: barrier_manual
+	type[21]: barrier_manual
+	type[22]: barrier_manual
+	type[23]: barrier_manual
+	type[24]: barrier_manual
+	type[25]: barrier_automatic
+
+	interval[0]: (1.0, 1.0, 3.0, 1.0)
+	interval[1]: (1.0, 1.0, 3.0, 1.0)
+	interval[2]: (1.0, 1.0, 3.0, 1.0)
+	interval[3]: (1.0, 1.0, 3.0, 1.0)
+	interval[4]: (1.0, 1.0, 3.0, 1.0)
+	interval[5]: (1.0, 1.0, 3.0, 1.0)
+	interval[6]: (1.0, 1.0, 3.0, 1.0)
+	interval[7]: (1.0, 1.0, 3.0, 1.0)
+	interval[8]: (1.0, 1.0, 3.0, 1.0)
+	interval[9]: (1.0, 1.0, 3.0, 1.0)
+	interval[10]: (1.0, 1.0, 0.5, 1.0)
+	interval[11]: (1.0, 1.0, 0.5, 1.0)
+	interval[12]: (1.0, 1.0, 0.5, 1.0)
+	interval[13]: (1.0, 1.0, 0.5, 1.0)
+	interval[14]: (1.0, 1.0, 0.5, 1.0)
+	interval[15]: (1.0, 1.0, 0.5, 1.0)
+	interval[16]: (1.0, 1.0, 0.5, 1.0)
+	interval[17]: (1.0, 1.0, 0.5, 1.0)
+	interval[18]: (1.0, 1.0, 0.5, 1.0)
+	interval[19]: (1.0, 1.0, 0.5, 1.0)
+	interval[20]: (1.0, 1.0, 3.0, 1.0)
+	interval[21]: (1.0, 1.0, 3.0, 1.0)
+	interval[22]: (1.0, 1.0, 3.0, 1.0)
+	interval[23]: (1.0, 1.0, 3.0, 1.0)
+	interval[24]: (1.0, 1.0, 3.0, 1.0)
+	interval[25]: (1.0, 1.0, 0.5, 1.0)
+
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.bor_g_ch_sp
+{
+
+# 0 - 4 long right
+# 5 - 9 long left
+# 10 - 14 short right
+# 15+ short left
+
+	name: "border CH (specific)"
+
+	model[0]: "bar_lr_01"
+	model[1]: "bar_lr_01"
+	model[2]: "bar_lr_01"
+	model[3]: "bar_lr_01"
+	model[4]: "bar_lr_01"
+	model[5]: "bar_ll_01"
+	model[6]: "bar_ll_01"
+	model[7]: "bar_ll_01"
+	model[8]: "bar_ll_01"
+	model[9]: "bar_ll_01"
+	model[10]: "bar_sr_01"
+	model[11]: "bar_sr_01"
+	model[12]: "bar_sr_01"
+	model[13]: "bar_sr_01"
+	model[14]: "bar_sr_01"
+	model[15]: "bar_sl_01"
+
+	type[]: barrier_automatic
+	interval[]: (1.0, 1.0, 0.5, 1.0)
+	cycle[]: 0.0
+}
+
+tr_semaphore_profile : tr_sem_prof.weigh
+{
+
+	name: "weigh station"
+
+	model[]: ""
+
+	type[]: barrier_manual
+
+	interval[]: (3.0, 0.0, 3.0, 5.0)
+	cycle[]: 0.0
 }
 
 }

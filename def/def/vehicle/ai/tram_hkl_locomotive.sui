@@ -1,0 +1,84 @@
+## HELSINKI
+
+traffic_vehicle : traffic.hkl_loco
+{
+	accessories[]: .hkl_loco.chassis
+	accessories[]: .hkl_loco.fwheel
+	accessories[]: .hkl_loco.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	# 42t whole tram
+	engine_power: 520	# 8x65kW
+
+	trailer_chains[]: "train_car.hkl_car1 | train_car.hkl_car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	spawn_condition[]: .traffic.hkl_loco.condition.city
+}
+
+vehicle_accessory: .hkl_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_locomotive.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.hkl_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "helsinki"
+}
+traffic_vehicle : traffic.hkl_loco.de_nu
+{
+	accessories[]: .hkl_loco.de_nu.chassis
+	accessories[]: .hkl_loco.de_nu.fwheel
+	accessories[]: .hkl_loco.de_nu.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	# 42t whole tram
+	engine_power: 520	# 8x65kW
+
+	trailer_chains[]: "train_car.hkl_car1.de_nu | train_car.hkl_car2.de_nu"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	spawn_condition[]: .traffic.hkl_loco.de_nu.condition.city
+}
+
+vehicle_accessory: .hkl_loco.de_nu.chassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_locomotive_de_nu.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.de_nu.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.de_nu.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.hkl_loco.de_nu.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "nurnberg"
+}

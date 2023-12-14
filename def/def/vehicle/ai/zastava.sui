@@ -1,0 +1,82 @@
+############### Default ########################
+
+traffic_vehicle : traffic.zastava
+{
+	accessories[]: .zastava.chassis
+	accessories[]: .zastava.fwheel
+	accessories[]: .zastava.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_ratio: 0
+
+	tags[]: vintage
+	tags[]: cheap
+
+	variant[]: traffic.zastava.rails
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .zastava.chassis
+{
+	data_path: "/def/vehicle/ai/zastava/chassis.sii"
+}
+
+vehicle_wheel_accessory: .zastava.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_13in_steel.sii"
+}
+
+vehicle_wheel_accessory: .zastava.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_13in_steel.sii"
+}
+
+############### Rails ########################
+
+traffic_vehicle : traffic.zastava.rails
+{
+	accessories[]: .zastava.rails.chassis
+	accessories[]: .zastava.rails.fwheel
+	accessories[]: .zastava.rails.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	tags[]: vintage
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .zastava.rails.chassis
+{
+	data_path: "/def/vehicle/ai/zastava/chassis_rails.sii"
+}
+
+vehicle_wheel_accessory: .zastava.rails.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_13in_steel.sii"
+}
+
+vehicle_wheel_accessory: .zastava.rails.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_13in_steel.sii"
+}

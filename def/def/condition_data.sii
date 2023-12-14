@@ -1,0 +1,107 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+condition_data_time : condition.working.hours
+{
+	interval[]: (420, 1140) # 7:00 - 19:00
+}
+
+condition_data_operator_not : condition.not.working.hours
+{
+	operand: condition.working.hours
+}
+
+condition_data_area : condition.residential
+{
+	local_area[]: residential
+}
+
+condition_data_operator_not : condition.not.residential
+{
+	operand: condition.residential
+}
+
+condition_data_area : condition.commercial
+{
+	local_area[]: commercial
+}
+
+condition_data_operator_not : condition.not.commercial
+{
+	operand: condition.commercial
+}
+
+condition_data_area : condition.industrial
+{
+	local_area[]: industrial
+}
+
+condition_data_operator_not : condition.not.industrial
+{
+	operand: condition.industrial
+}
+
+condition_data_area : condition.zone.work
+{
+	local_area[]: commercial
+	local_area[]: industrial
+	local_area[]: company
+}
+condition_data_operator_not : condition.not.zone.work
+{
+	operand: condition.zone.work
+}
+
+
+condition_data_area : condition.zone.home
+{
+	local_area[]: residential
+}
+condition_data_operator_not : condition.not.zone.home
+{
+	operand: condition.zone.home
+}
+
+condition_data_probability : condition.prob.never
+{
+	probability: 0
+}
+
+condition_data_probability : condition.prob.very.low
+{
+	probability: 10
+}
+
+condition_data_probability : condition.prob.low
+{
+	probability: 25
+}
+
+condition_data_probability : condition.prob.medium
+{
+	probability: 50
+}
+
+condition_data_probability : condition.prob.high
+{
+	probability: 75
+}
+
+condition_data_probability : condition.prob.very.high
+{
+	probability: 90
+}
+
+condition_data_probability : condition.prob.always
+{
+	probability: 100
+}
+
+}

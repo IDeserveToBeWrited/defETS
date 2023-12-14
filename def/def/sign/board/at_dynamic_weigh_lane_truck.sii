@@ -1,0 +1,45 @@
+SiiNunit
+{
+sign_board_template : _nameless.b9ff.3d80 {
+ board_name: "at dynamic weigh lane truck"
+ width: &3f933333
+ height: &3f933333
+ model_name: ""
+ items: 1
+ items[0]: _nameless.89ad.db00
+ dynamic_attributes: 1
+ dynamic_attributes[0]: _nameless.a310.05d0
+}
+
+sign_template_image : _nameless.89ad.db00 {
+ atlas_path: "/def/sign/atlas/dynamic_signs_at.sii"
+ image_idx: nil
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 3304587262
+ area_name: ""
+ area_idx: nil
+ coords_l: &3c9fc8a0
+ coords_r: &3f909dd4
+ coords_t: &3f91321a
+ coords_b: &3cc4d9e0
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.a310.05d0 {
+ conditions: 2
+ conditions[0]: "road_event weigh"
+ conditions[1]: default
+ values: 2
+ values[0]: dynamic_LED_green_arrow_at
+ values[1]: dynamic_LED_red_X_cross_at
+ traffic_rules: 0
+ item_id: 3304587262
+ attr_name: image_idx
+}
+
+}

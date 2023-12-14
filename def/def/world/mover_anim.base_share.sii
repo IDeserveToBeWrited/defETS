@@ -1,0 +1,538 @@
+SiiNunit
+{
+
+
+# __        ___                     _                    _     _ ___
+# \ \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| |__ \
+#  \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` | / /
+#   \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| ||_|
+#    \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|(_)
+#
+# Where to add?
+
+#
+# Units common for both ATS and ETS add to the "ATS, ETS common" section.
+# - Always add to the both projects AND at the same position.
+#
+# Units specific for ATS add to the "ATS only" section.
+#
+
+
+#     _  _____ ____     _____ _____ ____
+#    / \|_   _/ ___|   | ____|_   _/ ___|    ___ ___  _ __ ___  _ __ ___   ___  _ __
+#   / _ \ | | \___ \   |  _|   | | \___ \   / __/ _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \
+#  / ___ \| |  ___) |  | |___  | |  ___) | | (_| (_) | | | | | | | | | | | (_) | | | |
+# /_/   \_\_| |____( ) |_____| |_| |____/   \___\___/|_| |_| |_|_| |_| |_|\___/|_| |_|
+#                  |/
+# ATS, ETS common
+
+### TEMPORARY FOR NEW ANIMATIONS - Plz don't delete until we finish all the animations###
+
+
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| |
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|
+#  _         _   _            _                _             _                      __   _   _                _       __
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|
+#  _           __                        |___/     _ _               |___/                           _ _
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)
+#                                                            |___/               |___/
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+##########################
+### OLD COWS FROM BASE ###
+##########################
+
+mover_anim : mover_anim.cow.eating
+{
+	model_anim: "/asset/animation/animal/cow_eating_01_ani.pma"
+	group_tags[]: cow
+	group_tags[]: eating
+}
+mover_anim : mover_anim.cow.walk_eating
+{
+	model_anim: "/asset/animation/animal/cow_walk_01_ani.pma"
+	group_tags[]: cow
+	group_tags[]: w_eating
+}
+mover_anim : mover_anim.cow.lean
+{
+	model_anim: "/asset/animation/animal/cow_lean_01_ani.pma"
+	group_tags[]: cow
+	group_tags[]: idle
+	group_tags[]: lean
+}
+mover_anim : mover_anim.cow.idle
+{
+	model_anim: "/asset/animation/animal/cow_idle_01_ani.pma"
+	group_tags[]: cow
+	group_tags[]: idle
+}
+mover_anim : mover_anim.cow.idle1
+{
+	model_anim: "/asset/animation/animal/cow_idle_02_ani.pma"
+	group_tags[]: cow
+	group_tags[]: idle
+}
+mover_anim : mover_anim.cow.idle2
+{
+	model_anim: "/asset/animation/animal/cow_idle_03_ani.pma"
+	group_tags[]: cow
+	group_tags[]: idle
+}
+#################################### COWS_HERD_ANIM
+mover_anim : mover_anim.cows.herd
+{
+	model_anim: "/asset/animation/animal/cows_herd_ani.pma"
+	group_tags[]: cows_herd
+}
+#################################### CALF_ANIM
+mover_anim : mover_anim.calf.idle1
+{
+	model_anim: "/asset/animation/animal/calf_idle_01_ani.pma"
+	group_tags[]: calf
+	group_tags[]: idle
+}
+mover_anim : mover_anim.calf.idle2
+{
+	model_anim: "/asset/animation/animal/calf_idle_02_ani.pma"
+	group_tags[]: calf
+	group_tags[]: idle
+}
+mover_anim : mover_anim.coalf.idle3
+{
+	model_anim: "/asset/animation/animal/calf_idle_03_ani.pma"
+	group_tags[]: calf
+	group_tags[]: idle
+}
+mover_anim : mover_anim.coalf.idle4
+{
+	model_anim: "/asset/animation/animal/calf_idle_eat_ani.pma"
+	group_tags[]: calf
+	group_tags[]: idle
+	group_tags[]: eat
+}
+
+###########
+# ANIMALS #
+###########
+
+mover_anim : mover_anim.bis_wl1
+{
+	model_anim: "/asset/animation/animal/bison_walk_01_ani.pma"
+	group_tags[]: bison_new
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.bis_wl2
+{
+	model_anim: "/asset/animation/animal/bison_walk_02_ani.pma"
+	group_tags[]: bison_new
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.bis_id1
+{
+	model_anim: "/asset/animation/animal/bison_idle_01_ani.pma"
+	group_tags[]: bison_new
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.bis_eat
+{
+	model_anim: "/asset/animation/animal/bison_eating_01_ani.pma"
+	group_tags[]: bison_new
+	group_tags[]: eat
+}
+
+mover_anim : mover_anim.shee_wl
+{
+	model_anim: "/asset/animation/animal/sheep_graze_ani.pma"
+	group_tags[]: sheep
+	group_tags[]: walk
+}
+mover_anim : mover_anim.shee_ct
+{
+	model_anim: "/asset/animation/animal/sheep_graze_ani.pma"
+	group_tags[]: sheep
+	group_tags[]: canter
+}
+mover_anim : mover_anim.shee_id1
+{
+	model_anim: "/asset/animation/animal/sheep_idle_01_ani.pma"
+	group_tags[]: sheep
+	group_tags[]: idle
+}
+mover_anim : mover_anim.shee_id2
+{
+	model_anim: "/asset/animation/animal/sheep_idle_02_ani.pma"
+	group_tags[]: sheep
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.deer_eat
+{
+	model_anim: "/asset/animation/animal/deer_eating_01_ani.pma"
+	group_tags[]: deer
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.pig_eat1
+{
+	model_anim: "/asset/animation/animal/pig_eating_01_ani.pma"
+	group_tags[]: pig
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.pig_eat2
+{
+	model_anim: "/asset/animation/animal/pig_eating_02_ani.pma"
+	group_tags[]: pig
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.pig_eat3
+{
+	model_anim: "/asset/animation/animal/pig_eating_03_ani.pma"
+	group_tags[]: pig
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.goa_eat1
+{
+	model_anim: "/asset/animation/animal/goat_eating_01_ani.pma"
+	group_tags[]: goat
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.goa_eat2
+{
+	model_anim: "/asset/animation/animal/goat_eating_02_ani.pma"
+	group_tags[]: goat
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.goa_walk
+{
+	model_anim: "/asset/animation/animal/goat_walk_ani.pma"
+	group_tags[]: goat
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.goa_idle
+{
+	model_anim: "/asset/animation/animal/goat_idle_01_ani.pma"
+	group_tags[]: goat
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.goa_idl2
+{
+	model_anim: "/asset/animation/animal/goat_idle_02_ani.pma"
+	group_tags[]: goat
+	group_tags[]: idle2
+}
+
+mover_anim : mover_anim.mogoa
+{
+	model_anim: "/asset/animation/animal/mountain_goat_idle_ani.pma"
+	group_tags[]: mount
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.lo_idle
+{
+	model_anim: "/asset/animation/animal/longhorn_bull_idle_ani.pma"
+	group_tags[]: longhorn
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.lo_eat1
+{
+	model_anim: "/asset/animation/animal/longhorn_bull_eating_01_ani.pma"
+	group_tags[]: longhorn
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.lo_eat2
+{
+	model_anim: "/asset/animation/animal/longhorn_bull_eating_02_ani.pma"
+	group_tags[]: longhorn
+	group_tags[]: eating
+}
+
+mover_anim : mover_anim.dog_id1
+{
+	model_anim: "/asset/animation/animal/dog_idle_stand_01_ani.pma"
+	group_tags[]: dog
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.dog_id2
+{
+	model_anim: "/asset/animation/animal/dog_idle_lie_01_ani.pma"
+	group_tags[]: dog
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.dog_id3
+{
+	model_anim: "/asset/animation/animal/dog_idle_sit_01_ani.pma"
+	group_tags[]: dog
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.dog_wlk
+{
+	model_anim: "/asset/animation/animal/dog_walk_01_ani.pma"
+	group_tags[]: dog
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.rdm_wlk1
+{
+	model_anim: "/asset/animation/animal/reindeer_male_walk_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.rdm_wlk2
+{
+	model_anim: "/asset/animation/animal/reindeer_male_walk_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.rdm_eat1
+{
+	model_anim: "/asset/animation/animal/reindeer_male_eating_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: eat
+}
+
+mover_anim : mover_anim.rdm_eat2
+{
+	model_anim: "/asset/animation/animal/reindeer_male_eating_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: eat
+}
+
+mover_anim : mover_anim.rdm_idl1
+{
+	model_anim: "/asset/animation/animal/reindeer_male_idle_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.rdm_idl2
+{
+	model_anim: "/asset/animation/animal/reindeer_male_idle_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: male
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.rdf_wlk1
+{
+	model_anim: "/asset/animation/animal/reindeer_female_walk_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.rdf_wlk2
+{
+	model_anim: "/asset/animation/animal/reindeer_female_walk_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: walk
+}
+
+mover_anim : mover_anim.rdf_eat1
+{
+	model_anim: "/asset/animation/animal/reindeer_female_eating_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: eat
+}
+
+mover_anim : mover_anim.rdf_eat2
+{
+	model_anim: "/asset/animation/animal/reindeer_female_eating_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: eat
+}
+
+mover_anim : mover_anim.rdf_idl1
+{
+	model_anim: "/asset/animation/animal/reindeer_female_idle_01_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.rdf_idl2
+{
+	model_anim: "/asset/animation/animal/reindeer_female_idle_02_ani.pma"
+	group_tags[]: rein
+	group_tags[]: female
+	group_tags[]: idle
+}
+
+##########################
+# HUMANS / WOMAN / BABCA #
+##########################
+
+# Standing idles #
+
+mover_anim : mover_anim.gr_st_id1
+{
+	model_anim: "/asset/animation/woman/grandma_ru_stand_idle_01_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_st_id2
+{
+	model_anim: "/asset/animation/woman/grandma_ru_stand_idle_02_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_st_id3
+{
+	model_anim: "/asset/animation/woman/grandma_ru_stand_idle_03_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_st_id4
+{
+	model_anim: "/asset/animation/woman/grandma_ru_stand_idle_04_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: stand
+	group_tags[]: idle
+}
+
+# Sitting idles #
+
+mover_anim : mover_anim.gr_sit_id1
+{
+	model_anim: "/asset/animation/woman/grandma_ru_sit_idle_01_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: sit
+	group_tags[]: idle
+}
+mover_anim : mover_anim.gr_sit_id2
+{
+	model_anim: "/asset/animation/woman/grandma_ru_sit_idle_02_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: sit
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_sit_id3
+{
+	model_anim: "/asset/animation/woman/grandma_ru_sit_idle_03_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: sit
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_sit_id4
+{
+	model_anim: "/asset/animation/woman/grandma_ru_sit_idle_04_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: sit
+	group_tags[]: idle
+}
+
+mover_anim : mover_anim.gr_sit_id5
+{
+	model_anim: "/asset/animation/woman/grandma_ru_sit_idle_05_ani.pma"
+	group_tags[]: grandma
+	group_tags[]: sit
+	group_tags[]: idle
+}
+
+######################################
+# HUMANS / WOMAN / GASSTATION SELLER #
+######################################
+
+#mover_anim : mover_anim.wgassid1
+#{
+#	model_anim: "/asset/animation/woman/gasstation_crew_girl_ani_idle01.pma"
+#	group_tags[]: wseller
+#	group_tags[]: stand
+#	group_tags[]: idle
+#}
+#
+#mover_anim : mover_anim.wgassid2
+#{
+#	model_anim: "/asset/animation/woman/gasstation_crew_girl_ani_idle02.pma"
+#	group_tags[]: wseller
+#	group_tags[]: stand
+#	group_tags[]: idle
+#}
+
+################################
+# HUMANS / UNI / ZIPLINE RIDER #
+################################
+
+mover_anim : mover_anim.zipgo
+{
+	model_anim: "/asset/animation/uni/zipline_ride.pma"
+	group_tags[]: zipline
+	sound_path: "/sound/world/mover.bank#mover/zipline_loop_1"
+
+}
+
+#######################
+# CRANE / TOWER / SHR #
+#######################
+
+mover_anim : mover_anim.tw_cr
+{
+	model_anim: "/asset/animation/nescript/cranes/crane_tower_anim.pma"
+	group_tags[]: tower_cr
+
+    props[]: mover_props.tw_cr_pr
+}
+
+mover_anim : mover_anim.tw_cr1
+{
+	model_anim: "/asset/animation/nescript/cranes/crane_tower_anim1.pma"
+	group_tags[]: tower_cr1
+
+    props[]: mover_props.tw_cr_pr1
+}
+
+mover_anim : mover_anim.tw_cr2
+{
+	model_anim: "/asset/animation/nescript/cranes/crane_tower_anim2.pma"
+	group_tags[]: tower_cr2
+
+    props[]: mover_props.tw_cr_pr2
+}
+
+}

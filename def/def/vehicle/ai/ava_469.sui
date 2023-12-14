@@ -1,0 +1,46 @@
+traffic_vehicle : traffic.ava_469
+{
+	accessories[]: .ava_469.chassis
+	accessories[]: .ava_469.fwheel
+	accessories[]: .ava_469.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1800
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0382, 0.0318, 0.0273) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	#color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.1596, 0.0093, 0.0197) #red
+
+	spawn_ratio: 0
+
+	tags[]: cheap
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .ava_469.chassis
+{
+	data_path: "/def/vehicle/ai/ava_469/chassis.sii"
+}
+
+vehicle_wheel_accessory: .ava_469.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_o.sii"
+}
+
+vehicle_wheel_accessory: .ava_469.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_o.sii"
+}

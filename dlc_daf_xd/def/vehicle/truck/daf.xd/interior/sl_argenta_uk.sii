@@ -1,0 +1,49 @@
+SiiNunit
+{
+accessory_interior_data: sl_arg_uk.daf.xd.interior
+{
+	name: "Argenta UK"
+	price: 33900
+	unlock: 12
+	icon: "truck/daf_xd/accessory/interior_daf_xd_argenta_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/daf_xd/interior/uk/sl.pmd"
+	collision: "/vehicle/truck/daf_xd/interior/uk/sl.pmc"
+
+	animated_model: "/vehicle/truck/daf_xd/interior/uk/anim.pmd"
+
+	look: Default
+	variant: argenta
+
+@include "animations_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/daf_xd_mph.sii"
+	dashboard_drawable_size: (1024, 512)
+	gps_path: "/ui/dashboard/daf_xd_gps.sii"
+	gps_drawable_size: (1024, 512)
+	left_hand_traffic: true
+
+	glass_panes[]: .daf.xd.r.pane.front
+	glass_panes[]: .daf.xd.r.pane.left
+	glass_panes[]: .daf.xd.r.pane.right
+	glass_panes[]: .daf.xd.r.pane.door
+
+	ext_model: "/vehicle/truck/daf_xd/interior/external/sl_int.pmd"
+	ext_look: argenta
+	ext_variant: cabin_uk
+
+	suitable_for[]: "sl.daf.xd.cabin"
+
+	defaults[]: "/def/vehicle/truck/daf.xd/accessory/cab_door/std_arg.sii"
+	defaults[]: "/def/vehicle/truck/daf.xd/accessory/codrv_seat/std_arg.sii"
+	defaults[]: "/def/vehicle/truck/daf.xd/accessory/steering_w/standard.sii"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

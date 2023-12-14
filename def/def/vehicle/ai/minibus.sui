@@ -1,0 +1,43 @@
+traffic_vehicle : traffic.minibus
+{
+	accessories[]: .minibus.chassis
+	accessories[]: .minibus.fwheel
+	accessories[]: .minibus.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (1, 1, 1) #white
+	color[]: (1, 1, 1) #white
+	color[]: (1, 1, 1) #white
+	color[]: (0.0886, 0.0908, 0.0953) #silver
+	color[]: (0.0012, 0.0529, 0.2299)  #blue
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0802, 0.0307, 0.0109)  #brown
+
+	spawn_ratio: 0
+	allow_parked: false
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .minibus.chassis
+{
+	data_path: "/def/vehicle/ai/minibus/chassis.sii"
+}
+
+vehicle_wheel_accessory: .minibus.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .minibus.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}

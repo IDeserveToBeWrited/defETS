@@ -1,0 +1,39 @@
+traffic_vehicle : traffic.bgeed_taxi
+{
+	accessories[]: .bgeed_taxi.chassis
+	accessories[]: .bgeed_taxi.fwheel
+	accessories[]: .bgeed_taxi.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	tags[]: cheap
+	tags[]: common
+	tags[]: taxi
+	
+	spawn_ratio: 0.0
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .bgeed_taxi.chassis
+{
+	data_path: "/def/vehicle/ai/bgeed/chassis_taxi.sii"
+}
+
+vehicle_wheel_accessory: .bgeed_taxi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in.sii"
+}
+
+vehicle_wheel_accessory: .bgeed_taxi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in.sii"
+}

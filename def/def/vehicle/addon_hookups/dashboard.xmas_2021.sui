@@ -1,0 +1,107 @@
+accessory_hookup_int_data : x21_train.addon_hookup
+{
+	steam_inventory_id: 99
+	name: "@@old_oak_steam_train@@"
+	price: 300
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_train"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_train.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_robot.addon_hookup
+{
+	steam_inventory_id: 101
+	name: "@@clicky_the_robot@@"
+	price: 500
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_robot"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_robot.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_soldier.addon_hookup
+{
+	steam_inventory_id: 95
+	name: "@@the_nutcrackers_guard@@"
+	price: 200
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_soldier"
+	part_type: aftermarket	
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_soldier.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_car.addon_hookup
+{
+	steam_inventory_id: 96
+	name: "@@push_n_go_race_car@@"
+	price: 300
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_car"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_car.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_teddy.addon_hookup
+{
+	steam_inventory_id: 100
+	name: "@@yesteryear_teddy_bear@@"
+	price: 400
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_teddy"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_teddy.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_mouse.addon_hookup
+{
+	steam_inventory_id: 98
+	name: "@@willy_wind_up_mouse@@"
+	price: 250
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_mouse"	
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_mouse.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+accessory_hookup_int_data : x21_horse.addon_hookup
+{
+	steam_inventory_id: 97
+	name: "@@beech_rocking_horse@@"
+	price: 250
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse_sh.pmd"
+
+	suitable_for[]: "set_dashbrd"
+
+	data[]: .x21_horse_sh.phys_data
+}
+physics_toy_data : .x21_horse_sh.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.0, 0.0, 0.0)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (0.0, 20.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}

@@ -1,0 +1,87 @@
+traffic_vehicle : traffic.tourliner.blk
+{
+	accessories[]: .tourliner.blk.chassis
+	accessories[]: .tourliner.blk.fwheel
+	accessories[]: .tourliner.blk.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 19700
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	
+
+	tags[]: coach
+
+	spawn_ratio: 0.01
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tourliner.blk.chassis
+{
+	data_path: "/def/vehicle/ai/tourliner/chassis_blk.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.blk.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.blk.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+
+
+
+
+
+
+traffic_vehicle : traffic.tourliner.blk_p
+{
+	accessories[]: .tourliner.blk_p.chassis
+	accessories[]: .tourliner.blk_p.fwheel
+	accessories[]: .tourliner.blk_p.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 22900
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: coach
+	tags[]: passenger
+
+	spawn_ratio: 0.01	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tourliner.blk_p.chassis
+{
+	data_path: "/def/vehicle/ai/tourliner/chassis_blk_p.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.blk_p.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.blk_p.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

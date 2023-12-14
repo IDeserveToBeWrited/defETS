@@ -7,14 +7,13 @@ traffic_vehicle : traffic.transport_t6.door
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
 	
+
 
 @include "drivers_generic.sui"
 }
@@ -45,14 +44,13 @@ traffic_vehicle : traffic.transport_t6.door2
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
+
 
 @include "drivers_generic.sui"
 }
@@ -82,14 +80,12 @@ traffic_vehicle : traffic.transport_t6.l_board
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
 
 @include "drivers_generic.sui"
 }
@@ -119,14 +115,13 @@ traffic_vehicle : traffic.transport_t6.l_board2
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
+
 
 @include "drivers_generic.sui"
 }
@@ -156,14 +151,13 @@ traffic_vehicle : traffic.transport_t6.l_board_2
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
+
 
 @include "drivers_generic.sui"
 }
@@ -193,14 +187,13 @@ traffic_vehicle : traffic.transport_t6.l_board_3
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
 	
+
 
 @include "drivers_generic.sui"
 }
@@ -232,14 +225,13 @@ traffic_vehicle : traffic.transport_t6.l_board_e
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
+
 
 @include "drivers_generic.sui"
 }
@@ -269,14 +261,12 @@ traffic_vehicle : traffic.transport_t6.l_board2_e
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
 
 @include "drivers_generic.sui"
 }
@@ -306,14 +296,13 @@ traffic_vehicle : traffic.transport_t6.l_board_2e
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
+
 
 @include "drivers_generic.sui"
 }
@@ -334,6 +323,7 @@ vehicle_wheel_accessory: .transport_t6.l_board_2e.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
 }
+
 # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX l board x > XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 traffic_vehicle : traffic.transport_t6.l_board_3e
 {
@@ -343,14 +333,12 @@ traffic_vehicle : traffic.transport_t6.l_board_3e
 
 	max_speed: 130
 
-	lod_dist[]: 70
-	lod_dist[]: 110
 	
 	vehicle_mass: 2000
 	
 	color[]: (1, 1, 1) #white
 
-	
+
 
 @include "drivers_generic.sui"
 }
@@ -367,6 +355,43 @@ vehicle_wheel_accessory: .transport_t6.l_board_3e.fwheel
 }
 
 vehicle_wheel_accessory: .transport_t6.l_board_3e.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX follow XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+traffic_vehicle : traffic.transport_t6.follow_me
+{
+	accessories[]: .transport_t6.follow_me.chassis
+	accessories[]: .transport_t6.follow_me.fwheel
+	accessories[]: .transport_t6.follow_me.rwheel
+
+	max_speed: 130
+
+	
+	vehicle_mass: 2000
+	
+	color[]: (1, 1, 1) #white
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .transport_t6.follow_me.chassis
+{
+	data_path: "/def/vehicle/ai/transporter_t6/event_follow.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.follow_me.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.follow_me.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"

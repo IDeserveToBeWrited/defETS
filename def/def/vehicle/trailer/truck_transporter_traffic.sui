@@ -1,10 +1,11 @@
-traffic_trailer : traffic.trailer.truck_trans
+traffic_trailer : traffic.trailer.truck_trans.scania
 {
-	accessories[]: .traffic.truck_trans.tchassis
-	accessories[]: .traffic.truck_trans.trwheel0
-	accessories[]: .traffic.truck_trans.trwheel1
-	accessories[]: .traffic.truck_trans.trwheel2
-	accessories[]: .traffic.truck_trans.scania2016.cargo
+	accessories[]: .traffic.truck_trans.scania.tchassis
+	accessories[]: .traffic.truck_trans.scania.trwheel0
+	accessories[]: .traffic.truck_trans.scania.trwheel1
+	accessories[]: .traffic.truck_trans.scania.trwheel2
+	accessories[]: .traffic.truck_trans.scania.paintjob
+	accessories[]: .traffic.truck_trans.scania.cargo
 	cargo_mass: 16000
 	
 	tags[]: low
@@ -13,43 +14,50 @@ traffic_trailer : traffic.trailer.truck_trans
 	tags[]: cargo
 	tags[]: medium
 	
-	lod_dist[]: 50
-	lod_dist[]: 100
 
-	spawn_ratio: 0.1
+	spawn_ratio: 0.01
 
+	variant[]: .traffic.trailer.truck_trans.volvo
 }
-vehicle_accessory: .traffic.truck_trans.tchassis
+vehicle_accessory: .traffic.truck_trans.scania.tchassis
 {
 	data_path: "/def/vehicle/trailer/truck_transporter/chassis.sii"
 }
-vehicle_wheel_accessory: .traffic.truck_trans.trwheel0
+vehicle_wheel_accessory: .traffic.truck_trans.scania.trwheel0
 {
 	offset: 0
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_wheel_accessory: .traffic.truck_trans.trwheel1
+vehicle_wheel_accessory: .traffic.truck_trans.scania.trwheel1
 {
 	offset: 2
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_wheel_accessory: .traffic.truck_trans.trwheel2
+vehicle_wheel_accessory: .traffic.truck_trans.scania.trwheel2
 {
 	offset: 4
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_accessory: .traffic.truck_trans.scania2016.cargo
+
+vehicle_paint_job_accessory: .traffic.truck_trans.scania.paintjob
 {
-	data_path: "/def/vehicle/trailer/truck_transporter/scania2016cargo.sii"
+	data_path: "/def/vehicle/trailer/truck_transporter/custom_paint_job/red.sii"
 }
 
+vehicle_accessory: .traffic.truck_trans.scania.cargo
+{
+	data_path: "/def/vehicle/trailer_cargo/truck_transporter/scania.sii"
+}
 
-traffic_trailer : traffic.trailer.truck_trans.volvo
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_trailer : .traffic.trailer.truck_trans.volvo
 {
 	accessories[]: .traffic.truck_trans.volvo.tchassis
 	accessories[]: .traffic.truck_trans.volvo.trwheel0
 	accessories[]: .traffic.truck_trans.volvo.trwheel1
 	accessories[]: .traffic.truck_trans.volvo.trwheel2
+	accessories[]: .traffic.truck_trans.volvo.paintjob
 	accessories[]: .traffic.truck_trans.volvo.cargo
 	cargo_mass: 16000
 	
@@ -59,10 +67,7 @@ traffic_trailer : traffic.trailer.truck_trans.volvo
 	tags[]: cargo
 	tags[]: medium
 	
-	lod_dist[]: 50
-	lod_dist[]: 100
-
-	spawn_ratio: 0.1
+	spawn_ratio: 0.01
 
 }
 vehicle_accessory: .traffic.truck_trans.volvo.tchassis
@@ -72,59 +77,25 @@ vehicle_accessory: .traffic.truck_trans.volvo.tchassis
 vehicle_wheel_accessory: .traffic.truck_trans.volvo.trwheel0
 {
 	offset: 0
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 vehicle_wheel_accessory: .traffic.truck_trans.volvo.trwheel1
 {
 	offset: 2
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 vehicle_wheel_accessory: .traffic.truck_trans.volvo.trwheel2
 {
 	offset: 4
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
+
+vehicle_paint_job_accessory: .traffic.truck_trans.volvo.paintjob
+{
+	data_path: "/def/vehicle/trailer/truck_transporter/custom_paint_job/red.sii"
+}
+
 vehicle_accessory: .traffic.truck_trans.volvo.cargo
 {
-	data_path: "/def/vehicle/trailer/truck_transporter/volvocargo.sii"
-}
-
-traffic_trailer : traffic.trailer.truck_trans.empty
-{
-	accessories[]: .traffic.truck_trans.empty.tchassis
-	accessories[]: .traffic.truck_trans.empty.trwheel0
-	accessories[]: .traffic.truck_trans.empty.trwheel1
-	accessories[]: .traffic.truck_trans.empty.trwheel2
-	cargo_mass: 16000
-	
-	tags[]: low
-	tags[]: carrier
-	tags[]: carr_truck
-	tags[]: empty
-	tags[]: medium
-	
-	lod_dist[]: 50
-	lod_dist[]: 100
-
-	spawn_ratio: 0.01
-
-}
-vehicle_accessory: .traffic.truck_trans.empty.tchassis
-{
-	data_path: "/def/vehicle/trailer/truck_transporter/chassis.sii"
-}
-vehicle_wheel_accessory: .traffic.truck_trans.empty.trwheel0
-{
-	offset: 0
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.truck_trans.empty.trwheel1
-{
-	offset: 2
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.truck_trans.empty.trwheel2
-{
-	offset: 4
-    	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+	data_path: "/def/vehicle/trailer_cargo/truck_transporter/volvo.sii"
 }

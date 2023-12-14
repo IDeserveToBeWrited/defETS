@@ -1,0 +1,48 @@
+################################ WIEN ###################################
+traffic_vehicle : traffic.train_u_bahn
+{
+	accessories[]: .train_u_bahn.chassis
+	accessories[]: .train_u_bahn.fwheel
+	accessories[]: .train_u_bahn.rwheel
+
+	max_speed: 60
+
+	vehicle_mass: 27000
+	engine_power: 2500
+
+	trailer_chains[]: "train_car.u_bahnc1 | train_car.u_bahnc2 | train_car.u_bahnc3 | train_car.u_bahnc4 | train_car.u_bahn_last"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	#sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	
+	tags[]: metro
+
+	spawn_condition[]: .traffic.train_u_bahn.condition.city
+
+}
+vehicle_accessory: .train_u_bahn.chassis
+{
+	data_path: "/def/vehicle/ai/train_u_bahn/loco.sii"
+}
+vehicle_wheel_accessory: .train_u_bahn.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .train_u_bahn.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.train_u_bahn.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "wien"
+}
+

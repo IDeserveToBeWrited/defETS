@@ -1,11 +1,64 @@
 accessory_hookup_int_data : cup_krone.addon_hookup
 {
-	name: "Krone Coffee Mug"
+	name: "@@krone_coffee_mug@@"
 	price: 180
 	unlock: 0
 	icon: "toystand/cup.dlc_krone"	
+	part_type: licensed
 
 	model: "/vehicle/truck/upgrade/interior_decors/toystand/cup.dlc_krone.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+
+accessory_hookup_int_data : krone_bbh.addon_hookup
+{
+	name: "@@krone_harald_minifigure@@"
+	price: 120
+	unlock: 0
+	suitable_for[]: "set_dashbrd"
+	icon: "truck/upgrade/interior_decors/toystand/krone_bbh"
+	part_type: licensed
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/krone_bbh_b.pmd"
+
+	data[]: .krone_bbh.phys_data
+}
+
+physics_toy_data : .krone_bbh.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/krone_bbh_h.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/krone_bbh_h.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.00, 0.115, 0.00)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (20.0, 20.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+accessory_hookup_int_data : foam_truck.addon_hookup
+{
+	name: "@@krone_foam_truck@@"
+	price: 90
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/dlc_krone/foam_truck"	
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/dlc_krone/foam_truck.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+
+accessory_hookup_int_data : krone_bottle.addon_hookup
+{
+	name: "@@krone_bottle@@"
+	price: 160
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/dlc_krone/krone_bottle"	
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/dlc_krone/krone_bottle.pmd"
 
 	suitable_for[]: "set_dashbrd"
 }

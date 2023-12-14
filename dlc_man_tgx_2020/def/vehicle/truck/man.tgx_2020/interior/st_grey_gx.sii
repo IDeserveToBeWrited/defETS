@@ -1,0 +1,41 @@
+SiiNunit
+{
+accessory_interior_data: st_gr_gx.man.tgx_2020.interior
+{
+	name: "Standard Grey"
+	price: 12900
+	unlock: 0
+	icon: "truck/man_tgx_2020/accessory/grey"
+	part_type: factory
+
+	model: "/vehicle/truck/man_tgx_2020/interior/model/gx.pmd"
+	collision: "/vehicle/truck/man_tgx_2020/interior/model/gx.pmc"
+	animated_model: "/vehicle/truck/man_tgx_2020/interior/anim/anim.pmd"
+	active_mirrors_part: a_s_mirrors
+	passive_mirrors_part: p_s_mirrors
+	look: Default
+	variant: grey
+
+@include "animations.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+@include "computers.sui"
+
+	glass_panes[]: .man.tgx_2020.pane.front
+	glass_panes[]: .man.tgx_2020.pane.left
+	glass_panes[]: .man.tgx_2020.pane.right
+	glass_panes[]: .man.tgx_2020.pane.top
+
+	ext_model: "/vehicle/truck/man_tgx_2020/interior/external/gx.pmd"
+	ext_variant: Default
+	ext_look: grey
+
+	suitable_for[]: "gx.man.tgx_2020.cabin"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "glass_gx.sui"
+@include "sound_effects_units.sui"
+}

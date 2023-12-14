@@ -2,33 +2,39 @@ SiiNunit
 {
 sun_profile : reference.nice.01 {
  version: 7
- low_elevation: -30
- high_elevation: -30
+ low_elevation: &c21ffffc
+ high_elevation: &c21ffffc
  sun_direction: 0
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 16
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_01_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_01_80_c.tobj"
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_01_40_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&398b95c2, &398b95c2, &398b95c2)
+ ambient[0]: (&39000000, &39000000, &39000000)
  diffuse: 1
- diffuse[0]: (0, 0, 0)
+ diffuse[0]: (&39d744fd, &39d744fd, &39d744fd)
  specular: 1
- specular[0]: (0, 0, 0)
+ specular[0]: (&39d744fd, &39d744fd, &39d744fd)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3b83126f
+ env_static_mod[0]: &383e2699
  sky_color: 1
- sky_color[0]: (&398b95c2, &398b95c2, &398b95c2)
- stars_opacity: 1
- stars_opacity[0]: &3f3126e9
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3758e377, &37d28a71, &3845672a)
+ starmap_color: 1
+ starmap_color[0]: (&391b8e83, &398651d6, &39d744fd)
+ stars_color: 1
+ stars_color[0]: (&3c1837f0, &3c1837f0, &3c1837f0)
  sun_color: 1
  sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
@@ -39,24 +45,30 @@ sun_profile : reference.nice.01 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
  sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &40156603
  fog_color: 1
- fog_color[0]: (&3793cd83, &37bb7aaa, &3825fed7)
+ fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&373c0173, &37c41486, &3825fed7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 56
+ fog_offset[0]: &41dc1062
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b536cb8
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -69,6 +81,8 @@ sun_profile : reference.nice.01 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -88,7 +102,7 @@ sun_profile : reference.nice.01 {
  sunshaft_color: 1
  sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: 3
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -96,9 +110,9 @@ sun_profile : reference.nice.01 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &44e91c70
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &4563827d
+ max_scale[0]: &45e1c813
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -106,75 +120,60 @@ sun_profile : reference.nice.01 {
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d50f53c
+ target_gray[0]: &3d576dd5
  contrast: 1
- contrast[0]: &3e666666
+ contrast[0]: &3e9374bc
  shoulder_length: 1
- shoulder_length[0]: &3f8353f8
+ shoulder_length[0]: &3f918937
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3a81e914
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
 sun_profile : reference.nice.02 {
  version: 7
- low_elevation: -15
- high_elevation: -15
+ low_elevation: -30
+ high_elevation: -30
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 16
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_01_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_01_80_c.tobj"
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_01_40_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&39b504f3, &39b504f3, &39b504f3)
+ ambient[0]: (&390b95c2, &390b95c2, &390b95c2)
  diffuse: 1
- diffuse[0]: (0, 0, 0)
+ diffuse[0]: (&39d744fd, &39d744fd, &39d744fd)
  specular: 1
- specular[0]: (0, 0, 0)
+ specular[0]: (&39d744fd, &39d744fd, &39d744fd)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3b83126f
+ env_static_mod[0]: &38914f9a
  sky_color: 1
- sky_color[0]: (&3a000000, &3a000000, &3a000000)
- stars_opacity: 1
- stars_opacity[0]: &3f010625
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3758e377, &37d28a71, &3845672a)
+ starmap_color: 1
+ starmap_color[0]: (&390ea568, &397657e6, &39c5672a)
+ stars_color: 1
+ stars_color[0]: (&3c0b95c2, &3c0b95c2, &3c0b95c2)
  sun_color: 1
  sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
@@ -185,24 +184,30 @@ sun_profile : reference.nice.02 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
  sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &401a16ab
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&37f3d02d, &387e48d6, &38d744fd)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 56
+ fog_offset[0]: &4200449c
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b536cb8
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -215,6 +220,8 @@ sun_profile : reference.nice.02 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -234,7 +241,7 @@ sun_profile : reference.nice.02 {
  sunshaft_color: 1
  sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &400e45a2
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -242,9 +249,9 @@ sun_profile : reference.nice.02 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &44dfde8b
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &455a64ab
+ max_scale[0]: &45e1c813
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -254,73 +261,475 @@ sun_profile : reference.nice.02 {
  target_gray: 1
  target_gray[0]: &3d5913f0
  contrast: 1
- contrast[0]: &3e666666
+ contrast[0]: &3e970a3d
  shoulder_length: 1
- shoulder_length[0]: &3f8353f8
+ shoulder_length[0]: &3f918937
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3a81e914
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
 sun_profile : reference.nice.03 {
+ version: 7
+ low_elevation: &c1c7fffe
+ high_elevation: &c1c7fffe
+ sun_direction: 1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&381d336c, &388cac61, &391837f0)
+ diffuse: 1
+ diffuse[0]: (&398ebbb9, &39a594db, &39c5672a)
+ specular: 1
+ specular[0]: (&398ebbb9, &39a594db, &39c5672a)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&3902ce9b, &3961e5d9, &39b504f3)
+ stars_color: 1
+ stars_color[0]: (&3c000000, &3c000000, &3c000000)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &4011e185
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d5913f0
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a81e914
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.04 {
+ version: 7
+ low_elevation: &c19ffffc
+ high_elevation: &c19ffffc
+ sun_direction: 1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&393504f3, &393504f3, &393504f3)
+ diffuse: 1
+ diffuse[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ specular: 1
+ specular[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&3902ce9b, &3961e5d9, &39b504f3)
+ stars_color: 1
+ stars_color[0]: (&3beac0c7, &3beac0c7, &3beac0c7)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&38c5672a, &38c5672a, &38c5672a)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &40075408
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d5913f0
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a7e9857
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.05 {
+ version: 7
+ low_elevation: -15
+ high_elevation: -15
+ sun_direction: 1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ diffuse: 1
+ diffuse[0]: (&38d744fd, &38d744fd, &38d744fd)
+ specular: 1
+ specular[0]: (&38d744fd, &38d744fd, &38d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3aa5fed7, &3aa5fed7, &3aa5fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&38c9bb69, &392e30e9, &398b95c2)
+ stars_color: 1
+ stars_color[0]: (&3bc5672a, &3bc5672a, &3bc5672a)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3ff98d16
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d61836a
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a7e9857
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.06 {
  version: 7
  low_elevation: &c11ffffc
  high_elevation: &c11ffffc
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 16
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_01_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_01_80_c.tobj"
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_03_10_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&39d744fd, &39d744fd, &39d744fd)
+ ambient[0]: (&3a000000, &3a000000, &3a000000)
  diffuse: 1
- diffuse[0]: (0, 0, 0)
+ diffuse[0]: (&378b95c2, &378b95c2, &378b95c2)
  specular: 1
- specular[0]: (0, 0, 0)
+ specular[0]: (&378b95c2, &378b95c2, &378b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3a83126f
+ env_static_mod[0]: &38d28c1a
  sky_color: 1
- sky_color[0]: (&3a8b95c2, &3a8b95c2, &3a8b95c2)
- stars_opacity: 1
- stars_opacity[0]: &3eb0cf88
+ sky_color[0]: (&3b1837f0, &3b1837f0, &3b1837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3780f673, &37fa606a, &386ac0c7)
+ starmap_color: 1
+ starmap_color[0]: (&3882ce9b, &38e1e5d9, &393504f3)
+ stars_color: 1
+ stars_color[0]: (&3ba5fed7, &3ba5fed7, &3ba5fed7)
  sun_color: 1
  sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
@@ -331,24 +740,30 @@ sun_profile : reference.nice.03 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
  sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3b1837f0, &3b1837f0, &3b1837f0)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fdb10cc
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&382c66e6, &38b3ce69, &391837f0)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 56
+ fog_offset[0]: &421626e9
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b536cb8
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -361,6 +776,8 @@ sun_profile : reference.nice.03 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -380,7 +797,7 @@ sun_profile : reference.nice.03 {
  sunshaft_color: 1
  sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &3fb18937
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -388,9 +805,9 @@ sun_profile : reference.nice.03 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &44dfde8b
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &44e91c70
+ max_scale[0]: &45907c5c
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -398,75 +815,60 @@ sun_profile : reference.nice.03 {
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d64d1e7
+ target_gray[0]: &3d753e3c
  contrast: 1
- contrast[0]: &3e6353f8
+ contrast[0]: &3e970a3d
  shoulder_length: 1
- shoulder_length[0]: &3f8851ec
+ shoulder_length[0]: &3f908312
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3a81e914
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.04 {
+sun_profile : reference.nice.07 {
  version: 7
  low_elevation: &c0dffffe
  high_elevation: &c0dffffe
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 16
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_02_10_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_02_10_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_03_10_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3aa5fed7, &3aa5fed7, &3aa5fed7)
+ ambient[0]: (&3a45672a, &3a45672a, &3a45672a)
  diffuse: 1
- diffuse[0]: (0, 0, 0)
+ diffuse[0]: (&389837f0, &389837f0, &389837f0)
  specular: 1
- specular[0]: (0, 0, 0)
+ specular[0]: (&389837f0, &389837f0, &389837f0)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3a83126f
+ env_static_mod[0]: &3951ac63
  sky_color: 1
- sky_color[0]: (&3b6ac0c7, &3b6ac0c7, &3b6ac0c7)
- stars_opacity: 1
- stars_opacity[0]: &3e32bc0e
+ sky_color[0]: (&3c3504f3, &3c3504f3, &3c3504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&37b6617c, &38310b02, &38a5fed7)
+ starmap_color: 1
+ starmap_color[0]: (&38d744fd, &38d744fd, &38d744fd)
+ stars_color: 1
+ stars_color[0]: (&3bd744fd, &3bd744fd, &3bd744fd)
  sun_color: 1
  sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
@@ -477,24 +879,30 @@ sun_profile : reference.nice.04 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
  sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3ab504f3, &3ab504f3, &3ab504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&38c5672a, &38c5672a, &38c5672a)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fbc9482
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&392eff5d, &3979f856, &39a5fed7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &420ab1ee
+ fog_offset[0]: &4241eb85
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b33c939
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -507,6 +915,8 @@ sun_profile : reference.nice.04 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -534,9 +944,9 @@ sun_profile : reference.nice.04 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &4489c763
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &44a8a9e0
+ max_scale[0]: &4538cb99
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -544,77 +954,62 @@ sun_profile : reference.nice.04 {
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d6f87f3
+ target_gray[0]: &3d84faf6
  contrast: 1
- contrast[0]: &3e604189
+ contrast[0]: &3e970a3d
  shoulder_length: 1
  shoulder_length[0]: &3f8a3d71
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ab781e4
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.05 {
+sun_profile : reference.nice.08 {
  version: 7
  low_elevation: &c07ffffa
  high_elevation: &c07ffffa
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 17
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_03_5_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_03_5_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_04_05_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
  ambient[0]: (&3b45672a, &3b45672a, &3b45672a)
  diffuse: 1
- diffuse[0]: (&3d45672a, &3d45672a, &3d45672a)
+ diffuse[0]: (&3d8b95c2, &3d8b95c2, &3d8b95c2)
  specular: 1
- specular[0]: (&3d45672a, &3d45672a, &3d45672a)
+ specular[0]: (&3d8b95c2, &3d8b95c2, &3d8b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3ba3d70a
+ env_static_mod[0]: &3a316abb
  sky_color: 1
- sky_color[0]: (&3db504f3, &3db504f3, &3db504f3)
- stars_opacity: 1
- stars_opacity[0]: &3ddfea27
+ sky_color[0]: (&3ca5fed7, &3ca5fed7, &3ca5fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3900f673, &397a606a, &39eac0c7)
+ starmap_color: 1
+ starmap_color[0]: (&37eac0c7, &37eac0c7, &37eac0c7)
+ stars_color: 1
+ stars_color[0]: (&3c5744fd, &3c5744fd, &3c5744fd)
  sun_color: 1
- sun_color[0]: (&3d5744fd, &3d5744fd, &3d5744fd)
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -623,24 +1018,30 @@ sun_profile : reference.nice.05 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3b25fed7, &39d31822, &384de99d)
  sun_halo_color[1]: (&3b45672a, &3a851d3f, &3874df66)
- sun_halo_color[2]: (&3b45672a, &3a851d3f, &3874df66)
- sun_halo_color[3]: (&3b45672a, &3a851d3f, &3874df66)
- sun_halo_color[4]: (&3b45672a, &3a851d3f, &3874df66)
- sun_halo_color[5]: (&3cb504f3, &3c36107c, &3bac9e48)
+ sun_halo_color[2]: (&3cb504f3, &3c36107c, &3bac9e48)
+ sun_halo_color[3]: (&3b25fed7, &39d31822, &384de99d)
+ sun_halo_color[4]: (&3b25fed7, &39d31822, &384de99d)
+ sun_halo_color[5]: (&3b45672a, &3a851d3f, &3874df66)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3bb504f3, &3bb504f3, &3bb504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fa9d1e2
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3a8b95c2, &3a213e41, &398de740)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &41f0f8a4
+ fog_offset[0]: &42715604
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b25d582
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -653,6 +1054,8 @@ sun_profile : reference.nice.05 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -666,13 +1069,13 @@ sun_profile : reference.nice.05 {
  dof_filter_size: 1
  dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e5744fd, &3dd0e042, &3c039679)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &3f8bf964
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -680,87 +1083,72 @@ sun_profile : reference.nice.05 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &43ff89c1
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &4416359a
+ max_scale[0]: &44d134df
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3e8dd2f2
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d832647
+ target_gray[0]: &3d8b7eb4
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3e9eb852
  shoulder_length: 1
  shoulder_length[0]: &3f88d4fe
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3b3eac74
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fe8f5c3
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.06 {
+sun_profile : reference.nice.09 {
  version: 7
  low_elevation: 0
  high_elevation: 0
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 17
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_04_0_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_04_0_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_05_00_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3cb504f3, &3cb504f3, &3cb504f3)
+ ambient[0]: (&3cd744fd, &3cd744fd, &3cd744fd)
  diffuse: 1
- diffuse[0]: (&3d9837f0, &3d9837f0, &3d9837f0)
+ diffuse[0]: (&3d800000, &3d800000, &3d800000)
  specular: 1
- specular[0]: (&3d9837f0, &3d9837f0, &3d9837f0)
+ specular[0]: (&3d800000, &3d800000, &3d800000)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3db5f947
+ env_static_mod[0]: &3b1e5a5d
  sky_color: 1
- sky_color[0]: (&3ed744fd, &3ed744fd, &3ed744fd)
- stars_opacity: 1
- stars_opacity[0]: &3d34395a
+ sky_color[0]: (&3e000000, &3e000000, &3e000000)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3b58e377, &3bd28a71, &3c45672a)
+ starmap_color: 1
+ starmap_color[0]: (&37b504f3, &37b504f3, &37b504f3)
+ stars_color: 1
+ stars_color[0]: (&3c800000, &3c800000, &3c800000)
  sun_color: 1
- sun_color[0]: (&3f45672a, &3f2a63cd, &3eab680f)
+ sun_color[0]: (&3e25fed7, &3e0f47bc, &3d902296)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -769,24 +1157,30 @@ sun_profile : reference.nice.06 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3f1837f0, &3e8cac61, &3b9c52d9)
- sun_halo_color[2]: (&3f1837f0, &3e8cac61, &3b9c52d9)
- sun_halo_color[3]: (&3f1837f0, &3e8cac61, &3b9c52d9)
- sun_halo_color[4]: (&3f5744fd, &3f094154, &3ac8b98c)
- sun_halo_color[5]: (&3f3504f3, &3f05937b, &3e147e2e)
+ sun_halo_color[0]: (&3e1837f0, &3dd7a7e8, &3d1384cb)
+ sun_halo_color[1]: (&3f5744fd, &3f094154, &3ac8b98c)
+ sun_halo_color[2]: (&3f3504f3, &3f05937b, &3e147e2e)
+ sun_halo_color[3]: (&3d3504f3, &3d003ad2, &3c2f6e2a)
+ sun_halo_color[4]: (&3e1837f0, &3dd7a7e8, &3d1384cb)
+ sun_halo_color[5]: (&3f1837f0, &3e8cac61, &3b9c52d9)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3ceac0c7, &3ceac0c7, &3ceac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3c8b95c2, &3c39c197, &3acae1da)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &422b78d0
+ fog_offset[0]: &429ef74c
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b060417
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -799,6 +1193,8 @@ sun_profile : reference.nice.06 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -812,13 +1208,13 @@ sun_profile : reference.nice.06 {
  dof_filter_size: 1
  dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e800000, &3e0eef69, &3a0b3e5e)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &3fd00ee4
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -826,87 +1222,72 @@ sun_profile : reference.nice.06 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &42baed42
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &42caada4
+ max_scale[0]: &4391cb2e
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ea1cac1
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3da99be6
+ target_gray[0]: &3d932472
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ec8bc40
  shoulder_length: 1
  shoulder_length[0]: &3f7e353f
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3bc61e9f
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.7 {
+sun_profile : reference.nice.10 {
  version: 7
  low_elevation: 6
  high_elevation: 6
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 18
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_05_5_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_05_5_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_06_05_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3e3504f3, &3e3504f3, &3e3504f3)
+ ambient[0]: (&3e800000, &3e800000, &3e800000)
  diffuse: 1
- diffuse[0]: (&3f25fed7, &3f25fed7, &3f25fed7)
+ diffuse[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
  specular: 1
- specular[0]: (&3f25fed7, &3f25fed7, &3f25fed7)
+ specular[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3eb645a2
+ env_static_mod[0]: &3badd8fa
  sky_color: 1
  sky_color[0]: (&3f6ac0c7, &3f6ac0c7, &3f6ac0c7)
- stars_opacity: 1
- stars_opacity[0]: &3c2ec338
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3d195d05, &3d94dff4, &3e0b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (&3a6ac0c7, &3a6ac0c7, &3a6ac0c7)
  sun_color: 1
- sun_color[0]: (&405744fd, &40518d9a, &4048397c)
+ sun_color[0]: (&3f45672a, &3f40293c, &3f379b52)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -915,24 +1296,30 @@ sun_profile : reference.nice.7 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (1, &3f13dc53, &3d84b793)
- sun_halo_color[2]: (1, &3f13dc53, &3d84b793)
- sun_halo_color[3]: (1, &3f13dc53, &3d84b793)
- sun_halo_color[4]: (&405744fd, &40364e57, &3f46af68)
- sun_halo_color[5]: (&40a5fed7, &407777b0, &3fcd7b56)
+ sun_halo_color[0]: (&3f5744fd, &3f0f3cd4, &3e39df6c)
+ sun_halo_color[1]: (&405744fd, &40364e57, &3f46af68)
+ sun_halo_color[2]: (&40a5fed7, &407777b0, &3fcd7b56)
+ sun_halo_color[3]: (&3eeac0c7, &3e9c33a4, &3dcab217)
+ sun_halo_color[4]: (&3f5744fd, &3f0f3cd4, &3e39df6c)
+ sun_halo_color[5]: (1, &3f13dc53, &3d84b793)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3d5744fd, &3d5744fd, &3d5744fd)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3ecdd2f2
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3e1837f0, &3ddc1ff4, &3d1fad7b)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &431cad42
+ fog_offset[0]: &43120c8b
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3ac9ef80
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -945,6 +1332,8 @@ sun_profile : reference.nice.7 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -958,13 +1347,13 @@ sun_profile : reference.nice.7 {
  dof_filter_size: 1
  dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e800000, &3e2a56d5, &3cfa23e8)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &400fd352
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -972,87 +1361,72 @@ sun_profile : reference.nice.7 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &40e0a013
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &41097d17
+ max_scale[0]: &413c4946
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3eb53f7d
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3de06bfa
+ target_gray[0]: &3df902f5
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ebd70a4
  shoulder_length: 1
- shoulder_length[0]: &3f6b4396
+ shoulder_length[0]: &3f4bc8a8
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &42ad8669
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3940751e
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &401ee979
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.8 {
+sun_profile : reference.nice.11 {
  version: 7
  low_elevation: &411ffffc
  high_elevation: &411ffffc
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 18
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_06_15_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_06_15_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_07_15_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3ec5672a, &3ec5672a, &3ec5672a)
+ ambient[0]: (&3eeac0c7, &3eeac0c7, &3eeac0c7)
  diffuse: 1
- diffuse[0]: (1, 1, 1)
+ diffuse[0]: (&400b95c2, &400b95c2, &400b95c2)
  specular: 1
- specular[0]: (1, 1, 1)
+ specular[0]: (&400b95c2, &400b95c2, &400b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3fd16873
+ env_static_mod[0]: &3bfc8766
  sky_color: 1
- sky_color[0]: (&3fc5672a, &3fc5672a, &3fc5672a)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&3feac0c7, &3feac0c7, &3feac0c7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3d8ca283, &3e0884d1, &3e800000)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (4, &405ae0cf, &40123540)
+ sun_color[0]: (&3f6ac0c7, &3f48b650, &3f1f8654)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -1061,24 +1435,30 @@ sun_profile : reference.nice.8 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3f842c26, &3cfcf605)
- sun_halo_color[2]: (&401837f0, &3f842c26, &3cfcf605)
- sun_halo_color[3]: (&401837f0, &3f842c26, &3cfcf605)
- sun_halo_color[4]: (&4045672a, &3ffbba24, &3f3f4ee1)
- sun_halo_color[5]: (8, &409fbbe1, &40231892)
+ sun_halo_color[0]: (&3fd744fd, &3f8f3cd4, &3ee1d17d)
+ sun_halo_color[1]: (&4045672a, &3ffbba24, &3f3f4ee1)
+ sun_halo_color[2]: (8, &409fbbe1, &40231892)
+ sun_halo_color[3]: (&3ec5672a, &3e835977, &3dcf1388)
+ sun_halo_color[4]: (&3fd744fd, &3f8f3cd4, &3ee1d17d)
+ sun_halo_color[5]: (&401837f0, &3f842c26, &3cfcf605)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3deac0c7, &3deac0c7, &3deac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3eb504f3, &3e8c7059, &3ded5633)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 230
+ fog_offset[0]: &43261be7
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3aa4f551
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -1091,6 +1471,8 @@ sun_profile : reference.nice.8 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -1104,13 +1486,13 @@ sun_profile : reference.nice.8 {
  dof_filter_size: 1
  dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e9837f0, &3e4ee0c2, &3d68d5e4)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &401f88d7
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -1118,57 +1500,175 @@ sun_profile : reference.nice.8 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &408a3e74
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &40b77e42
+ max_scale[0]: &40a0512c
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ebced91
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3dfb7092
+ target_gray[0]: &3e1581c8
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3eb23910
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f3db6b0
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &439dea22
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ac30a7f
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &403926e9
+ stability: 1
+ stability[0]: 1
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.12 {
+ version: 7
+ low_elevation: &419ffffc
+ high_elevation: &419ffffc
+ sun_direction: 1
+ temperature: 1
+ temperature[0]: 21
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_07_15_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&3fa5fed7, &3fa5fed7, &3fa5fed7)
+ diffuse: 1
+ diffuse[0]: (&40d744fd, &40d744fd, &40d744fd)
+ specular: 1
+ specular[0]: (&40d744fd, &40d744fd, &40d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &401428a4
+ sky_color: 1
+ sky_color[0]: (&40b504f3, &40b504f3, &40b504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3e0ca283, &3e8884d1, &3f000000)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&408b95c2, &408b95c2, &408b95c2)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&4045672a, &40329537, &4008f8f0)
+ sun_halo_color[1]: (&40a5fed7, &402cf741, &3fa0dece)
+ sun_halo_color[2]: (&419837f0, &412fd640, &40a4b2f9)
+ sun_halo_color[3]: (1, &3f5f11ee, &3f2a56d5)
+ sun_halo_color[4]: (&4045672a, &402c02b1, &40035977)
+ sun_halo_color[5]: (&409837f0, &401e9c41, &3f9384cb)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3eb504f3, &3eb504f3, &3eb504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &43310d50
+ fog_density: 1
+ fog_density[0]: &3a788f38
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &4027904a
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3fdefb6c
+ scale_override: 1
+ scale_override[0]: &3ecccccd
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e4dcbb2
+ contrast: 1
+ contrast[0]: &3eaab800
+ shoulder_length: 1
+ shoulder_length[0]: &3f24631e
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &4484b2a0
+ bloom_intensity: 1
+ bloom_intensity[0]: &3cd5e54d
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &404de354
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.9 {
+sun_profile : reference.nice.13 {
  version: 7
  low_elevation: &41c7fffe
  high_elevation: &41c7fffe
@@ -1176,15 +1676,17 @@ sun_profile : reference.nice.9 {
  temperature: 1
  temperature[0]: 25
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_06_15_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_06_15_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_08_35_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&4045672a, &4045672a, &4045672a)
+ ambient[0]: (&3fd744fd, &3fd744fd, &3fd744fd)
  diffuse: 1
  diffuse[0]: (&410b95c2, &410b95c2, &410b95c2)
  specular: 1
@@ -1192,13 +1694,17 @@ sun_profile : reference.nice.9 {
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &40cccccd
+ env_static_mod[0]: &40885578
  sky_color: 1
- sky_color[0]: (&411837f0, &411837f0, &411837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&40d744fd, &40d744fd, &40d744fd)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3e46e33d, &3ec11117, &3f3504f3)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&4145672a, &412594db, &406d5021)
+ sun_color[0]: (&413504f3, &412549e0, &410b0cdd)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -1207,24 +1713,30 @@ sun_profile : reference.nice.9 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&409837f0, &401e9c41, &3f9384cb)
- sun_halo_color[2]: (&409837f0, &401e9c41, &3f9384cb)
- sun_halo_color[3]: (&409837f0, &401e9c41, &3f9384cb)
- sun_halo_color[4]: (&40a5fed7, &402cf741, &3fa0dece)
- sun_halo_color[5]: (&419837f0, &412fd640, &40a4b2f9)
+ sun_halo_color[0]: (&409837f0, &407a7c8b, &3ff7f542)
+ sun_halo_color[1]: (4, &403ce7b7, &3f32d6c6)
+ sun_halo_color[2]: (&4125fed7, &40f00c3e, &40c1e8a7)
+ sun_halo_color[3]: (&3fc5672a, &3fa26ba0, &3f20c7e9)
+ sun_halo_color[4]: (&409837f0, &407a7c8b, &3ff7f542)
+ sun_halo_color[5]: (4, &401c4973, &3fa0c322)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f000000, &3f000000, &3f000000)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3edfdedf, &3f4f2635, &3fa5fed7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4332e000
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -1237,152 +1749,8 @@ sun_profile : reference.nice.9 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
- rain_max_wetness: 1
- rain_max_wetness[0]: 0
- rain_additional_ambient: 1
- rain_additional_ambient[0]: 5
- wind_type: 1
- wind_type[0]: 1
- dof_start: 1
- dof_start[0]: &437ae8b4
- dof_transition: 1
- dof_transition[0]: 820
- dof_filter_size: 1
- dof_filter_size[0]: &3f974bc7
- color_balance: 1
- color_balance[0]: (-0, -0, 0)
- color_saturation: 1
- color_saturation[0]: 1
- sunshaft_color: 1
- sunshaft_color[0]: (&3ec5672a, &3e8a6650, &3dc5872d)
- sunshaft_size: 1
- sunshaft_size[0]: 0
- low_intensity_minimum: 1
- low_intensity_minimum[0]: &31031270
- low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
- low_intensity_color: 1
- low_intensity_color[0]: (1, 1, 1)
- min_scale: 1
- min_scale[0]: &3f6dc5ed
- max_scale: 1
- max_scale[0]: &3fa45071
- scale_override: 1
- scale_override[0]: 0
- dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3f008312
- bright_adaptation_speed: 1
- bright_adaptation_speed[0]: &3f40c49c
- target_gray: 1
- target_gray[0]: &3e1ac781
- contrast: 1
- contrast[0]: &3e6018e0
- shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
- bloom_threshold: 1
- bloom_threshold[0]: &37800000
- bloom_limit: 1
- bloom_limit[0]: &41848390
- bloom_intensity: 1
- bloom_intensity[0]: &37800000
- bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
- stability: 1
- stability[0]: 0
- weight: 1
- weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
-}
-
-sun_profile : reference.nice.10 {
- version: 7
- low_elevation: &420bffff
- high_elevation: &420bffff
- sun_direction: 1
- temperature: 1
- temperature[0]: 25
- skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_07_35_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_07_35_c.tobj"
- stars_texture: 1
- stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
- ambient: 1
- ambient[0]: (&409837f0, &409837f0, &409837f0)
- diffuse: 1
- diffuse[0]: (16, 16, 16)
- specular: 1
- specular[0]: (16, 16, 16)
- env: 1
- env[0]: 1
- env_static_mod: 1
- env_static_mod[0]: &411d020c
- sky_color: 1
- sky_color[0]: (&415744fd, &415744fd, &415744fd)
- stars_opacity: 1
- stars_opacity[0]: 0
- sun_color: 1
- sun_color[0]: (&4145672a, &4128c734, &40f10701)
- sun_opacity: 6
- sun_opacity[0]: 1
- sun_opacity[1]: 1
- sun_opacity[2]: 1
- sun_opacity[3]: 1
- sun_opacity[4]: 1
- sun_opacity[5]: 1
- sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (4, &401c4973, &3fa0c322)
- sun_halo_color[2]: (4, &401c4973, &3fa0c322)
- sun_halo_color[3]: (4, &401c4973, &3fa0c322)
- sun_halo_color[4]: (4, &403ce7b7, &3f32d6c6)
- sun_halo_color[5]: (&4125fed7, &40f00c3e, &40c1e8a7)
- sun_shadow_strength: 1
- sun_shadow_strength[0]: 1
- fog_color: 1
- fog_color[0]: (0, 0, 0)
- fog_color2: 1
- fog_color2[0]: (&3f873339, &3fcce834, &4025fed7)
- fog_vgradient: 1
- fog_vgradient[0]: &3c030d6a
- fog_offset: 1
- fog_offset[0]: 250
- fog_density: 1
- fog_density[0]: &37800000
- speed_coef: 1
- speed_coef[0]: &3e75c2a2
- cloud_shadow_weight: 1
- cloud_shadow_weight[0]: 0
- cloud_shadow_texture: 1
- cloud_shadow_texture[0]: "null"
- cloud_shadow_area_size: 1
- cloud_shadow_area_size[0]: (0, 0)
- cloud_shadow_speed: 1
- cloud_shadow_speed[0]: (0, 0)
- rain_intensity: 1
- rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -1400,9 +1768,9 @@ sun_profile : reference.nice.10 {
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e8b95c2, &3e5232ed, &3d97079f)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &402069b3
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -1410,73 +1778,193 @@ sun_profile : reference.nice.10 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3f2c0968
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3f423bc8
+ max_scale[0]: &3f9aa43d
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ed374bc
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f010625
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e1f9294
+ target_gray[0]: &3e5913f0
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ea336f0
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f165126
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44b74abe
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3e8a5535
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &4054bc6a
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.11 {
+sun_profile : reference.nice.14 {
  version: 7
- low_elevation: &425bfffb
- high_elevation: &425bfffb
+ low_elevation: &421ffffc
+ high_elevation: &421ffffc
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 29
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_07_35_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_07_35_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_08_35_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&40eac0c7, &40eac0c7, &40eac0c7)
+ ambient[0]: (&4045672a, &4045672a, &4045672a)
+ diffuse: 1
+ diffuse[0]: (&41a5fed7, &41a5fed7, &41a5fed7)
+ specular: 1
+ specular[0]: (&41a5fed7, &41a5fed7, &41a5fed7)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &409ba1ef
+ sky_color: 1
+ sky_color[0]: (&4125fed7, &4125fed7, &4125fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3ec6e33d, &3f411117, &3fb504f3)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&41eac0c7, &41d65a4f, &41b4536c)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&40a5fed7, &4080c874, &4003b81b)
+ sun_halo_color[1]: (&411837f0, &40e9da8d, &40842c26)
+ sun_halo_color[2]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[3]: (&3feac0c7, &3fb6206e, &3f3a476e)
+ sun_halo_color[4]: (&40a5fed7, &4080c874, &4003b81b)
+ sun_halo_color[5]: (&401837f0, &3fe9da8d, &3f842c26)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (1, 1, 1)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4333c979
+ fog_density: 1
+ fog_density[0]: &3a69ed18
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &4020624e
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3f14db69
+ scale_override: 1
+ scale_override[0]: &3ee24dd3
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e84562f
+ contrast: 1
+ contrast[0]: &3ea336f0
+ shoulder_length: 1
+ shoulder_length[0]: &3f0b0f8c
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &44e0416d
+ bloom_intensity: 1
+ bloom_intensity[0]: &3eb08ee6
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &405db22d
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.15 {
+ version: 7
+ low_elevation: &4247fffe
+ high_elevation: &4247fffe
+ sun_direction: 1
+ temperature: 1
+ temperature[0]: 29
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_09_50_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&406ac0c7, &406ac0c7, &406ac0c7)
  diffuse: 1
  diffuse[0]: (&41b504f3, &41b504f3, &41b504f3)
  specular: 1
@@ -1484,13 +1972,17 @@ sun_profile : reference.nice.11 {
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &413e0419
+ env_static_mod[0]: &409ba1ef
  sky_color: 1
- sky_color[0]: (&419837f0, &419837f0, &419837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&413504f3, &413504f3, &413504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f00f673, &3f7a606a, &3feac0c7)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&419837f0, &418afd96, &4169da8d)
+ sun_color[0]: (&421837f0, &42118453, &42036377)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -1499,24 +1991,30 @@ sun_profile : reference.nice.11 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[2]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[3]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[4]: (&411837f0, &40e9da8d, &40842c26)
- sun_halo_color[5]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[0]: (&409837f0, &4069da8d, &40042c26)
+ sun_halo_color[1]: (&411837f0, &40e9da8d, &40842c26)
+ sun_halo_color[2]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[3]: (2, &3fc4a592, &3f5e4965)
+ sun_halo_color[4]: (&409837f0, &4069da8d, &40042c26)
+ sun_halo_color[5]: (&401837f0, &3fe9da8d, &3f842c26)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3fbfad2e, &4010c1ac, &405744fd)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4333c989
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -1529,6 +2027,8 @@ sun_profile : reference.nice.11 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -1546,9 +2046,9 @@ sun_profile : reference.nice.11 {
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3ea5fed7, &3e68c272, &3db92e48)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &4020624e
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -1556,219 +2056,54 @@ sun_profile : reference.nice.11 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3edc7fba
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3ef8f2d0
+ max_scale[0]: &3ed7168f
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ee6e979
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f008312
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e25c5ff
+ target_gray[0]: &3e8fea22
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3eae7888
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f0b0f8c
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44e0416d
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ebb886c
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &405db22d
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.12 {
+sun_profile : reference.nice.16 {
  version: 7
- low_elevation: 60
- high_elevation: 60
+ low_elevation: 65
+ high_elevation: 65
  sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 29
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_08_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_08_80_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_09_50_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&40eac0c7, &40eac0c7, &40eac0c7)
- diffuse: 1
- diffuse[0]: (&41c5672a, &41c5672a, &41c5672a)
- specular: 1
- specular[0]: (&41c5672a, &41c5672a, &41c5672a)
- env: 1
- env[0]: 1
- env_static_mod: 1
- env_static_mod[0]: &4143b22d
- sky_color: 1
- sky_color[0]: (&419837f0, &419837f0, &419837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
- sun_color: 1
- sun_color[0]: (&419837f0, &41678829, &40f7f542)
- sun_opacity: 6
- sun_opacity[0]: 1
- sun_opacity[1]: 1
- sun_opacity[2]: 1
- sun_opacity[3]: 1
- sun_opacity[4]: 1
- sun_opacity[5]: 1
- sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[2]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[3]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[4]: (8, &409732cf, &3f6f8e55)
- sun_halo_color[5]: (&411837f0, &40d9e238, &40273e71)
- sun_shadow_strength: 1
- sun_shadow_strength[0]: 1
- fog_color: 1
- fog_color[0]: (0, 0, 0)
- fog_color2: 1
- fog_color2[0]: (&3f958f47, &400aa64d, &406ac0c7)
- fog_vgradient: 1
- fog_vgradient[0]: &3c030d6a
- fog_offset: 1
- fog_offset[0]: 250
- fog_density: 1
- fog_density[0]: &37800000
- speed_coef: 1
- speed_coef[0]: &3e75c2a2
- cloud_shadow_weight: 1
- cloud_shadow_weight[0]: 0
- cloud_shadow_texture: 1
- cloud_shadow_texture[0]: "null"
- cloud_shadow_area_size: 1
- cloud_shadow_area_size[0]: (0, 0)
- cloud_shadow_speed: 1
- cloud_shadow_speed[0]: (0, 0)
- rain_intensity: 1
- rain_intensity[0]: 0
- rain_max_wetness: 1
- rain_max_wetness[0]: 0
- rain_additional_ambient: 1
- rain_additional_ambient[0]: 5
- wind_type: 1
- wind_type[0]: 1
- dof_start: 1
- dof_start[0]: &437ae8b4
- dof_transition: 1
- dof_transition[0]: 820
- dof_filter_size: 1
- dof_filter_size[0]: &3f974bc7
- color_balance: 1
- color_balance[0]: (0, 0, 0)
- color_saturation: 1
- color_saturation[0]: 1
- sunshaft_color: 1
- sunshaft_color[0]: (&3e9837f0, &3e70e684, &3d60a4e2)
- sunshaft_size: 1
- sunshaft_size[0]: 0
- low_intensity_minimum: 1
- low_intensity_minimum[0]: &31031270
- low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
- low_intensity_color: 1
- low_intensity_color[0]: (1, 1, 1)
- min_scale: 1
- min_scale[0]: &3edc7fba
- max_scale: 1
- max_scale[0]: &3eef1456
- scale_override: 1
- scale_override[0]: 0
- dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3f008312
- bright_adaptation_speed: 1
- bright_adaptation_speed[0]: &3f40c49c
- target_gray: 1
- target_gray[0]: &3e270ace
- contrast: 1
- contrast[0]: &3e6018e0
- shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
- bloom_threshold: 1
- bloom_threshold[0]: &37800000
- bloom_limit: 1
- bloom_limit[0]: &41848390
- bloom_intensity: 1
- bloom_intensity[0]: &37800000
- bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
- stability: 1
- stability[0]: 0
- weight: 1
- weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
-}
-
-sun_profile : reference.nice.13 {
- version: 7
- low_elevation: &4295fffd
- high_elevation: &4295fffd
- sun_direction: 0
- temperature: 1
- temperature[0]: 25
- skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_08_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_08_80_c.tobj"
- stars_texture: 1
- stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
- ambient: 1
- ambient[0]: (&40eac0c7, &40eac0c7, &40eac0c7)
+ ambient[0]: (&4096dd37, &4096dd37, &409837f0)
  diffuse: 1
  diffuse[0]: (&41d744fd, &41d744fd, &41d744fd)
  specular: 1
@@ -1776,13 +2111,17 @@ sun_profile : reference.nice.13 {
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &41471aa0
+ env_static_mod[0]: &409ba1ef
  sky_color: 1
- sky_color[0]: (&41a5fed7, &41a5fed7, &41a5fed7)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&4145672a, &4145672a, &4145672a)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f195d05, &3f94dff4, &400b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&41a5fed7, &417c7cc1, &41073339)
+ sun_color[0]: (&421837f0, &420afd96, &41e9da8d)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -1791,170 +2130,30 @@ sun_profile : reference.nice.13 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[2]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[3]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[4]: (&40b504f3, &408f3d82, &3f178037)
- sun_halo_color[5]: (&416ac0c7, &41507154, &40f49c53)
+ sun_halo_color[0]: (&406ac0c7, &40507154, &3fd3a58e)
+ sun_halo_color[1]: (&411837f0, &40e9da8d, &40842c26)
+ sun_halo_color[2]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[3]: (&400b95c2, &3fa4e213, &3e829e6c)
+ sun_halo_color[4]: (&406ac0c7, &40507154, &3fd3a58e)
+ sun_halo_color[5]: (&401837f0, &3fe9da8d, &3f842c26)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
- fog_color: 1
- fog_color[0]: (&400d50a2, &4031a199, 4)
- fog_color2: 1
- fog_color2[0]: (&400d50a2, &4031a199, 4)
- fog_vgradient: 1
- fog_vgradient[0]: &3c030d6a
- fog_offset: 1
- fog_offset[0]: 250
- fog_density: 1
- fog_density[0]: &37800000
- speed_coef: 1
- speed_coef[0]: &3e75c2a2
- cloud_shadow_weight: 1
- cloud_shadow_weight[0]: 0
- cloud_shadow_texture: 1
- cloud_shadow_texture[0]: "null"
- cloud_shadow_area_size: 1
- cloud_shadow_area_size[0]: (0, 0)
- cloud_shadow_speed: 1
- cloud_shadow_speed[0]: (0, 0)
- rain_intensity: 1
- rain_intensity[0]: 0
- rain_max_wetness: 1
- rain_max_wetness[0]: 0
- rain_additional_ambient: 1
- rain_additional_ambient[0]: 5
- wind_type: 1
- wind_type[0]: 1
- dof_start: 1
- dof_start[0]: &437ae8b4
- dof_transition: 1
- dof_transition[0]: 820
- dof_filter_size: 1
- dof_filter_size[0]: &3f974bc7
- color_balance: 1
- color_balance[0]: (0, 0, 0)
- color_saturation: 1
- color_saturation[0]: 1
- sunshaft_color: 1
- sunshaft_color[0]: (&3e45672a, &3df657e6, &3d5c37e2)
- sunshaft_size: 1
- sunshaft_size[0]: 0
- low_intensity_minimum: 1
- low_intensity_minimum[0]: &31031270
- low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
- low_intensity_color: 1
- low_intensity_color[0]: (1, 1, 1)
- min_scale: 1
- min_scale[0]: &3eacfb5b
- max_scale: 1
- max_scale[0]: &3ed3c1f8
- scale_override: 1
- scale_override[0]: 0
- dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3f010625
- bright_adaptation_speed: 1
- bright_adaptation_speed[0]: &3f40c49c
- target_gray: 1
- target_gray[0]: &3e28521a
- contrast: 1
- contrast[0]: &3e916873
- shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
- bloom_threshold: 1
- bloom_threshold[0]: &37800000
- bloom_limit: 1
- bloom_limit[0]: &41848390
- bloom_intensity: 1
- bloom_intensity[0]: &37800000
- bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
- stability: 1
- stability[0]: 0
- weight: 1
- weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
-}
-
-sun_profile : reference.nice.14 {
- version: 7
- low_elevation: 60
- high_elevation: 60
- sun_direction: -1
- temperature: 1
- temperature[0]: 25
- skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_08_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_08_80_c.tobj"
- stars_texture: 1
- stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
- ambient: 1
- ambient[0]: (&40eac0c7, &40eac0c7, &40eac0c7)
- diffuse: 1
- diffuse[0]: (&41c5672a, &41c5672a, &41c5672a)
- specular: 1
- specular[0]: (&41c5672a, &41c5672a, &41c5672a)
- env: 1
- env[0]: 1
- env_static_mod: 1
- env_static_mod[0]: &4143b22d
- sky_color: 1
- sky_color[0]: (&419837f0, &419837f0, &419837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
- sun_color: 1
- sun_color[0]: (&41b504f3, &4189ab70, &41136fce)
- sun_opacity: 6
- sun_opacity[0]: 1
- sun_opacity[1]: 1
- sun_opacity[2]: 1
- sun_opacity[3]: 1
- sun_opacity[4]: 1
- sun_opacity[5]: 1
- sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[2]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[3]: (&401837f0, &3fb3ce69, &3e8e70db)
- sun_halo_color[4]: (8, &409732cf, &3f6f8e55)
- sun_halo_color[5]: (&411837f0, &40d9e238, &40273e71)
- sun_shadow_strength: 1
- sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f9837f0, &3f9837f0, &3f9837f0)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3f958f47, &400aa64d, &406ac0c7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4333c979
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -1967,6 +2166,8 @@ sun_profile : reference.nice.14 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -1984,9 +2185,9 @@ sun_profile : reference.nice.14 {
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e9837f0, &3e70e684, &3d60a4e2)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &4020624e
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -1994,73 +2195,610 @@ sun_profile : reference.nice.14 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3ed3c1f8
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3ef8f2d0
+ max_scale[0]: &3eb6e243
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3eec8b44
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f008312
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e270ace
+ target_gray[0]: &3e97cde6
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3eb23910
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f0b0f8c
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44e0416d
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3edcb571
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &405db22d
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.15 {
+sun_profile : reference.nice.17 {
  version: 7
- low_elevation: &425bfffb
- high_elevation: &425bfffb
- sun_direction: -1
+ low_elevation: &4295fffd
+ high_elevation: &4295fffd
+ sun_direction: 1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 29
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_07_35_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_07_35_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_10_80_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&40eac0c7, &40eac0c7, &40eac0c7)
+ ambient[0]: (&409837f0, &409837f0, &409837f0)
+ diffuse: 1
+ diffuse[0]: (&41d744fd, &41d744fd, &41d744fd)
+ specular: 1
+ specular[0]: (&41d744fd, &41d744fd, &41d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &409ba1ef
+ sky_color: 1
+ sky_color[0]: (&4145672a, &4145672a, &4145672a)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f195d05, &3f94dff4, &400b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&421837f0, &4212d7d9, &42086dc8)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&409837f0, &4070e684, &3efecb04)
+ sun_halo_color[1]: (8, &409732cf, &3f6f8e55)
+ sun_halo_color[2]: (&411837f0, &40d9e238, &40273e71)
+ sun_halo_color[3]: (&410b95c2, &40dce81d, &3f69a570)
+ sun_halo_color[4]: (&409837f0, &4070e684, &3efecb04)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3fa5fed7, &3fa5fed7, &3fa5fed7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4333c979
+ fog_density: 1
+ fog_density[0]: &3a6eb49a
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &40209375
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3ea8855a
+ scale_override: 1
+ scale_override[0]: &3ef0a3d7
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e9b5112
+ contrast: 1
+ contrast[0]: &3eb5f990
+ shoulder_length: 1
+ shoulder_length[0]: &3f0b0f8c
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &44fd2d35
+ bloom_intensity: 1
+ bloom_intensity[0]: &3ee130b0
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &405f0a3d
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.18 {
+ version: 7
+ low_elevation: 89
+ high_elevation: 89
+ sun_direction: 0
+ temperature: 1
+ temperature[0]: 31
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_10_80_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&409837f0, &409837f0, &409837f0)
+ diffuse: 1
+ diffuse[0]: (&41d744fd, &41d744fd, &41d744fd)
+ specular: 1
+ specular[0]: (&41eac0c7, &41eac0c7, &41eac0c7)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &40a40d0b
+ sky_color: 1
+ sky_color[0]: (&4145672a, &4145672a, &4145672a)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f195d05, &3f94dff4, &400b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&421837f0, &4216dd37, &4212d7d9)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (4, &404a9284, &3ed6412a)
+ sun_halo_color[1]: (&40b504f3, &408f3d82, &3f178037)
+ sun_halo_color[2]: (&416ac0c7, &41507154, &40f49c53)
+ sun_halo_color[3]: (4, &404a9284, &3ed6412a)
+ sun_halo_color[4]: (4, &404a9284, &3ed6412a)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3fa5fed7, &3fa5fed7, &3fa5fed7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4333c979
+ fog_density: 1
+ fog_density[0]: &3a6eb49a
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &40209375
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3ea1e15f
+ scale_override: 1
+ scale_override[0]: &3ef22d0e
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f010625
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e9c8164
+ contrast: 1
+ contrast[0]: &3ebd7aa0
+ shoulder_length: 1
+ shoulder_length[0]: &3f0b0f8c
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &45092fe2
+ bloom_intensity: 1
+ bloom_intensity[0]: &3ee130b0
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &40611687
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.19 {
+ version: 7
+ low_elevation: &4295fffd
+ high_elevation: &4295fffd
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 29
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_10_80_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&408b95c2, &408b95c2, &408b95c2)
+ diffuse: 1
+ diffuse[0]: (&41d744fd, &41d744fd, &41d744fd)
+ specular: 1
+ specular[0]: (&41d744fd, &41d744fd, &41d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &409ba1ef
+ sky_color: 1
+ sky_color[0]: (&4145672a, &4145672a, &4145672a)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f195d05, &3f94dff4, &400b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&421837f0, &4212d7d9, &42086dc8)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&409837f0, &4070e684, &3efecb04)
+ sun_halo_color[1]: (8, &409732cf, &3f6f8e55)
+ sun_halo_color[2]: (&411837f0, &40d9e238, &40273e71)
+ sun_halo_color[3]: (&410b95c2, &40dce81d, &3f69a570)
+ sun_halo_color[4]: (&409837f0, &4070e684, &3efecb04)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3fa5fed7, &3fa5fed7, &3fa5fed7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4333c979
+ fog_density: 1
+ fog_density[0]: &3a6eb49a
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &40209375
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3ea8855a
+ scale_override: 1
+ scale_override[0]: &3eef9db2
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e9b5112
+ contrast: 1
+ contrast[0]: &3eb5f990
+ shoulder_length: 1
+ shoulder_length[0]: &3f0b0f8c
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &44fd2d35
+ bloom_intensity: 1
+ bloom_intensity[0]: &3ee130b0
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &405f0a3d
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.20 {
+ version: 7
+ low_elevation: 65
+ high_elevation: 65
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 29
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_09_50_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&407db8e3, &407db8e3, 4)
+ diffuse: 1
+ diffuse[0]: (&41d744fd, &41d744fd, &41d744fd)
+ specular: 1
+ specular[0]: (&41d744fd, &41d744fd, &41d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &409ba1ef
+ sky_color: 1
+ sky_color[0]: (&4145672a, &4145672a, &4145672a)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f0ca283, &3f8884d1, 2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&421837f0, &420afd96, &41e9da8d)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&406ac0c7, &40507154, &3fd3a58e)
+ sun_halo_color[1]: (8, &409732cf, &3f6f8e55)
+ sun_halo_color[2]: (&411837f0, &40d9e238, &40273e71)
+ sun_halo_color[3]: (&4025fed7, &3fc41486, &3e9b5535)
+ sun_halo_color[4]: (&406ac0c7, &40507154, &3fd3a58e)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f9837f0, &3f9837f0, &3f9837f0)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4333c979
+ fog_density: 1
+ fog_density[0]: &3a69ed18
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &4020624e
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3eb6e243
+ scale_override: 1
+ scale_override[0]: &3eeb020c
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e97cde6
+ contrast: 1
+ contrast[0]: &3eb23910
+ shoulder_length: 1
+ shoulder_length[0]: &3f0b0f8c
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &44e0416d
+ bloom_intensity: 1
+ bloom_intensity[0]: &3edcb571
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &405db22d
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.21 {
+ version: 7
+ low_elevation: &4247fffe
+ high_elevation: &4247fffe
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 29
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_09_50_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (4, 4, 4)
  diffuse: 1
  diffuse[0]: (&41b504f3, &41b504f3, &41b504f3)
  specular: 1
@@ -2068,13 +2806,17 @@ sun_profile : reference.nice.15 {
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &413e0419
+ env_static_mod[0]: &409ba1ef
  sky_color: 1
- sky_color[0]: (&419837f0, &419837f0, &419837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&413504f3, &413504f3, &413504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3f00f673, &3f7a606a, &3feac0c7)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&41a5fed7, &419791ff, &417f04f1)
+ sun_color[0]: (&421837f0, &42118453, &42036377)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2083,24 +2825,30 @@ sun_profile : reference.nice.15 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[2]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[3]: (&401837f0, &3fe9da8d, &3f842c26)
- sun_halo_color[4]: (&411837f0, &40e9da8d, &40842c26)
- sun_halo_color[5]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[0]: (&409837f0, &4069da8d, &40042c26)
+ sun_halo_color[1]: (8, &409732cf, &3f6f8e55)
+ sun_halo_color[2]: (&411837f0, &40d9e238, &40273e71)
+ sun_halo_color[3]: (&3feac0c7, &3fb4536c, &3f4bd67a)
+ sun_halo_color[4]: (&409837f0, &4069da8d, &40042c26)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3f892596, &3ffe48d6, &405744fd)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4333c989
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2113,6 +2861,8 @@ sun_profile : reference.nice.15 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2122,17 +2872,17 @@ sun_profile : reference.nice.15 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
  color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3ea5fed7, &3e13cd83, &3bb28e83)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &4020624e
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -2140,87 +2890,72 @@ sun_profile : reference.nice.15 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3ed3c1f8
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3eef1456
+ max_scale[0]: &3ee94216
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ee56042
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f008312
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e25c5ff
+ target_gray[0]: &3e8fea22
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3eae7888
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f0b0f8c
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44e0416d
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ebb886c
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &405db22d
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.16 {
+sun_profile : reference.nice.22 {
  version: 7
- low_elevation: &420bffff
- high_elevation: &420bffff
+ low_elevation: &421ffffc
+ high_elevation: &421ffffc
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 29
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_07_35_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_07_35_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_08_35_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&409837f0, &409837f0, &409837f0)
+ ambient[0]: (&405744fd, &405744fd, &405744fd)
  diffuse: 1
- diffuse[0]: (16, 16, 16)
+ diffuse[0]: (&41a5fed7, &41a5fed7, &41a5fed7)
  specular: 1
- specular[0]: (16, 16, 16)
+ specular[0]: (&41a5fed7, &41a5fed7, &41a5fed7)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &411d020c
+ env_static_mod[0]: &409ba1ef
  sky_color: 1
- sky_color[0]: (&415744fd, &415744fd, &415744fd)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&4125fed7, &4125fed7, &4125fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3ec6e33d, &3f411117, &3fb504f3)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&418b95c2, &416eb036, &412a6e9d)
+ sun_color[0]: (&41eac0c7, &41d65a4f, &41b4536c)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2229,24 +2964,30 @@ sun_profile : reference.nice.16 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (4, &404895f3, &3f52002b)
- sun_halo_color[2]: (4, &404895f3, &3f52002b)
- sun_halo_color[3]: (4, &404895f3, &3f52002b)
- sun_halo_color[4]: (4, &403ce7b7, &3f32d6c6)
- sun_halo_color[5]: (&4125fed7, &40f00c3e, &40c1e8a7)
+ sun_halo_color[0]: (&40a5fed7, &4080c874, &4003b81b)
+ sun_halo_color[1]: (8, &409732cf, &3f6f8e55)
+ sun_halo_color[2]: (&411837f0, &40d9e238, &40273e71)
+ sun_halo_color[3]: (&3fa5fed7, &3f80c874, &3f03b81b)
+ sun_halo_color[4]: (&40a5fed7, &4080c874, &4003b81b)
+ sun_halo_color[5]: (&401837f0, &3fb3ce69, &3e8e70db)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (1, 1, 1)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3f568fae, &3f8abbed, &4025fed7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4333c979
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2259,6 +3000,8 @@ sun_profile : reference.nice.16 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2268,75 +3011,54 @@ sun_profile : reference.nice.16 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
  color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e8b95c2, &3e5232ed, &3d97079f)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &4020624e
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
- low_intensity_maximum[0]: 0
+ low_intensity_maximum[0]: &31031270
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3f332368
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3f5b4b77
+ max_scale[0]: &3f1b1225
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3edfbe77
  dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3f010625
+ dark_adaptation_speed[0]: &3f008312
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e1f9294
+ target_gray[0]: &3e84562f
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ea336f0
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f0b0f8c
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44e0416d
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3eb08ee6
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &405db22d
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.17 {
+sun_profile : reference.nice.23 {
  version: 7
  low_elevation: &41c7fffe
  high_elevation: &41c7fffe
@@ -2344,29 +3066,35 @@ sun_profile : reference.nice.17 {
  temperature: 1
  temperature[0]: 25
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_06_15_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_06_15_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_08_35_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&4045672a, &4045672a, &4045672a)
+ ambient[0]: (&403504f3, &403504f3, &403504f3)
  diffuse: 1
- diffuse[0]: (&413504f3, &413504f3, &413504f3)
+ diffuse[0]: (&410b95c2, &410b95c2, &410b95c2)
  specular: 1
- specular[0]: (&413504f3, &413504f3, &413504f3)
+ specular[0]: (&410b95c2, &410b95c2, &410b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &40cccccd
+ env_static_mod[0]: &40885578
  sky_color: 1
- sky_color[0]: (&411837f0, &411837f0, &411837f0)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&40d744fd, &40d744fd, &40d744fd)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3e46e33d, &3ec11117, &3f3504f3)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&4145672a, &4111aa70, &4069d598)
+ sun_color[0]: (&413504f3, &412549e0, &410b0cdd)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2375,24 +3103,30 @@ sun_profile : reference.nice.17 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&409837f0, &4060a5b7, &3fc4c0e7)
- sun_halo_color[2]: (&409837f0, &4060a5b7, &3fc4c0e7)
- sun_halo_color[3]: (&409837f0, &4060a5b7, &3fc4c0e7)
- sun_halo_color[4]: (&40a5fed7, &402cf741, &3fa0dece)
- sun_halo_color[5]: (&419837f0, &412fd640, &40a4b2f9)
+ sun_halo_color[0]: (&409837f0, &407a7c8b, &3ff7f542)
+ sun_halo_color[1]: (&411837f0, &40e9da8d, &40842c26)
+ sun_halo_color[2]: (&4125fed7, &40ff04f1, &4079d4d0)
+ sun_halo_color[3]: (1, &3f52a21a, &3ed081cd)
+ sun_halo_color[4]: (&409837f0, &407a7c8b, &3ff7f542)
+ sun_halo_color[5]: (&401837f0, &3fe9da8d, &3f842c26)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3f000000, &3f000000, &3f000000)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3f073339, &3f4f2635, &3fa5fed7)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 250
+ fog_offset[0]: &4332e000
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3a69ed18
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2405,6 +3139,8 @@ sun_profile : reference.nice.17 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2414,105 +3150,90 @@ sun_profile : reference.nice.17 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3ec5672a, &3e96213e, &3e0ea568)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &402069b3
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
+ low_intensity_maximum[0]: 0
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &3f978b53
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &3fa45071
+ max_scale[0]: &3f9aa43d
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ed374bc
  dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3f008312
+ dark_adaptation_speed[0]: &3f010625
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f40c49c
  target_gray: 1
- target_gray[0]: &3e1ac781
+ target_gray[0]: &3e5913f0
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ea336f0
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f165126
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &44b74abe
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3e8a5535
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &4054bc6a
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.18 {
+sun_profile : reference.nice.24 {
  version: 7
  low_elevation: &411ffffc
  high_elevation: &411ffffc
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 18
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_06_15_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_06_15_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_07_15_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
  stars_texture[0]: "null"
- skycloud_part: 1
- skycloud_part[0]: ""
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3ec5672a, &3ec5672a, &3ec5672a)
+ ambient[0]: (1, 1, 1)
  diffuse: 1
- diffuse[0]: (1, 1, 1)
+ diffuse[0]: (&400b95c2, &400b95c2, &400b95c2)
  specular: 1
- specular[0]: (1, 1, 1)
+ specular[0]: (&400b95c2, &400b95c2, &400b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3fd16873
+ env_static_mod[0]: &3bfc8766
  sky_color: 1
- sky_color[0]: (&3fc5672a, &3fc5672a, &3fc5672a)
- stars_opacity: 1
- stars_opacity[0]: 0
+ sky_color[0]: (&3feac0c7, &3feac0c7, &3feac0c7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3d8ca283, &3e0884d1, &3e800000)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
  sun_color: 1
- sun_color[0]: (&40b504f3, &4090a731, &40295b18)
+ sun_color[0]: (&3f6ac0c7, &3f48b650, &3f1f8654)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2521,24 +3242,30 @@ sun_profile : reference.nice.18 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&401837f0, &3fe0a5b7, &3f44c0e7)
- sun_halo_color[2]: (&401837f0, &3fe0a5b7, &3f44c0e7)
- sun_halo_color[3]: (&401837f0, &3fe0a5b7, &3f44c0e7)
- sun_halo_color[4]: (&4045672a, &3ffbba24, &3f3f4ee1)
- sun_halo_color[5]: (8, &409fbbe1, &40231892)
+ sun_halo_color[0]: (&3fd744fd, &3f8f3cd4, &3ee1d17d)
+ sun_halo_color[1]: (&4045672a, &3ffbba24, &3f3f4ee1)
+ sun_halo_color[2]: (8, &409fbbe1, &40231892)
+ sun_halo_color[3]: (&3ea5fed7, &3e5ce711, &3dae2136)
+ sun_halo_color[4]: (&3fd744fd, &3f8f3cd4, &3ee1d17d)
+ sun_halo_color[5]: (&401837f0, &3fe0a5b7, &3f44c0e7)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3deac0c7, &3deac0c7, &3deac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3dd343b9, &3e4a2411, &3eb504f3)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: 230
+ fog_offset[0]: &43261be7
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3aa4f551
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2551,6 +3278,8 @@ sun_profile : reference.nice.18 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2560,17 +3289,17 @@ sun_profile : reference.nice.18 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e8b95c2, &3e2e30e9, &3d34ef5b)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &401f88d7
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -2578,87 +3307,211 @@ sun_profile : reference.nice.18 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &4095e4a7
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &40b77e42
+ max_scale[0]: &40a0512c
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ebced91
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3dfb7092
+ target_gray[0]: &3e1581c8
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3eb23910
  shoulder_length: 1
- shoulder_length[0]: &3f65a1cb
+ shoulder_length[0]: &3f3db6b0
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &439dea22
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ac30a7f
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &403926e9
+ stability: 1
+ stability[0]: 1
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.25 {
+ version: 7
+ low_elevation: &419ffffc
+ high_elevation: &419ffffc
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 21
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_07_15_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "null"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&401837f0, &401837f0, &401837f0)
+ diffuse: 1
+ diffuse[0]: (&40d744fd, &40d744fd, &40d744fd)
+ specular: 1
+ specular[0]: (&40d744fd, &40d744fd, &40d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &401428a4
+ sky_color: 1
+ sky_color[0]: (&40b504f3, &40b504f3, &40b504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3e0ca283, &3e8884d1, &3f000000)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (0, 0, 0)
+ sun_color: 1
+ sun_color[0]: (&408b95c2, &408b95c2, &408b95c2)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&4045672a, &40329537, &4008f8f0)
+ sun_halo_color[1]: (&4045672a, &3ffbba24, &3f3f4ee1)
+ sun_halo_color[2]: (8, &409fbbe1, &40231892)
+ sun_halo_color[3]: (&3f6ac0c7, &3f4126c9, &3ebf33a9)
+ sun_halo_color[4]: (&4045672a, &402c02b1, &40035977)
+ sun_halo_color[5]: (&401837f0, &3fe0a5b7, &3f44c0e7)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3eb504f3, &3eb504f3, &3eb504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &43310d50
+ fog_density: 1
+ fog_density[0]: &3a788f38
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &4027904a
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &3fdefb6c
+ scale_override: 1
+ scale_override[0]: &3ecdd2f2
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3f008312
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f40c49c
+ target_gray: 1
+ target_gray[0]: &3e4dcbb2
+ contrast: 1
+ contrast[0]: &3eaab800
+ shoulder_length: 1
+ shoulder_length[0]: &3f24631e
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &4484b2a0
+ bloom_intensity: 1
+ bloom_intensity[0]: &3cd5e54d
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &404de354
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.19 {
+sun_profile : reference.nice.26 {
  version: 7
  low_elevation: 6
  high_elevation: 6
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 18
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_11_5_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_11_5_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_14_05_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3e3504f3, &3e3504f3, &3e3504f3)
+ ambient[0]: (&3f0b95c2, &3f0b95c2, &3f0b95c2)
  diffuse: 1
- diffuse[0]: (&3f25fed7, &3f25fed7, &3f25fed7)
+ diffuse[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
  specular: 1
- specular[0]: (&3f25fed7, &3f25fed7, &3f25fed7)
+ specular[0]: (&3f8b95c2, &3f8b95c2, &3f8b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3eb645a2
+ env_static_mod[0]: &3badd8fa
  sky_color: 1
  sky_color[0]: (&3f6ac0c7, &3f6ac0c7, &3f6ac0c7)
- stars_opacity: 1
- stars_opacity[0]: &3c2ec338
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3d195d05, &3d94dff4, &3e0b95c2)
+ starmap_color: 1
+ starmap_color[0]: (0, 0, 0)
+ stars_color: 1
+ stars_color[0]: (&3a000000, &3a000000, &3a000000)
  sun_color: 1
- sun_color[0]: (&405744fd, &40518d9a, &4048397c)
+ sun_color[0]: (&3f45672a, &3f40293c, &3f379b52)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2667,24 +3520,30 @@ sun_profile : reference.nice.19 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3fd744fd, &3eb9df6c, &3c1a7428)
- sun_halo_color[2]: (&3fd744fd, &3eb9df6c, &3c1a7428)
- sun_halo_color[3]: (&3fd744fd, &3eb9df6c, &3c1a7428)
- sun_halo_color[4]: (&405744fd, &3f816556, &3e98adc2)
- sun_halo_color[5]: (&40a5fed7, &401b4ccc, &3fb6617c)
+ sun_halo_color[0]: (&3f5744fd, &3f5744fd, &3f5744fd)
+ sun_halo_color[1]: (&405744fd, &3f816556, &3e98adc2)
+ sun_halo_color[2]: (&40a5fed7, &401b4ccc, &3fb6617c)
+ sun_halo_color[3]: (&3e25fed7, &3ddce711, &3d0f53d6)
+ sun_halo_color[4]: (&3f5744fd, &3ed36757, &3e3096bc)
+ sun_halo_color[5]: (&3fd744fd, &3eb9df6c, &3c1a7428)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3d5744fd, &3d5744fd, &3d5744fd)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3ecdd2f2
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3e1837f0, &3d878926, &3c152a1f)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &431cad42
+ fog_offset[0]: &43120c8b
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3ac9ef80
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2697,6 +3556,8 @@ sun_profile : reference.nice.19 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2706,17 +3567,17 @@ sun_profile : reference.nice.19 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e800000, &3dec955d, &3b792d22)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &400fd352
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -2724,87 +3585,72 @@ sun_profile : reference.nice.19 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &40cf2b0a
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &411b3a64
+ max_scale[0]: &413c4946
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3eb3b646
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3de06bfa
+ target_gray[0]: &3df902f5
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ebd7aa0
  shoulder_length: 1
- shoulder_length[0]: &3f6b4396
+ shoulder_length[0]: &3f4bc8a8
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &42ad8669
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3940751e
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &401ee979
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.20 {
+sun_profile : reference.nice.27 {
  version: 7
  low_elevation: 0
  high_elevation: 0
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 17
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_12_0_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_12_0_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_15_00_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3cb504f3, &3cb504f3, &3cb504f3)
+ ambient[0]: (&3d1837f0, &3d1837f0, &3d1837f0)
  diffuse: 1
- diffuse[0]: (&3d9837f0, &3d9837f0, &3d9837f0)
+ diffuse[0]: (&3d800000, &3d800000, &3d800000)
  specular: 1
- specular[0]: (&3d9837f0, &3d9837f0, &3d9837f0)
+ specular[0]: (&3d800000, &3d800000, &3d800000)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3d3851ec
+ env_static_mod[0]: &3b1e5a5d
  sky_color: 1
- sky_color[0]: (&3ed744fd, &3ed744fd, &3ed744fd)
- stars_opacity: 1
- stars_opacity[0]: &3d34395a
+ sky_color[0]: (&3e000000, &3e000000, &3e000000)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3b58e377, &3bd28a71, &3c45672a)
+ starmap_color: 1
+ starmap_color[0]: (&37b504f3, &37b504f3, &37b504f3)
+ stars_color: 1
+ stars_color[0]: (&3c1837f0, &3c1837f0, &3c1837f0)
  sun_color: 1
- sun_color[0]: (&3f45672a, &3eebc767, &3e4bdd43)
+ sun_color[0]: (&3e25fed7, &3e0f47bc, &3d902296)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2813,24 +3659,30 @@ sun_profile : reference.nice.20 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3f1837f0, &3dc916e6, &3a6c8e71)
- sun_halo_color[2]: (&3f1837f0, &3dc916e6, &3a6c8e71)
- sun_halo_color[3]: (&3f1837f0, &3dc916e6, &3a6c8e71)
- sun_halo_color[4]: (&3f5744fd, &3e2a8d9b, &3aea2dce)
- sun_halo_color[5]: (&3f3504f3, &3e955b3e, &3e0a71e0)
+ sun_halo_color[0]: (&3e1837f0, &3dd7a7e8, &3d1384cb)
+ sun_halo_color[1]: (&3f5744fd, &3e2a8d9b, &3aea2dce)
+ sun_halo_color[2]: (&3f3504f3, &3e955b3e, &3e0a71e0)
+ sun_halo_color[3]: (&3d3504f3, &3d003ad2, &3c2f6e2a)
+ sun_halo_color[4]: (&3e1837f0, &3d7b2fc1, &3cf9bbf9)
+ sun_halo_color[5]: (&3f1837f0, &3dc916e6, &3a6c8e71)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3ceac0c7, &3ceac0c7, &3ceac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3eca3d71
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3c8b95c2, &3ba7ce3e, &3a94ccb9)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &422b78d0
+ fog_offset[0]: &429ef74c
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b060417
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2843,6 +3695,8 @@ sun_profile : reference.nice.20 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2852,17 +3706,17 @@ sun_profile : reference.nice.20 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e800000, &3dc0a571, &3a33070b)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &3fd00ee4
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -2870,87 +3724,72 @@ sun_profile : reference.nice.20 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &42873f75
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &42ac665f
+ max_scale[0]: &438bf39c
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3ea1cac1
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3da99be6
+ target_gray[0]: &3d932472
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3ec8bc40
  shoulder_length: 1
  shoulder_length[0]: &3f7e353f
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3bc61e9f
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.21 {
+sun_profile : reference.nice.28 {
  version: 7
  low_elevation: &c07ffffa
  high_elevation: &c07ffffa
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 17
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_13_5_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_13_5_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_16_05_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3b45672a, &3b45672a, &3b45672a)
+ ambient[0]: (&3b8b95c2, &3b8b95c2, &3b8b95c2)
  diffuse: 1
- diffuse[0]: (&3d45672a, &3d45672a, &3d45672a)
+ diffuse[0]: (&3d8b95c2, &3d8b95c2, &3d8b95c2)
  specular: 1
- specular[0]: (&3d45672a, &3d45672a, &3d45672a)
+ specular[0]: (&3d8b95c2, &3d8b95c2, &3d8b95c2)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3ba3d70a
+ env_static_mod[0]: &3a316abb
  sky_color: 1
- sky_color[0]: (&3db504f3, &3db504f3, &3db504f3)
- stars_opacity: 1
- stars_opacity[0]: &3ddfea27
+ sky_color[0]: (&3ca5fed7, &3ca5fed7, &3ca5fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3900f673, &397a606a, &39eac0c7)
+ starmap_color: 1
+ starmap_color[0]: (&37eac0c7, &37eac0c7, &37eac0c7)
+ stars_color: 1
+ stars_color[0]: (&3c5744fd, &3c5744fd, &3c5744fd)
  sun_color: 1
- sun_color[0]: (&3d5744fd, &3d5744fd, &3d5744fd)
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
  sun_opacity[0]: 1
  sun_opacity[1]: 1
@@ -2959,24 +3798,30 @@ sun_profile : reference.nice.21 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3b45672a, &3ad4fd63, &3a8168a5)
- sun_halo_color[2]: (&3b45672a, &3ad4fd63, &3a8168a5)
- sun_halo_color[3]: (&3b45672a, &3ad4fd63, &3a8168a5)
- sun_halo_color[4]: (&3bc5672a, &3985a36d, &38587eed)
- sun_halo_color[5]: (&3c5744fd, &3b36bf4c, &3ac51358)
+ sun_halo_color[0]: (&3b25fed7, &39d31822, &384de99d)
+ sun_halo_color[1]: (&3bc5672a, &3985a36d, &38587eed)
+ sun_halo_color[2]: (&3c5744fd, &3b36bf4c, &3ac51358)
+ sun_halo_color[3]: (&3b25fed7, &39d31822, &384de99d)
+ sun_halo_color[4]: (&3b25fed7, &39d31822, &384de99d)
+ sun_halo_color[5]: (&3b45672a, &3ad4fd63, &3a8168a5)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3bb504f3, &3bb504f3, &3bb504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (0, 0, 0)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fa9d1e2
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&3a8b95c2, &39b702fa, &398bac65)
+ fog_color2[0]: (0, 0, 0)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &41f0f8a4
+ fog_offset[0]: &42715604
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b25d582
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -2989,6 +3834,8 @@ sun_profile : reference.nice.21 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -2998,17 +3845,17 @@ sun_profile : reference.nice.21 {
  dof_start: 1
  dof_start[0]: &437ae8b4
  dof_transition: 1
- dof_transition[0]: &444d1b23
+ dof_transition[0]: 820
  dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
+ dof_filter_size[0]: &3f974bc7
  color_balance: 1
- color_balance[0]: (-0, -0, 0)
+ color_balance[0]: (0, 0, 0)
  color_saturation: 1
  color_saturation[0]: 1
  sunshaft_color: 1
- sunshaft_color[0]: (&3e5744fd, &3dd0e042, &3c039679)
+ sunshaft_color[0]: (0, 0, 0)
  sunshaft_size: 1
- sunshaft_size[0]: 0
+ sunshaft_size[0]: &3f8bf964
  low_intensity_minimum: 1
  low_intensity_minimum[0]: &31031270
  low_intensity_maximum: 1
@@ -3016,85 +3863,70 @@ sun_profile : reference.nice.21 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &439d44dd
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &43b8e3e7
+ max_scale[0]: &44c8d2cf
  scale_override: 1
- scale_override[0]: 0
+ scale_override[0]: &3e8dd2f2
  dark_adaptation_speed: 1
  dark_adaptation_speed[0]: &3f000000
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d832647
+ target_gray[0]: &3d8b7eb4
  contrast: 1
- contrast[0]: &3e6018e0
+ contrast[0]: &3e9eb852
  shoulder_length: 1
  shoulder_length[0]: &3f88d4fe
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3b3eac74
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fe8f5c3
  stability: 1
- stability[0]: 0
+ stability[0]: 1
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
 }
 
-sun_profile : reference.nice.22 {
+sun_profile : reference.nice.29 {
  version: 7
  low_elevation: &c0dffffe
  high_elevation: &c0dffffe
  sun_direction: -1
  temperature: 1
- temperature[0]: 25
+ temperature[0]: 16
  skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_02_10_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_02_10_c.tobj"
+ skybox_texture[0]: "/asset/skybox/s_nice_00/s_nice00_17_10_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
  stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
  ambient: 1
- ambient[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ ambient[0]: (&3a000000, &3a000000, &3a000000)
  diffuse: 1
- diffuse[0]: (0, 0, 0)
+ diffuse[0]: (&389837f0, &389837f0, &389837f0)
  specular: 1
- specular[0]: (0, 0, 0)
+ specular[0]: (&389837f0, &389837f0, &389837f0)
  env: 1
  env[0]: 1
  env_static_mod: 1
- env_static_mod[0]: &3a83126f
+ env_static_mod[0]: &3951ac63
  sky_color: 1
- sky_color[0]: (&3b6ac0c7, &3b6ac0c7, &3b6ac0c7)
- stars_opacity: 1
- stars_opacity[0]: &3e32bc0e
+ sky_color[0]: (&3c3504f3, &3c3504f3, &3c3504f3)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&37b6617c, &38310b02, &38a5fed7)
+ starmap_color: 1
+ starmap_color[0]: (&385744fd, &385744fd, &385744fd)
+ stars_color: 1
+ stars_color[0]: (&3bd744fd, &3bd744fd, &3bd744fd)
  sun_color: 1
  sun_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_opacity: 6
@@ -3105,24 +3937,30 @@ sun_profile : reference.nice.22 {
  sun_opacity[4]: 1
  sun_opacity[5]: 1
  sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
  sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
  sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
  sun_shadow_strength: 1
  sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3ab504f3, &3ab504f3, &3ab504f3)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&38c5672a, &38c5672a, &38c5672a)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fbc9482
  fog_color: 1
  fog_color[0]: (0, 0, 0)
  fog_color2: 1
- fog_color2[0]: (&392eff5d, &3979f856, &39a5fed7)
+ fog_color2[0]: (&36aa4961, &371f70e3, &378b95c2)
  fog_vgradient: 1
  fog_vgradient[0]: &3c030d6a
  fog_offset: 1
- fog_offset[0]: &42159ede
+ fog_offset[0]: &4241eb85
  fog_density: 1
- fog_density[0]: &37800000
+ fog_density[0]: &3b33c939
  speed_coef: 1
  speed_coef[0]: &3e75c2a2
  cloud_shadow_weight: 1
@@ -3135,298 +3973,8 @@ sun_profile : reference.nice.22 {
  cloud_shadow_speed[0]: (0, 0)
  rain_intensity: 1
  rain_intensity[0]: 0
- rain_max_wetness: 1
- rain_max_wetness[0]: 0
- rain_additional_ambient: 1
- rain_additional_ambient[0]: 5
- wind_type: 1
- wind_type[0]: 1
- dof_start: 1
- dof_start[0]: &437ae8b4
- dof_transition: 1
- dof_transition[0]: &444d1b23
- dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
- color_balance: 1
- color_balance[0]: (-0, 0, 0)
- color_saturation: 1
- color_saturation[0]: 1
- sunshaft_color: 1
- sunshaft_color[0]: (0, 0, 0)
- sunshaft_size: 1
- sunshaft_size[0]: 0
- low_intensity_minimum: 1
- low_intensity_minimum[0]: &31031270
- low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
- low_intensity_color: 1
- low_intensity_color[0]: (1, 1, 1)
- min_scale: 1
- min_scale[0]: &4489c763
- max_scale: 1
- max_scale[0]: &44a1fa10
- scale_override: 1
- scale_override[0]: 0
- dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3efdf3b6
- bright_adaptation_speed: 1
- bright_adaptation_speed[0]: &3f3eb852
- target_gray: 1
- target_gray[0]: &3d6f87f3
- contrast: 1
- contrast[0]: &3e6018e0
- shoulder_length: 1
- shoulder_length[0]: &3f8a3d71
- bloom_threshold: 1
- bloom_threshold[0]: &37800000
- bloom_limit: 1
- bloom_limit[0]: &41848390
- bloom_intensity: 1
- bloom_intensity[0]: &37800000
- bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
- stability: 1
- stability[0]: 0
- weight: 1
- weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
-}
-
-sun_profile : reference.nice.23 {
- version: 7
- low_elevation: &c11ffffc
- high_elevation: &c11ffffc
- sun_direction: -1
- temperature: 1
- temperature[0]: 25
- skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_01_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_01_80_c.tobj"
- stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
- ambient: 1
- ambient[0]: (&3a1837f0, &3a1837f0, &3a1837f0)
- diffuse: 1
- diffuse[0]: (0, 0, 0)
- specular: 1
- specular[0]: (0, 0, 0)
- env: 1
- env[0]: 1
- env_static_mod: 1
- env_static_mod[0]: &3a83126f
- sky_color: 1
- sky_color[0]: (&3a8b95c2, &3a8b95c2, &3a8b95c2)
- stars_opacity: 1
- stars_opacity[0]: &3eb0cf88
- sun_color: 1
- sun_color[0]: (&3a800000, &3a800000, &3a800000)
- sun_opacity: 6
- sun_opacity[0]: 1
- sun_opacity[1]: 1
- sun_opacity[2]: 1
- sun_opacity[3]: 1
- sun_opacity[4]: 1
- sun_opacity[5]: 1
- sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
- sun_shadow_strength: 1
- sun_shadow_strength[0]: 1
- fog_color: 1
- fog_color[0]: (0, 0, 0)
- fog_color2: 1
- fog_color2[0]: (&382c66e6, &38b3ce69, &391837f0)
- fog_vgradient: 1
- fog_vgradient[0]: &3c030d6a
- fog_offset: 1
- fog_offset[0]: 56
- fog_density: 1
- fog_density[0]: &37800000
- speed_coef: 1
- speed_coef[0]: &3e75c2a2
- cloud_shadow_weight: 1
- cloud_shadow_weight[0]: 0
- cloud_shadow_texture: 1
- cloud_shadow_texture[0]: "null"
- cloud_shadow_area_size: 1
- cloud_shadow_area_size[0]: (0, 0)
- cloud_shadow_speed: 1
- cloud_shadow_speed[0]: (0, 0)
- rain_intensity: 1
- rain_intensity[0]: 0
- rain_max_wetness: 1
- rain_max_wetness[0]: 0
- rain_additional_ambient: 1
- rain_additional_ambient[0]: 5
- wind_type: 1
- wind_type[0]: 1
- dof_start: 1
- dof_start[0]: &437ae8b4
- dof_transition: 1
- dof_transition[0]: &444d1b23
- dof_filter_size: 1
- dof_filter_size[0]: &3f96e979
- color_balance: 1
- color_balance[0]: (-0, 0, 0)
- color_saturation: 1
- color_saturation[0]: 1
- sunshaft_color: 1
- sunshaft_color[0]: (0, 0, 0)
- sunshaft_size: 1
- sunshaft_size[0]: 0
- low_intensity_minimum: 1
- low_intensity_minimum[0]: &31031270
- low_intensity_maximum: 1
- low_intensity_maximum[0]: &31031270
- low_intensity_color: 1
- low_intensity_color[0]: (1, 1, 1)
- min_scale: 1
- min_scale[0]: &44dfde8b
- max_scale: 1
- max_scale[0]: &4503980d
- scale_override: 1
- scale_override[0]: 0
- dark_adaptation_speed: 1
- dark_adaptation_speed[0]: &3efdf3b6
- bright_adaptation_speed: 1
- bright_adaptation_speed[0]: &3f3eb852
- target_gray: 1
- target_gray[0]: &3d64d1e7
- contrast: 1
- contrast[0]: &3e5f3b64
- shoulder_length: 1
- shoulder_length[0]: &3f8851ec
- bloom_threshold: 1
- bloom_threshold[0]: &37800000
- bloom_limit: 1
- bloom_limit[0]: &41848390
- bloom_intensity: 1
- bloom_intensity[0]: &37800000
- bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
- stability: 1
- stability[0]: 0
- weight: 1
- weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
-}
-
-sun_profile : reference.nice.24 {
- version: 7
- low_elevation: -15
- high_elevation: -15
- sun_direction: -1
- temperature: 1
- temperature[0]: 25
- skybox_texture: 1
- skybox_texture[0]: "/model/skybox/nice_06/nice06_01_80_g.tobj"
- skycloud_texture: 1
- skycloud_texture[0]: "/model/skybox/nice_06/nice06_01_80_c.tobj"
- stars_texture: 1
- stars_texture[0]: "/model/skybox/stars.tobj"
- skycloud_part: 1
- skycloud_part[0]: ""
- ambient: 1
- ambient[0]: (&39b504f3, &39b504f3, &39b504f3)
- diffuse: 1
- diffuse[0]: (0, 0, 0)
- specular: 1
- specular[0]: (0, 0, 0)
- env: 1
- env[0]: 1
- env_static_mod: 1
- env_static_mod[0]: &3b83126f
- sky_color: 1
- sky_color[0]: (&3a000000, &3a000000, &3a000000)
- stars_opacity: 1
- stars_opacity[0]: &3f010625
- sun_color: 1
- sun_color[0]: (&3a800000, &3a800000, &3a800000)
- sun_opacity: 6
- sun_opacity[0]: 1
- sun_opacity[1]: 1
- sun_opacity[2]: 1
- sun_opacity[3]: 1
- sun_opacity[4]: 1
- sun_opacity[5]: 1
- sun_halo_color: 6
- sun_halo_color[0]: (0, 0, 0)
- sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[2]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
- sun_halo_color[5]: (&3a80bedf, &3a80bedf, &3a80bedf)
- sun_shadow_strength: 1
- sun_shadow_strength[0]: 1
- fog_color: 1
- fog_color[0]: (0, 0, 0)
- fog_color2: 1
- fog_color2[0]: (&37f3d02d, &387e48d6, &38d744fd)
- fog_vgradient: 1
- fog_vgradient[0]: &3c030d6a
- fog_offset: 1
- fog_offset[0]: 56
- fog_density: 1
- fog_density[0]: &37800000
- speed_coef: 1
- speed_coef[0]: &3e75c2a2
- cloud_shadow_weight: 1
- cloud_shadow_weight[0]: 0
- cloud_shadow_texture: 1
- cloud_shadow_texture[0]: "null"
- cloud_shadow_area_size: 1
- cloud_shadow_area_size[0]: (0, 0)
- cloud_shadow_speed: 1
- cloud_shadow_speed[0]: (0, 0)
- rain_intensity: 1
- rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
  rain_max_wetness: 1
  rain_max_wetness[0]: 0
  rain_additional_ambient: 1
@@ -3454,9 +4002,9 @@ sun_profile : reference.nice.24 {
  low_intensity_color: 1
  low_intensity_color[0]: (1, 1, 1)
  min_scale: 1
- min_scale[0]: &44dfde8b
+ min_scale[0]: &3df9fffd
  max_scale: 1
- max_scale[0]: &455a64ab
+ max_scale[0]: &4538cb99
  scale_override: 1
  scale_override[0]: 0
  dark_adaptation_speed: 1
@@ -3464,44 +4012,718 @@ sun_profile : reference.nice.24 {
  bright_adaptation_speed: 1
  bright_adaptation_speed[0]: &3f3eb852
  target_gray: 1
- target_gray[0]: &3d5df254
+ target_gray[0]: &3d8354dc
  contrast: 1
- contrast[0]: &3e5f3b64
+ contrast[0]: &3e970a3d
  shoulder_length: 1
- shoulder_length[0]: &3f8353f8
+ shoulder_length[0]: &3f8a3d71
  bloom_threshold: 1
  bloom_threshold[0]: &37800000
  bloom_limit: 1
- bloom_limit[0]: &41848390
+ bloom_limit[0]: &41b709be
  bloom_intensity: 1
- bloom_intensity[0]: &37800000
+ bloom_intensity[0]: &3ab781e4
  bloom_standard_deviation: 1
- bloom_standard_deviation[0]: &3dcccccd
+ bloom_standard_deviation[0]: &3fea5e35
  stability: 1
  stability[0]: 0
  weight: 1
  weight[0]: 1
- ambient_hdr_coef: 0
- diffuse_hdr_coef: 0
- specular_hdr_coef: 0
- sky_color_hdr_coef: 0
- sun_color_hdr_coef: 0
- fog_color_hdr_coef: 0
- fog_color2_hdr_coef: 0
- eye_adaptation_speed: 0
- bloom_resizing_steps: 0
- bloom_filter_radius: 0
- bloom_minimal_color: 0
- bloom_half_intensity_color: 0
- scene_multiplier: 0
- bloom_multiplier: 0
- target_white: 5
- target_white[0]: 1
- target_white[1]: 1
- target_white[2]: 1
- target_white[3]: 1
- target_white[4]: 1
- sunshaft_strength: 0
+}
+
+sun_profile : reference.nice.30 {
+ version: 7
+ low_elevation: &c11ffffc
+ high_elevation: &c11ffffc
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_03_10_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&399837f0, &399837f0, &399837f0)
+ diffuse: 1
+ diffuse[0]: (&378b95c2, &378b95c2, &378b95c2)
+ specular: 1
+ specular[0]: (&378b95c2, &378b95c2, &378b95c2)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38d28c1a
+ sky_color: 1
+ sky_color[0]: (&3b1837f0, &3b1837f0, &3b1837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3780f673, &37fa606a, &386ac0c7)
+ starmap_color: 1
+ starmap_color[0]: (&38eac0c7, &38eac0c7, &38eac0c7)
+ stars_color: 1
+ stars_color[0]: (&3ba5fed7, &3ba5fed7, &3ba5fed7)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3b1837f0, &3b1837f0, &3b1837f0)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3fdb10cc
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &421626e9
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &3fb18937
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45907c5c
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d753e3c
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f908312
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a81e914
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.31 {
+ version: 7
+ low_elevation: -15
+ high_elevation: -15
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ diffuse: 1
+ diffuse[0]: (&38d744fd, &38d744fd, &38d744fd)
+ specular: 1
+ specular[0]: (&38d744fd, &38d744fd, &38d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3aa5fed7, &3aa5fed7, &3aa5fed7)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&3882ce9b, &38e1e5d9, &393504f3)
+ stars_color: 1
+ stars_color[0]: (&3bc5672a, &3bc5672a, &3bc5672a)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &3ff98d16
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d61836a
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a7e9857
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.32 {
+ version: 7
+ low_elevation: &c19ffffc
+ high_elevation: &c19ffffc
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&393504f3, &393504f3, &393504f3)
+ diffuse: 1
+ diffuse[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ specular: 1
+ specular[0]: (&396ac0c7, &396ac0c7, &396ac0c7)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&3902ce9b, &3961e5d9, &39b504f3)
+ stars_color: 1
+ stars_color[0]: (&3beac0c7, &3beac0c7, &3beac0c7)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&38c5672a, &38c5672a, &38c5672a)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &40075408
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d5913f0
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a7e9857
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.33 {
+ version: 7
+ low_elevation: &c1c7fffe
+ high_elevation: &c1c7fffe
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_02_20_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&381d336c, &388cac61, &391837f0)
+ diffuse: 1
+ diffuse[0]: (&398ebbb9, &39a594db, &39c5672a)
+ specular: 1
+ specular[0]: (&398ebbb9, &39a594db, &39c5672a)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&376c84c4, &37e598ab, &385744fd)
+ starmap_color: 1
+ starmap_color[0]: (&3902ce9b, &3961e5d9, &39b504f3)
+ stars_color: 1
+ stars_color[0]: (&3c000000, &3c000000, &3c000000)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &4011e185
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d5913f0
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a81e914
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
+}
+
+sun_profile : reference.nice.34 {
+ version: 7
+ low_elevation: -30
+ high_elevation: -30
+ sun_direction: -1
+ temperature: 1
+ temperature[0]: 16
+ skybox_texture: 1
+ skybox_texture[0]: "/asset/skybox/shared/skies/clear_01_40_g.tobj"
+ skycloud_mask_texture: 1
+ skycloud_mask_texture[0]: "/asset/skybox/shared/m_cl_sky.tobj"
+ lightning_mask: 1
+ lightning_mask[0]: "null"
+ stars_texture: 1
+ stars_texture[0]: "/asset/skybox/shared/stars.tobj"
+ mirror_sky_texture: 1
+ mirror_sky_texture[0]: 0
+ ambient: 1
+ ambient[0]: (&390b95c2, &390b95c2, &390b95c2)
+ diffuse: 1
+ diffuse[0]: (&39d744fd, &39d744fd, &39d744fd)
+ specular: 1
+ specular[0]: (&39d744fd, &39d744fd, &39d744fd)
+ env: 1
+ env[0]: 1
+ env_static_mod: 1
+ env_static_mod[0]: &38914f9a
+ sky_color: 1
+ sky_color[0]: (&3a9837f0, &3a9837f0, &3a9837f0)
+ sky_bottom_color: 1
+ sky_bottom_color[0]: (&3758e377, &37d28a71, &3845672a)
+ starmap_color: 1
+ starmap_color[0]: (&390ea568, &397657e6, &39c5672a)
+ stars_color: 1
+ stars_color[0]: (&3c0b95c2, &3c0b95c2, &3c0b95c2)
+ sun_color: 1
+ sun_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_opacity: 6
+ sun_opacity[0]: 1
+ sun_opacity[1]: 1
+ sun_opacity[2]: 1
+ sun_opacity[3]: 1
+ sun_opacity[4]: 1
+ sun_opacity[5]: 1
+ sun_halo_color: 6
+ sun_halo_color[0]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[1]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[2]: (&3a80bedf, &3a80bedf, &3a80bedf)
+ sun_halo_color[3]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[4]: (&3a800000, &3a800000, &3a800000)
+ sun_halo_color[5]: (&3a800000, &3a800000, &3a800000)
+ sun_shadow_strength: 1
+ sun_shadow_strength[0]: 1
+ moon_color: 1
+ moon_color[0]: (&3aeac0c7, &3aeac0c7, &3aeac0c7)
+ moon_halo_color: 1
+ moon_halo_color[0]: (&39000000, &39000000, &39000000)
+ moon_halo_scale: 1
+ moon_halo_scale[0]: &401a16ab
+ fog_color: 1
+ fog_color[0]: (0, 0, 0)
+ fog_color2: 1
+ fog_color2[0]: (0, 0, 0)
+ fog_vgradient: 1
+ fog_vgradient[0]: &3c030d6a
+ fog_offset: 1
+ fog_offset[0]: &4200449c
+ fog_density: 1
+ fog_density[0]: &3b536cb8
+ speed_coef: 1
+ speed_coef[0]: &3e75c2a2
+ cloud_shadow_weight: 1
+ cloud_shadow_weight[0]: 0
+ cloud_shadow_texture: 1
+ cloud_shadow_texture[0]: "null"
+ cloud_shadow_area_size: 1
+ cloud_shadow_area_size[0]: (0, 0)
+ cloud_shadow_speed: 1
+ cloud_shadow_speed[0]: (0, 0)
+ rain_intensity: 1
+ rain_intensity[0]: 0
+ lightning_intensity: 1
+ lightning_intensity[0]: 0
+ rain_max_wetness: 1
+ rain_max_wetness[0]: 0
+ rain_additional_ambient: 1
+ rain_additional_ambient[0]: 5
+ wind_type: 1
+ wind_type[0]: 1
+ dof_start: 1
+ dof_start[0]: &437ae8b4
+ dof_transition: 1
+ dof_transition[0]: 820
+ dof_filter_size: 1
+ dof_filter_size[0]: &3f974bc7
+ color_balance: 1
+ color_balance[0]: (-0, 0, 0)
+ color_saturation: 1
+ color_saturation[0]: 1
+ sunshaft_color: 1
+ sunshaft_color[0]: (0, 0, 0)
+ sunshaft_size: 1
+ sunshaft_size[0]: &400e45a2
+ low_intensity_minimum: 1
+ low_intensity_minimum[0]: &31031270
+ low_intensity_maximum: 1
+ low_intensity_maximum[0]: &31031270
+ low_intensity_color: 1
+ low_intensity_color[0]: (1, 1, 1)
+ min_scale: 1
+ min_scale[0]: &3df9fffd
+ max_scale: 1
+ max_scale[0]: &45e1c813
+ scale_override: 1
+ scale_override[0]: 0
+ dark_adaptation_speed: 1
+ dark_adaptation_speed[0]: &3efdf3b6
+ bright_adaptation_speed: 1
+ bright_adaptation_speed[0]: &3f3eb852
+ target_gray: 1
+ target_gray[0]: &3d5913f0
+ contrast: 1
+ contrast[0]: &3e970a3d
+ shoulder_length: 1
+ shoulder_length[0]: &3f918937
+ bloom_threshold: 1
+ bloom_threshold[0]: &37800000
+ bloom_limit: 1
+ bloom_limit[0]: &41b709be
+ bloom_intensity: 1
+ bloom_intensity[0]: &3a81e914
+ bloom_standard_deviation: 1
+ bloom_standard_deviation[0]: &3fea5e35
+ stability: 1
+ stability[0]: 0
+ weight: 1
+ weight[0]: 1
 }
 
 }

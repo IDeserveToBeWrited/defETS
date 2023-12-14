@@ -1,0 +1,44 @@
+traffic_vehicle : traffic.scout_fav
+{
+	accessories[]: .scout_fav.chassis
+	accessories[]: .scout_fav.fwheel
+	accessories[]: .scout_fav.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1500
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.5902, 0.4279, 0.0168) #yellow
+	color[]: (0, 0.0527, 0.2177) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	tags[]: cheap
+	tags[]: common
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .scout_fav.chassis
+{
+	data_path: "/def/vehicle/ai/scout_fav/chassis.sii"
+}
+
+vehicle_wheel_accessory: .scout_fav.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in_2.sii"
+}
+
+vehicle_wheel_accessory: .scout_fav.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in_2.sii"
+}

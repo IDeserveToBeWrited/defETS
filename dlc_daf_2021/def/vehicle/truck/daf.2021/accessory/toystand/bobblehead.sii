@@ -1,0 +1,33 @@
+SiiNunit
+{
+accessory_addon_int_data : bhead_pp.daf.2021.toystand
+{
+	name: "Pace Pete Bobblehead"
+	price: 105
+	unlock: 0
+	icon: "interior_decors/toystand/pp"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/pp_base.pmd"
+
+	data[]: .bhead_pp.phys_data
+
+	steam_inventory_id: 32
+}
+
+physics_toy_data : .bhead_pp.phys_data
+{
+
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/pp_head.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/pp_head.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.0f, 0.11f, 0.002f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (25.0, 25.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

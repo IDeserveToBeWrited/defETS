@@ -1,0 +1,116 @@
+traffic_vehicle : traffic.imprion
+{
+	accessories[]: .imprion.chassis
+	accessories[]: .imprion.fwheel
+	accessories[]: .imprion.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 19700
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: city
+	tags[]: passenger
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.imprion.spawn.condition
+	spawn_condition[]: .traffic.imprion.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.imprion.spawn.condition
+{
+	# spawn only inside urban areas
+	type: area
+	str_param[]: "urban"
+}
+traffic_spawn_condition: .traffic.imprion.spawn.condition2
+{
+	# don't spawn in given cities
+	type: city
+	str_param[]: "!"
+	str_param[]: "skopje"
+}
+
+vehicle_accessory: .imprion.chassis
+{
+	data_path: "/def/vehicle/ai/imprion/chassis_pass.sii"
+}
+
+vehicle_wheel_accessory: .imprion.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .imprion.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+
+
+traffic_vehicle : traffic.imprion.parked
+{
+	accessories[]: .imprion.parked.chassis
+	accessories[]: .imprion.parked.fwheel
+	accessories[]: .imprion.parked.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 19700
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+
+	tags[]: city
+	tags[]: parked
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.imprion.parked.spawn.condition
+	spawn_condition[]: .traffic.imprion.parked.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.imprion.parked.spawn.condition
+{
+	# spawn only inside urban areas
+	type: area
+	str_param[]: "urban"
+}
+traffic_spawn_condition: .traffic.imprion.parked.spawn.condition2
+{
+	# don't spawn in given cities
+	type: city
+	str_param[]: "!"
+	str_param[]: "skopje"
+}
+
+
+vehicle_accessory: .imprion.parked.chassis
+{
+	data_path: "/def/vehicle/ai/imprion/chassis_parked.sii"
+}
+
+vehicle_wheel_accessory: .imprion.parked.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .imprion.parked.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+

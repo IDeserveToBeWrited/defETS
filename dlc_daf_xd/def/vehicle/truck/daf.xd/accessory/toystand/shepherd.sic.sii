@@ -1,0 +1,33 @@
+SiiNunit
+{
+accessory_addon_int_data : shepherd.daf.xd.toystand
+{
+	name: "Shepherd Bobblehead"
+	price: 105
+	unlock: 0
+	icon: "interior_decors/toystand/shepherd"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/shepherd_body.pmd"
+
+	data[]: .shepherd_hd.phys_data
+
+	steam_inventory_id: 40
+}
+
+physics_toy_data : .shepherd_hd.phys_data
+{
+
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/shepherd_head.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/shepherd_head.pmc"
+
+	toy_type: "TT_joint"				# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 1.0						# toy mass
+	locator_hook_offset: (0.0, 0.046, -0.013)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (1.0, 1.0)			# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (30.0, 30.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

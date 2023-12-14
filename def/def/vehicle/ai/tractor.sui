@@ -12,8 +12,7 @@ traffic_vehicle : traffic.tractor
 	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
+
 
 	trailer_chains[]: ""
 	trailer_chains[]: "trailer.tractor"
@@ -22,6 +21,9 @@ traffic_vehicle : traffic.tractor
 	trailer_chains[]: "trailer.tractor.wheat"
 
 	tags[]: slow
+	tags[]: rural
+
+	variant[]: traffic.tractor.gray
 
 @include "drivers_generic.sui"
 }
@@ -41,4 +43,49 @@ vehicle_wheel_accessory: .tractor.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/tractor_rear.sii"
+}
+
+
+traffic_vehicle : traffic.tractor.gray
+{
+	accessories[]: .tractor.gray.chassis
+	accessories[]: .tractor.gray.fwheel
+	accessories[]: .tractor.gray.rwheel
+
+	max_speed: 30
+
+	vehicle_mass: 15000
+	engine_power: 200
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+
+	trailer_chains[]: ""
+	trailer_chains[]: "trailer.tractor"
+	trailer_chains[]: "trailer.tractor.potatoes"
+	trailer_chains[]: "trailer.tractor.red"
+	trailer_chains[]: "trailer.tractor.wheat"
+
+	tags[]: slow
+	tags[]: rural
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tractor.gray.chassis
+{
+	data_path: "/def/vehicle/ai/tractor/chassis_g.sii"
+}
+
+vehicle_wheel_accessory: .tractor.gray.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/tractor_front_gray.sii"
+}
+
+vehicle_wheel_accessory: .tractor.gray.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/tractor_rear_gray.sii"
 }

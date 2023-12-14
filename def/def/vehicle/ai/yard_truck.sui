@@ -1,0 +1,56 @@
+traffic_vehicle : traffic.yard_truck
+{
+	accessories[]: .yard_truck.chassis
+	accessories[]: .yard_truck.fwheel
+	accessories[]: .yard_truck.rwheel
+	accessories[]: .yard_truck.trlr_cables
+
+	max_speed: 30
+
+	trailer_chains[]: "traffic.trailer.scs_gosck20"
+	trailer_chains[]: "traffic.trailer.scs_gosck40"
+	trailer_chains[]: "traffic.trailer.scs_gosck_e"
+
+	vehicle_mass: 2100
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	tags[]: context
+
+	spawn_condition[]: .traffic.yard_truck.spawn.condition
+	spawn_condition[]: .traffic.yard_truck.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.yard_truck.spawn.condition
+{
+	type: area
+	str_param[]: "container"
+}
+traffic_spawn_condition: .traffic.yard_truck.spawn.condition2
+{
+	type: area
+	str_param[]: "company"
+	str_param[]: "industrial"
+}
+
+vehicle_accessory: .yard_truck.chassis
+{
+	data_path: "/def/vehicle/ai/yard_truck/chassis.sii"
+}
+
+vehicle_wheel_accessory: .yard_truck.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .yard_truck.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .yard_truck.trlr_cables
+{
+	data_path: "/def/vehicle/ai/yard_truck/accessory/trlr_cables/stock.sii"
+}

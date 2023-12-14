@@ -1,0 +1,1728 @@
+SiiNunit
+{
+
+
+# __        ___                     _                    _     _ ___
+# \ \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| |__ \
+#  \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` | / /
+#   \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| ||_|
+#    \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|(_)
+#
+# Where to add?
+
+#
+# Units common for both ATS and ETS add to the "ATS, ETS common" section.
+# - Always add to the both projects AND at the same position.
+#
+# Units specific for ETS add to the "ETS only" section.
+#
+
+
+#     _  _____ ____     _____ _____ ____
+#    / \|_   _/ ___|   | ____|_   _/ ___|    ___ ___  _ __ ___  _ __ ___   ___  _ __
+#   / _ \ | | \___ \   |  _|   | | \___ \   / __/ _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \
+#  / ___ \| |  ___) |  | |___  | |  ___) | | (_| (_) | | | | | | | | | | | (_) | | | |
+# /_/   \_\_| |____( ) |_____| |_| |____/   \___\___/|_| |_| |_|_| |_| |_|\___/|_| |_|
+#                  |/
+# ATS, ETS common
+
+
+
+
+
+
+#  _____ _____ ____                _
+# | ____|_   _/ ___|    ___  _ __ | |_   _
+# |  _|   | | \___ \   / _ \| '_ \| | | | |
+# | |___  | |  ___) | | (_) | | | | | |_| |
+# |_____| |_| |____/   \___/|_| |_|_|\__, |
+#                                    |___/
+# ETS only
+
+#############################################
+######## crane nescript cutscenes  ##########
+#############################################
+
+#############################################
+###            STEEL FACTORY              ###
+#############################################
+
+mover_action : mover_action.swf_crane.moving
+{
+	action_name: "move"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_moving'"
+
+	timer_params[]: "stop_at_end: 'sound_moving'; wait_action: 'move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: crane
+	group_tags[]: moving
+
+	type: "move"
+}
+
+mover_action : mover_action.swf_hook.moving
+{
+	action_name: "moving"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_moving'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: moving
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.stopping
+{
+	action_name: "stopping"
+
+	timer_params[]: "stop_at_start: 'sound_moving'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: stopping
+
+	type: "effect"
+}
+
+
+mover_action : mover_action.swf_hook.coil.down.empty
+{
+	action_name: "coil_down_empty"
+
+	animations[]: "/prefab2/depot/steel_works/dwn_empty.pma"
+	animation_params[]: "looped: false; delay: 0; effect_name: 'dwn_empty'; stop_at_end: 'sound_dwn_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_dwn_empty'"
+
+	animations[]: "/prefab2/depot/steel_works/dwn_open.pma"
+	animation_params[]: "looped: false; delay: 0; wait_effect: 'dwn_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: coil
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.coil.up.full
+{
+	action_name: "coil_up_full"
+
+	animations[]: "/prefab2/depot/steel_works/up_full.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: coil
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.coil.down.full
+{
+	action_name: "coil_down_full"
+
+	animations[]: "/prefab2/depot/steel_works/dwn_full.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_dwn_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_dwn_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: coil
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.coil.up.empty
+{
+	action_name: "coil_up_empty"
+
+	animations[]: "/prefab2/depot/steel_works/up_empty.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: coil
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.plate.up.empty
+{
+	action_name: "plate_up_empty"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_p_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_p_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: plate
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.plate.down.empty
+{
+	action_name: "plate_down_empty"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty.pma"
+	animation_params[]: "looped: false; delay: 0; effect_name: 'p_dwn_empty'; stop_at_end: 'sound_p_dwn_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_p_dwn_empty'"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open.pma"
+	animation_params[]: "looped: false; delay: 0; wait_effect: 'p_dwn_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: plate
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.plate.up.full
+{
+	action_name: "plate_up_full"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_p_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_p_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: plate
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.plate.down.full
+{
+	action_name: "plate_down_full"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full.pma"
+	animation_params[]: "looped: false; delay: 0; stop_at_end: 'sound_p_dwn_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_p_dwn_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: plate
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+###           ALUMINIUM FACTORY - HOOK             ###
+
+mover_action : mover_action.swf_hook.roll.down.empty
+{
+	action_name: "roll_down_empty"
+
+	animations[]: "/prefab2/depot/steel_works/s_dwn_empty.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'dwn_empty'; stop_at_end: 'sound_dwn_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_dwn_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.roll.up.empty
+{
+	action_name: "roll_up_empty"
+
+	animations[]: "/prefab2/depot/steel_works/s_up_empty.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'dwn_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.roll.down.open
+{
+	action_name: "roll_down_open"
+
+	animations[]: "/prefab2/depot/steel_works/s_dwn_open.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'dwn_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.roll.up.full
+{
+	action_name: "roll_up_full"
+
+	animations[]: "/prefab2/depot/steel_works/s_up_full.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.roll.down.full
+{
+	action_name: "roll_down_full"
+
+	animations[]: "/prefab2/depot/steel_works/s_dwn_full.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.roll.down.close
+{
+	action_name: "roll_down_close"
+
+	animations[]: "/prefab2/depot/steel_works/s_dwn_close.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: roll
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full1
+{
+	action_name: "pipes_up_full_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full2
+{
+	action_name: "pipes_up_full_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full3
+{
+	action_name: "pipes_up_full_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full4
+{
+	action_name: "pipes_up_full_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full5
+{
+	action_name: "pipes_up_full_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.full6
+{
+	action_name: "pipes_up_full_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_full6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_full'; stop_at_end: 'sound_up_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty1
+{
+	action_name: "pipes_up_empty_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty2
+{
+	action_name: "pipes_up_empty_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty3
+{
+	action_name: "pipes_up_empty_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty4
+{
+	action_name: "pipes_up_empty_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty5
+{
+	action_name: "pipes_up_empty_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.up.empty6
+{
+	action_name: "pipes_up_empty_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_up_empty6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'up_empty'; stop_at_end: 'sound_up_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_up_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: up
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open1
+{
+	action_name: "pipes_down_open_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open2
+{
+	action_name: "pipes_down_open_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open3
+{
+	action_name: "pipes_down_open_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open4
+{
+	action_name: "pipes_down_open_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open5
+{
+	action_name: "pipes_down_open_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.open6
+{
+	action_name: "pipes_down_open_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_open6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_open'; stop_at_end: 'sound_down_open'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_open'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: open
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full1
+{
+	action_name: "pipes_down_full_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full2
+{
+	action_name: "pipes_down_full_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full3
+{
+	action_name: "pipes_down_full_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full4
+{
+	action_name: "pipes_down_full_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full5
+{
+	action_name: "pipes_down_full_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.full6
+{
+	action_name: "pipes_down_full_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_full6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_full'; stop_at_end: 'sound_down_full'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_full'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: full
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty1
+{
+	action_name: "pipes_down_empty_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty2
+{
+	action_name: "pipes_down_empty_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty3
+{
+	action_name: "pipes_down_empty_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty4
+{
+	action_name: "pipes_down_empty_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty5
+{
+	action_name: "pipes_down_empty_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.empty6
+{
+	action_name: "pipes_down_empty_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_empty6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_empty'; stop_at_end: 'sound_down_empty'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_empty'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: empty
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close1
+{
+	action_name: "pipes_down_close_1"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close1.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close2
+{
+	action_name: "pipes_down_close_2"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close2.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close3
+{
+	action_name: "pipes_down_close_3"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close3.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close4
+{
+	action_name: "pipes_down_close_4"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close4.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close5
+{
+	action_name: "pipes_down_close_5"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close5.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.pipes.down.close6
+{
+	action_name: "pipes_down_close_6"
+
+	animations[]: "/prefab2/depot/steel_works/p_dwn_close6.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1; effect_name: 'down_close'; stop_at_end: 'sound_down_close'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'sound_down_close'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: pipes
+	group_tags[]: down
+	group_tags[]: close
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.r_to_m
+{
+	action_name: "hook_right_to_middle"
+
+	animations[]: "/prefab2/depot/steel_works/k_r_to_m.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: right 
+	group_tags[]: middle
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.r_to_l
+{
+	action_name: "hook_right_to_left"
+
+	animations[]: "/prefab2/depot/steel_works/k_r_to_l.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: right 
+	group_tags[]: left
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.m_to_r
+{
+	action_name: "hook_middle_to_right"
+
+	animations[]: "/prefab2/depot/steel_works/k_m_to_r.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: middle
+	group_tags[]: right
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.m_to_l
+{
+	action_name: "hook_middle_to_left"
+
+	animations[]: "/prefab2/depot/steel_works/k_m_to_l.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: middle 
+	group_tags[]: left
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.l_to_r
+{
+	action_name: "hook_left_to_right"
+
+	animations[]: "/prefab2/depot/steel_works/k_l_to_r.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: right 
+	group_tags[]: left
+
+	type: "effect"
+}
+
+mover_action : mover_action.swf_hook.move.l_to_m
+{
+	action_name: "hook_left_to_middle"
+
+	animations[]: "/prefab2/depot/steel_works/k_l_to_m.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 0; effect_name: 'move'; stop_at_end: 'sound_move'"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+	sound_params[]: "effect_name: 'sound_move'"
+
+	group_tags[]: steelworks
+	group_tags[]: factory
+	group_tags[]: hook
+	group_tags[]: move
+	group_tags[]: middle
+	group_tags[]: left
+
+	type: "effect"
+}
+
+# excavator
+#
+#
+
+mover_action: mover_action.excav.picup
+{
+    action_name: "pick_up"
+
+    animations[]: "/model/mover/machine/pick_up.pma"
+    animation_params[]: "looped: false; layer: 1; blend_time: 0; effect_name: 'anim_pick_up'"
+
+    #zjistit snoud
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.rot
+{
+    action_name: "rotate"
+
+    animations[]: "/model/mover/machine/rotate.pma"
+    animation_params[]: "looped: false; blend_time: 0; effect_name: 'anim_rotate'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.rothf
+{
+    action_name: "rotate_hf"
+
+    animations[]: "/model/mover/machine/rotate_hf.pma"
+    animation_params[]: "looped: false; blend_time: 0; effect_name: 'anim_rotate_hf'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.pout
+{
+    action_name: "pour_out"
+
+    animations[]: "/model/mover/machine/pour_out.pma"
+    animation_params[]: "looped: false; layer: 1; blend_time: 0; effect_name: 'anim_pour_out'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.rotba
+{
+    action_name: "rotate_back"
+
+    animations[]: "/model/mover/machine/rotate_back.pma"
+    animation_params[]: "looped: false; blend_time: 0; effect_name: 'anim_rotate_back'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.rothfba
+{
+    action_name: "rotate_hf_back"
+
+    animations[]: "/model/mover/machine/rotate_hf_back.pma"
+    animation_params[]: "looped: false; blend_time: 0; effect_name: 'anim_rotate_hf_back'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+
+mover_action : mover_action.excav.prep
+{
+    action_name: "prepare"
+
+    animations[]:"/model/mover/machine/prepare.pma"
+    animation_params[]: "looped: false; layer: 1; blend_time: 0; effect_name: 'anim_prepare'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+mover_action : mover_action.excav.rorev
+{
+    action_name: "rotate_reversed"
+
+    animations[]:"/model/mover/machine/rotate_reversed.pma"
+    animation_params[]: "looped: false; layer: 1; blend_time: 0; effect_name: 'anim_rotate_reversed'"
+
+    group_tags[]: fil2
+    group_tags[]: examov
+
+    type: "effect"
+}
+mover_action : mover_action.excav.soen
+{
+	action_name: "sound_engine"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+	sound_params[]: "effect_name: 'sound_engine'"
+
+
+	group_tags[]: fil2
+	group_tags[]: examov
+
+	type: "effect"
+}
+
+
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| | 
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|
+#  _         _   _            _                _             _                      __   _   _                _       __
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|
+#  _           __                        |___/     _ _               |___/                           _ _
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)
+#                                                            |___/               |___/
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+
+mover_action : mover_action.os_fra.move
+{
+	action_name: "move"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/wagon_fact_container_loop"
+	sound_params[]: "effect_name: 'sound_moving'"
+
+	timer_params[]: "stop_at_end: 'sound_moving'; wait_action: 'move'"
+
+	group_tags[]: fil2
+	group_tags[]: fraircarg
+
+	type: "move"
+}
+
+#########################################################################
+#	DLC BALKAN WEST
+#########################################################################
+
+
+mover_action : mover_action.rivpo.move
+{
+	action_name: "move"
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+	sound_params[]: "effect_name: 'sound_moving'"
+
+	timer_params[]: "stop_at_end: 'sound_moving'; wait_action: 'move'"
+
+	group_tags[]: fil1
+	group_tags[]: ripotu
+
+	type: "move"
+}
+
+mover_action : mover_action.rivpo.emfudo
+{
+	action_name: "down_rabble" #dole_sber
+
+	animations[]: "/prefab2/depot/river_port/ne_scoop_empty_to_full_down.pma"
+	animation_params[]: "looped: false; stop_at_end: 'turret_sound1'; layer: 2; blend_time: 2" 
+
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: "effect_name: 'turret_sound1'"
+
+	group_tags[]: fil1 #special creator tag
+	group_tags[]: ripotu #action tag
+
+	type: "effect"
+}
+
+mover_action : mover_action.rivpo.emfuup
+{
+ 	action_name: "up_rabble" #hore_sber
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_scoop_empty_to_full_up.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound2'; layer: 2; blend_time: 0"
+ 	
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+ 	sound_params[]: "effect_name: 'turret_sound2'"
+ 
+ 	
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+ 	
+ 
+ 	type: "effect"
+}
+
+
+
+mover_action : mover_action.rivpo.role
+{
+	action_name: "rotate_left" #tocka_levo
+
+ 	animations[]: "/prefab2/depot/river_port/ne_rotate_to_left.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound3'"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+ 	sound_params[]: " effect_name: 'turret_sound3'"
+ 
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+
+
+ 	type: "effect"
+}
+
+
+mover_action : mover_action.rivpo.roleop
+{
+	action_name: "rotate_left_op" #tocka_levo_op
+
+ 	animations[]: "/prefab2/depot/river_port/ne_rotate_to_right.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound9'"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+ 	sound_params[]: " effect_name: 'turret_sound9'"
+ 
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+
+
+ 	type: "effect"
+}
+  
+mover_action : mover_action.rivpo.shfo
+{
+	action_name: "push_forward" #odstouch_vpred
+
+ 	animations[]: "/prefab2/depot/river_port/ne_shoulder_forward.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound4'; layer: 1; blend_time: 2"
+ 	
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+ 	sound_params[]: " effect_name: 'turret_sound4'"
+ 
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+
+ 	
+ 	type: "effect"
+ 
+}
+ 
+mover_action : mover_action.rivpo.fuemdo
+{
+ 	action_name: "pushed_down_rabble" #prazdny_naber_dolu
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_scoop_full_to_empty_down.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound5'; layer: 2; blend_time: 0"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+ 	sound_params[]: " effect_name: 'turret_sound5'"
+
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+ 
+ 	type: "effect"
+ 	
+}
+ 
+mover_action : mover_action.rivpo.fuemup
+{
+ 	action_name: "pushed_up_rabble" #prazdny_naber_hore
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_scoop_full_to_empty_up.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound6'; layer: 2; blend_time: 5"
+ 	
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_1"
+	sound_params[]: " effect_name: 'turret_sound6'"
+ 
+	group_tags[]: fil1
+	group_tags[]: ripotu
+ 
+ 	type: "effect"
+ 
+}
+ 
+mover_action : mover_action.rivpo.shfr
+{
+ 	action_name: "push_back" #odstouch_zpet
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_shoulder_backward.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound7'; layer: 1; blend_time: 0"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/steel_fact_crane_2"
+ 	sound_params[]: " effect_name: 'turret_sound7'"
+ 
+ 	
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+ 
+ 	type: "effect"
+ 
+}
+
+
+ 
+mover_action : mover_action.rivpo.rori
+{
+ 	action_name: "rotate_right" #tocka_vpravo
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_rotate_back_to_right.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound8'"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+ 	sound_params[]: " effect_name: 'turret_sound8'"
+ 
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+ 
+ 	type: "effect"
+
+}
+
+mover_action : mover_action.rivpo.roriop
+{
+ 	action_name: "rotate_right_op" #tocka_vpravo
+ 
+ 	animations[]: "/prefab2/depot/river_port/ne_rotate_back_to_left.pma"
+ 	animation_params[]: "looped: false; stop_at_end: 'turret_sound10'"
+ 
+ 	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/scrapyard_crane"
+ 	sound_params[]: " effect_name: 'turret_sound10'"
+ 
+ 	group_tags[]: fil1
+	group_tags[]: ripotu
+ 
+ 	type: "effect"
+
+}
+
+#########################################################################
+#	TRAVEMUNDE FERRY #
+#########################################################################
+
+
+
+mover_action : mover_action.trave.wave1sh
+{
+	action_name: "wave1_show"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_wave1_show.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 1"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.wave1hi
+{
+	action_name: "wave1_hide"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_wave1_hide.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 2"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.wave2sh
+{
+	action_name: "wave2_show"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_wave2_show.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 3"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.wave2hi
+{
+	action_name: "wave2_hide"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_wave2_hide.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 4"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.gate1op
+{
+	action_name: "gate1_open"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_gate1_open.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 5"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.gate1cl
+{
+	action_name: "gate1_close"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_gate1_close.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 6"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.gate2cl
+{
+	action_name: "gate2_close"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_gate2_close.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 7"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.gate2op
+{
+	action_name: "gate2_open"
+
+	animations[]: "/model2/ship/ferry_01_de/ferry_01_de_ne_gate2_open.pma"
+	animation_params[]: "looped: false; delay: 0; layer: 8"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+	
+	type: "effect"
+}
+
+mover_action : mover_action.trave.moving
+{
+	action_name: "move"
+
+	sounds[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/ferry_1"
+	sound_params[]: "effect_name: 'sound_moving'"
+
+	timer_params[]: "stop_at_end: 'sound_moving'; wait_action: 'move'"
+
+	group_tags[]: float
+	group_tags[]: traveferry
+
+	type: "move"
+}
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| |
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|
+#  _         _   _            _                _             _                      __   _   _                _       __
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|
+#  _           __                        |___/     _ _               |___/                           _ _
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)
+#                                                            |___/               |___/
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+
+}

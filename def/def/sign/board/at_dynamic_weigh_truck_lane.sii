@@ -1,0 +1,77 @@
+SiiNunit
+{
+sign_board_template : _nameless.6d0.7fc0 {
+ board_name: "at dynamic weigh truck lane"
+ width: &3fd9999a
+ height: &40333333
+ model_name: ""
+ items: 2
+ items[0]: _nameless.77c.d5c0
+ items[1]: _nameless.77c.bcc0
+ dynamic_attributes: 2
+ dynamic_attributes[0]: _nameless.666.cf90
+ dynamic_attributes[1]: _nameless.666.a890
+}
+
+sign_template_image : _nameless.77c.d5c0 {
+ atlas_path: "/def/sign/atlas/dynamic_signs_at.sii"
+ image_idx: nil
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2565472255
+ area_name: ""
+ area_idx: nil
+ coords_l: &3c4a3640
+ coords_r: &3fd83b7c
+ coords_t: &40333333
+ coords_b: &3f8fbf55
+ z_order: 1
+ tag: ""
+}
+
+sign_template_image : _nameless.77c.bcc0 {
+ atlas_path: "/def/sign/atlas/dynamic_signs_at.sii"
+ image_idx: nil
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 413138944
+ area_name: ""
+ area_idx: nil
+ coords_l: 0
+ coords_r: &3fd8f63e
+ coords_t: &3f8021fa
+ coords_b: &3e50439c
+ z_order: 2
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.666.cf90 {
+ conditions: 2
+ conditions[0]: "road_event weigh"
+ conditions[1]: default
+ values: 1
+ values[0]: dynamic_LED_green_arrow_at
+ traffic_rules: 2
+ traffic_rules[0]: w_truck_lane
+ traffic_rules[1]: w_closed
+ item_id: 2565472255
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.666.a890 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: dynamic_LED_white_ab_12_t_at
+ traffic_rules: 0
+ item_id: 413138944
+ attr_name: image_idx
+}
+
+}

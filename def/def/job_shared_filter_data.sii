@@ -4,8 +4,8 @@ ui_cargo_filter_data : .filter.data
 {
 	trailer_type_names[]: dryvan
 	trailer_type_names[]: refrigerated
-	trailer_type_names[]: cisterns
-	trailer_type_names[]: gooseneck
+	trailer_type_names[]: tr_tank
+	trailer_type_names[]: container
 	trailer_type_names[]: bulk
 	trailer_type_names[]: flatbed
 	trailer_type_names[]: lowbed
@@ -15,16 +15,15 @@ ui_cargo_filter_data : .filter.data
 
 	# List that maps body types to filter names
 	body_type_filter_name_map_data[]: "dryvan,curtainside=dryvan"
-	body_type_filter_name_map_data[]: "insulated=refrigerated"
-	body_type_filter_name_map_data[]: "container=gooseneck"
-	body_type_filter_name_map_data[]: "flatbed_brck=flatbed"
-	body_type_filter_name_map_data[]: "log=flatbed"
-	body_type_filter_name_map_data[]: "foodtank=cisterns"
-	body_type_filter_name_map_data[]: "lowboy=lowbed"
+	body_type_filter_name_map_data[]: "insulated,refrigerated=refrigerated"
+	body_type_filter_name_map_data[]: "flatbed_brck,flatbed_cont=flatbed"
+	body_type_filter_name_map_data[]: "log,flatbed=flatbed"
+	body_type_filter_name_map_data[]: "chemtank,foodtank,fueltank,gastank=tr_tank"
+	body_type_filter_name_map_data[]: "lowboy,lowbed=lowbed"
+	body_type_filter_name_map_data[]: "dumper,silo=bulk"
 
 	# List that maps cargo groups to filter names
-	cargo_group_filter_name_map_data[]: "liquid=cisterns"
-	cargo_group_filter_name_map_data[]: "containers=gooseneck"
+	cargo_group_filter_name_map_data[]: "liquid=tr_tank"
 	cargo_group_filter_name_map_data[]: "construction=flatbed"
 	cargo_group_filter_name_map_data[]: "insulated=refrigerated"
 	cargo_group_filter_name_map_data[]: "machinery=lowbed"

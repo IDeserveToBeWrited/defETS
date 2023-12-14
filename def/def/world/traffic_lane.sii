@@ -18,17 +18,37 @@ traffic_lane_data : traffic_lane.road.local.no_overtake
 {
 	speed_class: local_road
 
+	rank: 50
+
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
 	traffic_rules[]: traffic_rule.s_trl_r
 	traffic_rules[]: traffic_rule.s_truck_l
 	traffic_rules[]: traffic_rule.s_bus_l
 	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.s_cust_r
+}
+
+traffic_lane_data : traffic_lane.road.local.high_density
+{
+	speed_class: local_road
+
+	rank: 50
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
 }
 
 traffic_lane_data : traffic_lane.road.local
 {
 	speed_class: local_road
+
+	rank: 50
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
@@ -37,6 +57,23 @@ traffic_lane_data : traffic_lane.road.local
 	traffic_rules[]: traffic_rule.s_bus_l
 	traffic_rules[]: traffic_rule.s_police
 	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
+	traffic_rules[]: traffic_rule.s_cust_r
+}
+
+traffic_lane_data : traffic_lane.road.local.dust
+{
+	speed_class: local_road
+
+	rank: 30
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_l
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
+	traffic_rules[]: traffic_rule.uneven_road
+	traffic_rules[]: traffic_rule.s_cust_r
 }
 
 traffic_lane_data : traffic_lane.road.expressway
@@ -54,11 +91,23 @@ traffic_lane_data : traffic_lane.road.expressway
 	traffic_rules[]: traffic_rule.s_police
 }
 
+traffic_lane_data : traffic_lane.road.expressway.tram
+{
+	speed_class: expressway
+
+	rank: 150
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.road_tram
+}
+
 traffic_lane_data : traffic_lane.road.expressway.full_in_out
 {
 	speed_class: expressway
 
-	rank: 100
+	rank: 130
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
@@ -68,6 +117,16 @@ traffic_lane_data : traffic_lane.road.expressway.full_in_out
 
 	traffic_rules[]: traffic_rule.no_chng_out
 	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.expressway.low_density
+{
+	speed_class: expressway
+
+	rank: 100
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
 }
 
 traffic_lane_data : traffic_lane.road.motorway
@@ -117,6 +176,7 @@ traffic_lane_data : traffic_lane.no_vehicles
 	speed_class: local_road
 
 	traffic_rules[]: traffic_rule.private_area
+	traffic_rules[]: traffic_rule.s_cust_r
 }
 
 traffic_lane_data : traffic_lane.slow_road
@@ -129,9 +189,11 @@ traffic_lane_data : traffic_lane.no_vehicles.dirt
 	speed_class: local_road
 
 	traffic_rules[]: traffic_rule.private_area
-	traffic_rules[]: traffic_rule.physics
+	traffic_rules[]: traffic_rule.uneven_road
+	traffic_rules[]: traffic_rule.s_cust_r
 }
 
+# Rail without overhead wires (diesel trains)
 traffic_lane_data : traffic_lane.rail.train
 {
 	speed_class: rail_train
@@ -141,12 +203,76 @@ traffic_lane_data : traffic_lane.rail.train
 	traffic_rules[]: traffic_rule.limit_80
 }
 
+# Rail without overhead wires (diesel trains - cargo only)
+traffic_lane_data : traffic_lane.rail.train.cargo
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_c
+	traffic_rules[]: traffic_rule.limit_80
+}
+
+# Rail without overhead wires (diesel trains - passenger only)
+traffic_lane_data : traffic_lane.rail.train.passenger
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_p
+	traffic_rules[]: traffic_rule.limit_80
+}
+
+# Rail with overhead wires (diesel and electric trains)
+# NOTE: Map designers must ensure presence of overhead wires!
+traffic_lane_data : traffic_lane.rail.train.wire
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train
+	traffic_rules[]: traffic_rule.s_train_w
+}
+
+# Rail with overhead wires (diesel and electric trains - cargo only)
+# NOTE: Map designers must ensure presence of overhead wires!
+traffic_lane_data : traffic_lane.rail.train.cargo.wire
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_c
+	traffic_rules[]: traffic_rule.s_train_w_c
+}
+
+# Rail with overhead wires (diesel and electric trains - passenger only)
+# NOTE: Map designers must ensure presence of overhead wires!
+traffic_lane_data : traffic_lane.rail.train.passenger.wire
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_p
+	traffic_rules[]: traffic_rule.s_train_w_p
+}
+
+# High-speed rail (electric trains including high-speed ones)
+# NOTE: Map designers must ensure presence of overhead wires!
 traffic_lane_data : traffic_lane.rail.train.high_speed
 {
 	speed_class: rail_train
 
 	traffic_rules[]: traffic_rule.rail_train
-	traffic_rules[]: traffic_rule.s_train_f
+	traffic_rules[]: traffic_rule.s_train_w
+}
+
+# Metro rail
+traffic_lane_data : traffic_lane.rail.train.metro
+{
+	speed_class: rail_train
+
+	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.s_train_m
 }
 
 traffic_lane_data : traffic_lane.rail.tram
@@ -161,6 +287,8 @@ traffic_lane_data : traffic_lane.road.local.no_overtake.tram
 {
 	speed_class: local_road
 
+	rank: 50
+
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l
 	traffic_rules[]: traffic_rule.s_truck_l
@@ -172,6 +300,8 @@ traffic_lane_data : traffic_lane.road.local.no_overtake.tram
 traffic_lane_data : traffic_lane.road.local.tram
 {
 	speed_class: local_road
+
+	rank: 50
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_l

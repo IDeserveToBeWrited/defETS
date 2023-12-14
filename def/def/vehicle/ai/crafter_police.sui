@@ -1,0 +1,41 @@
+# XXXXXXXXXXXXXXXXXXX lt XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.crafter.pol_lt_cus
+{
+	accessories[]: .crafter.pol_lt_cus.chassis
+	accessories[]: .crafter.pol_lt_cus.fwheel
+	accessories[]: .crafter.pol_lt_cus.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	tags[]: customs
+
+    allow_parked: true
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .crafter.pol_lt_cus.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/pol_lt_cus.sii"
+}
+
+vehicle_wheel_accessory: .crafter.pol_lt_cus.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.pol_lt_cus.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}

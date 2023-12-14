@@ -1,0 +1,47 @@
+###########################
+##
+##  g16 locomotive
+##
+###########################
+
+traffic_vehicle : traffic.g16_loco
+{
+	accessories[]: .g16_loco.chassis
+	accessories[]: .g16_loco.fwheel
+	accessories[]: .g16_loco.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_cargo 6-10"
+	trailer_chains[]: "train_car.pass.g 4-6"
+	trailer_chains[]: "train_car.pass.r 4-6"
+	trailer_chains[]: "train_car.pass.b 4-6"
+
+	sound_move[]: "/sound/traffic/train_diesel_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+}
+
+vehicle_accessory: .g16_loco.chassis
+{
+	data_path: "/def/vehicle/ai/train_g16/chassis.sii"
+}
+
+vehicle_wheel_accessory: .g16_loco.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .g16_loco.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

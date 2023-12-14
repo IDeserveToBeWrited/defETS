@@ -1,0 +1,174 @@
+################################ WIEN ###################################
+traffic_vehicle : traffic.incentro.at_wi
+{
+	accessories[]: .incentro.at_wi.chassis
+	accessories[]: .incentro.at_wi.fwheel
+	accessories[]: .incentro.at_wi.rwheel
+
+	max_speed: 50		# 80, limited
+
+	vehicle_mass: 18000	# 43t whole tram + cca 120 ppl
+	engine_power: 360	# 8x45 kW
+
+	trailer_chains[]: "train_car.incentro.at_wi.car1 | train_car.incentro.at_wi.car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	
+
+	spawn_condition[]: .traffic.incentro.at_wi.condition.city
+}
+vehicle_accessory: .incentro.at_wi.chassis
+{
+	data_path: "/def/vehicle/ai/tram_incentro/loco_at_wi.sii"
+}
+vehicle_wheel_accessory: .incentro.at_wi.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_front.sii"
+}
+vehicle_wheel_accessory: .incentro.at_wi.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .traffic.incentro.at_wi.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "wien"
+}
+
+
+################################ GRAZ ###################################
+traffic_vehicle : traffic.incentro.at_gr
+{
+	accessories[]: .incentro.at_gr.chassis
+	accessories[]: .incentro.at_gr.fwheel
+	accessories[]: .incentro.at_gr.rwheel
+
+	max_speed: 50		# 80, limited
+
+	vehicle_mass: 18000	# 43t whole tram + cca 120 ppl
+	engine_power: 360	# 8x45 kW
+
+	trailer_chains[]: "train_car.incentro.at_gr.car1 | train_car.incentro.at_gr.car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	spawn_condition[]: .traffic.incentro.at_gr.condition.city
+}
+vehicle_accessory: .incentro.at_gr.chassis
+{
+	data_path: "/def/vehicle/ai/tram_incentro/loco_at_gr.sii"
+}
+vehicle_wheel_accessory: .incentro.at_gr.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_front.sii"
+}
+vehicle_wheel_accessory: .incentro.at_gr.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .traffic.incentro.at_gr.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "graz"
+}
+
+
+################################ ERFURT ###################################
+
+traffic_vehicle : traffic.incentro.de_er
+{
+	accessories[]: .incentro.de_er.chassis
+	accessories[]: .incentro.de_er.fwheel
+	accessories[]: .incentro.de_er.rwheel
+
+	max_speed: 50		# 80, limited
+
+	vehicle_mass: 18000	# 43t whole tram + cca 120 ppl
+	engine_power: 360	# 8x45 kW
+
+	trailer_chains[]: "train_car.incentro.de_er.car1 | train_car.incentro.de_er.car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_condition[]: .traffic.incentro.de_er.condition.city
+}
+vehicle_accessory: .incentro.de_er.chassis
+{
+	data_path: "/def/vehicle/ai/tram_incentro/loco_de_er.sii"
+}
+vehicle_wheel_accessory: .incentro.de_er.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_front.sii"
+}
+vehicle_wheel_accessory: .incentro.de_er.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .traffic.incentro.de_er.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "erfurt"
+}
+
+
+################################ ZAGREB ###################################
+
+traffic_vehicle : traffic.incentro.hr_za
+{
+	accessories[]: .incentro.hr_za.chassis
+	accessories[]: .incentro.hr_za.fwheel
+	accessories[]: .incentro.hr_za.rwheel
+
+	max_speed: 50		# 80, limited
+
+	vehicle_mass: 18000	# 43t whole tram + cca 120 ppl
+	engine_power: 360	# 8x45 kW
+
+	trailer_chains[]: "train_car.incentro.hr_za.car1 | train_car.incentro.hr_za.car2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	spawn_condition[]: .traffic.incentro.hr_za.condition.city
+}
+vehicle_accessory: .incentro.hr_za.chassis
+{
+	data_path: "/def/vehicle/ai/tram_incentro/loco_hr_za.sii"
+}
+vehicle_wheel_accessory: .incentro.hr_za.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_front.sii"
+}
+vehicle_wheel_accessory: .incentro.hr_za.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/incentro_rear.sii"
+}
+traffic_spawn_condition: .traffic.incentro.hr_za.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "zagreb"
+}
+
+

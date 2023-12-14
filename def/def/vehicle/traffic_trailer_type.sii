@@ -23,6 +23,17 @@ traffic_trailer_type : traffic.trailer_type.truck_semi
 	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_trailer_semi.sii"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_min2max4
 }
 
 # trailers suitable for semi-trucks with 'non-standard' long trailer chain
@@ -31,6 +42,17 @@ traffic_trailer_type : traffic.trailer_type.truck_long
 	tags[]: "road"
 
 	storage_path: "/def/vehicle/traffic_storage_trailer_long.sii"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_min2max4
 }
 
 # cargo train cars
@@ -39,32 +61,100 @@ traffic_trailer_type : traffic.trailer_type.train_cargo
 	tags[]: "rail_train"
 
 	safe_distance: 1000
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_none
+	validation_groups[]: flares_brake_none
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_none
+	validation_groups[]: flares_reverse_none
+	validation_groups[]: wheel_particles_none
 }
 
 ############# TRAILER GROUPS FOR VARIOUS VEHICLE TYPES - EXPLICIT SELECTION ONLY #############
 
-# trailers suitable for cars/vans
+# trailers suitable for cars
 traffic_trailer_type : traffic.trailer_type.car
 {
 	tags[]: "road"
+
+	# ensure needed trailers are automatically allowed with corresponding '*_custom' vehicle type:
+	tags[]: "car_custom"
+	tags[]: "custom_all"
+	tags[]: "car_trailer"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_min2max4
 }
 
 # trailers suitable for buses - typically, rear parts of articulated buses (permanently attached)
 traffic_trailer_type : traffic.trailer_type.bus
 {
 	tags[]: "road"
+
+	# ensure needed trailers are automatically allowed with corresponding '*_custom' vehicle type:
+	tags[]: "bus_custom"
+	tags[]: "custom_all"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_min2max4
 }
 
-# trailers suitable for trucks
+# trailers suitable for trucks (all remaining truck trailers, not belonging to 'truck_semi' and 'truck_long')
 traffic_trailer_type : traffic.trailer_type.truck
 {
 	tags[]: "road"
+
+	# ensure needed trailers are automatically allowed with corresponding '*_custom' vehicle type:
+	tags[]: "truck_custom"
+	tags[]: "custom_all"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_min2max4
 }
 
 # trailers suitable for trams - tram cars - standalone or articulated
 traffic_trailer_type : traffic.trailer_type.tram
 {
 	tags[]: "rail_tram"
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_min1max2
+	validation_groups[]: flares_brake_min2max4
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_min2max20
+	validation_groups[]: flares_reverse_min1max2
+	validation_groups[]: wheel_particles_none
 }
 
 # train cars - standalone or articulated (passenger and non-standard cargo)
@@ -73,14 +163,35 @@ traffic_trailer_type : traffic.trailer_type.train
 	tags[]: "rail_train"
 
 	safe_distance: 1000
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_none
+	validation_groups[]: flares_brake_none
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_none
+	validation_groups[]: flares_reverse_none
+	validation_groups[]: wheel_particles_none
 }
 
-############# TRAILERS FOR CUSTOM AREAS - EXPLICIT SELECTION ONLY #############
-
 # trailers not fitting in any other type
-traffic_trailer_type : traffic.trailer_type.custom
+# serves only as storage for 'uncategorizable' trailers and no traffic rule should reference it
+traffic_trailer_type : traffic.trailer_type.special
 {
-	tags[]: "custom_all"
+	# no tags for 'special' type
+
+	validation_groups[]: flares_beacon_none
+	validation_groups[]: flares_blinker_none
+	validation_groups[]: flares_brake_none
+	validation_groups[]: flares_drl_none
+	validation_groups[]: flares_emergency_none
+	validation_groups[]: flares_highbeam_none
+	validation_groups[]: flares_lowbeam_none
+	validation_groups[]: flares_parking_none
+	validation_groups[]: flares_reverse_none
+	validation_groups[]: wheel_particles_none
 }
 
 }

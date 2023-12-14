@@ -61,7 +61,7 @@ trigger_action : trig_action.hud_message {
 	command: "hud_message"
 
 	str_params[]: "[param1] Text"
-	str_params[]: "[param2] Warning [0/1] - if set to 1, the message is shown as warning (default: 0)"
+	str_params[]: "[param2] Message type [0,1,...] - used only in specific gameplay modes, e.g. academy (default: 0)"
 	str_params[]: "[param3] Delay [s] - for how long the message is shown (default: 5 seconds)"
 }
 
@@ -90,6 +90,13 @@ trigger_action : trig_action.offence {
 # Example: 'cvar_g_pounds kg lb' - string cvar with name 'g_pounds' must be set to 'kg' or 'lb' for the check to pass.
 # Example: 'cvar_g_traffic 0' - numeric cvar with name 'g_traffic' must be set to '0' for the check to pass.
 # Example: 'cvar_g_traffic 1 100' - numeric cvar with name 'g_traffic' must be set to some value in interval <1;100> for the check to pass.
+#
+# Check succeeds depending on the oversize job active and given parameter.
+# Possible parameters:
+# 'oversize_job' (no additional parameter) - succeeds if ANY oversize job is active.
+# 'oversize_job none' - succeeds if NO oversize job is active.
+# 'oversize_job law_mca1' - succeeds if SPECIFIC oversize job 'law_mca1' is active.
+#
 
 trigger_action : trig_action.check_and {
 	name: "*Check (all conditions)"
@@ -97,7 +104,7 @@ trigger_action : trig_action.check_and {
 
 	str_params[]: "[param1,2,...] Condition string in format: [check_type] [parameters]"
 	str_params[]: "[param1,2,...] Check types: 'random' | 'trailer_count' | 'trailer_length' | 'cvar'"
-	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state'"
+	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state' | 'oversize_job'"
 	str_params[]: "[param1,2,...] For info about individual check types, see /def/world/trigger_action.sii"
 }
 
@@ -107,7 +114,7 @@ trigger_action : trig_action.check_or {
 
 	str_params[]: "[param1,2,...] Condition string in format: [check_type] [parameters]"
 	str_params[]: "[param1,2,...] Check types: 'random' | 'trailer_count' | 'trailer_length' | 'cvar'"
-	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state'"
+	str_params[]: "[param1,2,...] Check types: 'height' | 'width' | 'speed' | 'weight' | 'state' | 'oversize_job'"
 	str_params[]: "[param1,2,...] For info about individual check types, see /def/world/trigger_action.sii"
 }
 
@@ -124,8 +131,9 @@ trigger_action : trig_action.gate
 	name: "*Gate control"
 	command: "gate"
 
-	str_params[]: "[param1] Action type: 'disable' (auto-reset) | 'lock' (auto-reset)"
+	str_params[]: "[param1] Action type: 'disable' (auto-reset) | 'lock' (auto-reset) | 'open' (auto-reset)"
 	str_params[]: "[note] Target gate(s) must be inside trigger area."
+	str_params[]: "[note] 'disable' and 'lock' can be used only for animated gate hookups, while 'open' is used for gate items."
 }
 
 trigger_action : trig_action.play_anim
@@ -251,7 +259,7 @@ trigger_action : trig_action.toll_10
 }
 
 trigger_action : trig_action.weigh {
-	name: "Weight request (mandatory)"
+	name: "Weigh request (mandatory)"
 
 	command: "weigh_req"
 
@@ -264,6 +272,19 @@ trigger_action : trig_action.weight_check {
 	command: "weigh_check"
 }
 
+trigger_action : trig_action.park_check
+{
+	name: "National park trailer check"
+	command: "_park_check"
+}
+
+trigger_action : trig_action.park_toll
+{
+	name: "National park entry toll"
+	command: "_park_toll"
+
+	num_params[]: 20
+}
 
 trigger_action : trig_action.no_trl_disc
 {
@@ -277,6 +298,64 @@ trigger_action : trig_action.slow_time
 {
 	name: "Slow time (auto reset)"
 	command: "_slow_time"
+}
+
+
+# A10 #
+trigger_action : trig_action.toll_at_01
+{
+	name: "toll tollgate 01 at"
+
+	command: "_pay_toll"
+	num_params[]: 19
+}
+# A9 #
+trigger_action : trig_action.toll_at_02
+{
+	name: "toll tollgate 02 at"
+
+	command: "_pay_toll"
+	num_params[]: 23
+}
+# A12 #
+trigger_action : trig_action.toll_at_03
+{
+	name: "toll tollgate 03 at"
+
+	command: "_pay_toll"
+	num_params[]: 17
+}
+# A9 #
+trigger_action : trig_action.toll_at_04
+{
+	name: "toll tollgate 04 at"
+
+	command: "_pay_toll"
+	num_params[]: 9
+}
+# A13 #
+trigger_action : trig_action.toll_at_06
+{
+	name: "toll tollgate 06 at"
+
+	command: "_pay_toll"
+	num_params[]: 45
+}
+# driving through green car lane on tollgates #
+trigger_action : trig_action.tollgate_fin
+{
+	name: "tollgate fine"
+
+	command: "_pay_toll"
+	num_params[]: 100
+}
+# Karawanken #
+trigger_action : trig_action.toll_kar_tun
+{
+	name: "toll Karawanks tunnel"
+
+	command: "_pay_toll"
+	num_params[]: 12
 }
 
 }

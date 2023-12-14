@@ -6,17 +6,20 @@ steam_controller_config: .main
 	# a unknown context is requested.
 
 	contexts[]: .ui
+	contexts[]: .ui.map
+	contexts[]: .ui.truck_config
+	contexts[]: .ui.walk # FIXME: Rename to .ui.truck_config.walk
+	contexts[]: .ui.photomode
+	contexts[]: .ui.photomode.walk
 	contexts[]: .extui
 	contexts[]: .drive
 	contexts[]: .drive.arcade
 	contexts[]: .drive.automatic
 	contexts[]: .drive.manual
 	contexts[]: .drive.direct
-	contexts[]: .uiwalk
 
 	action_sets[]: .set.ui
 	action_sets[]: .set.driving
-	action_sets[]: .set.walking
 
 	inputs[]: .pause
 
@@ -48,11 +51,6 @@ steam_controller_config: .main
 	inputs[]: .mapzoom_in
 	inputs[]: .mapzoom_out
 
-	inputs[]: .assistact1
-	inputs[]: .assistact2
-	inputs[]: .assistact3
-	inputs[]: .assistact4
-	inputs[]: .assistact5
 	inputs[]: .screenshot
 
 	inputs[]: .steering
@@ -127,6 +125,36 @@ steam_controller_config: .main
 	inputs[]: .quicksave
 	inputs[]: .quickload
 
+	inputs[]: .selectfcs
+	inputs[]: .skip
+
+	inputs[]: .j_left
+	inputs[]: .j_right
+	inputs[]: .j_up
+	inputs[]: .j_down
+
+	inputs[]: .joy_nav_prv
+	inputs[]: .joy_nav_nxt
+	inputs[]: .joy_sec_prv
+	inputs[]: .joy_sec_nxt
+
+	inputs[]: .scroll_j_x
+	inputs[]: .scroll_j_y
+
+	inputs[]: .shortcut_1
+	inputs[]: .shortcut_2
+
+	inputs[]: .j_cam_lk_lr
+	inputs[]: .j_cam_lk_ud
+	inputs[]: .j_cam_mv_lr
+	inputs[]: .j_cam_mv_ud
+	inputs[]: .j_trzoom_in
+	inputs[]: .j_trzoom_out
+	inputs[]: .j_mappan_x
+	inputs[]: .j_mappan_y
+	inputs[]: .j_mapzom_in
+	inputs[]: .j_mapzom_out
+
 	inputs[]: .walk.forward
 	inputs[]: .walk.backward
 	inputs[]: .walk.left
@@ -136,9 +164,22 @@ steam_controller_config: .main
 	inputs[]: .walk.look.lr
 	inputs[]: .walk.look.ud
 
+	inputs[]: .photo_mode
+	inputs[]: .photo_mode.up
+	inputs[]: .photo_mode.down
+	inputs[]: .photo_mode.take_snap
+	inputs[]: .photo_mode.smanager
+	inputs[]: .photo_mode.tag_names
+	inputs[]: .photo_mode.zoom_in
+	inputs[]: .photo_mode.zoom_out
+	inputs[]: .photo_mode.hide_control
+	inputs[]: .photo_mode.tog_settings
+	inputs[]: .photo_mode.reset_cam
+
 	vibrations[]: .vibration.steam
 	vibrations[]: .vibration.xi
 	vibrations[]: .vibration.ps4
+	vibrations[]: .vibration.ps5
 	vibrations[]: .vibration.switch
 }
 
@@ -146,6 +187,42 @@ steam_controller_input_context: .ui
 {
 	name: "ui"
 	action_set: .set.ui
+	action_set_layers[]: "default"
+}
+
+steam_controller_input_context: .ui.map
+{
+	name: "uimap"
+	action_set: .set.ui
+	action_set_layers[]: "map"
+}
+
+steam_controller_input_context: .ui.truck_config
+{
+	name: "uitrckcnfg"
+	action_set: .set.ui
+	action_set_layers[]: "truck_config"
+}
+
+steam_controller_input_context: .ui.walk
+{
+	name: "uiwalk"
+	action_set: .set.ui
+	action_set_layers[]: "walking"
+}
+
+steam_controller_input_context: .ui.photomode
+{
+	name: "uiphoto"
+	action_set: .set.ui
+	action_set_layers[]: "photo_mode"
+}
+
+steam_controller_input_context: .ui.photomode.walk
+{
+	name: "uiphotowlk"
+	action_set: .set.ui
+	action_set_layers[]: "photo_walk"
 }
 
 steam_controller_input_context: .extui
@@ -187,12 +264,6 @@ steam_controller_input_context: .drive.direct
 	action_set: .set.driving
 }
 
-steam_controller_input_context: .uiwalk
-{
-	name: "uiwalk"
-	action_set: .set.walking
-}
-
 # Action stes.
 
 steam_controller_action_set: .set.ui
@@ -203,6 +274,8 @@ steam_controller_action_set: .set.ui
 	inputs[]: .mouse.left
 	inputs[]: .mouse.right
 	inputs[]: .back
+	inputs[]: .selectfcs
+	inputs[]: .skip
 	inputs[]: .pause
 	inputs[]: .navmap
 
@@ -229,14 +302,55 @@ steam_controller_action_set: .set.ui
 	inputs[]: .radioup
 	inputs[]: .radiodown
 
-	inputs[]: .assistact1
-	inputs[]: .assistact2
-	inputs[]: .assistact3
-	inputs[]: .assistact4
-	inputs[]: .assistact5
-
 	inputs[]: .gar_man
 	inputs[]: .screenshot
+
+	inputs[]: .j_left
+	inputs[]: .j_right
+	inputs[]: .j_up
+	inputs[]: .j_down
+
+	inputs[]: .joy_nav_prv
+	inputs[]: .joy_nav_nxt
+	inputs[]: .joy_sec_prv
+	inputs[]: .joy_sec_nxt
+
+	inputs[]: .scroll_j_x
+	inputs[]: .scroll_j_y
+
+	inputs[]: .shortcut_1
+	inputs[]: .shortcut_2
+
+	inputs[]: .j_cam_lk_lr
+	inputs[]: .j_cam_lk_ud
+	inputs[]: .j_cam_mv_lr
+	inputs[]: .j_cam_mv_ud
+	inputs[]: .j_trzoom_in
+	inputs[]: .j_trzoom_out
+	inputs[]: .j_mappan_x
+	inputs[]: .j_mappan_y
+	inputs[]: .j_mapzom_in
+	inputs[]: .j_mapzom_out
+
+	inputs[]: .walk.forward
+	inputs[]: .walk.backward
+	inputs[]: .walk.left
+	inputs[]: .walk.right
+	inputs[]: .walk.crouch
+	inputs[]: .walk.run
+	inputs[]: .walk.look.lr
+	inputs[]: .walk.look.ud
+
+	inputs[]: .photo_mode.up
+	inputs[]: .photo_mode.down
+	inputs[]: .photo_mode.take_snap
+	inputs[]: .photo_mode.smanager
+	inputs[]: .photo_mode.tag_names
+	inputs[]: .photo_mode.zoom_in
+	inputs[]: .photo_mode.zoom_out
+	inputs[]: .photo_mode.hide_control
+	inputs[]: .photo_mode.tog_settings
+	inputs[]: .photo_mode.reset_cam
 }
 
 steam_controller_action_set: .set.driving
@@ -345,29 +459,9 @@ steam_controller_action_set: .set.driving
 	inputs[]: .gar_man
 
 	inputs[]: .screenshot
-}
+	inputs[]: .photo_mode
 
-steam_controller_action_set: .set.walking
-{
-	name: "walking"
-
-	inputs[]: .mouse.move
-	inputs[]: .mouse.left
-	inputs[]: .mouse.right
-	inputs[]: .back
-	inputs[]: .walk.forward
-	inputs[]: .walk.backward
-	inputs[]: .walk.left
-	inputs[]: .walk.right
-	inputs[]: .walk.crouch
-	inputs[]: .walk.run
-	inputs[]: .walk.look.lr
-	inputs[]: .walk.look.ud
-
-	inputs[]: .scrol_up
-	inputs[]: .scrol_dwn
-
-	inputs[]: .screenshot
+	inputs[]: .selectfcs
 }
 
 # Shared by ui and driving
@@ -494,6 +588,18 @@ steam_controller_input: .back
 	type: button
 }
 
+steam_controller_input: .selectfcs
+{
+	name: selectfcs
+	type: button
+}
+
+steam_controller_input: .skip
+{
+	name: skip
+	type: button
+}
+
 steam_controller_input: .mouse.move
 {
 	name: mouse_rel_position
@@ -533,36 +639,6 @@ steam_controller_input: .mapzoom_in
 steam_controller_input: .mapzoom_out
 {
 	name: mapzoom_out
-	type: button
-}
-
-steam_controller_input: .assistact1
-{
-	name: assistact1
-	type: button
-}
-
-steam_controller_input: .assistact2
-{
-	name: assistact2
-	type: button
-}
-
-steam_controller_input: .assistact3
-{
-	name: assistact3
-	type: button
-}
-
-steam_controller_input: .assistact4
-{
-	name: assistact4
-	type: button
-}
-
-steam_controller_input: .assistact5
-{
-	name: assistact5
 	type: button
 }
 
@@ -996,6 +1072,146 @@ steam_controller_input: .quickload
 	type: button
 }
 
+steam_controller_input: .j_left
+{
+	name: j_left
+	type: button
+}
+
+steam_controller_input: .j_right
+{
+	name: j_right
+	type: button
+}
+
+steam_controller_input: .j_up
+{
+	name: j_up
+	type: button
+}
+
+steam_controller_input: .j_down
+{
+	name: j_down
+	type: button
+}
+
+steam_controller_input: .joy_nav_prv
+{
+	name: joy_nav_prv
+	type: button
+}
+
+steam_controller_input: .joy_nav_nxt
+{
+	name: joy_nav_nxt
+	type: button
+}
+
+steam_controller_input: .joy_sec_prv
+{
+	name: joy_sec_prv
+	type: button
+}
+
+steam_controller_input: .joy_sec_nxt
+{
+	name: joy_sec_nxt
+	type: button
+}
+
+steam_controller_input: .scroll_j_x
+{
+	name: scroll_j_x
+	action_name: j_panscroll
+	type: vector_x
+}
+
+steam_controller_input: .scroll_j_y
+{
+	name: scroll_j_y
+	action_name: j_panscroll
+	type: vector_y
+}
+
+steam_controller_input: .shortcut_1
+{
+	name: shortcut_1
+	type: button
+}
+
+steam_controller_input: .shortcut_2
+{
+	name: shortcut_2
+	type: button
+}
+
+steam_controller_input: .j_cam_lk_lr
+{
+	name: j_cam_lk_lr
+	action_name: j_cam_lk
+	type: vector_x
+}
+
+steam_controller_input: .j_cam_lk_ud
+{
+	name: j_cam_lk_ud
+	action_name: j_cam_lk
+	type: vector_y
+}
+
+steam_controller_input: .j_cam_mv_lr
+{
+	name: j_cam_mv_lr
+	action_name: j_cam_mv
+	type: vector_x
+}
+
+steam_controller_input: .j_cam_mv_ud
+{
+	name: j_cam_mv_ud
+	action_name: j_cam_mv
+	type: vector_y
+}
+
+steam_controller_input: .j_trzoom_in
+{
+	name: j_trzoom_in
+	type: button
+}
+
+steam_controller_input: .j_trzoom_out
+{
+	name: j_trzoom_out
+	type: button
+}
+
+steam_controller_input: .j_mappan_x
+{
+	name: j_mappan_x
+	action_name: j_panscroll
+	type: vector_x
+}
+
+steam_controller_input: .j_mappan_y
+{
+	name: j_mappan_y
+	action_name: j_panscroll
+	type: vector_y
+}
+
+steam_controller_input: .j_mapzom_in
+{
+	name: j_mapzom_in
+	type: button
+}
+
+steam_controller_input: .j_mapzom_out
+{
+	name: j_mapzom_out
+	type: button
+}
+
 # Walking
 
 steam_controller_input: .walk.forward
@@ -1048,6 +1264,72 @@ steam_controller_input: .walk.look.ud
 	type: mouse_y
 }
 
+steam_controller_input: .photo_mode
+{
+	name: photo_mode
+	type: button
+}
+
+steam_controller_input: .photo_mode.up
+{
+	name: photoup
+	type: button
+}
+
+steam_controller_input: .photo_mode.down
+{
+	name: photodown
+	type: button
+}
+
+steam_controller_input: .photo_mode.take_snap
+{
+	name: photosnap
+	type: button
+}
+
+steam_controller_input: .photo_mode.smanager
+{
+	name: photosman
+	type: button
+}
+
+steam_controller_input: .photo_mode.tag_names
+{
+	name: photonames
+	type: button
+}
+
+steam_controller_input: .photo_mode.zoom_in
+{
+	name: phot_z_j_in
+	type: button
+}
+
+steam_controller_input: .photo_mode.zoom_out
+{
+	name: phot_z_j_out
+	type: button
+}
+
+steam_controller_input: .photo_mode.tog_settings
+{
+	name: photo_opts
+	type: button
+}
+
+steam_controller_input: .photo_mode.hide_control
+{
+	name: photo_hctrl
+	type: button
+}
+
+steam_controller_input: .photo_mode.reset_cam
+{
+	name: photores
+	type: button
+}
+
 steam_controller_vibration: .vibration.steam
 {
 	types[]: 1 # Steam controller
@@ -1076,6 +1358,14 @@ steam_controller_vibration: .vibration.ps4
 
 	left_motor_low_factor: 2.0
 	right_motor_high_factor: 2.0
+
+	left_motor_map[]: (0.0, 1.0, 0, 65535)
+	right_motor_map[]: (0.0, 1.0, 0, 65535)
+}
+
+steam_controller_vibration: .vibration.ps5
+{
+	types[]: 13 # PS5
 
 	left_motor_map[]: (0.0, 1.0, 0, 65535)
 	right_motor_map[]: (0.0, 1.0, 0, 65535)

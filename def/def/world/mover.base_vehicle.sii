@@ -1,0 +1,105 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+mover_model : mover.cg_tr_01
+{
+	mover_name: "cg_train_01"
+	model_desc: "/model/train/cargo_train_01_sc.pmd"
+	sound_path[]: "/sound/world/mover.bank#mover/train_1"
+	sound_path[]: "/sound/world/mover.bank#mover/train_2"
+	sound_min_dist: 20
+	sound_max_dist: 200
+}
+mover_model : mover.event1
+{
+	mover_name: "air_ambulance"
+	model_desc: "/model/aircraft/helicopter/animated/air_ambulance_anim.pmd"
+	model_anim: "/model/aircraft/helicopter/animated/air_ambulance_anim.pma"
+	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
+	sound_max_dist: 100
+
+	lods[0]: "/model/aircraft/helicopter/animated/air_ambulance_anim_lod1.pmd"
+	lods[1]: "/model/aircraft/helicopter/animated/air_ambulance_anim_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+}
+
+mover_model : mover.police_boat
+{
+	mover_name: "police boat"
+	model_desc: "/model/ship/police_boat.pmd"
+}
+
+mover_model : mover.wag_int
+{
+	mover_name: "wagon intermodal"
+	model_desc: "/vehicle/ai/train_cars/wagon_intermodal_02_mover.pmd"
+	
+	lods[0]: "/vehicle/ai/train_cars/wagon_intermodal_02_mover_lod1.pmd"
+	lods[1]: "/vehicle/ai/train_cars/wagon_intermodal_02_mover_lod2.pmd"
+	lods[2]: "/vehicle/ai/train_cars/wagon_intermodal_02_mover_lod3.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 80
+	lod_dist[2]: 120
+}
+
+mover_model : mover.crs_boat_01
+{
+	mover_name: "cruise boat 01 de"
+	model_desc: "/model/ship/cruise_boat_01_de.pmd"
+}
+
+mover_model : mover.crs_boat_02
+{
+	mover_name: "cruise boat 02 de"
+	model_desc: "/model/ship/cruise_boat_02_de.pmd"
+}
+
+mover_model : mover.speedboat
+{
+	mover_name: "speedboat anchored 02 de"
+	model_desc: "/model/ship/speedboat/speedboat_anchored_02_de.pmd"
+}
+
+mover_model : mover.forklift
+{
+	mover_name: "mover forklift"
+	model_desc: "/vehicle/share/models/forklifts/mover.pmd"
+	model_coll: "/vehicle/share/models/forklifts/mover.pmc"
+
+	lods[0]: "/vehicle/share/models/forklifts/mover_lod1.pmd"
+	lods[1]: "/vehicle/share/models/forklifts/mover_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+
+}
+
+mover_model : mover.ra320
+{
+	mover_name: "airplane a320 rolling"
+	model_desc: "/model/aircraft/a320/a320.pmd"
+
+	lods[0]: "/model/aircraft/a320/a320_lod1.pmd"
+
+	lod_dist[0]: 120
+
+}
+
+mover_model : mover.rb737
+{
+	mover_name: "airplane 737 rolling"
+	model_desc: "/model/aircraft/737/737.pmd"
+}
+
+}

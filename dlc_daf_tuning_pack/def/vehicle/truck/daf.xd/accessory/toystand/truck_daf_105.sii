@@ -1,0 +1,27 @@
+SiiNunit
+{
+accessory_addon_int_data : daf_105_toy.daf.xd.toystand
+{
+	name: "DAF XF 105 Model 1:50"
+	price: 350
+	unlock: 0
+	icon: "toystand/daf_xf/toy01bhtruckxf"
+	part_type: licensed
+
+	interior_model: "/vehicle/truck/upgrade/toystand/daf_xf/daf_xf_body.pmd"
+	coll: "/vehicle/truck/upgrade/toystand/daf_xf/daf_xf_body.pmc"
+	data[]: .daf_105_toy.phys_data
+}
+physics_toy_data : .daf_105_toy.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/toystand/daf_xf/daf_xf_head.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/toystand/daf_xf/daf_xf_head.pmc"
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.6			# toy mass
+	locator_hook_offset: (0.0f, 0.0233f, -0.0276f)	# offset of connection point on hook against toy locator
+	# definitions applied only to toys with joint
+	angular_stiffness: (500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (3.0, 3.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

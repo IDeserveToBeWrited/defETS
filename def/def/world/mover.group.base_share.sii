@@ -1,0 +1,471 @@
+SiiNunit
+{
+
+
+# __        ___                     _                    _     _ ___
+# \ \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| |__ \
+#  \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` | / /
+#   \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| ||_|
+#    \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|(_)
+#
+# Where to add?
+
+#
+# Units common for both ATS and ETS add to the "ATS, ETS common" section.
+# - Always add to the both projects AND at the same position.
+#
+# Units specific for ATS add to the "ATS only" section.
+#
+
+
+#     _  _____ ____     _____ _____ ____
+#    / \|_   _/ ___|   | ____|_   _/ ___|    ___ ___  _ __ ___  _ __ ___   ___  _ __
+#   / _ \ | | \___ \   |  _|   | | \___ \   / __/ _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \
+#  / ___ \| |  ___) |  | |___  | |  ___) | | (_| (_) | | | | | | | | | | | (_) | | | |
+# /_/   \_\_| |____( ) |_____| |_| |____/   \___\___/|_| |_| |_|_| |_| |_|\___/|_| |_|
+#                  |/
+# ATS, ETS common
+
+
+
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| |
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|
+#  _         _   _            _                _             _                      __   _   _                _       __
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|
+#  _           __                        |___/     _ _               |___/                           _ _
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)
+#                                                            |___/               |___/
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+##########################
+### OLD COWS FROM BASE ###
+##########################
+
+mover_model_group : mover.cow_all
+{
+	mover_name: "cow all"
+	desc_tags[]: cow
+	anim_tags[]: cow
+}
+mover_model_group : mover.cow_eat
+{
+	mover_name: "cow eat"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: eating
+}
+mover_model_group : mover.cows_idle
+{
+	mover_name: "cow idle all"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: idle
+}
+mover_model_group : mover.cow_we_all
+{
+	mover_name: "cow walking and eating"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: w_eating
+}
+
+mover_model_group : mover.calfs_idle
+{
+	mover_name: "calfs idle all"
+	desc_tags[]: calf
+	anim_tags[]: calf
+	anim_tags[]: idle
+}
+
+mover_model_group : mover.cows_herd
+{
+	mover_name: "anim cows herd"
+	desc_tags[]: cows_herd
+	anim_tags[]: cows_herd
+}
+
+mover_model_group : mover.cow_walk_eat
+{
+	mover_name: "cow_walk_eating"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: w_eating
+
+}
+mover_model_group : mover.cow_we
+{
+	mover_name: "cow_walk_eating"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: w_eating
+}
+mover_model_group : mover.cow_e
+{
+	mover_name: "cow_eating"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: eating
+}
+
+mover_model_group : mover.cow_l
+{
+	mover_name: "cow_lean"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: idle
+	anim_tags[]: lean
+}
+
+mover_model_group : mover.cows
+{
+	mover_name: "cows"
+	desc_tags[]: cow
+	anim_tags[]: cow
+	anim_tags[]: idle
+}
+
+###########
+# ANIMALS #
+###########
+
+
+mover_model_group : mover.ishee_ct2
+{
+	mover_name: "icelandic sheep canter"
+	desc_tags[]: isheep
+	anim_tags[]: sheep
+	anim_tags[]: canter
+	pedestrian: true
+}
+mover_model_group : mover.ishee_id2
+{
+	mover_name: "icelandic sheep idle"
+	desc_tags[]: isheep
+	anim_tags[]: sheep
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+
+mover_model_group : mover.bison_wlk
+{
+	mover_name: "bison walk"
+	desc_tags[]: bison_new
+	anim_tags[]: bison_new
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.bison_idl
+{
+	mover_name: "bison idle"
+	desc_tags[]: bison_new
+	anim_tags[]: bison_new
+	anim_tags[]: idle
+	pedestrian: true
+}
+
+mover_model_group : mover.bison_eat
+{
+	mover_name: "bison eat"
+	desc_tags[]: bison_new
+	anim_tags[]: bison_new
+	anim_tags[]: eat
+	pedestrian: true
+}
+
+mover_model_group : mover.sheep_wlk
+{
+	mover_name: "sheep walk"
+	desc_tags[]: sheep
+	anim_tags[]: sheep
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.sheep_ctr
+{
+	mover_name: "sheep canter"
+	desc_tags[]: sheep
+	anim_tags[]: sheep
+	anim_tags[]: canter
+	pedestrian: true
+}
+mover_model_group : mover.sheep_idl
+{
+	mover_name: "sheep idle"
+	desc_tags[]: sheep
+	anim_tags[]: sheep
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.deer_eat
+{
+	mover_name: "deer eating"
+	desc_tags[]: deer
+	anim_tags[]: deer
+	anim_tags[]: eating
+	pedestrian: true
+}
+
+mover_model_group : mover.pig_eat
+{
+	mover_name: "pig eating"
+	desc_tags[]: pig
+	anim_tags[]: pig
+	anim_tags[]: eating
+	pedestrian: false
+}
+
+mover_model_group : mover.goa_eat
+{
+	mover_name: "goat eating"
+	desc_tags[]: goat
+	anim_tags[]: goat
+	anim_tags[]: eating
+	pedestrian: true
+}
+
+mover_model_group : mover.goa_walk
+{
+	mover_name: "goat walking"
+	desc_tags[]: goat
+	anim_tags[]: goat
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.goa_idle
+{
+	mover_name: "goat idle"
+	desc_tags[]: goat
+	anim_tags[]: goat
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.mountgo
+{
+	mover_name: "mountain goat idle"
+	desc_tags[]: mountgo
+	desc_tags[]: wild
+	anim_tags[]: mount
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.lo_idle
+{
+	mover_name: "longhorn bull idle"
+	desc_tags[]: longhorn
+	desc_tags[]: domesticated
+	anim_tags[]: longhorn
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.lo_eat
+{
+	mover_name: "longhorn bull walking"
+	desc_tags[]: longhorn
+	desc_tags[]: domesticated
+	anim_tags[]: longhorn
+	anim_tags[]: eating
+	pedestrian: true
+}
+
+mover_model_group : mover.dog1idle
+{
+	mover_name: "dog husky idle"
+	desc_tags[]: husky
+	desc_tags[]: dog
+	anim_tags[]: dog
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.dog1walk
+{
+	mover_name: "dog husky walking"
+	desc_tags[]: husky
+	desc_tags[]: dog
+	anim_tags[]: dog
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.dog2idle
+{
+	mover_name: "dog shepherd idle"
+	desc_tags[]: shep
+	desc_tags[]: dog
+	anim_tags[]: dog
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.dog2walk
+{
+	mover_name: "dog shepherd walking"
+	desc_tags[]: shep
+	desc_tags[]: dog
+	anim_tags[]: dog
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.rdmwalk
+{
+	mover_name: "reindeer male walking"
+	desc_tags[]: rein
+	desc_tags[]: male
+	anim_tags[]: rein
+	anim_tags[]: male
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.rdmeat
+{
+	mover_name: "reindeer male eating"
+	desc_tags[]: rein
+	desc_tags[]: male
+	anim_tags[]: rein
+	anim_tags[]: male
+	anim_tags[]: eat
+	pedestrian: true
+}
+
+mover_model_group : mover.rdmidl
+{
+	mover_name: "reindeer male idle"
+	desc_tags[]: rein
+	desc_tags[]: male
+	anim_tags[]: rein
+	anim_tags[]: male
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+mover_model_group : mover.rdfwalk
+{
+	mover_name: "reindeer female walking"
+	desc_tags[]: rein
+	desc_tags[]: female
+	anim_tags[]: rein
+	anim_tags[]: female
+	anim_tags[]: walk
+	pedestrian: true
+}
+
+mover_model_group : mover.rdfeat
+{
+	mover_name: "reindeer female eating"
+	desc_tags[]: rein
+	desc_tags[]: female
+	anim_tags[]: rein
+	anim_tags[]: female
+	anim_tags[]: eat
+	pedestrian: true
+}
+
+mover_model_group : mover.rdfidl
+{
+	mover_name: "reindeer female idle"
+	desc_tags[]: rein
+	desc_tags[]: female
+	anim_tags[]: rein
+	anim_tags[]: female
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+############################
+# HUMANS / WOMAN / GRANDMA #
+############################
+
+ mover_model_group : mover.babca_st
+ {
+ 	mover_name: "grandma standing"
+ 	desc_tags[]: grandma
+ 	anim_tags[]: grandma
+	anim_tags[]: stand
+ 	anim_tags[]: idle
+ 	pedestrian: false
+ }
+
+mover_model_group : mover.babca_sit
+{
+	mover_name: "grandma sitting"
+	desc_tags[]: grandma
+	anim_tags[]: grandma
+	anim_tags[]: sit
+	anim_tags[]: idle
+	pedestrian: false
+}
+
+######################################
+# HUMANS / WOMAN / GASSTATION SELLER #
+######################################
+
+# mover_model_group : mover.gass_wo
+# {
+# 	mover_name: "gasstation seller woman"
+# 	desc_tags[]: wseller
+# 	anim_tags[]: wseller
+#	anim_tags[]: stand
+# 	anim_tags[]: idle
+# 	pedestrian: false
+# }
+
+################################
+# HUMANS / UNI / ZIPLINE RIDER #
+################################
+
+mover_model_group : mover.zipliner
+{
+	mover_name: "zipline rider"
+	desc_tags[]: zipline
+	anim_tags[]: zipline
+	pedestrian: true
+}
+
+#######################
+# CRANE / TOWER / SHR #
+#######################
+
+mover_model_group : mover.twr_cr
+{
+	mover_name: "tower_crane_shr_mov"
+    desc_tags[]: tower_cr
+    anim_tags[]: tower_cr
+}
+
+mover_model_group : mover.twr_cr1
+{
+	mover_name: "tower_crane_shr_mov1"
+    desc_tags[]: tower_cr1
+    anim_tags[]: tower_cr1
+}
+
+mover_model_group : mover.twr_cr2
+{
+	mover_name: "tower_crane_shr_mov2"
+    desc_tags[]: tower_cr2
+    anim_tags[]: tower_cr2
+}
+
+}

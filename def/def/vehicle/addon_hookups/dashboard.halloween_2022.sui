@@ -1,0 +1,30 @@
+accessory_hookup_int_data : hang_bat.addon_hookup
+{
+	steam_inventory_id: 108
+	name: "@@hanging_bat@@"
+	price: 165
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/halloween_2022/bat_hang"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/halloween_2022/hang_tree.pmd"
+
+	data[]: .hang_bat.phys_data
+
+	suitable_for[]: "set_dashbrd"
+}
+
+physics_toy_data : .hang_bat.phys_data
+{
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/halloween_2022/hang_bat.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/halloween_2022/hang_bat.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.1			# toy mass
+	locator_hook_offset: (0.0334f, 0.1296f, 0.0012f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (50.0, 50.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (1.0, 1.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (40.0, 0.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}

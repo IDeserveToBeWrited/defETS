@@ -1,125 +1,63 @@
-traffic_trailer : traffic.trailer.car_trans
+traffic_trailer : traffic.trailer.cartrans1
 {
-	accessories[]: .traffic.car_trans.tchassis
-	accessories[]: .traffic.car_trans.trwheel0
-	accessories[]: .traffic.car_trans.trwheel1
-	accessories[]: .traffic.car_trans.octavia.cargo
-	cargo_mass: 9000
+	accessories[]: .cartrans1.tchassis
+	accessories[]: .cartrans1.trwheel0
+	accessories[]: .cartrans1.trwheel1
+	accessories[]: .cartrans1.cargo
+	accessories[]: .cartrans1.paint_job
 	
+	cargo_mass: 9000
+		
+	spawn_ratio: 0.3
+	
+	variant[]: .traffic.trailer.cartrans2
+	variant[]: .traffic.trailer.cartrans3
+	variant[]: .traffic.trailer.cartrans4
+
 	tags[]: low
 	tags[]: carrier
 	tags[]: carr_car
 	tags[]: cargo 
 	tags[]: medium
-	
-	spawn_ratio: 0.3
+}
 
-}
-vehicle_accessory: .traffic.car_trans.tchassis
+vehicle_accessory: .cartrans1.tchassis
 {
-	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
+    	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans.trwheel0
+
+vehicle_wheel_accessory: .cartrans1.trwheel0
 {
 	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans.trwheel1
+
+vehicle_wheel_accessory: .cartrans1.trwheel1
 {
 	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans.octavia.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_octavia.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 
-
-traffic_trailer : traffic.trailer.car_trans_s1
+vehicle_accessory: .cartrans1.cargo
 {
-
-	base: traffic.trailer.car_trans
-
-	accessories[]: .traffic.car_trans2.tchassis
-	accessories[]: .traffic.car_trans2.trwheel0
-	accessories[]: .traffic.car_trans2.trwheel1
-	accessories[]: .traffic.car_trans2.octavia.cargo
-	cargo_mass: 9000
-	
-	tags[]: low
-	tags[]: carrier
-	tags[]: carr_car
-	tags[]: cargo 
-	tags[]: medium
-	
-	spawn_ratio: 0.3
-}
-vehicle_accessory: .traffic.car_trans2.tchassis
-{
-	data_path: "/def/vehicle/trailer/car_transporter/chassis_blue.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans2.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans2.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans2.octavia.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_octavia_2.sii"
+    	data_path: "/def/vehicle/trailer_cargo/car_transporter/cargo1.sii"
 }
 
+vehicle_paint_job_accessory: .cartrans1.paint_job
+{
+    	data_path: "/def/vehicle/trailer/car_transporter/custom_paint_job/red.sii"
+}
 
-traffic_trailer : traffic.trailer.car_trans_s2
-{
-
-	base: traffic.trailer.car_trans
-
-	accessories[]: .traffic.car_trans3.tchassis
-	accessories[]: .traffic.car_trans3.trwheel0
-	accessories[]: .traffic.car_trans3.trwheel1
-	accessories[]: .traffic.car_trans3.octavia.cargo
-	cargo_mass: 9000
-	
-	tags[]: low
-	tags[]: carrier
-	tags[]: carr_car
-	tags[]: cargo 
-	tags[]: medium
-	
-	spawn_ratio: 0.3
-}
-vehicle_accessory: .traffic.car_trans3.tchassis
-{
-	data_path: "/def/vehicle/trailer/car_transporter/chassis_black.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans3.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans3.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans3.octavia.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_octavia_3.sii"
-}
 #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-traffic_trailer : .traffic.trailer.car_trans_f1
+
+traffic_trailer : .traffic.trailer.cartrans2
 {
-	base: traffic.trailer.car_trans
+	accessories[]: .cartrans2.tchassis
+	accessories[]: .cartrans2.trwheel0
+	accessories[]: .cartrans2.trwheel1
+	accessories[]: .cartrans2.cargo
+	accessories[]: .cartrans2.paint_job
 	
-	accessories[]: .traffic.car_trans_f1.tchassis
-	accessories[]: .traffic.car_trans_f1.trwheel0
-	accessories[]: .traffic.car_trans_f1.trwheel1
-	accessories[]: .traffic.car_trans_f1.cargo
 	cargo_mass: 9000
 	
 	tags[]: low
@@ -127,36 +65,45 @@ traffic_trailer : .traffic.trailer.car_trans_f1
 	tags[]: carr_car
 	tags[]: cargo 
 	tags[]: medium
+}
 
-}
-vehicle_accessory: .traffic.car_trans_f1.tchassis
+vehicle_accessory: .cartrans2.tchassis
 {
-	data_path: "/def/vehicle/trailer/car_transporter/chassis_black.sii"
+    	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans_f1.trwheel0
+
+vehicle_wheel_accessory: .cartrans2.trwheel0
 {
 	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans_f1.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans_f1.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_smax_2.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 
-traffic_trailer : traffic.trailer.car_trans_o1
+vehicle_wheel_accessory: .cartrans2.trwheel1
 {
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
+}
+
+vehicle_accessory: .cartrans2.cargo
+{
+    	data_path: "/def/vehicle/trailer_cargo/car_transporter/cargo2.sii"
+}
+
+vehicle_paint_job_accessory: .cartrans2.paint_job
+{
+    	data_path: "/def/vehicle/trailer/car_transporter/custom_paint_job/blue.sii"
+}
+
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+traffic_trailer : .traffic.trailer.cartrans3
+{
+	accessories[]: .cartrans3.tchassis
+	accessories[]: .cartrans3.trwheel0
+	accessories[]: .cartrans3.trwheel1
+	accessories[]: .cartrans3.cargo
+	accessories[]: .cartrans3.paint_job
 	
-	base: traffic.trailer.car_trans
-	
-	accessories[]: .traffic.car_trans_o1.tchassis
-	accessories[]: .traffic.car_trans_o1.trwheel0
-	accessories[]: .traffic.car_trans_o1.trwheel1
-	accessories[]: .traffic.car_trans_o1.cargo
 	cargo_mass: 9000
 	
 	tags[]: low
@@ -164,143 +111,85 @@ traffic_trailer : traffic.trailer.car_trans_o1
 	tags[]: carr_car
 	tags[]: cargo 
 	tags[]: medium
-
-	spawn_ratio: 0.01
-
 }
-vehicle_accessory: .traffic.car_trans_o1.tchassis
+
+vehicle_accessory: .cartrans3.tchassis
 {
-	data_path: "/def/vehicle/trailer/car_transporter/chassis_blue.sii"
+    	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans_o1.trwheel0
+
+vehicle_wheel_accessory: .cartrans3.trwheel0
 {
 	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans_o1.trwheel1
+
+vehicle_wheel_accessory: .cartrans3.trwheel1
 {
 	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans_o1.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_cars_ortiz_combi.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 
-
-traffic_trailer : traffic.trailer.car_trans_i1
+vehicle_accessory: .cartrans3.cargo
 {
+    	data_path: "/def/vehicle/trailer_cargo/car_transporter/cargo3.sii"
+}
+
+vehicle_paint_job_accessory: .cartrans3.paint_job
+{
+    	data_path: "/def/vehicle/trailer/car_transporter/custom_paint_job/red.sii"
+}
+
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+traffic_trailer : .traffic.trailer.cartrans4 #car suv
+{
+	accessories[]: .cartrans4.tchassis
+	accessories[]: .cartrans4.trwheel0
+	accessories[]: .cartrans4.trwheel1
+	accessories[]: .cartrans4.trwheel2
+	accessories[]: .cartrans4.paintjob
+	accessories[]: .cartrans4.cargo
 	
-	base: traffic.trailer.car_trans
-	
-	accessories[]: .traffic.car_trans_i1.tchassis
-	accessories[]: .traffic.car_trans_i1.trwheel0
-	accessories[]: .traffic.car_trans_i1.trwheel1
-	accessories[]: .traffic.car_trans_i1.cargo
 	cargo_mass: 9000
-	
+
 	tags[]: low
 	tags[]: carrier
 	tags[]: carr_car
 	tags[]: cargo 
 	tags[]: medium
+		
+}
 
-}
-vehicle_accessory: .traffic.car_trans_i1.tchassis
+vehicle_accessory: .cartrans4.tchassis
 {
-	data_path: "/def/vehicle/trailer/car_transporter/chassis_blue.sii"
+    	data_path: "/def/vehicle/trailer/van_transporter/chassis.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans_i1.trwheel0
+
+vehicle_wheel_accessory: .cartrans4.trwheel0
 {
 	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
-vehicle_wheel_accessory: .traffic.car_trans_i1.trwheel1
+
+vehicle_wheel_accessory: .cartrans4.trwheel1
 {
 	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans_i1.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_cars_it.sii"
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 
-
-traffic_trailer : traffic.trailer.car_trans_d1
+vehicle_wheel_accessory: .cartrans4.trwheel2
 {
-	
-	base: traffic.trailer.car_trans
-	
-	accessories[]: .traffic.car_trans_d1.tchassis
-	accessories[]: .traffic.car_trans_d1.trwheel0
-	accessories[]: .traffic.car_trans_d1.trwheel1
-	accessories[]: .traffic.car_trans_d1.cargo
-	cargo_mass: 9000
-	
-	tags[]: low
-	tags[]: carrier
-	tags[]: carr_car
-	tags[]: cargo 
-	tags[]: medium
-
-	spawn_ratio: 0.01
-
-}
-vehicle_accessory: .traffic.car_trans_d1.tchassis
-{
-	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans_d1.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans_d1.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans_d1.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_dacia.sii"
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/overweight.sii"
 }
 
+vehicle_paint_job_accessory: .cartrans4.paintjob
+{
+	data_path: "/def/vehicle/trailer/van_transporter/custom_paint_job/red.sii"
+}
 
-traffic_trailer : traffic.trailer.car_trans_fr
+vehicle_accessory: .cartrans4.cargo
 {
-	
-	base: traffic.trailer.car_trans
-	
-	accessories[]: .traffic.car_trans_fr.tchassis
-	accessories[]: .traffic.car_trans_fr.trwheel0
-	accessories[]: .traffic.car_trans_fr.trwheel1
-	accessories[]: .traffic.car_trans_fr.cargo
-	cargo_mass: 9000
-	
-	tags[]: low
-	tags[]: carrier
-	tags[]: carr_car
-	tags[]: cargo 
-	tags[]: medium
-
-	spawn_ratio: 0.01
-
-}
-vehicle_accessory: .traffic.car_trans_fr.tchassis
-{
-	data_path: "/def/vehicle/trailer/car_transporter/chassis.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans_fr.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_wheel_accessory: .traffic.car_trans_fr.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/cartrans.sii"
-}
-vehicle_accessory: .traffic.car_trans_fr.cargo
-{
-	data_path: "/def/vehicle/trailer/car_transporter/cargo_france_cars.dlc_fr.sii"
+    	data_path: "/def/vehicle/trailer_cargo/van_transporter/cargo3.sii"
 }

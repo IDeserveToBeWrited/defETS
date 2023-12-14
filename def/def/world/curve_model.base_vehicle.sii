@@ -1,0 +1,99 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+curve_model : curve.32
+{
+	name: "parked cars sprites 01"
+	model_desc: "/model/sprites/curve/parked_cars_sprites_01.pmd"
+
+
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0 | center17 : 1.0"
+	start_part[]: "start"
+	end_part[]: "end"
+
+}
+
+curve_model : curve.rus_23001
+{
+	model_desc: "/model/vehicle/train/wagon_bulk_curve.pmd"
+	name: "wagon bulk curve"
+
+	variation: 3
+	variation[0]: "green | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0"
+	variation[1]: "bluish | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0"
+	variation[2]: "mixed | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model/vehicle/train/wagon_bulk_curve_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model/vehicle/train/wagon_bulk_curve_lod2.pmd"
+	dynamic_lod_dist[1]: 75
+}
+
+
+curve_model : curve.rus_23002
+{
+	model_desc: "/model/vehicle/train/wagon_coal_curve.pmd"
+	name: "wagon coal curve"
+
+	variation: 3
+	variation[0]: "grey | grey_1 : 1.0 | grey_2 : 1.0 | grey_3 : 1.0 | grey_4 : 1.0 | grey_5 : 1.0"
+	variation[1]: "brown | brown_1 : 1.0 | brown_2 : 1.0 | brown_3 : 1.0 | brown_4 : 1.0 | brown_5 : 1.0"
+	variation[2]: "mixed | brown_5 : 1.0 | grey_1 : 1.0 | brown_1 : 1.0 | grey_2 : 1.0 | grey_3 : 1.0 | grey_4 : 1.0 | grey_5 : 1.0"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model/vehicle/train/wagon_coal_curve_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model/vehicle/train/wagon_coal_curve_lod2.pmd"
+	dynamic_lod_dist[1]: 100
+}
+
+curve_model : curve.vhcl_2n001
+{
+	model_desc: "/vehicle/ai/train_cars/wagon_intermodal_02.pmd"
+	name: "wagon intermodal 02"
+
+	variation: 4
+	variation[0]: "empty | center1 : 1.0"
+	variation[1]: "iso_mix | center2,center3 : 1.0"
+	variation[2]: "semi_mix | center4,center1 : 1.0"
+	variation[3]: "swap_mix | center5,center6 : 1.0"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 3
+	dynamic_lod_dist: 3
+	dynamic_lod_desc[0]: "/vehicle/ai/train_cars/wagon_intermodal_02_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/vehicle/ai/train_cars/wagon_intermodal_02_lod2.pmd"
+	dynamic_lod_dist[1]: 80
+	dynamic_lod_desc[2]: "/vehicle/ai/train_cars/wagon_intermodal_02_lod3.pmd"
+	dynamic_lod_dist[2]: 120
+}
+
+curve_model : curve.vhcl_2n002
+{
+	model_desc: "/vehicle/ai/train_cars/wagon_intermodal_01_far_crv.pmd"
+	name: "wagon intermodal 01 far crv"
+
+	variation: 1
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+
+	high_tess: 0
+}
+
+}

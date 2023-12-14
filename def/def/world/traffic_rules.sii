@@ -12,7 +12,7 @@ SiiNunit
 
 traffic_rule_data : traffic_rule.major_road
 {
-	name: "[sign] Priority road"
+	# name: "[sign] Priority road"
 
 	rule: "priority"
 	num_params[]: -1
@@ -30,18 +30,20 @@ traffic_rule_data : traffic_rule.minor_road
 
 traffic_rule_data : traffic_rule.give_way
 {
-	name: "[sign] Give way (crossroad - slow down)"
+	# name: "[sign] Give way (crossroad - slow down)"
 
-	rule: "stop"
-	num_params[]: 0.0	# block time after reaching 'stop speed'
-	num_params[]: 8.0	# block while speed is higher than this [m/s]
+	# The rule is not used as it was originally meant to (for non-hw roads only).
+	# Disabling until solution is found
+	#rule: "stop"
+	#num_params[]: 0.0	# block time after reaching 'stop speed'
+	#num_params[]: 8.0	# block while speed is higher than this [m/s]
 
 	additional_rules[]: traffic_rule.minor_road
 }
 
 traffic_rule_data : traffic_rule.give_way_m
 {
-	name: "[sign] Give way (motorway lane merge)"
+	# name: "[sign] Give way (motorway lane merge)"
 
 	additional_rules[]: traffic_rule.minor_road
 }
@@ -52,7 +54,7 @@ traffic_rule_data : traffic_rule.stop
 	# Use this rule for both horizontal (road text) and vertical (traffic signs) 'stop' traffic rules
 	# The actual vehicle stop position is moved to a nearby intersection or 'traffic_rule.cross_line' (if any)
 
-	name: "[sign] Stop"
+	# name: "[sign] Stop"
 
 	rule: "stop"
 	num_params[]: 0.5	# block time after reaching 'stop speed'
@@ -97,7 +99,7 @@ traffic_rule_data : traffic_rule.rblock_right
 
 traffic_rule_data : traffic_rule.limit_end
 {
-	name: "[sign] End of speed limit"
+	# name: "[sign] End of speed limit"
 
 	rule: "speed_limit"
 	num_params[]: 0
@@ -132,7 +134,7 @@ traffic_rule_data : traffic_rule.cross_end
 
 traffic_rule_data : traffic_rule.limit_5
 {
-	name: "[speed] Speed limit 5"
+	# name: "[speed] Speed limit 5"
 
 	rule: "speed_limit"
 	num_params[]: 5
@@ -140,15 +142,31 @@ traffic_rule_data : traffic_rule.limit_5
 
 traffic_rule_data : traffic_rule.limit_8
 {
-	name: "[speed] Speed limit 8"
+	# name: "[speed] Speed limit 8"
 
 	rule: "speed_limit"
 	num_params[]: 8
 }
 
+traffic_rule_data : traffic_rule.limit_10
+{
+	# name: "[speed] Speed limit 10"
+
+	rule: "speed_limit"
+	num_params[]: 10
+}
+
+traffic_rule_data : traffic_rule.limit_15
+{
+	# name: "[speed] Speed limit 15"
+
+	rule: "speed_limit"
+	num_params[]: 15
+}
+
 traffic_rule_data : traffic_rule.limit_20
 {
-	name: "[speed] Speed limit 20"
+	# name: "[speed] Speed limit 20"
 
 	rule: "speed_limit"
 	num_params[]: 20
@@ -156,7 +174,7 @@ traffic_rule_data : traffic_rule.limit_20
 
 traffic_rule_data : traffic_rule.limit_30
 {
-	name: "[speed] Speed limit 30"
+	# name: "[speed] Speed limit 30"
 
 	rule: "speed_limit"
 	num_params[]: 30
@@ -164,7 +182,7 @@ traffic_rule_data : traffic_rule.limit_30
 
 traffic_rule_data : traffic_rule.limit_40
 {
-	name: "[speed] Speed limit 40"
+	# name: "[speed] Speed limit 40"
 
 	rule: "speed_limit"
 	num_params[]: 40
@@ -172,7 +190,7 @@ traffic_rule_data : traffic_rule.limit_40
 
 traffic_rule_data : traffic_rule.limit_50
 {
-	name: "[speed] Speed limit 50"
+	# name: "[speed] Speed limit 50"
 
 	rule: "speed_limit"
 	num_params[]: 50
@@ -180,7 +198,7 @@ traffic_rule_data : traffic_rule.limit_50
 
 traffic_rule_data : traffic_rule.limit_60
 {
-	name: "[speed] Speed limit 60"
+	# name: "[speed] Speed limit 60"
 
 	rule: "speed_limit"
 	num_params[]: 60
@@ -188,7 +206,7 @@ traffic_rule_data : traffic_rule.limit_60
 
 traffic_rule_data : traffic_rule.limit_60_t
 {
-	name: "[speed] Speed limit 60 (trucks only)"
+	# name: "[speed] Speed limit 60 (trucks only)"
 
 	rule: "speed_limit"
 	num_params[]: 60
@@ -198,7 +216,7 @@ traffic_rule_data : traffic_rule.limit_60_t
 
 traffic_rule_data : traffic_rule.limit_70
 {
-	name: "[speed] Speed limit 70"
+	# name: "[speed] Speed limit 70"
 
 	rule: "speed_limit"
 	num_params[]: 70
@@ -206,7 +224,7 @@ traffic_rule_data : traffic_rule.limit_70
 
 traffic_rule_data : traffic_rule.limit_80
 {
-	name: "[speed] Speed limit 80"
+	# name: "[speed] Speed limit 80"
 
 	rule: "speed_limit"
 	num_params[]: 80
@@ -214,7 +232,7 @@ traffic_rule_data : traffic_rule.limit_80
 
 traffic_rule_data : traffic_rule.limit_90
 {
-	name: "[speed] Speed limit 90"
+	# name: "[speed] Speed limit 90"
 
 	rule: "speed_limit"
 	num_params[]: 90
@@ -222,7 +240,7 @@ traffic_rule_data : traffic_rule.limit_90
 
 traffic_rule_data : traffic_rule.limit_100
 {
-	name: "[speed] Speed limit 100"
+	# name: "[speed] Speed limit 100"
 
 	rule: "speed_limit"
 	num_params[]: 100
@@ -230,7 +248,7 @@ traffic_rule_data : traffic_rule.limit_100
 
 traffic_rule_data : traffic_rule.limit_110
 {
-	name: "[speed] Speed limit 110"
+	# name: "[speed] Speed limit 110"
 
 	rule: "speed_limit"
 	num_params[]: 110
@@ -238,7 +256,7 @@ traffic_rule_data : traffic_rule.limit_110
 
 traffic_rule_data : traffic_rule.limit_120
 {
-	name: "[speed] Speed limit 120"
+	# name: "[speed] Speed limit 120"
 
 	rule: "speed_limit"
 	num_params[]: 120
@@ -246,7 +264,7 @@ traffic_rule_data : traffic_rule.limit_120
 
 traffic_rule_data : traffic_rule.limit_130
 {
-	name: "[speed] Speed limit 130"
+	# name: "[speed] Speed limit 130"
 
 	rule: "speed_limit"
 	num_params[]: 130
@@ -254,10 +272,22 @@ traffic_rule_data : traffic_rule.limit_130
 
 traffic_rule_data : traffic_rule.limit_100_60
 {
-	name: "[speed] Speed limit 100 (60 for trucks)"
+	# name: "[speed] Speed limit 100 (60 for trucks)"
 
 	rule: "speed_limit"
 	num_params[]: 100
+	num_params[]: 1		# 0 - include vehicle types (default), 1 - exclude vehicle types
+	str_params[]: "truck_all"
+
+	additional_rules[]: traffic_rule.limit_60_t
+}
+
+traffic_rule_data : traffic_rule.limit_80_60
+{
+	# name: "[speed] Speed limit 80 (60 for trucks)"
+
+	rule: "speed_limit"
+	num_params[]: 80
 	num_params[]: 1		# 0 - include vehicle types (default), 1 - exclude vehicle types
 	str_params[]: "truck_all"
 
@@ -273,16 +303,21 @@ traffic_rule_data : traffic_rule.urban_area
 
 traffic_rule_data : traffic_rule.no_road
 {
-	name: "[access] No road vehicles"
-	rule: "actor_access"
-	num_params[]: 0 	# 0 - disallow, 1 - allow
-	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "road"
+	name: "[obsolete] No road vehicles"
+	str_params[]: "Please remove"
 }
 
 traffic_rule_data : traffic_rule.no_trailer
 {
-	name: "[access] No trailer area (areas with sharp curves)"
+	name: "[obsolete] No trailer area (areas with sharp curves)"
+
+	str_params[]: "Please remove or replace with more suitable rule"
+	additional_rules[]: traffic_rule.car_only
+}
+
+traffic_rule_data : traffic_rule.no_trailers
+{
+	# name: "[access] No trailers"
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
@@ -293,63 +328,99 @@ traffic_rule_data : traffic_rule.no_trailer
 
 traffic_rule_data : traffic_rule.car_only
 {
-	name: "[access] Cars only (no trailers)"
+	name: "[access-exclusive] Cars only (no trailers)"
 	rule: "actor_access"
-	num_params[]: 1 # 0 - disallow, 1 - allow
-	num_params[]: 1 # 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "car"
-	str_params[]: "car_city"
 
-	additional_rules[]: traffic_rule.no_trailer
+	additional_rules[]: traffic_rule.no_trailers
 }
 
-traffic_rule_data : traffic_rule.no_cars
+traffic_rule_data : traffic_rule.no_car_comp
 {
-	name: "[access] No cars area"
+	# kept only for backward compatibility
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "car_all"
 }
 
+traffic_rule_data : traffic_rule.no_cars
+{
+	name: "[obsolete] No cars"
+
+	str_params[]: "Please remove and use corresponding access areas or exclusive access path rules."
+	additional_rules[]: traffic_rule.no_car_comp
+}
+
 traffic_rule_data : traffic_rule.no_trucks
 {
-	name: "[access] No trucks area"
+	# kept for backward compatibility
+	# name: "[special] No trucks (backward compatibility only)"
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "truck_all"
+	str_params[]: "truck_semi"
+	str_params[]: "truck_heavy"
 }
 
 traffic_rule_data : traffic_rule.trucks_only
 {
-	name: "[access] Allow trucks only"
+	name: "[access-exclusive] Trucks only (semi-trucks)"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
-	num_params[]: 1 	# set vehicle access
-	num_params[]: 0 	# no change to trailer access
-	str_params[]: "truck_all"
+	str_params[]: "truck"
+	str_params[]: "truck_semi"
+	str_params[]: "truck_heavy"
 }
 
-traffic_rule_data : traffic_rule.no_buses
+traffic_rule_data : traffic_rule.no_bus_comp
 {
-	name: "[access] No bus area"
+	# kept only for backward compatibility
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "bus_all"
 }
 
+traffic_rule_data : traffic_rule.no_buses
+{
+	name: "[obsolete] No bus area"
+
+	str_params[]: "Please remove and use corresponding access areas or exclusive access path rules."
+	additional_rules[]: traffic_rule.no_bus_comp
+}
+
 traffic_rule_data : traffic_rule.buses_only
 {
-	name: "[access] Allow buses only"
+	name: "[access-exclusive] Buses only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
-	num_params[]: 1 	# set vehicle access
-	num_params[]: 0 	# no change to trailer access
 	str_params[]: "bus"
+}
+
+traffic_rule_data : traffic_rule.tr_bus_only
+{
+	name: "[access-exclusive] Trucks and buses only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "bus"
+	str_params[]: "truck"
+	str_params[]: "truck_semi"
+	str_params[]: "truck_heavy"
+}
+
+traffic_rule_data : traffic_rule.custom_only
+{
+	name: "[access-exclusive] Custom vehicles only"
+	rule: "actor_access"
+	num_params[]: 1 # 0 - disallow, 1 - allow
+	num_params[]: 1 # 0 - inclusive, 1 - exclusive
+	str_params[]: "custom_all"
 }
 
 traffic_rule_data : traffic_rule.bus_transit
@@ -358,14 +429,14 @@ traffic_rule_data : traffic_rule.bus_transit
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
-	num_params[]: 1 	# set vehicle access
-	num_params[]: 0 	# no change to trailer access
 	str_params[]: "bus_custom"
 }
 
 traffic_rule_data : traffic_rule.border_area
 {
-	name: "[spawn] Border area (high traffic density)"
+	name: "[obsolete] Border area"
+
+	str_params[]: "Please remove and use '[context] Border crossing area' just over the actual border crossing"
 
 	additional_rules[]: traffic_rule.s_car_h
 	additional_rules[]: traffic_rule.s_truck_h
@@ -373,73 +444,331 @@ traffic_rule_data : traffic_rule.border_area
 
 traffic_rule_data : traffic_rule.s_no_train
 {
-	name: "[spawn] Disable train spawn"
+	name: "[obsolete] Disable train spawn"
 
-	additional_rules[]: traffic_rule.s_train_d
-	additional_rules[]: traffic_rule.s_train_f_d
+	str_params[]: "Please remove"
 }
 
 traffic_rule_data : traffic_rule.city_xl_area
 {
-	name: "[spawn/urban] Large city - very high traffic density"
+	name: "[context][urban] Large city - very high traffic density"
 
 	additional_rules[]: traffic_rule.urban_area
 	additional_rules[]: traffic_rule.s_car_uh
 	additional_rules[]: traffic_rule.s_trl_u
 	additional_rules[]: traffic_rule.s_trm_u
+	additional_rules[]: traffic_rule.s_trh_u
 	additional_rules[]: traffic_rule.s_truck_u
 	additional_rules[]: traffic_rule.s_police_u
 	additional_rules[]: traffic_rule.s_bus_h
+	additional_rules[]: traffic_rule.s_bus_c
 	additional_rules[]: traffic_rule.s_medical_u
 	additional_rules[]: traffic_rule.s_fire_u
+	additional_rules[]: traffic_rule.s_car_c_u
+	additional_rules[]: traffic_rule.s_truck_c_u
 }
 
 traffic_rule_data : traffic_rule.city_area
 {
-	name: "[spawn/urban] City - high traffic density"
+	name: "[context][urban] City - high traffic density"
 
 	additional_rules[]: traffic_rule.urban_area
 	additional_rules[]: traffic_rule.s_car_u
 	additional_rules[]: traffic_rule.s_trl_u
 	additional_rules[]: traffic_rule.s_trm_u
+	additional_rules[]: traffic_rule.s_trh_u
 	additional_rules[]: traffic_rule.s_truck_u
 	additional_rules[]: traffic_rule.s_police_u
 	additional_rules[]: traffic_rule.s_bus_l
+	additional_rules[]: traffic_rule.s_bus_c
 	additional_rules[]: traffic_rule.s_medical_u
 	additional_rules[]: traffic_rule.s_fire_u
+	additional_rules[]: traffic_rule.s_car_cs_u
+	additional_rules[]: traffic_rule.s_truck_cs_u
 }
 
 traffic_rule_data : traffic_rule.village_area
 {
-	name: "[spawn/urban] Village - low traffic density"
+	name: "[context][urban] Village - low traffic density"
 
 	# No traffic density change
 
 	additional_rules[]: traffic_rule.urban_area
+	additional_rules[]: traffic_rule.s_cust_r
 }
 
 traffic_rule_data : traffic_rule.city_centre
 {
-	name: "[spawn/access] Allow city specific vehicles ('city centre')"
+	# name: "[obsolete] Urban-specific vehicles area"
 
+	str_params[]: "Please replace with [access] Custom vehicles area"
+
+	additional_rules[]: traffic_rule.allow_custom
+}
+
+traffic_rule_data : traffic_rule.allow_slow
+{
+	# name: "[obsolete] Rural-specific vehicles area"
+
+	str_params[]: "Please replace with [access] Custom vehicles area"
+
+	additional_rules[]: traffic_rule.allow_custom
+}
+
+traffic_rule_data : traffic_rule.allow_custom
+{
+	name: "[access] Custom vehicles area"
 	rule: "actor_access"
 	num_params[]: 1 # 0 - disallow, 1 - allow
 	num_params[]: 0 # 0 - inclusive, 1 - exclusive
-	str_params[]: "city_centre"
+	str_params[]: "custom_all"
+}
 
-	additional_rules[]: traffic_rule.s_car_c_u
-	additional_rules[]: traffic_rule.s_truck_c_u
+traffic_rule_data : traffic_rule.tourist
+{
+	name: "[context][zone] Tourist zone (parks, small roads with viewpoints, ...)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "truck_all"
+	str_params[]: "fire"
+	str_params[]: "medical"
+
+	#additional_rules[]: traffic_rule.s_trl_t
+	additional_rules[]: traffic_rule.s_bus_h
+}
+
+traffic_rule_data : traffic_rule.resident
+{
+	name: "[context][zone] Residential zone (housing areas with small roads)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "truck_all"
+	str_params[]: "bus_all"
+	str_params[]: "fire"
+	str_params[]: "medical"
+}
+
+traffic_rule_data : traffic_rule.commerce_s
+{
+	name: "[context][zone] Commercial zone - small (car parks at shops, offices,...)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "truck_all"
+	str_params[]: "bus_all"
+	str_params[]: "fire"
+	str_params[]: "medical"
+	str_params[]: "police"
+}
+
+traffic_rule_data : traffic_rule.commerce_l
+{
+	name: "[context][zone] Commercial zone - large (city center, airport,...)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "truck_medium"
+	str_params[]: "truck_heavy"
+	str_params[]: "truck"
+	str_params[]: "truck_long"
 }
 
 traffic_rule_data : traffic_rule.ind_area
 {
-	name: "[spawn/access] Industrial area (commercial vehicles, no cars or buses)"
+	name: "[context][zone] Industrial zone (logistics)"
 
-	additional_rules[]: traffic_rule.no_cars
-	additional_rules[]: traffic_rule.no_buses
-	additional_rules[]: traffic_rule.s_trl_u
-	additional_rules[]: traffic_rule.s_trm_u
-	additional_rules[]: traffic_rule.s_truck_u
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "car_all"
+	str_params[]: "bus_all"
+	str_params[]: "truck_light"
+	str_params[]: "truck_long"
+	str_params[]: "fire"
+	str_params[]: "medical"
+
+	additional_rules[]: traffic_rule.s_truck_d
+}
+
+traffic_rule_data : traffic_rule.rest_area
+{
+	name: "[context] Rest area (parking only)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "car_trailer"
+	str_params[]: "bus_all"
+	str_params[]: "truck_light"
+	str_params[]: "truck_medium"
+	str_params[]: "truck_heavy"
+	str_params[]: "truck_long"
+	str_params[]: "fire"
+	str_params[]: "medical"
+	str_params[]: "police"
+
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.gas_area
+{
+	name: "[context] Gas station area"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "car_trailer"
+	str_params[]: "truck_light"
+	str_params[]: "truck_medium"
+	str_params[]: "truck_heavy"
+	str_params[]: "truck_long"
+	str_params[]: "fire"
+	str_params[]: "medical"
+	str_params[]: "police"
+
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.truck_stop
+{
+	name: "[context] Truck stop area"
+
+	additional_rules[]: traffic_rule.rest_area
+}
+
+traffic_rule_data : traffic_rule.weigh_area
+{
+	name: "[context] Weigh station area"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "car_all"
+	str_params[]: "bus_all"
+	str_params[]: "truck_light"
+	str_params[]: "truck_medium"
+	str_params[]: "truck_heavy"
+	str_params[]: "fire"
+	str_params[]: "medical"
+	str_params[]: "police"
+
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.tollgate
+{
+	name: "[context] Tollgate area"
+
+	additional_rules[]: traffic_rule.excl_nav
+}
+
+traffic_rule_data : traffic_rule.border_cross
+{
+	name: "[context] Border crossing area"
+
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.excl_nav
+
+	additional_rules[]: traffic_rule.s_car_b
+	additional_rules[]: traffic_rule.s_truck_b
+	additional_rules[]: traffic_rule.s_bus_b
+}
+
+traffic_rule_data : traffic_rule.border_cr_s
+{
+	name: "[context] Border crossing area (inside Schengen)"
+
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.excl_nav
+
+	additional_rules[]: traffic_rule.s_car_b
+	additional_rules[]: traffic_rule.s_truck_b
+	additional_rules[]: traffic_rule.s_bus_b
+}
+
+traffic_rule_data : traffic_rule.excl_nav
+{
+	rule: "property"
+	num_params[]: 8
+}
+
+traffic_rule_data : traffic_rule.weigh_event
+{
+	name: "[special] Weigh event area"
+
+	additional_rules[]: traffic_rule.s_truck_ws
+}
+
+traffic_rule_data : traffic_rule.w_truck_lane
+{
+	# allow access only for trucks eligible for weigh station visit
+	additional_rules[]: traffic_rule.trucks_only
+	additional_rules[]: traffic_rule.excl_nav
+}
+
+traffic_rule_data : traffic_rule.w_closed
+{
+	# closed weigh station - no vehicle access
+	rule: "actor_access"
+	num_params[]: 0 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "road"
+}
+
+traffic_rule_data : traffic_rule.company_area
+{
+	name: "[context] Company area (depot)"
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 2 # 0 - inclusive, 1 - exclusive, 2 - context-specific
+	str_params[]: "car_trailer"
+	str_params[]: "bus_all"
+	str_params[]: "truck_light"
+	str_params[]: "truck_medium"
+	str_params[]: "truck_long"
+	str_params[]: "fire"
+	str_params[]: "medical"
+	str_params[]: "police"
+
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+
+	additional_rules[]: traffic_rule.s_train_dp
+	additional_rules[]: traffic_rule.s_truck_c_d
+	additional_rules[]: traffic_rule.s_truck_d
+	additional_rules[]: traffic_rule.s_car_d
+}
+
+traffic_rule_data : traffic_rule.dealer
+{
+	name: "[context] Truck dealer area"
+
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.depot_area
+{
+	name: "[obsolete] Depot area"
+
+	str_params[]: "Please use rule '[context] Company area' instead over the *whole* company area - including entrance roads and the company prefab."
+	additional_rules[]: traffic_rule.company_area
 }
 
 traffic_rule_data : traffic_rule.urban_start
@@ -458,35 +787,35 @@ traffic_rule_data : traffic_rule.urban_end
 
 traffic_rule_data : traffic_rule.city_start
 {
-	name: "[sign] City start"
+	# name: "[sign] City start"
 	additional_rules[]: traffic_rule.urban_start
 	additional_rules[]: traffic_rule.limit_end
 }
 
 traffic_rule_data : traffic_rule.city_end
 {
-	name: "[sign] City end"
+	# name: "[sign] City end"
 	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_end
 }
 
 traffic_rule_data : traffic_rule.city_end_70
 {
-	name: "[sign] City end + limit 70"
+	# name: "[sign] City end + limit 70"
 	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_70
 }
 
 traffic_rule_data : traffic_rule.city_end_90
 {
-	name: "[sign] City end + limit 90"
+	# name: "[sign] City end + limit 90"
 	additional_rules[]: traffic_rule.urban_end
 	additional_rules[]: traffic_rule.limit_90
 }
 
 traffic_rule_data : traffic_rule.major_road_s
 {
-	name: "[sign] City start + priority road"
+	# name: "[sign] City start + priority road"
 
 	additional_rules[]: traffic_rule.city_start
 	additional_rules[]: traffic_rule.major_road
@@ -494,7 +823,7 @@ traffic_rule_data : traffic_rule.major_road_s
 
 traffic_rule_data : traffic_rule.major_road_e
 {
-	name: "[sign] City end + priority road"
+	# name: "[sign] City end + priority road"
 
 	additional_rules[]: traffic_rule.city_end
 	additional_rules[]: traffic_rule.major_road
@@ -502,7 +831,7 @@ traffic_rule_data : traffic_rule.major_road_e
 
 traffic_rule_data : traffic_rule.motorway_st2
 {
-	name: "[sign] Motorway start"
+	# name: "[sign] Motorway start"
 
 	rule: "lane"
 	str_params[]: "motorway"
@@ -511,7 +840,7 @@ traffic_rule_data : traffic_rule.motorway_st2
 
 traffic_rule_data : traffic_rule.motorway_st
 {
-	name: "[sign] Motorway start (cancel local limits)"
+	# name: "[sign] Motorway start (cancel local limits)"
 
 	rule: "lane"
 	str_params[]: "motorway"
@@ -522,7 +851,7 @@ traffic_rule_data : traffic_rule.motorway_st
 
 traffic_rule_data : traffic_rule.motorway_en2
 {
-	name: "[sign] Motorway end"
+	# name: "[sign] Motorway end"
 
 	rule: "lane"
 	str_params[]: "motorway"
@@ -531,7 +860,7 @@ traffic_rule_data : traffic_rule.motorway_en2
 
 traffic_rule_data : traffic_rule.motorway_end
 {
-	name: "[sign] Motorway end (cancel local limits)"
+	# name: "[sign] Motorway end (cancel local limits)"
 
 	rule: "lane"
 	str_params[]: "motorway"
@@ -542,7 +871,7 @@ traffic_rule_data : traffic_rule.motorway_end
 
 traffic_rule_data : traffic_rule.expressw_st
 {
-	name: "[sign] Expressway start"
+	# name: "[sign] Expressway start (cancel local limits)"
 
 	rule: "lane"
 	str_params[]: "expressway"
@@ -551,15 +880,33 @@ traffic_rule_data : traffic_rule.expressw_st
 	additional_rules[]: traffic_rule.limit_end
 }
 
+traffic_rule_data : traffic_rule.expressw_st2
+{
+	# name: "[sign] Expressway start"
+
+	rule: "lane"
+	str_params[]: "expressway"
+	str_params[]: "start"
+}
+
 traffic_rule_data : traffic_rule.expressw_end
 {
-	name: "[sign] Expressway end"
+	# name: "[sign] Expressway end (cancel local limits)"
 
 	rule: "lane"
 	str_params[]: "expressway"
 	str_params[]: "end"
 
 	additional_rules[]: traffic_rule.limit_end
+}
+
+traffic_rule_data : traffic_rule.expressw_en2
+{
+	# name: "[sign] Expressway end"
+
+	rule: "lane"
+	str_params[]: "expressway"
+	str_params[]: "end"
 }
 
 traffic_rule_data : traffic_rule.lane_join
@@ -650,17 +997,6 @@ traffic_rule_data : traffic_rule.low_pb_str
 	num_params[]: 23
 }
 
-traffic_rule_data : traffic_rule.allow_slow
-{
-	name: "[access] Allow slow vehicles"
-	rule: "actor_access"
-	num_params[]: 1 	# 0 - disallow, 1 - allow
-	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "custom_all"
-
-	additional_rules[]: traffic_rule.s_slow
-}
-
 traffic_rule_data : traffic_rule.road
 {
 	rule: "actor_access"
@@ -697,7 +1033,6 @@ traffic_rule_data : traffic_rule.train_cross
 
 traffic_rule_data : traffic_rule.rail_tram
 {
-	name: "[access] Allow trams only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
@@ -740,9 +1075,28 @@ traffic_rule_data : traffic_rule.private_road
 	additional_rules[]: traffic_rule.private_area
 }
 
+traffic_rule_data : traffic_rule.uneven_road
+{
+	rule: "property"
+	num_params[]: 24	# AI slow-down (without speed limit change)
+	additional_rules[]: traffic_rule.physics
+}
+
+traffic_rule_data : traffic_rule.speed_bump_s
+{
+	name: "[various] Speed bump (slowdown + wheel physics)"
+
+	rule: "stop"
+	num_params[]: 1.5	# block time after reaching 'stop speed'
+	num_params[]: 7.0	# block while speed is higher than this [m/s]
+	num_params[]: 1
+
+	additional_rules[]: traffic_rule.physics
+}
+
 traffic_rule_data : traffic_rule.speed_bump
 {
-	name: "[various] Speed bump (limit 20)"
+	name: "[various] Speed bump (speed limit 20 + wheel physics)"
 	rule: "speed_limit"
 	num_params[]: 20
 
@@ -751,7 +1105,7 @@ traffic_rule_data : traffic_rule.speed_bump
 
 traffic_rule_data : traffic_rule.speed_bump2
 {
-	name: "[various] Speed bump (no limit)"
+	name: "[various] Speed bump (wheel physics only)"
 
 	additional_rules[]: traffic_rule.physics
 }
@@ -773,44 +1127,50 @@ traffic_rule_data : traffic_rule.no_lane_chng
 
 traffic_rule_data : traffic_rule.es_fr_only
 {
-	name: "[access/escort] Front escort vehicles only"
+	name: "[access-escort] Front escort vehicles only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
 	str_params[]: "escort_front"
 
 	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.excl_nav
 }
 
 traffic_rule_data : traffic_rule.es_ba_only
 {
-	name: "[access/escort] Back escort vehicles only"
+	name: "[access-escort] Back escort vehicles only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
 	str_params[]: "escort_back"
 
 	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.excl_nav
 }
 
 traffic_rule_data : traffic_rule.escort_only
 {
-	name: "[access/escort] Escort vehicles only"
+	name: "[access-escort] Escort vehicles only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 0 	# no change to trailer access
 	str_params[]: "escort_all"
 
 	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.excl_nav
 }
 
 traffic_rule_data : traffic_rule.no_escort
 {
-	name: "[access/escort] No escort vehicles"
-	rule: "actor_access"
-	num_params[]: 0 	# 0 - disallow, 1 - allow
-	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
-	str_params[]: "escort_all"
+	# kept for backward compatibility
+	str_params[]: "No longer needed, please remove."
 }
 
 traffic_rule_data : traffic_rule.train_stop_v
@@ -861,8 +1221,6 @@ traffic_rule_data : traffic_rule.no_chng_out
 
 traffic_rule_data : traffic_rule.no_pl_limit
 {
-	name: "[various] Disable player speed limit"
-
 	# No player speed limit
 	rule: "property"
 	num_params[]: 30
@@ -871,7 +1229,22 @@ traffic_rule_data : traffic_rule.no_pl_limit
 traffic_rule_data : traffic_rule.toll_small
 {
 	# name: "[prefab] Toll gate for small vehicles (cars)"
-	additional_rules[]: traffic_rule.car_only
+
+	rule: "actor_access"
+	num_params[]: 0 # 0 - disallow, 1 - allow
+	num_params[]: 0 # 0 - inclusive, 1 - exclusive
+	str_params[]: "truck_all"
+	str_params[]: "bus_all"
+	str_params[]: "fire"
+	str_params[]: "medical"
+}
+
+traffic_rule_data : traffic_rule.border_truck
+{
+	# name: "[prefab] Border gate for trucks"
+
+	additional_rules[]: traffic_rule.trucks_only
+	additional_rules[]: traffic_rule.excl_nav
 }
 
 }

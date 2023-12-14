@@ -1,0 +1,98 @@
+################################ FRANKFURT ###################################
+traffic_vehicle : traffic.duwag_f_loco
+{
+	accessories[]: .duwag_f_loco.chassis
+	accessories[]: .duwag_f_loco.fwheel
+	accessories[]: .duwag_f_loco.rwheel
+
+	max_speed: 55
+
+	vehicle_mass: 27000
+	engine_power: 2500
+
+	trailer_chains[]: "tram_car.duwag_f_c1 | tram_car.duwag_f_c2 | tram_car.duwag_f_c3 | tram_car.duwag_f_c1 | tram_car.duwag_f_c2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+
+	
+
+	tags[]: tram
+
+	spawn_condition[]: .traffic.duwag_f_loco.condition.city
+
+}
+vehicle_accessory: .duwag_f_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_duwag/loco_frank.sii"
+}
+vehicle_wheel_accessory: .duwag_f_loco.fwheel
+{
+	
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .duwag_f_loco.rwheel
+{
+	
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.duwag_f_loco.condition.city
+{
+	#spawn only near city with specified name
+	type: city
+	str_param[]: "frankfurt"
+}
+
+################################ STUTTGART ###################################
+traffic_vehicle : traffic.duwag_s_loco
+{
+	accessories[]: .duwag_s_loco.chassis
+	accessories[]: .duwag_s_loco.fwheel
+	accessories[]: .duwag_s_loco.rwheel
+
+	max_speed: 55
+
+	vehicle_mass: 27000
+	engine_power: 2500
+
+	trailer_chains[]: "tram_car.duwag_st_c1 | tram_car.duwag_st_c2"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+
+
+	tags[]: tram
+
+	spawn_condition[]: .traffic.duwag_s_loco.condition.city
+
+}
+vehicle_accessory: .duwag_s_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_duwag/loco_stutt.sii"
+}
+vehicle_wheel_accessory: .duwag_s_loco.fwheel
+{
+	
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .duwag_s_loco.rwheel
+{
+	
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.duwag_s_loco.condition.city
+{
+	#spawn only near city with specified name
+	type: city
+	str_param[]: "stuttgart"
+}

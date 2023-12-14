@@ -11,8 +11,7 @@ traffic_vehicle : traffic.opalin
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 100
+
 
 	color[]: (0.2269, 0.0129, 0.0129) #red
 	color[]: (0.0103, 0.0171, 0.0835) # blue
@@ -27,7 +26,7 @@ traffic_vehicle : traffic.opalin
 	
 	variant[]: .traffic.opalin_p
 
-	allow_parked: false
+	tags[]: mini
 
 @include "drivers_generic.sui"
 }
@@ -59,11 +58,12 @@ traffic_vehicle : .traffic.opalin_p
 
 	vehicle_mass: 12000
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 100
 
 	color[]: (0.2269, 0.0129, 0.0129) #red
 	color[]: (0.0103, 0.0171, 0.0835) #blue
@@ -74,7 +74,7 @@ traffic_vehicle : .traffic.opalin_p
 	color[]: (0.8713, 0.8631, 0.8227) #white
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
-	allow_parked: false
+
 
 @include "drivers_generic.sui"
 }
@@ -106,11 +106,12 @@ traffic_vehicle : traffic.opalin_tr
 
 	vehicle_mass: 12000
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 100
 
 	prefer_variant: true
 	variant[]: .traffic.opalin_tr_ed
@@ -120,7 +121,7 @@ traffic_vehicle : traffic.opalin_tr
 
 	spawn_ratio: 0.0
 
-	allow_parked: false
+
 
 @include "drivers_generic.sui"
 }
@@ -152,15 +153,15 @@ traffic_vehicle : .traffic.opalin_tr_ed
 
 	vehicle_mass: 12000
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 100
 
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
-	allow_parked: false
 
 	spawn_condition[]: .traffic.opalin_tr_ed.edirne.condition.city
 
@@ -200,15 +201,15 @@ traffic_vehicle : .traffic.opalin_tr_td
 
 	vehicle_mass: 12000
 
+	tags[]: mini
+	tags[]: passenger
+
 	sound_move[]: "/sound/traffic/bus_1.soundref"
 	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
 
-	lod_dist[]: 50
-	lod_dist[]: 100
 
 	color[]: (0.9535, 0.7785, 0.0000) #yellow
 
-	allow_parked: false
 
 	spawn_condition[]: .traffic.opalin_tr_td.tekirdag.condition.city
 

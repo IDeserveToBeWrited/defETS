@@ -1,0 +1,55 @@
+accessory_hookup_int_data : cup_tirsan.addon_hookup
+{
+	name: "@@tirsan_coffee_mug@@"
+	price: 180
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/cup_default"	
+	part_type: licensed
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/cup.dlc_tirsan.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+
+accessory_hookup_int_data : tirsan_scs.addon_hookup
+{
+	name: "@@tirsan_scs_multiride@@"
+	price: 350
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/tirsan_scs"
+	part_type: licensed
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/tirsan_scs.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+
+accessory_hookup_int_data : tirsan_flag.addon_hookup
+{
+	name: "@@tirsan_flag@@"
+	price: 200
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/tirsan_flag"
+	part_type: licensed
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/tirsan_flag.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toystand/tirsan_flag.pmc"
+	suitable_for[]: "set_dashbrd"
+
+	data[]: .tirsan_flag.phys_data
+	
+}
+physics_toy_data : .tirsan_flag.phys_data
+{
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/tirsan_flag_p.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/tirsan_flag_p.pmc"
+
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.2			# toy mass
+	locator_hook_offset:	(0.00, 0.01, 0.00)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness:	(900.0, 900.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping:	(2.0, 2.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude:	(5.0, 5.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}

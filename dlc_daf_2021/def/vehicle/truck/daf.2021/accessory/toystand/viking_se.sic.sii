@@ -1,0 +1,32 @@
+SiiNunit
+{
+accessory_addon_int_data : bhead_viking.daf.2021.toystand
+{
+	name: "Viking Warrior"
+	price: 105
+	unlock: 0
+	icon: "bhead_viking"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/viking_base.pmd"
+
+	data[]: .bhead_viking.phys_data
+
+	steam_inventory_id: 27
+}
+
+physics_toy_data : .bhead_viking.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/viking_body.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/viking_body.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.0, 0.07, 0.0)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (10.0, 10.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (15.0, 15.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

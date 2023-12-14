@@ -1,0 +1,150 @@
+############### Default ########################
+
+traffic_vehicle : traffic.x124
+{
+	accessories[]: .x124.chassis
+	accessories[]: .x124.fwheel
+	accessories[]: .x124.rwheel
+	
+	variant[]: traffic.x124.spoiler
+	variant[]: traffic.x124.sport
+
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+	
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0883, 0.0622, 0.0454) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.1596, 0.0093, 0.0197) #red
+
+	tags[]: cheap
+	
+
+	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .x124.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_x124_85/chassis.sii"
+}
+
+vehicle_wheel_accessory: .x124.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .x124.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+
+
+
+############### Spoiler ########################
+
+traffic_vehicle : traffic.x124.spoiler
+{
+	accessories[]: .x124.spoiler.chassis
+	accessories[]: .x124.spoiler.fwheel
+	accessories[]: .x124.spoiler.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+	
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0883, 0.0622, 0.0454) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.1596, 0.0093, 0.0197) #red
+	
+	tags[]: cheap
+
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .x124.spoiler.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_x124_85/chassis_spoiler.sii"
+}
+
+vehicle_wheel_accessory: .x124.spoiler.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .x124.spoiler.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+
+
+############### Sport ########################
+
+traffic_vehicle : traffic.x124.sport
+{
+	accessories[]: .x124.sport.chassis
+	accessories[]: .x124.sport.fwheel
+	accessories[]: .x124.sport.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0883, 0.0622, 0.0454) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.1596, 0.0093, 0.0197) #red
+	
+	tags[]: cheap
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .x124.sport.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_x124_85/chassis_sport.sii"
+}
+
+vehicle_wheel_accessory: .x124.sport.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .x124.sport.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+

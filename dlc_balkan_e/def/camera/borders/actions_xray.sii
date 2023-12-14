@@ -14,14 +14,29 @@ cutscene_action : .action.sound
 	str_params[]: "/sound/music/cutscene_border_xray.soundref"
 }
 
-cutscene_action : .action.xray.move
+cutscene_action : .action.xray.move1
 {
-	cutscene_time: 1
+	cutscene_time: 0.5
 
 	command: "mover"
 
-	str_params[]: "speed"
-	num_params[]: 3.6
+	str_params[]: "move"
+	num_params[]: -1
+	num_params[]: 6
+
+	target_range: 50
+	target_tags[]: xray
+}
+
+cutscene_action : .action.xray.move2
+{
+	cutscene_time: 7.5
+
+	command: "mover"
+
+	str_params[]: "move"
+	num_params[]: 0
+	num_params[]: 6
 
 	target_range: 50
 	target_tags[]: xray
@@ -39,7 +54,7 @@ cutscene_action : .action.xray.sound
 
 cutscene_action : .action.xray.msg
 {
-	cutscene_time: 12
+	cutscene_time: 8
 
 	command: "hud_message"
 

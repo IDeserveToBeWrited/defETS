@@ -240,7 +240,7 @@ tr_semaphore_model : tr_sem_mdl.city
 tr_semaphore_model : tr_sem_mdl.city.austria
 {
 
-	name: "city-a"
+	name: "city-au"
 
 	model_desc: "/model/traffic_light/city_au.pmd"
 	model_coll: "/model/traffic_light/city_au.pmc"
@@ -252,6 +252,58 @@ tr_semaphore_model : tr_sem_mdl.city.austria
 	state_transition[3]: 4.0 # green
 
 }
+
+tr_semaphore_model : tr_sem_mdl.city_str.austria
+{
+
+	name: "city-straight_au"
+
+	model_desc: "/model/traffic_light/city_str_au.pmd"
+	model_coll: "/model/traffic_light/city_str_au.pmc"
+
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+
+}
+
+tr_semaphore_model : tr_sem_mdl.city_l.austria
+{
+
+	name: "city-left_au"
+
+	model_desc: "/model/traffic_light/city_left_au.pmd"
+	model_coll: "/model/traffic_light/city_left_au.pmc"
+
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+
+}
+tr_semaphore_model : tr_sem_mdl.city_str.switzerland
+{
+
+	name: "city-straight_ch"
+
+	model_desc: "/model/traffic_light/city_str_ch.pmd"
+	model_coll: "/model/traffic_light/city_str_ch.pmc"
+
+}
+
+tr_semaphore_model : tr_sem_mdl.city_l.switzerland
+{
+
+	name: "city-left_ch"
+
+	model_desc: "/model/traffic_light/city_left_ch.pmd"
+	model_coll: "/model/traffic_light/city_left_ch.pmc"
+
+}
+
 tr_semaphore_model : tr_sem_mdl.city.czech
 {
 
@@ -268,6 +320,26 @@ tr_semaphore_model : tr_sem_mdl.city.germany
 
 	model_desc: "/model/traffic_light/city_de.pmd"
 	model_coll: "/model/traffic_light/city_de.pmc"
+
+}
+
+tr_semaphore_model : tr_sem_mdl.city_str.germany
+{
+
+	name: "city-str-d"
+
+	model_desc: "/model/traffic_light/city_str_de.pmd"
+	model_coll: "/model/traffic_light/city_str_de.pmc"
+
+}
+
+tr_semaphore_model : tr_sem_mdl.city_l.germany
+{
+
+	name: "city-left-d"
+
+	model_desc: "/model/traffic_light/city_left_de.pmd"
+	model_coll: "/model/traffic_light/city_left_de.pmc"
 
 }
 tr_semaphore_model : tr_sem_mdl.city.italy
@@ -357,24 +429,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r
 	model_coll: "/prefab/level_crossing/level_right_anim_cz.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/cz_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/cz_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -388,24 +455,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l
 	model_coll: "/prefab/level_crossing/level_left_anim_cz.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/cz_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/cz_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -420,24 +482,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.czech
 	model_coll: "/prefab/level_crossing/level_right_anim_cz.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/cz_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/cz_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -451,24 +508,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.czech
 	model_coll: "/prefab/level_crossing/level_left_anim_cz.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/cz_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/cz_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -482,24 +534,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.belgium
 	model_coll: "/prefab/level_crossing/level_right_anim_be.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/be_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/be_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -513,24 +560,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.belgium
 	model_coll: "/prefab/level_crossing/level_left_anim_be.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/be_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/be_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -544,24 +586,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.germany
 	model_coll: "/prefab/level_crossing/level_right_anim_de.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/de_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/de_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -575,24 +612,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.germany
 	model_coll: "/prefab/level_crossing/level_left_anim_de.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/de_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/de_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -606,24 +638,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.france
 	model_coll: "/prefab/level_crossing/level_right_anim_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/fr_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/fr_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -637,24 +664,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r2.france
 	model_coll: "/prefab/level_crossing/level_right_anim_rotated_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/fr_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/fr_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -668,24 +690,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.france
 	model_coll: "/prefab/level_crossing/level_left_anim_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/fr_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/fr_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -699,24 +716,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.poland
 	model_coll: "/prefab/level_crossing/level_right_anim_pl.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/pl_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/pl_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -730,24 +742,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.poland
 	model_coll: "/prefab/level_crossing/level_left_anim_pl.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/pl_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/pl_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -761,24 +768,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.uk
 	model_coll: "/prefab/level_crossing/level_right_anim_uk.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/uk_right_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/uk_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -792,24 +794,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.uk
 	model_coll: "/prefab/level_crossing/level_left_anim_uk.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab/level_crossing/uk_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/level_crossing/uk_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -823,24 +820,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll
 	model_coll: "/prefab/tollgate/large_it_fr_tollgate/tolgate_small_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/prefab/tollgate/large_it_fr_tollgate/t_small_dwn.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/tollgate/large_it_fr_tollgate/t_smal_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.ab_toll.france
@@ -852,24 +844,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.france
 	model_coll: "/model2/barrier/animated/toll_gate_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_smal_dw_fr.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_fr.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.ab_toll.poland
@@ -881,24 +868,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.poland
 	model_coll: "/prefab/tollgate/tollgate_a2_poland/tollgate_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/prefab/tollgate/tollgate_a2_poland/toll_down.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab/tollgate/tollgate_a2_poland/toll_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.temporary
@@ -992,24 +974,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.norway
 	model_coll: "/model2/barrier/animated/toll_gate_sc.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_small_dwn_sc.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_sc.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.ab_toll.sweden
@@ -1021,24 +998,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.sweden
 	model_coll: "/model2/barrier/animated/toll_gate_sc.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_small_dwn_sc.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_sc.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.ab_toll.denmark
@@ -1050,24 +1022,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.denmark
 	model_coll: "/model2/barrier/animated/toll_gate_sc.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_small_dwn_sc.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_sc.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.temporary.france
@@ -1089,24 +1056,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.italy
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_it.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_it.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_it.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -1120,24 +1082,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_l.italy
 	model_coll: "/prefab2/level_crossing/level_left_anim_01_it.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/l_dwn_it.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/l_up_it.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -1151,24 +1108,19 @@ tr_semaphore_model : tr_sem_mdl.ab_toll.italy
 	model_coll: "/prefab2/tollgate/tolgate_small_anim_it_01.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/prefab2/tollgate/t_small_dwn.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/tollgate/t_smal_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.bridge_l.italy
@@ -1179,24 +1131,19 @@ tr_semaphore_model : tr_sem_mdl.bridge_l.italy
 	model_desc: "/prefab2/landmark/livorno_bridge_anim_01_it.pmd"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/landmark/br_up_it.pma"
-	state_collision[1]: false
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/landmark/br_down_it.pma"
-	state_collision[2]: false
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 
 	draw_distance: 500
 }
@@ -1209,24 +1156,19 @@ tr_semaphore_model : tr_sem_mdl.bridge2_l.italy
 	model_desc: "/prefab2/landmark/livorno_bridge_anim_02_it.pmd"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/landmark/br2_up_it.pma"
-	state_collision[1]: false
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/landmark/br2_down_it.pma"
-	state_collision[2]: false
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 
 	draw_distance: 500
 }
@@ -1240,24 +1182,19 @@ tr_semaphore_model : tr_sem_mdl.ship_cr_l.italy
 	model_coll: "/prefab2/landmark/level_left_livorno_anim_it.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/landmark/liv_left_dwn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/landmark/liv_left_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.ship_cr_r.italy
@@ -1269,24 +1206,19 @@ tr_semaphore_model : tr_sem_mdl.ship_cr_r.italy
 	model_coll: "/prefab2/landmark/level_right_livorno_anim_it.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/landmark/liv_right_dn.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/landmark/liv_right_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 
 }
 
@@ -1299,24 +1231,19 @@ tr_semaphore_model : tr_sem_mdl.border
 	model_coll: "/model2/barrier/animated/toll_gate_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_smal_dw_fr.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_fr.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.border_l
@@ -1328,24 +1255,19 @@ tr_semaphore_model : tr_sem_mdl.border_l
 	model_coll: "/model2/barrier/animated/toll_gate_long_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_smal_dw_fr.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_smal_up_fr.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.border_m
@@ -1357,24 +1279,19 @@ tr_semaphore_model : tr_sem_mdl.border_m
 	model_coll: "/model2/barrier/animated/toll_gate_mirrored_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_s_m_dw_fr.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_s_m_up_fr.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 
 tr_semaphore_model : tr_sem_mdl.border_ml
@@ -1386,24 +1303,19 @@ tr_semaphore_model : tr_sem_mdl.border_ml
 	model_coll: "/model2/barrier/animated/toll_gate_long_mirrored_fr.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/barrier/animated/t_s_m_dw_fr.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/barrier/animated/t_s_m_up_fr.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-}
+	}
 
 ## DLC_BALT
 tr_semaphore_model : tr_sem_mdl.single.latvia
@@ -2401,24 +2313,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.estonia
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_est.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_est.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_est.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -2432,24 +2339,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.finland
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_fi.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_fi.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_fi.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -2463,24 +2365,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r2.finland
 	model_coll: "/prefab2/level_crossing/level_right_anim_02_fi.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_fi.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_fi.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -2494,24 +2391,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.latvia
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_lv.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_lv.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_lv.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -2525,24 +2417,19 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.lithuania
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_lt.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_lt.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_lt.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
@@ -2556,26 +2443,53 @@ tr_semaphore_model : tr_sem_mdl.crossing_r.russia
 	model_coll: "/prefab2/level_crossing/level_right_anim_01_ru.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/prefab2/level_crossing/r_dwn_ru.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/prefab2/level_crossing/r_up_ru.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 	#sound
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+}
+
+tr_semaphore_model : tr_sem_mdl.crossing_r_s.russia
+{
+
+	name: "level_right_simple_ru"
+
+	model_desc: "/prefab2/level_crossing/level_right_simple_01_ru.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_simple_01_ru.pmc"
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+}
+
+tr_semaphore_model : tr_sem_mdl.sa.switzerland
+{
+
+	name: "standalone"
+
+	model_desc: "/model/traffic_light/standalone_ch.pmd"
+	model_coll: "/model/traffic_light/standalone_ch.pmc"
+
+}
+
+tr_semaphore_model : tr_sem_mdl.sa_horiz.switzerland
+{
+
+	name: "standalone horizontal"
+
+	model_desc: "/model/traffic_light/standalone_horizontal_ch.pmd"
+	model_coll: "/model/traffic_light/standalone_horizontal_ch.pmc"
+
 }
 
 tr_semaphore_model : tr_sem_mdl.bd_gen
@@ -2587,24 +2501,19 @@ tr_semaphore_model : tr_sem_mdl.bd_gen
 	model_coll: "/model2/gates/border_gate_gen_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/gates/border_gate_gen_dwn.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/gates/border_gate_gen_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 tr_semaphore_model : tr_sem_mdl.bd_gen_car
 {
@@ -2615,24 +2524,19 @@ tr_semaphore_model : tr_sem_mdl.bd_gen_car
 	model_coll: "/model2/gates/border_gate_gen_car_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: "/model2/gates/border_gate_gen_car_dwn.pma"
-	state_collision[0]: true
-
+	
 	# red
 	state_anim[1]: ""
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/gates/border_gate_gen_car_up.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-
+	
 }
 tr_semaphore_model : tr_sem_mdl.border_lgt
 {
@@ -2661,24 +2565,19 @@ tr_semaphore_model : tr_sem_mdl.ba_toll
 	model_coll: "/model2/props/street/animated/toll_semaphore_ba_ibe_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/model2/props/street/animated/t_small_dwn_ba.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/props/street/animated/t_smal_up_ba.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-}
+	}
 
 tr_semaphore_model : tr_sem_mdl.es_toll
 {
@@ -2689,24 +2588,19 @@ tr_semaphore_model : tr_sem_mdl.es_toll
 	model_coll: "/model2/props/street/animated/toll_semaphore_es_ibe_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/model2/props/street/animated/t_small_dwn_es.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/props/street/animated/t_smal_up_es.pma"
-	state_collision[2]: true
-
+	
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
-}
+	}
 
 tr_semaphore_model : tr_sem_mdl.pt_toll
 {
@@ -2717,23 +2611,249 @@ tr_semaphore_model : tr_sem_mdl.pt_toll
 	model_coll: "/model2/props/street/animated/toll_semaphore_pt_ibe_anim.pmc"
 
 	state_anim: 4
-	state_collision: 4
-
+	
 	# orange_to_red
 	state_anim[0]: ""
-	state_collision[0]: false
-
+	
 	# red
 	state_anim[1]: "/model2/props/street/animated/t_small_dwn_pt.pma"
-	state_collision[1]: true
-
+	
 	# orange_to_green
 	state_anim[2]: "/model2/props/street/animated/t_smal_up_pt.pma"
-	state_collision[2]: true
+	
+	# green
+	state_anim[3]: ""
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.collumn
+{
+	name: "collumn_au"
+
+	model_desc: "/model/traffic_light/collumn_au.pmd"
+	model_coll: "/model/traffic_light/collumn_au.pmc"
+	
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.collumn.austria
+{
+	name: "collumn_au"
+
+	model_desc: "/model/traffic_light/collumn_au.pmd"
+	model_coll: "/model/traffic_light/collumn_au.pmc"
+	
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.hang
+{
+	name: "hanging_au"
+
+	model_desc: "/model/traffic_light/hanging_au.pmd"
+	model_coll: "/model/traffic_light/hanging_au.pmc"
+	
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.hang.austria
+{
+	name: "hanging_au"
+
+	model_desc: "/model/traffic_light/hanging_au.pmd"
+	model_coll: "/model/traffic_light/hanging_au.pmc"
+	
+	state_transition: 4
+	state_transition[0]: 0.0 # orange_to_red
+	state_transition[1]: 0.0 # red
+	state_transition[2]: 0.0 # orange_to_green
+	state_transition[3]: 4.0 # green
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.bd_gen_m
+{
+
+	name: "border barrier generic truck mirror"
+
+	model_desc: "/model2/gates/border_gate_gen_anim_mirror.pmd"
+	model_coll: "/model2/gates/border_gate_gen_anim_mirror.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/gates/border_gate_gen_mirror_dwn.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/gates/border_gate_gen_mirror_up.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.at_toll
+{
+
+	name: "at_toll"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_a_at_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_a_at_anim.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/props/street/animated/toll_semaphore_a_at_anim_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/toll_semaphore_a_at_anim_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	}
+	
+tr_semaphore_model : tr_sem_mdl.at_toll_b
+{
+
+	name: "at_toll_b"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_b_at_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_b_at_anim.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/props/street/animated/toll_semaphore_b_at_anim_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/toll_semaphore_b_at_anim_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	}
+
+tr_semaphore_model : tr_sem_mdl.rus_toll_b
+{
+
+	name: "rus_toll_b"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_b_rus_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_b_rus_anim.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/props/street/animated/toll_semaphore_b_rus_anim_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/toll_semaphore_b_rus_anim_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	}
+
+tr_semaphore_model : tr_sem_mdl.bd_gen_car_m
+{
+
+	name: "border barrier generic car mirrored"
+
+	model_desc: "/model2/gates/border_gate_gen_car_anim_mirror.pmd"
+	model_coll: "/model2/gates/border_gate_gen_car_anim_mirror.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/gates/border_gate_gen_car_dwn_mirror.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/gates/border_gate_gen_car_up_mirror.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.rus_toll_c
+{
+
+	name: "rus_toll_c"
+
+	model_desc: "/model2/props/street/animated/toll_semaphore_oversize_1_rus_anim.pmd"
+	model_coll: "/model2/props/street/animated/toll_semaphore_oversize_1_rus_anim.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/model2/props/street/animated/toll_semaphore_oversize_1_rus_anim_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/model2/props/street/animated/toll_semaphore_oversize_1_rus_anim_open.pma"
+	
+	# green
+	state_anim[3]: ""
+}
+
+semaphore_model : tr_sem_mdl.kp_gate_01
+{
+	# one animation, collision animated
+
+	name: "kp_gate_01"
+
+	model_desc: "/model2/gates/metal_storage_door.pmd"
+	model_coll: "/model2/gates/metal_storage_door.pmc"
+
+	state_anim: 4
+
+	# orange_to_red
+	state_anim[0]: "/model2/gates/metal_storage_door_open.pma"
+
+	# red
+	state_anim[1]: ""
+
+	# orange_to_green
+	state_anim[2]: "/model2/gates/metal_storage_door_open.pma"
 
 	# green
 	state_anim[3]: ""
-	state_collision[3]: false
 
+	#sound
+	sounds[]: "OY|/sound/world/sounds/machines.bank#artificial/machines/factory_door_complete"
+
+	# The garage door disappearing is very visible from afar, so a larger distance than the default 300 m is needed
+	draw_distance: 1500
 }
+
 }

@@ -11,14 +11,16 @@ traffic_vehicle : traffic.bmw5
 	sound_move[]: "/sound/traffic/car_default_2.soundref"
 	sound_move[]: "/sound/traffic/car_normal_3.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
 
 	color[]: (0.0343, 0.0343, 0.0343) #black
 	color[]: (0.0615, 0.0417, 0.0272) #brown
 	color[]: (0, 0.0263, 0.1347) #blue
 	color[]: (0.5394, 0.5711, 0.5906) #silver
 	color[]: (0.7713, 0.7631, 0.7227) #white
+
+	tags[]: expensive
+	tags[]: common
+
 
 @include "drivers_generic.sui"	
 }
@@ -55,19 +57,21 @@ traffic_vehicle : traffic.bmw5.hook
 	sound_move[]: "/sound/traffic/car_default_2.soundref"
 	sound_move[]: "/sound/traffic/car_normal_3.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
 	
 	trailer_chains[]: "trailer.ai_car.ontour"
 	allow_parked: false
 	
-	spawn_ratio: 0.1
+	spawn_ratio: 0.01
 	
 	color[]: (0.0343, 0.0343, 0.0343) #black
 	color[]: (0.0615, 0.0417, 0.0272) #brown
 	color[]: (0, 0.0263, 0.1347) #blue
 	color[]: (0.5394, 0.5711, 0.5906) #silver
 	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	tags[]: expensive
+	tags[]: common
+
 
 @include "drivers_generic.sui"	
 }

@@ -14,10 +14,7 @@ traffic_vehicle : traffic.t815.fr
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -62,10 +59,7 @@ traffic_vehicle : traffic.t815.it
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -110,10 +104,7 @@ traffic_vehicle : traffic.t815.cz
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -158,10 +149,7 @@ traffic_vehicle : traffic.t815.sk
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -206,10 +194,7 @@ traffic_vehicle : traffic.t815.de
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -254,10 +239,7 @@ traffic_vehicle : traffic.t815.es
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -302,10 +284,7 @@ traffic_vehicle : traffic.t815.pt
 	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 
-	lod_dist[]: 70
-	# add lod in between
-	lod_dist[]: 130
-	lod_dist[]: 200
+
 
 	spawn_ratio: 0
 
@@ -333,3 +312,211 @@ vehicle_wheel_accessory: .t815.pt.rwheel2
 	offset: 2
 	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
 }
+
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx yaroslavl xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+traffic_vehicle : traffic.t815.fire_ru_yar
+{
+	accessories[]: .t815.fire_ru_yar.chassis
+	accessories[]: .t815.fire_ru_yar.fwheel
+	accessories[]: .t815.fire_ru_yar.rwheel
+	accessories[]: .t815.fire_ru_yar.rwheel2
+
+
+	max_speed: 100
+
+	vehicle_mass: 25000
+	engine_power: 280
+
+	tags[]: pol_city
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+
+	base: traffic.dagger.ru
+
+
+
+	spawn_condition[]: .traffic.t815.fire_ru_yar.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .t815.fire_ru_yar.chassis
+{
+	data_path: "/def/vehicle/ai/t815_7/ru_yar.sii"
+}
+
+vehicle_wheel_accessory: .t815.fire_ru_yar.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_f.sii"
+}
+
+vehicle_wheel_accessory: .t815.fire_ru_yar.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+vehicle_wheel_accessory: .t815.fire_ru_yar.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+
+traffic_spawn_condition: .traffic.t815.fire_ru_yar.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+	str_param[]: "yaroslavl"
+}
+
+
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx n_novgorod xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+traffic_vehicle : traffic.t815.fire_ru_nn
+{
+	accessories[]: .t815.fire_ru_nn.chassis
+	accessories[]: .t815.fire_ru_nn.fwheel
+	accessories[]: .t815.fire_ru_nn.rwheel
+	accessories[]: .t815.fire_ru_nn.rwheel2
+
+
+	max_speed: 100
+
+	vehicle_mass: 25000
+	engine_power: 280
+
+	tags[]: pol_city
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+
+	base: traffic.dagger.ru
+
+
+
+	spawn_condition[]: .traffic.t815.fire_ru_nn.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .t815.fire_ru_nn.chassis
+{
+	data_path: "/def/vehicle/ai/t815_7/ru_nn.sii"
+}
+
+vehicle_wheel_accessory: .t815.fire_ru_nn.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_f.sii"
+}
+
+vehicle_wheel_accessory: .t815.fire_ru_nn.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+vehicle_wheel_accessory: .t815.fire_ru_nn.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+
+traffic_spawn_condition: .traffic.t815.fire_ru_nn.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+	str_param[]: "n_novgorod"
+}
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Turkiye  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+traffic_vehicle : traffic.t815.tr
+{
+	accessories[]: .t815.tr.chassis
+	accessories[]: .t815.tr.fwheel
+	accessories[]: .t815.tr.rwheel
+	accessories[]: .t815.tr.rwheel2
+
+	max_speed: 100
+
+	vehicle_mass: 25000
+	engine_power: 280
+
+	license_plate_type: official
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .t815.tr.chassis
+{
+	data_path: "/def/vehicle/ai/t815_7/tr.sii"
+}
+
+vehicle_wheel_accessory: .t815.tr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_f.sii"
+}
+
+vehicle_wheel_accessory: .t815.tr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+vehicle_wheel_accessory: .t815.tr.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Bosna and Herzegovina  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+traffic_vehicle : traffic.t815.ba
+{
+	accessories[]: .t815.ba.chassis
+	accessories[]: .t815.ba.fwheel
+	accessories[]: .t815.ba.rwheel
+	accessories[]: .t815.ba.rwheel2
+
+	max_speed: 100
+
+	vehicle_mass: 25000
+	engine_power: 280
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+
+
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .t815.ba.chassis
+{
+	data_path: "/def/vehicle/ai/t815_7/ba.sii"
+}
+
+vehicle_wheel_accessory: .t815.ba.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_f.sii"
+}
+
+vehicle_wheel_accessory: .t815.ba.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+vehicle_wheel_accessory: .t815.ba.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/t815_r.sii"
+}
+
+

@@ -1,0 +1,32 @@
+SiiNunit
+{
+accessory_addon_int_data : x21_horse.daf.xd.toystand
+{
+	steam_inventory_id: 97
+	name: "@@beech_rocking_horse@@"
+	price: 250
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse_sh.pmd"
+	exterior_model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse_sh.pmd"
+
+	data[]: .x21_horse_sh.phys_data
+}
+
+physics_toy_data : .x21_horse_sh.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/xmas_2021/x21_horse.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.0, 0.0, 0.0)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (0.0, 20.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

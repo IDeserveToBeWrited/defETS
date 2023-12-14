@@ -1,0 +1,44 @@
+SiiNunit
+{
+accessory_interior_data: exc_22_h_uk.renault.t.interior
+{
+	name: "@@exclusive_uk@@ Evolution II"
+	price: 29040
+	unlock: 12
+	icon: "interior/renault_t/exclusive_21_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/renault_t/interior/uk/model_uk.pmd"
+	collision: "/vehicle/truck/renault_t/interior/uk/model_uk.pmc"
+	animated_model: "/vehicle/truck/renault_t/interior/uk/anim_uk.pmd"
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: exclusive_21
+	variant: exc_22_high
+
+@include "dashboard_color.sui"
+@include "animations_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "seat.sui"
+
+	dashboard_path: "/ui/dashboard/renault_t.sii"
+	gps_path: "/ui/gps.sii"
+	left_hand_traffic: true
+
+	glass_panes[]: .renault.t.pane.f_glasspane
+	glass_panes[]: .renault.t.pane.l_glasspane
+	glass_panes[]: .renault.t.pane.r_glasspane
+
+	ext_model: "/vehicle/truck/renault_t/interior/external/stock_uk.pmd"
+	ext_variant: exc_high_22
+	ext_look: exclusive_22
+
+	defaults[]: "/def/vehicle/truck/renault.t/accessory/steering_w/exclusive.sii"
+
+	suitable_for[]: "high_sleeper.renault.t.cabin"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

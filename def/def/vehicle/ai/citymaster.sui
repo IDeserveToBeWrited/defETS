@@ -1,0 +1,302 @@
+############### Passenger ########################
+
+traffic_vehicle : traffic.citymaster
+{
+	accessories[]: .citymaster.chassis
+	accessories[]: .citymaster.fwheel
+	accessories[]: .citymaster.rwheel
+
+	variant[]: traffic.citymaster.dirt
+	variant[]: traffic.citymaster.damage
+
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	tags[]: city
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.skopje.city
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis_pass.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.citymaster.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}
+
+
+############### Passenger Damaged ########################
+
+traffic_vehicle : traffic.citymaster.damage
+{
+	accessories[]: .citymaster.damage.chassis
+	accessories[]: .citymaster.damage.fwheel
+	accessories[]: .citymaster.damage.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.damage.skopje.city
+
+	tags[]: city
+	tags[]: passenger
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.damage.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis_pass_damage.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.damage.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.damage.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+
+traffic_spawn_condition: .traffic.citymaster.damage.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}
+
+
+############### Passenger Dirty ########################
+
+traffic_vehicle : traffic.citymaster.dirt
+{
+	accessories[]: .citymaster.dirt.chassis
+	accessories[]: .citymaster.dirt.fwheel
+	accessories[]: .citymaster.dirt.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.dirt.skopje.city
+
+	tags[]: city
+	tags[]: passenger
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.dirt.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis_pass_dirt.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.dirt.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.dirt.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.citymaster.dirt.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}
+
+
+############### Default ########################
+
+traffic_vehicle : traffic.citymaster.parked
+{
+	accessories[]: .citymaster.parked.chassis
+	accessories[]: .citymaster.parked.fwheel
+	accessories[]: .citymaster.parked.rwheel
+
+	variant[]: traffic.citymaster.p_dirt
+	variant[]: traffic.citymaster.p_damage
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.parked.skopje.city
+
+	tags[]: city
+	tags[]: parked
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.parked.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.parked.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.parked.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.citymaster.parked.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}
+
+
+
+############### Damaged ########################
+
+traffic_vehicle : traffic.citymaster.p_damage
+{
+	accessories[]: .citymaster.p_damage.chassis
+	accessories[]: .citymaster.p_damage.fwheel
+	accessories[]: .citymaster.p_damage.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.p_damage.skopje.city
+
+	tags[]: city
+	tags[]: parked
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.p_damage.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis_damage.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.p_damage.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.p_damage.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.citymaster.p_damage.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}
+
+
+
+############### Dirty ########################
+
+traffic_vehicle : traffic.citymaster.p_dirt
+{
+	accessories[]: .citymaster.p_dirt.chassis
+	accessories[]: .citymaster.p_dirt.fwheel
+	accessories[]: .citymaster.p_dirt.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	spawn_condition[]: .traffic.citymaster.p_dirt.skopje.city
+
+	tags[]: city
+	tags[]: parked
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .citymaster.p_dirt.chassis
+{
+	data_path: "/def/vehicle/ai/citymaster/chassis_dirt.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.p_dirt.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .citymaster.p_dirt.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+traffic_spawn_condition: .traffic.citymaster.p_dirt.skopje.city
+{
+	# spawn only near given city
+	type: city
+	str_param[]: "skopje"
+}

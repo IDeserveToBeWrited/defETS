@@ -1,0 +1,46 @@
+# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx n_novgorod xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+traffic_vehicle : traffic.granta.ru_nn
+{
+	accessories[]: .granta.ru_nn.chassis
+	accessories[]: .granta.ru_nn.fwheel
+	accessories[]: .granta.ru_nn.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1300
+
+	tags[]: pol_city
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	base: traffic.focus_2009.pol_ru
+
+
+
+	spawn_condition[]: .traffic.granta.ru_nn.condition.city
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .granta.ru_nn.chassis
+{
+	data_path: "/def/vehicle/ai/granta/ru_nn.sii"
+}
+
+vehicle_wheel_accessory: .granta.ru_nn.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_16in_3.sii"
+}
+
+vehicle_wheel_accessory: .granta.ru_nn.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_16in_3.sii"
+}
+traffic_spawn_condition: .traffic.granta.ru_nn.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+	str_param[]: "n_novgorod"
+}

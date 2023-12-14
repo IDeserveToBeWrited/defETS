@@ -26,85 +26,79 @@ SiiNunit
 #                  |/
 # ATS, ETS common
 
+##########################################
+# HUMANS / WOMAN/MAN / GASSTATION SELLER #
+##########################################
 
-### CUSTOMS OFFICER ###
-### walk ###########################################################################
-mover_model_group : mover.cusoff_wl
+ mover_model_group : mover.gass_wo
+ {
+ 	mover_name: "gasstation seller woman"
+ 	desc_tags[]: wseller
+ 	anim_tags[]: wseller
+	anim_tags[]: stand
+ 	anim_tags[]: idle
+ 	pedestrian: false
+ }
+
+ mover_model_group : mover.gass_man
+ {
+ 	mover_name: "gasstation seller man"
+ 	desc_tags[]: mseller
+ 	anim_tags[]: mseller
+	anim_tags[]: stand
+ 	anim_tags[]: idle
+ 	pedestrian: false
+ }
+
+### SAW FIREFIGHTER ###
+
+mover_model_group : mover.saw_ff_ru
 {
-	mover_name: "customs officer walk"
+	mover_name: "firefighter saw ru"
 	desc_tags[]: man
-	desc_tags[]: cusoff
+	desc_tags[]: fire_saw
 	anim_tags[]: man
-	anim_tags[]: ngn_walk
+	anim_tags[]: saw
 	pedestrian: true
 }
 
-### dog walk ###########################################################################
-mover_model_group : mover.cusoff_dog
-{
-	mover_name: "customs dog handler"
-	desc_tags[]: man
-	desc_tags[]: cusoff
-	anim_tags[]: man
-	anim_tags[]: dog_walk
-	pedestrian: true
-}
+###################
+#### FISHERMAN ####
+###################
 
 ### idle ###########################################################################
-mover_model_group : mover.cusoff
+mover_model_group : mover.fisherman
 {
-	mover_name: "customs officer idle"
-	desc_tags[]: cusoff
+	mover_name: "fisherman standing"
+	desc_tags[]: fisherman
+	desc_tags[]: norod
 	anim_tags[]: man
 	anim_tags[]: idle
+	anim_tags[]: handback
 	pedestrian: true
 }
-
-### truck search ###########################################################################
-mover_model_group : mover.cusoff_sr
+### fishing ###########################################################################
+mover_model_group : mover.fish_rod
 {
-	mover_name: "customs officer truck search"
-	desc_tags[]: man
-	desc_tags[]: cusoff_bb
+	mover_name: "fisherman fishing stand"
+	desc_tags[]: fisherman
+	desc_tags[]: rod
 	anim_tags[]: man
-	anim_tags[]: tr_search
+	anim_tags[]: stand
+	anim_tags[]: fishing
 	pedestrian: true
 }
-
-### tablet ###########################################################################
-mover_model_group : mover.cusoff_tbl
+### boat fishing ###########################################################################
+mover_model_group : mover.fish_boat
 {
-	mover_name: "customs officer tablet"
-	desc_tags[]: man
-	desc_tags[]: cusoff
+	mover_name: "fisherman fishing boat"
+	desc_tags[]: fisherman
+	desc_tags[]: boat
 	anim_tags[]: man
-	anim_tags[]: cus_tablet
+	anim_tags[]: sit
+	anim_tags[]: fishing
 	pedestrian: true
 }
-
-### siting ###########################################################################
-mover_model_group : mover.cusoff_sit
-{
-	mover_name: "customs officer sitting all"
-	desc_tags[]: man
-	desc_tags[]: cusoff
-	anim_tags[]: man
-	anim_tags[]: sitting
-	pedestrian: true
-}
-
-
-### mirror idle ###########################################################################
-mover_model_group : mover.cusoff_mir
-{
-	mover_name: "customs officer mirror idle"
-	desc_tags[]: man
-	desc_tags[]: cusoff
-	anim_tags[]: man
-	anim_tags[]: cus_mirrid
-	pedestrian: true
-}
-
 
 ### MOTORBOAT ###
 
@@ -146,39 +140,39 @@ mover_model_group : mover.motorboat
 
 ### COW ###
 
-mover_model_group : mover.cow_all
-{
-	mover_name: "cow all"
-	desc_tags[]: cow
-	anim_tags[]: cow
-}
-mover_model_group : mover.cow_eat
-{
-	mover_name: "cow eat"
-	desc_tags[]: cow
-	anim_tags[]: cow
-	anim_tags[]: eating
-}
-mover_model_group : mover.cows_idle
-{
-	mover_name: "cow idle all"
-	desc_tags[]: cow
-	anim_tags[]: cow
-	anim_tags[]: idle
-}
-mover_model_group : mover.calfs_idle
-{
-	mover_name: "calfs idle all"
-	desc_tags[]: calf
-	anim_tags[]: idle
-}
-#################################### COWS_HERD_ANIM
-mover_model_group : mover.cows_herd
-{
-	mover_name: "anim cows herd"
-	desc_tags[]: cows_herd
-	anim_tags[]: cows_herd
-}
+# mover_model_group : mover.cow_all
+# {
+# 	mover_name: "cow all"
+# 	desc_tags[]: cow
+# 	anim_tags[]: cow
+# }
+# mover_model_group : mover.cow_eat
+# {
+# 	mover_name: "cow eat"
+# 	desc_tags[]: cow
+# 	anim_tags[]: cow
+# 	anim_tags[]: eating
+# }
+# mover_model_group : mover.cows_idle
+# {
+# 	mover_name: "cow idle all"
+# 	desc_tags[]: cow
+# 	anim_tags[]: cow
+# 	anim_tags[]: idle
+# }
+# mover_model_group : mover.calfs_idle
+# {
+# 	mover_name: "calfs idle all"
+# 	desc_tags[]: calf
+# 	anim_tags[]: idle
+# }
+# #################################### COWS_HERD_ANIM
+# mover_model_group : mover.cows_herd
+# {
+# 	mover_name: "anim cows herd"
+# 	desc_tags[]: cows_herd
+# 	anim_tags[]: cows_herd
+# }
 
 ### HORSE ###
 
@@ -917,71 +911,7 @@ mover_model_group : mover.bic_man_all
 }
 
 
-### IDLE, FIREFIGHTER POLICE
-
-mover_model_group : mover.idle_ff_all
-{
-	mover_name: "firefighter idle all"
-	desc_tags[]: man
-	desc_tags[]: firefighter
-	anim_tags[]: man
-	anim_tags[]: idle
-	pedestrian: true
-}
-mover_model_group : mover.idle_pol_all
-{
-	mover_name: "police idle all"
-	desc_tags[]: man
-	desc_tags[]: police
-	anim_tags[]: man
-	anim_tags[]: idle
-	pedestrian: true
-}
-
-
-### ANGRY, FIREFIGHTER POLICE
-
-mover_model_group : mover.angr_ff_all
-{
-	mover_name: "firefighter angry all"
-	desc_tags[]: man
-	desc_tags[]: firefighter
-	anim_tags[]: man
-	anim_tags[]: angry
-	pedestrian: true
-}
-mover_model_group : mover.angr_pol_all
-{
-	mover_name: "police angry all"
-	desc_tags[]: man
-	desc_tags[]: police
-	anim_tags[]: man
-	anim_tags[]: angry
-	pedestrian: true
-}
-
-
-### LEANING, FIREFIGHTER POLICE
-
-mover_model_group : mover.lean_ff_all
-{
-	mover_name: "firefighter leaning all"
-	desc_tags[]: man
-	desc_tags[]: firefighter
-	anim_tags[]: man
-	anim_tags[]: leaning
-	pedestrian: true
-}
-mover_model_group : mover.lean_pol_all
-{
-	mover_name: "police leaning all"
-	desc_tags[]: man
-	desc_tags[]: police
-	anim_tags[]: man
-	anim_tags[]: leaning
-	pedestrian: true
-}
-
+####################################
 
 mover_model_group : mover.tow_scene
 {
@@ -994,11 +924,54 @@ mover_model_group : mover.wolverine
 {
 	mover_name: "wolverine"
 	desc_tags[]: wolverine
-	anim_tags[]: wolverine
+#	anim_tags[]: wolverine
 }
 
+mover_model_group : mover.mixer_mn
+{
+	mover_name: "mixerman anim"
+	desc_tags[]: worker_old
+	desc_tags[]: mixerman
+	anim_tags[]: man
+	anim_tags[]: worker
+	anim_tags[]: mixerman
+	pedestrian: false
+}
 
+#####################################
+###           CRANES              ###
+#####################################
 
+mover_model_group : mover.swf_hook
+{
+	mover_name: "steelworks factory crane hook"
+	desc_tags[]: steelworks
+	desc_tags[]: factory
+	desc_tags[]: hook
+	anim_tags[]: steelworks
+	anim_tags[]: factory
+	anim_tags[]: hook
+}
+
+mover_model_group : mover.swf_crane
+{
+	mover_name: "steelworks factory crane"
+	desc_tags[]: steelworks
+	desc_tags[]: factory
+	desc_tags[]: crane
+	anim_tags[]: steelworks
+	anim_tags[]: factory
+	anim_tags[]: crane
+}
+
+# mover_model_group : mover.excav
+# {
+# 	mover_name: "excavator working"
+# 	desc_tags[]: excavator
+# 	anim_tags[]: excavator
+# 	pedestrian: false
+# 
+# }
 
 #   ____ _               _      _ ___        ___                     _                    _     _ _ _
 #  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
@@ -1020,5 +993,452 @@ mover_model_group : mover.wolverine
 # in the beginning of the def
 # before adding any units.
 
+
+mover_model_group : mover.beach
+{
+    mover_name: "beach props"
+    desc_tags[]: beach
+
+}
+mover_model_group : mover.excav_mov
+{
+    mover_name: "excavator mov ne"
+    desc_tags[]: excne
+    action_tags[]: fil2 #special creator tag
+    action_tags[]: examov #action tag
+
+}
+mover_model_group : mover.fr_air_trav
+{
+	mover_name: "frankfurt_airport_traverser2_01_de"
+	desc_tags[]: frankfurt
+	desc_tags[]: cargo
+	desc_tags[]: trav
+	action_tags[]: fil2  #special creator tag
+	action_tags[]: fraircarg  #action tag
+
+	
+
+}
+
+mover_model_group : mover.rivpo_turr
+{
+	mover_name: "river port turret"
+	desc_tags[]: river
+	desc_tags[]: port
+	desc_tags[]: turret
+	action_tags[]: fil1  #special creator tag
+	action_tags[]: ripotu  #action tag
+
+	
+
+}
+
+mover_model_group : mover.rivpo_ligh
+{
+ 	mover_name: "river port lights"
+ 	desc_tags[]: river
+ 	desc_tags[]: port
+ 	desc_tags[]: light
+}
+ 
+mover_model_group : mover.rivpo_dust
+{
+ 	mover_name: "river port dust"
+ 	desc_tags[]: river
+ 	desc_tags[]: port
+ 	desc_tags[]: dust
+}
+
+mover_model_group : mover.travefer
+{
+	mover_name: "ferry trave"
+	desc_tags[]: ferry
+	desc_tags[]: travemunde
+	desc_tags[]: boat
+	action_tags[]: float
+	action_tags[]: traveferry
+}
+
+### HORSE CART Moved from Balkan_e ###
+
+mover_model_group : mover.horse_cart
+{
+	mover_name: "horse cart all"
+	desc_tags[]: cart
+	anim_tags[]: cart
+}
+
+mover_model_group : mover.horse_cart2
+{
+	mover_name: "horse cart SECOND all"
+	desc_tags[]: cart2
+	anim_tags[]: cart2
+}
+mover_model_group : mover.static_cart
+{
+	mover_name: "static horse cart"
+	desc_tags[]: static
+	anim_tags[]: static1
+}
+
+####################################
+# ---moved from mod_char_reskin--- #
+####################################
+############
+# FIREMANS #
+############
+
+
+	### STANDING ###
+
+mover_model_group : mover.idle_ff_all
+{
+	mover_name: "firefighter idle all"
+	desc_tags[]: man_x
+	desc_tags[]: fireman_x
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+
+	### ANGRY ###
+
+mover_model_group : mover.angr_ff_all
+{
+	mover_name: "firefighter angry all"
+	desc_tags[]: man_x
+	desc_tags[]: fireman_x
+	anim_tags[]: man_x
+	anim_tags[]: angry_x
+	pedestrian: true
+}
+
+	### LEANING ###
+
+mover_model_group : mover.lean_ff_all
+{
+	mover_name: "firefighter leaning all"
+	desc_tags[]: man_x
+	desc_tags[]: fireman_x
+	anim_tags[]: man_x
+	anim_tags[]: leaning_x
+	pedestrian: true
+}
+
+###################
+# BORDER OFFICERS #
+###################
+
+	### walk ###
+
+mover_model_group : mover.cusoff_wl
+{
+	mover_name: "customs officer walk"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: walk_x
+	pedestrian: true
+}
+
+	### dog walk ###
+
+mover_model_group : mover.cusoff_dog
+{
+	mover_name: "customs dog handler"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: dog_walk_x
+	pedestrian: true
+}
+
+	### idle ###
+
+mover_model_group : mover.cusoff
+{
+	mover_name: "customs officer idle"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+
+	### truck search ###
+
+mover_model_group : mover.cusoff_sr
+{
+	mover_name: "customs officer truck search"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: tr_search_x
+	pedestrian: true
+}
+
+	### tablet ###
+
+mover_model_group : mover.cusoff_tbl
+{
+	mover_name: "customs officer tablet"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: cus_tablet_x
+	pedestrian: true
+}
+
+	### siting ###
+
+mover_model_group : mover.cusoff_sit
+{
+	mover_name: "customs officer sitting all"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: sitting_x
+	pedestrian: true
+}
+
+
+	### mirror idle ###
+
+mover_model_group : mover.cusoff_mir
+{
+	mover_name: "customs officer mirror idle"
+	desc_tags[]: man_x
+	desc_tags[]: border_x
+	anim_tags[]: man_x
+	anim_tags[]: cus_mirrid_x
+	pedestrian: true
+}
+
+##########################################
+# BORDER OFFICERS FROM COMPATIBILITY.SII #
+##########################################
+
+mover_model_group : mover.cusofftu_wl
+{
+	mover_name: "__turkey customs officer walk"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: walk_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_wl
+{
+	mover_name: "__romania customs officer walk"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: walk_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_wl
+{
+	mover_name: "__bulgaria customs officer walk"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: walk_x
+	pedestrian: true
+}
+
+mover_model_group : mover.cusofftu_dog
+{
+	mover_name: "__turkey customs dog handler"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: walk_x #dog_walk
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_dog
+{
+	mover_name: "__romania customs dog handler"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: walk_x #dog_walk
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_dog
+{
+	mover_name: "__bulgaria customs dog handler"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: walk_x #dog_walk
+	pedestrian: true
+}
+mover_model_group : mover.cusofftu
+{
+	mover_name: "__turkey customs officer idle"
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro
+{
+	mover_name: "__romania customs officer idle"
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu
+{
+	mover_name: "__bulgaria customs officer idle"
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+mover_model_group : mover.cusofftu_sr
+{
+	mover_name: "__turkey customs officer truck search"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: tr_search_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_sr
+{
+	mover_name: "__romania customs officer truck search"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: tr_search_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_sr
+{
+	mover_name: "__bulgaria customs officer truck search"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: tr_search_x
+	pedestrian: true
+}
+mover_model_group : mover.cusofftu_tbl
+{
+	mover_name: "__turkey customs officer tablet"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: cus_tablet_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_tbl
+{
+	mover_name: "__romania customs officer tablet"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: cus_tablet_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_tbl
+{
+	mover_name: "__bulgaria customs officer tablet"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: cus_tablet_x
+	pedestrian: true
+}
+mover_model_group : mover.cusofftu_sit
+{
+	mover_name: "__turkey customs officer sitting all"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: sitting_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_sit
+{
+	mover_name: "__romania customs officer sitting all"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: sitting_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_sit
+{
+	mover_name: "__bulgaria customs officer sitting all"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: sitting_x
+	pedestrian: true
+}
+mover_model_group : mover.cusofftu_mir
+{
+	mover_name: "__turkey customs officer mirror idle"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_tur
+	anim_tags[]: man_x
+	anim_tags[]: cus_mirrid_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffro_mir
+{
+	mover_name: "__romania customs officer mirror idle"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_rom
+	anim_tags[]: man_x
+	anim_tags[]: cus_mirrid_x
+	pedestrian: true
+}
+mover_model_group : mover.cusoffbu_mir
+{
+	mover_name: "__bulgaria customs officer mirror idle"
+	desc_tags[]: man_x
+	desc_tags[]: border_x_bul
+	anim_tags[]: man_x
+	anim_tags[]: cus_mirrid_x
+	pedestrian: true
+}
+
+###################
+# POLICE OFFICERS #
+###################
+
+mover_model_group : mover.idle_pol_all
+{
+	mover_name: "police idle all"
+	desc_tags[]: man_x
+	desc_tags[]: police_x
+	anim_tags[]: man_x
+	anim_tags[]: standing_x
+	pedestrian: true
+}
+
+mover_model_group : mover.angr_pol_all
+{
+	mover_name: "police angry all"
+	desc_tags[]: man_x
+	desc_tags[]: police_x
+	anim_tags[]: man_x
+	anim_tags[]: angry_x
+	pedestrian: true
+}
+
+mover_model_group : mover.lean_pol_all
+{
+	mover_name: "police leaning all"
+	desc_tags[]: man_x
+	desc_tags[]: police_x
+	anim_tags[]: man_x
+	anim_tags[]: leaning_x
+	pedestrian: true
+}
 
 }

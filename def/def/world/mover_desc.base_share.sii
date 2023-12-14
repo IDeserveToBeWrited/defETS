@@ -1,0 +1,689 @@
+SiiNunit
+{
+
+
+# __        ___                     _                    _     _ ___
+# \ \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| |__ \
+#  \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` | / /
+#   \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| ||_|
+#    \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|(_)
+#
+# Where to add?
+
+#
+# Units common for both ATS and ETS add to the "ATS, ETS common" section.
+# - Always add to the both projects AND at the same position.
+#
+# Units specific for ATS add to the "ATS only" section.
+#
+
+
+#     _  _____ ____     _____ _____ ____
+#    / \|_   _/ ___|   | ____|_   _/ ___|    ___ ___  _ __ ___  _ __ ___   ___  _ __
+#   / _ \ | | \___ \   |  _|   | | \___ \   / __/ _ \| '_ ` _ \| '_ ` _ \ / _ \| '_ \
+#  / ___ \| |  ___) |  | |___  | |  ___) | | (_| (_) | | | | | | | | | | | (_) | | | |
+# /_/   \_\_| |____( ) |_____| |_| |____/   \___\___/|_| |_| |_|_| |_| |_|\___/|_| |_|
+#                  |/
+# ATS, ETS common
+
+### TEMPORARY FOR NEW ANIMATIONS - Plz don't delete until we finish all the animations###
+
+
+#   ____ _               _      _ ___        ___                     _                    _     _ _ _
+#  / ___| |__   ___  ___| | __ ( | ) \      / / |__   ___ _ __ ___  | |_ ___     __ _  __| | __| ( | )
+# | |   | '_ \ / _ \/ __| |/ /  V V \ \ /\ / /| '_ \ / _ \ '__/ _ \ | __/ _ \   / _` |/ _` |/ _` |V V
+# | |___| | | |  __/ (__|   <        \ V  V / | | | |  __/ | |  __/ | || (_) | | (_| | (_| | (_| |
+#  \____|_| |_|\___|\___|_|\_\        \_/\_/  |_| |_|\___|_|  \___|  \__\___/   \__,_|\__,_|\__,_|
+#  _         _   _            _                _             _                      __   _   _                _       __
+# (_)_ __   | |_| |__   ___  | |__   ___  __ _(_)_ __  _ __ (_)_ __   __ _    ___  / _| | |_| |__   ___    __| | ___ / _|
+# | | '_ \  | __| '_ \ / _ \ | '_ \ / _ \/ _` | | '_ \| '_ \| | '_ \ / _` |  / _ \| |_  | __| '_ \ / _ \  / _` |/ _ \ |_
+# | | | | | | |_| | | |  __/ | |_) |  __/ (_| | | | | | | | | | | | | (_| | | (_) |  _| | |_| | | |  __/ | (_| |  __/  _|
+# |_|_| |_|  \__|_| |_|\___| |_.__/ \___|\__, |_|_| |_|_| |_|_|_| |_|\__, |  \___/|_|    \__|_| |_|\___|  \__,_|\___|_|
+#  _           __                        |___/     _ _               |___/                           _ _
+# | |__   ___ / _| ___  _ __ ___    __ _  __| | __| (_)_ __   __ _    __ _ _ __  _   _   _   _ _ __ (_) |_ ___
+# | '_ \ / _ \ |_ / _ \| '__/ _ \  / _` |/ _` |/ _` | | '_ \ / _` |  / _` | '_ \| | | | | | | | '_ \| | __/ __|
+# | |_) |  __/  _| (_) | | |  __/ | (_| | (_| | (_| | | | | | (_| | | (_| | | | | |_| | | |_| | | | | | |_\__ \_
+# |_.__/ \___|_|  \___/|_|  \___|  \__,_|\__,_|\__,_|_|_| |_|\__, |  \__,_|_| |_|\__, |  \__,_|_| |_|_|\__|___(_)
+#                                                            |___/               |___/
+# Check "Where to add"
+# in the beginning of the def
+# before adding any units.
+
+##########################
+### OLD COWS FROM BASE ###
+##########################
+
+mover_desc : mover_desc.cow.black
+{
+	model_desc: "/asset/character/animal/domesticated/cow_black_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/cow_black_mov_lod1.pmd"
+	lod_distances[0]: 60
+
+	group_tags[]: cow
+}
+
+mover_desc : mover_desc.cow.brown
+{
+	model_desc: "/asset/character/animal/domesticated/cow_brown_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/cow_brown_mov_lod1.pmd"
+	lod_distances[0]: 60
+
+	group_tags[]: cow
+}
+
+mover_desc : mover_desc.cow.red
+{
+	model_desc: "/asset/character/animal/domesticated/cow_red_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/cow_red_mov_lod1.pmd"
+	lod_distances[0]: 60
+
+	group_tags[]: cow
+}
+
+mover_desc : mover_desc.cow.yellow
+{
+	model_desc: "/asset/character/animal/domesticated/cow_yellow_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/cow_yellow_mov_lod1.pmd"
+	lod_distances[0]: 60
+
+	group_tags[]: cow
+}
+
+mover_desc : mover_desc.calf
+{
+	model_desc: "/asset/character/animal/domesticated/calf_mov.pmd"
+
+	group_tags[]: calf
+}
+
+mover_desc : mover_desc.cows_herd
+{
+	model_desc: "/asset/character/animal/domesticated/cows_herd_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/cows_herd_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/domesticated/cows_herd_mov_lod2.pmd"
+	lod_distances[0]: 60
+	lod_distances[1]: 90
+	group_tags[]: cows_herd
+}
+
+###########
+# ANIMALS #
+###########
+
+mover_desc : mover_desc.bisonn
+{
+	model_desc: "/asset/character/animal/wild/bison_new_mov.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/bison_new_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/bison_new_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/bison_new_mov_lod3.pmd"
+#	lod_distances[0]: 5
+#	lod_distances[1]: 10
+#	lod_distances[2]: 20
+
+	group_tags[]: animal
+	group_tags[]: wild
+	group_tags[]: bison_new
+}
+
+mover_desc : mover_desc.isheep
+{
+	model_desc: "/asset/character/animal/domesticated/sheep_icelandic_mov.pmd"
+
+	#lods[0]: "/asset/character/animal/domesticated/sheep_01_mov_lod1.pmd"
+	#lods[1]: "/asset/character/animal/domesticated/sheep_01_mov_lod2.pmd"
+	#lods[2]: "/asset/character/animal/domesticated/sheep_01_mov_lod3.pmd"
+	#lod_distances[0]: 5
+	#lod_distances[1]: 10
+	#lod_distances[2]: 20
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: isheep
+}
+
+
+mover_desc : mover_desc.sheep_1
+{
+	model_desc: "/asset/character/animal/domesticated/sheep_01_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/sheep_01_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/domesticated/sheep_01_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/domesticated/sheep_01_mov_lod3.pmd"
+	lod_distances[0]: 5
+	lod_distances[1]: 10
+	lod_distances[2]: 20
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: sheep
+}
+
+mover_desc : mover_desc.sheep_2
+{
+	model_desc: "/asset/character/animal/domesticated/sheep_01_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/sheep_01_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/domesticated/sheep_01_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/domesticated/sheep_01_mov_lod3.pmd"
+	lod_distances[0]: 5
+	lod_distances[1]: 10
+	lod_distances[2]: 20
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: sheep
+}
+
+mover_desc : mover_desc.deer_1
+{
+	model_desc: "/asset/character/animal/wild/deer_01_mov.pmd"
+
+	lods[0]: "/asset/character/animal/wild/deer_01_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/wild/deer_01_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/wild/deer_01_mov_lod3.pmd"
+	lod_distances[0]: 20
+	lod_distances[1]: 40
+	lod_distances[2]: 70
+
+	group_tags[]: animal
+	group_tags[]: wild
+	group_tags[]: deer
+}
+
+mover_desc : mover_desc.pig_1
+{
+	model_desc: "/asset/character/animal/domesticated/pig_01_mov.pmd"
+
+	 lods[0]: "/asset/character/animal/domesticated/pig_01_mov_lod1.pmd"
+	 lods[1]: "/asset/character/animal/domesticated/pig_01_mov_lod2.pmd"
+	 lods[2]: "/asset/character/animal/domesticated/pig_01_mov_lod3.pmd"
+	 lods[3]: "/asset/character/animal/domesticated/pig_01_mov_lod4.pmd"
+	 lod_distances[0]: 20
+	 lod_distances[1]: 40
+	 lod_distances[2]: 60
+	 lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: pig
+}
+
+mover_desc : mover_desc.goat_1
+{
+	model_desc: "/asset/character/animal/domesticated/goat_01_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/goat_01_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/domesticated/goat_01_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/domesticated/goat_01_mov_lod3.pmd"
+	lods[3]: "/asset/character/animal/domesticated/goat_01_mov_lod4.pmd"
+	lod_distances[0]: 20
+	lod_distances[1]: 40
+	lod_distances[2]: 60
+	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: goat
+}
+
+mover_desc : mover_desc.goat_2
+{
+	model_desc: "/asset/character/animal/domesticated/goat_02_mov.pmd"
+
+	lods[0]: "/asset/character/animal/domesticated/goat_02_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/domesticated/goat_02_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/domesticated/goat_02_mov_lod3.pmd"
+	lods[3]: "/asset/character/animal/domesticated/goat_02_mov_lod4.pmd"
+	lod_distances[0]: 20
+	lod_distances[1]: 40
+	lod_distances[2]: 60
+	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: goat
+}
+
+mover_desc : mover_desc.mountgo
+{
+	model_desc: "/asset/character/animal/wild/mountain_goat_01_mov.pmd"
+
+	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+	lod_distances[0]: 20
+	lod_distances[1]: 40
+	lod_distances[2]: 60
+	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: wild
+	group_tags[]: mountgo
+}
+
+mover_desc : mover_desc.longhorn
+{
+	model_desc: "/asset/character/animal/domesticated/texas_longhorn_bull.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+#	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+#	lod_distances[0]: 20
+#	lod_distances[1]: 40
+#	lod_distances[2]: 60
+#	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: longhorn
+}
+
+mover_desc : mover_desc.doghusky
+{
+	model_desc: "/asset/character/animal/domesticated/dog_husky_01_mov.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+#	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+#	lod_distances[0]: 20
+#	lod_distances[1]: 40
+#	lod_distances[2]: 60
+#	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: dog
+	group_tags[]: husky
+}
+
+mover_desc : mover_desc.dogshep
+{
+	model_desc: "/asset/character/animal/domesticated/dog_shepherd_02_mov.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+#	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+#	lod_distances[0]: 20
+#	lod_distances[1]: 40
+#	lod_distances[2]: 60
+#	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: domesticated
+	group_tags[]: dog
+	group_tags[]: shep
+}
+
+mover_desc : mover_desc.rndm
+{
+	model_desc: "/asset/character/animal/wild/reindeer_male_mov.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+#	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+#	lod_distances[0]: 20
+#	lod_distances[1]: 40
+#	lod_distances[2]: 60
+#	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: wild
+	group_tags[]: rein
+	group_tags[]: male
+}
+
+mover_desc : mover_desc.rndf
+{
+	model_desc: "/asset/character/animal/wild/reindeer_female_mov.pmd"
+
+#	lods[0]: "/asset/character/animal/wild/mountain_goat_01_mov_lod1.pmd"
+#	lods[1]: "/asset/character/animal/wild/mountain_goat_01_mov_lod2.pmd"
+#	lods[2]: "/asset/character/animal/wild/mountain_goat_01_mov_lod3.pmd"
+#	lods[3]: "/asset/character/animal/wild/mountain_goat_01_mov_lod4.pmd"
+#	lod_distances[0]: 20
+#	lod_distances[1]: 40
+#	lod_distances[2]: 60
+#	lod_distances[3]: 80
+
+	group_tags[]: animal
+	group_tags[]: wild
+	group_tags[]: rein
+	group_tags[]: female
+}
+
+##########################
+# HUMANS / WOMAN / BABCA #
+##########################
+
+mover_desc : mover_desc.gr_ru_v1
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v1_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v1_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v1_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v1_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v1_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v1_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+	
+
+}
+
+mover_desc : mover_desc.gr_ru_v2
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v2_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v2_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v2_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v2_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v2_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v2_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+}
+
+mover_desc : mover_desc.gr_ru_v3
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v3_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v3_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v3_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v3_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v3_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v3_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+
+}
+
+mover_desc : mover_desc.gr_ru_v4
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v4_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v4_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v4_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v4_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v4_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v4_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+
+}
+
+mover_desc : mover_desc.gr_ru_v5
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v5_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v5_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v5_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v5_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v5_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v5_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+
+}
+
+mover_desc : mover_desc.gr_ru_v6
+{
+model_desc: "/asset/character/human/civil/grandma_ru_v6_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/grandma_ru_v6_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/grandma_ru_v6_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/grandma_ru_v6_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/grandma_ru_v6_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/grandma_ru_v6_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: human
+	group_tags[]: civil
+	group_tags[]: grandma
+
+	area_tags[]: estonia	# country
+	area_tags[]: latvia		# country
+	area_tags[]: lithuania	# country
+	area_tags[]: poland		# country
+	area_tags[]: bulgaria	# country
+	area_tags[]: romania	# country
+	area_tags[]: czech		# country
+	area_tags[]: hungary	# country
+	area_tags[]: russia		# country
+	area_tags[]: slovakia	# country
+	area_tags[]: albania	# country
+
+	area_tags[]: albania	# country
+	area_tags[]: bosnia	# country
+	area_tags[]: macedonia	# country
+	area_tags[]: croatia	# country
+	area_tags[]: kosovo	# country
+	area_tags[]: montenegro	# country
+	area_tags[]: serbia	# country
+	area_tags[]: slovenia	# country
+
+}
+
+######################################
+# HUMANS / WOMAN / GASSTATION SELLER #
+######################################
+
+# mover_desc : mover_desc.wseller
+# {
+# 	model_desc: "/asset/character/human/worker/gasstation_crew_girl_mov.pmd"
+# 
+# 	group_tags[]: wseller
+# 
+# }
+
+################################
+# HUMANS / UNI / ZIPLINE RIDER #
+################################
+
+mover_desc : mover_desc.zipliner
+{
+	model_desc: "/asset/character/human/civil/zipline_rider_mov.pmd"
+
+	lods[0]: "/asset/character/human/civil/zipline_rider_mov_lod1.pmd"
+	lods[1]: "/asset/character/human/civil/zipline_rider_mov_lod2.pmd"
+	lods[2]: "/asset/character/human/civil/zipline_rider_mov_lod3.pmd"
+	lods[3]: "/asset/character/human/civil/zipline_rider_mov_lod4.pmd"
+	lods[4]: "/asset/character/human/civil/zipline_rider_mov_lod5.pmd"
+	lod_distances[0]: 12
+	lod_distances[1]: 26
+	lod_distances[2]: 45
+	lod_distances[3]: 60
+	lod_distances[4]: 80
+
+	group_tags[]: zipline
+
+}
+
+#######################
+# CRANE / TOWER / SHR #
+#######################
+
+mover_desc : mover_desc.tow_cr
+{
+	model_desc: "/asset/animation/nescript/cranes/crane_tower_shr_mov.pmd"
+
+	lods[0]: "/asset/animation/nescript/cranes/crane_tower_shr_mov_lod1.pmd"
+
+	lod_distances[0]: 250
+
+	group_tags[]: tower_cr
+}
+
+mover_desc : mover_desc.tow_cr1
+{
+	model_desc: "/asset/animation/nescript/cranes/crane_tower_shr_mov.pmd"
+
+	lods[0]: "/asset/animation/nescript/cranes/crane_tower_shr_mov_lod1.pmd"
+
+	lod_distances[0]: 250
+
+	group_tags[]: tower_cr1
+}
+
+mover_desc : mover_desc.tow_cr2
+{
+	model_desc: "/asset/animation/nescript/cranes/crane_tower_shr_mov.pmd"
+
+	lods[0]: "/asset/animation/nescript/cranes/crane_tower_shr_mov_lod1.pmd"
+
+	lod_distances[0]: 250
+
+	group_tags[]: tower_cr2
+}
+
+
+}

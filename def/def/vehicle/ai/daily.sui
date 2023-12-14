@@ -12,9 +12,6 @@ traffic_vehicle : traffic.daily
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	lod_dist[]: 60
-	lod_dist[]: 110
-
 	color[]: (0.4564, 0.0069, 0.0097) #red
 	color[]: (0.5457, 0.5583, 0.5647) #white
 	color[]: (0.5457, 0.5583, 0.5647) #white
@@ -27,6 +24,7 @@ traffic_vehicle : traffic.daily
 
 	variant[]: traffic.daily.curtain
 	variant[]: traffic.daily.box
+	variant[]: traffic.daily.load1
 
 
 
@@ -35,7 +33,7 @@ traffic_vehicle : traffic.daily
 
 vehicle_accessory: .daily.chassis
 {
-	data_path: "/def/vehicle/ai/daily/korba.sii"
+	data_path: "/def/vehicle/ai/daily/cargo.sii"
 }
 
 vehicle_wheel_accessory: .daily.fwheel
@@ -50,6 +48,7 @@ vehicle_wheel_accessory: .daily.rwheel
 	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_double.sii"
 }
 
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 traffic_vehicle : traffic.daily.box
 {
@@ -60,13 +59,9 @@ traffic_vehicle : traffic.daily.box
 	engine_power: 88
 	max_speed: 100
 
-	vehicle_mass: 4000
+	vehicle_mass: 6000
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
-
-	lod_dist[]: 60
-	lod_dist[]: 110
-
 
 
 	spawn_ratio: 0.3
@@ -92,6 +87,7 @@ vehicle_wheel_accessory: .daily.box.rwheel
 	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_double.sii"
 }
 
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 traffic_vehicle : traffic.daily.curtain
 {
@@ -105,9 +101,6 @@ traffic_vehicle : traffic.daily.curtain
 	engine_power: 88
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
-
-	lod_dist[]: 60
-	lod_dist[]: 110
 
 	spawn_ratio: 0.3
 
@@ -131,3 +124,44 @@ vehicle_wheel_accessory: .daily.curtain.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_double.sii"
 }
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.daily.load1
+{
+	accessories[]: .daily.load1.chassis
+	accessories[]: .daily.load1.fwheel
+	accessories[]: .daily.load1.rwheel
+
+	engine_power: 88
+	max_speed: 100
+
+	vehicle_mass: 6000
+
+	color[]: (0.4564, 0.0069, 0.0097) #red
+	color[]: (0.5457, 0.5583, 0.5647) #white
+	color[]: (0.5457, 0.5583, 0.5647) #white
+	color[]: (0.5457, 0.5583, 0.5647) #white
+	color[]: (0.0012, 0.0356, 0.1682) #blue
+	color[]: (0.1144, 0.1412, 0.1714) #silver
+	color[]: (0.0343, 0.0343, 0.0343) #black
+
+}
+
+vehicle_accessory: .daily.load1.chassis
+{
+	data_path: "/def/vehicle/ai/daily/load1.sii"
+}
+
+vehicle_wheel_accessory: .daily.load1.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_front.sii"
+}
+
+vehicle_wheel_accessory: .daily.load1.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_double.sii"
+}
+

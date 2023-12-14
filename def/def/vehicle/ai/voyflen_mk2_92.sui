@@ -1,0 +1,137 @@
+############### Default ########################
+
+traffic_vehicle : traffic.mk2
+{
+	accessories[]: .mk2.chassis
+	accessories[]: .mk2.fwheel
+	accessories[]: .mk2.rwheel
+	
+	variant[]: traffic.mk2.tuner
+	variant[]: traffic.mk2.sport
+
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+	
+	
+	spawn_ratio: 0
+
+	tags[]: cheap
+	
+	
+	
+
+	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mk2.chassis
+{
+	data_path: "/def/vehicle/ai/voyflen_mk2_92/chassis.sii"
+}
+
+vehicle_wheel_accessory: .mk2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in.sii"
+}
+
+vehicle_wheel_accessory: .mk2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in.sii"
+}
+
+
+
+
+############### Tuner ########################
+
+traffic_vehicle : traffic.mk2.tuner
+{
+	accessories[]: .mk2.tuner.chassis
+	accessories[]: .mk2.tuner.fwheel
+	accessories[]: .mk2.tuner.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+	
+
+	
+	tags[]: cheap
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mk2.tuner.chassis
+{
+	data_path: "/def/vehicle/ai/voyflen_mk2_92/chassis_tuner.sii"
+}
+
+vehicle_wheel_accessory: .mk2.tuner.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in.sii"
+}
+
+vehicle_wheel_accessory: .mk2.tuner.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in.sii"
+}
+
+
+
+############### Sport ########################
+
+traffic_vehicle : traffic.mk2.sport
+{
+	accessories[]: .mk2.sport.chassis
+	accessories[]: .mk2.sport.fwheel
+	accessories[]: .mk2.sport.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1000
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+
+	tags[]: cheap
+	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mk2.sport.chassis
+{
+	data_path: "/def/vehicle/ai/voyflen_mk2_92/chassis_sport.sii"
+}
+
+vehicle_wheel_accessory: .mk2.sport.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_15in.sii"
+}
+
+vehicle_wheel_accessory: .mk2.sport.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_15in.sii"
+}
+
+

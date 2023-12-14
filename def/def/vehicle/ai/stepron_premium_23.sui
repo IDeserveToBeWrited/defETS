@@ -1,0 +1,90 @@
+# XXXXXXXXXXXXXXXXXXX sedan XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.stepron.sedan.premium_23
+{
+	accessories[]: .stepron.sedan.premium_23.chassis
+	accessories[]: .stepron.sedan.premium_23.fwheel
+	accessories[]: .stepron.sedan.premium_23.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0615, 0.0417, 0.0272) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.7713, 0.7631, 0.7227) #white
+
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .stepron.sedan.premium_23.chassis
+{
+	data_path: "/def/vehicle/ai/stepron_premium_23/chassis_sedan.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXX combi XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle :  traffic.stepron.combi.premium_23
+{
+	accessories[]:.stepron.combi.premium_23.chassis
+	accessories[]: .stepron.combi.premium_23.fwheel
+	accessories[]: .stepron.combi.premium_23.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0615, 0.0417, 0.0272) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.7713, 0.7631, 0.7227) #white
+
+	tags[]: expensive
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .stepron.combi.premium_23.chassis
+{
+	data_path: "/def/vehicle/ai/stepron_premium_23/chassis_combi.sii"
+}
+
+vehicle_wheel_accessory: .stepron.combi.premium_23.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .stepron.combi.premium_23.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}

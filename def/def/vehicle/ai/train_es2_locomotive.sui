@@ -1,0 +1,124 @@
+traffic_vehicle : traffic.es2_gen
+{
+	accessories[]: .es2_gen.chassis
+	accessories[]: .es2_gen.fwheel
+	accessories[]: .es2_gen.rwheel
+	accessories[]: .es2_gen.rwheel2
+	accessories[]: .es2_gen.rwheel3
+
+	max_speed: 100
+
+	vehicle_mass: 41000
+	engine_power: 720
+
+	trailer_chains[]: "train_car.es2_car1_gen | train_car.es2_car2_gen | train_car.es2_car3_gen | train_car.es2_last_gen"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	variant[]: traffic.es2_mos
+
+	prefer_variant: true
+
+	tags[]: passenger
+}
+
+vehicle_accessory: .es2_gen.chassis
+{
+	data_path: "/def/vehicle/ai/train_es2/chassis_loco_gen.sii"
+}
+
+vehicle_wheel_accessory: .es2_gen.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_gen.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_gen.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_gen.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
+
+
+
+traffic_vehicle : traffic.es2_mos
+{
+	accessories[]: .es2_mos.chassis
+	accessories[]: .es2_mos.fwheel
+	accessories[]: .es2_mos.rwheel
+	accessories[]: .es2_mos.rwheel2
+	accessories[]: .es2_mos.rwheel3
+
+	max_speed: 100
+
+	vehicle_mass: 41000
+	engine_power: 720
+
+	trailer_chains[]: "train_car.es2_car1_mos | train_car.es2_car2_mos 2-4 | train_car.es2_car3_mos | train_car.es2_last_mos"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	spawn_condition[]: .traffic.es2_mos.city.moscow
+
+	tags[]: passenger
+}
+
+vehicle_accessory: .es2_mos.chassis
+{
+	data_path: "/def/vehicle/ai/train_es2/chassis_loco_mos.sii"
+}
+
+vehicle_wheel_accessory: .es2_mos.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_mos.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_mos.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .es2_mos.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.es2_mos.city.moscow
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "moscow"
+}

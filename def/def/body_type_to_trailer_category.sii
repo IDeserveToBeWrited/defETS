@@ -27,15 +27,33 @@ trailer_category_def: .category.4
 	trailer_body_matches[]: flatbed_cont
 	trailer_body_matches[]: log
 }
+
 trailer_category_def: .category.5
 {
-	trailer_category: tank
-	trailer_body_matches[]: foodtank
+	trailer_category: bulk
+	trailer_body_matches[]: dumper
+	trailer_body_matches[]: silo
 }
+
 trailer_category_def: .category.6
+{
+	trailer_category: tr_tank		# token "tank" is taken by tank fuel accessory already
+	trailer_body_matches[]: chemtank
+	trailer_body_matches[]: foodtank
+	trailer_body_matches[]: fueltank
+	trailer_body_matches[]: gastank
+}
+
+trailer_category_def: .category.7
 {
 	trailer_category: lowbed
 	trailer_body_matches[]: lowbed
 	trailer_body_matches[]: lowboy
+}
+
+trailer_category_def: .category.8
+{
+	trailer_category: livestock
+	trailer_body_matches[]: livestock
 }
 }

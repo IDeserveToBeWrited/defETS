@@ -10,13 +10,20 @@ SiiNunit
 
 journey_events_road_event_data : .master
 {
+	// Common random road events - accidents, roadworks, etc.
 	max_road_events_count[0]: 100
-	min_road_events_distance[0]: 1000.0         // 1000[m]
-	probability[0]: 0.02			// 0.02
+	min_road_events_distance[0]: 1000.0
+	probability[0]: 0.02
 
+	// Random visual stuff, usually decals (trash, tire marks, ...)
 	max_road_events_count[1]: 100
-	min_road_events_distance[1]: 30.0          // [m]
+	min_road_events_distance[1]: 30.0
 	probability[1]: 0.2
+
+	// Special map-location-specific events
+	max_road_events_count[2]: 2
+	min_road_events_distance[2]: 500.0
+	probability[2]: 0.15
 }
 
 }

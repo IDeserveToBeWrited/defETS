@@ -1,0 +1,46 @@
+SiiNunit
+{
+accessory_engine_data : mx13_315.daf.2021.engine
+{
+	name: "MX-13 315"
+	price: 13320
+	unlock: 6
+	info[]: "428 @@hp@@ (315@@kw@@)"
+	info[]: "2@@dg@@150/2@@dg@@300 @@nm@@"
+	info[]: "900-1@@dg@@400 @@rpm@@"
+	icon: "engine/paccar_mx13"
+	part_type: factory
+
+	torque: 2150
+	secondary_torque: 2300
+
+	torque_curve[]: (300, 0)
+	torque_curve[]: (500, 0.5)
+	torque_curve[]: (900, 1)
+	torque_curve[]: (1400, 0.98)
+	torque_curve[]: (1600, 0.88)
+	torque_curve[]: (1800, 0.74)
+	torque_curve[]: (2400, 0)
+
+	secondary_torque_curve[]: (300, 0)
+	secondary_torque_curve[]: (500, 0.5)
+	secondary_torque_curve[]: (900, 1)
+	secondary_torque_curve[]: (1125, 1)
+	secondary_torque_curve[]: (1400, 0.92)
+	secondary_torque_curve[]: (1600, 0.82)
+	secondary_torque_curve[]: (1800, 0.69)
+	secondary_torque_curve[]: (2400, 0)
+
+	rpm_limit: 2200
+	rpm_range_low_gear: (800, 1500)
+	rpm_range_high_gear: (900, 1300)
+	rpm_range_power: (1300, 1800)
+
+	volume: 12.9
+	no_adblue_power_limit: 0.5
+
+@include "sound.sui"
+
+	overrides[]: "/def/vehicle/truck/daf.2021/accessory/badge/badge_430.sii"
+}
+}

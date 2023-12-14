@@ -42,22 +42,19 @@ bindings_color_effect : .ui.bindings.base {
  #mixes[]: "nxt_itm" # keyboard.darrow
  #mixes[]: "prv_ctrl"
  #mixes[]: "nxt_ctrl" # keyboard.tab
- #mixes[]: "mve_left" # keyboard.larrow
- #mixes[]: "mve_right" # keyboard.rarrow
- #mixes[]: "mve_up" # keyboard.uarrow
- #mixes[]: "mve_down" # keyboard.darrow
+ mixes[]: "mve_left" # keyboard.larrow
+ mixes[]: "mve_right" # keyboard.rarrow
+ mixes[]: "mve_up" # keyboard.uarrow
+ mixes[]: "mve_down" # keyboard.darrow
  mixes[]: "selectfcs" # keyboard.enter
  mixes[]: "back" # keyboard.esc
  mixes[]: "skip" # keyboard.esc
  mixes[]: "menu" # keyboard.esc
- mixes[]: "navmap" # keyboard.m
- mixes[]: "radio" # keyboard.r
  #mixes[]: "radionext" # keyboard.pgdn
  #mixes[]: "radioprev" # keyboard.pgup
  mixes[]: "radioup"
  mixes[]: "radiodown"
- mixes[]: "photosman" # keyboard.m
- mixes[]: "gar_man" # keyboard.g
+ mixes[]: "screenshot" # keyboard.f10
 }
 
 bindings_color_effect : .ui.bindings.multiplayer {
@@ -76,6 +73,109 @@ job_done_effect : .ui.jobdone {
  animation_duration: 1.2
  wave_height: 0.6
  repeats: 20
+}
+
+########## UI Desktop ##########
+
+color_context : context.ui_desktop {
+ layers[]: .layer.ui_desktop.base
+ layers[]: .layer.ui_desktop.bindings
+}
+
+color_layer : .layer.ui_desktop.base {
+ effects[]: .ui_desktop.base
+}
+
+base_color_effect : .ui_desktop.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.ui_desktop.bindings {
+ effects[]: .ui_desktop.bindings.base
+ effects[]: .ui_desktop.bindings.multiplayer
+}
+
+bindings_color_effect : .ui_desktop.bindings.base {
+ color: (1.0, 0.85, 0)
+
+ mixes[]: "back" # keyboard.esc
+ mixes[]: "menu" # keyboard.esc
+ mixes[]: "navmap" # keyboard.m
+ mixes[]: "radio" # keyboard.r
+ mixes[]: "radioup"
+ mixes[]: "radiodown"
+ mixes[]: "gar_man" # keyboard.g
+ mixes[]: "screenshot" # keyboard.f10
+}
+
+bindings_color_effect : .ui_desktop.bindings.multiplayer {
+ color: (1.0, 0.85, 0)
+ active_scope: multiplayer
+
+ mixes[]: "sb_activate" # keyboard.tab
+ mixes[]: "sb_swap" # keyboard.caps
+}
+
+########## PHOTO MODE ##########
+
+color_context : context.photomode {
+ layers[]: .layer.photomode.base
+ layers[]: .layer.photomode.bindings
+}
+
+color_layer : .layer.photomode.base {
+ effects[]: .photomode.base
+}
+
+base_color_effect : .photomode.base {
+ color: (0.1, 0.1, 0.1)
+}
+
+color_layer : .layer.photomode.bindings {
+ effects[]: .photomode.bindings.base
+ effects[]: .photomode.bindings.movement
+ effects[]: .photomode.bindings.camera
+ effects[]: .photomode.bindings.multiplayer
+}
+
+bindings_color_effect : .photomode.bindings.base {
+ color: (1.0, 0.85, 0)
+
+ mixes[]: "back" # keyboard.esc
+ mixes[]: "skip" # keyboard.esc
+ mixes[]: "menu" # keyboard.esc
+ mixes[]: "photosman" # keyboard.m
+ mixes[]: "photosnap" # keyboard.enter
+ mixes[]: "photores" # keyboard.r
+ mixes[]: "photo_hctrl" # keyboard.h
+ mixes[]: "photo_opts" # keyboard.space
+ mixes[]: "screenshot" # keyboard.f10
+ mixes[]: "photo_mode" # keyboard.equal
+}
+
+bindings_color_effect : .photomode.bindings.movement {
+ color: (0, 1, 0.25)
+
+ mixes[]: "photoleft" # keyboard.larrow | keyboard.a
+ mixes[]: "photoright" # keyboard.rarrow | keyboard.d
+ mixes[]: "photofwd" # keyboard.uarrow | keyboard.w
+ mixes[]: "photobwd" # keyboard.darrow | keyboard.s
+}
+
+bindings_color_effect : .photomode.bindings.camera {
+ color: (0.4, 0.12, 0)
+
+ mixes[]: "photoup" # keyboard.q
+ mixes[]: "photodown" # keyboard.e
+ mixes[]: "photorolll" # keyboard.z
+ mixes[]: "photorollr" # keyboard.c
+}
+
+bindings_color_effect : .photomode.bindings.multiplayer {
+ color: (1.0, 0.85, 0)
+ active_scope: multiplayer
+
+ mixes[]: "photonames" # keyboard.n
 }
 
 ########## GAME ##########
@@ -142,6 +242,8 @@ bindings_color_effect : .game.bindings.basic {
  mixes[]: "advpagep"
  mixes[]: "advmouse" # keyboard.f1
  mixes[]: "gar_man" # keyboard.g
+ mixes[]: "photo_mode" # keyboard.equal
+ mixes[]: "screenshot" # keyboard.f10
 }
 
 bindings_color_effect : .game.bindings.cameras {
@@ -292,6 +394,7 @@ color_layer : .layer.game.actions {
  effects[]: .effect.game.fine
  effects[]: .effect.game.damage
  effects[]: .effect.game.pumping
+ effects[]: .effect.game.beacon
 }
 
 hurry_up_effect : .effect.game.hurry_up {
@@ -323,6 +426,13 @@ gas_pumping_effect : .effect.game.pumping {
  pumping_color: (1.0, 1.0, 1.0)
  full_color: (0, 1.0, 0)
  fade_out_duration: 0.5
+}
+
+beacon_effect : .effect.game.beacon {
+ brightness: 1.0
+ speed: 720
+ # Available modes: rotate_left, rotate_right, blink, rotate_left_right, double_rotate_cross, double_rotate_left, double_rotate_right, double_blink_triple_wait.
+ mode: rotate_right
 }
 
 ########## TUTORIAL (GAME) ##########
@@ -392,7 +502,9 @@ tutorial_color_effect : .tutorial.bindings.cam1 {
  blinking: false
 
  mixes[]: "cam1" # keyboard.key1
+ mixes[]: "cam2" # keyboard.key2
  mixes[]: "cam3" # keyboard.key3
+ mixes[]: "camcycle" # keyboard.key9
 }
 
 tutorial_color_effect : .tutorial.bindings.cam1_blink {
@@ -400,7 +512,8 @@ tutorial_color_effect : .tutorial.bindings.cam1_blink {
  tutorial_stage: cam1
  blinking: true
 
- mixes[]: "cam2" # keyboard.key2
+ mixes[]: "activate" # keyboard.enter
+ mixes[]: "selectfcs" # keyboard.enter
 }
 
 tutorial_color_effect : .tutorial.bindings.cam2 {
