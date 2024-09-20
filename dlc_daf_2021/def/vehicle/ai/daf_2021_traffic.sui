@@ -1,9 +1,9 @@
-traffic_vehicle : traffic.daf2021_a4x2
+traffic_vehicle : traffic.daf.2021.xgp_4x2
 {
-	accessories[]: .daf2021_a4x2.chassis
-	accessories[]: .daf2021_a4x2.fwheel
-	accessories[]: .daf2021_a4x2.rwheel
-	accessories[]: .daf2021_a4x2.trlr_cables
+	accessories[]: .daf.2021.xgp_4x2.chassis
+	accessories[]: .daf.2021.xgp_4x2.fwheel
+	accessories[]: .daf.2021.xgp_4x2.rwheel
+	accessories[]: .daf.2021.xgp_4x2.trlr_cables
 
 	max_speed: 90
 
@@ -37,21 +37,81 @@ traffic_vehicle : traffic.daf2021_a4x2
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .daf2021_a4x2.chassis
+vehicle_accessory: .daf.2021.xgp_4x2.chassis
 {
-	data_path: "/def/vehicle/ai/truck/daf.2021/a4x2.sii"
+	data_path: "/def/vehicle/ai/truck/daf.2021/xgp_4x2.sii"
 }
-vehicle_wheel_accessory: .daf2021_a4x2.fwheel
+vehicle_wheel_accessory: .daf.2021.xgp_4x2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-vehicle_wheel_accessory: .daf2021_a4x2.rwheel
+vehicle_wheel_accessory: .daf.2021.xgp_4x2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/r_wheel/steel.sii"
 }
-vehicle_addon_accessory : .daf2021_a4x2.trlr_cables
+vehicle_addon_accessory : .daf.2021.xgp_4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.2021/accessory/trlr_cables/stock.sii"
+}
+
+traffic_vehicle : traffic.daf.2021.xgp_4x2_c
+{
+	base: traffic.daf.2021.xgp_4x2
+	
+	accessories[]: .daf.2021.xgp_4x2_c.chassis
+	accessories[]: .daf.2021.xgp_4x2_c.fwheel
+	accessories[]: .daf.2021.xgp_4x2_c.rwheel
+	accessories[]: .daf.2021.xgp_4x2_c.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 7164
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.514918, 0.496933, 0.456411) 
+	color[]: (0.002428, 0.283149, 0.597202) #jamaica blue
+	color[]: (0.366253, 0.366253, 0.366253) #silver
+	color[]: (1.000000, 0.198000, 0.004300) #electricorange
+	color[]: (0.701102, 0.584079, 0.008023) #tuscanyellow
+	color[]: (0.799103, 0.042311, 0.042311) #flamered
+	color[]: (0.006049, 0.006049, 0.006049) #black 
+	color[]: (0.104616, 0.434154, 0.003347) #mantis green
+
+	tags[]: dealer
+	
+		
+
+	# add lod in between
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .daf.2021.xgp_4x2_c.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.2021/xgp_4x2_cam.sii"
+}
+vehicle_wheel_accessory: .daf.2021.xgp_4x2_c.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.2021.xgp_4x2_c.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.2021.xgp_4x2_c.trlr_cables
 {
 	data_path: "/def/vehicle/ai/truck/daf.2021/accessory/trlr_cables/stock.sii"
 }

@@ -1,0 +1,69 @@
+SiiNunit
+{
+vehicle_lamp_setup  : .lamp_setup {
+
+	# Red Green Blue (linear color space)
+	# Use 'Sgfx presets' tool to grab them.
+	#
+	# See http://wiki.scs/wiki/ETS2:Lamp_Effect#Vehicle_Lamps
+ 	color_front_positional: (4.0, 4.0, 4.0)
+	color_rear_positional: (4.0, 0.1, 0.004)
+	color_side_positional: (4.0, 0.7, 0.004)
+	color_low_beam: (25.0, 25.0, 25.0)
+	color_high_beam: (64.0, 64.0, 64.0)
+	color_front_turn_signal: (48.0, 12.291, 0.0375)
+	color_rear_turn_signal: (32.0, 8.194, 0.025)
+	color_brake: (35.0, 0.35, 0.025)
+	color_reverse: (11.0, 11.0, 11.0)
+	color_daytime_running: (37.5, 37.5, 37.5)
+
+	wire_composites[0]: .comp_fl
+	wire_composites[1]: .comp_fr
+	wire_composites[2]: .comp_rl
+	wire_composites[3]: .comp_rr
+	wire_composites[4]: .comp_mid
+}
+
+vehicle_lamp_wire_composite : .comp_fl {
+	channel_r_wire: front_left_turn_signal
+	channel_g_wire: high_beam
+	channel_b_wire: low_beam
+	channel_a_wire: front_positional
+}
+
+vehicle_lamp_wire_composite : .comp_fr {
+	channel_r_wire: front_right_turn_signal
+	channel_g_wire: high_beam
+	channel_b_wire: low_beam
+	channel_a_wire: front_positional
+}
+
+vehicle_lamp_wire_composite : .comp_rl {
+	channel_r_wire: rear_left_turn_signal
+	channel_r_anim_frame_count: 4
+	channel_r_anim_fps: 10.0
+	channel_g_wire: brake
+	channel_b_wire: reverse
+	channel_a_wire: rear_positional
+}
+
+vehicle_lamp_wire_composite : .comp_rr {
+	channel_r_wire: rear_right_turn_signal
+	channel_r_anim_frame_count: 4
+	channel_r_anim_fps: 10.0
+	channel_g_wire: brake
+	channel_b_wire: reverse
+	channel_a_wire: rear_positional
+}
+
+vehicle_lamp_wire_composite : .comp_mid {
+	channel_r_wire: front_right_turn_signal
+	channel_r_anim_frame_count: 4
+	channel_r_anim_fps: 10.0
+	channel_g_wire: front_left_turn_signal
+	channel_g_anim_frame_count: 4
+	channel_g_anim_fps: 10.0
+	channel_b_wire: daytime_running
+	channel_a_wire: side_positional
+}
+}

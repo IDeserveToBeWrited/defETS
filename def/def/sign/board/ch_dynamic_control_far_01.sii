@@ -1,0 +1,107 @@
+SiiNunit
+{
+sign_board_template : _nameless.82c.ab20 {
+ board_name: "ch dynamic control far 01"
+ width: 1
+ height: &3fc00000
+ model_name: ch_2y001
+ items: 3
+ items[0]: _nameless.8f7.cb10
+ items[1]: _nameless.82a.8da0
+ items[2]: _nameless.8f7.e730
+ dynamic_attributes: 3
+ dynamic_attributes[0]: _nameless.82a.9be0
+ dynamic_attributes[1]: _nameless.6fb9.5310
+ dynamic_attributes[2]: _nameless.6fb9.5910
+}
+
+sign_template_image : _nameless.8f7.cb10 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 1
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 4090232830
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e235498
+ coords_r: &3f572ada
+ coords_t: &3fa6d3a1
+ coords_b: &3f664966
+ z_order: 1
+ tag: ""
+}
+
+sign_template_text : _nameless.82a.8da0 {
+ text: "300 m"
+ font_face: "/font/sign/dot_matrix.font"
+ font_size: &3e800000
+ text_halign: center
+ text_valign: none
+ font_color: 14873855
+ font_opacity: 1
+ line_spacing: &3e4ccccd
+ letter_spacing: 0
+ id: 3512729598
+ area_name: ""
+ area_idx: nil
+ coords_l: &33800000
+ coords_r: 1
+ coords_t: &3eac687d
+ coords_b: &3d71a6e0
+ z_order: 2
+ tag: ""
+}
+
+sign_template_image : _nameless.8f7.e730 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 3
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 933494784
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e6a11de
+ coords_r: &3f457b88
+ coords_t: &3f5669bd
+ coords_b: &3ed2b421
+ z_order: 3
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.82a.9be0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "300 m"
+ traffic_rules: 0
+ item_id: 3512729598
+ attr_name: text
+}
+
+sign_conditional_attribute : _nameless.6fb9.5310 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "arrow exit right white LED ch"
+ traffic_rules: 0
+ item_id: 933494784
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.6fb9.5910 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "lorry white LED ch"
+ traffic_rules: 0
+ item_id: 4090232830
+ attr_name: image_idx
+}
+
+}

@@ -1,9 +1,9 @@
-traffic_vehicle : traffic.daf2021_a4x2.context
+traffic_vehicle : traffic.daf.2021.xgp_4x2.context
 {
-	accessories[]: .daf2021_a4x2.context.chassis
-	accessories[]: .daf2021_a4x2.context.fwheel
-	accessories[]: .daf2021_a4x2.context.rwheel
-	accessories[]: .daf2021_a4x2.context.trlr_cables
+	accessories[]: .daf.2021.xgp_4x2.context.chassis
+	accessories[]: .daf.2021.xgp_4x2.context.fwheel
+	accessories[]: .daf.2021.xgp_4x2.context.rwheel
+	accessories[]: .daf.2021.xgp_4x2.context.trlr_cables
 
 	max_speed: 90
 
@@ -31,39 +31,40 @@ traffic_vehicle : traffic.daf2021_a4x2.context
 	tags[]: dealer
 	tags[]: context
 
-	spawn_condition[]: .traffic.daf2021_a4x2.context.spawn.condition
-	spawn_condition[]: .traffic.daf2021_a4x2.context.spawn.condition2
+	spawn_condition[]: .traffic.daf.2021.xgp_4x2.context.spawn.condition
+	spawn_condition[]: .traffic.daf.2021.xgp_4x2.context.spawn.condition2
 
 
 @include "drivers_generic.sui"
 }
 
-traffic_spawn_condition: .traffic.daf2021_a4x2.context.spawn.condition
+traffic_spawn_condition: .traffic.daf.2021.xgp_4x2.context.spawn.condition
 {
 	type: area
 	str_param[]: "daf"
 }
-traffic_spawn_condition: .traffic.daf2021_a4x2.context.spawn.condition2
+traffic_spawn_condition: .traffic.daf.2021.xgp_4x2.context.spawn.condition2
 {
 	type: area
 	str_param[]: "dealer"
 }
 
-vehicle_accessory: .daf2021_a4x2.context.chassis
+vehicle_accessory: .daf.2021.xgp_4x2.context.chassis
 {
-	data_path: "/def/vehicle/ai/truck/daf.2021/a4x2.sii"
+	data_path: "/def/vehicle/ai/truck/daf.2021/xgp_4x2_cam.sii"
+	
 }
-vehicle_wheel_accessory: .daf2021_a4x2.context.fwheel
+vehicle_wheel_accessory: .daf.2021.xgp_4x2.context.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/f_wheel/steel.sii"
 }
-vehicle_wheel_accessory: .daf2021_a4x2.context.rwheel
+vehicle_wheel_accessory: .daf.2021.xgp_4x2.context.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/r_wheel/steel.sii"
 }
-vehicle_addon_accessory : .daf2021_a4x2.context.trlr_cables
+vehicle_addon_accessory : .daf.2021.xgp_4x2.context.trlr_cables
 {
 	data_path: "/def/vehicle/ai/truck/daf.2021/accessory/trlr_cables/stock.sii"
 }

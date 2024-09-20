@@ -705,28 +705,28 @@ journey_events_road_event : j_re.rus_p
 {
 	parents[]: j_re.rhs_p
 
-	area_tag: urban_area
+	area_tag: urban
 }
 
 journey_events_road_event : j_re.ruo_p
 {
 	parents[]: j_re.rho_p
 
-	area_tag: urban_area
+	area_tag: urban
 }
 
 journey_events_road_event : j_re.rui_p
 {
 	parents[]: j_re.rhi_p
 
-	area_tag: urban_area
+	area_tag: urban
 }
 
 journey_events_road_event : j_re.run_p
 {
 	parents[]: j_re.rhn_p
 
-	area_tag: urban_area
+	area_tag: urban
 }
 
 
@@ -3935,13 +3935,22 @@ journey_events_road_event : j_re.city_2_l
 
 journey_events_road_event : j_re.weigh
 {
-	name: "Weigh station"
+	name: "Weigh station (enabled)"
 
 	set_idx: 2
 
 	outer_lane_allowed: true
 	area_tag: e_weigh
+}
 
+journey_events_road_event : j_re.no_weigh
+{
+	name: "Weigh station (disabled)"
+
+	set_idx: 2
+
+	outer_lane_allowed: true
+	area_tag: e_weigh
 }
 
 

@@ -1,0 +1,65 @@
+SiiNunit
+{
+ui_desktop_top_bar_config : .config {
+	window_path: "/ui/desktop_top_bar.sii"
+
+	screen_history_separator_text_look: "txt.desktop.top_bar.separator"
+	screen_history_previous_screen_button_look: "btn.desktop.top_bar.screen_hist"
+	screen_history_current_screen_text_look: "txt.desktop.top_bar.screen_hist"
+	screen_history_current_screen_tutorial_button_look: "btn.help"
+	screen_history_current_screen_tutorial_hint_text_look: "txt.bubble_help.right"
+
+	modes[]: .index
+	modes[]: .nonindex
+}
+
+ui_desktop_top_bar_mode : .index {
+	type: white_list
+	screen_list[]: "screen.ind_preview"
+	screen_list[]: "screen.ind_full"
+
+	sections[]: burger_menu
+	sections[]: home
+	sections[]: personal
+	sections[]: company
+	sections[]: notification
+	sections[]: country
+	sections[]: bank
+	sections[]: date_time
+}
+
+ui_desktop_top_bar_mode : .nonindex {
+	type: black_list
+	screen_list[]: "trailer.config.trailerman"
+	screen_list[]: "truck.config"
+	screen_list[]: "trailer.config"
+	screen_list[]: "truck.browser"
+	screen_list[]: "trailer.browser"
+	screen_list[]: "job.stop.summary"
+	screen_list[]: "job.parking.difficulty"
+	screen_list[]: "job.cargo.process"
+	screen_list[]: "screen.quick.travel.repark"
+	screen_list[]: "job.delivery"
+	screen_list[]: "convoy.concluded"
+	screen_list[]: "convoy.concluded.crash"
+	screen_list[]: "screen.ferry"
+	screen_list[]: "profile.hq"
+	screen_list[]: "truck.dealer"
+	screen_list[]: "options.missing_joy"
+	screen_list[]: "truck.overview"
+	screen_list[]: "jobs.overview_s"
+	screen_list[]: "truck.service"
+	screen_list[]: "truck.diag"
+	screen_list[]: "options.wizard"
+	screen_list[]: "options.bcg_theme"
+
+	sections[]: burger_menu
+	sections[]: home
+	sections[]: screen_hist
+	sections[]: notification
+	sections[]: country
+	sections[]: bank
+	sections[]: date_time
+}
+
+}

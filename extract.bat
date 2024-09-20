@@ -1,4 +1,4 @@
-@echo off
+	@echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Location for extraction
@@ -24,11 +24,16 @@ SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulato
 SET ZIP="C:\Program Files\7-Zip\7z.exe"
 
 :: Count Archives
-for %%l in (*.scs) DO (IF NOT %%l == base.scs IF NOT %%l == base_cfg.scs IF NOT %%l == core.scs IF NOT %%l == effect.scs IF NOT %%l == locale.scs SET /A COUNT=COUNT+1 )
+for %%l in (*.scs) DO (IF NOT %%l == base.scs IF NOT %%l == base_cfg.scs IF NOT %%l == base_map.scs IF NOT %%l == base_share.scs IF NOT %%l == base_vehicle.scs IF NOT %%l == core.scs IF NOT %%l == effect.scs IF NOT %%l == locale.scs SET /A COUNT=COUNT+1 )
 
 :: Extract and clean archives
-for %%a in (*.scs) DO (IF NOT %%a == base.scs IF NOT %%a == base_cfg.scs IF NOT %%a == core.scs IF NOT %%a == effect.scs IF NOT %%a == locale.scs echo|set /p="^(!CURRENT!\%COUNT%^) Unpacking %%~na" & %EXTRACTOR% %%a %LOCATION%\%%~na >NUL & echo|set /p=", Clean-up" & (for /D %%c in (%LOCATION%\%%~na\*) do ((IF NOT %%~nc == def RMDIR "%%c" /s /q >nul))) & DEL %LOCATION%\%%~na\%%~na.manifest.sii >nul & echo . Done. & SET /A CURRENT+=1 )
+for %%a in (*.scs) DO (IF NOT %%a == base.scs IF NOT %%a == base_cfg.scs IF NOT %%a == base_map.scs IF NOT %%a == base_share.scs IF NOT %%a == base_vehicle.scs IF NOT %%a == core.scs IF NOT %%a == effect.scs IF NOT %%a == locale.scs echo|set /p="^(!CURRENT!\%COUNT%^) Unpacking %%~na" & %EXTRACTOR% %%a %LOCATION%\%%~na >NUL & echo|set /p=", Clean-up" & (for /D %%c in (%LOCATION%\%%~na\*) do ((IF NOT %%~nc == def RMDIR "%%c" /s /q >nul))) & DEL %LOCATION%\%%~na\%%~na.manifest.sii >nul & echo . Done. & SET /A CURRENT+=1 )
 
 ECHO Zipping archive
 %ZIP% a -mx=9 %LOCATION%\def %LOCATION%\*
 ECHO Zipped
+
+ECHO Copying to GitHub
+REM rsync -q -rtvua --delete --exclude={".git",".gitattributes",".gitignore","*.md","*.sha*","*.sfv","extract*.bat","scs_extractor.exe"} /cygdrive/C/Users/doode/Documents/defETS /cygdrive/C/Users/doode/Documents/GitHub
+ECHO DONE LOL
+pause

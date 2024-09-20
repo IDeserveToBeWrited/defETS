@@ -681,6 +681,8 @@ road_look : road.template28
 	lanes_right[]: traffic_lane.road.expressway
 	lanes_right[]: traffic_lane.road.expressway
 
+	lane_variants[]: .lane_var.road.template28
+
 	compatible_edges_left[]: fr_sw_3m_a
 	compatible_edges_left[]: fr_sw_3m_b
 	compatible_edges_left[]: fr_sw_3m_c
@@ -695,6 +697,15 @@ road_look : road.template28
 	shoulder_space_left: 0.5
 	shoulder_space_right: 0.5
 }
+	road_template_variant : .lane_var.road.template28
+	{
+		lane_variant: local_road
+
+		lanes_left[]: traffic_lane.road.local.no_overtake
+		lanes_left[]: traffic_lane.road.local
+		lanes_right[]: traffic_lane.road.local.no_overtake
+		lanes_right[]: traffic_lane.road.local
+	}
 
 road_look : road.template29
 {
@@ -2527,6 +2538,9 @@ road_look : road.ger22
 	lanes_left[]: traffic_lane.road.motorway.low_density
 	lanes_right[]: traffic_lane.road.motorway.low_density
 
+	lane_variant_default: motorway
+	lane_variants[]: .lane_var.road.ger22.local
+
 	lane_offsets_left[]: (-4.5, 0.0)
 	lane_offsets_right[]: (-4.5, 0.0)
 
@@ -2540,6 +2554,13 @@ road_look : road.ger22
 	shoulder_space_right: 2.5
 
 }
+	road_template_variant : .lane_var.road.ger22.local
+	{
+		lane_variant: local_road
+
+		lanes_left[]: traffic_lane.road.local.no_overtake
+		lanes_right[]: traffic_lane.road.local.no_overtake
+	}
 
 road_look : road.ger23
 {
@@ -4324,7 +4345,7 @@ road_look : road.blke33b
 	template_right: "/road_template/blke/rail_blke.pmd"
 	template_left: "/road_template/blke/rail_blke.pmd"
 
-	road_offset: 5.74
+	road_offset: 5.748
 	template_variants_left[]: .tmpl_var.road.blke33b
 	template_variants_right[]: .tmpl_var.road.blke33b1
 	template_variants_left[]: .tmpl_var.road.blke33bd
@@ -6730,6 +6751,7 @@ road_look : road.blkw1min
 		compatible_edges_right[]: blkw_sw_15_d
 		compatible_edges_right[]: blkw_crb_n
 		compatible_edges_right[]: blkw_crb_w
+		compatible_edges_right[]: blkw_crb_wh
 		compatible_edges_right[]: blkw_crb_c
 		compatible_edges_right[]: blkw_crb_s_n
 		compatible_edges_right[]: blkw_crb_s_w
@@ -6885,6 +6907,7 @@ road_look : road.blkw1p2
 		compatible_edges_right[]: blkw_sw_lowr
 		compatible_edges_right[]: blkw_sw_lowc
 		compatible_edges_right[]: blkw_sw_lowt
+		compatible_edges_right[]: blkw_drns_w
 	}
 
 road_look : road.blkw2
@@ -6932,6 +6955,7 @@ road_look : road.blkw2
 		compatible_edges_right[]: blkw_sw_15_d
 		compatible_edges_right[]: blkw_crb_n
 		compatible_edges_right[]: blkw_crb_w
+		compatible_edges_right[]: blkw_crb_wh
 		compatible_edges_right[]: blkw_crb_c
 		compatible_edges_right[]: blkw_crb_s_n
 		compatible_edges_right[]: blkw_crb_s_w
@@ -6942,6 +6966,7 @@ road_look : road.blkw2
 		compatible_edges_right[]: blkw_drtin_1
 		compatible_edges_right[]: blkw_drtin_2
 		compatible_edges_right[]: blkw_drtin_3
+		compatible_edges_right[]: blkw_drns_w
 		compatible_edges_right[]: blkw_crb_ccc
 		compatible_edges_right[]: blkw_crb_scc
 		compatible_edges_right[]: blkw_crb_tcc
@@ -6972,6 +6997,7 @@ road_look : road.blkw2
 		compatible_edges_left[]: blkw_sw_15_d
 		compatible_edges_left[]: blkw_crb_n
 		compatible_edges_left[]: blkw_crb_w
+		compatible_edges_left[]: blkw_crb_wh
 		compatible_edges_left[]: blkw_crb_c
 		compatible_edges_left[]: blkw_crb_s_n
 		compatible_edges_left[]: blkw_crb_s_w
@@ -6982,6 +7008,7 @@ road_look : road.blkw2
 		compatible_edges_left[]: blkw_drtin_1
 		compatible_edges_left[]: blkw_drtin_2
 		compatible_edges_left[]: blkw_drtin_3
+		compatible_edges_left[]: blkw_drns_w
 		compatible_edges_left[]: blkw_crb_ccc
 		compatible_edges_left[]: blkw_crb_scc
 		compatible_edges_left[]: blkw_crb_tcc
@@ -7298,6 +7325,7 @@ road_look : road.blkw2no
 		compatible_edges_right[]: blkw_r_m_cst
 		compatible_edges_right[]: blkw_crb_swh
 		compatible_edges_right[]: blkw_crb_wh
+		compatible_edges_right[]: blkw_drns_w
 
 		compatible_edges_left[]: blkw_sh_15
  	 	compatible_edges_left[]: blkw_sh_asp
@@ -7340,7 +7368,7 @@ road_look : road.blkw2no
 		compatible_edges_left[]: blkw_r_m_cst
 		compatible_edges_left[]: blkw_crb_swh
 		compatible_edges_left[]: blkw_crb_wh
-
+		compatible_edges_left[]: blkw_drns_w
 	}
 
 road_look : road.blkw2p1
@@ -7505,6 +7533,78 @@ road_look : road.blkwhw11
  	 	compatible_edges_right[]: blkw_sh_asp
 		compatible_edges_right[]: blkw_crb_n
 		compatible_edges_right[]: blkw_crb_w
+		compatible_edges_right[]: blkw_crb_wh
+		compatible_edges_right[]: blkw_crb_c
+		compatible_edges_right[]: blkw_crb_s_n
+		compatible_edges_right[]: blkw_crb_s_w
+		compatible_edges_right[]: blkw_crb_s_c
+		compatible_edges_right[]: blkw_crb_t_n
+		compatible_edges_right[]: blkw_crb_t_w
+		compatible_edges_right[]: blkw_crb_t_c
+		compatible_edges_left[]: blkw_sh_15
+ 	 	compatible_edges_left[]: blkw_sh_asp
+		compatible_edges_left[]: blkw_crb_n
+		compatible_edges_left[]: blkw_crb_w
+		compatible_edges_left[]: blkw_crb_wh
+		compatible_edges_left[]: blkw_crb_c
+		compatible_edges_left[]: blkw_crb_s_n
+		compatible_edges_left[]: blkw_crb_s_w
+		compatible_edges_left[]: blkw_crb_s_c
+		compatible_edges_left[]: blkw_crb_t_n
+		compatible_edges_left[]: blkw_crb_t_w
+		compatible_edges_left[]: blkw_crb_t_c
+	}
+	road_template_variant : .lane_var.road.blkwhw11.local
+	{
+		model_variants[]: "default_loc"
+		model_variants[]: "no_lines_loc"
+
+		lanes_right[]: traffic_lane.road.local
+		lanes_left[]: traffic_lane.road.local
+	}
+	
+
+road_look : road.blkwhw1no
+	{
+		name: "blkw hw 1 no offset tmpl"
+		template_right: "/road_template/blkw/blkw_hw_1_lanes_one_way.pmd"
+		template_left: "/road_template/blkw/blkw_hw_1_lanes_one_way.pmd"
+
+		lane_offsets_left[]: (-4.5, 0.0)
+		lane_offsets_right[]: (-4.5, 0.0)
+
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_left[]: traffic_lane.road.motorway
+
+		add_parts_left[]: parking_l
+		add_parts_left[]: parking_r
+		add_parts_left[]: prk_wide
+		add_parts_left[]: prk_wide_l
+		add_parts_left[]: prk_wide_r
+		add_parts_left[]: double
+		add_parts_left[]: midline
+		add_parts_left[]: double_wide
+		add_parts_left[]: midline_wide
+
+		add_parts_right[]: parking_l
+		add_parts_right[]: parking_r
+		add_parts_right[]: prk_wide
+		add_parts_right[]: prk_wide_l
+		add_parts_right[]: prk_wide_r
+		add_parts_right[]: double
+		add_parts_right[]: midline
+		add_parts_right[]: double_wide
+		add_parts_right[]: midline_wide
+
+		road_offset: 5.5
+
+		shoulder_space_right: 2.5
+		shoulder_space_left: 2.5
+
+		compatible_edges_right[]: blkw_sh_15
+ 	 	compatible_edges_right[]: blkw_sh_asp
+		compatible_edges_right[]: blkw_crb_n
+		compatible_edges_right[]: blkw_crb_w
 		compatible_edges_right[]: blkw_crb_c
 		compatible_edges_right[]: blkw_crb_s_n
 		compatible_edges_right[]: blkw_crb_s_w
@@ -7524,14 +7624,7 @@ road_look : road.blkwhw11
 		compatible_edges_left[]: blkw_crb_t_w
 		compatible_edges_left[]: blkw_crb_t_c
 	}
-	road_template_variant : .lane_var.road.blkwhw11.local
-	{
-		model_variants[]: "default_loc"
-		model_variants[]: "no_lines_loc"
 
-		lanes_right[]: traffic_lane.road.local
-		lanes_left[]: traffic_lane.road.local
-	}
 
 road_look : road.blkwhw2
 	{
@@ -7946,6 +8039,35 @@ road_look : road.blkwrd
 		shoulder_space_left: -1.0
 		shoulder_space_right: -1.0
 	}
+	
+road_look : road.blkw1ai
+	{
+		name: "rail blkw double AI 1m offset"
+		template_right: "/road_template/blkw/rail_blkw.pmd"
+		template_left: "/road_template/blkw/rail_blkw.pmd"
+
+		road_offset: 4.76
+		
+		lanes_left[]: traffic_lane.rail.train
+		lanes_right[]: traffic_lane.rail.train
+
+		lane_offsets_left[]: (-5.0, 0.5)
+		lane_offsets_right[]: (-5.0, 0.5)
+
+		lane_variants[]: .lane_var.road.blkw1aia
+		lane_variants[]: .lane_var.road.blkw1aib
+		lane_variants[]: .lane_var.road.blkw1aic
+		lane_variants[]: .lane_var.road.blkw1aid
+		lane_variants[]: .lane_var.road.blkw1aie
+		lane_variants[]: .lane_var.road.blkw1aif
+
+		compatible_edges_left[]: blkw_rail
+		compatible_edges_right[]: blkw_rail
+
+		shoulder_space_left: -1.0
+		shoulder_space_right: -1.0
+
+	}
 
 road_look : road.blkwrd2
 	{
@@ -8020,6 +8142,7 @@ road_look : road.blkw1n
 		name: "blkw road 1 narrow tmpl"
 		template_right: "/road_template/blkw/blkw_road_1_narrow.pmd"
 		add_parts_right[]: parking
+		add_parts_right[]: parking_lv
 		add_parts_right[]: cross
 
 		lanes_left[]: traffic_lane.road.local.no_overtake
@@ -8085,6 +8208,7 @@ road_look : road.blkw1n
 	{
 		model_variants[]: "no_lanes"
 		model_variants[]: "broken"
+		model_variants[]: "broken_lv"
 
 		lanes_left[]: traffic_lane.road.local
 		lanes_right[]: traffic_lane.road.local
@@ -8096,6 +8220,7 @@ road_look : road.blkw1
 		name: "blkw road 1 tmpl"
 		template_right: "/road_template/blkw/blkw_road_1.pmd"
 		add_parts_right[]: parking
+		add_parts_right[]: parking_lv
 		add_parts_right[]: cross
 
 		overlay_schemes[]: "light : 1.0 : _a0|5 : _a1|2 : _a2|1 : _a3|5 : _a4|7 : _a5|2 : _a6|1 : _a7|5 : _a8|5 : _a9|5 : _a10|5 : _a11|5 : _a12|5 : _a13|5"
@@ -8165,6 +8290,7 @@ road_look : road.blkw1
 	{
 		model_variants[]: "no_lanes"
 		model_variants[]: "broken"
+		model_variants[]: "broken_lv"
 
 		lanes_left[]: traffic_lane.road.local
 		lanes_right[]: traffic_lane.road.local
@@ -8310,10 +8436,12 @@ road_look : road.blkw3
 		add_parts_right[]: parking
 		add_parts_right[]: parking_l
 		add_parts_right[]: parking_r
+		add_parts_right[]: prk_wide
 
 		add_parts_left[]: parking
 		add_parts_left[]: parking_l
 		add_parts_left[]: parking_r
+		add_parts_left[]: prk_wide
 
 		lane_offsets_right[]: (-9.0, 0.0)
 		lane_offsets_right[]: (-9.0, 0.0)
@@ -8961,6 +9089,66 @@ road_template_variant : .lane_var.road.blkwaidf
 		lanes_left[]: traffic_lane.rail.train.cargo.wire
 	}
 
+road_template_variant : .lane_var.road.blkw1aia
+	{
+		model_variants[]: "default"
+
+		lane_variant: tram
+
+		lanes_right[]: traffic_lane.rail.tram
+		lanes_left[]: traffic_lane.rail.tram
+	}
+
+road_template_variant : .lane_var.road.blkw1aib
+	{
+		model_variants[]: "default"
+
+		lane_variant: wire
+
+		lanes_right[]: traffic_lane.rail.train.wire
+		lanes_left[]: traffic_lane.rail.train.wire
+	}
+
+road_template_variant : .lane_var.road.blkw1aic
+	{
+		model_variants[]: "default"
+
+		lane_variant: cargo
+
+		lanes_right[]: traffic_lane.rail.train.cargo
+		lanes_left[]: traffic_lane.rail.train.cargo
+	}
+
+road_template_variant : .lane_var.road.blkw1aid
+	{
+		model_variants[]: "default"
+
+		lane_variant: passenger
+
+		lanes_right[]: traffic_lane.rail.train.passenger
+		lanes_left[]: traffic_lane.rail.train.passenger
+	}
+
+road_template_variant : .lane_var.road.blkw1aie
+	{
+		model_variants[]: "default"
+
+		lane_variant: pass_wire
+
+		lanes_right[]: traffic_lane.rail.train.passenger.wire
+		lanes_left[]: traffic_lane.rail.train.passenger.wire
+	}
+
+road_template_variant : .lane_var.road.blkw1aif
+	{
+		model_variants[]: "default"
+
+		lane_variant: cargo_wire
+
+		lanes_right[]: traffic_lane.rail.train.cargo.wire
+		lanes_left[]: traffic_lane.rail.train.cargo.wire
+	}
+
 road_look : road.blke32
 	{
 	name: "rail blke double temp"
@@ -9177,4 +9365,22 @@ road_look : road.ger38
 		compatible_edges_right[]: ger_sh_as_15
 	}
 
+road_look : road.template25
+{
+	name: "fr road 2 plus 1 tmpl"
+	template_right: "/road_template/fr/fr_road_1_plus.pmd"
+	template_left: "/road_template/fr/fr_road_plus_2.pmd"
+
+	road_offset: 0.85
+
+	lanes_left[]: traffic_lane.road.local
+	lanes_left[]: traffic_lane.road.local.no_overtake
+	lanes_right[]: traffic_lane.road.local.no_overtake
+
+	compatible_edges_left[]: fr_sh_15
+	compatible_edges_right[]: fr_sh_15
+
+	shoulder_space_left: 0.1
+	shoulder_space_right: 0.1
+}
 }

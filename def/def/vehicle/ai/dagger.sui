@@ -729,6 +729,8 @@ traffic_vehicle : traffic.dagger.xk
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
 
+	license_plate_type: fire
+
 
 	spawn_ratio: 0
 
@@ -843,6 +845,8 @@ traffic_vehicle : traffic.dagger.rs
 	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
 	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
 
+	license_plate_type: fire
+
 
 	spawn_ratio: 0
 
@@ -941,3 +945,44 @@ vehicle_wheel_accessory: .dagger.mk.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/dagger_r.sii"
 }
+
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ch  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+traffic_vehicle : traffic.dagger.ch
+{
+	accessories[]: .dagger.ch.chassis
+	accessories[]: .dagger.ch.fwheel
+	accessories[]: .dagger.ch.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 13000
+	engine_power: 186
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .dagger.ch.chassis
+{
+	data_path: "/def/vehicle/ai/dagger/ch.sii"
+}
+
+vehicle_wheel_accessory: .dagger.ch.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/dagger_f.sii"
+}
+
+vehicle_wheel_accessory: .dagger.ch.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/dagger_r.sii"
+}
+

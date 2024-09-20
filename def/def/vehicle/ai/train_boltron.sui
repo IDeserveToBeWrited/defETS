@@ -10,6 +10,8 @@ traffic_vehicle : traffic.boltron
 	accessories[]: .boltron.fwheel
 	accessories[]: .boltron.rwheel
 
+	variant[]: traffic.boltron_a
+
 	max_speed: 120
 
 	vehicle_mass: 83000
@@ -23,6 +25,8 @@ traffic_vehicle : traffic.boltron
 	displacement_limit: 0.0
 
 	spawn_ratio: 1
+
+	tags[]: cargo
 
 }
 
@@ -69,6 +73,8 @@ traffic_vehicle : traffic.boltron_a
 
 	spawn_ratio: 1
 
+	tags[]: cargo
+
 }
 
 vehicle_accessory: .boltron_a.chassis
@@ -87,4 +93,226 @@ vehicle_wheel_accessory: .boltron_a.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
+
+traffic_vehicle : traffic.boltron.passenger
+{
+	accessories[]: .boltron.passenger.chassis
+	accessories[]: .boltron.passenger.fwheel
+	accessories[]: .boltron.passenger.rwheel
+
+	variant[]: traffic.boltron_a.passenger
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_car.w_passenger 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1
+
+	tags[]: passenger
+}
+
+vehicle_accessory: .boltron.passenger.chassis
+{
+	data_path: "/def/vehicle/ai/train_boltron/chassis.sii"
+}
+
+vehicle_wheel_accessory: .boltron.passenger.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .boltron.passenger.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_vehicle : traffic.boltron_a.passenger
+{
+	accessories[]: .boltron_a.passenger.chassis
+	accessories[]: .boltron_a.passenger.fwheel
+	accessories[]: .boltron_a.passenger.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_car.w_passenger 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1
+
+	tags[]: passenger
+
+}
+
+vehicle_accessory: .boltron_a.passenger.chassis
+{
+	data_path: "/def/vehicle/ai/train_boltron/chassis_a.sii"
+}
+
+vehicle_wheel_accessory: .boltron_a.passenger.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .boltron_a.passenger.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
+###########################
+##
+##  boltron - at
+##
+###########################
+
+traffic_vehicle : traffic.boltron.at
+{
+	accessories[]: .boltron.at.chassis
+	accessories[]: .boltron.at.fwheel
+	accessories[]: .boltron.at.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_cargo 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0
+
+	tags[]: cargo
+
+}
+
+vehicle_accessory: .boltron.at.chassis
+{
+	data_path: "/def/vehicle/ai/train_boltron/chassis_at.sii"
+}
+
+vehicle_wheel_accessory: .boltron.at.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .boltron.at.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
+###########################
+##
+##  boltron - ch
+##
+###########################
+
+traffic_vehicle : traffic.boltron.ch
+{
+	accessories[]: .boltron.ch.chassis
+	accessories[]: .boltron.ch.fwheel
+	accessories[]: .boltron.ch.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_cargo 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	variant[]: traffic.boltron.ch.passenger
+
+	spawn_ratio: 0
+
+	tags[]: cargo
+}
+
+vehicle_accessory: .boltron.ch.chassis
+{
+	data_path: "/def/vehicle/ai/train_boltron/chassis_ch.sii"
+}
+
+vehicle_wheel_accessory: .boltron.ch.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .boltron.ch.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_vehicle : traffic.boltron.ch.passenger
+{
+	accessories[]: .boltron.ch.passenger.chassis
+	accessories[]: .boltron.ch.passenger.fwheel
+	accessories[]: .boltron.ch.passenger.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 83000
+	engine_power: 3720
+
+	trailer_chains[]: "train_car.w_passenger 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0
+
+	tags[]: passenger
+}
+
+vehicle_accessory: .boltron.ch.passenger.chassis
+{
+	data_path: "/def/vehicle/ai/train_boltron/chassis_ch.sii"
+}
+
+vehicle_wheel_accessory: .boltron.ch.passenger.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .boltron.ch.passenger.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
 

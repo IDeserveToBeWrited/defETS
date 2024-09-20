@@ -2472,6 +2472,32 @@ tr_semaphore_model : tr_sem_mdl.crossing_r_s.russia
 	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
 }
 
+tr_semaphore_model : tr_sem_mdl.crossing_r.switzerland
+{
+
+	name: "level_right_ch"
+
+	model_desc: "/prefab2/level_crossing/level_right_anim_ch.pmd"
+	model_coll: "/prefab2/level_crossing/level_right_anim_ch.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/right_dwn_ch.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/right_up_ch.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train"
+}
+
 tr_semaphore_model : tr_sem_mdl.sa.switzerland
 {
 
@@ -2653,6 +2679,15 @@ tr_semaphore_model : tr_sem_mdl.collumn.austria
 	state_transition[1]: 0.0 # red
 	state_transition[2]: 0.0 # orange_to_green
 	state_transition[3]: 4.0 # green
+	
+}
+
+tr_semaphore_model : tr_sem_mdl.collumn.germany
+{
+	name: "collumn_de"
+
+	model_desc: "/model/traffic_light/collumn_de.pmd"
+	model_coll: "/model/traffic_light/collumn_de.pmc"
 	
 }
 
@@ -2855,5 +2890,65 @@ semaphore_model : tr_sem_mdl.kp_gate_01
 	# The garage door disappearing is very visible from afar, so a larger distance than the default 300 m is needed
 	draw_distance: 1500
 }
+
+
+semaphore_model : tr_sem_mdl.garage_sc
+{
+	# one animation, collision animated
+
+	name: "garage_sc"
+	
+	model_desc: "/prefab/garage_scandinavia/door_sc.pmd"
+	model_coll: "/prefab/garage_scandinavia/door_sc.pmc"
+
+	state_anim: 4
+
+	# orange_to_red
+	state_anim[0]: "/prefab/garage_scandinavia/door.pma"
+
+	# red
+	state_anim[1]: ""
+
+	# orange_to_green
+	state_anim[2]: "/prefab/garage_scandinavia/door.pma"
+
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "OY|/sound/world/gate_iron.soundref"
+
+	# The garage door disappearing is very visible from afar, so a larger distance than the default 300 m is needed
+	draw_distance: 1500
+}
+
+tr_semaphore_model : tr_sem_mdl.col_sw_br
+{
+
+	name: "cologne_swing_bridge_01_de"
+
+	model_desc: "/prefab2/landmark/de/cologne_swing_bridge_01_de_ne.pmd"
+	model_coll: "/prefab2/landmark/de/cologne_swing_bridge_01_de_ne.pmc"
+
+	draw_distance: 1500
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/prefab2/landmark/de/cologne_swing_bridge_01_de_ne_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/de/cologne_swing_bridge_01_de_ne_open.pma"
+	
+	# green
+	state_anim[3]: ""
+    
+	#sound
+	sounds[]: "OY|/sound/world/sounds/refs/artificial/machines/swing_bridge_loop_1.soundref"
+	}
+
 
 }

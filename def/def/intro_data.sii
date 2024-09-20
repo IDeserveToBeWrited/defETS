@@ -13,6 +13,8 @@ intro_screen_layer : .intro.layer.video
 	item[]:	.intro.item.1
 	item[]:	.intro.item.2
 	item[]:	.intro.item.3
+	item[]:	.intro.item.4
+	item[]:	.intro.item.5
 	text_id: 100
 }
 
@@ -49,6 +51,26 @@ intro_screen_item : .intro.item.3
 	show_time: 0.5
 	fade_out_time: 0.0
 }
+
+intro_screen_item : .intro.item.4
+{
+	pml: "<img src=/material/ui/white.mat xscale=stretch_full yscale=stretch color=FF000000><ret>
+<align hstyle=center><offset vshift=234><img src=/material/ui/icon/attention_round.mat color=@@clr_sel@@ width=34 height=34 ka=center>
+<color value=@@clr_sel@@><offset hshift=10 vshift=2><font face=/font/big.font xscale=1.4 yscale=1.4>@@health_warning@@</font></align><ret>
+<align hstyle=left><offset vshift=340><margin left=200 right=-200><font face=/font/big.font><color value=@@clr_txt_d@@>@@health_warning_description@@</font></margin></align>"
+	fade_in_time: 1
+	show_time: 5
+	fade_out_time: 1
+}
+
+intro_screen_item : .intro.item.5
+{
+	pml: "<img src=/material/ui/white.mat xscale=stretch_full yscale=stretch color=FF000000>"
+	fade_in_time: 0
+	show_time: 0.5
+	fade_out_time: 0.0
+}
+
 
 intro_screen_layer : .intro.layer.text
 {

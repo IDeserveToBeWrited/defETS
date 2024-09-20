@@ -1,0 +1,51 @@
+SiiNunit
+{
+accessory_interior_data: etech_l_uk.renault.etech_t.interior
+{
+	name: "E-Tech UK"
+	price: 29040
+	unlock: 0
+	icon: "truck/renault_etech_t/interior/etech_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/renault_etech_t/interior/uk/etech_uk.pmd"
+	collision: "/vehicle/truck/renault_etech_t/interior/uk/etech_uk.pmc"
+	animated_model: "/vehicle/truck/renault_etech_t/interior/uk/anim/anim.pmd"
+
+	look: default
+	variant: default
+
+@include "dashboard_color.sui"
+@include "animations_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "seat.sui"
+
+	dashboard_path: "/ui/dashboard/renault_etech_t.sii"
+	dashboard_drawable_size: (1024, 512)
+	gps_path: "/ui/dashboard/renault_etech_t_gps.sii"
+	gps_drawable_size: (1024, 512)
+
+	left_hand_traffic: true
+
+	glass_panes[]: .renault.etech_t.pane.f_glasspane
+	glass_panes[]: .renault.etech_t.pane.l_glasspane
+	glass_panes[]: .renault.etech_t.pane.r_glasspane
+
+	ext_model: "/vehicle/truck/renault_etech_t/interior/external/stock_uk.pmd"
+	ext_variant: default
+	ext_look: default
+
+	defaults[]: "/def/vehicle/truck/renault.etech_t/accessory/steering_w/etech.sii"
+	defaults[]: "/def/vehicle/truck/renault.etech_t/accessory/codrv_seat/std.sii"
+	defaults[]: "/def/vehicle/truck/renault.etech_t/accessory/carpet/std.sii"
+
+	suitable_for[]: "sleeper.renault.etech_t.cabin"
+
+@include "int_shadow_uk.sui"
+
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

@@ -1,0 +1,66 @@
+SiiNunit
+{
+accessory_addon_trailer_cables_data : c_ch3_h.kassbohrer.scx.trlr_cables
+{
+
+	exterior_model: "/vehicle/trailer_owned/kassbohrer_scs/accessory/trlr_cables/trailer.pmd"
+	
+	suitable_for[]	: 	"ch_3_13_h.kassbohrer.scx.chassis"
+	suitable_for[]  : 	"ch_3_13_s_h.kassbohrer.scx.chassis"
+	
+	cables[]: .air_cable
+	cables[]: .ele_cable_w
+	cables[]: .ele_cable_b
+
+}
+
+trailer_cable_data : .air_cable
+{
+	locator_prefix: air_cable
+	rest_locator_prefix: rst_cable
+
+
+	trailer_plug_model_offset: (0.0, 0.0, -0.0)
+	ring_count: 20
+	ring_resolution: 6
+	straight_cable_length: 0.7
+	resolution: 5
+	width: 0.03 	#"radius" default 0.0175
+	
+	color: (0.1, 0.1, 0.1)
+}
+
+trailer_cable_data : .ele_cable_w
+{
+	locator_prefix: ele_cable_w
+	rest_locator_prefix: rst_cable_w
+
+	
+	vehicle_plug_model: "/vehicle/share/models/cables_connectors/electric_plug.pmd"
+	vehicle_plug_model_offset: (0.0, 0.0, -0.134)
+	ring_count: 20
+	ring_resolution: 6
+	straight_cable_length: 0.7
+	resolution: 5
+	width: 0.0175
+
+	color: (0.1, 0.1, 0.1)
+}
+
+trailer_cable_data : .ele_cable_b
+{
+	locator_prefix: ele_cable_b
+	rest_locator_prefix: rst_cable_b
+
+	
+	vehicle_plug_model: "/vehicle/share/models/cables_connectors/electric_plug.pmd"
+	vehicle_plug_model_offset: (0.0, 0.0, -0.134)
+	ring_count: 20
+	ring_resolution: 6
+	straight_cable_length: 0.7
+	resolution: 5
+	width: 0.0175
+
+	color: (0.1, 0.1, 0.1)
+}
+}

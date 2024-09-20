@@ -1,0 +1,38 @@
+traffic_vehicle : traffic.adeques.subcompact.2023
+{
+	accessories[]: .adeques.subcompact.2022.chassis
+	accessories[]: .adeques.subcompact.2022.fwheel
+	accessories[]: .adeques.subcompact.2022.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+	sound_move[]: "/sound/traffic/car_sport_1.soundref"
+
+	tags[]: cheap
+	tags[]: common
+
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .adeques.subcompact.2022.chassis
+{
+	data_path: "/def/vehicle/ai/adeques_subcompact_2022/chassis.sii"
+}
+
+vehicle_wheel_accessory: .adeques.subcompact.2022.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_17in.sii"
+}
+
+vehicle_wheel_accessory: .adeques.subcompact.2022.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_17in.sii"
+}

@@ -10,20 +10,22 @@ SiiNunit
 
 journey_events_road_event_data : .master
 {
-	// Common random road events - accidents, roadworks, etc.
+	# Common random road events - accidents, roadworks, etc.
 	max_road_events_count[0]: 100
 	min_road_events_distance[0]: 1000.0
 	probability[0]: 0.02
 
-	// Random visual stuff, usually decals (trash, tire marks, ...)
+	# Random visual stuff, usually decals (trash, tire marks, ...)
 	max_road_events_count[1]: 100
 	min_road_events_distance[1]: 30.0
 	probability[1]: 0.2
 
-	// Special map-location-specific events
-	max_road_events_count[2]: 2
+	# Special map-location-specific events
+	# Events are area-based. To ensure proper functionality, each event has to have separate event data
+	# for 'enabled' and 'disabled' state.
+	max_road_events_count[2]: 1
 	min_road_events_distance[2]: 500.0
-	probability[2]: 0.15
+	probability[2]: 0.6  # probability of spawning area event either in enabled or disabled state
 }
 
 }

@@ -1,8 +1,8 @@
-traffic_vehicle : traffic.tram_t4c
+traffic_vehicle : traffic.tram_t4.ro_cr
 {
-	accessories[]: .tram_t4c.chassis
-	accessories[]: .tram_t4c.fwheel
-	accessories[]: .tram_t4c.rwheel
+	accessories[]: .tram_t4.ro_cr.chassis
+	accessories[]: .tram_t4.ro_cr.fwheel
+	accessories[]: .tram_t4.ro_cr.rwheel
 
 	max_speed: 65
 
@@ -17,31 +17,28 @@ traffic_vehicle : traffic.tram_t4c
 
 	displacement_limit: 0.0
 
-	lod_dist[]: 70
-	lod_dist[]: 130
-	lod_dist[]: 200
 
-	spawn_condition[]: .traffic.tram_t4c.condition.city
+	spawn_condition[]: .traffic.tram_t4.ro_cr.condition.city
 }
 
-vehicle_accessory: .tram_t4c.chassis
+vehicle_accessory: .tram_t4.ro_cr.chassis
 {
-	data_path: "/def/vehicle/ai/tram_t4c/chassis.sii"
+	data_path: "/def/vehicle/ai/tram_t4/chassis_ro_cr.sii"
 }
 
-vehicle_wheel_accessory: .tram_t4c.fwheel
+vehicle_wheel_accessory: .tram_t4.ro_cr.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
 }
 
-vehicle_wheel_accessory: .tram_t4c.rwheel
+vehicle_wheel_accessory: .tram_t4.ro_cr.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
 
-traffic_spawn_condition: .traffic.tram_t4c.condition.city
+traffic_spawn_condition: .traffic.tram_t4.ro_cr.condition.city
 {
 	 # spawn only near city with specified name
 	 type: city

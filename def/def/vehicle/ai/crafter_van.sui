@@ -1,3 +1,6 @@
+
+######## Van - Color #########################################
+
 traffic_vehicle : traffic.crafter
 {
 	accessories[]: .crafter.chassis
@@ -38,6 +41,123 @@ vehicle_wheel_accessory: .crafter.fwheel
 }
 
 vehicle_wheel_accessory: .crafter.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+
+######## Company Van - Ziegelstein #########################################
+
+
+traffic_vehicle : traffic.crafter.cmp_zi
+{
+	accessories[]: .crafter.cmp_zi.chassis
+	accessories[]: .crafter.cmp_zi.fwheel
+	accessories[]: .crafter.cmp_zi.rwheel
+
+	variant[]: traffic.crafter.cmp_ba
+	variant[]: traffic.crafter.cmp_ma
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_zi.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_zi.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_zi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_zi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+
+######## Company Van - Mayer #########################################
+
+
+traffic_vehicle : traffic.crafter.cmp_ma
+{
+	accessories[]: .crafter.cmp_ma.chassis
+	accessories[]: .crafter.cmp_ma.fwheel
+	accessories[]: .crafter.cmp_ma.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_ma.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_ma.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ma.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ma.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+
+######## Company Van - Baumabuild #########################################
+
+
+traffic_vehicle : traffic.crafter.cmp_ba
+{
+	accessories[]: .crafter.cmp_ba.chassis
+	accessories[]: .crafter.cmp_ba.fwheel
+	accessories[]: .crafter.cmp_ba.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_ba.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_ba.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ba.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ba.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"

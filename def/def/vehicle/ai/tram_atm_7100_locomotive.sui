@@ -197,3 +197,54 @@ traffic_spawn_condition: .traffic.atm_7100.it_mi2.condition.city
 	type: city
 	str_param[]: "milano"
 }
+
+
+## SWITZERLAND GENEVA
+
+traffic_vehicle : traffic.atm_7100.ch_ge
+{
+	accessories[]: .atm_7100.ch_ge.chassis
+	accessories[]: .atm_7100.ch_ge.fwheel
+	accessories[]: .atm_7100.ch_ge.rwheel
+
+	max_speed: 70 
+
+	vehicle_mass: 42000	# 42t each wagon (loaded)
+	engine_power: 2120	# 4x106kW each wagon, 5 wagons
+
+	trailer_chains[]: "train_car.atm_7100.ch_ge.car1"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	
+	spawn_condition[]: .traffic.atm_7100.ch_ge.condition.city
+}
+
+vehicle_accessory: .atm_7100.ch_ge.chassis
+{
+	data_path: "/def/vehicle/ai/tram_atm_7100/loco_ch_ge.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100.ch_ge.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .atm_7100.ch_ge.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.atm_7100.ch_ge.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "geneve"
+}

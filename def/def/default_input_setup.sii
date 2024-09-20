@@ -5,6 +5,18 @@ SiiNunit
 
 # Wheels
 
+default_input_entry : input.steer.tcs.base
+{
+	group: 1
+	weight: 1500
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "steer.absolute <1> x"
+	configs[]: "steering.configured"
+	configs[]: "steer.range 1800"
+}
+
 default_input_entry : input.steer.fanatec.base
 {
 	group: 1
@@ -14,6 +26,7 @@ default_input_entry : input.steer.fanatec.base
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.logitech.g29
@@ -25,6 +38,7 @@ default_input_entry : input.steer.logitech.g29
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.logitech.g920
@@ -36,6 +50,7 @@ default_input_entry : input.steer.logitech.g920
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.logitech.g27
@@ -47,6 +62,7 @@ default_input_entry : input.steer.logitech.g27
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.logitech.g25
@@ -58,6 +74,7 @@ default_input_entry : input.steer.logitech.g25
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.logitech.driving.force.gt
@@ -69,6 +86,7 @@ default_input_entry : input.steer.logitech.driving.force.gt
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"	
 }
 
 default_input_entry : input.steer.gembird.shockforce.m
@@ -80,6 +98,7 @@ default_input_entry : input.steer.gembird.shockforce.m
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 270"	
 }
 
 default_input_entry : input.steer.logitech.momo.racing.wheel
@@ -91,6 +110,7 @@ default_input_entry : input.steer.logitech.momo.racing.wheel
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 180"	
 }
 
 default_input_entry : input.steer.ms.sidewinder.ff.wheel
@@ -102,6 +122,7 @@ default_input_entry : input.steer.ms.sidewinder.ff.wheel
 
 	configs[]: "steer.absolute <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 220"	
 }
 
 # Gamepads
@@ -115,6 +136,7 @@ default_input_entry : input.steer.xinput.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.steam.gamepad
@@ -126,6 +148,7 @@ default_input_entry : input.steer.steam.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.x360.gamepad
@@ -137,9 +160,11 @@ default_input_entry : input.steer.x360.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 # XB1 controller - new win10 driver, separate axes for triggers
+# Update 2024, Win11, triggers no longer separated, same as other xb controllers
 default_input_entry : input.steer.xbone.gamepad
 {
 	group: 1
@@ -149,6 +174,7 @@ default_input_entry : input.steer.xbone.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 # XB1 controller - new id, but old behaviour? Seen on win7
@@ -161,6 +187,7 @@ default_input_entry : input.steer.xbone7.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 # Original XB1 controller id, the usual dinput setup with left/right triggers sharing one axis
@@ -173,6 +200,7 @@ default_input_entry : input.steer.xone.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.logitech.rumblepad.2.usb
@@ -184,6 +212,7 @@ default_input_entry : input.steer.logitech.rumblepad.2.usb
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.logitech.f710.x
@@ -195,6 +224,7 @@ default_input_entry : input.steer.logitech.f710.x
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.logitech.f710.di
@@ -206,6 +236,7 @@ default_input_entry : input.steer.logitech.f710.di
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.thrustmaster.dual.analog.3
@@ -217,6 +248,7 @@ default_input_entry : input.steer.thrustmaster.dual.analog.3
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.genius.maxfire.grandias.12
@@ -228,6 +260,7 @@ default_input_entry : input.steer.genius.maxfire.grandias.12
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.ps4.gamepad
@@ -239,6 +272,7 @@ default_input_entry : input.steer.ps4.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.ps5.gamepad
@@ -250,6 +284,7 @@ default_input_entry : input.steer.ps5.gamepad
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 # Joystics
@@ -263,6 +298,7 @@ default_input_entry : input.steer.saitek.x52.pro.flight
 
 	configs[]: "steer.absolute <1> x" # Has precise positioning so absolute mode is fine.
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.logitech.wingman.force.3d
@@ -274,6 +310,7 @@ default_input_entry : input.steer.logitech.wingman.force.3d
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.logitech.attack.3.usb
@@ -285,6 +322,7 @@ default_input_entry : input.steer.logitech.attack.3.usb
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.genius.maxfighter.f17
@@ -296,6 +334,7 @@ default_input_entry : input.steer.genius.maxfighter.f17
 
 	configs[]: "steer.relative <1> x"
 	configs[]: "steering.configured"
+	configs[]: "steer.range 900"
 }
 
 # Unusuall
@@ -311,6 +350,7 @@ default_input_entry : input.steer.saitek.pro.flight.combat.rudder.pedals
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{076406A3-0000-0000-0000-504944564944}'"
 
 	configs[]: "steer.absolute <1> x" # Pressing left pedal forward will turn to the left like in the plane.
+	configs[]: "steer.range 900"
 }
 
 # Default fallback
@@ -325,6 +365,7 @@ default_input_entry : input.steer.generic.joy.absolute
 	names[]: "!<st_gamepad>"
 
 	configs[]: "steer.absolute <1> x"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.generic.joy.relative
@@ -337,6 +378,7 @@ default_input_entry : input.steer.generic.joy.relative
 	names[]: "<st_gamepad>"
 
 	configs[]: "steer.relative <1> x"
+	configs[]: "steer.range 900"
 }
 
 default_input_entry : input.steer.default
@@ -347,11 +389,24 @@ default_input_entry : input.steer.default
 	names[]: "<no_steer_device>"
 
 	configs[]: "steer.absolute joy x"
+	configs[]: "steer.range 900"
 }
 
 ############################ Acceleration/braking #############################
 
 # Driving pedals
+
+default_input_entry : input.pedals.tcs.base
+{
+	group: 10
+	weight: 2100
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "acceltcs <1> sl2 1"
+	configs[]: "braketcs <1> sl1 1"
+	configs[]: "pedals.configured"
+}
 
 default_input_entry : input.accelerate.bodnar.g27
 {
@@ -723,8 +778,7 @@ default_input_entry : input.pedals.xbone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "accelerate <1> rz 0"
-	configs[]: "brake <1> z 0"
+	configs[]: "accelerate.brake <1> z"
 	configs[]: "pedals.configured"
 }
 
@@ -900,6 +954,17 @@ default_input_entry : input.pedals.default
 
 ################################### Clutch ####################################
 
+default_input_entry : input.clutch.tcs.base
+{
+	group: 20
+	weight: 2100
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "clutchtcs <1> rz 1"
+	configs[]: "clutch.configured"
+}
+
 default_input_entry : input.clutch.bodnar.g27
 {
 	group: 20
@@ -1002,6 +1067,16 @@ default_input_entry : input.clutch.default
 ############################### Looking around ################################
 
 # Wheels
+
+default_input_entry : input.look.tcs.base
+{
+	group: 30
+	weight: 1300
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "look.generic <1> y 1 sl21 0"
+}
 
 default_input_entry : input.look.fanatec.base
 {
@@ -1275,9 +1350,6 @@ default_input_entry : input.gearbox.updown.logitech.momo.racing.wheel
 
 # Normal buttons.
 
-# We do not setup gear shifting by default for XInput gamepads,
-# most people won't use it and the limited amount of buttons are better used elsewhere
-
 default_input_entry : input.gearbox.updown.xinput.gamepad
 {
 	group: 40
@@ -1285,6 +1357,7 @@ default_input_entry : input.gearbox.updown.xinput.gamepad
 
 	names[]: "xinput.'xinput_gamepad_'"
 
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.y) derived(<1>.rstick_down?0,<1>.y) long_press(<1>.b10?0)"
 	configs[]: "gearupdown.default"
 }
 
@@ -1295,7 +1368,7 @@ default_input_entry : input.gearbox.updown.x360.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b10?0)"
 	configs[]: "gearupdown.configured"
 }
 
@@ -1306,7 +1379,7 @@ default_input_entry : input.gearbox.updown.xbone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b10?0)"
 	configs[]: "gearupdown.configured"
 }
 
@@ -1317,7 +1390,7 @@ default_input_entry : input.gearbox.updown.xbone7.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b10?0)"
 	configs[]: "gearupdown.configured"
 }
 
@@ -1328,7 +1401,29 @@ default_input_entry : input.gearbox.updown.xone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "gearupdown <1> 4 2"
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b10?0)"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.ps4.gamepad
+{
+	group: 40
+	weight: 154
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b12?0)"
+	configs[]: "gearupdown.configured"
+}
+
+default_input_entry : input.gearbox.updown.ps5.gamepad
+{
+	group: 40
+	weight: 153
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
+
+	configs[]: "gearupdown0.cstm_mod_1 derived(<1>.rstick_up?0,<1>.ry) derived(<1>.rstick_down?0,<1>.ry) long_press(<1>.b12?0)"
 	configs[]: "gearupdown.configured"
 }
 
@@ -1485,6 +1580,17 @@ default_input_entry : input.gearbox.drive.default
 
 # Physical lever positions.
 
+default_input_entry : input.gearbox.hshifter.tcs
+{
+	group: 60
+	weight: 2200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{01860F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.tcs <1>"
+	configs[]: "hshifter.configured"
+}
+
 default_input_entry : input.gearbox.hshifter.bodnar
 {
 	group: 60
@@ -1576,6 +1682,16 @@ default_input_entry : input.gearbox.hshifter.default
 ############################## H-shifter switches setup ################################
 
 # Hshifter gear switches (range, splitter).
+
+default_input_entry : input.gearbox.hshifter.switch.tcs
+{
+	group: 65
+	weight: 2200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{01860F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.switch.tcs <1>"
+}
 
 default_input_entry : input.gearbox.hshifter.switch.bodnar
 {
@@ -1736,6 +1852,45 @@ default_input_entry : input.ui_joy.logitech.f710.di
 	configs[]: "ui_back <1> 3"
 }
 
+default_input_entry : input.ui_joy.tcs.wheel
+{
+	group: 70
+	weight: 200
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "ui_back b13"
+	configs[]: "selectfcs b5"
+	configs[]: "shortcut1 b1"
+	configs[]: "shortcut2 b3"
+	configs[]: "nav_prv b4"
+	configs[]: "nav_nxt b2"
+	configs[]: "sec_prv b25"
+	configs[]: "sec_nxt b23"
+	configs[]: "scroll_j_x rx"
+	configs[]: "scroll_j_y ry"
+	configs[]: "j_mapzom_in b26"
+	configs[]: "j_mapzom_out b28"
+	configs[]: "j_cam_lk_lr rx"
+	configs[]: "j_cam_lk_ud ry"
+	configs[]: "j_cam_mv_lr y"
+	configs[]: "j_cam_mv_ud sl21"
+	configs[]: "j_trzoom_in b26"
+	configs[]: "j_trzoom_out b28"
+	configs[]: "photosnap b5"
+	configs[]: "photo_hctrl b31"
+	configs[]: "photores b30"
+	configs[]: "photosman b11"
+	configs[]: "photo_opts <1> b16"
+	configs[]: "photoup pov1_up"
+	configs[]: "photodown pov1_down"
+	configs[]: "photorolll <1> pov1_left"
+	configs[]: "photorollr <1> pov1_right"
+	configs[]: "camwalk_crou b9"	
+	configs[]: "phot_z_j_in <1> b22"
+	configs[]: "phot_z_j_out <1> b24"
+}
+
 default_input_entry : input.ui_joy.ps4.gamepad
 {
 	group: 70
@@ -1743,11 +1898,6 @@ default_input_entry : input.ui_joy.ps4.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
 
-	# Square = b1, Cross = b2, Circle = b3, Triangle = b4
-	# L1 = b5, R1 = b6, L2 = rx/b7, R2 = ry/b8
-	# Share = b9, Options = b10
-	# Left Joy = x/y, Right Joy = y/rz
-	# Left Joy Press = b11, Right Joy Press = b12
 	configs[]: "ui_back b3"
 	configs[]: "selectfcs b2"
 	configs[]: "shortcut1 b1"
@@ -1771,7 +1921,7 @@ default_input_entry : input.ui_joy.ps4.gamepad
 	configs[]: "photoup b8"
 	configs[]: "photodown b7"
 	configs[]: "photosnap b1"
-	configs[]: "photosman b9"
+	configs[]: "photosman b14"
 	configs[]: "photo_hctrl b11"
 	configs[]: "photores b12"
 	configs[]: "camwalk_crou b11"
@@ -1784,11 +1934,6 @@ default_input_entry : input.ui_joy.ps5.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
 
-	# Square = b1, Cross = b2, Circle = b3, Triangle = b4
-	# L1 = b5, R1 = b6, L2 = rx/b7, R2 = ry/b8
-	# Share = b9, Options = b10
-	# Left Joy = x/y, Right Joy = y/rz
-	# Left Joy Press = b11, Right Joy Press = b12
 	configs[]: "ui_back b3"
 	configs[]: "selectfcs b2"
 	configs[]: "shortcut1 b1"
@@ -1812,7 +1957,7 @@ default_input_entry : input.ui_joy.ps5.gamepad
 	configs[]: "photoup b8"
 	configs[]: "photodown b7"
 	configs[]: "photosnap b1"
-	configs[]: "photosman b9"
+	configs[]: "photosman b14"
 	configs[]: "photo_hctrl b11"
 	configs[]: "photores b12"
 	configs[]: "camwalk_crou b11"
@@ -1821,6 +1966,118 @@ default_input_entry : input.ui_joy.ps5.gamepad
 
 ########## Complete setup for the rest of controls. Currently only XInput, Xbox 360 and Xbox One are covered.
 
+default_input_entry : input.misc.tcs.wheel
+{
+	group: 80
+	weight: 500
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "advzoomin <1> b1"
+	configs[]: "advzoomout <1> b3"
+	configs[]: "advpagen <1> b2"
+	configs[]: "advpagep <1> b4"
+	configs[]: "radio <1> b37"
+	configs[]: "radionext <1> pov1_right"
+	configs[]: "radioprev <1> pov1_left"
+	configs[]: "radioup <1> pov1_up"
+	configs[]: "radiodown <1> pov1_down"
+	configs[]: "menu <1> 21"
+	configs[]: "blinkers <1> b40 b41"
+	configs[]: "activate <1> b5"
+	configs[]: "cruise <1> b25"
+	configs[]: "cruiectrlinc <1> b22"
+	configs[]: "cruiectrldec <1> b24"
+	configs[]: "cruiectrlres <1> b23"
+	configs[]: "wipers <1> b43"
+	configs[]: "wipersback <1> b42"
+	configs[]: "retarderup <1> b46"
+	configs[]: "retarderdown <1> b47"
+	configs[]: "transemi <1> b54"
+	configs[]: "camera1 <1> b8"
+	configs[]: "cameranext <1> b6"
+	configs[]: "horn <1> b7"
+	configs[]: "lighthorn <1> b38"
+	configs[]: "hblight <1> b39"
+	configs[]: "airhorn <1> b10"
+	configs[]: "accmode <1> b11"
+	configs[]: "dashmapzoom <1> b26"
+	configs[]: "display <1> b27"
+	configs[]: "infotainment <1> b28"
+	configs[]: "tripreset <1> b29"
+	configs[]: "mpptt <1> b12"
+	configs[]: "quick_chat <1> b13"
+	configs[]: "advpage0 <1> b14"
+	configs[]: "advpage1 <1> b15"
+	configs[]: "advpage2 <1> b16"
+	configs[]: "advpage4 <1> b17"
+	configs[]: "camzoom <1> b18"
+	configs[]: "photo_zoom <1> b19"
+	configs[]: "navmap <1> b20"
+	configs[]: "assistact1 <1> b30"
+	configs[]: "assistact2 <1> b31"
+	configs[]: "assistact3 <1> b32"
+	configs[]: "assistact4 <1> b33"
+	configs[]: "assistact5 <1> b34"
+	configs[]: "adjuster <1> b9"
+	configs[]: "camwalk_for <1> pov1_up"
+	configs[]: "camwalk_back <1> pov1_down"
+	configs[]: "camwalk_left <1> pov1_left"
+	configs[]: "camwalk_righ <1> pov1_right"
+	configs[]: "camwalk_run <1> b8"
+	configs[]: "camwalk_jump <1> b10"
+	configs[]: "photo_mode <1> b19"
+	configs[]: "chat_act <1> b36"
+	configs[]: "name_tags <1> b35"
+	configs[]: "engbrakeauto <1> b52"
+	configs[]: "retarderauto <1> b53"
+	configs[]: "tranpwrmode <1> b49"
+	configs[]: "gearuphint <1> b44"
+	configs[]: "geardownhint <1> b45"
+	configs[]: "gear0 <1> b50"
+	configs[]: "geardrive <1> b48"
+	configs[]: "gearreverse <1> b51"
+#	configs[]: "dclutch <1> b41"
+	
+}
+
+default_input_entry : input.misc.tcs.shifter
+{
+	group: 80
+	weight: 500
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{01860F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "lwinopen <1> b12"
+	configs[]: "lwinclose <1> b10"
+	configs[]: "rwinopen <1> b13"
+	configs[]: "rwinclose <1> b11"
+	configs[]: "frontsuspup <1> b14"
+	configs[]: "frontsuspdwn <1> b16"
+	configs[]: "rearsuspup <1> b15"
+	configs[]: "rearsuspdwn <1> b17"
+	configs[]: "suspreset <1> b24"
+	configs[]: "parkingbrake <1> b26"
+	configs[]: "flasher4way <1> b27"
+	configs[]: "light <1> b18"
+	configs[]: "engbrakeup <1> b19"
+	configs[]: "engbrakedwn <1> b21"
+	configs[]: "trailerbrake <1> b20"
+	configs[]: "attach <1> b22"
+	configs[]: "beacon <1> b23"
+	configs[]: "diflock <1> b25"
+	configs[]: "engineelect <1> b28"
+	configs[]: "engine <1> b34"
+	configs[]: "liftaxle <1> b29"
+	configs[]: "liftaxlet <1> b35"
+	configs[]: "showmirrors <1> b31"
+	configs[]: "showhud <1> b38"
+	configs[]: "cam3 <1> b33"
+	configs[]: "screenshot <1> b39"
+	configs[]: "embrake <1> b32"
+	configs[]: "laneassmode <1> b37"
+}
+
 default_input_entry : input.misc.xinput.gamepad
 {
 	group: 80
@@ -1828,29 +2085,38 @@ default_input_entry : input.misc.xinput.gamepad
 
 	names[]: "xinput.'xinput_gamepad_'"
 
-	# b12 = start
-	configs[]: "menu <1> 12"
-
-	# b5 = LB, b6 = RB
-	configs[]: "blinkers <1> b5 b6"
-
-	# b11 = back
-	configs[]: "advisor <1> b11"
-
 	# b1 = A, b2 = B, b3 = X, b4 = Y
+	# b5 = LB, b6 = RB
+	# b7 = LT, b8 = RT
+	# b9 = left stick press, b10 = right stick press
+	# b11 = back, b12 = start
+
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b1"
-	configs[]: "camera1 <1> b2"
-	configs[]: "cruise <1> b3"
-	configs[]: "attach <1> b4"
+	configs[]: "camreset.full_or short_press(<1>.b2?0)"
+	configs[]: "cruise.full_or long_press(<1>.b2?0)"
+	configs[]: "light.full_or short_press(<1>.b3?0)"
+	configs[]: "hblight.full_or long_press(<1>.b3?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
 
-	# b9 = left stick press, b10 = right
 	configs[]: "horn <1> b9"
-	configs[]: "engine <1> b10"
+	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
 
-	configs[]: "cameranext <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
-	configs[]: "navmap <1> pov1_down"
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b11?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b11?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b11?0"
+	configs[]: "menu.full_or short_press(<1>.b12?0)"
+	configs[]: "advisor.full_or long_press(<1>.b12?0)"
 }
 
 default_input_entry : input.misc.x360.gamepad
@@ -1860,14 +2126,38 @@ default_input_entry : input.misc.x360.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "menu <1> 8"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b7"
+	# b1 = A, b2 = B, b3 = X, b4 = Y
+	# b5 = LB, b6 = RB
+	# button_lt = LT, button_rt = RT
+	# b9 = left stick press, b10 = right stick press
+	# b7 = back, b8 = start
+
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b1"
-	configs[]: "cruise <1> b3"
-	configs[]: "attach <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
+	configs[]: "camreset.full_or short_press(<1>.b2?0)"
+	configs[]: "cruise.full_or long_press(<1>.b2?0)"
+	configs[]: "light.full_or short_press(<1>.b3?0)"
+	configs[]: "hblight.full_or long_press(<1>.b3?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+
+	configs[]: "horn <1> b9"
+	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
+
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b7?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b7?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b7?0"
+	configs[]: "menu.full_or short_press(<1>.b8?0)"
+	configs[]: "advisor.full_or long_press(<1>.b8?0)"
 }
 
 default_input_entry : input.misc.xbone.gamepad
@@ -1877,14 +2167,32 @@ default_input_entry : input.misc.xbone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "menu <1> 8"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b7"
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b1"
-	configs[]: "cruise <1> b3"
-	configs[]: "attach <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
+	configs[]: "camreset.full_or short_press(<1>.b2?0)"
+	configs[]: "cruise.full_or long_press(<1>.b2?0)"
+	configs[]: "light.full_or short_press(<1>.b3?0)"
+	configs[]: "hblight.full_or long_press(<1>.b3?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+
+	configs[]: "horn <1> b9"
+	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
+
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b7?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b7?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b7?0"
+	configs[]: "menu.full_or short_press(<1>.b8?0)"
+	configs[]: "advisor.full_or long_press(<1>.b8?0)"
 }
 
 default_input_entry : input.misc.xbone7.gamepad
@@ -1894,14 +2202,32 @@ default_input_entry : input.misc.xbone7.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "menu <1> 8"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b7"
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b1"
-	configs[]: "cruise <1> b3"
-	configs[]: "attach <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
+	configs[]: "camreset.full_or short_press(<1>.b2?0)"
+	configs[]: "cruise.full_or long_press(<1>.b2?0)"
+	configs[]: "light.full_or short_press(<1>.b3?0)"
+	configs[]: "hblight.full_or long_press(<1>.b3?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+
+	configs[]: "horn <1> b9"
+	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
+
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b7?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b7?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b7?0"
+	configs[]: "menu.full_or short_press(<1>.b8?0)"
+	configs[]: "advisor.full_or long_press(<1>.b8?0)"
 }
 
 default_input_entry : input.misc.xone.gamepad
@@ -1911,14 +2237,32 @@ default_input_entry : input.misc.xone.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
 
-	configs[]: "menu <1> 8"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b7"
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b1"
-	configs[]: "cruise <1> b3"
-	configs[]: "attach <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
+	configs[]: "camreset.full_or short_press(<1>.b2?0)"
+	configs[]: "cruise.full_or long_press(<1>.b2?0)"
+	configs[]: "light.full_or short_press(<1>.b3?0)"
+	configs[]: "hblight.full_or long_press(<1>.b3?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+
+	configs[]: "horn <1> b9"
+	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
+
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b7?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b7?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b7?0"
+	configs[]: "menu.full_or short_press(<1>.b8?0)"
+	configs[]: "advisor.full_or long_press(<1>.b8?0)"
 }
 
 default_input_entry : input.misc.ps4.gamepad
@@ -1928,25 +2272,41 @@ default_input_entry : input.misc.ps4.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{09CC054C-0000-0000-0000-504944564944}'"
 
-	# Options = b10, Share = b9
-	configs[]: "menu <1> 10"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b9"
+	# b1 = Square, b2 = Cross, b3 = Circle, b4 = Triangle
+	# b5 = L1, b6 = R1
+	# b7 = L2, b8 = R2
+	# b11 = L3, b12 = R3
+	# b9 = Share, b10 = Options
+	# b14 = Touchpad
 
-	# Square = b1, Cross = b2, Circle = B3, Triangle = B4
+	configs[]: "cstm_mod_1 <1> b5"
+
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b2"
-	configs[]: "camera1 <1> b3"
-	configs[]: "cruise <1> b1"
-	configs[]: "attach <1> b4"
+	configs[]: "camreset.full_or short_press(<1>.b3?0)"
+	configs[]: "cruise.full_or long_press(<1>.b3?0)"
+	configs[]: "light.full_or short_press(<1>.b1?0)"
+	configs[]: "hblight.full_or long_press(<1>.b1?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
 
-	# b11 = left stick press, b12 = right stick press
 	configs[]: "horn <1> b11"
-	configs[]: "engine <1> b12"
+	configs[]: "camzoom.no_cstm_mod <1>.b12?0"
 
-	configs[]: "cameranext <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
-	configs[]: "navmap <1> pov1_down"
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b14?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b14?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b14?0"
+	configs[]: "menu.full_or short_press(<1>.b10?0)"
+	configs[]: "advisor.full_or long_press(<1>.b10?0)"
+
+	configs[]: "screenshot <1> b9"
 }
 
 default_input_entry : input.misc.ps5.gamepad
@@ -1956,30 +2316,50 @@ default_input_entry : input.misc.ps5.gamepad
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{0CE6054C-0000-0000-0000-504944564944}'"
 
-	# Options = b10, Share = b9
-	configs[]: "menu <1> 10"
-	configs[]: "blinkers <1> b5 b6"
-	configs[]: "advisor <1> b9"
+	configs[]: "cstm_mod_1 <1> b5"
 
-	# Square = b1, Cross = b2, Circle = B3, Triangle = B4
+	configs[]: "cameranext.full_or short_press(<1>.pov1_up?0)"
+	configs[]: "camera1.full_or long_press(<1>.pov1_up?0)"
+	configs[]: "wipers.full_or short_press(<1>.pov1_down?0)"
+	configs[]: "parkingbrake.full_or long_press(<1>.pov1_down?0)"
+	configs[]: "blinkers.full_or short_press(<1>.pov1_left?0) short_press(<1>.pov1_right?0)"
+	configs[]: "attach.full_or long_press(<1>.pov1_left?0)"
+	configs[]: "engine.full_or long_press(<1>.pov1_right?0)"
+
 	configs[]: "activate <1> b2"
-	configs[]: "camera1 <1> b3"
-	configs[]: "cruise <1> b1"
-	configs[]: "attach <1> b4"
+	configs[]: "camreset.full_or short_press(<1>.b3?0)"
+	configs[]: "cruise.full_or long_press(<1>.b3?0)"
+	configs[]: "light.full_or short_press(<1>.b1?0)"
+	configs[]: "hblight.full_or long_press(<1>.b1?0)"
+	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
+	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
 
-	# b11 = left stick press, b12 = right stick press
 	configs[]: "horn <1> b11"
-	configs[]: "engine <1> b12"
+	configs[]: "camzoom.no_cstm_mod <1>.b12?0"
 
-	configs[]: "cameranext <1> pov1_up"
-	configs[]: "light <1> pov1_left"
-	configs[]: "wippers <1> pov1_right"
-	configs[]: "navmap <1> pov1_down"
+	configs[]: "navmap.no_cstm_mod short_press(<1>.b14?0)"
+	configs[]: "flasher4way.no_cstm_mod long_press(<1>.b14?0)"
+	configs[]: "photo_mode.cstm_mod_1 <1>.b14?0"
+	configs[]: "menu.full_or short_press(<1>.b10?0)"
+	configs[]: "advisor.full_or long_press(<1>.b10?0)"
+
+	configs[]: "screenshot <1> b9"
 }
 
 ############################ Various information about controllers, intended to be used for standalone queries #############################
 
 # Wheels
+
+default_input_entry : input.info.tcs.base
+{
+	group: 1000
+	weight: 1
+
+	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{017A0F0D-0000-0000-0000-504944564944}'"
+
+	configs[]: "hshifter.available"
+	configs[]: "is.wheel"
+}
 
 default_input_entry : input.info.fanatec.base
 {
@@ -2302,6 +2682,26 @@ default_input_entry : input.info.bodnar.pedals
 
 # Hshifter configurations.
 
+default_input_config : icfg.hshifter.tcs
+{
+	values[]: "gear1=<1>.b7?0 | semantical.gear1?0"
+	values[]: "gear2=<1>.b1?0 | semantical.gear2?0"
+	values[]: "gear3=<1>.b2?0 | semantical.gear3?0"
+	values[]: "gear4=<1>.b3?0 | semantical.gear4?0"
+	values[]: "gear5=<1>.b4?0 | semantical.gear5?0"
+	values[]: "gear6=<1>.b5?0 | semantical.gear6?0"
+	values[]: "gear7=<1>.b6?0 | semantical.gear7?0"
+	values[]: "gear8=semantical.gear8?0"
+	values[]: "gear9=semantical.gear9?0"
+	values[]: "gear10=semantical.gear10?0"
+	values[]: "gear11=semantical.gear11?0"
+	values[]: "gear12=semantical.gear12?0"
+	values[]: "gear13=semantical.gear13?0"
+	values[]: "gear14=semantical.gear14?0"
+	values[]: "gear15=semantical.gear15?0"
+	values[]: "gear16=semantical.gear16?0"
+}
+
 default_input_config : icfg.hshifter.fanatec
 {
 	values[]: "gear1=<1>.b13?0 | semantical.gear1?0"
@@ -2424,6 +2824,16 @@ default_input_config : icfg.hshifter.thrustmaster
 
 # Hshifter switches configurations
 
+default_input_config : icfg.hshifter.switch.tcs
+{
+	values[]: "gearsel1on=<1>.b43?0 | semantical.gearsel1on?0"
+	values[]: "gearsel1off=!<1>.b43?0 | semantical.gearsel1off?0"
+	values[]: "gearsel1tgl=semantical.gearsel1tgl?0"
+	values[]: "gearsel2on=<1>.b42?0 | semantical.gearsel2on?0"
+	values[]: "gearsel2off=!<1>.b42?0 | semantical.gearsel2off?0"
+	values[]: "gearsel2tgl=semantical.gearsel2tgl?0"
+}
+
 default_input_config : icfg.hshifter.switch
 {
 	values[]: "gearsel1on=semantical.gearsel1on?0"
@@ -2467,6 +2877,7 @@ default_input_config : icfg.steer.relative
 default_input_config : icfg.steer.absolute
 {
 	values[]: "j_steer=<1>.<2>"
+	values[]: "j_steer_c=1"
 	values[]: "c_jisteer=0"
 	values[]: "c_relatsteer=0"
 	values[]: "c_steer_dz=0"
@@ -2478,8 +2889,10 @@ default_input_config : icfg.accelerate.brake
 	values[]: "j_brake=<1>.<2>"
 	values[]: "c_jzthrottle=1"
 	values[]: "c_jithrottle=1"
+	values[]: "c_throt_dz=0.1"
 	values[]: "c_jzbrake=1"
 	values[]: "c_jibrake=0"
+	values[]: "c_brake_dz=0.1"
 }
 
 default_input_config : icfg.accelerate
@@ -2487,6 +2900,15 @@ default_input_config : icfg.accelerate
 	values[]: "j_throttle=<1>.<2>"
 	values[]: "c_jzthrottle=0"
 	values[]: "c_jithrottle=<3>"
+	values[]: "c_throt_dz=0.1"
+}
+
+default_input_config : icfg.acceltcs
+{
+	values[]: "j_throttle=<1>.<2>"
+	values[]: "c_jzthrottle=0"
+	values[]: "c_jithrottle=0"
+	values[]: "c_throt_dz=0"
 }
 
 default_input_config : icfg.brake
@@ -2494,6 +2916,15 @@ default_input_config : icfg.brake
 	values[]: "j_brake=<1>.<2>"
 	values[]: "c_jzbrake=0"
 	values[]: "c_jibrake=<3>"
+	values[]: "c_brake_dz=0.1"
+}
+
+default_input_config : icfg.braketcs
+{
+	values[]: "j_brake=<1>.<2>"
+	values[]: "c_jzbrake=0"
+	values[]: "c_jibrake=0"
+	values[]: "c_brake_dz=0"
 }
 
 default_input_config : icfg.traccelerate
@@ -2501,6 +2932,7 @@ default_input_config : icfg.traccelerate
 	values[]: "j_throttle=<1>.<2>"
 	values[]: "c_jzthrottle=1"
 	values[]: "c_jithrottle=<3>"
+	values[]: "c_throt_dz=0.1"
 }
 
 default_input_config : icfg.trbrake
@@ -2508,6 +2940,7 @@ default_input_config : icfg.trbrake
 	values[]: "j_brake=<1>.<2>"
 	values[]: "c_jzbrake=1"
 	values[]: "c_jibrake=<3>"
+	values[]: "c_brake_dz=0.1"
 }
 
 default_input_config : icfg.clutch
@@ -2515,6 +2948,15 @@ default_input_config : icfg.clutch
 	values[]: "j_clutch=<1>.<2>"
 	values[]: "c_jzclutch=0"
 	values[]: "c_jiclutch=<3>"
+	values[]: "c_clutch_dz=0.1"
+}
+
+default_input_config : icfg.clutchtcs
+{
+	values[]: "j_clutch=<1>.<2>"
+	values[]: "c_jzclutch=0"
+	values[]: "c_jiclutch=0"
+	values[]: "c_clutch_dz=0"
 }
 
 default_input_config : icfg.clutch.default
@@ -2522,6 +2964,7 @@ default_input_config : icfg.clutch.default
 	values[]: "j_clutch="
 	values[]: "c_jzclutch=0"
 	values[]: "c_jiclutch=0"
+	values[]: "c_clutch_dz=0.1"
 }
 
 
@@ -2595,6 +3038,13 @@ default_input_config : icfg.gearupdown
 	values[]: "geardown=keyboard.lctrl?0 | <1>.b<3>?0 | semantical.geardown?0"
 }
 
+default_input_config : icfg.gearupdown0.cstm_mod_1
+{
+	values[]: "gearup=keyboard.lshift?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), <1>) | semantical.gearup?0"
+	values[]: "geardown=keyboard.lctrl?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), <2>) | semantical.geardown?0"
+	values[]: "gear0=unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), <3>) | semantical.gear0?0"
+}
+
 default_input_config : icfg.gearupdown.default
 {
 	values[]: "gearup=keyboard.lshift?0 | keyboard.rshift?0 | semantical.gearup?0"
@@ -2618,6 +3068,16 @@ default_input_config : icfg.drive.gearupdown
 default_input_config : icfg.menu
 {
 	values[]: "menu=keyboard.esc?0 | <1>.b<2>?0 | semantical.menu?0"
+}
+
+default_input_config : icfg.menu.full_or
+{
+	values[]: "menu=keyboard.esc?0 || <1> | semantical.menu?0"
+}
+
+default_input_config : icfg.cstm_mod_1
+{
+	values[]: "cstm_mod_1=unbound?0 | <1>.<2>?0"
 }
 
 # Configuration of the menu buttons for ui_joy devices.
@@ -2767,9 +3227,20 @@ default_input_config: icfg.blinkers
 	values[]: "rblinker=keyboard.rbracket?0 | <1>.<3>?0 | semantical.rblinker?0"
 }
 
+default_input_config: icfg.blinkers.full_or
+{
+	values[]: "lblinker=keyboard.lbracket?0 || <1> | semantical.lblinker?0"
+	values[]: "rblinker=keyboard.rbracket?0 || <2> | semantical.rblinker?0"
+}
+
 default_input_config: icfg.advisor
 {
 	values[]: "advmouse=keyboard.f1?0 | <1>.<2>?0 | semantical.advmouse?0"
+}
+
+default_input_config: icfg.advisor.full_or
+{
+	values[]: "advmouse=keyboard.f1?0 || <1> | semantical.advmouse?0"
 }
 
 default_input_config: icfg.activate
@@ -2782,9 +3253,19 @@ default_input_config: icfg.cruise
 	values[]: "cruiectrl=keyboard.c?0 | <1>.<2>?0 | semantical.cruiectrl?0"
 }
 
+default_input_config: icfg.cruise.full_or
+{
+	values[]: "cruiectrl=keyboard.c?0 || <1> | semantical.cruiectrl?0"
+}
+
 default_input_config: icfg.attach
 {
 	values[]: "attach=keyboard.t?0 | <1>.<2>?0 | semantical.attach?0"
+}
+
+default_input_config: icfg.attach.full_or
+{
+	values[]: "attach=keyboard.t?0 || <1> | semantical.attach?0"
 }
 
 default_input_config: icfg.light
@@ -2792,9 +3273,19 @@ default_input_config: icfg.light
 	values[]: "light=keyboard.l?0 | <1>.<2>?0 | semantical.light?0"
 }
 
+default_input_config: icfg.light.full_or
+{
+	values[]: "light=keyboard.l?0 || <1> | semantical.light?0"
+}
+
 default_input_config: icfg.wippers
 {
 	values[]: "wipers=keyboard.p?0 | <1>.<2>?0 | semantical.wipers?0"
+}
+
+default_input_config: icfg.wipers.full_or
+{
+	values[]: "wipers=keyboard.p?0 || <1> | semantical.wipers?0"
 }
 
 default_input_config: icfg.horn
@@ -2807,9 +3298,19 @@ default_input_config: icfg.engine
 	values[]: "engine=keyboard.e?0 | <1>.<2>?0 | semantical.engine?0"
 }
 
+default_input_config: icfg.engine.full_or
+{
+	values[]: "engine=keyboard.e?0 || <1> | semantical.engine?0"
+}
+
 default_input_config: icfg.navmap
 {
 	values[]: "navmap=keyboard.m?0 | <1>.<2>?0 | semantical.navmap?0"
+}
+
+default_input_config: icfg.navmap.no_cstm_mod
+{
+	values[]: "navmap=keyboard.m?0 || modifier(no_cstm_mod?0, <1>) | semantical.navmap?0"
 }
 
 default_input_config: icfg.camera1
@@ -2817,10 +3318,510 @@ default_input_config: icfg.camera1
 	values[]: "cam1=keyboard.key1?0 | <1>.<2>?0 | semantical.cam1?0"
 }
 
+default_input_config: icfg.camera1.full_or
+{
+	values[]: "cam1=keyboard.key1?0 || <1> | semantical.cam1?0"
+}
+
 default_input_config: icfg.cameranext
 {
 	values[]: "camcycle=keyboard.key9?0 | <1>.<2>?0 | semantical.camcycle?0"
 }
+
+default_input_config: icfg.cameranext.full_or
+{
+	values[]: "camcycle=keyboard.key9?0 || <1> | semantical.camcycle?0"
+}
+
+default_input_config: icfg.camreset.full_or
+{
+	values[]: "camreset=unbound?0 || <1> | semantical.camreset?0"
+}
+
+default_input_config: icfg.advzoomin
+{
+	values[]: "advzoomin=unbound?0 | <1>.<2>?0 | semantical.advzoomin?0"
+}
+
+default_input_config: icfg.advzoomout
+{
+	values[]: "advzoomout=unbound?0 | <1>.<2>?0 | semantical.advzoomout?0"
+}
+
+default_input_config: icfg.lwinopen
+{
+	values[]: "lwinopen=unbound?0 | <1>.<2>?0 | semantical.lwinopen?0"
+}
+
+default_input_config: icfg.lwinclose
+{
+	values[]: "lwinclose=unbound?0 | <1>.<2>?0 | semantical.lwinclose?0"
+}
+
+default_input_config: icfg.rwinopen
+{
+	values[]: "rwinopen=unbound?0 | <1>.<2>?0 | semantical.rwinopen?0"
+}
+
+default_input_config: icfg.rwinclose
+{
+	values[]: "rwinclose=unbound?0 | <1>.<2>?0 | semantical.rwinclose?0"
+}
+
+default_input_config: icfg.advpagen
+{
+	values[]: "advpagen=keyboard.num0?0 | <1>.<2>?0 | semantical.advpagen?0"
+}
+
+default_input_config: icfg.advpagen.full_or
+{
+	values[]: "advpagen=keyboard.num0?0 || <1> | semantical.advpagen?0"
+}
+
+default_input_config: icfg.advpagep
+{
+	values[]: "advpagep=unbound?0 | <1>.<2>?0 | semantical.advpagep?0"
+}
+
+default_input_config: icfg.frontsuspdwn
+{
+	values[]: "frontsuspdwn=unbound?0 | <1>.<2>?0 | semantical.frontsuspdwn?0"
+}
+
+default_input_config: icfg.frontsuspup
+{
+	values[]: "frontsuspup=unbound?0 | <1>.<2>?0 | semantical.frontsuspup?0"
+}
+
+default_input_config: icfg.rearsuspup
+{
+	values[]: "rearsuspup=unbound?0 | <1>.<2>?0 | semantical.rearsuspup?0"
+}
+
+default_input_config: icfg.rearsuspdwn
+{
+	values[]: "rearsuspdwn=unbound?0 | <1>.<2>?0 | semantical.rearsuspdwn?0"
+}
+
+default_input_config: icfg.suspreset
+{
+	values[]: "suspreset=unbound?0 | <1>.<2>?0 | semantical.suspreset?0"
+}
+
+default_input_config: icfg.radio
+{
+	values[]: "radio=keyboard.r?0 | <1>.<2>?0 | semantical.radio?0"
+}
+
+default_input_config: icfg.radionext
+{
+	values[]: "radionext=keyboard.pgdn?0 | <1>.<2>?0 | semantical.radionext?0"
+}
+
+default_input_config: icfg.radioprev
+{
+	values[]: "radioprev=keyboard.pgup?0 | <1>.<2>?0 | semantical.radioprev?0"
+}
+
+default_input_config: icfg.parkingbrake
+{
+	values[]: "parkingbrake=keyboard.space?0 | <1>.<2>?0 | semantical.parkingbrake?0"
+}
+
+default_input_config: icfg.parkingbrake.full_or
+{
+	values[]: "parkingbrake=keyboard.space?0 || <1> | semantical.parkingbrake?0"
+}
+
+default_input_config: icfg.radioup
+{
+	values[]: "radioup=unbound?0 | <1>.<2>?0 | semantical.radioup?0"
+}
+
+default_input_config: icfg.radiodown
+{
+	values[]: "radiodown=unbound?0 | <1>.<2>?0 | semantical.radiodown?0"
+}
+
+default_input_config: icfg.flasher4way
+{
+	values[]: "flasher4way=keyboard.f?0 | <1>.<2>?0 | semantical.flasher4way?0"
+}
+
+default_input_config: icfg.flasher4way.no_cstm_mod
+{
+	values[]: "flasher4way=keyboard.f?0 || modifier(no_cstm_mod?0, <1>) | semantical.flasher4way?0"
+}
+
+default_input_config: icfg.cruiectrlinc
+{
+	values[]: "cruiectrlinc=unbound?0 | <1>.<2>?0 | semantical.cruiectrlinc?0"
+}
+
+default_input_config: icfg.cruiectrldec
+{
+	values[]: "cruiectrldec=unbound?0 | <1>.<2>?0 | semantical.cruiectrldec?0"
+}
+
+default_input_config: icfg.cruiectrlres
+{
+	values[]: "cruiectrlres=unbound?0 | <1>.<2>?0 | semantical.cruiectrlres?0"
+}
+
+default_input_config: icfg.engbrakeup
+{
+	values[]: "engbrakeup=unbound?0 | <1>.<2>?0 | semantical.engbrakeup?0"
+}
+
+default_input_config: icfg.engbrakedwn
+{
+	values[]: "engbrakedwn=unbound?0 | <1>.<2>?0 | semantical.engbrakedwn?0"
+}
+
+default_input_config: icfg.engbrakeup.dual
+{
+    values[]: "engbrakeup=<1>.<2>?0 | <3>.<4>?0 | semantical.engbrakeup?0"
+}
+
+default_input_config: icfg.engbrakedwn.dual
+{
+    values[]: "engbrakedwn=<1>.<2>?0 | <3>.<4>?0 | semantical.engbrakedwn?0"
+}
+
+default_input_config: icfg.trailerbrake
+{
+	values[]: "trailerbrake=unbound?0 | <1>.<2>?0 | semantical.trailerbrake?0"
+}
+
+default_input_config: icfg.wipers
+{
+	values[]: "wipers=keyboard.p?0 | <1>.<2>?0 | semantical.wipers?0"
+}
+
+default_input_config: icfg.wipersback
+{
+	values[]: "wipersback=unbound?0 | <1>.<2>?0 | semantical.wipersback?0"
+}
+
+default_input_config: icfg.beacon
+{
+	values[]: "beacon=keyboard.o?0 | <1>.<2>?0 | semantical.beacon?0"
+}
+
+default_input_config: icfg.retarderup
+{
+	values[]: "retarderup=keyboard.semicolon?0 | <1>.<2>?0 | semantical.retarderup?0"
+}
+
+default_input_config: icfg.retarderdown
+{
+	values[]: "retarderdown=keyboard.apostrophe?0 | <1>.<2>?0 | semantical.retarderdown?0"
+}
+
+default_input_config: icfg.transemi
+{
+	values[]: "transemi=unbound?0 | <1>.<2>?0 | semantical.transemi?0"
+}
+
+default_input_config: icfg.diflock
+{
+	values[]: "diflock=keyboard.v?0 | <1>.<2>?0 | semantical.diflock?0"
+}
+
+default_input_config: icfg.lighthorn
+{
+	values[]: "lighthorn=keyboard.j?0 | <1>.<2>?0 | semantical.lighthorn?0"
+}
+
+default_input_config: icfg.airhorn
+{
+	values[]: "airhorn=keyboard.n?0 | <1>.<2>?0 | semantical.airhorn?0"
+}
+
+default_input_config: icfg.engineelect
+{
+	values[]: "engineelect=unbound?0 | <1>.<2>?0 | semantical.engineelect?0"
+}
+
+default_input_config: icfg.hblight
+{
+	values[]: "hblight=keyboard.k?0 | <1>.<2>?0 | semantical.hblight?0"
+}
+
+default_input_config: icfg.hblight.full_or
+{
+	values[]: "hblight=keyboard.k?0 || <1> | semantical.hblight?0"
+}
+
+default_input_config: icfg.liftaxle
+{
+	values[]: "liftaxle=keyboard.u?0 | <1>.<2>?0 | semantical.liftaxle?0"
+}
+
+default_input_config: icfg.liftaxlet
+{
+	values[]: "liftaxlet=unbound?0 | <1>.<2>?0 | semantical.liftaxlet?0"
+}
+
+default_input_config: icfg.accmode
+{
+	values[]: "accmode=unbound?0 | <1>.<2>?0 | semantical.accmode?0"
+}
+
+default_input_config: icfg.showmirrors
+{
+	values[]: "showmirrors=keyboard.f2?0 | <1>.<2>?0 | semantical.showmirrors?0"
+}
+
+default_input_config: icfg.dashmapzoom
+{
+	values[]: "dashmapzoom=unbound?0 | <1>.<2>?0 | semantical.dashmapzoom?0"
+}
+
+default_input_config: icfg.display
+{
+	values[]: "display=keyboard.i?0 | <1>.<2>?0 | semantical.display?0"
+}
+
+default_input_config: icfg.showhud
+{
+	values[]: "showhud=keyboard.f3?0 | <1>.<2>?0 | semantical.showhud?0"
+}
+
+default_input_config: icfg.infotainment
+{
+	values[]: "infotainment=unbound?0 | <1>.<2>?0 | semantical.infotainment?0"
+}
+
+default_input_config: icfg.cam3
+{
+	values[]: "cam3=keyboard.key3?0 | <1>.<2>?0 | semantical.cam3?0"
+}
+
+default_input_config: icfg.tripreset
+{
+	values[]: "tripreset=unbound?0 | <1>.<2>?0 | semantical.tripreset?0"
+}
+
+default_input_config: icfg.screenshot
+{
+	values[]: "screenshot=keyboard.f10?0 | <1>.<2>?0 | semantical.screenshot?0"
+}
+
+default_input_config: icfg.mpptt
+{
+	values[]: "mpptt=keyboard.x?0 | <1>.<2>?0 | semantical.mpptt?0"
+}
+
+default_input_config: icfg.quick_chat
+{
+	values[]: "quick_chat=keyboard.q?0 | <1>.<2>?0 | semantical.quick_chat?0"
+}
+
+default_input_config: icfg.advpage0
+{
+	values[]: "advpage0=keyboard.f5?0 | <1>.<2>?0 | semantical.advpage0?0"
+}
+
+default_input_config: icfg.advpage0.full_or
+{
+	values[]: "advpage0=keyboard.f5?0 || <1> | semantical.advpage0?0"
+}
+
+default_input_config: icfg.advpage1
+{
+	values[]: "advpage1=keyboard.f6?0 | <1>.<2>?0 | semantical.advpage1?0"
+}
+
+default_input_config: icfg.advpage2
+{
+	values[]: "advpage2=keyboard.f7?0 | <1>.<2>?0 | semantical.advpage2?0"
+}
+
+default_input_config: icfg.advpage4
+{
+	values[]: "advpage4=keyboard.f9?0 | <1>.<2>?0 | semantical.advpage4?0"
+}
+
+default_input_config: icfg.camzoom
+{
+	values[]: "camzoom=unbound?0 | <1>.<2>?0 | semantical.camzoom?0"
+}
+
+default_input_config: icfg.camzoom.no_cstm_mod
+{
+	values[]: "camzoom=unbound?0 || modifier(no_cstm_mod?0, <1>) | semantical.camzoom?0"
+}
+
+default_input_config: icfg.photo_zoom
+{
+	values[]: "photo_zoom=unbound?0 | <1>.<2>?0 | semantical.photo_zoom?0"
+}
+
+default_input_config: icfg.assistact1
+{
+	values[]: "assistact1=keyboard.key1?0 | <1>.<2>?0 | semantical.assistact1?0"
+}
+
+default_input_config: icfg.assistact2
+{
+	values[]: "assistact2=keyboard.key2?0 | <1>.<2>?0 | semantical.assistact2?0"
+}
+
+default_input_config: icfg.assistact3
+{
+	values[]: "assistact3=keyboard.key3?0 | <1>.<2>?0 | semantical.assistact3?0"
+}
+
+default_input_config: icfg.assistact4
+{
+	values[]: "assistact4=keyboard.key4?0 | <1>.<2>?0 | semantical.assistact4?0"
+}
+
+default_input_config: icfg.assistact5
+{
+	values[]: "assistact5=keyboard.key5?0 | <1>.<2>?0 | semantical.assistact5?0"
+}
+
+default_input_config: icfg.adjuster
+{
+	values[]: "adjuster=keyboard.f4?0 | <1>.<2>?0 | semantical.adjuster?0"
+}
+
+default_input_config: icfg.camwalk_for
+{
+	values[]: "camwalk_for=keyboard.w?0 | <1>.<2>?0 | semantical.camwalk_for?0"
+}
+
+default_input_config: icfg.camwalk_back
+{
+	values[]: "camwalk_back=keyboard.s?0 | <1>.<2>?0 | semantical.camwalk_back?0"
+}
+
+default_input_config: icfg.camwalk_left
+{
+	values[]: "camwalk_left=keyboard.a?0 | <1>.<2>?0 | semantical.camwalk_left?0"
+}
+
+default_input_config: icfg.camwalk_righ
+{
+	values[]: "camwalk_righ=keyboard.d?0 | <1>.<2>?0 | semantical.camwalk_righ?0"
+}
+
+default_input_config: icfg.camwalk_run
+{
+	values[]: "camwalk_run=keyboard.lctrl?0 | <1>.<2>?0 | semantical.camwalk_run?0"
+}
+
+default_input_config: icfg.camwalk_jump
+{
+	values[]: "camwalk_jump=keyboard.space?0 | <1>.<2>?0 | semantical.camwalk_jump?0"
+}
+
+default_input_config: icfg.chat_act
+{
+	values[]: "chat_act=keyboard.y?0 | <1>.<2>?0 | semantical.chat_act?0"
+}
+
+default_input_config: icfg.name_tags
+{
+	values[]: "name_tags=keyboard.z?0 | <1>.<2>?0 | semantical.name_tags?0"
+}
+
+default_input_config: icfg.photo_mode
+{
+	values[]: "photo_mode=keyboard.equal?0 | <1>.<2>?0 | semantical.photo_mode?0"
+}
+
+default_input_config: icfg.photo_mode.cstm_mod_1
+{
+	values[]: "photo_mode=keyboard.equal?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), <1>) | semantical.photo_mode?0"
+}
+
+default_input_config: icfg.engbrakeauto
+{
+	values[]: "engbrakeauto=unbound?0 | <1>.<2>?0 | semantical.engbrakeauto?0"
+}
+
+default_input_config: icfg.retarderauto
+{
+	values[]: "retarderauto=unbound?0 | <1>.<2>?0 | semantical.retarderauto?0"
+}
+
+default_input_config: icfg.embrake
+{
+	values[]: "embrake=unbound?0 | <1>.<2>?0 | semantical.embrake?0"
+}
+
+default_input_config: icfg.laneassmode
+{
+	values[]: "laneassmode=unbound?0 | <1>.<2>?0 | semantical.laneassmode?0"
+}
+
+default_input_config: icfg.tranpwrmode
+{
+	values[]: "tranpwrmode=unbound?0 | <1>.<2>?0 | semantical.tranpwrmode?0"
+}
+
+default_input_config: icfg.gearuphint
+{
+	values[]: "gearuphint=unbound?0 | <1>.<2>?0 | semantical.gearuphint?0"
+}
+
+default_input_config: icfg.geardownhint
+{
+	values[]: "geardownhint=unbound?0 | <1>.<2>?0 | semantical.geardownhint?0"
+}
+
+default_input_config: icfg.phot_z_j_in
+{
+	values[]: "phot_z_j_in=ui_joy.phot_z_j_in?0 | <1>.<2>?0 | semantical.phot_z_j_in?0"
+}
+
+default_input_config: icfg.phot_z_j_out
+{
+	values[]: "phot_z_j_out=ui_joy.phot_z_j_out?0 | <1>.<2>?0 | semantical.phot_z_j_out?0"
+}
+
+default_input_config: icfg.gear0
+{
+	values[]: "gear0=unbound?0 | <1>.<2>?0 | semantical.gear0?0"
+}
+
+default_input_config: icfg.geardrive
+{
+	values[]: "geardrive=unbound?0 | <1>.<2>?0 | semantical.geardrive?0"
+}
+
+default_input_config: icfg.gearreverse
+{
+	values[]: "gearreverse=unbound?0 | <1>.<2>?0 | semantical.gearreverse?0"
+}
+
+default_input_config: icfg.photo_opts
+{
+	values[]: "photo_opts=keyboard.space?0 | <1>.<2>?0 | semantical.photo_opts?0"
+}
+
+default_input_config: icfg.photorolll
+{
+	values[]: "photorolll=keyboard.x?0 | <1>.<2>?0 | semantical.photorolll?0"
+}
+
+default_input_config: icfg.photorollr
+{
+	values[]: "photorollr=keyboard.c?0 | <1>.<2>?0 | semantical.photorollr?0"
+}
+
+default_input_config: icfg.engbraketog
+{
+	values[]: "engbraketog=unbound?0 | <1>.<2>?0 | semantical.engbraketog?0"
+}
+
+#default_input_config: icfg.dclutch
+#{
+#	values[]: "dclutch=<1>.<2>?0 | semantical.dclutch?0"
+#}
 
 # Indicates that specified part is configured in imediatelly usable way.
 
@@ -2847,6 +3848,11 @@ default_input_config: "icfg.gearupdown.configured"
 default_input_config: "icfg.hshifter.configured"
 {
 	values[]: "hshifter_cfg=1"
+}
+
+default_input_config: "icfg.steer.range"
+{
+	values[]: "g_steer_anim_range=<1>"
 }
 
 # Information config

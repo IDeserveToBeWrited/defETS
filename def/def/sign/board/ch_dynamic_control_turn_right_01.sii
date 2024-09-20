@@ -1,0 +1,74 @@
+SiiNunit
+{
+sign_board_template : _nameless.2.05a2.cba0 {
+ board_name: "ch dynamic control turn right 01"
+ width: 1
+ height: &3fc00000
+ model_name: ""
+ items: 2
+ items[0]: _nameless.1.e311.5030
+ items[1]: _nameless.1.e311.4ef0
+ dynamic_attributes: 2
+ dynamic_attributes[0]: _nameless.2.0433.ee30
+ dynamic_attributes[1]: _nameless.2.0433.e2f0
+}
+
+sign_template_image : _nameless.1.e311.5030 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 1
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 3179151358
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e235498
+ coords_r: &3f572ada
+ coords_t: &3fa6d3a1
+ coords_b: &3f664966
+ z_order: 2
+ tag: ""
+}
+
+sign_template_image : _nameless.1.e311.4ef0 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 2
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 1276510208
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e6a11e0
+ coords_r: &3f457b88
+ coords_t: &3f447e38
+ coords_b: &3e6e2a3e
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.2.0433.ee30 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "arrow right white LED ch"
+ traffic_rules: 0
+ item_id: 1276510208
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.2.0433.e2f0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "lorry white LED ch"
+ traffic_rules: 0
+ item_id: 3179151358
+ attr_name: image_idx
+}
+
+}

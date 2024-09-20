@@ -60,7 +60,16 @@ mover_model : mover.towingship
 {
 	mover_name: "Towing ship"
 	model_desc: "/model/mover/towing_ship.pmd"
+	model_anim: "/model/mover/towing_ship_static.pma"
 }
+
+mover_model : mover.towinsship
+{
+	mover_name: "Towing ship sailing"
+	model_desc: "/model/mover/towing_ship.pmd"
+	model_anim: "/model/mover/towing_ship_sailing.pma"
+}
+
 
 mover_model : mover.barge
 {
@@ -245,34 +254,6 @@ mover_model : mover.logger
 	mover_name: "logger"
 	model_desc: "/model/vehicle/log_grabber.pmd"
 	model_anim: "/model/vehicle/log_grabber.pma"
-}
-
-mover_model : mover.waves
-{
-	mover_name: "waves"
-	model_desc: "/model/water/waves.pmd"
-	model_anim: "/model/water/wave.pma"
-}
-
-mover_model : mover.waves2
-{
-	mover_name: "waves fast"
-	model_desc: "/model/water/waves.pmd"
-	model_anim: "/model/water/wave2.pma"
-}
-
-mover_model : mover.wavesgroup
-{
-	mover_name: "waves group"
-	model_desc: "/model/water/waves2.pmd"
-	model_anim: "/model/water/wave_group.pma"
-}
-
-mover_model : mover.wavesgroup2
-{
-	mover_name: "waves group fast"
-	model_desc: "/model/water/waves2.pmd"
-	model_anim: "/model/water/wave_group2.pma"
 }
 
 mover_model : mover.plane_flat
@@ -1134,9 +1115,15 @@ mover_model : mover.yacht_c
 {
 	mover_name: "yacht_sailing_close"
 	model_desc: "/model2/mover/yacht_sailing_close.pmd"
+	model_anim: "/model2/mover/yacht_sailing_close_sailing.pma"
 }
 
-
+mover_model : mover.yacht_st
+{
+	mover_name: "yacht_static_close"
+	model_desc: "/model2/mover/yacht_sailing_close.pmd"
+	model_anim: "/model2/mover/yacht_sailing_close_static.pma"
+}
 
 mover_model : mover.pckshv
 {
@@ -1572,6 +1559,65 @@ mover_model : mover.wagon
 	lod_dist[1]: 100
 
 }
+
+#########################################################################
+#	Germany Rework
+#########################################################################
+
+mover_model : mover.ship_cargo
+{
+	mover_name: "ship_cargo_01_de_mover"
+	model_desc: "/model2/ship/ship_cargo_01_de/ship_cargo_01_de.pmd"
+	sound_path[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/ferry_2_loop"
+
+	lods[0]: "/model2/ship/ship_cargo_01_de/ship_cargo_01_de_lod1.pmd"
+	lods[1]: "/model2/ship/ship_cargo_01_de/ship_cargo_01_de_lod2.pmd"
+
+	lod_dist[0]: 50
+	lod_dist[1]: 100
+}
+
+mover_model : mover.col_movie
+{
+	mover_name: "cologne movie"
+	model_desc: "/model2/landmark/de/cologne_drive_in_theater_01_movie_de.pmd"
+
+}
+
+mover_model : mover.wheel_cac
+{
+	mover_name: "cologne_ferris_wheel_de"
+	model_desc: "/model2/landmark/de/cologne_ferris_wheel_ch_mov.pmd"
+	model_anim: "/model2/landmark/de/cologne_ferris_wheel_ch_ani.pma"
+	model_coll: "/model2/landmark/de/cologne_ferris_wheel_ch_mov.pmc"
+}
+
+
+mover_model : mover.wind_pb01
+{
+	mover_name: "wind powerplant 01 balt"
+	model_desc: "/model2/mover/wind_powerplant_01_balt.pmd"
+	model_anim: "/model2/mover/wind_turbine_generator.pma"
+	sound_path[]: "/sound/world/mover.bank#mover/wind_powerplant"
+}
+
+
+#########################################################################
+#	DLC Greece
+#########################################################################
+
+mover_model : mover.flag_s_gr
+{
+	mover_name: "flag small 2x1 gr"
+	model_desc: "/model2/mover/flags/country/flag_small_2x1_gr_mov.pmd"
+}
+
+mover_model : mover.flag_s_an_gr
+{
+	mover_name: "flag small angled 2x1 gr"
+	model_desc: "/model2/mover/flags/country/flag_small_angled_2x1_gr_mov.pmd"
+}
+
 
 }
 

@@ -1,3 +1,7 @@
+
+######## Minibus - Color #########################################
+
+
 traffic_vehicle : traffic.minibus
 {
 	accessories[]: .minibus.chassis
@@ -37,6 +41,44 @@ vehicle_wheel_accessory: .minibus.fwheel
 }
 
 vehicle_wheel_accessory: .minibus.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+######## Minibus - Ursula Tours #########################################
+
+traffic_vehicle : traffic.minibus.ur
+{
+	accessories[]: .minibus.ur.chassis
+	accessories[]: .minibus.ur.fwheel
+	accessories[]: .minibus.ur.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+	
+	spawn_ratio: 0
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .minibus.ur.chassis
+{
+	data_path: "/def/vehicle/ai/minibus/chassis_ur.sii"
+}
+
+vehicle_wheel_accessory: .minibus.ur.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .minibus.ur.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"

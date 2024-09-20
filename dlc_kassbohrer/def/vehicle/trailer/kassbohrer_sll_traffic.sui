@@ -1,0 +1,54 @@
+traffic_trailer : traffic.kasbhr_sll
+{
+	accessories[]: .kasbhr_sll.chassis
+	accessories[]: .kasbhr_sll.rwheel
+	accessories[]: .kasbhr_sll.rwheel2
+	accessories[]: .kasbhr_sll.rwheel3
+	accessories[]: .kasbhr_sll.paint_job
+	
+	cargo_mass: 20000
+
+	tags[]: low
+	tags[]: lowloader
+	tags[]: loader
+	tags[]: construct
+	tags[]: long
+	tags[]: cargo 
+	tags[]: kassbohrer
+
+
+	company_paint_job: false
+
+	base: traffic.trailer.scs_lowlowd
+	
+	#variant[]: .traffic.trailer.scs_lowlowd1
+
+}
+
+vehicle_accessory: .kasbhr_sll.chassis
+{
+	data_path: "/def/vehicle/trailer/kassbohrer_sll/ch_3.sii"
+}
+
+vehicle_wheel_accessory: .kasbhr_sll.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/t_wheel/overweight.sii"
+}
+
+vehicle_wheel_accessory: .kasbhr_sll.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/t_wheel/overweight.sii"
+}
+
+vehicle_wheel_accessory: .kasbhr_sll.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/t_wheel/overweight.sii"
+}
+
+vehicle_paint_job_accessory: .kasbhr_sll.paint_job
+{
+	data_path: "/def/vehicle/trailer/kassbohrer_sll/company_paint_job/red.sii"
+}

@@ -1,0 +1,40 @@
+traffic_vehicle : traffic.hoddlen.hatchback.basic_24
+{
+	accessories[]: .hoddlen.hatchback.basic_24.chassis
+	accessories[]: .hoddlen.hatchback.basic_24.fwheel
+	accessories[]: .hoddlen.hatchback.basic_24.rwheel
+
+	max_speed: 180
+
+	vehicle_mass: 1400
+
+	
+
+	sound_move[]: "/sound/traffic/car_diesel_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_1.soundref"
+
+	spawn_ratio: 1
+
+	tags[]: cheap
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .hoddlen.hatchback.basic_24.chassis
+{
+	data_path: "/def/vehicle/ai/hoddlen_hatchback_basic_24/chassis_hatchback.sii"
+}
+
+vehicle_wheel_accessory: .hoddlen.hatchback.basic_24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .hoddlen.hatchback.basic_24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}

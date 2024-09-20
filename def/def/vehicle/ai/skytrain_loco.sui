@@ -1,0 +1,56 @@
+traffic_vehicle : traffic.skytrain
+{
+	accessories[]: .skytrain.chassis
+	accessories[]: .skytrain.fwheel
+	accessories[]: .skytrain.rwheel
+
+	max_speed: 60
+
+	vehicle_mass: 10000
+	engine_power: 2500
+
+	trailer_chains[]: "traffic.skytrain.car"
+
+	#sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	#sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	#sound_gears: 1
+
+	displacement_limit: 0.0
+
+	safe_distance: 200
+
+	spawn_ratio: 0.0
+
+	tags[]: context
+
+	spawn_condition[]: .traffic.skytrain.condition.city
+	spawn_condition[]: .traffic.skytrain.condition.monorail
+
+}
+vehicle_accessory: .skytrain.chassis
+{
+	data_path: "/def/vehicle/ai/skytrain/loco.sii"
+}
+vehicle_wheel_accessory: .skytrain.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .skytrain.rwheel
+{
+
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.skytrain.condition.city
+{
+	#spawn only near city with specified name
+	type: city
+	str_param[]: "dusseldorf"
+}
+traffic_spawn_condition: .traffic.skytrain.condition.monorail
+{
+	type: area
+	str_param[]: "monorail"
+}
+
+
+

@@ -1,0 +1,73 @@
+accessory_hookup_int_data : kb_flag.addon_hookup
+{
+	name: "@@kassbohrer_flag@@"
+	price: 170
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/kb_flag"
+	part_type: aftermarket
+	suitable_for[]: "set_dashbrd"
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/kb_flag.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toystand/kb_flag.pmc"
+
+	data[]: .kb_flag.phys_data
+}
+
+physics_toy_data : .kb_flag.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/kb_flag_p.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/kb_flag_p.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.2			# toy mass
+	locator_hook_offset: (0.00, 0.01, 0.00)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (900.0, 900.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (2.0, 2.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (5.0, 5.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+
+accessory_hookup_int_data : kb_stc_toy.addon_hookup
+{
+	name: "@@brand_kassbohrer@@ STC Model 1:100"
+	price: 350
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/kb_stc_toy"
+	part_type: aftermarket
+
+	model: "/vehicle/truck/upgrade/interior_decors/toystand/kb_stc_toy.pmd"
+
+	suitable_for[]: "set_dashbrd"
+}
+
+
+accessory_hookup_int_data : kb_bbh_dog.addon_hookup
+{
+	name: "@@kassbohrer_dog@@"
+	price: 120
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/kb_bbh_dog"
+	part_type: aftermarket
+	suitable_for[]: "set_dashbrd"
+
+	model:	"/vehicle/truck/upgrade/interior_decors/toystand/kb_bbh_dog.pmd"
+	coll:	"/vehicle/truck/upgrade/interior_decors/toystand/kb_bbh_dog.pmc"
+
+	data[]: .kb_bbh_head.phys_data
+}
+
+physics_toy_data : .kb_bbh_head.phys_data
+{
+	phys_model:     "/vehicle/truck/upgrade/interior_decors/toystand/kb_bbh_head.pmd"
+	phys_model_coll:"/vehicle/truck/upgrade/interior_decors/toystand/kb_bbh_head.pmc"
+
+	toy_type:	 	"TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass:	 	0.4			# toy mass
+	locator_hook_offset:	(0.0f, 0.10183f, -0.03805f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness:	(100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping:	(3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude:	(30.0, 30.0, 30.0)	# joint - maximal deflection agains equilibrium position
+}

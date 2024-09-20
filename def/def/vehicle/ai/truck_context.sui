@@ -73,7 +73,7 @@ traffic_vehicle : traffic.scania_r16_a.context
 
 	max_speed: 90
 
-	trailer_chains[]: "truck_semi"
+	trailer_chains[]: "truck box context"
 
 	tags[]: dealer
 	tags[]: context
@@ -105,11 +105,13 @@ traffic_spawn_condition: .traffic.scania_r16_a.context.spawn.condition
 {
 	type: area
 	str_param[]: "scania"
+	str_param[]: "scania_fac"
 }
 traffic_spawn_condition: .traffic.scania_r16_a.context.spawn.condition2
 {
 	type: area
 	str_param[]: "dealer"
+	str_param[]: "company"
 }
 
 vehicle_accessory: .scania_r16_a.context.chassis
@@ -143,7 +145,7 @@ traffic_vehicle : traffic.scania_s16_b.context
 	max_speed: 90
 	tags[]: context
 
-	trailer_chains[]: "truck_semi"
+	trailer_chains[]: "truck box context"
 
 	tags[]: dealer
 	tags[]: context
@@ -175,11 +177,13 @@ traffic_spawn_condition: .traffic.scania_s16_b.context.spawn.condition
 {
 	type: area
 	str_param[]: "scania"
+	str_param[]: "scania_fac"
 }
 traffic_spawn_condition: .traffic.scania_s16_b.context.spawn.condition2
 {
 	type: area
 	str_param[]: "dealer"
+	str_param[]: "company"
 }
 
 vehicle_accessory: .scania_s16_b.context.chassis
@@ -236,11 +240,15 @@ traffic_spawn_condition: .traffic.larus.context.spawn.condition
 {
 	type: area
 	str_param[]: "larus"
+	str_param[]: "tourist"
+	str_param[]: "rest_area"
 }
 traffic_spawn_condition: .traffic.larus.context.spawn.condition2
 {
 	type: area
 	str_param[]: "company"
+	str_param[]: "tourist"
+	str_param[]: "rest_area"
 }
 
 vehicle_accessory: .larus.context.chassis
@@ -258,4 +266,187 @@ vehicle_wheel_accessory: .larus.context.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_rear.sii"
+}
+
+
+traffic_vehicle : traffic.man_e6.a4x2_ef3.context
+{
+	accessories[]: .man_e6.a4x2_ef3.context.chassis
+	accessories[]: .man_e6.a4x2_ef3.context.fwheel
+	accessories[]: .man_e6.a4x2_ef3.context.rwheel
+	accessories[]: .man_e6.a4x2_ef3.context.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+	tags[]: context
+
+	vehicle_mass: 7327
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0664, 0.0664, 0.0664) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2458, 0.0134, 0.013) #red
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.9911, 0.5906, 0.0781) #yellow
+	color[]: (0.0103, 0.0171, 0.0835) #blue
+
+	spawn_condition[]: .traffic.man_e6.a4x2_ef3.context.spawn.condition
+	spawn_condition[]: .traffic.man_e6.a4x2_ef3.context.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.man_e6.a4x2_ef3.context.spawn.condition
+{
+	type: area
+	str_param[]: "man"
+}
+traffic_spawn_condition: .traffic.man_e6.a4x2_ef3.context.spawn.condition2
+{
+	type: area
+	str_param[]: "dealer"
+}
+
+vehicle_accessory: .man_e6.a4x2_ef3.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/a4x2_ef3.sii"
+}
+vehicle_wheel_accessory: .man_e6.a4x2_ef3.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man_e6.a4x2_ef3.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .man_e6.a4x2_ef3.context.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/accessory/trlr_cables/stock.sii"
+}
+
+traffic_vehicle : traffic.man_e6.b6x24_ef3.context
+{
+	accessories[]: .man_e6.b6x24_ef3.context.chassis
+	accessories[]: .man_e6.b6x24_ef3.context.fwheel
+	accessories[]: .man_e6.b6x24_ef3.context.rwheel
+	accessories[]: .man_e6.b6x24_ef3.context.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+	tags[]: context
+
+	vehicle_mass: 7327
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0664, 0.0664, 0.0664) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2458, 0.0134, 0.013) #red
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.9911, 0.5906, 0.0781) #yellow
+	color[]: (0.0103, 0.0171, 0.0835) #blue
+
+	spawn_condition[]: .traffic.man_e6.b6x24_ef3.context.spawn.condition
+	spawn_condition[]: .traffic.man_e6.b6x24_ef3.context.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.man_e6.b6x24_ef3.context.spawn.condition
+{
+	type: area
+	str_param[]: "man"
+}
+traffic_spawn_condition: .traffic.man_e6.b6x24_ef3.context.spawn.condition2
+{
+	type: area
+	str_param[]: "dealer"
+}
+
+vehicle_accessory: .man_e6.b6x24_ef3.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/b6x24_ef3.sii"
+}
+vehicle_wheel_accessory: .man_e6.b6x24_ef3.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man_e6.b6x24_ef3.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .man_e6.b6x24_ef3.context.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/accessory/trlr_cables/stock.sii"
+}
+
+
+traffic_vehicle : traffic.hymer.context
+{
+	accessories[]: .hymer.context.chassis
+	accessories[]: .hymer.context.fwheel
+	accessories[]: .hymer.context.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (0.7500, 0.7500, 0.7500)
+	color[]: (0.1500, 0.1500, 0.1500)
+
+	spawn_ratio: 0.3
+
+	tags[]: caravan
+	tags[]: context
+
+	spawn_condition[]: .traffic.hymer.context.spawn.condition
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.hymer.context.spawn.condition
+{
+	type: area
+	str_param[]: "tourist"
+	str_param[]: "rest_area"
+}
+
+vehicle_accessory: .hymer.context.chassis
+{
+	data_path: "/def/vehicle/ai/hymer/chassis.sii"
+}
+
+vehicle_wheel_accessory: .hymer.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_1.sii"
+}
+
+vehicle_wheel_accessory: .hymer.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
 }

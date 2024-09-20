@@ -1,0 +1,46 @@
+SiiNunit
+{
+sign_board_template : _nameless.1.2b3b.68e0 {
+ board_name: "ch dynamic control exit truck 01"
+ width: 1
+ height: 1
+ model_name: ch_2y002
+ items: 1
+ items[0]: _nameless.1.1856.72e0
+ dynamic_attributes: 1
+ dynamic_attributes[0]: _nameless.1.184f.4b60
+}
+
+sign_template_image : _nameless.1.1856.72e0 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 1
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 4230086654
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e10041c
+ coords_r: &3f5b682d
+ coords_t: &3f3a7127
+ coords_b: &3e9b65b6
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.1.184f.4b60 {
+ conditions: 2
+ conditions[0]: "road_event weigh"
+ conditions[1]: default
+ values: 1
+ values[0]: "lorry white LED ch"
+ traffic_rules: 2
+ traffic_rules[0]: w_truck_lane
+ traffic_rules[1]: w_closed
+ item_id: 4230086654
+ attr_name: image_idx
+}
+
+}

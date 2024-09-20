@@ -1,0 +1,74 @@
+SiiNunit
+{
+sign_board_template : _nameless.ac4.8810 {
+ board_name: "ch dynamic control roundabout uturn 01"
+ width: 1
+ height: &3fc00000
+ model_name: ""
+ items: 2
+ items[0]: _nameless.711e.8720
+ items[1]: _nameless.711e.87c0
+ dynamic_attributes: 2
+ dynamic_attributes[0]: _nameless.d4f.ca70
+ dynamic_attributes[1]: _nameless.a0c.1c50
+}
+
+sign_template_image : _nameless.711e.8720 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 1
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 3179151358
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e235498
+ coords_r: &3f572ada
+ coords_t: &3fad3a08
+ coords_b: &3f731634
+ z_order: 2
+ tag: ""
+}
+
+sign_template_image : _nameless.711e.87c0 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 7
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2715287551
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e654ce8
+ coords_r: &3f46acc6
+ coords_t: &3f674e32
+ coords_b: &3e0b9d48
+ z_order: 1
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.d4f.ca70 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "lorry white LED ch"
+ traffic_rules: 0
+ item_id: 3179151358
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.a0c.1c50 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "arrow roundabout 01 white LED ch"
+ traffic_rules: 0
+ item_id: 2715287551
+ attr_name: image_idx
+}
+
+}

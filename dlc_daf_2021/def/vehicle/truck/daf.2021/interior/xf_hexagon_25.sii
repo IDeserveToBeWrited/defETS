@@ -1,0 +1,50 @@
+SiiNunit
+{
+accessory_interior_data: xf_hex_25.daf.2021.interior
+{
+	name: "Hexagon 2025"
+	price: 13560
+	unlock: 0
+	icon: "truck/daf_2021/accessory/interior_daf_2021_hexagon"
+	part_type: factory
+
+	model: "/vehicle/truck/daf_2021/interior/model/xf_25.pmd"
+	collision: "/vehicle/truck/daf_2021/interior/model/xf_25.pmc"
+
+	animated_model: "/vehicle/truck/daf_2021/interior/anim/anim.pmd"
+
+	look: Default
+	variant: hexagon_2025
+
+@include "animations_25.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/daf_2021.sii"
+	dashboard_drawable_size: (1024, 512)
+	gps_path: "/ui/dashboard/daf_2021_gps.sii"
+	gps_drawable_size: (1024, 512)
+
+	glass_panes[]: .daf.2021.r.pane.front
+	glass_panes[]: .daf.2021.r.pane.left
+	glass_panes[]: .daf.2021.r.pane.right
+	glass_panes[]: .daf.2021.r.pane.door
+
+	ext_model: "/vehicle/truck/daf_2021/interior/external/xf_25.pmd"
+	ext_look: argenta
+	ext_variant: Default
+
+	suitable_for[]: "xf.daf.2021.cabin"
+
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/cab_door/std_hex_xf.sii"
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/codrv_seat/std_hex_xf.sii"
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/steering_w/standard.sii"
+
+@include "int_shadow_xf.sui"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

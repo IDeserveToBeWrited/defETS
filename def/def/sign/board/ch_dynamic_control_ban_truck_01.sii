@@ -1,0 +1,74 @@
+SiiNunit
+{
+sign_board_template : _nameless.6d4.5e90 {
+ board_name: "ch dynamic control ban truck 01"
+ width: 1
+ height: 1
+ model_name: ch_2y002
+ items: 2
+ items[0]: _nameless.6e4.7bf0
+ items[1]: _nameless.6e4.9130
+ dynamic_attributes: 2
+ dynamic_attributes[0]: _nameless.75c1.42f0
+ dynamic_attributes[1]: _nameless.75c1.45f0
+}
+
+sign_template_image : _nameless.6e4.7bf0 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 1
+ color: nil
+ opacity: 1
+ hflip: true
+ vflip: false
+ image_overridable: false
+ id: 4230086654
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e6bb7b4
+ coords_r: &3f447b47
+ coords_t: &3f2a4a01
+ coords_b: &3eb17692
+ z_order: 1
+ tag: ""
+}
+
+sign_template_image : _nameless.6e4.9130 {
+ atlas_path: "/def/sign/atlas/ch_dynamic_weigh_led.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 1392377856
+ area_name: ""
+ area_idx: nil
+ coords_l: &3d8af330
+ coords_r: &3f6b9c52
+ coords_t: &3f6fc396
+ coords_b: &3dac2d50
+ z_order: 2
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.75c1.42f0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "lorry white LED ch"
+ traffic_rules: 0
+ item_id: 4230086654
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.75c1.45f0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: "circle red LED ch"
+ traffic_rules: 0
+ item_id: 1392377856
+ attr_name: image_idx
+}
+
+}
