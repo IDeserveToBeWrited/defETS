@@ -1,4 +1,4 @@
-	@echo off
+@echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Location for extraction
@@ -18,7 +18,7 @@ if not exist %LOCATION% MKDIR %LOCATION%
 
 :: Location to SCS Extractor
 SET EXTRACTOR="C:\Program Files (x86)\Steam\steamapps\common\Euro Truck Simulator 2\scs_extractor.exe"
-:: Get the SCS Game Archive Extractor here: http://download.eurotrucksimulator2.com/scs_extractor.zip
+:: Get the SCS Game Archive Extractor here: https://modding.scssoft.com/wiki/Documentation/Tools/Game_Archive_Extractor
 
 :: Set 7z.exe location for archiving
 SET ZIP="C:\Program Files\7-Zip\7z.exe"
