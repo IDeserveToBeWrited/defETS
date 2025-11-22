@@ -985,4 +985,44 @@ vehicle_wheel_accessory: .dagger.ch.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/dagger_r.sii"
 }
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Greece  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+traffic_vehicle : traffic.dagger.gr
+{
+	accessories[]: .dagger.gr.chassis
+	accessories[]: .dagger.gr.fwheel
+	accessories[]: .dagger.gr.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 13000
+	engine_power: 186
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	license_plate_type: fire
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .dagger.gr.chassis
+{
+	data_path: "/def/vehicle/ai/dagger/gr.sii"
+}
+
+vehicle_wheel_accessory: .dagger.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/dagger_f.sii"
+}
+
+vehicle_wheel_accessory: .dagger.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/dagger_r.sii"
+}
+
 

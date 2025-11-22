@@ -1,0 +1,43 @@
+SiiNunit
+{
+accessory_interior_data: slp_d.volvo.fh_2021.interior
+{
+	name: "@@dynamic@@"
+	price: 11760
+	unlock: 0
+	icon: "truck/volvo_fh16_2012/accessory/fh_rob_2021"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2021/interior/model/slp.pmd"
+	collision: "/vehicle/truck/volvo_fh_2021/interior/model/slp.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/anim/anim_2021.pmd"
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh_rob_dyn
+
+@include "animations_2021.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "computers.sui"
+
+	glass_panes[]: .volvo.fh_2021.pane.front
+	glass_panes[]: .volvo.fh_2021.pane.left
+	glass_panes[]: .volvo.fh_2021.pane.right
+	glass_panes[]: .volvo.fh_2021.pane.top
+
+	suitable_for[]: "l2h1.volvo.fh_2021.cabin"
+
+	ext_model: "/vehicle/truck/volvo_fh_2021/interior/external/slp_r_d_2021.pmd"
+	#ext_variant: cabin_uk
+	ext_look: default
+
+@include "dashboard_color_2021.sui"
+#@include "seat.sui"
+@include "mirrors.sui"
+@include "int_shadow_slp.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

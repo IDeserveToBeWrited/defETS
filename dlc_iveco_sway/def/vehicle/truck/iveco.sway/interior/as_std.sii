@@ -1,0 +1,44 @@
+SiiNunit
+{
+accessory_interior_data: as_std.iveco.sway.interior
+{
+	name: "@@production_standard@@"
+	price: 17280
+	unlock: 0
+	icon: "truck/iveco_sway/interior/as_std"
+	part_type: factory
+
+	model: "/vehicle/truck/iveco_sway/interior/model/as.pmd"
+	collision: "/vehicle/truck/iveco_sway/interior/model/as.pmc"
+
+	animated_model: "/vehicle/truck/iveco_sway/interior/anim/anim.pmd"
+
+	look: Default
+	variant: prod_std
+
+@include "animations.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "computers.sui"
+
+	glass_panes[]: .iveco.sway.r.pane.front
+	glass_panes[]: .iveco.sway.r.pane.left
+	glass_panes[]: .iveco.sway.r.pane.right
+	glass_panes[]: .iveco.sway.r.pane.roof
+
+	ext_model: "/vehicle/truck/iveco_sway/interior/external/as.pmd"
+	ext_look: int_std
+	ext_variant: std
+
+	suitable_for[]: "as.iveco.sway.cabin"
+
+@include "int_shadow_eu.sui"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+@include "mirrors.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

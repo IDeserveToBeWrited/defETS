@@ -1,0 +1,48 @@
+traffic_vehicle : traffic.heimdall.suv.premium_24
+{
+	accessories[]: .heimdall.suv.premium_24.chassis
+	accessories[]: .heimdall.suv.premium_24.fwheel
+	accessories[]: .heimdall.suv.premium_24.rwheel
+
+	max_speed: 240
+	vehicle_mass: 2600
+
+	sound_move[]: "/sound/traffic/car_v8_1.soundref"
+	sound_move[]: "/sound/traffic/car_v8_2.soundref"
+	sound_horn[]: "/sound/traffic/car_horn_4.soundref"
+
+	color[]: (0.4863, 0.0196, 0.0039) # RED
+	color[]: (0.0000, 0.1608, 0.4118) # BLUE
+	color[]: (0.0863, 0.1530, 0.2354) # DARK BLUE
+	color[]: (0.0549, 0.1412, 0.1372) # DARK GREEN
+	color[]: (0.0510, 0.0667, 0.0824) # BLACK
+	color[]: (0.1137, 0.1294, 0.1608) # DARK GREY
+	color[]: (0.2902, 0.3098, 0.3412) # GREY
+	color[]: (0.4470, 0.4470, 0.4590) # LIGHT GREY
+	color[]: (0.5333, 0.5450, 0.5763) # LIGHT GREY 2
+	color[]: (0.7097, 0.7097, 0.7097) # WHITE
+	color[]: (0.7685, 0.7685, 0.7685) # WHITE 2
+	
+	tags[]: expensive
+	tags[]: suv
+
+@include "drivers_generic.sui"
+	
+}
+
+vehicle_accessory: .heimdall.suv.premium_24.chassis
+{
+	data_path: "/def/vehicle/ai/heimdall_suv_premium_24/chassis.sii"
+}
+
+vehicle_wheel_accessory: .heimdall.suv.premium_24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_car_modern_17in_01.sii"
+}
+
+vehicle_wheel_accessory: .heimdall.suv.premium_24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_car_modern_17in_01.sii"
+}

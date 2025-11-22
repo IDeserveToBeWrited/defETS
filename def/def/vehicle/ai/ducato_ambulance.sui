@@ -224,3 +224,40 @@ vehicle_wheel_accessory: .ducato.mk.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_rear.sii"
 }
+# XXXXXXXXXXXXXXXXXXX Greece XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.ducato.gr
+{
+	accessories[]: .ducato.gr.chassis
+	accessories[]: .ducato.gr.fwheel
+	accessories[]: .ducato.gr.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .ducato.gr.chassis
+{
+	data_path: "/def/vehicle/ai/ducato/gr.sii"
+}
+
+vehicle_wheel_accessory: .ducato.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_front.sii"
+}
+
+vehicle_wheel_accessory: .ducato.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/27_steel_fiat_rear.sii"
+}

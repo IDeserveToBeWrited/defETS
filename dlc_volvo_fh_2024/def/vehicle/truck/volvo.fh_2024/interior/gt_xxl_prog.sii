@@ -1,0 +1,49 @@
+SiiNunit
+{
+accessory_interior_data: gtxxl_p.volvo.fh_2024.interior
+{
+	name: "@@progressive@@"
+	price: 11760
+	unlock: 0
+	icon: "truck/volvo_fh16_2012/accessory/fh_prog_2021"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2024/interior/model/xxl.pmd"
+	collision: "/vehicle/truck/volvo_fh_2024/interior/model/xxl.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/anim/anim_2021.pmd"
+
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh_prog_24
+
+@include "animations_2024.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/volvo_fh_2024.sii"
+	gps_path: "/ui/dashboard/volvo_fh_2024_gps"
+@include "computers.sui"
+
+	glass_panes[]: .volvo.fh_2024.pane.front
+	glass_panes[]: .volvo.fh_2024.pane.left
+	glass_panes[]: .volvo.fh_2024.pane.right
+	glass_panes[]: .volvo.fh_2024.pane.top
+
+	suitable_for[]: "l3h3.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_aero.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_8x4.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_8x4_a.volvo.fh_2024.cabin"
+
+	ext_model: "/vehicle/truck/volvo_fh_2024/interior/external/xxl_prog_2024.pmd"
+	#ext_variant: std
+	ext_look: default
+
+@include "dashboard_color_2024.sui"
+#@include "seat.sui"
+@include "mirrors.sui"
+@include "int_shadow_xxl.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

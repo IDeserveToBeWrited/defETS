@@ -21,13 +21,117 @@ accessory_trailer_body_data : long.scs.lowbed.body
 
 	# visual data
 
-	#detail_model: "/vehicle/trailer_owned/upgrade/body/scs_lowbed/flat_bed_wood.pmd"
-	#model: "/vehicle/trailer_owned/upgrade/body/scs_lowbed/flat_bed_wood.pmd"
-	# lods[]: ""
-	#collision: "/vehicle/trailer_owned/upgrade/body/scs_lowbed/flat_bed_wood.pmc"
-	# variant:
-	# look
+		model: "/vehicle/trailer_owned/scs_lowbed/body/body_long.pmd"
+		collision: "/vehicle/trailer_owned/scs_lowbed/body/body_long.pmc"
+		
+		
+#xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
 
-	empty_cargo_model: "/def/vehicle/trailer_cargo/scs_lowbed/empty_cargo_long.sii"
+	cargo_loading_methods[]: area
+	cargo_loading_methods[]: custom
+
+	cargo_areas[]: (2.5, 11.69)
+	cargo_areas[]: (2.5, 2.90)
+
+	cargo_regular_width: 2.5
+	
+	cargo_warning_signs: true
+
+	cargo_lashing_mounts[]: .lashm0
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+	cargo_lashing_mounts[]: .lashm3
+	cargo_lashing_mounts[]: .lashm4
+	cargo_lashing_mounts[]: .lashm5
+	cargo_lashing_mounts[]: .lashm6
+	cargo_lashing_mounts[]: .lashm7
+	
+@include "/def/vehicle/lashing_gear.sui"
+@include "/def/vehicle/trailer_owned/scs.lowbed/body/cargo_custom_loads_long.sui"
 }
+
+#xxxxxxxxxx left side
+
+cargo_lashing_mount : .lashm0
+{
+	spacing: 0.85
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
 }
+cargo_lashing_mount : .lashm1
+{
+	
+	
+	spacing: 2.73
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm2
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+
+
+#xxxxxxxxxx right side
+
+cargo_lashing_mount : .lashm3
+{
+	spacing: 0.85
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm4
+{
+	
+	
+	spacing: 2.73
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm5
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm6
+{
+	
+	
+	spacing: 0.3
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring.pmd"
+
+}
+cargo_lashing_mount : .lashm7
+{
+	
+	
+	spacing: 0.3
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring.pmd"
+
+}
+
+@include "/def/vehicle/lashing_gear_data.sui"
+@include "/def/vehicle/trailer_owned/scs.lowbed/body/cargo_custom_load_data_long.sui"
+}
+

@@ -32189,7 +32189,7 @@ sign_model : sign.dlc_no_86
 	model_desc: "/model2/sign/traffic/traffic_barrier_01_sc.pmd"
 	model_coll: "/model2/sign/traffic/traffic_barrier_01_sc.pmc"
 	look_name: default
-	dynamic: false
+	dynamic: true
 
 	drop_sun_shadows: 1
 }
@@ -37069,7 +37069,7 @@ sign_model : sign.dlc_fr_9
 	look_name: default
 	category: "dlc_fr/city"
 
-	dynamic: true
+	dynamic: false
 	mass: 300
 
 	drop_sun_shadows: 1
@@ -37108,16 +37108,14 @@ sign_model : sign.dlc_fr_11
 sign_model : sign.dlc_fr_12
 {
 	sign_name: "electrobox_04_fr"
-
 	model_desc: "/model2/props/street/electrobox_04_fr.pmd"
 	model_coll: "/model2/props/street/electrobox_04_fr.pmc"
-	look_name: default
+	look_name: Default
+	dynamic: false
 	category: "dlc_fr/city"
 
-	dynamic: true
-	mass: 300
-
 	drop_sun_shadows: 1
+	mass: 300
 }
 
 sign_model : sign.dlc_fr_13
@@ -67516,6 +67514,25 @@ sign_model : sign.dlc_blke_731
 
 	drop_sun_shadows: 1
 }
+
+sign_model : sign.blke_5g09e
+{
+
+	sign_name: "go straight or left marker tr"
+
+	model_desc: "/model/sign/traffic/tr/go_straight_or_left_marker_tr.pmd"
+	model_coll: "/model/sign/traffic/tr/go_straight_or_left_marker_tr.pmc"
+	look_name: default
+	category: "signs/tr"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
 sign_model : sign.dlc_blke_732
 {
 
@@ -67631,6 +67648,22 @@ sign_model : sign.dlc_blke_738
 	model_desc: "/model/sign/traffic/bg/slippery_road_wet_bg.pmd"
 	model_coll: "/model/sign/traffic/bg/slippery_road_wet_bg.pmc"
 	look_name: default
+	category: "signs/bg"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.blke_5g001
+{
+	sign_name: "slippery road 80 bg"
+	model_desc: "/model/sign/traffic/bg/slippery_road_80_bg.pmd"
+	model_coll: "/model/sign/traffic/bg/slippery_road_80_bg.pmc"
+	look_name: "default"
 	category: "signs/bg"
 
 	dynamic: true
@@ -68045,6 +68078,7 @@ sign_model : sign.0z002
 	dynamic_lod_dist[0]: 50
 
 	drop_sun_shadows: 1
+	dynamic: false
 }
 
 sign_model : sign.ibe_105
@@ -81881,11 +81915,10 @@ sign_model : sign.rus_2y02v
 
 sign_model : sign.rus_2y02w
 {
-	sign_name: "stand single ru"
+	sign_name: "stand single"
 	model_desc: "/model/sign/traffic/ru/stand_single_ru.pmd"
 	model_coll: "/model/sign/traffic/ru/stand_single_ru.pmc"
 	look_name: "default"
-	category: "signs/ru"
 
 	dynamic: true
 	drop_sun_shadows: 1
@@ -88447,6 +88480,19 @@ sign_model : sign.ch_37006
 	mass: 100.0
 }
 
+sign_model : sign.ch_3700a
+{
+	sign_name: "bike line de"
+	model_desc: "/model/sign/traffic/de/bike_line_de.pmd"
+	model_coll: "/model/sign/traffic/de/bike_line_de.pmc"
+	look_name: "default"
+	category: "signs/de"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
 sign_model : sign.ch_42006
 {
 	sign_name: "crossroad 1 ch"
@@ -93246,6 +93292,7 @@ sign_model : sign.4e008
 	dynamic_lod_dist[0]: 50
 
 	drop_sun_shadows: 1
+	dynamic: false
 }
 
 sign_model : sign.ibe_0u006
@@ -93282,18 +93329,15 @@ sign_model : sign.poc_4l001
 	mass: 100.0
 }
 
-
-
-
-
 sign_model : sign.poc_24001
 {
 	sign_name: "lamp 01 poc"
 	model_desc: "/model2/lamp/lamp_01_poc.pmd"
 	model_coll: "/model2/lamp/lamp_01_poc.pmc"
-	look_name: "default"
+	look_name: default
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93307,6 +93351,7 @@ sign_model : sign.poc_24002
 	look_name: "default"
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93320,6 +93365,7 @@ sign_model : sign.poc_24003
 	look_name: "default"
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93333,6 +93379,7 @@ sign_model : sign.poc_24004
 	look_name: "default"
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93346,6 +93393,7 @@ sign_model : sign.poc_0k001
 	look_name: "default"
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93356,9 +93404,10 @@ sign_model : sign.poc_0k002
 	sign_name: "lamp 04 poc"
 	model_desc: "/model2/lamp/lamp_04_poc.pmd"
 	model_coll: "/model2/lamp/lamp_04_poc.pmc"
-	look_name: "default"
+	look_name: default
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93436,6 +93485,7 @@ sign_model : sign.48000
 	sign_name: "gas price primel 01 gr"
 	model_desc: "/model2/gas_station/gas_price_primel_01_gr.pmd"
 	model_coll: "/model2/gas_station/gas_price_primel_01_gr.pmc"
+	look_name: be
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_primel_01_gr_lod1.pmd"
 	dynamic_lod_dist[]: 100
@@ -93473,6 +93523,2288 @@ sign_model : sign.48004
 	dynamic_lod_dist[]: 100
 
 	dynamic: false
-	editable: true
+	editable: false
 }
+sign_model : sign.poc_2m00p
+{
+	sign_name: "lamp 07 poc"
+	model_desc: "/model2/lamp/lamp_07_poc.pmd"
+	model_coll: "/model2/lamp/lamp_07_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/lamp/lamp_07_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	road_model: true
+	mass: &43480000
+}
+
+sign_model : sign.lux_2m000
+{
+	sign_name: "bike 01 be lux"
+	model_desc: "/model2/props/street/bike_01_be_lux.pmd"
+	model_coll: "/model2/props/street/bike_01_be_lux.pmc"
+	look_name: default
+	category: ""
+
+	dynamic_lod_desc[]: "/model2/props/street/bike_01_be_lux_lod1.pmd"
+	dynamic_lod_dist[]: 20
+	dynamic_lod_desc[]: "/model2/props/street/bike_01_be_lux_lod2.pmd"
+	dynamic_lod_dist[]: 40
+
+	dynamic: true
+	drop_sun_shadows: 2
+	mass: 100.0
+}
+
+sign_model : sign.greece_37001
+{
+	sign_name: "warning gr"
+	model_desc: "/model/sign/traffic/gr/warning_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/warning_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_37002
+{
+	sign_name: "two way gr"
+	model_desc: "/model/sign/traffic/gr/two_way_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/two_way_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_37004
+{
+	sign_name: "traffic lights ahead gr"
+	model_desc: "/model/sign/traffic/gr/traffic_lights_ahead_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/traffic_lights_ahead_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_37007
+{
+	sign_name: "slippery road gr"
+	model_desc: "/model/sign/traffic/gr/slippery_road_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/slippery_road_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700b
+{
+	sign_name: "pedestrian gr"
+	model_desc: "/model/sign/traffic/gr/pedestrian_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/pedestrian_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700c
+{
+	sign_name: "pedestrian ahead gr"
+	model_desc: "/model/sign/traffic/gr/pedestrian_ahead_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/pedestrian_ahead_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700d
+{
+	sign_name: "parking gr"
+	model_desc: "/model/sign/traffic/gr/parking_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/parking_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700h
+{
+	sign_name: "narrowing road both gr"
+	model_desc: "/model/sign/traffic/gr/narrowing_road_both_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/narrowing_road_both_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700k
+{
+	sign_name: "main road right gr"
+	model_desc: "/model/sign/traffic/gr/main_road_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/main_road_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.major_road
+}
+
+sign_model : sign.greece_3700l
+{
+	sign_name: "main road left gr"
+	model_desc: "/model/sign/traffic/gr/main_road_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/main_road_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.major_road
+}
+
+sign_model : sign.greece_3700m
+{
+	sign_name: "main road gr"
+	model_desc: "/model/sign/traffic/gr/main_road_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/main_road_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+
+	traffic_rule: traffic_rule.major_road
+}
+
+sign_model : sign.greece_3700o
+{
+	sign_name: "main road both gr"
+	model_desc: "/model/sign/traffic/gr/main_road_both_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/main_road_both_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700q
+{
+	sign_name: "give road gr"
+	model_desc: "/model/sign/traffic/gr/give_road_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/give_road_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+
+	traffic_rule: traffic_rule.give_way
+}
+
+sign_model : sign.greece_3700t
+{
+	sign_name: "bend road right gr"
+	model_desc: "/model/sign/traffic/gr/bend_road_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bend_road_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700u
+{
+	sign_name: "bend road left gr"
+	model_desc: "/model/sign/traffic/gr/bend_road_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bend_road_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700v
+{
+	sign_name: "bend right gr"
+	model_desc: "/model/sign/traffic/gr/bend_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bend_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700w
+{
+	sign_name: "bend left gr"
+	model_desc: "/model/sign/traffic/gr/bend_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bend_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700x
+{
+	sign_name: "turn right gr"
+	model_desc: "/model/sign/traffic/gr/turn_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/turn_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700y
+{
+	sign_name: "turn left gr"
+	model_desc: "/model/sign/traffic/gr/turn_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/turn_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3700z
+{
+	sign_name: "stop gr"
+	model_desc: "/model/sign/traffic/gr/stop_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/stop_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+
+	traffic_rule: traffic_rule.stop
+}
+
+sign_model : sign.greece_37010
+{
+	sign_name: "speedlimit 130 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_130_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_130_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_130
+}
+
+sign_model : sign.greece_37011
+{
+	sign_name: "speedlimit 120 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_120_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_120_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_120
+}
+
+sign_model : sign.greece_37013
+{
+	sign_name: "speedlimit 100 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_100_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_100_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_100
+}
+
+sign_model : sign.greece_37014
+{
+	sign_name: "speedlimit 90 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_90_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_90_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_90
+}
+
+sign_model : sign.greece_37015
+{
+	sign_name: "speedlimit 80 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_80_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_80_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_80
+}
+
+sign_model : sign.greece_37016
+{
+	sign_name: "speedlimit 70 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_70_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_70_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_70
+}
+
+sign_model : sign.greece_37017
+{
+	sign_name: "speedlimit 60 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_60_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_60_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_60
+}
+
+sign_model : sign.greece_37018
+{
+	sign_name: "speedlimit 50 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_50_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_50_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_50
+}
+
+sign_model : sign.greece_37019
+{
+	sign_name: "speedlimit 40 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_40_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_40_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_40
+}
+
+sign_model : sign.greece_3701a
+{
+	sign_name: "speedlimit 30 gr"
+	model_desc: "/model/sign/traffic/gr/speedlimit_30_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedlimit_30_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_30
+}
+
+sign_model : sign.greece_3701c
+{
+	sign_name: "pass right gr"
+	model_desc: "/model/sign/traffic/gr/pass_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/pass_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701d
+{
+	sign_name: "pass left gr"
+	model_desc: "/model/sign/traffic/gr/pass_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/pass_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701e
+{
+	sign_name: "pass both gr"
+	model_desc: "/model/sign/traffic/gr/pass_both_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/pass_both_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701g
+{
+	sign_name: "no u turn gr"
+	model_desc: "/model/sign/traffic/gr/no_u_turn_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_u_turn_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701h
+{
+	sign_name: "no turn right gr"
+	model_desc: "/model/sign/traffic/gr/no_turn_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_turn_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701i
+{
+	sign_name: "no turn left gr"
+	model_desc: "/model/sign/traffic/gr/no_turn_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_turn_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701k
+{
+	sign_name: "no stopping gr"
+	model_desc: "/model/sign/traffic/gr/no_stopping_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_stopping_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701m
+{
+	sign_name: "no parking gr"
+	model_desc: "/model/sign/traffic/gr/no_parking_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_parking_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701n
+{
+	sign_name: "no overtaking trucks gr"
+	model_desc: "/model/sign/traffic/gr/no_overtaking_trucks_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_overtaking_trucks_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701o
+{
+	sign_name: "no overtaking gr"
+	model_desc: "/model/sign/traffic/gr/no_overtaking_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_overtaking_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701q
+{
+	sign_name: "no limits gr"
+	model_desc: "/model/sign/traffic/gr/no_limits_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_limits_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.limit_end
+}
+
+sign_model : sign.greece_3701r
+{
+	sign_name: "no entry gr"
+	model_desc: "/model/sign/traffic/gr/no_entry_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_entry_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701u
+{
+	sign_name: "go straight gr"
+	model_desc: "/model/sign/traffic/gr/go_straight_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/go_straight_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_3701w
+{
+	sign_name: "go left gr"
+	model_desc: "/model/sign/traffic/gr/go_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/go_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_37020
+{
+	sign_name: "barrier column 01 gr"
+	model_desc: "/model/sign/traffic/gr/barrier_column_01_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/barrier_column_01_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+	mass: 20.0
+}
+
+sign_model : sign.greece_37021
+{
+	sign_name: "barrier column 02 gr"
+	model_desc: "/model/sign/traffic/gr/barrier_column_02_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/barrier_column_02_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+	mass: 50.0
+}
+
+sign_model : sign.greece_5g001
+{
+	sign_name: "stand v01 hw2 gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v01_gr_hw2.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v01_gr_hw2.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g004
+{
+	sign_name: "stand v01 single gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v01_gr_single.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v01_gr_single.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g007
+{
+	sign_name: "chevron stand v01x1 gr"
+	model_desc: "/model/sign/navigation/gr/stand/gr_chevron_stand_v01x1.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/gr_chevron_stand_v01x1.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: true
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g00a
+{
+	sign_name: "chevron stand v01x2 gr"
+	model_desc: "/model/sign/navigation/gr/stand/gr_chevron_stand_v01x2.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/gr_chevron_stand_v01x2.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: true
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g00d
+{
+	sign_name: "tunnel height gr"
+	model_desc: "/model/sign/traffic/gr/tunnel_height_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/tunnel_height_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00e
+{
+	sign_name: "keep distance gr"
+	model_desc: "/model/sign/traffic/gr/keep_distance_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/keep_distance_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00f
+{
+	sign_name: "fog gr"
+	model_desc: "/model/sign/traffic/gr/fog_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/fog_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00h
+{
+	sign_name: "cow warning gr"
+	model_desc: "/model/sign/traffic/gr/cow_warning_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/cow_warning_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00i
+{
+	sign_name: "arrow small left gr"
+	model_desc: "/model/sign/traffic/gr/arrow_gr_small_left.pmd"
+	model_coll: "/model/sign/traffic/gr/arrow_gr_small_left.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00j
+{
+	sign_name: "arrow small right gr"
+	model_desc: "/model/sign/traffic/gr/arrow_gr_small_right.pmd"
+	model_coll: "/model/sign/traffic/gr/arrow_gr_small_right.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g00q
+{
+	sign_name: "highway start small gr"
+	model_desc: "/model/sign/traffic/gr/highway_start_small_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/highway_start_small_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.motorway_st
+}
+
+sign_model : sign.greece_5g00r
+{
+	sign_name: "highway end small gr"
+	model_desc: "/model/sign/traffic/gr/highway_end_small_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/highway_end_small_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.motorway_end
+}
+
+sign_model : sign.greece_5g00s
+{
+	sign_name: "highway start big gr"
+	model_desc: "/model/sign/traffic/gr/highway_start_big_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/highway_start_big_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.motorway_st
+}
+
+sign_model : sign.greece_5g00t
+{
+	sign_name: "highway end big gr"
+	model_desc: "/model/sign/traffic/gr/highway_end_big_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/highway_end_big_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+	traffic_rule: traffic_rule.motorway_end
+}
+
+sign_model : sign.greece_5g00v
+{
+	sign_name: "tunnel sign stand gr"
+	model_desc: "/model/sign/navigation/gr/stand/gr_tunnel_sign_stand.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/gr_tunnel_sign_stand.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: true
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g00y
+{
+	sign_name: "reflective post gr"
+	model_desc: "/model/sign/traffic/gr/reflective_post_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/reflective_post_gr.pmc"
+	look_name: default
+	category: "signs/gr"
+
+	dynamic: true
+	mass: 100
+
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_5g00z
+{
+	sign_name: "warning rectangle left gr"
+	model_desc: "/model/sign/traffic/gr/warning_rectangle_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/warning_rectangle_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g011
+{
+	sign_name: "warning rectangle hw left gr"
+	model_desc: "/model/sign/traffic/gr/warning_rectangle_hw_left_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/warning_rectangle_hw_left_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g012
+{
+	sign_name: "warning rectangle hw right gr"
+	model_desc: "/model/sign/traffic/gr/warning_rectangle_hw_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/warning_rectangle_hw_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g018
+{
+	sign_name: "tunnel lights green off gr"
+	model_desc: "/model/sign/traffic/gr/tunnel_lights_green_off_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/tunnel_lights_green_off_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g019
+{
+	sign_name: "tunnel lights green on gr"
+	model_desc: "/model/sign/traffic/gr/tunnel_lights_green_on_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/tunnel_lights_green_on_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g01a
+{
+	sign_name: "tunnel lights white off gr"
+	model_desc: "/model/sign/traffic/gr/tunnel_lights_white_off_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/tunnel_lights_white_off_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g01b
+{
+	sign_name: "tunnel lights white on gr"
+	model_desc: "/model/sign/traffic/gr/tunnel_lights_white_on_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/tunnel_lights_white_on_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g01u
+{
+	sign_name: "merge lanes 3 2 right hw gr"
+	model_desc: "/model/sign/traffic/gr/merge_lanes_3_2_right_hw_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/merge_lanes_3_2_right_hw_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g01w
+{
+	sign_name: "toll gr"
+	model_desc: "/model/sign/traffic/gr/toll_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/toll_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g022
+{
+	sign_name: "greece map gr"
+	model_desc: "/model/sign/traffic/gr/greece_map_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/greece_map_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g023
+{
+	sign_name: "no photos gr"
+	model_desc: "/model/sign/traffic/gr/no_photos_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/no_photos_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g025
+{
+	sign_name: "rest area gr"
+	model_desc: "/model/sign/traffic/gr/rest_area_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/rest_area_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g026
+{
+	sign_name: "country sign greece gr"
+	model_desc: "/model/sign/traffic/gr/country_sign_greece_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/country_sign_greece_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g027
+{
+	sign_name: "welcome hellas gr"
+	model_desc: "/model/sign/traffic/gr/welcome_hellas_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/welcome_hellas_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g028
+{
+	sign_name: "country sign hellas gr"
+	model_desc: "/model/sign/traffic/gr/country_sign_hellas_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/country_sign_hellas_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g029
+{
+	sign_name: "kulata border name gr"
+	model_desc: "/model/sign/traffic/gr/kulata_border_name_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/kulata_border_name_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02a
+{
+	sign_name: "kipi border info gr"
+	model_desc: "/model/sign/traffic/gr/kipi_border_info_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/kipi_border_info_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02b
+{
+	sign_name: "makaza lights sign gr"
+	model_desc: "/model/sign/traffic/gr/makaza_lights_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/makaza_lights_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02c
+{
+	sign_name: "makaza city sign gr"
+	model_desc: "/model/sign/traffic/gr/makaza_city_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/makaza_city_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02d
+{
+	sign_name: "medzitlija border name gr"
+	model_desc: "/model/sign/traffic/gr/medzitlija_border_name_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/medzitlija_border_name_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02e
+{
+	sign_name: "nymphaia country board gr"
+	model_desc: "/model/sign/traffic/gr/nymphaia_country_board_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/nymphaia_country_board_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02f
+{
+	sign_name: "promachonas map gr"
+	model_desc: "/model/sign/traffic/gr/promachonas_map_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/promachonas_map_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02g
+{
+	sign_name: "bogorodica bus sign gr"
+	model_desc: "/model/sign/traffic/gr/bogorodica_bus_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bogorodica_bus_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02l
+{
+	sign_name: "speedcamera v01 gr"
+	model_desc: "/model/sign/traffic/gr/speedcamera_v01_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speedcamera_v01_gr.pmc"
+	look_name: default
+	category: "speedcamera"
+
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02o
+{
+	sign_name: "board stand v01x4 gr"
+	model_desc: "/model/sign/navigation/gr/stand/board_stand_v01x4_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/board_stand_v01x4_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02p
+{
+	sign_name: "board stand v01x3 gr"
+	model_desc: "/model/sign/navigation/gr/stand/board_stand_v01x3_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/board_stand_v01x3_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02s
+{
+	sign_name: "toll safety sign gr"
+	model_desc: "/model/sign/traffic/gr/toll_safety_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/toll_safety_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02t
+{
+	sign_name: "toll description sign gr"
+	model_desc: "/model/sign/traffic/gr/toll_description_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/toll_description_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02u
+{
+	sign_name: "side stand gr"
+	model_desc: "/model/sign/navigation/gr/stand/side_stand_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/side_stand_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02v
+{
+	sign_name: "stand v03 double gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v03_double_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v03_double_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02w
+{
+	sign_name: "stand v03 left gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v03_left_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v03_left_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02x
+{
+	sign_name: "stand v03 right gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v03_right_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v03_right_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g02y
+{
+	sign_name: "evzoni no parking area gr"
+	model_desc: "/model/sign/traffic/gr/evzoni_no_parking_area_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/evzoni_no_parking_area_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g02z
+{
+	sign_name: "kipi sign totem gr"
+	model_desc: "/model/sign/traffic/gr/kipi_sign_totem_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/kipi_sign_totem_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g030
+{
+	sign_name: "ipsala lane switch gr"
+	model_desc: "/model/sign/traffic/gr/ipsala_lane_switch_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/ipsala_lane_switch_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g031
+{
+	sign_name: "multi stand gr"
+	model_desc: "/model/sign/navigation/gr/stand/multi_stand_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/multi_stand_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g032
+{
+	sign_name: "stand v04 gr"
+	model_desc: "/model/sign/navigation/gr/stand/stand_v04_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/stand_v04_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: false
+	boards: false
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g033
+{
+	sign_name: "nymphaia no photos gr"
+	model_desc: "/model/sign/traffic/gr/nymphaia_no_photos_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/nymphaia_no_photos_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g034
+{
+	sign_name: "nymphaia lane switch gr"
+	model_desc: "/model/sign/traffic/gr/nymphaia_lane_switch_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/nymphaia_lane_switch_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g03d
+{
+	sign_name: "speed camera sign gr"
+	model_desc: "/model/sign/traffic/gr/speed_camera_sign_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/speed_camera_sign_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g03h
+{
+	sign_name: "ipsala cars right gr"
+	model_desc: "/model/sign/traffic/gr/ipsala_cars_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/ipsala_cars_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g03i
+{
+	sign_name: "ipsala trucks right gr"
+	model_desc: "/model/sign/traffic/gr/ipsala_trucks_right_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/ipsala_trucks_right_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g03j
+{
+	sign_name: "bogorodica nmk welcome board gr"
+	model_desc: "/model/sign/traffic/gr/bogorodica_nmk_welcome_board_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bogorodica_nmk_welcome_board_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g03k
+{
+	sign_name: "bogorodica nmk welcome board v2 gr"
+	model_desc: "/model/sign/traffic/gr/bogorodica_nmk_welcome_board_v2_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/bogorodica_nmk_welcome_board_v2_gr.pmc"
+	look_name: "default"
+	category: "signs/gr/border"
+
+	dynamic: false
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_5g04g
+{
+	sign_name: "multi stand v02 gr"
+	model_desc: "/model/sign/navigation/gr/stand/multi_stand_v02_gr.pmd"
+	model_coll: "/model/sign/navigation/gr/stand/multi_stand_v02_gr.pmc"
+	look_name: "default"
+	category: "stands/gr"
+
+	dynamic: false
+	editable: true
+	boards: true
+	variant_name: Default
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_5g04j
+{
+	sign_name: "reflective post tr"
+	model_desc: "/model/sign/traffic/gr/reflective_post_tr.pmd"
+	model_coll: "/model/sign/traffic/gr/reflective_post_tr.pmc"
+	look_name: default
+	category: "signs/gr"
+
+	dynamic: true
+	mass: 100
+
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.5g09f
+{
+	sign_name: "merge lanes 2 1 left hw white gr"
+	model_desc: "/model/sign/traffic/gr/merge_lanes_2_1_left_hw_white_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/merge_lanes_2_1_left_hw_white_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.5g09g
+{
+	sign_name: "merge lanes 2 1 right hw white gr"
+	model_desc: "/model/sign/traffic/gr/merge_lanes_2_1_right_hw_white_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/merge_lanes_2_1_right_hw_white_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.5g09h
+{
+	sign_name: "divide lanes 2 1 left hw white gr"
+	model_desc: "/model/sign/traffic/gr/divide_lanes_2_1_left_hw_white_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/divide_lanes_2_1_left_hw_white_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.5g09i
+{
+	sign_name: "lanes 2 hw white gr"
+	model_desc: "/model/sign/traffic/gr/lanes_2_hw_white_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/lanes_2_hw_white_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.5g09j
+{
+	sign_name: "lanes 1 hw white gr"
+	model_desc: "/model/sign/traffic/gr/lanes_1_hw_white_gr.pmd"
+	model_coll: "/model/sign/traffic/gr/lanes_1_hw_white_gr.pmc"
+	look_name: "default"
+	category: "signs/gr"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.5g09k
+{
+	sign_name: "tunnel end bg"
+
+	model_desc: "/model/sign/traffic/bg/tunnel_end_bg.pmd"
+	model_coll: "/model/sign/traffic/bg/tunnel_end_bg.pmc"
+	look_name: default
+	category: "signs/bg"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09l
+{
+	sign_name: "tunnel hw end bg"
+	model_desc: "/model/sign/traffic/bg/tunnel_hw_end_bg.pmd"
+	model_coll: "/model/sign/traffic/bg/tunnel_hw_end_bg.pmc"
+	look_name: default
+	category: "signs/bg"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09m
+{
+	sign_name: "tunnel hw bg"
+	model_desc: "/model/sign/traffic/bg/tunnel_hw_bg.pmd"
+	model_coll: "/model/sign/traffic/bg/tunnel_hw_bg.pmc"
+	look_name: default
+	category: "signs/bg"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09n
+{
+	sign_name: "warning tunnel bg"
+	model_desc: "/model/sign/traffic/bg/warning_tunnel_bg.pmd"
+	model_coll: "/model/sign/traffic/bg/warning_tunnel_bg.pmc"
+	look_name: default
+	category: "signs/bg"
+
+	dynamic: true
+	mass: 100
+	road_model: false
+	instanced: false
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09o
+{
+	sign_name: "hw2 exit white white v01 de"
+	model_desc: "/model/sign/navigation/de/hw2_exit_white_white_v01_de.pmd"
+	model_coll: "/model/sign/navigation/de/hw2_exit_white_white_v01_de.pmc"
+	look_name: "default"
+	category: "signs/d-navigation"
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09p
+{
+	sign_name: "hw split blue yellow de"
+	model_desc: "/model/sign/navigation/de/hw_split_blue_yellow_de.pmd"
+	model_coll: "/model/sign/navigation/de/hw_split_blue_yellow_de.pmc"
+	look_name: default
+	category: "signs/d-navigation"
+	editable: true
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g09q
+{
+	sign_name: "hw split yellow blue de"
+	model_desc: "/model/sign/navigation/de/hw_split_yellow_blue_de.pmd"
+	model_coll: "/model/sign/navigation/de/hw_split_yellow_blue_de.pmc"
+	look_name: default
+	category: "signs/d-navigation"
+	editable: true
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g0f6
+{
+	sign_name: "2 lanes no trucks de"
+	model_desc: "/model/sign/traffic/de/2_lanes_no_trucks_de.pmd"
+	model_coll: "/model/sign/traffic/de/2_lanes_no_trucks_de.pmc"
+	category: "signs/de"
+	dynamic: true
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g0f7
+{
+	sign_name: "border maut sign dk de"
+	model_desc: "/model/sign/traffic/de/border_maut_sign_dk_de.pmd"
+	model_coll: "/model/sign/traffic/de/border_maut_sign_dk_de.pmc"
+	category: "signs/de"
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g0f8
+{
+	sign_name: "border speedlimit de"
+	model_desc: "/model/sign/traffic/de/border_speedlimit_de.pmd"
+	model_coll: "/model/sign/traffic/de/border_speedlimit_de.pmc"
+	category: "signs/de"
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g0f9
+{
+	sign_name: "country sign de"
+	model_desc: "/model/sign/traffic/de/country_sign_de.pmd"
+	model_coll: "/model/sign/traffic/de/country_sign_de.pmc"
+	category: "signs/de"
+	dynamic: false
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.5g0fb
+{
+	sign_name: "gas hw v02 dk"
+	model_desc: "/model/sign/navigation/dk/gas_hw_v02_dk.pmd"
+	model_coll: "/model/sign/navigation/dk/gas_hw_v02_dk.pmc"
+	look_name: default
+	category: "signs/dk-navigation"
+
+	editable: true
+	dynamic: true
+	mass: 100
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_4f000
+{
+	sign_name: "gas price totem big gr"
+	model_desc: "/model2/gas_station/gas_price_totem_big_gr.pmd"
+	model_coll: "/model2/gas_station/gas_price_totem_big_gr.pmc"
+	look_name: default
+	variant_name: default
+	category: ""
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_totem_big_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+	mass: &42c80000
+}
+
+sign_model : sign.greece_4h000
+{
+	sign_name: "traffic cone 01 gr"
+	model_desc: "/model2/sign/traffic_cone_01_gr.pmd"
+	model_coll: "/model2/sign/traffic_cone_01_gr.pmc"
+
+	dynamic: true
+	instanced: true
+	mass: &42c80000
+}
+
+
+
+sign_model : sign.greece_01001
+{
+	sign_name: "trash bin 01 gr"
+	model_desc: "/model2/props/street/trash_bin_01_gr.pmd"
+	model_coll: "/model2/props/street/trash_bin_01_gr.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/trash_bin_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_25001
+{
+	sign_name: "trash bin 03 gr"
+	model_desc: "/model2/props/street/trash_bin_03_gr.pmd"
+	model_coll: "/model2/props/street/trash_bin_03_gr.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/trash_bin_03_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.greece_0k001
+{
+	sign_name: "trash bin 02 gr"
+	model_desc: "/model2/props/street/trash_bin_02_gr.pmd"
+	model_coll: "/model2/props/street/trash_bin_02_gr.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/trash_bin_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.greece_24000
+{
+	sign_name: "lamp 02 gr"
+	model_desc: "/model2/lamp/lamp_02_gr.pmd"
+	model_coll: "/model2/lamp/lamp_02_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_24001
+{
+	sign_name: "lamp t shape 02 gr"
+	model_desc: "/model2/lamp/lamp_t_shape_02_gr.pmd"
+	model_coll: "/model2/lamp/lamp_t_shape_02_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_01002
+{
+	sign_name: "lamp small 01 gr"
+	model_desc: "/model2/lamp/lamp_small_01_gr.pmd"
+	model_coll: "/model2/lamp/lamp_small_01_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_0o000
+{
+	sign_name: "lamp hw 01 gr"
+	model_desc: "/model2/lamp/lamp_hw_01_gr.pmd"
+	model_coll: "/model2/lamp/lamp_hw_01_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_0o001
+{
+	sign_name: "lamp hw t shape 01 gr"
+	model_desc: "/model2/lamp/lamp_hw_t_shape_01_gr.pmd"
+	model_coll: "/model2/lamp/lamp_hw_t_shape_01_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_24002
+{
+	sign_name: "lamp t shape 01 gr"
+	model_desc: "/model2/lamp/lamp_t_shape_01_gr.pmd"
+	model_coll: "/model2/lamp/lamp_t_shape_01_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_24003
+{
+	sign_name: "lamp 01 gr"
+	model_desc: "/model2/lamp/lamp_01_gr.pmd"
+	model_coll: "/model2/lamp/lamp_01_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_0o002
+{
+	sign_name: "lamp 03 gr"
+	model_desc: "/model2/lamp/lamp_03_gr.pmd"
+	model_coll: "/model2/lamp/lamp_03_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_0o003
+{
+	sign_name: "lamp t shape 03 gr"
+	model_desc: "/model2/lamp/lamp_t_shape_03_gr.pmd"
+	model_coll: "/model2/lamp/lamp_t_shape_03_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_01000
+{
+	sign_name: "lamp small 02 gr"
+	model_desc: "/model2/lamp/lamp_small_02_gr.pmd"
+	model_coll: "/model2/lamp/lamp_small_02_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_24004
+{
+	sign_name: "lamp small 03 gr"
+	model_desc: "/model2/lamp/lamp_small_03_gr.pmd"
+	model_coll: "/model2/lamp/lamp_small_03_gr.pmc"
+
+	dynamic: false
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.greece_01003
+{
+	model_desc: "/model2/props/street/hydrant_01_gr.pmd"
+	model_coll: "/model2/props/street/hydrant_01_gr.pmc"
+
+	dynamic_lod_desc[]: "/model2/props/street/hydrant_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+sign_model : sign.blkw_0v00s
+{
+	sign_name: "donjivakuf lamp 01 blkw"
+	model_desc: "/model2/landmark/ba/donjivakuf_lamp_01_blkw.pmd"
+	model_coll: "/model2/landmark/ba/donjivakuf_lamp_01_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.blkw_12001
+{
+	sign_name: "lamp t shape 01 ba blkw"
+	model_desc: "/model2/lamp/lamp_t_shape_01_ba_blkw.pmd"
+	model_coll: "/model2/lamp/lamp_t_shape_01_ba_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic: false
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.blkw_48007
+{
+	sign_name: "advert a stand 01 ba blkw"
+	model_desc: "/model2/props/street/advert/ba/advert_a_stand_01_ba_blkw.pmd"
+	model_coll: "/model2/props/street/advert/ba/advert_a_stand_01_ba_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/advert/ba/advert_a_stand_01_ba_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 4.0
+}
+
+sign_model : sign.6s000
+{
+	sign_name: "reflective post 01 is poc"
+	model_desc: "/model2/sign/reflective_post_01_is_poc.pmd"
+	model_coll: "/model2/sign/reflective_post_01_is_poc.pmc"
+
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.blkw_0v005
+{
+	sign_name: "tuzla lamp t shape 01 blkw"
+	model_desc: "/model2/landmark/ba/tuzla_lamp_t_shape_01_blkw.pmd"
+	model_coll: "/model2/landmark/ba/tuzla_lamp_t_shape_01_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic: false
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.blkw_0v006
+{
+	sign_name: "tuzla lamp 01 blkw"
+	model_desc: "/model2/landmark/ba/tuzla_lamp_01_blkw.pmd"
+	model_coll: "/model2/landmark/ba/tuzla_lamp_01_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic: false
+	road_model: true
+	instanced: true
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.blkw_48006
+{
+	sign_name: "advert a stand 01 al blkw"
+	model_desc: "/model2/props/street/advert/al/advert_a_stand_01_al_blkw.pmd"
+	model_coll: "/model2/props/street/advert/al/advert_a_stand_01_al_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/advert/al/advert_a_stand_01_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 4.0
+}
+
+sign_model : sign.blkw_0f001
+{
+	sign_name: "advert a stand 02 al blkw"
+	model_desc: "/model2/props/street/advert/al/advert_a_stand_02_al_blkw.pmd"
+	model_coll: "/model2/props/street/advert/al/advert_a_stand_02_al_blkw.pmc"
+	look_name: "default"
+	category: ""
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/advert/al/advert_a_stand_02_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 4.0
+}
+
+sign_model : sign.dlc_blke_233
+{
+
+	sign_name: "reflective post 01 bg"
+
+	model_desc: "/model2/sign/reflective_post_01_bg_blke.pmd"
+	model_coll: "/model2/sign/reflective_post_01_bg_blke.pmc"
+	look_name: default
+	category: "reflective_posts"
+
+	dynamic: true
+	mass: 100
+
+	road_model: true
+	instanced: true
+
+	drop_sun_shadows: 1
+}
+sign_model : sign.dlc_blke_521
+{
+
+	sign_name: "logo brawen transport arrow_right_blke"
+
+	model_desc: "/model2/sign/company_logos/brawen_transport/arrow_right_blke.pmd"
+	model_coll: "/model2/sign/company_logos/brawen_transport/arrow_right_blke.pmc"
+	look_name: default
+	dynamic: false
+	category: "dlc_balkan_e/logos"
+
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.4f001
+{
+	sign_name: "company arrow stand 01 gr"
+	model_desc: "/model2/sign/company_logos/company_arrow_stand_01_gr.pmd"
+	model_coll: "/model2/sign/company_logos/company_arrow_stand_01_gr.pmc"
+	look_name: default
+	category: ""
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: &42c80000
+}
+
+sign_model : sign.4l00o
+{
+	sign_name: "gas price finoil 01 poc"
+	model_desc: "/model2/gas_station/gas_price_finoil_01_poc.pmd"
+	model_coll: "/model2/gas_station/gas_price_finoil_01_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_finoil_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: &42c80000
+}
+
+sign_model : sign.4l00n
+{
+	sign_name: "gas price yokull 01 poc"
+	model_desc: "/model2/gas_station/gas_price_yokull_01_poc.pmd"
+	model_coll: "/model2/gas_station/gas_price_yokull_01_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_yokull_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: &42c80000
+}
+
+sign_model : sign.4l00m
+{
+	sign_name: "gas price fjoil 01 poc"
+	model_desc: "/model2/gas_station/gas_price_fjoil_01_poc.pmd"
+	model_coll: "/model2/gas_station/gas_price_fjoil_01_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_fjoil_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: &42c80000
+}
+
+sign_model : sign.4l00q
+{
+	sign_name: "gas price ip1 01 poc"
+	model_desc: "/model2/gas_station/gas_price_ip1_01_poc.pmd"
+	model_coll: "/model2/gas_station/gas_price_ip1_01_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_ip1_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: &42c80000
+}
+
+sign_model : sign.4l00r
+{
+	sign_name: "gas price tqg 01 poc"
+	model_desc: "/model2/gas_station/gas_price_tqg_01_poc.pmd"
+	model_coll: "/model2/gas_station/gas_price_tqg_01_poc.pmc"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_tqg_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: &42c80000
+}
+
+sign_model : sign.6w005
+{
+	model_desc: "/model2/props/street/advert/eu/citycrust_a_stand_01_eu.pmd"
+	model_coll: "/model2/props/street/advert/eu/citycrust_a_stand_01_eu.pmc"
+
+	dynamic: true
+}
+
+sign_model : sign.0m000
+{
+	sign_name: "reflective post 02 is poc"
+	model_desc: "/model2/sign/reflective_post_02_is_poc.pmd"
+	model_coll: "/model2/sign/reflective_post_02_is_poc.pmc"
+
+	road_model: true
+	instanced: true
+}
+
+sign_model : sign.5r002
+{
+	sign_name: "lamp bus station 02"
+	model_desc: "/model/lamp/lamp_bus_station_02.pmd"
+	model_coll: "/model/lamp/lamp_bus_station_02.pmc"
+
+	dynamic: false
+	mass: &42c80000
+}
+
+
+
+	sign_model : sign.poc_5g0aw
+	{
+		sign_name: "stand side v03 poc"
+		model_desc: "/model/sign/navigation/stand/stand_side_v03_poc.pmd"
+		model_coll: "/model/sign/navigation/stand/stand_side_v03_poc.pmc"
+		look_name: "default"
+		category: "stands/poc"
+
+		dynamic: false
+		editable: true
+		boards: true
+		drop_sun_shadows: 1
+	}
+
+	sign_model : sign.poc_5g0fv
+	{
+		sign_name: "stand portal v02 hw3 poc"
+		model_desc: "/model/sign/navigation/stand/stand_portal_v02_hw3_poc.pmd"
+		model_coll: "/model/sign/navigation/stand/stand_portal_v02_hw3_poc.pmc"
+		look_name: "default"
+		category: "stands/poc"
+
+		dynamic: false
+		editable: true
+		boards: true
+		drop_sun_shadows: 1
+	}
+
+
+sign_model : sign.lux_4f009
+{
+	sign_name: "entrance sign daf lux"
+	model_desc: "/model2/sign/truck_company_logos/daf/entrance_sign_daf_lux.pmd"
+	model_coll: "/model2/sign/truck_company_logos/daf/entrance_sign_daf_lux.pmc"
+	look_name: default
+
+	dynamic: false
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.lux_4f00a
+{
+	sign_name: "signpost sign daf lux"
+	model_desc: "/model2/sign/truck_company_logos/daf/signpost_sign_daf_lux.pmd"
+	model_coll: "/model2/sign/truck_company_logos/daf/signpost_sign_daf_lux.pmc"
+	look_name: default
+
+	dynamic: false
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.lux_4f00b
+{
+	sign_name: "building sign 02 daf lux"
+	model_desc: "/model2/sign/truck_company_logos/daf/building_sign_02_daf_lux.pmd"
+	model_coll: "/model2/sign/truck_company_logos/daf/building_sign_02_daf_lux.pmc"
+	look_name: default
+
+	dynamic: false
+	drop_sun_shadows: 1
+}
+
 }

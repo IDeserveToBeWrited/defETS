@@ -89,3 +89,52 @@ vehicle_wheel_accessory: .cls252_loco.pt.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
+
+############################## GREECE ##############################
+
+traffic_vehicle : traffic.cls252_loco.gr
+{
+	accessories[]: .cls252_loco.gr.chassis
+	accessories[]: .cls252_loco.gr.fwheel
+	accessories[]: .cls252_loco.gr.rwheel
+
+
+	max_speed: 220
+
+	vehicle_mass: 82000
+	engine_power: 5600
+
+	trailer_chains[]: "train_car.wa_passenger.gr 5"
+
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0
+
+	lod_dist[]: 50
+	lod_dist[]: 75
+	lod_dist[]: 120
+
+	tags[]: high_speed
+	tags[]: passenger
+}
+
+vehicle_accessory: .cls252_loco.gr.chassis
+{
+	data_path: "/def/vehicle/ai/train_cls252/chassis_locomotive_gr.sii"
+}
+
+vehicle_wheel_accessory: .cls252_loco.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .cls252_loco.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

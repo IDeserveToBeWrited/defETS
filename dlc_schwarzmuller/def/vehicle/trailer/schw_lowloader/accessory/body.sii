@@ -1,0 +1,109 @@
+SiiNunit
+{
+accessory_trailer_body_data : body.schwmuller.lowloader.body
+{
+volume: 72
+	body_type: lowbed
+#xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area
+	cargo_loading_methods[]: custom
+
+	cargo_areas[]: (2.5, 8.26)
+	cargo_areas[]: (2.5, 2.77)
+
+	cargo_regular_width: 2.5
+
+	cargo_warning_signs: true
+
+	cargo_lashing_mounts[]: .lashm0
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+	cargo_lashing_mounts[]: .lashm3
+	cargo_lashing_mounts[]: .lashm4
+	cargo_lashing_mounts[]: .lashm5
+	cargo_lashing_mounts[]: .lashm6
+	cargo_lashing_mounts[]: .lashm7
+	
+@include "/def/vehicle/lashing_gear.sui"
+@include "/def/vehicle/trailer_owned/schwmuller.lowloader/body/cargo_custom_loads.sui"
+}
+
+#xxxxxxxxxx left side
+
+cargo_lashing_mount : .lashm0
+{
+	spacing: 2.2
+
+}
+cargo_lashing_mount : .lashm1
+{
+	
+	
+	spacing: 1.2
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm2
+{
+	
+	
+	spacing: 1.2
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm3
+{
+	
+	
+	spacing: 0.6
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_1.pmd"
+
+}
+
+#xxxxxxxxxx right side
+
+cargo_lashing_mount : .lashm4
+{
+	spacing: 2.2
+
+}
+cargo_lashing_mount : .lashm5
+{
+	
+	
+	spacing: 1.2
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm6
+{
+	
+	
+	spacing: 1.2
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm7
+{
+	
+	
+	spacing: 0.6
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_eu/schw_overweight/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_eu/schw_overweight/ring_close_2.pmd"
+
+}
+@include "/def/vehicle/lashing_gear_data.sui"
+@include "/def/vehicle/trailer_owned/schwmuller.lowloader/body/cargo_custom_load_data.sui"
+}

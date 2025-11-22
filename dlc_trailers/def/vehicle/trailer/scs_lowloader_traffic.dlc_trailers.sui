@@ -1,14 +1,28 @@
-traffic_trailer : traffic.trailer.scs_lowlowd5
+traffic_trailer : traffic.trailer.scs_lowl_tra
 {
 	
 	accessories[]: .scs_lowlowd5.chassis
 	accessories[]: .scs_lowlowd5.rwheel
 	accessories[]: .scs_lowlowd5.rwheel2
 	accessories[]: .scs_lowlowd5.paint_job
-	accessories[]: .scs_lowlowd5.cargo
+	accessories[]: .scs_lowlowd5.body
 	
 	cargo_mass: 20000
 	base: traffic.trailer.scs_lowlowd
+
+	trailer_definition: trailer_def.scs.lowloader.single_2_sh.short
+	
+	tags[]: low
+	tags[]: lowboy
+	tags[]: loader
+	tags[]: construct
+	tags[]: long
+	tags[]: cargo
+	
+	cargoes[]: aircond
+	cargoes[]: roller
+	cargoes[]: tractor
+	cargoes[]: helicopter
 }
 
 vehicle_accessory: .scs_lowlowd5.chassis
@@ -33,94 +47,7 @@ vehicle_paint_job_accessory: .scs_lowlowd5.paint_job
     	data_path: "/def/vehicle/trailer/scs_lowbed/custom_paint_job/red.sii"
 }
 
-vehicle_accessory: .scs_lowlowd5.cargo
+vehicle_accessory: .scs_lowlowd5.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_lowloader/track_tractor.sii"
-}
-
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-traffic_trailer : traffic.trailer.scs_lowlowd6
-{
-	
-	accessories[]: .scs_lowlowd6.chassis
-	accessories[]: .scs_lowlowd6.rwheel
-	accessories[]: .scs_lowlowd6.rwheel2
-	accessories[]: .scs_lowlowd6.paint_job
-	accessories[]: .scs_lowlowd6.cargo
-	
-	cargo_mass: 20000
-	base: traffic.trailer.scs_lowlowd
-}
-
-vehicle_accessory: .scs_lowlowd6.chassis
-{
-    	data_path: "/def/vehicle/trailer/scs_lowloader/ch_2.sii"
-}
-
-vehicle_wheel_accessory: .scs_lowlowd6.rwheel
-{
-	offset: 0
-    	data_path: "/def/vehicle/t_wheel/overweight.sii"
-}
-
-vehicle_wheel_accessory: .scs_lowlowd6.rwheel2
-{
-	offset: 2
-    	data_path: "/def/vehicle/t_wheel/overweight.sii"
-}
-
-vehicle_paint_job_accessory: .scs_lowlowd6.paint_job
-{
-    	data_path: "/def/vehicle/trailer/scs_lowbed/custom_paint_job/blue.sii"
-}
-
-vehicle_accessory: .scs_lowlowd6.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_lowloader/roller.sii"
-}
-
-
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-traffic_trailer : traffic.trailer.scs_lowlowd7
-{
-	
-	accessories[]: .scs_lowlowd7.chassis
-	accessories[]: .scs_lowlowd7.rwheel
-	accessories[]: .scs_lowlowd7.rwheel2
-	accessories[]: .scs_lowlowd7.paint_job
-	accessories[]: .scs_lowlowd7.cargo
-	
-	cargo_mass: 20000
-	base: traffic.trailer.scs_lowlowd
-}
-
-vehicle_accessory: .scs_lowlowd7.chassis
-{
-    	data_path: "/def/vehicle/trailer/scs_lowloader/ch_2.sii"
-}
-
-vehicle_wheel_accessory: .scs_lowlowd7.rwheel
-{
-	offset: 0
-    	data_path: "/def/vehicle/t_wheel/overweight.sii"
-}
-
-vehicle_wheel_accessory: .scs_lowlowd7.rwheel2
-{
-	offset: 2
-    	data_path: "/def/vehicle/t_wheel/overweight.sii"
-}
-
-vehicle_paint_job_accessory: .scs_lowlowd7.paint_job
-{
-    	data_path: "/def/vehicle/trailer/scs_lowbed/custom_paint_job/red.sii"
-}
-
-vehicle_accessory: .scs_lowlowd7.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_lowloader/helicopter.sii"
+	data_path: "/def/vehicle/trailer/scs_lowloader/accessory/short.sii"
 }

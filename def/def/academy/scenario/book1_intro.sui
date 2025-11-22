@@ -1,0 +1,67 @@
+
+academy_scenario : academy.scenario.book1.intro
+{
+	map_title: "@@aca_scenario_book1_intro_title@@"
+	map_desc: "@@aca_scenario_book1_intro_desc@@"
+	map_icon: "/material/ui/academy/book/book1/intro.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 550
+	environment_skybox: 5
+	environment_weather: 4
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic
+
+	variants[]: .academy.scenario.book1.intro.variant
+
+	replay: false
+
+
+}
+academy_scenario_variant: .academy.scenario.book1.intro.variant
+{
+	map_scenes[]: ac_tdl_3_02
+	map_scene_position_tags[]: funky
+
+	map_scenes[]: ac_tdl_intro
+	map_scene_position_tags[]: funky
+
+	intro_cutscene_tag: intro_book
+
+	start_position_tag: start3_02
+}
+
+
+###################################################################################
+###### For building intro level only
+
+academy_scenario : academy.scenario.book1.intro1
+{
+	map_title: "@@aca_scenario_book1_intro_title@@"
+	map_desc: "@@aca_scenario_book1_intro_desc@@"
+	map_icon: "/material/ui/academy/book/book1/intro.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 550
+	environment_skybox: 5
+	environment_weather: 4
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic
+
+	variants[]: .academy.scenario.book1.intro1.variant
+
+	replay: true
+
+
+}
+academy_scenario_variant: .academy.scenario.book1.intro1.variant
+{
+	map_scenes[]: ac_tdl_intro
+	map_scene_position_tags[]: funky
+
+	intro_cutscene_tag: intro_book
+
+	start_position_tag: start0_01
+}

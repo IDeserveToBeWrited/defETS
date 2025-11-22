@@ -4,7 +4,7 @@ traffic_trailer : traffic.trailer.scs_brick_rp
 	accessories[]: .scs_brick_rp.rwheel
 	accessories[]: .scs_brick_rp.rwheel2
 	accessories[]: .scs_brick_rp.rwheel3
-	accessories[]: .scs_brick_rp.cargo
+	accessories[]: .scs_brick_rp.body
 	accessories[]: .scs_brick_rp.paint_job
 	
 	tags[]: low
@@ -13,9 +13,11 @@ traffic_trailer : traffic.trailer.scs_brick_rp
 	tags[]: medium
 	tags[]: cargo
 	tags[]: construct
-
-	spawn_ratio: 0.01
 	
+	cargoes[]: bricks
+
+	trailer_definition: trailer_def.scs.flatbed.single_3.brick
+
 	variant[]: traffic.trailer.flat_bed.tubes_p
 
 }
@@ -42,9 +44,9 @@ vehicle_wheel_accessory: .scs_brick_rp.rwheel3
 	offset: 4
     	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_brick_rp.cargo
+vehicle_accessory: .scs_brick_rp.body
 {
-    	data_path: "/def/vehicle/trailer_cargo/scs_brick/bricks_13.sii"
+    	data_path: "/def/vehicle/trailer/scs_brick/accessory/body.sii"
 }
 vehicle_paint_job_accessory: .scs_brick_rp.paint_job
 {
@@ -58,7 +60,7 @@ traffic_trailer : traffic.trailer.flat_bed.tubes_p
 	accessories[]: .flat_bed_t.tubes_p.trwheel0
 	accessories[]: .flat_bed_t.tubes_p.trwheel1
 	accessories[]: .flat_bed_t.tubes_p.trwheel2
-	accessories[]: .flat_bed_t.tubes_p.cargo
+	accessories[]: .flat_bed_t.tubes_p.body
 	accessories[]: .flat_bed_t.tubes_p.paint_job
 	tags[]: low
 	tags[]: flatbed 
@@ -67,7 +69,9 @@ traffic_trailer : traffic.trailer.flat_bed.tubes_p
 	tags[]: cargo
 	tags[]: construct
 
-	spawn_ratio: 0.01
+	cargoes[]: sq_tub
+
+	trailer_definition: trailer_def.scs.flatbed.single_3.flatbed_w
 	
 }
 
@@ -94,9 +98,9 @@ vehicle_wheel_accessory: .flat_bed_t.tubes_p.trwheel2
 	offset: 4
     	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .flat_bed_t.tubes_p.cargo
+vehicle_accessory: .flat_bed_t.tubes_p.body
 {
-    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/tubes.sii"
+    	data_path: "/def/vehicle/trailer/scs_flatbed/accessory/body.sii"
 }
 vehicle_paint_job_accessory: .flat_bed_t.tubes_p.paint_job
 {

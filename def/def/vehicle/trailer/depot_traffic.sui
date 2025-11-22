@@ -223,26 +223,26 @@ traffic_trailer : traffic.trailer.fuel_cistern.depot
 }
 vehicle_accessory: .traffic.fuel_cistern.depot.tchassis.default
 {
-	data_path: "/def/vehicle/trailer/fuel_cistern/chassis.sii"
+	data_path: "/def/vehicle/trailer/scs_fueltank/chassis.sii"
 }
 vehicle_wheel_accessory: .traffic.fuel_cistern.depot.trwheel0.default
 {
 	offset: 0
-	data_path: "/def/vehicle/t_wheel/single.sii"
+	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
 vehicle_wheel_accessory: .traffic.fuel_cistern.depot.trwheel1.default
 {
 	offset: 2
-	data_path: "/def/vehicle/t_wheel/single.sii"
+	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
 vehicle_wheel_accessory: .traffic.fuel_cistern.depot.trwheel2.default
 {
 	offset: 4
-	data_path: "/def/vehicle/t_wheel/single.sii"
+	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
 vehicle_paint_job_accessory: .traffic.fuel_cistern.depot.paintjob.default
 {
-	data_path: "/def/vehicle/trailer/fuel_cistern/company_paint_job/default.sii"
+	data_path: "/def/vehicle/trailer/scs_fueltank/company_paint_job/default.sii"
 }
 traffic_spawn_condition: .traffic.trailer.fuel_cistern.depot.spawn.condition
 {
@@ -327,7 +327,7 @@ traffic_trailer : traffic.trailer.scs_gosck220.depot
 	accessories[]: .scs_gosck220.depot.trwheel0
 	accessories[]: .scs_gosck220.depot.trwheel1
 	accessories[]: .scs_gosck220.depot.trwheel2
-	accessories[]: .scs_gosck220.depot.cargo
+	accessories[]: .scs_gosck220.depot.body
 	accessories[]: .scs_gosck220.depot.paint_job
 	cargo_mass: 16000
 
@@ -338,9 +338,15 @@ traffic_trailer : traffic.trailer.scs_gosck220.depot
 	tags[]: cargo
 	tags[]: context
 
+	trailer_definition: trailer_def.scs.gooseneck.singl_3e_220.container
+
 	spawn_condition[]: .traffic.trailer.scs_gosck220.depot.spawn.condition
 	spawn_condition[]: .traffic.trailer.scs_gosck220.depot.spawn.condition2
 
+
+	cargoes[]: carrots_c
+	
+	
 }
 
 
@@ -366,9 +372,9 @@ vehicle_wheel_accessory: .scs_gosck220.depot.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_gosck220.depot.cargo
+vehicle_accessory: .scs_gosck220.depot.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_2x20_blue.sii"
+	data_path: "/def/vehicle/trailer/scs_gooseneck/accessory/body_220.sii"
 }
 vehicle_paint_job_accessory: .scs_gosck220.depot.paint_job
 {
@@ -398,7 +404,7 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot
 	accessories[]: .scs_gosck40.depot.trwheel0
 	accessories[]: .scs_gosck40.depot.trwheel1
 	accessories[]: .scs_gosck40.depot.trwheel2
-	accessories[]: .scs_gosck40.depot.cargo
+	accessories[]: .scs_gosck40.depot.body
 	accessories[]: .scs_gosck40.depot.paint_job
 	cargo_mass: 16000
 
@@ -409,9 +415,15 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot
 	tags[]: cargo
 	tags[]: context
 
+	trailer_definition: trailer_def.scs.gooseneck.singl_3e_40.container
+
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.spawn.condition
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.spawn.condition2
 
+
+	cargoes[]: carrots_c
+	
+	
 }
 
 
@@ -437,9 +449,9 @@ vehicle_wheel_accessory: .scs_gosck40.depot.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_gosck40.depot.cargo
+vehicle_accessory: .scs_gosck40.depot.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_40_blue.sii"
+	data_path: "/def/vehicle/trailer/scs_gooseneck/accessory/body_40.sii"
 }
 vehicle_paint_job_accessory: .scs_gosck40.depot.paint_job
 {
@@ -465,7 +477,7 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot.green
 	accessories[]: .scs_gosck40.depot.green.trwheel0
 	accessories[]: .scs_gosck40.depot.green.trwheel1
 	accessories[]: .scs_gosck40.depot.green.trwheel2
-	accessories[]: .scs_gosck40.depot.green.cargo
+	accessories[]: .scs_gosck40.depot.green.body
 	accessories[]: .scs_gosck40.depot.green.paint_job
 	cargo_mass: 16000
 
@@ -479,6 +491,12 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot.green
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.green.spawn.condition
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.green.spawn.condition2
 
+
+	trailer_definition: trailer_def.scs.gooseneck.singl_3e_40.container
+
+	cargoes[]: carrots_c
+	
+	
 }
 
 
@@ -504,13 +522,13 @@ vehicle_wheel_accessory: .scs_gosck40.depot.green.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_gosck40.depot.green.cargo
+vehicle_accessory: .scs_gosck40.depot.green.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_40_green.sii"
+	data_path: "/def/vehicle/trailer/scs_gooseneck/accessory/body_40.sii"
 }
 vehicle_paint_job_accessory: .scs_gosck40.depot.green.paint_job
 {
-	data_path: "/def/vehicle/trailer/scs_gooseneck/custom_paint_job/green.sii"
+	data_path: "/def/vehicle/trailer/scs_gooseneck/accessory/body_40.sii"
 }
 traffic_spawn_condition: .traffic.trailer.scs_gosck40.depot.green.spawn.condition
 {
@@ -532,7 +550,7 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot.red
 	accessories[]: .scs_gosck40.depot.red.trwheel0
 	accessories[]: .scs_gosck40.depot.red.trwheel1
 	accessories[]: .scs_gosck40.depot.red.trwheel2
-	accessories[]: .scs_gosck40.depot.red.cargo
+	accessories[]: .scs_gosck40.depot.red.body
 	accessories[]: .scs_gosck40.depot.red.paint_job
 	cargo_mass: 16000
 
@@ -543,6 +561,12 @@ traffic_trailer : traffic.trailer.scs_gosck40.depot.red
 	tags[]: cargo
 	tags[]: context
 
+
+	cargoes[]: carrots_c
+
+	trailer_definition: trailer_def.scs.gooseneck.singl_3e_40.container
+	
+	
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.red.spawn.condition
 	spawn_condition[]: .traffic.trailer.scs_gosck40.depot.red.spawn.condition2
 
@@ -571,9 +595,9 @@ vehicle_wheel_accessory: .scs_gosck40.depot.red.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_gosck40.depot.red.cargo
+vehicle_accessory: .scs_gosck40.depot.red.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_40.sii"
+	data_path: "/def/vehicle/trailer/scs_gooseneck/accessory/body_40.sii"
 }
 vehicle_paint_job_accessory: .scs_gosck40.depot.red.paint_job
 {
@@ -600,7 +624,6 @@ traffic_trailer : traffic.trailer.scs_chemt.depot
 	accessories[]: .scs_chemt.depot.rwheel2
 	accessories[]: .scs_chemt.depot.rwheel3
 	accessories[]: .scs_chemt.depot.paint_job
-	accessories[]: .scs_chemt.depot.cargo
 
 	cargo_mass: 8000
 
@@ -644,10 +667,6 @@ vehicle_wheel_accessory: .scs_chemt.depot.rwheel3
 vehicle_paint_job_accessory: .scs_chemt.depot.paint_job
 {
 	data_path: "/def/vehicle/trailer/scs_chemtank/company_paint_job/default.sii"
-}
-vehicle_accessory: .scs_chemt.depot.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_chemtank/hydrochlor_ch3.sii"
 }
 
 traffic_spawn_condition: .traffic.trailer.scs_chemt.depot.spawn.condition

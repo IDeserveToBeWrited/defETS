@@ -1,0 +1,31 @@
+SiiNunit
+{
+accessory_addon_int_data : r_t_evo.volvo.fh_2024.toystand
+{
+	name: "Renault T Evolution Model 1:50"
+	price: 350
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/r_t_evo"
+	part_type: licensed
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/r_t_evo.pmd"
+	coll: "/vehicle/truck/upgrade/interior_decors/toystand/r_t_evo.pmc"
+
+	data[]: .r_t_evo.phys_data
+}
+physics_toy_data : .r_t_evo.phys_data
+{
+
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/r_t_evo_h.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/r_t_evo_h.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.6			# toy mass
+	locator_hook_offset: (0.0f, 0.0233f, -0.0276f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (3.0, 3.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

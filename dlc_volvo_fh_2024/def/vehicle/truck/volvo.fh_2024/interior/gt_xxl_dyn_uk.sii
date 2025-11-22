@@ -1,0 +1,50 @@
+SiiNunit
+{
+accessory_interior_data: gtxxl_d_u.volvo.fh_2024.interior
+{
+	name: "@@dynamic@@ UK"
+	price: 11760
+	unlock: 0
+	icon: "truck/volvo_fh16_2012/accessory/fh_rob_2021_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2024/interior/uk/xxl.pmd"
+	collision: "/vehicle/truck/volvo_fh_2024/interior/uk/xxl.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/uk/anim/anim_2021.pmd"
+
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh_robdyn_24
+	left_hand_traffic: true
+
+@include "animations_2024_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/volvo_fh_2024.sii"
+	gps_path: "/ui/dashboard/volvo_fh_2024_gps"
+@include "computers_uk.sui"
+
+	glass_panes[]: .volvo.fh_2024.pane.front
+	glass_panes[]: .volvo.fh_2024.pane.left
+	glass_panes[]: .volvo.fh_2024.pane.right
+	glass_panes[]: .volvo.fh_2024.pane.top
+
+	suitable_for[]: "l3h3.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_aero.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_8x4.volvo.fh_2024.cabin"
+	suitable_for[]: "l3h3_8x4_a.volvo.fh_2024.cabin"
+
+	ext_model: "/vehicle/truck/volvo_fh_2024/interior/external/xxl_r_d_2024.pmd"
+	ext_variant: cabin_uk
+	ext_look: default
+
+@include "dashboard_color_2024.sui"
+#@include "seat.sui"
+@include "mirrors_uk.sui"
+@include "int_shadow_xxl_uk.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

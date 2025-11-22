@@ -1,8 +1,11 @@
 traffic_vehicle : traffic.harvester
 {
-	accessories[]: .harvester.chassis
-	accessories[]: .harvester.fwheel
-	accessories[]: .harvester.rwheel
+	accessories[]: .harvester.greenler.chassis
+	accessories[]: .harvester.greenler.fwheel
+	accessories[]: .harvester.greenler.rwheel
+
+	variant[]: traffic.harvester.owl
+
 
 	max_speed: 40
 
@@ -16,24 +19,66 @@ traffic_vehicle : traffic.harvester
 
 	allow_parked: false
 
-	tags[]: slow
-	tags[]: rural
+#	tags[]: slow
+#	tags[]: rural
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .harvester.chassis
+vehicle_accessory: .harvester.greenler.chassis
 {
-	data_path: "/def/vehicle/ai/harvester/chassis.sii"
+	data_path: "/def/vehicle/ai/harvester/chassis_greenler.sii"
 }
 
-vehicle_wheel_accessory: .harvester.fwheel
+vehicle_wheel_accessory: .harvester.greenler.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_harvester.sii"
 }
 
-vehicle_wheel_accessory: .harvester.rwheel
+vehicle_wheel_accessory: .harvester.greenler.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_harvester.sii"
+}
+
+
+traffic_vehicle : traffic.harvester.owl
+{
+	accessories[]: .harvester.owl.chassis
+	accessories[]: .harvester.owl.fwheel
+	accessories[]: .harvester.owl.rwheel
+
+	max_speed: 40
+
+	vehicle_mass: 19000
+	engine_power: 300
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+
+	allow_parked: false
+
+#	tags[]: slow
+#	tags[]: rural
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .harvester.owl.chassis
+{
+	data_path: "/def/vehicle/ai/harvester/chassis_owl.sii"
+}
+
+vehicle_wheel_accessory: .harvester.owl.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_harvester.sii"
+}
+
+vehicle_wheel_accessory: .harvester.owl.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_harvester.sii"

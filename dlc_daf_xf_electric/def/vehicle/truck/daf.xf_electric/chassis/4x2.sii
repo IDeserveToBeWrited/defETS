@@ -1,0 +1,45 @@
+SiiNunit
+{
+accessory_chassis_data : 4x2.daf.xf_electric.chassis
+{
+	name: "FT"
+	price: 29400
+	unlock: 0
+	info[]: "4x2"
+	info[]: "845 + 620 @@unit_l@@"
+	icon: "truck/daf_xf_electric/chassis/chs_4x2"
+	part_type: factory
+
+	model: "/vehicle/truck/daf_xf_electric/chassis/chs_4x2.pmd"
+	collision: "/vehicle/truck/daf_xf_electric/chassis/chs_4x2.pmc"
+	variant: default
+	look: default
+
+	extended_shadow_texture: "/vehicle/truck/daf_xf_electric/shadow_4x2.tobj"
+	extended_shadow_intensity: 1.0
+	extended_shadow_fadeout_start: 10
+	extended_shadow_fadeout_length: 0
+	ui_shadow: "/vehicle/truck/daf_xf_electric/ui_shadow/ui_4x2.pmd"
+
+	tank_size: 525		# 315 (270kw only), 420, 525kWh
+
+	residual_travel[]: 0.1
+	residual_travel[]: 0.088
+
+	powered_axle[]: false
+	powered_axle[]: true
+
+	kerb_weight[]: 5038	# todo 20.5t
+	kerb_weight[]: 2014
+
+	suitable_for[]: slh.daf.xf_electric.cabin
+
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/r_fender/plastic.sii"
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/sideskirt/paint_4x2.sii"
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/trlr_cables/stock_xf.sii"
+	
+	lamp_setup: "/def/vehicle/truck/daf.2021/lamp_setup.sii"
+
+@include "sound.sui"
+}
+}

@@ -1,0 +1,37 @@
+
+academy_scenario : academy.scenario.book2.intro
+{
+	map_title: "@@aca_scenario_book2_intro_title@@"
+	map_desc: "@@aca_scenario_book2_intro_desc@@"
+	map_icon: "/material/ui/academy/book/book2/intro.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 1080
+	environment_skybox: 6
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic
+
+	variants[]: .academy.scenario.book2.intro.variant
+
+	#replay: false
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.intro.variant
+{
+
+	map_scenes[]: ac_b2_intro
+
+	map_scene_position_tags[]: park2_front
+
+	#replay_recording_origin_tag: park2_front
+	#replay_playback_origin_tag: park2_front
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+	trailer_position_tag: trailer
+
+}

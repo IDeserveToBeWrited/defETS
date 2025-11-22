@@ -4,7 +4,7 @@ traffic_trailer : traffic.trailer.scs_fl_jcb
 	accessories[]: .scs_fl_jcb.rwheel
 	accessories[]: .scs_fl_jcb.rwheel2
 	accessories[]: .scs_fl_jcb.rwheel3
-	accessories[]: .scs_fl_jcb.cargo
+	accessories[]: .scs_fl_jcb.body
 	accessories[]: .scs_fl_jcb.paint_job
 
 	tags[]: low
@@ -17,6 +17,13 @@ traffic_trailer : traffic.trailer.scs_fl_jcb
 	base: traffic.trailer.scs_brick_r
 	
 	cargo_mass: 20000
+	
+	cargoes[]: jcb_g100rs
+	cargoes[]: jcb_mexc19ce
+	cargoes[]: jcb_dmphtd5e
+	cargoes[]: jcb_pw125qe
+
+trailer_definition: trailer_def.scs.flatbed.single_3.flatbed_w
 
 }
 
@@ -42,66 +49,11 @@ vehicle_wheel_accessory: .scs_fl_jcb.rwheel3
 	offset: 4
     	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
 }
-vehicle_accessory: .scs_fl_jcb.cargo
+vehicle_accessory: .scs_fl_jcb.body
 {
-    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/jcb_electric_vehicles_136.sii"
+    	data_path: "/def/vehicle/trailer/scs_flatbed/accessory/body.sii"
 }
 vehicle_paint_job_accessory: .scs_fl_jcb.paint_job
-{
-    	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/red.sii"
-}
-
-# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-traffic_trailer : traffic.trailer.scs_fl_jcb1
-{
-	accessories[]: .scs_fl_jcb1.chassis
-	accessories[]: .scs_fl_jcb1.rwheel
-	accessories[]: .scs_fl_jcb1.rwheel2
-	accessories[]: .scs_fl_jcb1.rwheel3
-	accessories[]: .scs_fl_jcb1.cargo
-	accessories[]: .scs_fl_jcb1.paint_job
-
-	tags[]: low
-	tags[]: flatbed
-	tags[]: brick
-	tags[]: medium
-	tags[]: cargo
-	tags[]: construct
-
-	base: traffic.trailer.scs_brick_r
-	
-	cargo_mass: 20000
-
-}
-
-vehicle_accessory: .scs_fl_jcb1.chassis
-{
-    	data_path: "/def/vehicle/trailer/scs_flatbed/flatbed.sii"
-}
-
-vehicle_wheel_accessory: .scs_fl_jcb1.rwheel
-{
-	offset: 0
-    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
-}
-
-vehicle_wheel_accessory: .scs_fl_jcb1.rwheel2
-{
-	offset: 2
-    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
-}
-
-vehicle_wheel_accessory: .scs_fl_jcb1.rwheel3
-{
-	offset: 4
-    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
-}
-vehicle_accessory: .scs_fl_jcb1.cargo
-{
-    	data_path: "/def/vehicle/trailer_cargo/scs_flatbed/jcb_power_generator_136.sii"
-}
-vehicle_paint_job_accessory: .scs_fl_jcb1.paint_job
 {
     	data_path: "/def/vehicle/trailer/scs_flatbed/custom_paint_job/red.sii"
 }

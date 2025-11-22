@@ -8,11 +8,40 @@ SiiNunit
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 
+mover_model : mover.spboagrs
+{
+	mover_name: "speedboat 01 gr static"
+	model_desc: "/asset/ship/mover/speedboat_01_gr_mov.pmd"
+	model_anim: "/asset/ship/mover/speedboat_01_gr_mov_static.pma"
+
+	lods[0]: "/asset/ship/mover/speedboat_01_gr_mov_lod1.pmd"
+	lods[1]: "/asset/ship/mover/speedboat_01_gr_mov_lod2.pmd"
+
+	lod_dist[0]: 75
+	lod_dist[1]: 150
+}
+
+mover_model : mover.spboagrg
+{
+	mover_name: "speedboat 01 gr sailing"
+	model_desc: "/asset/ship/mover/speedboat_01_gr_mov.pmd"
+	model_anim: "/asset/ship/mover/speedboat_01_gr_mov_sailing.pma"
+
+	lods[0]: "/asset/ship/mover/speedboat_01_gr_mov_lod1.pmd"
+	lods[1]: "/asset/ship/mover/speedboat_01_gr_mov_lod2.pmd"
+
+	lod_dist[0]: 75
+	lod_dist[1]: 150
+
+	sound_path[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/motorboat_1"
+}
+
 mover_model : mover.windsock
 {
 	mover_name: "wind sock"
 	model_desc: "/asset/props/uni/wind_sock.pmd"
 	model_anim: "/asset/props/uni/wind_sock.pma"
+	model_coll: "/asset/props/uni/wind_sock.pmc"
 }
 mover_model : mover.ducks_idle
 {

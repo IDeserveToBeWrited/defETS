@@ -10,7 +10,7 @@ accessory_trailer_body_data : short.kassbohrer.sla.body
 	size: (2.55, 3.07, 9.24)	# width, height, length (internal size of the body)
 	total_size: (2.55, 4.0, 13.62)	# width, height, length (size of the body + chassis)
 
-	volume: 72
+	volume: 71	# shortened
 	body_type: lowbed
 
 	# Mass of the cargo container in KG.
@@ -21,13 +21,150 @@ accessory_trailer_body_data : short.kassbohrer.sla.body
 
 	# visual data
 
-	#detail_model: "/vehicle/trailer_owned/upgrade/body/kassbohrer_sla/flat_bed_wood.pmd"
-	#model: "/vehicle/trailer_owned/upgrade/body/kassbohrer_sla/flat_bed_wood.pmd"
-	# lods[]: ""
-	#collision: "/vehicle/trailer_owned/upgrade/body/kassbohrer_sla/flat_bed_wood.pmc"
-	# variant:
-	# look
+	model: "/vehicle/trailer_owned/kassbohrer_sla/body/body_short.pmd"
+	collision: "/vehicle/trailer_owned/kassbohrer_sla/body/body_short.pmc"
 
-	empty_cargo_model: "/def/vehicle/trailer_cargo/kassbohrer_sla/empty_cargo.sii"
+
+#xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area
+	cargo_loading_methods[]: custom
+
+	cargo_areas[]: (2.5, 8.70)
+
+	cargo_regular_width: 2.5
+
+	cargo_warning_signs: true
+
+	cargo_lashing_mounts[]: .lashm0
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+	cargo_lashing_mounts[]: .lashm3
+	cargo_lashing_mounts[]: .lashm4
+	cargo_lashing_mounts[]: .lashm5
+	cargo_lashing_mounts[]: .lashm6
+	cargo_lashing_mounts[]: .lashm7
+	cargo_lashing_mounts[]: .lashm8
+	cargo_lashing_mounts[]: .lashm9
+	cargo_lashing_mounts[]: .lashm10
+	cargo_lashing_mounts[]: .lashm11
+	
+@include "/def/vehicle/lashing_gear.sui"
+@include "/def/vehicle/trailer_owned/kassbohrer.sla/body/cargo_custom_loads.sui"
 }
+
+#xxxxxxxxxx left side
+
+cargo_lashing_mount : .lashm0
+{
+	spacing: 0.684
+	hook_angle_constraints: (25, 90, 10)
+
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_1.pmd"
 }
+
+cargo_lashing_mount : .lashm1
+{
+	
+	
+	spacing: 0.88
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_1.pmd"
+}
+
+cargo_lashing_mount : .lashm2
+{
+	
+	
+	spacing: 1.441
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_1.pmd"
+}
+
+cargo_lashing_mount : .lashm3
+{
+	
+	
+	spacing: 1.505
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_1.pmd"
+}
+
+#xxxxxxxxxx right side
+
+cargo_lashing_mount : .lashm4
+{
+	spacing: 0.684
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_2.pmd"
+}
+
+cargo_lashing_mount : .lashm5
+{
+		
+	spacing: 0.88
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_2.pmd"
+}
+
+cargo_lashing_mount : .lashm6
+{
+		
+	spacing: 1.441
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_2.pmd"
+}
+
+cargo_lashing_mount : .lashm7
+{
+		
+	spacing: 1.505
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_2.pmd"
+}
+
+cargo_lashing_mount : .lashm8
+{
+		
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_5.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_5.pmd"
+}
+cargo_lashing_mount : .lashm9
+{
+		
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_6.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_6.pmd"
+}
+cargo_lashing_mount : .lashm10
+{
+		
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_3.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_3.pmd"
+}
+cargo_lashing_mount : .lashm11
+{
+		
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_open_4.pmd"
+	closed_model: 	"/vehicle/trailer_owned/kassbohrer_sla/body/ring_close_4.pmd"
+}
+
+@include "/def/vehicle/lashing_gear_data.sui"
+@include "/def/vehicle/trailer_owned/kassbohrer.sla/body/cargo_custom_load_data.sui"
+}
+

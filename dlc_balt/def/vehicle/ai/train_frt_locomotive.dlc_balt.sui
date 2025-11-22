@@ -1,47 +1,3 @@
-#----------------------------------------------------------------
-# Finland
-#----------------------------------------------------------------
-traffic_vehicle : traffic.frt.fi
-{
-	accessories[]: .frt.fi.chassis
-	accessories[]: .frt.fi.fwheel
-	accessories[]: .frt.fi.rwheel
-
-	max_speed: 160
-
-	vehicle_mass: 132000
-	engine_power: 2000
-
-	trailer_chains[]: "train_car.frt.fi.car1 | train_car.frt.fi.car2 | train_car.frt.fi.car_last"
-
-	sound_move[]: "/sound/traffic/train_electric_1.soundref"
-	sound_gears: 1
-
-	displacement_limit: 0.0
-
-	spawn_ratio: 0.0
-
-	lod_dist[]: 70
-	lod_dist[]: 130
-	lod_dist[]: 200
-}
-
-vehicle_accessory: .frt.fi.chassis
-{
-	data_path: "/def/vehicle/ai/train_frt/chassis_l_fin.sii"
-}
-
-vehicle_wheel_accessory: .frt.fi.fwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
-}
-
-vehicle_wheel_accessory: .frt.fi.rwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
-}
 
 #----------------------------------------------------------------
 # Estonia
@@ -67,14 +23,11 @@ traffic_vehicle : traffic.frt.ee
 
 	spawn_ratio: 0.0
 
-	lod_dist[]: 70
-	lod_dist[]: 130
-	lod_dist[]: 200
 }
 
 vehicle_accessory: .frt.ee.chassis
 {
-	data_path: "/def/vehicle/ai/train_frt/chassis_l_est.sii"
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_ee.sii"
 }
 
 vehicle_wheel_accessory: .frt.ee.fwheel

@@ -23,14 +23,14 @@ traffic_vehicle : traffic.frt.ch
 
 	tags[]: passenger
 
-	lod_dist[]: 70
-	lod_dist[]: 130
+	
+	
 
 }
 
 vehicle_accessory: .frt.ch.chassis
 {
-	data_path: "/def/vehicle/ai/train_frt/chassis_loco_che.sii"
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_ch.sii"
 }
 
 vehicle_wheel_accessory: .frt.ch.fwheel
@@ -70,8 +70,8 @@ traffic_vehicle : traffic.frt.de
 
 	tags[]: passenger
 
-	lod_dist[]: 70
-	lod_dist[]: 130
+	
+	
 
 }
 
@@ -85,6 +85,13 @@ vehicle_wheel_accessory: .frt.de.fwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
 }
+
+vehicle_wheel_accessory: .frt.de.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Serbia
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,8 +118,8 @@ traffic_vehicle : traffic.frt.rs
 
 	tags[]: passenger
 
-	lod_dist[]: 70
-	lod_dist[]: 130
+	
+	
 
 }
 
@@ -128,17 +135,6 @@ vehicle_wheel_accessory: .frt.rs.fwheel
 }
 
 vehicle_wheel_accessory: .frt.rs.rwheel
-{
-	offset: 0
-	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
-}
-
-
-
-
-
-
-vehicle_wheel_accessory: .frt.de.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
@@ -170,8 +166,8 @@ traffic_vehicle : traffic.frt.at
 
 	tags[]: passenger
 
-	lod_dist[]: 70
-	lod_dist[]: 130
+	
+	
 
 }
 
@@ -218,8 +214,6 @@ traffic_vehicle : traffic.frt.si
 
 	tags[]: passenger
 
-	lod_dist[]: 70
-	lod_dist[]: 130
 
 }
 
@@ -240,6 +234,142 @@ vehicle_wheel_accessory: .frt.si.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Finland
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+traffic_vehicle : traffic.frt.fi
+{
+	accessories[]: .frt.fi.chassis
+	accessories[]: .frt.fi.fwheel
+	accessories[]: .frt.fi.rwheel
 
+	max_speed: 160
+
+	vehicle_mass: 132000
+	engine_power: 2000
+
+	trailer_chains[]: "train_car.frt.fi.car1 | train_car.frt.fi.car2 | train_car.frt.fi.car_last"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: passenger
+
+}
+
+vehicle_accessory: .frt.fi.chassis
+{
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_fi.sii"
+}
+
+vehicle_wheel_accessory: .frt.fi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .frt.fi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Sweden
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+traffic_vehicle : traffic.frt.se
+{
+	accessories[]: .frt.se.chassis
+	accessories[]: .frt.se.fwheel
+	accessories[]: .frt.se.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 132000
+	engine_power: 2000
+
+	trailer_chains[]: "train_car.frt.se.car1 | train_car.frt.se.car2 | train_car.frt.se.car_last"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: passenger
+
+	
+}
+
+vehicle_accessory: .frt.se.chassis
+{
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_se.sii"
+}
+
+vehicle_wheel_accessory: .frt.se.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .frt.se.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Norway
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+traffic_vehicle : traffic.frt.no
+{
+	accessories[]: .frt.no.chassis
+	accessories[]: .frt.no.fwheel
+	accessories[]: .frt.no.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 132000
+	engine_power: 2000
+
+	trailer_chains[]: "train_car.frt.no.car1 | train_car.frt.no.car2 | train_car.frt.no.car_last"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: passenger
+
+	
+	
+
+}
+
+vehicle_accessory: .frt.no.chassis
+{
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_no.sii"
+}
+
+vehicle_wheel_accessory: .frt.no.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .frt.no.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
 

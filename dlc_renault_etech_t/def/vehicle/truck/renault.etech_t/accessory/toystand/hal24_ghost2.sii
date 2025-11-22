@@ -1,0 +1,34 @@
+SiiNunit
+{
+accessory_addon_int_data : hal24_ghost2.renault.etech_t.toystand
+{
+	steam_inventory_id: 153
+	name: "@@booing_ghost@@"
+	price: 165
+	unlock: 0
+	icon: "truck/upgrade/interior_decors/toystand/hal24_ghost2"
+	part_type: aftermarket
+
+	interior_model: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_ghost2.pmd"
+	exterior_model: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_ghost2.pmd"
+	interior_model_uk: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_ghost2.pmd"
+	exterior_model_uk: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_ghost2.pmd"
+
+	data[]: .hal24_ghost2.phys_data
+}
+
+physics_toy_data : .hal24_ghost2.phys_data
+{
+	phys_model: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_hands.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/interior_decors/toystand/hal24_hands.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.4			# toy mass
+	locator_hook_offset: (0.0f, 0.077f, -0.000f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (100.0, 100.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (3.0, 3.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (40.0, 0.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+}

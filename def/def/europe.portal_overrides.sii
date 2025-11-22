@@ -1,0 +1,110 @@
+SiiNunit
+{
+# Hauloween land portal
+
+portal_def_override : _nameless.hauloween.0 {
+ item_uid: 0x5E3CB0730EB6192F
+}
+
+# Portal which spawns truck inside terrain. Disable it for this event to avoid need
+# to adjust the map.
+
+portal_def_override : _nameless.disable.0 {
+ item_uid: 0x4A12BCD04986B2AE
+ parking_point_node_only: true
+}
+
+# Iberia
+
+portal_def_override : _nameless.huelva {
+ item_uid: 0x34FA8C8497160001
+
+ parking_point_node_uid: 0x333abb2846560000
+
+ node_additional_offset: (-13.5, 0, 0)
+}
+
+# Greece
+
+portal_def_override : _nameless.crete {
+ item_uid: 0x56894DAC623F0001
+
+ parking_point_node_uid: 0x566f1610823f0000
+
+ node_additional_offset: (0, 0, 0)
+ node_additional_rotation_deg: 95
+}
+
+portal_def_override : _nameless.crete.2 {
+ item_uid: 0x52C03081E7861BFC
+
+ parking_point_node_uid: 0x52c03085c686678d
+
+ node_additional_offset: (12.25, 0, -34)
+ node_additional_rotation_deg: 125.40
+}
+
+portal_def_override : _nameless.rhodes {
+ item_uid: 0x52C03082FA868814
+
+ parking_point_node_uid: 0x52c0308b56860145
+
+ node_additional_offset: (3.94, 0, -2.81)
+ node_additional_rotation_deg: -75
+}
+
+# Some rest areas on islands are considered inside city
+# so force them anyway.
+
+portal_def_override : _nameless.chios {
+ item_uid: 0x56CE1C9F50340000
+}
+
+portal_def_override : _nameless.mitilini {
+ item_uid: 0x53B7E1C67A300002
+
+ # The portal automatically selected has trailer on top
+ # of a sidewalk so use a different one.
+
+ parking_point_node_only: true
+ parking_point_node_uid: 0x53b7decf43b00000
+}
+
+portal_def_override : _nameless.mitilini.2 {
+ item_uid: 0x52C030812706CCC7
+}
+
+# Old prefabs
+
+portal_prefab_override : _nameless.prefab.300 {
+ prefab_name: 300
+
+ relative_positions[]: (11.55, 0, -113.51)
+ relative_headings_deg[]: 34.80
+}
+
+portal_prefab_override : _nameless.prefab.dlc_blke_234 {
+ prefab_name: dlc_blke_234
+
+ relative_positions[]: (42.62, 0, -34.43)
+ relative_headings_deg[]: -55.80
+}
+
+portal_prefab_override : _nameless.prefab.0uk {
+ prefab_name: 0uk
+
+ relative_positions[]: (21.70, 0, -40.01)
+ relative_headings_deg[]: 180
+}
+
+portal_prefab_override : _nameless.prefab.57uk {
+ prefab_name: 57uk
+
+ relative_positions[]: (35.42, 0, -39.52)
+ relative_headings_deg[]: 180
+
+ relative_positions[]: (-35.12, 0, -98.68)
+ relative_headings_deg[]: 0
+}
+
+}

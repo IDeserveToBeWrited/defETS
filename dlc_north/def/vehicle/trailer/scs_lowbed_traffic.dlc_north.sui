@@ -1,4 +1,4 @@
-traffic_trailer : traffic.trailer.scs_lowbed_9
+traffic_trailer : traffic.trailer.scs_lowbnort
 {
 	
 	accessories[]: .scs_lowbed_9.chassis
@@ -6,13 +6,22 @@ traffic_trailer : traffic.trailer.scs_lowbed_9
 	accessories[]: .scs_lowbed_9.rwheel2
 	accessories[]: .scs_lowbed_9.rwheel3
 	accessories[]: .scs_lowbed_9.paint_job
-	accessories[]: .scs_lowbed_9.cargo
+	accessories[]: .scs_lowbed_9.body
 	
 	cargo_mass: 20000
 	
+	tags[]: low
+	tags[]: lowboy
+	tags[]: loader
+	tags[]: construct
+	tags[]: long
+	tags[]: cargo
+	
 	base: traffic.trailer.scs_lowbed
+	
+cargoes[]: windml_tube
 
-
+trailer_definition: trailer_def.scs.lowloader.single_2_sh.short	
 }
 
 vehicle_accessory: .scs_lowbed_9.chassis
@@ -43,7 +52,7 @@ vehicle_paint_job_accessory: .scs_lowbed_9.paint_job
     	data_path: "/def/vehicle/trailer/scs_lowbed/custom_paint_job/red.sii"
 }
 
-vehicle_accessory: .scs_lowbed_9.cargo
+vehicle_accessory: .scs_lowbed_9.body
 {
-    	data_path: "/def/vehicle/trailer_cargo/scs_lowbed/wind_plant_tube.sii"
+    	data_path: "/def/vehicle/trailer/scs_lowbed/accessory/short.sii"
 }

@@ -1,0 +1,33 @@
+SiiNunit
+{
+accessory_trailer_body_data : body.scs.log.body
+{
+
+	volume: 87
+	body_type: log
+
+# xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area_cylinder
+	cargo_loading_methods[]: area_logger
+
+	cargo_areas[]: (2.22, 13.32)
+	cargo_areas_cylinder_data[]: (2.0, 2.44)
+
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+@include "/def/vehicle/lashing_gear.sui"
+}
+
+cargo_lashing_mount : .lashm1
+{
+	spacing: 1.78
+}
+cargo_lashing_mount : .lashm2
+{
+	spacing: 1.78
+}
+@include "/def/vehicle/lashing_gear_data.sui"
+}
+
+

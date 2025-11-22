@@ -92,3 +92,54 @@ vehicle_wheel_accessory: .bmw5.hook.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
 }
+
+#----------------------trailer_boat_small_01--------------------------------------
+
+traffic_vehicle : traffic.bmw5.boat.small
+{
+	accessories[]: .bmw5.boat.small.chassis
+	accessories[]: .bmw5.boat.small.fwheel
+	accessories[]: .bmw5.boat.small.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	
+	trailer_chains[]: "trailer.ai_car.boat.small.01"
+	allow_parked: false
+	
+	spawn_ratio: 0.01
+	
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.0615, 0.0417, 0.0272) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.5394, 0.5711, 0.5906) #silver
+	color[]: (0.8713, 0.8631, 0.8227) #white
+
+	tags[]: expensive
+	tags[]: common
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .bmw5.boat.small.chassis
+{
+	data_path: "/def/vehicle/ai/bmw5/hook.sii"
+}
+
+vehicle_wheel_accessory: .bmw5.boat.small.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .bmw5.boat.small.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}

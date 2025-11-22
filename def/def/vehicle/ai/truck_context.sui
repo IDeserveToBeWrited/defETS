@@ -450,3 +450,51 @@ vehicle_wheel_accessory: .hymer.context.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
 }
+
+traffic_vehicle : traffic.transit_16.context
+{
+	accessories[]: .transit_16.context.chassis
+	accessories[]: .transit_16.context.fwheel
+	accessories[]: .transit_16.context.rwheel
+
+	max_speed: 120
+
+	vehicle_mass: 2800
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	tags[]: van
+	tags[]: context
+
+	spawn_condition[]: .traffic.transit_16.context.spawn.condition
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0.3
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.transit_16.context.spawn.condition
+{
+	type: area
+	str_param[]: "commercial"
+}
+
+vehicle_accessory: .transit_16.context.chassis
+{
+	data_path: "/def/vehicle/ai/transit_2016/generic.sii"
+}
+
+vehicle_wheel_accessory: .transit_16.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .transit_16.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}

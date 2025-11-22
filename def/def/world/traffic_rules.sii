@@ -367,7 +367,7 @@ traffic_rule_data : traffic_rule.no_trucks
 
 traffic_rule_data : traffic_rule.trucks_only
 {
-	name: "[access-exclusive] Trucks only (semi-trucks)"
+	name: "[access-exclusive] Trucks only (semi and heavy trucks)"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
@@ -412,6 +412,16 @@ traffic_rule_data : traffic_rule.tr_bus_only
 	str_params[]: "truck"
 	str_params[]: "truck_semi"
 	str_params[]: "truck_heavy"
+}
+
+traffic_rule_data : traffic_rule.car_bus_only
+{
+	name: "[access-exclusive] Cars and buses only"
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "car"
+	str_params[]: "bus"
 }
 
 traffic_rule_data : traffic_rule.custom_only
@@ -584,7 +594,6 @@ traffic_rule_data : traffic_rule.commerce_l
 	rule: "actor_access"
 	num_params[]: 0 # 0 - disallow, 1 - allow
 	num_params[]: 0 # 0 - inclusive, 1 - exclusive
-	str_params[]: "truck_medium"
 	str_params[]: "truck_heavy"
 	str_params[]: "truck"
 	str_params[]: "truck_long"
@@ -760,6 +769,7 @@ traffic_rule_data : traffic_rule.company_area
 	additional_rules[]: traffic_rule.limit_30
 
 	additional_rules[]: traffic_rule.s_train_dp
+	additional_rules[]: traffic_rule.s_train_w_dp
 	additional_rules[]: traffic_rule.s_truck_c_d
 	additional_rules[]: traffic_rule.s_truck_d
 	additional_rules[]: traffic_rule.s_car_d
@@ -801,14 +811,14 @@ traffic_rule_data : traffic_rule.city_start
 {
 	# name: "[sign] City start"
 	additional_rules[]: traffic_rule.urban_start
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.city_end
 {
 	# name: "[sign] City end"
 	additional_rules[]: traffic_rule.urban_end
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.city_end_70
@@ -858,7 +868,7 @@ traffic_rule_data : traffic_rule.motorway_st
 	str_params[]: "motorway"
 	str_params[]: "start"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.motorway_en2
@@ -878,7 +888,7 @@ traffic_rule_data : traffic_rule.motorway_end
 	str_params[]: "motorway"
 	str_params[]: "end"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.expressw_st
@@ -889,7 +899,7 @@ traffic_rule_data : traffic_rule.expressw_st
 	str_params[]: "expressway"
 	str_params[]: "start"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.expressw_st2
@@ -909,7 +919,7 @@ traffic_rule_data : traffic_rule.expressw_end
 	str_params[]: "expressway"
 	str_params[]: "end"
 
-	additional_rules[]: traffic_rule.limit_end
+	additional_rules[]: traffic_rule.impl_reset
 }
 
 traffic_rule_data : traffic_rule.expressw_en2
@@ -1015,6 +1025,18 @@ traffic_rule_data : traffic_rule.road
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "road"
+}
+
+traffic_rule_data : traffic_rule.road_rail
+{
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "tram"
+	str_params[]: "train"
+	str_params[]: "train_wire"
+
+	additional_rules[]: traffic_rule.road
 }
 
 traffic_rule_data : traffic_rule.lights_on
@@ -1262,6 +1284,12 @@ traffic_rule_data : traffic_rule.no_pl_limit
 	# No player speed limit
 	rule: "property"
 	num_params[]: 30
+}
+
+traffic_rule_data : traffic_rule.narrow_road
+{
+	rule: "property"
+	num_params[]: 14
 }
 
 traffic_rule_data : traffic_rule.toll_small

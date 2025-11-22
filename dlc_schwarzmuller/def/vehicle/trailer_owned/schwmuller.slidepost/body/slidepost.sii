@@ -24,5 +24,51 @@ accessory_trailer_body_data : slidepost.schwmuller.slidepost.body
 	# Base mass for trailer is in chassis, bodies have only deltas for eventual variants.
 
 	mass: 0
+
+	# xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area_cylinder
+	cargo_loading_methods[]: area_logger
+
+	cargo_areas[]: (2.14441, 13.1) #X, Z
+	cargo_areas_cylinder_data[]: (2.14441, 2.3) #X, Y
+
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+	cargo_lashing_mounts[]: .lashm3
+	
+	cargo_lashing_mounts[]: .lashm4
+	cargo_lashing_mounts[]: .lashm5
+	cargo_lashing_mounts[]: .lashm6
+	
+@include "/def/vehicle/lashing_gear.sui"
 }
+
+cargo_lashing_mount : .lashm1
+{
+	spacing: 2.44422
+}
+cargo_lashing_mount : .lashm2
+{
+	spacing: 2.92362
+}
+cargo_lashing_mount : .lashm3
+{
+	spacing: 2.83866
+}
+
+cargo_lashing_mount : .lashm4
+{
+	spacing: 2.44422
+}
+cargo_lashing_mount : .lashm5
+{
+	spacing: 2.92362
+}
+cargo_lashing_mount : .lashm6
+{
+	spacing: 2.83866
+}
+
+@include "/def/vehicle/lashing_gear_data.sui"
 }

@@ -1,0 +1,178 @@
+SiiNunit
+{
+accessory_trailer_body_data : longfm73.scs.lowbed.body
+{		
+volume: 96
+	body_type: lowbed
+
+#xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area
+	cargo_loading_methods[]: custom
+
+	cargo_custom_loads[]: .lattice
+	cargo_custom_loads[]: .silo
+	cargo_custom_loads[]: .heat_exch
+	cargo_custom_loads[]: .wagon
+	cargo_custom_loads[]: .effi1000
+
+	cargo_areas[]: (2.5, 20.33423)
+	cargo_areas[]: (2.5, 2.90)
+
+	cargo_regular_width: 2.5
+	
+	cargo_warning_signs: true
+
+	cargo_lashing_mounts[]: .lashm0
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+	cargo_lashing_mounts[]: .lashm3
+	cargo_lashing_mounts[]: .lashm4
+	cargo_lashing_mounts[]: .lashm5
+	cargo_lashing_mounts[]: .lashm6
+	cargo_lashing_mounts[]: .lashm7
+	cargo_lashing_mounts[]: .lashm8
+	cargo_lashing_mounts[]: .lashm9
+	
+@include "/def/vehicle/lashing_gear.sui"
+}
+
+cargo_custom_load_data : .lattice
+{
+	cargo_token: lattice
+	offset: (0.000, 0.000, 2.780)
+	rotation: (0.000, 0.000, 0.000)
+}
+
+cargo_custom_load_data : .silo
+{
+	cargo_token: silo
+	offset: (0, 0, 3.4)
+	rotation: (0, 0, 0)
+}
+
+cargo_custom_load_data : .heat_exch
+{
+	cargo_token: heat_exch
+	offset: (0, 0, 0)
+	rotation: (0, 0, 0)
+}
+
+cargo_custom_load_data : .effi1000
+{
+	cargo_token: czl_es1000
+	offset: (0.000, 0.000, 1.565)
+	rotation: (0.000, 0.000, 0.000)
+}
+
+cargo_custom_load_data : .wagon
+{
+	cargo_token: wagon
+	offset: (0.000, 0.000, 1.565)
+	rotation: (0.000, 0.000, 0.000)
+}
+#xxxxxxxxxx left side
+
+cargo_lashing_mount : .lashm0
+{
+	spacing: 0.85
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm1
+{
+	
+	
+	spacing: 2.73
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm2
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm6
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+cargo_lashing_mount : .lashm8
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_1.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_1.pmd"
+
+}
+
+#xxxxxxxxxx right side
+
+cargo_lashing_mount : .lashm3
+{
+	spacing: 0.85
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm4
+{
+	
+	
+	spacing: 2.73
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm5
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm7
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+cargo_lashing_mount : .lashm9
+{
+	
+	
+	spacing: 1.30525
+	hook_angle_constraints: (45, 90, 10)
+	open_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_open_2.pmd"
+	closed_model: 	"/vehicle/trailer_owned/scs_lowbed/body/ring_close_2.pmd"
+
+}
+
+@include "/def/vehicle/lashing_gear_data.sui"
+}
+

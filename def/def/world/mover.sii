@@ -8,6 +8,50 @@ SiiNunit
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
 
+mover_model : mover.fiboat1
+{
+	mover_name: "Fishing boat 01 blkw"
+	model_desc: "/model2/ship/mover/fishing_boat_01_blkw_mov.pmd"
+	model_anim: "/model2/ship/mover/fishing_boat_01_blkw_static.pma"
+
+	lods[0]: "/model2/ship/mover/fishing_boat_01_blkw_mov_lod1.pmd"
+
+	lod_dist[0]: 100
+}
+
+mover_model : mover.fiboats1
+{
+	mover_name: "Fishing boat 01 blkw sailing"
+	model_desc: "/model2/ship/mover/fishing_boat_01_blkw_mov.pmd"
+	model_anim: "/model2/ship/mover/fishing_boat_01_blkw_sailing.pma"
+
+	lods[0]: "/model2/ship/mover/fishing_boat_01_blkw_mov_lod1.pmd"
+
+	lod_dist[0]: 100
+}
+
+mover_model : mover.fiboat2
+{
+	mover_name: "Fishing boat 02 blkw"
+	model_desc: "/model2/ship/mover/fishing_boat_01_blkw_mov.pmd"
+	model_anim: "/model2/ship/mover/fishing_boat_01_blkw_static.pma"
+
+	lods[0]: "/model2/ship/mover/fishing_boat_01_blkw_mov_lod1.pmd"
+
+	lod_dist[0]: 100
+}
+
+mover_model : mover.fiboats2
+{
+	mover_name: "Fishing boat 02 blkw sailing"
+	model_desc: "/model2/ship/mover/fishing_boat_01_blkw_mov.pmd"
+	model_anim: "/model2/ship/mover/fishing_boat_01_blkw_sailing.pma"
+
+	lods[0]: "/model2/ship/mover/fishing_boat_01_blkw_mov_lod1.pmd"
+
+	lod_dist[0]: 100
+}
+
 mover_model : mover.balloon
 {
 	mover_name: "Balloon"
@@ -254,6 +298,8 @@ mover_model : mover.logger
 	mover_name: "logger"
 	model_desc: "/model/vehicle/log_grabber.pmd"
 	model_anim: "/model/vehicle/log_grabber.pma"
+
+	sound_path[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/tractor_id"
 }
 
 mover_model : mover.plane_flat
@@ -1101,6 +1147,7 @@ mover_model : mover.yacht_motor1
 {
 	mover_name: "motor yacht sailing 1"
 	model_desc: "/model2/mover/motor_yacht_sailing_01.pmd"
+	sound_path[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/motorboat_1"
 }
 
 mover_model : mover.pic_mvr
@@ -1322,6 +1369,8 @@ mover_model : mover.towingship2
 	lod_dist[0]: 100
 	lod_dist[1]: 300
 
+	sound_path[]: "/sound/world/sounds/vehicles.bank#artificial/vehicles/motorboat_1"
+
 }
 mover_model : mover.pt_ibe
 {
@@ -1345,8 +1394,9 @@ mover_model : mover.cessna_toff
 	mover_name: "cessna takeoff"
 	model_desc: "/model/aircraft/cessna_anim.pmd"
 	model_anim: "/model/aircraft/cesna_takeoff.pma"
-#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
-#	sound_max_dist: 100
+	
+	sound_path[]: "/sound/world/mover.bank#mover/bi_plane_02"
+	sound_max_dist: 400
 
 	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
 	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
@@ -1359,8 +1409,9 @@ mover_model : mover.cessna_land
 	mover_name: "cessna landing"
 	model_desc: "/model/aircraft/cessna_anim.pmd"
 	model_anim: "/model/aircraft/cesna_landing.pma"
-#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
-#	sound_max_dist: 100
+
+	sound_path[]: "/sound/world/mover.bank#mover/bi_plane_02"
+	sound_max_dist: 400
 
 	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
 	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
@@ -1373,8 +1424,9 @@ mover_model : mover.cessna_fly
 	mover_name: "cessna flying"
 	model_desc: "/model/aircraft/cessna_anim.pmd"
 	model_anim: "/model/aircraft/cesna_flying.pma"
-#	sound_path[]: "/sound/world/mover.bank#mover/heli_middle"
-#	sound_max_dist: 100
+	
+	sound_path[]: "/sound/world/mover.bank#mover/bi_plane_02"
+	sound_max_dist: 400
 
 	lods[0]: "/model/aircraft/cessna_anim_lod1.pmd"
 	lods[1]: "/model/aircraft/cessna_anim_lod2.pmd"
@@ -1610,12 +1662,63 @@ mover_model : mover.flag_s_gr
 {
 	mover_name: "flag small 2x1 gr"
 	model_desc: "/model2/mover/flags/country/flag_small_2x1_gr_mov.pmd"
+	model_anim: "/model2/mover/flags/country/flag_small_2x1_gr_ani.pma"
 }
 
 mover_model : mover.flag_s_an_gr
 {
 	mover_name: "flag small angled 2x1 gr"
 	model_desc: "/model2/mover/flags/country/flag_small_angled_2x1_gr_mov.pmd"
+	model_anim: "/model2/mover/flags/country/flag_small_angled_2x1_gr_ani.pma"
+}
+
+#########################################################################
+#	xmas test
+#########################################################################
+
+mover_model : mover.parxmas
+{
+	mover_name: "parking xmas"
+	model_desc: "/model/activation/parking_xmas.pmd"
+	model_anim: "/model/activation/parking_xmas.pma"
+}
+
+#########################################################################
+#	Benelux
+#########################################################################
+
+mover_model : mover.lux_5q000
+{
+	mover_name: windsock_01_nl_lux
+	model_desc: "/model2/props/street/windsock_01_nl_lux_mov.pmd"
+	model_coll: "/model2/props/street/windsock_01_nl_lux_mov.pmc"
+	model_anim: "/model2/props/street/windsock_01_nl_lux_mov_ani.pma"
+
+	lods[0]: "/model2/props/street/windsock_01_nl_lux_mov_lod1.pmd"
+
+	lod_dist[0]: 100
+}
+
+#########################################################################
+#	Polar Circle Flags
+#########################################################################
+
+mover_model : mover.banfeat01
+{
+	mover_name: "banner feather 01 poc"
+	model_desc: "/model2/mover/flags/company/banner_feather_01_poc_mov.pmd"
+	model_coll: "/model2/mover/flags/company/banner_feather_01_poc_mov.pmc"
+	model_anim: "/model2/mover/flags/company/banner_feather_01_poc_ani.pma"
+
+}
+
+mover_model : mover.flagpen01
+{
+	mover_name: "flag pennant 01 poc"
+	model_desc: "/model2/mover/flags/country/flag_pennant_01_poc_mov.pmd"
+	model_coll: "/model2/mover/flags/country/flag_pennant_01_poc_mov.pmc"
+	model_anim: "/model2/mover/flags/country/flag_pennant_01_poc_ani.pma"
+
 }
 
 

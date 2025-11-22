@@ -1,0 +1,58 @@
+############### Default ########################
+
+traffic_vehicle : traffic.matumbia.pickup.midclass_95.context
+{
+	accessories[]: .matumbia.pickup.midclass_95.chassis
+	accessories[]: .matumbia.pickup.midclass_95.fwheel
+	accessories[]: .matumbia.pickup.midclass_95.rwheel
+
+	max_speed: 100
+	vehicle_mass: 1500
+
+	sound_move[]: "/sound/traffic/car_default_3.soundref"
+	sound_move[]: "/sound/traffic/car_default_4.soundref"
+
+	color[]: (0.0883, 0.0622, 0.0454) #brown
+	color[]: (0, 0.0263, 0.1347) #blue
+	color[]: (0.8713, 0.8631, 0.8227) #white
+	color[]: (0.1596, 0.0093, 0.0197) #red
+
+	tags[]: cheap
+	tags[]: common
+	tags[]: context
+
+	spawn_ratio: 0.01
+
+	spawn_condition[]: .traffic.matumbia.pickup.midclass_95.context.spawn.condition
+	spawn_condition[]: .traffic.matumbia.pickup.midclass_95.context.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.matumbia.pickup.midclass_95.context.spawn.condition
+{
+	type: area
+	str_param[]: "low_field"
+}
+traffic_spawn_condition: .traffic.matumbia.pickup.midclass_95.context.spawn.condition2
+{
+	type: area
+	str_param[]: "company"
+}
+
+vehicle_accessory: .matumbia.pickup.midclass_95.chassis
+{
+	data_path: "/def/vehicle/ai/matumbia_pickup_midclass_95/chassis.sii"
+}
+
+vehicle_wheel_accessory: .matumbia.pickup.midclass_95.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_75r15.sii"
+}
+
+vehicle_wheel_accessory: .matumbia.pickup.midclass_95.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_75r15.sii"
+}

@@ -1,0 +1,52 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+
+tr_semaphore_profile : tr_sem_prof.2ph		
+{
+	name: "two phases"
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)		# green > yellow > red > yellow
+	
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+	
+	sleep_time_start: 1410 					# 23:30
+	sleep_time_end: 180 					# 03:00
+}
+
+#	Special profile with swaped offset of cycle for cases like 'un_14059' (which is a SideWalk prefab) that is connected to another prefab integrated 
+#	with its semaphore system. However, it must distinguish between major and minor road, hence the swapped timing to keep 
+# 	ID on AI locators the same, avoiding the need to create a new prefab, and simplify for mapdesigners to just swap semaphore profile.
+tr_semaphore_profile : tr_sem_prof.2phm	
+{
+	name: "two phases mirrored (special)"
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)		# green > yellow > red > yellow
+	
+	cycle[]: 21.0							# phase 1
+	cycle[]: 0.0							# phase 2
+	
+	sleep_time_start: 1410 					# 23:30
+	sleep_time_end: 180 					# 03:00
+}
+
+tr_semaphore_profile : tr_sem_prof.3ph		
+{
+	name: "three phases"
+
+	interval[]: (15.0, 2.0, 44.0, 2.0)		# green > yellow > red > yellow
+
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+	cycle[]: 42.0							# phase 3
+	
+	
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+}
+
+}

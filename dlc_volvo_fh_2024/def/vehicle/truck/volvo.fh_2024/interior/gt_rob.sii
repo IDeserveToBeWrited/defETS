@@ -1,0 +1,47 @@
+SiiNunit
+{
+accessory_interior_data: gt_r.volvo.fh_2024.interior
+{
+	name: "@@robust@@"
+	price: 11760
+	unlock: 0
+	icon: "truck/volvo_fh16_2012/accessory/fh_rob_2021"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2024/interior/model/gt.pmd"
+	collision: "/vehicle/truck/volvo_fh_2024/interior/model/gt.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/anim/anim_2021.pmd"
+
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh_robdyn_24
+
+@include "animations_2024.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/volvo_fh_2024.sii"
+	gps_path: "/ui/dashboard/volvo_fh_2024_gps"
+@include "computers.sui"
+
+	glass_panes[]: .volvo.fh_2024.pane.front
+	glass_panes[]: .volvo.fh_2024.pane.left
+	glass_panes[]: .volvo.fh_2024.pane.right
+	glass_panes[]: .volvo.fh_2024.pane.top
+
+	suitable_for[]: "l2h2.volvo.fh_2024.cabin"
+	suitable_for[]: "l2h2_aero.volvo.fh_2024.cabin"
+
+	ext_model: "/vehicle/truck/volvo_fh_2024/interior/external/gt_r_d_2024.pmd"
+	#ext_variant: std
+	ext_look: default
+
+@include "dashboard_color_2024.sui"
+#@include "seat.sui"
+@include "mirrors.sui"
+@include "int_shadow_gt.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

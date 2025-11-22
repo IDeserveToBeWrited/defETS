@@ -10,6 +10,7 @@ ui_desktop_top_bar_config : .config {
 	screen_history_current_screen_tutorial_hint_text_look: "txt.bubble_help.right"
 
 	modes[]: .options
+	modes[]: .first_run
 }
 
 ui_desktop_top_bar_mode : .options {
@@ -25,8 +26,24 @@ ui_desktop_top_bar_mode : .options {
 	screen_list[]: "options.eye"
 	screen_list[]: "convoy.quick.replies.edit"
 	screen_list[]: "screen.weblinks"
+	screen_list[]: "profile.dlc_browser"
+	screen_list[]: "screen.profiles"
+	screen_list[]: "profile.new"
+	screen_list[]: "profile.edit"
+	screen_list[]: "profile.edit.login"
+	screen_list[]: "profile.edit.avatar"
+	screen_list[]: "profile.login"
+	screen_list[]: "profile.create.login"
 
 	sections[]: home
+	sections[]: screen_hist
+}
+
+ui_desktop_top_bar_mode : .first_run {
+	type: white_list
+	screen_list[]: "profile.new.first"
+	screen_list[]: "profile.edit.login.first"
+
 	sections[]: screen_hist
 }
 

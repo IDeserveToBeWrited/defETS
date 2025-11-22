@@ -1,0 +1,42 @@
+SiiNunit
+{
+accessory_interior_data: std_mid.volvo.fh16_2012.interior
+{
+	name: "@@standard@@"
+	price: 11760
+	unlock: 0
+	icon: "truck/volvo_fh16_2012/accessory/fh16_2012"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh16_2012/interior/model/gt.pmd"
+	collision: "/vehicle/truck/volvo_fh16_2012/interior/model/gt.pmc"
+	animated_model: "/vehicle/truck/volvo_fh16_2012/interior/anim/anim_2012.pmd"
+	ext_model: "/vehicle/truck/volvo_fh16_2012/interior/external/gt_fh_2012.pmd"
+	look: Default
+	variant: fh_12
+
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+
+@include "animations_2012.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/volvo_fh16_12.sii"
+	gps_path: "/ui/gps.sii"
+
+	glass_panes[]: .volvo.fh16_2012.pane.front
+	glass_panes[]: .volvo.fh16_2012.pane.left
+	glass_panes[]: .volvo.fh16_2012.pane.right
+	glass_panes[]: .volvo.fh16_2012.pane.top
+
+	suitable_for[]: "l2h2.volvo.fh16_2012.cabin"
+
+@include "dashboard_color_2012.sui"
+@include "seat.sui"
+@include "mirrors.sui"
+@include "int_shadow_mid.sui"
+}
+@include "glass_low.sui"
+@include "sound_effects_units.sui"
+}

@@ -1,0 +1,50 @@
+SiiNunit
+{
+accessory_interior_data: slh_arg_uk.daf.xf_electric.interior
+{
+	name: "Argenta UK"
+	price: 33900
+	unlock: 0
+	icon: "truck/daf_xf_electric/accessory/interior_daf_xf_electric_argenta_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/daf_xf_electric/interior/uk/xf_25.pmd"
+	collision: "/vehicle/truck/daf_xf_electric/interior/uk/xf_25.pmc"
+
+	animated_model: "/vehicle/truck/daf_xf_electric/interior/uk/anim.pmd"
+
+	look: Default
+	variant: argenta_2025
+
+@include "animations_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "computers_uk.sui"
+
+	left_hand_traffic: true
+
+	glass_panes[]: .daf.xf_electric.r.pane.front
+	glass_panes[]: .daf.xf_electric.r.pane.left
+	glass_panes[]: .daf.xf_electric.r.pane.right
+	glass_panes[]: .daf.xf_electric.r.pane.door
+	glass_panes[]: .daf.xf_electric.r.pane.back
+
+	ext_model: "/vehicle/truck/daf_xf_electric/interior/external/xf_25.pmd"
+	ext_look: argenta
+	ext_variant: cabin_uk
+
+	suitable_for[]: "slh.daf.xf_electric.cabin"
+
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/cab_door/win_arg.sii"
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/codrv_seat/cine_arg.sii"
+	defaults[]: "/def/vehicle/truck/daf.xf_electric/accessory/steering_w/black.sii"
+
+@include "int_shadow_xf_uk.sui"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

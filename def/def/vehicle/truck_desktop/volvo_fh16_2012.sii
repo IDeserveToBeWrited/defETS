@@ -10,6 +10,7 @@ vehicle: .desktop.truck
 	accessories[]: .transmission
 	accessories[]: .headlight
 	accessories[]: .paintjob
+	accessories[]: .codrv_seat
 	accessories[]: .doorstep
 	accessories[]: .doorhandle
 	accessories[]: .mirror
@@ -68,7 +69,7 @@ vehicle_accessory : .transmission {
 	data_path: "/def/vehicle/truck/volvo.fh16_2012/transmission/12_speed_ret_over.sii"
 }
 vehicle_accessory : .headlight {
-	data_path: "/def/vehicle/truck/volvo.fh16_2012/head_light/standard.sii"
+	data_path: "/def/vehicle/truck/volvo.fh16_2012/head_light/xenon.sii"
 }
 vehicle_paint_job_accessory : .paintjob {
 	mask_r_color: (1.0, 0.0, 0.0)
@@ -76,6 +77,9 @@ vehicle_paint_job_accessory : .paintjob {
 	mask_b_color: (0.0, 0.0, 1.0)
 	base_color: (&3bfc5048, &3bfc5048, &3bfc5048)
 	data_path: "/def/vehicle/truck/volvo.fh16_2012/paint_job/color4.sii"
+}
+vehicle_addon_accessory : .codrv_seat {
+	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/codrv_seat/exclusive.sii"
 }
 vehicle_addon_accessory : .doorstep {
 	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/doorstep/shape1.sii"
@@ -158,6 +162,9 @@ vehicle_addon_accessory : .r_chs_cover {
 vehicle_addon_accessory : .r_mudflap {
 	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/r_mudflap/stock.sii"
 }
+vehicle_addon_accessory : .trlr_cables {
+	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/trlr_cables/stock.sii"
+}
 vehicle_wheel_accessory : .ftire {
 	offset: 0
 	data_path: "/def/vehicle/f_tire/1.sii"
@@ -192,8 +199,5 @@ vehicle_wheel_accessory : .rnuts {
 }
 vehicle_addon_accessory : .swheel {
 	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/steering_w/exclusive.sii"
-}
-vehicle_addon_accessory : .trlr_cables {
-	data_path: "/def/vehicle/truck/volvo.fh16_2012/accessory/trlr_cables/stock.sii"
 }
 }

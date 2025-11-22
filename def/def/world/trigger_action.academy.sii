@@ -1,0 +1,229 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+
+
+########## Pre-defined actions ##########
+
+trigger_action : trig_action.no_trl_con
+{
+	name: "Disable trailer connection"
+	command: "trailer"
+
+	str_params[]: "no_connect"
+}
+
+trigger_action : trig_action.sc_start
+{
+	name: "[academy] Scenario start"
+	command: "academy"
+
+	str_params[]: "scenario_start"
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.sc_end
+{
+	name: "[academy] Scenario end"
+	command: "academy"
+
+	str_params[]: "scenario_finish"
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.confirm
+{
+	name: "[academy] Wait for confirmation"
+	command: "academy"
+
+	str_params[]: "activation"
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.adj_tut
+{
+	name: "[academy] Adjuster tutorial"
+	command: "academy"
+
+	str_params[]: "adjuster_tutorial"
+	num_params[]: 1
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.no_trl_ptr
+{
+	name: "[academy] Disable trailer pointer"
+	command: "trailer"
+
+	str_params[]: "no_pointer"
+}
+
+trigger_action : trig_action.s_check
+{
+	name: "[academy] Checkpoint"
+	command: "state"
+
+	str_params[]: "add"
+	str_params[]: "check"	# for backward compatibility
+	str_params[]: "checkpoint 1"
+}
+
+trigger_action : trig_action.s_fail_path
+{
+	name: "[academy] Failure - Path"
+	command: "state"
+
+	str_params[]: "add"
+	str_params[]: "fail_path"
+}
+
+trigger_action : trig_action.s_fail_instr
+{
+	name: "[academy] Failure - Instructions"
+	command: "state"
+
+	str_params[]: "add"
+	str_params[]: "fail_instr"
+}
+
+trigger_action : trig_action.s_collision
+{
+	name: "[academy] Failure - Collision"
+	command: "state"
+
+	str_params[]: "add"
+	str_params[]: "collision"
+}
+
+trigger_action : trig_action.ch_park_s
+{
+	name: "[academy] Parking trigger check - on stopped"
+	command: "check_and"
+
+	str_params[]: "state park_trigger_on_stopped"
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.ch_park_p
+{
+	name: "[academy] Parking trigger check - on parked"
+	command: "check_and"
+
+	str_params[]: "state park_trigger_on_parked"
+
+	type: condition_retry
+}
+
+trigger_action : trig_action.dirnavsl
+{
+	name: "[academy] Direction navigator - left"
+	command: "academy"
+
+	str_params[]: "direction_navigator"
+	str_params[]: "show left"
+}
+
+trigger_action : trig_action.dirnavsr
+{
+	name: "[academy] Direction navigator - right"
+	command: "academy"
+
+	str_params[]: "direction_navigator"
+	str_params[]: "show right"
+}
+
+trigger_action : trig_action.dirnavh
+{
+	name: "[academy] Direction navigator - hide all"
+	command: "academy"
+
+	str_params[]: "direction_navigator"
+	str_params[]: "hide_all"
+}
+
+trigger_action : trig_action.hud_msg_off
+{
+	name: "[academy] Disable HUD messages"
+	command: "academy"
+
+	str_params[]: "hud"
+	str_params[]: "messages_disable"
+}
+
+trigger_action : trig_action.hud_msg_hide
+{
+	name: "[academy] Hide HUD message"
+	command: "hud_message"
+
+	str_params[]: ""
+	num_params[]: 1
+}
+
+
+trigger_action : trig_action.snd_check
+{
+	name: "[academy] Sound - checkpoint"
+	command: "sound"
+
+	str_params[]: "/sound/ui/ui_academy.bank#academy/checkpoint_1"
+}
+
+trigger_action : trig_action.snd_pt_enter
+{
+	name: "[academy] Sound - parking trigger enter"
+	command: "sound"
+
+	str_params[]: "/sound/ui/ui_academy.bank#academy/trigger_on_1"
+
+}
+
+trigger_action : trig_action.check_msg
+{
+	name: "[academy] Checkpoint message"
+	command: "hud_message"
+
+	str_params[]: "@@aca_msg_scenario_checkpoint_reached@@ | @@aca_msg_scenario_checkpoint_reached_title@@"
+	num_params[]: 1	# Msg type (0 - checkmark (default), 1 - info, 2 - warning)
+	num_params[]: 3	# Delay in [s] (0 - infinite (default))
+}
+
+trigger_action : trig_action.sc_end_msg
+{
+	name: "[academy] Scenario end message"
+	command: "hud_message"
+
+	str_params[]: "@@aca_msg_scenario_end@@ | @@aca_msg_scenario_end_title@@"
+	num_params[]: 1	# Msg type (0 - checkmark (default), 1 - info, 2 - warning)
+}
+
+trigger_action : trig_action.sc_start_c
+{
+	name: "[academy] Scenario start condition"
+	command: "check_or"
+
+	type: condition_retry
+
+	str_params[]: "! speed -1 1"
+}
+
+trigger_action : trig_action.sr_fail_path
+{
+	name: "[academy] Failure - Path (on deactivate)"
+	command: "state"
+
+	str_params[]: "add_reset"
+	str_params[]: "fail_path"
+}
+
+}

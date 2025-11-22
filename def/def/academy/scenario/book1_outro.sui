@@ -1,0 +1,33 @@
+
+academy_scenario : academy.scenario.book1.outro
+{
+	map_title: "@@aca_scenario_book1_outro_title@@"
+	map_desc: "@@aca_scenario_book1_outro_desc@@"
+	map_icon: "/material/ui/academy/book/book1/3_20.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 800
+	environment_skybox: 5
+	environment_weather: 2
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic1
+
+	variants[]: .academy.scenario.book1.outro.variant
+
+	required_impulses[]: engine
+	required_impulses[]: parkingbrake
+
+
+@include "share/scenario_common.sui"
+}
+
+academy_scenario_variant: .academy.scenario.book1.outro.variant
+{
+	map_scenes[]: ac_tdl_3_20
+	map_scene_position_tags[]: park2_right
+
+	intro_cutscene_tag: outro3_20
+	start_position_tag: start3_20
+
+}

@@ -1,4 +1,26 @@
 
+traffic_rule_data : traffic_rule.s_car_vl
+{
+	# name: "Spawn density car very low"
+
+	rule: "density"
+
+	str_params[]: "lanes: 0.6 0.35 0.05"
+	str_params[]: "car"
+
+	num_params[]: 7.0	# 7:00
+	num_params[]: 0.04	# frequency
+	num_params[]: 4		# count limit
+
+	num_params[]: 17.0	# 17:00
+	num_params[]: 0.03	# frequency
+	num_params[]: 3		# count limit
+
+	num_params[]: 0.0	# 00:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 2		# count limit
+}
+
 traffic_rule_data : traffic_rule.s_car_l
 {
 	# name: "Spawn density car low"
@@ -271,6 +293,28 @@ traffic_rule_data : traffic_rule.s_trh_r
 
 	str_params[]: "lanes: 1.0 0.0 0.0"
 	str_params[]: "truck_heavy"
+
+	num_params[]: 0.0	# 00:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 1		# count limit
+}
+
+traffic_rule_data : traffic_rule.s_truck_vl
+{
+	# name: "Spawn density truck very low"
+
+	rule: "density"
+
+	str_params[]: "lanes: 1.0 0.0 0.0"
+	str_params[]: "truck"
+
+	num_params[]: 7.0	# 7:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 1		# count limit
+
+	num_params[]: 17.0	# 17:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 1		# count limit
 
 	num_params[]: 0.0	# 00:00
 	num_params[]: 0.02	# frequency
@@ -731,6 +775,7 @@ traffic_rule_data : traffic_rule.s_train_m
 
 	rule: "density"
 
+	str_params[]: "exclusive: true"
 	str_params[]: "train_custom metro"
 
 	num_params[]: 7.0	# 7:00
@@ -831,7 +876,25 @@ traffic_rule_data : traffic_rule.s_train_dp
 
 	str_params[]: "crossing_distance_min: 400"
 	str_params[]: "train"
-	str_params[]: "train depot 5-8"
+	str_params[]: "train_cargo depot 5-8"
+
+	num_params[]: 0.0	# 00:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 1		# count limit
+}
+
+traffic_rule_data : traffic_rule.s_train_w_dp
+{
+	# name: "Spawn density train depot"
+
+	rule: "density"
+
+	str_params[]: "ranged: true"
+	str_params[]: "context: true"
+
+	str_params[]: "crossing_distance_min: 400"
+	str_params[]: "train_wire"
+	str_params[]: "train_cargo depot 5-8"
 
 	num_params[]: 0.0	# 00:00
 	num_params[]: 0.02	# frequency

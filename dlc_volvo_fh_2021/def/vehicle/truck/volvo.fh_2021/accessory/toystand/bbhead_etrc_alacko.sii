@@ -1,0 +1,35 @@
+SiiNunit
+{
+
+accessory_addon_int_data : toy_etrc_bgr.volvo.fh_2021.toystand
+{
+	name: "Adam Lacko Buggyra Model 1:50"
+	price: 350
+	unlock: 0
+	icon: "toystand/bbhead_buggyra"
+	part_type: licensed
+
+	interior_model: "/vehicle/truck/upgrade/toystand/share/bbhead_etrc_alacko/buggyra_body.pmd"
+	coll: "/vehicle/truck/upgrade/toystand/share/bbhead_etrc_alacko/buggyra_body.pmc"
+
+	steam_inventory_id: 57
+	data[]: .bgr_toy.phys_data
+}
+
+physics_toy_data : .bgr_toy.phys_data
+{
+
+	phys_model: "/vehicle/truck/upgrade/toystand/share/bbhead_etrc_alacko/buggyra_head.pmd"
+	phys_model_coll: "/vehicle/truck/upgrade/toystand/share/bbhead_etrc_alacko/buggyra_head.pmc"
+
+	toy_type: "TT_joint"		# TT_rope, TT_double_rope, TT_joint
+	toy_mass: 0.6			# toy mass
+	locator_hook_offset: (0.0f, 0.01132f, 0.0f)	# offset of connection point on hook against toy locator
+
+	# definitions applied only to toys with joint
+	angular_stiffness: (500.0, 500.0)		# joint - together with angular damping influences frequency and amplitude of oscilation
+	angular_damping: (5.0, 5.0)		# joint - together with angular stiffness influences frequency and amplitude of oscilation
+	angular_amplitude: (2.0, 2.0, 0.0)	# joint - maximal deflection agains equilibrium position
+}
+
+}

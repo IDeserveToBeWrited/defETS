@@ -14,9 +14,27 @@ traffic_vehicle : traffic.stepron.sedan.premium_23.taxi_al
 
 
 	spawn_ratio: 0
-	
-	tags[]: taxi
 
+	tags[]: taxi
+	tags[]: context
+
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_al.spawn.condition
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_al.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_al.spawn.condition
+{
+	# spawn only inside urban areas
+	type: area
+	str_param[]: "urban"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_al.spawn.condition2
+{
+	# don't spawn inside company areas
+	type: area
+	str_param[]: "!"
+	str_param[]: "company"
 }
 
 vehicle_accessory: .stepron.sedan.premium_23.taxi_al.chassis
@@ -55,9 +73,27 @@ traffic_vehicle : traffic.stepron.sedan.premium_23.taxi_blk
 
 
 	spawn_ratio: 0
-	
-	tags[]: taxi
 
+	tags[]: taxi
+	tags[]: context
+
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_blk.spawn.condition
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_blk.spawn.condition2
+
+@include "drivers_generic.sui"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_blk.spawn.condition
+{
+	# spawn only inside urban areas
+	type: area
+	str_param[]: "urban"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_blk.spawn.condition2
+{
+	# don't spawn inside company areas
+	type: area
+	str_param[]: "!"
+	str_param[]: "company"
 }
 
 vehicle_accessory: .stepron.sedan.premium_23.taxi_blk.chassis
@@ -75,4 +111,130 @@ vehicle_wheel_accessory: .stepron.sedan.premium_23.taxi_blk.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}
+
+
+# XXXXXXXXXXXXXXXXXXX Greece | Athens Taxi XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.stepron.sedan.premium_23.taxi_gr_at
+{
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_at.chassis
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_at.fwheel
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_at.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_gr_at.condition.city
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_gr_at.spawn.condition
+
+@include "drivers_generic.sui"
+}
+
+
+vehicle_accessory: .stepron.sedan.premium_23.taxi_gr_at.chassis
+{
+	data_path: "/def/vehicle/ai/stepron_premium_23/chassis_sedan_taxi_gr_at.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.taxi_gr_at.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.taxi_gr_at.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}
+
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_gr_at.condition.city
+{
+	type: city
+	str_param[]: "athens"
+	str_param[]: "mitilini"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_gr_at.spawn.condition
+{
+	# don't spawn inside company areas
+	type: area
+	str_param[]: "!"
+	str_param[]: "company"
+}
+
+
+
+# XXXXXXXXXXXXXXXXXXX Greece | Patras Taxi XXXXXXXXXXXXXXXXXXX
+
+
+traffic_vehicle : traffic.stepron.sedan.premium_23.taxi_gr_pa
+{
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_pa.chassis
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_pa.fwheel
+	accessories[]: .stepron.sedan.premium_23.taxi_gr_pa.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+
+	spawn_ratio: 0
+
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_gr_pa.condition.city
+	spawn_condition[]: .traffic.stepron.sedan.premium_23.taxi_gr_pa.spawn.condition
+
+@include "drivers_generic.sui"
+}
+
+
+vehicle_accessory: .stepron.sedan.premium_23.taxi_gr_pa.chassis
+{
+	data_path: "/def/vehicle/ai/stepron_premium_23/chassis_sedan_taxi_gr_pa.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.taxi_gr_pa.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_3.sii"
+}
+
+vehicle_wheel_accessory: .stepron.sedan.premium_23.taxi_gr_pa.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_3.sii"
+}
+
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_gr_pa.spawn.condition
+{
+	# don't spawn inside company areas
+	type: area
+	str_param[]: "!"
+	str_param[]: "company"
+}
+traffic_spawn_condition: .traffic.stepron.sedan.premium_23.taxi_gr_pa.condition.city
+{
+	type: city
+	str_param[]: "patras"
+	str_param[]: "argostoli"
+	str_param[]: "lamia"
+	str_param[]: "chios"
 }

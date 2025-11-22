@@ -13,11 +13,9 @@ curve_model : curve.32
 {
 	name: "parked cars sprites 01"
 	model_desc: "/model/sprites/curve/parked_cars_sprites_01.pmd"
-
-
-	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0 | center17 : 1.0"
-	start_part[]: "start"
-	end_part[]: "end"
+	
+	variation: 1
+	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0 | center17 : 1.0"
 
 }
 
@@ -92,6 +90,78 @@ curve_model : curve.vhcl_2n002
 
 	variation: 1
 	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+
+	high_tess: 0
+}
+
+curve_model : curve.blkw_07002
+{
+	model_desc: "/model/vehicle/train/wagon_opentop_crv.pmd"
+	name: "wagon opentop crv"
+
+	variation: 1
+	start_part: 1
+	end_part: 1
+	variation[0]: "default | center1 : 1.0"
+	start_part[0]: ""
+	end_part[0]: ""
+
+	high_tess: 0
+
+	dynamic_lod_desc: 3
+	dynamic_lod_dist: 3
+	dynamic_lod_desc[0]: "/model/vehicle/train/wagon_opentop_crv_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+	dynamic_lod_desc[1]: "/model/vehicle/train/wagon_opentop_crv_lod2.pmd"
+	dynamic_lod_dist[1]: 150
+	dynamic_lod_desc[2]: "/model/vehicle/train/wagon_opentop_crv_lod3.pmd"
+	dynamic_lod_dist[2]: 210
+
+	no_geometry_stretch: true
+}
+
+curve_model : curve.blkw_07003
+{
+	model_desc: "/model/vehicle/train/wagon_opentop_far_crv.pmd"
+	name: "wagon opentop far crv"
+
+	variation: 1
+	variation[0]: "default | center1 : 1.0"
+
+	high_tess: 0
+
+	no_geometry_stretch: true
+}
+
+curve_model : curve.blkw_07004
+{
+	model_desc: "/model/vehicle/train/wagon_covered_crv.pmd"
+	name: "wagon covered crv"
+
+	variation: 1
+	variation[0]: "center | center1 : 1.0"
+
+	high_tess: 0
+
+	dynamic_lod_desc: 3
+	dynamic_lod_dist: 3
+	dynamic_lod_desc[0]: "/model/vehicle/train/wagon_covered_crv_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+	dynamic_lod_desc[1]: "/model/vehicle/train/wagon_covered_crv_lod2.pmd"
+	dynamic_lod_dist[1]: 150
+	dynamic_lod_desc[2]: "/model/vehicle/train/wagon_covered_crv_lod3.pmd"
+	dynamic_lod_dist[2]: 210
+
+	no_geometry_stretch: true
+}
+
+curve_model : curve.blkw_07005
+{
+	model_desc: "/model/vehicle/train/wagon_covered_far_crv.pmd"
+	name: "wagon covered far crv"
+
+	variation: 1
+	variation[0]: "default | center1 : 1.0"
 
 	high_tess: 0
 }

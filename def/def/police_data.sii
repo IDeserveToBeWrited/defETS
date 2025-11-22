@@ -26,6 +26,7 @@ police_data : police.data
 	fine_amounts[10]: 2000		# illegal border crossing
 	fine_amounts[11]: 150		# hard shoulder violation
 	fine_amounts[12]: 500		# damaged vehicle usage
+	fine_amounts[13]: 1500		# illegal trailer (weight station)
 
 	#
 	# in seconds of real time
@@ -38,7 +39,7 @@ police_data : police.data
 	offence_check_delay[5]: 0	# red lights
 	offence_check_delay[6]: 60	# speeding
 	offence_check_delay[7]: 0	# avoid weighing
-	offence_check_delay[8]: 0	# illegal trailer
+	offence_check_delay[8]: 600	# illegal trailer
 
 	#
 	# in seconds of real time
@@ -51,7 +52,7 @@ police_data : police.data
 	offence_police_check_delay[5]: 0	# red lights
 	offence_police_check_delay[6]: 3	# speeding
 	offence_police_check_delay[7]: 0	# avoid weighing
-	offence_police_check_delay[8]: 0	# illegal trailer
+	offence_police_check_delay[8]: 300	# illegal trailer
 
 	offence_probabilty[0]: 0.7	# car crash
 	offence_probabilty[1]: 0.3	# avoid sleeping
@@ -61,11 +62,12 @@ police_data : police.data
 	offence_probabilty[5]: 0.7	# red lights
 	offence_probabilty[6]: 0.0	# speeding
 	offence_probabilty[7]: 1.0	# avoid weighing
-	offence_probabilty[8]: 1.0	# illegal trailer
+	offence_probabilty[8]: 0.0	# illegal trailer
 	offence_probabilty[9]: 1.0	# avoid inspection
 	offence_probabilty[10]: 1.0	# illegal border crossing
 	offence_probabilty[11]: 1.0	# hard shoulder violation
 	offence_probabilty[12]: 1.0	# damaged vehicle usage
+	offence_probabilty[13]: 1.0	# illegal trailer (weight station)
 
 	offence_police_probabilty[0]: 1.0	# car crash
 	offence_police_probabilty[1]: 0.3	# avoid sleeping
@@ -75,11 +77,12 @@ police_data : police.data
 	offence_police_probabilty[5]: 1.0	# red lights
 	offence_police_probabilty[6]: 0.9	# speeding
 	offence_police_probabilty[7]: 1.0	# avoid weighing
-	offence_police_probabilty[8]: 1.0	# illegal trailer
+	offence_police_probabilty[8]: 0.3	# illegal trailer
 	offence_police_probabilty[9]: 1.0	# avoid inspection
 	offence_police_probabilty[10]: 1.0	# illegal border crossing
 	offence_police_probabilty[11]: 1.0	# hard shoulder violation
 	offence_police_probabilty[12]: 1.0	# damaged vehicle usage
+	offence_police_probabilty[13]: 1.0	# illegal trailer (weight station)
 
 	# car crash
 	offence_message[0]: "<img src=/material/ui/hud/car_crash.mat kr=center><br offset=-5>@@offence_crash@@"
@@ -119,6 +122,9 @@ police_data : police.data
 
 	# damaged vehicle usage
 	offence_message[12]: "<img src=/material/ui/hud/damaged_vehicle.mat kr=center><br offset=-5>@@offence_damaged_vehicle_usage@@"
+
+	# illegal trailer (weight station)
+	offence_message[13]: "<img src=/material/ui/hud/illegal_trailer.mat kr=center><br offset=-5>@@offence_illegal_trailer@@"
 
 	# timer decrease rate how much time it takes to decrease timer by 1 second (in seconds of real time)
 	timer_decrease_rate: 120	# 2 minutes

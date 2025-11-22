@@ -25,5 +25,43 @@ accessory_trailer_body_data : brick_c.scs.flatbed.body
 	collision: "/vehicle/trailer_owned/scs_flatbed/body/drop_sides_crane.pmc"
 
 	defaults[]: "/def/vehicle/trailer_owned/scs.flatbed/accessory/markers/simple_brick.sii"
+
+# new cargo system
+
+	cargo_loading_methods[]: area
+	#cargo_loading_methods[]: custom
+
+	cargo_areas[]: (2.5, 12.31)
+
+	cargo_regular_width: 2.5
+
+	#cargo_custom_loads[]: .glass_rack_c
+
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+@include "/def/vehicle/lashing_gear.sui"
 }
+
+cargo_lashing_mount : .lashm1
+{
+	
+	
+	spacing: 0.1
+	hook_angle_constraints: (10, 90, 10)
+	#open_model: 	"/vehicle/trailer_owned/scs_flatbed/body/hook_chain_open.pmd"
+	#closed_model: 	"/vehicle/trailer_owned/scs_flatbed/body/hook_chain_closed.pmd"
+
 }
+cargo_lashing_mount : .lashm2
+{
+	
+	
+	spacing: 0.1
+	hook_angle_constraints: (10, 90, 10)
+	#open_model: 	"/vehicle/trailer_owned/scs_flatbed/body/hook_chain_open.pmd"
+	#closed_model: 	"/vehicle/trailer_owned/scs_flatbed/body/hook_chain_closed.pmd"
+
+}
+@include "/def/vehicle/lashing_gear_data.sui"
+}
+

@@ -1,0 +1,40 @@
+SiiNunit
+{
+accessory_engine_data : exd2_310.daf.xf_electric.engine
+{
+	name: "PACCAR EX-D2 310"
+	price: 22200
+	unlock: 18
+	info[]: "415 @@hp@@ (310@@kw@@)"
+	info[]: "2@@dg@@470 @@nm@@"
+	info[]: "200-1@@dg@@200 @@rpm@@"
+	icon: "engine/paccar_mx13"
+	part_type: factory
+
+	type: electric
+	torque: 2470	#1370
+
+	torque_curve[]: (0, 0.8)
+	torque_curve[]: (200, 1.0)
+	torque_curve[]: (1200, 1.0)
+	torque_curve[]: (1400, 0.85)
+	torque_curve[]: (2000, 0.59)
+	torque_curve[]: (3000, 0.39)
+	torque_curve[]: (4000, 0.29)
+	torque_curve[]: (6000, 0.20)
+	torque_curve[]: (8000, 0.15)
+
+	rpm_idle: 0
+	rpm_limit: 8000
+	rpm_range_low_gear: (500, 5000)
+	rpm_range_high_gear: (1500, 5000)
+	rpm_range_power: (1400, 5000)
+
+	volume: 1.0
+	#resistance_torque: 0.0
+
+@include "sound.sui"
+
+	overrides[]: "/def/vehicle/truck/daf.xf_electric/accessory/badge/badge_310e.sii"
+}
+}

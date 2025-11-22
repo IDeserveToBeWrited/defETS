@@ -10,12 +10,25 @@ SiiNunit
 #
 # Attributes:
 #
-# speed_class - the value is used when determining the country speed limit ('lane_speed_class' attribute in '/def/country/(country_name)/speed_limit.sii')
+# speed_class: the value is used when determining the country speed limit ('lane_speed_class' attribute in '/def/country/(country_name)/speed_limit.sii')
+# rank: used for speed limit and lane type distribution - lane with higher rank is preferred
 #
-#
+# NOTE: The first traffic lane definition is used as default if not set otherwise (e.g. for unconnected prefabs or trajectories)
 
-traffic_lane_data : traffic_lane.road.local.no_overtake
+traffic_lane_data : traffic_lane.default
 {
+	speed_class: local_road
+
+	rank: 0
+
+	traffic_rules[]: traffic_rule.road_rail
+}
+
+traffic_lane_data : traffic_lane.road.local
+{
+	# Traffic lane with 'local' speed limits and low spawn density
+	# Allows changing lanes (when used for multi-lane roads), but NOT overtaking in opposite lane
+
 	speed_class: local_road
 
 	rank: 50
@@ -29,11 +42,52 @@ traffic_lane_data : traffic_lane.road.local.no_overtake
 	traffic_rules[]: traffic_rule.s_cust_r
 }
 
-traffic_lane_data : traffic_lane.road.local.high_density
+traffic_lane_data : traffic_lane.road.local.overtake
+{
+	# Traffic lane with 'local' speed limits and low spawn density - suitable usually only for local roads with 1+1 lanes
+	# NOTE: Allows overtaking in the opposite lane (even if used on multi-lane road!)
+
+	speed_class: local_road
+
+	rank: 50
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_l
+	traffic_rules[]: traffic_rule.s_bus_l
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.s_cust_r
+
+	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking in opposite lane
+}
+
+traffic_lane_data : traffic_lane.road.local.full_in_out
 {
 	speed_class: local_road
 
 	rank: 50
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_l
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_l
+	traffic_rules[]: traffic_rule.s_bus_l
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.s_cust_r
+
+	traffic_rules[]: traffic_rule.no_chng_out
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+
+traffic_lane_data : traffic_lane.road.local.high_density
+{
+	# Traffic lane with 'local' speed limits, with higher spawn density - suitable for multi-lane roads
+
+	speed_class: local_road
+
+	rank: 60
 
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.s_car_h
@@ -44,8 +98,114 @@ traffic_lane_data : traffic_lane.road.local.high_density
 	traffic_rules[]: traffic_rule.s_police
 }
 
-traffic_lane_data : traffic_lane.road.local
+traffic_lane_data : traffic_lane.road.local.high_density.full_in_out
 {
+	# Traffic lane with 'local' speed limits, with higher spawn density - suitable for multi-lane roads
+
+	speed_class: local_road
+
+	rank: 60
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.local.high_density.full_in
+{
+	# Traffic lane with 'local' speed limits, with higher spawn density - suitable for multi-lane roads
+
+	speed_class: local_road
+
+	rank: 60
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.local.high_density.full_out
+{
+	# Traffic lane with 'local' speed limits, high density, restricts lane change out
+
+	speed_class: local_road
+
+	rank: 60
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_trm_r
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
+}
+
+traffic_lane_data : traffic_lane.road.local.dust
+{
+	speed_class: local_road
+
+	rank: 30
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_vl
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_vl
+	traffic_rules[]: traffic_rule.s_police
+	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking in opposite lane
+	traffic_rules[]: traffic_rule.uneven_road
+	traffic_rules[]: traffic_rule.s_cust_r
+}
+
+traffic_lane_data : traffic_lane.road.local.narrow
+{
+	speed_class: local_road
+
+	rank: 30
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.narrow_road
+	traffic_rules[]: traffic_rule.s_car_vl
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_vl
+	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking in opposite lane
+	traffic_rules[]: traffic_rule.s_cust_r
+}
+
+traffic_lane_data : traffic_lane.road.local.narrow.full_in_out
+{
+	speed_class: local_road
+
+	rank: 30
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.narrow_road
+	traffic_rules[]: traffic_rule.s_car_vl
+	traffic_rules[]: traffic_rule.s_trl_r
+	traffic_rules[]: traffic_rule.s_truck_vl
+	traffic_rules[]: traffic_rule.s_cust_r
+}
+
+
+traffic_lane_data : traffic_lane.road.local.no_overtake
+{
+	# DO NOT USE!! OBSOLETE - Kept for backward compatibility
+
 	speed_class: local_road
 
 	rank: 50
@@ -56,25 +216,9 @@ traffic_lane_data : traffic_lane.road.local
 	traffic_rules[]: traffic_rule.s_truck_l
 	traffic_rules[]: traffic_rule.s_bus_l
 	traffic_rules[]: traffic_rule.s_police
-	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
 	traffic_rules[]: traffic_rule.s_cust_r
 }
 
-traffic_lane_data : traffic_lane.road.local.dust
-{
-	speed_class: local_road
-
-	rank: 30
-
-	traffic_rules[]: traffic_rule.road
-	traffic_rules[]: traffic_rule.s_car_l
-	traffic_rules[]: traffic_rule.s_trl_r
-	traffic_rules[]: traffic_rule.s_truck_l
-	traffic_rules[]: traffic_rule.s_police
-	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
-	traffic_rules[]: traffic_rule.uneven_road
-	traffic_rules[]: traffic_rule.s_cust_r
-}
 
 traffic_lane_data : traffic_lane.road.expressway
 {
@@ -120,6 +264,37 @@ traffic_lane_data : traffic_lane.road.expressway.full_in_out
 	traffic_rules[]: traffic_rule.no_chng_in
 }
 
+traffic_lane_data : traffic_lane.road.expressway.full_in
+{
+	speed_class: expressway
+
+	rank: 130
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.expressway.full_out
+{
+	speed_class: expressway
+
+	rank: 130
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
+}
+
+
 traffic_lane_data : traffic_lane.road.expressway.low_density
 {
 	speed_class: expressway
@@ -159,6 +334,38 @@ traffic_lane_data : traffic_lane.road.motorway.full_in_out
 
 	traffic_rules[]: traffic_rule.no_chng_out
 	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.motorway.full_in
+{
+	speed_class: motorway
+
+	rank: 230
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_in
+}
+
+traffic_lane_data : traffic_lane.road.motorway.full_out
+{
+	# Traffic lane with 'motorway' speed limits, restricts lane change out
+
+	speed_class: motorway
+
+	rank: 230
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.s_car_h
+	traffic_rules[]: traffic_rule.s_truck_h
+	traffic_rules[]: traffic_rule.s_bus_h
+	traffic_rules[]: traffic_rule.s_police
+
+	traffic_rules[]: traffic_rule.no_chng_out
 }
 
 
@@ -284,21 +491,6 @@ traffic_lane_data : traffic_lane.rail.tram
 	traffic_rules[]: traffic_rule.s_tram
 }
 
-traffic_lane_data : traffic_lane.road.local.no_overtake.tram
-{
-	speed_class: local_road
-
-	rank: 50
-
-	traffic_rules[]: traffic_rule.road
-	traffic_rules[]: traffic_rule.s_car_l
-	traffic_rules[]: traffic_rule.s_truck_l
-	traffic_rules[]: traffic_rule.s_bus_l
-	traffic_rules[]: traffic_rule.s_police
-	traffic_rules[]: traffic_rule.s_tram
-	traffic_rules[]: traffic_rule.road_tram
-
-}
 traffic_lane_data : traffic_lane.road.local.tram
 {
 	speed_class: local_road
@@ -312,7 +504,6 @@ traffic_lane_data : traffic_lane.road.local.tram
 	traffic_rules[]: traffic_rule.s_police
 	traffic_rules[]: traffic_rule.s_tram
 	traffic_rules[]: traffic_rule.road_tram
-	traffic_rules[]: traffic_rule.overtake_alw	# Allow overtaking (including 'wrong way')
 
 }
 

@@ -1,0 +1,41 @@
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Greek Border Police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.ixcent.pickup.midclass_24.gr
+{
+	accessories[]: .ixcent.pickup.midclass_24.gr.chassis
+	accessories[]: .ixcent.pickup.midclass_24.gr.fwheel
+	accessories[]: .ixcent.pickup.midclass_24.gr.rwheel
+
+	max_speed: 240
+	vehicle_mass: 2600
+
+	sound_move[]: "/sound/traffic/car_v8_1.soundref"
+	sound_move[]: "/sound/traffic/car_v8_2.soundref"
+	sound_horn[]: "/sound/traffic/car_horn_4.soundref"
+	
+	allow_parked: true
+
+	tags[]: customs
+
+	spawn_ratio: 0.0
+
+@include "drivers_generic_police.sui"
+	
+}
+
+vehicle_accessory: .ixcent.pickup.midclass_24.gr.chassis
+{
+	data_path: "/def/vehicle/ai/ixcent_pickup_midclass_24/gr.sii"
+}
+
+vehicle_wheel_accessory: .ixcent.pickup.midclass_24.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_car_modern_18in_02.sii"
+}
+
+vehicle_wheel_accessory: .ixcent.pickup.midclass_24.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_car_modern_18in_02.sii"
+}

@@ -1,0 +1,3175 @@
+
+
+
+
+
+academy_scenario : academy.scenario.book2.zero
+{
+	map_title: "@@aca_scenario_book2_zero_title@@"
+	map_desc: "@@aca_scenario_book2_zero_desc@@"
+	map_icon: "/material/ui/academy/book/book2/zero.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+	
+
+	variants[]: .academy.scenario.book2.zero.variant.steer_left
+	variants[]: .academy.scenario.book2.zero.variant.steer_right
+
+	goals[]: .academy.goal.book2.zero.time	
+	goals[]: .academy.goal.book2.zero.dir_change
+	
+	goals[]: .academy.goal.book2.zero.checkpoints
+	goals[]: .academy.goal.book2.zero.follow_instr
+	goals[]: .academy.goal.book2.zero.no_collision
+	goals[]: .academy.goal.book2.zero.follow_path
+	goals[]: .academy.goal.book2.zero.finish
+	
+	goals[]: .academy.goal.book2.zero.time.bonus
+	goals[]: .academy.goal.book2.zero.dir_change.bonus
+	goals[]: .academy.goal.book2.zero.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.zero.variant.steer_left
+{
+	map_scenes[]:  ac_b2_00
+	map_scene_position_tags[]: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+	trailer_position_tag: trailer
+	
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.zero.variant.steer_right
+{
+	map_scenes[]:  ac_b2_00
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+	trailer_position_tag: trailer
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+academy_scenario_goal : .academy.goal.book2.zero.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.zero.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 600
+}
+
+
+academy_scenario_goal : .academy.goal.book2.zero.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 10
+}
+
+academy_scenario_goal : .academy.goal.book2.zero.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.zero.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.zero.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.zero.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.zero.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+academy_scenario_goal : .academy.goal.book2.zero.time.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+
+academy_scenario_goal : .academy.goal.book2.zero.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+###########################################################################
+
+
+academy_scenario : academy.scenario.book2.slalom.nt
+{
+
+	map_title: "@@aca_scenario_book2_slalom_nt_title@@"
+	map_desc: "@@aca_scenario_book2_slalom_nt_desc@@"
+	map_icon: "/material/ui/academy/book/book2/double_slalom.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	variants[]: .academy.scenario.book2.slalom.nt.variant
+
+
+	goals[]: .academy.goal.book2.slalom.nt.time
+	goals[]: .academy.goal.book2.slalom.nt.dir_change.limit.pass
+
+	goals[]: .academy.goal.book2.slalom.nt.no_collision
+	goals[]: .academy.goal.book2.slalom.nt.follow_path
+	goals[]: .academy.goal.book2.slalom.nt.finish
+
+	goals[]: .academy.goal.book2.slalom.nt.dir_change.time_limit.bonus
+	goals[]: .academy.goal.book2.slalom.nt.dir_change.limit
+	goals[]: .academy.goal.book2.slalom.nt.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+
+academy_scenario_variant: .academy.scenario.book2.slalom.nt.variant
+{
+	map_scenes[]: ac_b2_01
+	map_scene_position_tags[]: polygon4
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+academy_scenario_goal : .academy.goal.book2.slalom.nt.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+academy_scenario_goal : .academy.goal.book2.slalom.nt.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slalom.nt.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.slalom.nt.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slalom.nt.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.slalom.nt.dir_change.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+}
+
+academy_scenario_goal : .academy.goal.book2.slalom.nt.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.slalom.nt.dir_change.limit.pass
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.training.course
+{
+	# based on academy.scenario.book1.3_04
+
+	map_title: "@@aca_scenario_book2_training_course_title@@"
+	map_desc: "@@aca_scenario_book2_training_course_desc@@"
+	map_icon: "/material/ui/academy/book/book2/training.course.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.training.course.variant
+
+	goals[]: .academy.goal.book2.training.course.checkpoints
+	goals[]: .academy.goal.book2.training.course.finish
+
+	goals[]: .academy.goal.book2.training.course.time
+	goals[]: .academy.goal.book2.training.course.no_collision
+	goals[]: .academy.goal.book2.training.course.ext_drive
+	goals[]: .academy.goal.book2.training.course.follow_path
+
+	#goals[]: .academy.goal.book2.training.course.time.bronze
+	#goals[]: .academy.goal.book2.training.course.time.silver
+	#goals[]: .academy.goal.book2.training.course.time.gold
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.training.course.variant
+{
+	map_scenes[]: ac_b2_02
+	map_scene_position_tags[]: roundabout1
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+academy_scenario_goal : .academy.goal.book2.training.course.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.training.course.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.training.course.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 100
+}
+academy_scenario_goal : .academy.goal.book2.training.course.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.training.course.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.training.course.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+#academy_scenario_goal : .academy.goal.book2.training.course.time.bronze
+#{
+#	value_name: "time"
+#	name: "@@aca_goal_time_limit@@"
+#
+#	allowed_value_max: 80
+#@include "share/goal_bronze.sui"
+#}
+#academy_scenario_goal : .academy.goal.book2.training.course.time.silver
+#{
+#	value_name: "time"
+#	name: "@@aca_goal_time_limit@@"
+#
+#	allowed_value_max: 70
+#@include "share/goal_silver.sui"
+#}
+#academy_scenario_goal : .academy.goal.book2.training.course.time.gold
+#{
+#	value_name: "time"
+#	name: "@@aca_goal_time_limit@@"
+#
+#	allowed_value_max: 60
+#@include "share/goal_gold.sui"
+#}
+
+###########################################################################
+
+
+academy_scenario : academy.scenario.book2.blindside.parking.options
+{
+
+	map_title: "@@aca_scenario_book2_blindside_parking_options_title@@"
+	map_desc: "@@aca_scenario_book2_blindside_parking_options_desc@@"
+	map_icon: "/material/ui/academy/book/book2/blindside_parking_options.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 915
+	environment_skybox: 8
+	environment_weather: 1
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.blindside.parking.options.variant
+
+	goals[]: .academy.goal.book2.blindside.parking.options.time.main
+	goals[]: .academy.goal.book2.blindside.parking.options.dir_change.limit
+
+
+	goals[]: .academy.goal.book2.blindside.parking.options.checkpoints
+	goals[]: .academy.goal.book2.blindside.parking.options.no_collision
+	goals[]: .academy.goal.book2.blindside.parking.options.follow_path
+	goals[]: .academy.goal.book2.blindside.parking.options.finish
+
+
+	goals[]: .academy.goal.book2.blindside.parking.options.time
+	goals[]: .academy.goal.book2.blindside.parking.options.dir_change.limitbonus
+	goals[]: .academy.goal.book2.blindside.parking.options.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.blindside.parking.options.variant
+{
+	map_scenes[]: ac_b2_03
+	map_scene_position_tags[]: upper
+	#map_scenes_mirrored[]: true
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 15
+}
+
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.dir_change.limitbonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.time
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.blindside.parking.options.time.main
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 600
+}
+
+
+###########################################################################
+
+
+academy_scenario : academy.scenario.book2.reverse.parking
+{
+	# based on academy.scenario.book1.3_17
+
+	map_title: "@@aca_scenario_book2_reverse_parking_title@@"
+	map_desc: "@@aca_scenario_book2_reverse_parking_desc@@"
+	map_icon: "/material/ui/academy/book/book2/reverse_parking.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 1115
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.reverse.parking.variant
+
+
+//pass
+	goals[]: .academy.goal.book2.reverse.parking.time.limit
+	goals[]: .academy.goal.book2.reverse.parking.dir_change.limit
+
+	goals[]: .academy.goal.book2.reverse.parking.no_collision
+	goals[]: .academy.goal.book2.reverse.parking.follow_path
+	goals[]: .academy.goal.book2.reverse.parking.finish
+
+//bonus
+	goals[]: .academy.goal.book2.reverse.parking.time
+	goals[]: .academy.goal.book2.reverse.parking.dir_change.limitbonus
+	goals[]: .academy.goal.book2.reverse.parking.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.reverse.parking.variant
+{
+	map_scenes[]: ac_b2_04
+	map_scene_position_tags[]: park2_front
+
+	# cannot be mirrored using park2_front
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+academy_scenario_goal : .academy.goal.book2.reverse.parking.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.reverse.parking.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.reverse.parking.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.reverse.parking.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+academy_scenario_goal : .academy.goal.book2.reverse.parking.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.reverse.parking.time
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 60
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.parking.dir_change.limitbonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.parking.time.limit 
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.crooked.parking
+# based on academy.scenario.book1.3_16
+{
+	map_title: "@@aca_scenario_book2_crooked_parking_title@@"
+	map_desc: "@@aca_scenario_book2_crooked_parking_desc@@"
+	map_icon: "/material/ui/academy/book/book2/crooked_parking.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.crooked.parking.variant.steer_left
+	variants[]: .academy.scenario.book2.crooked.parking.variant.steer_right
+	
+	goals[]: .academy.goal.book2.crooked.parking.time
+	goals[]: .academy.goal.book2.crooked.parking.dir_change
+
+	goals[]: .academy.goal.book2.crooked.parking.checkpoints
+	goals[]: .academy.goal.book2.crooked.parking.no_collision
+	goals[]: .academy.goal.book2.crooked.parking.follow_path
+	goals[]: .academy.goal.book2.crooked.parking.finish
+
+	goals[]: .academy.goal.book2.crooked.parking.time.bonus
+	goals[]: .academy.goal.book2.crooked.parking.dir_change.limit
+	goals[]: .academy.goal.book2.crooked.parking.ext_drive
+	
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.crooked.parking.variant.steer_left
+{
+	map_scenes[]:  ac_b2_09
+	map_scene_position_tags[]: park2_front
+	map_scenes_mirrored[]: false
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.crooked.parking.variant.steer_right
+{
+	map_scenes[]: ac_b2_09
+	map_scene_position_tags[]: park2_front
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_front
+	replay_playback_origin_tag: park2_front
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+academy_scenario_goal : .academy.goal.book2.crooked.parking.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.crooked.parking.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.crooked.parking.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.crooked.parking.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.crooked.parking.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 9
+}
+
+academy_scenario_goal : .academy.goal.book2.crooked.parking.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+
+academy_scenario_goal : .academy.goal.book2.crooked.parking.time.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 80
+}
+
+
+academy_scenario_goal : .academy.goal.book2.crooked.parking.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+
+academy_scenario_goal : .academy.goal.book2.crooked.parking.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+academy_scenario : academy.scenario.book2.backing.options
+{
+
+	map_title: "@@aca_scenario_book2_backing_options_title@@"
+	map_desc: "@@aca_scenario_book2_backing_options_desc@@"
+	map_icon: "/material/ui/academy/book/book2/backing_options.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+
+	variants[]: .academy.scenario.book2.backing.options.variant.steer_left
+	variants[]: .academy.scenario.book2.backing.options.variant.steer_right
+
+	goals[]: .academy.goal.book2.backing.options.time
+	goals[]: .academy.goal.book2.backing.options.dir_change.limit
+
+	goals[]: .academy.goal.book2.backing.options.no_collision
+	goals[]: .academy.goal.book2.backing.options.follow_path
+	goals[]: .academy.goal.book2.backing.options.finish
+
+
+	goals[]: .academy.goal.book2.backing.options.dir_change2
+	goals[]: .academy.goal.book2.backing.options.dir_change1
+	goals[]: .academy.goal.book2.backing.options.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.backing.options.variant.steer_left
+{
+	map_scenes[]: ac_b2_15
+	map_scene_position_tags[]: park2_front
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.backing.options.variant.steer_right
+{
+	map_scenes[]: ac_b2_15
+	map_scene_position_tags[]: park2_front
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_front
+	replay_playback_origin_tag: park2_front
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+
+
+
+academy_scenario_goal : .academy.goal.book2.backing.options.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+
+academy_scenario_goal : .academy.goal.book2.backing.options.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.backing.options.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.backing.options.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.backing.options.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.backing.options.dir_change2
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change2
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.backing.options.dir_change1
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change1
+	allowed_value_max: 1
+}
+
+academy_scenario_goal : .academy.goal.book2.backing.options.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 8
+}
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+academy_scenario : academy.scenario.book2.depot.options
+{
+
+	map_title: "@@aca_scenario_book2_depot_options_title@@"
+	map_desc: "@@aca_scenario_book2_depot_options_desc@@"
+	map_icon: "/material/ui/academy/book/book2/depot_options.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+
+	variants[]: .academy.scenario.book2.depot.options.variant
+//pass
+	goals[]: .academy.goal.book2.depot.options.time
+	goals[]: .academy.goal.book2.depot.options.dir_change.limit
+
+	goals[]: .academy.goal.book2.depot.options.no_collision
+	goals[]: .academy.goal.book2.depot.options.follow_path
+	goals[]: .academy.goal.book2.depot.options.finish
+//bonus
+	goals[]: .academy.goal.book2.depot.options.dir_change2
+	goals[]: .academy.goal.book2.depot.options.dir_change1
+	goals[]: .academy.goal.book2.depot.options.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.depot.options.variant
+{
+	map_scenes[]: ac_b2_24
+	map_scene_position_tags[]: warehouse1
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+
+
+academy_scenario_goal : .academy.goal.book2.depot.options.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+academy_scenario_goal : .academy.goal.book2.depot.options.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.depot.options.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.depot.options.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.depot.options.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.depot.options.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 8
+}
+
+academy_scenario_goal : .academy.goal.book2.depot.options.dir_change2
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change2
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.depot.options.dir_change1
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change1
+	allowed_value_max: 1
+}
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+academy_scenario : academy.scenario.book2.shortcut.backing
+{
+
+	map_title: "@@aca_scenario_book2_shortcut_backing_title@@"
+	map_desc: "@@aca_scenario_book2_shortcut_backing_desc@@"
+	map_icon: "/material/ui/academy/book/book2/shortcut_backing.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.shortcut.backing.variant
+
+
+	#goals[]: .academy.goal.book2.shortcut.backing.time
+
+	goals[]: .academy.goal.book2.shortcut.backing.main.time
+	goals[]: .academy.goal.book2.shortcut.backing.main.dir_change
+	
+	goals[]: .academy.goal.book2.shortcut.backing.checkpoints
+	goals[]: .academy.goal.book2.shortcut.backing.follow_instr
+	goals[]: .academy.goal.book2.shortcut.backing.no_collision
+	goals[]: .academy.goal.book2.shortcut.backing.follow_path
+	goals[]: .academy.goal.book2.shortcut.backing.finish
+
+	goals[]: .academy.goal.book2.shortcut.backing.dir_change.time_limit.bonus
+	goals[]: .academy.goal.book2.shortcut.backing.dir_change.limit
+	goals[]: .academy.goal.book2.shortcut.backing.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+
+
+academy_scenario_variant: .academy.scenario.book2.shortcut.backing.variant
+{
+	map_scenes[]: ac_b2_25
+	map_scene_position_tags[]: warehouse1
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+
+#academy_scenario_goal : .academy.goal.book2.shortcut.backing.time
+#{
+#	value_name: "time"
+#	name: "@@aca_goal_time_limit@@"
+#
+#	allowed_value_max: 300
+#@include "share/goal_limit.sui"
+#}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.dir_change.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.main.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 11
+}
+
+academy_scenario_goal : .academy.goal.book2.shortcut.backing.main.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+
+
+
+
+academy_scenario : academy.scenario.book2.parking.options
+{
+
+	map_title: "@@aca_scenario_book2_parking_options_title@@"
+	map_desc: "@@aca_scenario_book2_parking_options_desc@@"
+	map_icon: "/material/ui/academy/book/book2/parking_options.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+
+	variants[]: .academy.scenario.book2.parking.options.variant
+
+	goals[]: .academy.goal.book2.parking.options.time
+	goals[]: .academy.goal.book2.parking.options.dir_change.limit
+
+	goals[]: .academy.goal.book2.parking.options.no_collision
+	goals[]: .academy.goal.book2.parking.options.follow_path
+	goals[]: .academy.goal.book2.parking.options.finish
+
+	goals[]: .academy.goal.book2.parking.options.dir_change2
+	goals[]: .academy.goal.book2.parking.options.dir_change1
+	goals[]: .academy.goal.book2.parking.options.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.parking.options.variant
+{
+	map_scenes[]: ac_b2_14
+	map_scene_position_tags[]: funky
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+
+
+academy_scenario_goal : .academy.goal.book2.parking.options.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+academy_scenario_goal : .academy.goal.book2.parking.options.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.parking.options.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.parking.options.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.parking.options.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.parking.options.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 8
+}
+
+academy_scenario_goal : .academy.goal.book2.parking.options.dir_change2
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change2
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.parking.options.dir_change1
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change1
+	allowed_value_max: 1
+}
+
+
+
+#########################
+
+academy_scenario : academy.scenario.book2.way.preference
+{
+
+	map_title: "@@aca_scenario_book2_way_preference_title@@"
+	map_desc: "@@aca_scenario_book2_way_preference_desc@@"
+	map_icon: "/material/ui/academy/book/book2/way_preference.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 905
+	environment_skybox: 10
+	environment_weather: 16
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.way.preference.variant
+
+
+	goals[]: .academy.goal.book2.way.preference.time
+	goals[]: .academy.goal.book2.way.preference.dir_change.main
+
+	goals[]: .academy.goal.book2.way.preference.no_collision
+	goals[]: .academy.goal.book2.way.preference.follow_path
+	goals[]: .academy.goal.book2.way.preference.finish
+
+	goals[]: .academy.goal.book2.way.preference.dir_change.time_limit.bonus
+	goals[]: .academy.goal.book2.way.preference.dir_change.limit
+	goals[]: .academy.goal.book2.way.preference.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+
+academy_scenario_variant: .academy.scenario.book2.way.preference.variant
+{
+	map_scenes[]: ac_b2_27
+	map_scene_position_tags[]: warehouse1
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+
+academy_scenario_goal : .academy.goal.book2.way.preference.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.way.preference.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.way.preference.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.way.preference.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.way.preference.dir_change.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+}
+
+academy_scenario_goal : .academy.goal.book2.way.preference.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+academy_scenario_goal : .academy.goal.book2.way.preference.dir_change.main
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+academy_scenario_goal : .academy.goal.book2.way.preference.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+
+
+#########################
+
+academy_scenario : academy.scenario.book2.night.parallel
+{
+
+	map_title: "@@aca_scenario_book2_night_parallel_title@@"
+	map_desc: "@@aca_scenario_book2_night_parallel_desc@@"
+	map_icon: "/material/ui/academy/book/book2/night_parallel.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 105
+	environment_skybox: 12
+	environment_weather: 16
+	truck_fuel: 0.45
+
+	variants[]: .academy.scenario.book2.night.parallel.variant.steer_left
+	variants[]: .academy.scenario.book2.night.parallel.variant.steer_right
+
+	goals[]: .academy.goal.book2.night.parallel.time.limit
+	goals[]: .academy.goal.book2.night.parallel.dir_change.main
+
+	goals[]: .academy.goal.book2.night.parallel.checkpoints
+	goals[]: .academy.goal.book2.night.parallel.no_collision
+	goals[]: .academy.goal.book2.night.parallel.follow_path
+	goals[]: .academy.goal.book2.night.parallel.finish
+
+	goals[]: .academy.goal.book2.night.parallel.dir_change.time_limit.bonus
+	goals[]: .academy.goal.book2.night.parallel.dir_change.limit
+	goals[]: .academy.goal.book2.night.parallel.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+
+academy_scenario_variant: .academy.scenario.book2.night.parallel.variant.steer_left
+{
+	map_scenes[]: ac_b2_26
+	map_scene_position_tags[]: funky
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: left
+	#trigger_states[]: steering_left	
+}
+
+academy_scenario_variant: .academy.scenario.book2.night.parallel.variant.steer_right
+{
+	map_scenes[]: ac_b2_26_uk
+	map_scene_position_tags[]: funky
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: right
+	#trigger_states[]: steering_right
+}
+
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.night.parallel.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.night.parallel.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.night.parallel.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.dir_change.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 60
+}
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.dir_change.main
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+academy_scenario_goal : .academy.goal.book2.night.parallel.time.limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+###########################################################################
+
+
+academy_scenario : academy.scenario.book2.tight.long.backing
+{
+	map_title: "@@aca_scenario_book2_tight_long_backing_title@@"
+	map_desc: "@@aca_scenario_book2_tight_long_backing_desc@@"
+	map_icon: "/material/ui/academy/book/book2/tight_long_backing.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.tight.long.backing.variant
+
+	goals[]: .academy.goal.book2.tight.long.backing.time_limit
+	goals[]: .academy.goal.book2.tight.long.backing.dir_change.limit
+
+	goals[]: .academy.goal.book2.tight.long.backing.no_collision
+	goals[]: .academy.goal.book2.tight.long.backing.follow_path
+	goals[]: .academy.goal.book2.tight.long.backing.finish
+
+	goals[]: .academy.goal.book2.tight.long.backing.dir_change1.bonus
+	goals[]: .academy.goal.book2.tight.long.backing.dir_change2.bonus
+	goals[]: .academy.goal.book2.tight.long.backing.ext_drive
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+academy_scenario_variant: .academy.scenario.book2.tight.long.backing.variant
+{
+	map_scenes[]: ac_b2_28
+	map_scene_position_tags[]: funky
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+
+
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.dir_change.limit
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.dir_change1.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change1
+	allowed_value_max: 3
+}
+
+academy_scenario_goal : .academy.goal.book2.tight.long.backing.dir_change2.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	id: dir_change2
+	allowed_value_max: 1
+}
+
+
+
+###########################################################################
+
+
+academy_scenario : academy.scenario.book2.reverse.slalom.nt
+{
+
+
+	map_title: "@@aca_scenario_book2_reverse_slalom_nt_title@@"
+	map_desc: "@@aca_scenario_book2_reverse_slalom_nt_desc@@"
+	map_icon: "/material/ui/academy/book/book2/reverse_slalom.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	variants[]: .academy.scenario.book2.reverse.slalom.nt.variant.steer_left
+	variants[]: .academy.scenario.book2.reverse.slalom.nt.variant.steer_right
+
+
+	goals[]: .academy.goal.book2.reverse.slalom.nt.time
+	goals[]: .academy.goal.book2.reverse.slalom.nt.dir_change.pass
+
+	goals[]: .academy.goal.book2.reverse.slalom.nt.no_collision
+	goals[]: .academy.goal.book2.reverse.slalom.nt.follow_path
+	goals[]: .academy.goal.book2.reverse.slalom.nt.finish
+
+	goals[]: .academy.goal.book2.reverse.slalom.nt.time_limit.bonus
+	goals[]: .academy.goal.book2.reverse.slalom.nt.dir_change
+	goals[]: .academy.goal.book2.reverse.slalom.nt.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.reverse.slalom.nt.variant.steer_left
+{
+	map_scenes[]: ac_b2_29
+	map_scene_position_tags[]: park2_back
+	map_scenes[]: ac_b2_29_l
+	map_scene_position_tags[]: park2_back
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.reverse.slalom.nt.variant.steer_right
+{
+	map_scenes[]: ac_b2_29
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	map_scenes[]: ac_b2_29_r
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 600
+}
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.dir_change
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.reverse.slalom.nt.dir_change.pass
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 15
+}
+
+###########################################################################
+
+
+
+academy_scenario : academy.scenario.book2.driving.course
+
+{
+	map_title: "@@aca_scenario_book2_driving_course_title@@"
+	map_desc: "@@aca_scenario_book2_driving_course_desc@@"
+	map_icon: "/material/ui/academy/book/book2/driving_course.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 1
+	environment_weather: 0
+	truck_fuel: 0.45
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.driving.course.variant
+
+	// Main
+	goals[]: .academy.goal.book2.driving.course.time
+	goals[]: .academy.goal.book2.driving.course.dir_change
+
+	// Pass
+	goals[]: .academy.goal.book2.driving.course.checkpoints
+	goals[]: .academy.goal.book2.driving.course.no_collision
+	goals[]: .academy.goal.book2.driving.course.follow_path
+	goals[]: .academy.goal.book2.driving.course.finish
+
+	// Bonus
+	goals[]: .academy.goal.book2.driving.course.time_limit
+	goals[]: .academy.goal.book2.driving.course.dir_change.bonus
+	goals[]: .academy.goal.book2.driving.course.ext_drive
+
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.driving.course.variant
+{
+	map_scenes[]:  ac_b2_30
+	map_scene_position_tags[]: upper
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	trailer_position_tag: trailer
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 600
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 15
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 4
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.time_limit
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 300 
+
+}
+
+academy_scenario_goal : .academy.goal.book2.driving.course.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.curvy.curves
+
+{
+	map_title: "@@aca_scenario_book2_curvy_curves_title@@"
+	map_desc: "@@aca_scenario_book2_curvy_curves_desc@@"
+	map_icon: "/material/ui/academy/book/book2/curvy_curves.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 1
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+
+
+	variants[]: .academy.scenario.book2.curvy.curves.variant.steer_left
+	variants[]: .academy.scenario.book2.curvy.curves.variant.steer_right
+
+	goals[]: .academy.goal.book2.curvy.curves.time_limit
+	goals[]: .academy.goal.book2.curvy.curves.dir_change
+
+	goals[]: .academy.goal.book2.curvy.curves.checkpoints
+	goals[]: .academy.goal.book2.curvy.curves.follow_instr	
+	goals[]: .academy.goal.book2.curvy.curves.no_collision
+	goals[]: .academy.goal.book2.curvy.curves.follow_path
+	goals[]: .academy.goal.book2.curvy.curves.finish
+
+	goals[]: .academy.goal.book2.curvy.curves.time_limit.bonus
+	goals[]: .academy.goal.book2.curvy.curves.dir_change.bonus
+	goals[]: .academy.goal.book2.curvy.curves.ext_drive
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.curvy.curves.variant.steer_left
+{
+	map_scenes[]:  ac_b2_17
+	map_scene_position_tags[]: park2_right
+	map_scenes[]:  ac_b2_17_l
+	map_scene_position_tags[]: park2_right
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.curvy.curves.variant.steer_right
+{
+	map_scenes[]:  ac_b2_17
+	map_scene_position_tags[]: park2_left
+	map_scenes_mirrored[]: true
+
+	map_scenes[]:  ac_b2_17_r
+	map_scene_position_tags[]: park2_left
+	map_scenes_mirrored[]: true
+
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_right
+	replay_playback_origin_tag: park2_left
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.curvy.curves.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 12
+
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 150
+}
+
+academy_scenario_goal : .academy.goal.book2.curvy.curves.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+###############################################
+
+
+academy_scenario : academy.scenario.book2.slalom.trailer
+{
+
+	map_title: "@@aca_scenario_book2_slalom_trailer_title@@"
+	map_desc: "@@aca_scenario_book2_slalom_trailer_desc@@"
+	map_icon: "/material/ui/academy/book/book2/slalom_trailer.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+
+	variants[]: .academy.scenario.book2.slalom.trailer.variant
+
+
+	goals[]: .academy.goal.book2.slalom.trailer.time_limit
+	goals[]: .academy.goal.book2.slalom.trailer.dir_change
+
+	goals[]: .academy.goal.book2.slalom.trailer.no_collision
+	goals[]: .academy.goal.book2.slalom.trailer.follow_path
+	goals[]: .academy.goal.book2.slalom.trailer.finish
+
+	goals[]: .academy.goal.book2.slalom.trailer.time_limit.bonus
+	goals[]: .academy.goal.book2.slalom.trailer.dir_change.bonus
+	goals[]: .academy.goal.book2.slalom.trailer.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/scenario_ranks_stars.sui"
+
+
+
+}
+academy_scenario_variant: .academy.scenario.book2.slalom.trailer.variant
+{
+	map_scenes[]: ac_b2_13
+	map_scene_position_tags[]: polygon4
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+}
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.finish
+{
+@include "share/goal_finish.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+}
+
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.slalom.trailer.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.early.bird
+{
+	map_title: "@@aca_scenario_book2_early_bird_title@@"
+	map_desc: "@@aca_scenario_book2_early_bird_desc@@"
+	map_icon: "/material/ui/academy/book/book2/early_bird.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 615
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.early.bird.variant.steer_left
+	variants[]: .academy.scenario.book2.early.bird.variant.steer_right
+	
+	goals[]: .academy.goal.book2.early.bird.time_limit
+	goals[]: .academy.goal.book2.early.bird.dir_change
+
+	
+	goals[]: .academy.goal.book2.early.bird.no_collision
+	goals[]: .academy.goal.book2.early.bird.follow_path
+	goals[]: .academy.goal.book2.early.bird.finish
+
+	goals[]: .academy.goal.book2.early.bird.time_limit.bonus
+	goals[]: .academy.goal.book2.early.bird.dir_change.bonus
+	goals[]: .academy.goal.book2.early.bird.ext_drive.bonus
+
+
+@include "share/scenario_common.sui"
+@include "share/scenario_ranks_stars.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/trigger_state_direction.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.early.bird.variant.steer_left
+{
+	map_scenes[]: ac_b2_12
+	map_scene_position_tags[]: park2_back
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.early.bird.variant.steer_right
+{
+	map_scenes[]: ac_b2_12
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	start_position_tag: start
+
+	intro_cutscene_tag: intro
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.early.bird.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+academy_scenario_goal : .academy.goal.book2.early.bird.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 600
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 15
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 5
+}
+
+academy_scenario_goal : .academy.goal.book2.early.bird.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.threading.needle
+{
+	map_title: "@@aca_scenario_book2_threading_needle_title@@"
+	map_desc: "@@aca_scenario_book2_threading_needle_desc@@"
+	map_icon: "/material/ui/academy/book/book2/threading_needle.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.threading.needle.variant.steer_left
+	variants[]: .academy.scenario.book2.threading.needle.variant.steer_right
+	
+	
+	goals[]: .academy.goal.book2.threading.needle.time
+	goals[]: .academy.goal.book2.threading.needle.dir_change
+	
+	goals[]: .academy.goal.book2.threading.needle.checkpoints
+	goals[]: .academy.goal.book2.threading.needle.no_collision
+	goals[]: .academy.goal.book2.threading.needle.follow_path
+	goals[]: .academy.goal.book2.threading.needle.finish
+
+	goals[]: .academy.goal.book2.threading.needle.time.bonus
+	goals[]: .academy.goal.book2.threading.needle.dir_change.limit
+	goals[]: .academy.goal.book2.threading.needle.ext_drive
+	
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.threading.needle.variant.steer_left
+{
+	map_scenes[]:  ac_b2_10
+	map_scene_position_tags[]: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.threading.needle.variant.steer_right
+{
+	map_scenes[]:  ac_b2_10
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+academy_scenario_goal : .academy.goal.book2.threading.needle.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.threading.needle.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.threading.needle.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.threading.needle.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+
+academy_scenario_goal : .academy.goal.book2.threading.needle.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 20
+}
+
+academy_scenario_goal : .academy.goal.book2.threading.needle.dir_change.limit
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 11
+}
+
+academy_scenario_goal : .academy.goal.book2.threading.needle.time.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+academy_scenario_goal : .academy.goal.book2.threading.needle.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+academy_scenario_goal : .academy.goal.book2.threading.needle.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.vertigo
+
+{
+	map_title: "@@aca_scenario_book2_vertigo_title@@"
+	map_desc: "@@aca_scenario_book2_vertigo_desc@@"
+	map_icon: "/material/ui/academy/book/book2/vertigo.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 1
+	environment_weather: 0
+	truck_fuel: 0.45
+
+
+
+	variants[]: .academy.scenario.book2.vertigo.variant
+
+
+	goals[]: .academy.goal.book2.vertigo.time
+	goals[]: .academy.goal.book2.vertigo.dir_change
+	goals[]: .academy.goal.book2.vertigo.checkpoints
+	goals[]: .academy.goal.book2.vertigo.no_collision
+	goals[]: .academy.goal.book2.vertigo.follow_path
+	goals[]: .academy.goal.book2.vertigo.finish
+
+
+	goals[]: .academy.goal.book2.vertigo.time_limit
+	goals[]: .academy.goal.book2.vertigo.dir_change.bonus
+	goals[]: .academy.goal.book2.vertigo.ext_drive
+
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.vertigo.variant
+{
+	map_scenes[]:  ac_b2_31
+	map_scene_position_tags[]: roundabout1
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+}
+
+
+academy_scenario_goal : .academy.goal.book2.vertigo.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 2
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.time_limit
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+
+}
+
+academy_scenario_goal : .academy.goal.book2.vertigo.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.long.reverse
+{
+	map_title: "@@aca_scenario_book2_long_reverse_title@@"
+	map_desc: "@@aca_scenario_book2_long_reverse_desc@@"
+	map_icon: "/material/ui/academy/book/book2/long_reverse.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.long.reverse.variant.steer_left
+	variants[]: .academy.scenario.book2.long.reverse.variant.steer_right
+
+	// Pass conditions
+	goals[]: .academy.goal.book2.long.reverse.time_limit
+	goals[]: .academy.goal.book2.long.reverse.dir_change
+
+	// Main conditions
+	goals[]: .academy.goal.book2.long.reverse.checkpoints
+	goals[]: .academy.goal.book2.long.reverse.no_collision
+	goals[]: .academy.goal.book2.long.reverse.follow_path
+	goals[]: .academy.goal.book2.long.reverse.finish
+
+	// Bonus conditions
+	goals[]: .academy.goal.book2.long.reverse.time_limit.bonus
+	goals[]: .academy.goal.book2.long.reverse.dir_change.bonus
+	goals[]: .academy.goal.book2.long.reverse.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+// Variant
+academy_scenario_variant: .academy.scenario.book2.long.reverse.variant.steer_left
+{
+	map_scenes[]: ac_b2_long
+	map_scene_position_tags[]: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.long.reverse.variant.steer_right
+{
+	map_scenes[]: ac_b2_long
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+// Main Conditions
+academy_scenario_goal : .academy.goal.book2.long.reverse.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.long.reverse.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.long.reverse.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.long.reverse.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+// Pass conditions
+academy_scenario_goal : .academy.goal.book2.long.reverse.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+academy_scenario_goal : .academy.goal.book2.long.reverse.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+// Bonus conditions
+academy_scenario_goal : .academy.goal.book2.long.reverse.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.long.reverse.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 80
+}
+
+academy_scenario_goal : .academy.goal.book2.long.reverse.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.track.rain
+{
+	map_title: "@@aca_scenario_book2_track_rain_title@@"
+	map_desc: "@@aca_scenario_book2_track_rain_desc@@"
+	map_icon: "/material/ui/academy/book/book2/track_rain.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 1000
+	environment_skybox: 1
+	environment_weather: 21
+	truck_fuel: 0.45
+
+	variants[]: .academy.scenario.book2.track.rain.variant
+
+	// Pass conditions
+	goals[]: .academy.goal.book2.track.rain.time_limit
+	goals[]: .academy.goal.book2.track.rain.dir_change
+	
+	
+	// Main conditions
+	goals[]: .academy.goal.book2.track.rain.checkpoints
+	goals[]: .academy.goal.book2.track.rain.no_collision
+	goals[]: .academy.goal.book2.track.rain.follow_path
+	goals[]: .academy.goal.book2.track.rain.finish
+
+	// Bonus conditions
+	goals[]: .academy.goal.book2.track.rain.time_limit.bonus
+	goals[]: .academy.goal.book2.track.rain.time_limit.bonus2
+	goals[]: .academy.goal.book2.track.rain.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+// Variant
+academy_scenario_variant: .academy.scenario.book2.track.rain.variant
+{
+	map_scenes[]: ac_b2_rain
+	map_scene_position_tags[]: funky
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+
+// Main Conditions
+academy_scenario_goal : .academy.goal.book2.track.rain.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.track.rain.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.track.rain.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.track.rain.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+// Pass conditions
+academy_scenario_goal : .academy.goal.book2.track.rain.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360
+}
+
+
+academy_scenario_goal : .academy.goal.book2.track.rain.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+
+// Bonus conditions
+academy_scenario_goal : .academy.goal.book2.track.rain.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.track.rain.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 210
+}
+
+academy_scenario_goal : .academy.goal.book2.track.rain.time_limit.bonus2
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	id: time_limit2
+	allowed_value_max: 180
+}
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.wedge.turning
+# based on nothing
+{
+	map_title: "@@aca_scenario_book2_wedge_title@@"
+	map_desc: "@@aca_scenario_book2_wedge_desc@@"
+	map_icon: "/material/ui/academy/book/book2/wedge.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.wedge.variant.steer_left
+	variants[]: .academy.scenario.book2.wedge.variant.steer_right
+
+	// Pass Conditions
+	goals[]: .academy.goal.book2.wedge.time_limit
+	goals[]: .academy.goal.book2.wedge.dir_change
+
+	// Main Conditions
+	goals[]: .academy.goal.book2.wedge.checkpoints
+	goals[]: .academy.goal.book2.wedge.follow_instr
+	goals[]: .academy.goal.book2.wedge.no_collision
+	goals[]: .academy.goal.book2.wedge.follow_path
+	goals[]: .academy.goal.book2.wedge.finish
+
+	// Bonus Conditions
+	goals[]: .academy.goal.book2.wedge.time_limit.bonus
+	goals[]: .academy.goal.book2.wedge.dir_change.bonus
+	goals[]: .academy.goal.book2.wedge.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+// Variant
+}
+academy_scenario_variant: .academy.scenario.book2.wedge.variant.steer_left
+{
+	map_scenes[]:  ac_b2_wedge
+	map_scene_position_tags[]: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.wedge.variant.steer_right
+{
+	map_scenes[]:  ac_b2_wedge
+	map_scene_position_tags[]: park2_back
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_back
+	replay_playback_origin_tag: park2_back
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+// Main Goals
+
+academy_scenario_goal : .academy.goal.book2.wedge.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.wedge.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+// Pass Goals
+academy_scenario_goal : .academy.goal.book2.wedge.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 9
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+// Bonus goals
+academy_scenario_goal : .academy.goal.book2.wedge.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 5
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 150
+}
+
+academy_scenario_goal : .academy.goal.book2.wedge.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.circle
+# based on nothing
+{
+	map_title: "@@aca_scenario_book2_circle_title@@"
+	map_desc: "@@aca_scenario_book2_circle_desc@@"
+	map_icon: "/material/ui/academy/book/book2/circle.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.circle.variant.steer_left
+	variants[]: .academy.scenario.book2.circle.variant.steer_right
+
+	// Pass conditions
+	goals[]: .academy.goal.book2.circle.time_limit
+	goals[]: .academy.goal.book2.circle.dir_change
+
+	// Main conditions
+	goals[]: .academy.goal.book2.circle.checkpoints
+	goals[]: .academy.goal.book2.circle.follow_instr
+	goals[]: .academy.goal.book2.circle.no_collision
+	goals[]: .academy.goal.book2.circle.follow_path
+	goals[]: .academy.goal.book2.circle.finish
+
+	// medal conditions
+	goals[]: .academy.goal.book2.circle.time_limit.bonus
+	goals[]: .academy.goal.book2.circle.dir_change.bonus
+	goals[]: .academy.goal.book2.circle.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+}
+
+// Variant
+academy_scenario_variant: .academy.scenario.book2.circle.variant.steer_left
+{
+	map_scenes[]:  ac_b2_circ
+	map_scene_position_tags[]: park1_left
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+
+academy_scenario_variant: .academy.scenario.book2.circle.variant.steer_right
+{
+	map_scenes[]:  ac_b2_circ
+	map_scene_position_tags[]: park1_right
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park1_left
+	replay_playback_origin_tag: park1_right
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+// Main conditions
+
+academy_scenario_goal : .academy.goal.book2.circle.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+
+academy_scenario_goal : .academy.goal.book2.circle.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+// Pass conditions
+academy_scenario_goal : .academy.goal.book2.circle.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 9
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+// Bonus conditions
+academy_scenario_goal : .academy.goal.book2.circle.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 180
+}
+
+academy_scenario_goal : .academy.goal.book2.circle.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 3
+}
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.slopy.moments
+{
+	map_title: "@@aca_scenario_book2_slopy_moments_title@@"
+	map_desc: "@@aca_scenario_book2_slopy_moments_desc@@"
+	map_icon: "/material/ui/academy/book/book2/slopy_moments.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 515
+	environment_skybox: 8
+	environment_weather: 0
+	truck_fuel: 0.45
+
+	trailer: academy.trailer.basic2
+
+	variants[]: .academy.scenario.book2.slopy.moments.variant.steer_left
+	variants[]: .academy.scenario.book2.slopy.moments.variant.steer_right
+
+	
+	
+	goals[]: .academy.goal.book2.slopy.moments.time
+	goals[]: .academy.goal.book2.slopy.moments.dir_change
+
+	
+	goals[]: .academy.goal.book2.slopy.moments.checkpoints
+	goals[]: .academy.goal.book2.slopy.moments.follow_instr
+	goals[]: .academy.goal.book2.slopy.moments.no_collision	
+	goals[]: .academy.goal.book2.slopy.moments.follow_path
+	goals[]: .academy.goal.book2.slopy.moments.finish	
+
+	goals[]: .academy.goal.book2.slopy.moments.time.bonus
+	goals[]: .academy.goal.book2.slopy.moments.dir_change.bonus
+	goals[]: .academy.goal.book2.slopy.moments.ext_drive
+
+
+
+
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+academy_scenario_variant: .academy.scenario.book2.slopy.moments.variant.steer_left
+{
+	map_scenes[]:  ac_b2_11
+	map_scene_position_tags[]: polygon3
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.slopy.moments.variant.steer_right
+{
+	map_scenes[]:  ac_b2_11
+	map_scene_position_tags[]: polygon3
+	map_scenes_mirrored[]: false
+
+	replay_mirrored: false
+	replay_recording_origin_tag: polygon3
+	replay_playback_origin_tag: polygon3
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.follow_instr
+{
+@include "share/goal_follow_instructions.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slopy.moments.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slopy.moments.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.slopy.moments.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 12
+}
+
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 15
+}
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.time.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 240
+}
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+academy_scenario_goal : .academy.goal.book2.slopy.moments.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.handling.rain
+{
+	map_title: "@@aca_scenario_book2_handling_rain_title@@"
+	map_desc: "@@aca_scenario_book2_handling_rain_desc@@"
+	map_icon: "/material/ui/academy/book/book2/handling_rain.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 1250
+	environment_skybox: 9
+	environment_weather: 1
+	truck_fuel: 0.45
+
+	variants[]: .academy.scenario.book2.handling.rain.variant
+
+	// Pass conditions
+	goals[]: .academy.goal.book2.handling.rain.time_limit
+	goals[]: .academy.goal.book2.handling.rain.dir_change
+
+	// Main conditions
+	goals[]: .academy.goal.book2.handling.rain.checkpoints
+	goals[]: .academy.goal.book2.handling.rain.no_collision
+	goals[]: .academy.goal.book2.handling.rain.follow_path
+	goals[]: .academy.goal.book2.handling.rain.finish
+
+	// Bonus conditions
+	goals[]: .academy.goal.book2.handling.rain.time_limit.bonus
+	goals[]: .academy.goal.book2.handling.rain.dir_change.bonus
+	goals[]: .academy.goal.book2.handling.rain.ext_drive.bonus
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+
+// Variant
+academy_scenario_variant: .academy.scenario.book2.handling.rain.variant
+{
+	map_scenes[]: ac_b2_fun
+	map_scene_position_tags[]: funky
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+}
+
+// Main Conditions
+
+
+
+academy_scenario_goal : .academy.goal.book2.handling.rain.checkpoints
+{
+@include "share/goal_checkpoints.sui"
+}
+academy_scenario_goal : .academy.goal.book2.handling.rain.finish
+{
+@include "share/goal_finish.sui"
+}
+academy_scenario_goal : .academy.goal.book2.handling.rain.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+academy_scenario_goal : .academy.goal.book2.handling.rain.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+// Pass conditions
+
+academy_scenario_goal : .academy.goal.book2.handling.rain.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 6
+}
+
+
+academy_scenario_goal : .academy.goal.book2.handling.rain.time_limit
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 360 
+}
+
+// Bonus conditions
+academy_scenario_goal : .academy.goal.book2.handling.rain.ext_drive.bonus
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.handling.rain.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+}
+
+academy_scenario_goal : .academy.goal.book2.handling.rain.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+###########################################################################
+
+academy_scenario : academy.scenario.book2.saturday.night
+
+{
+	map_title: "@@aca_scenario_book2_saturday_night_title@@"
+	map_desc: "@@aca_scenario_book2_saturday_night_desc@@"
+	map_icon: "/material/ui/academy/book/book2/saturday_night.mat"
+	map_path: "/map/academy/driving_test_centre.mbd"
+
+	environment_time: 1500
+	environment_skybox: 1
+	environment_weather: 0
+	truck_fuel: 0.45
+	trailer: academy.trailer.basic2
+
+
+
+	variants[]: .academy.scenario.book2.saturday.night.variant.steer_left
+	variants[]: .academy.scenario.book2.saturday.night.variant.steer_right
+
+
+	goals[]: .academy.goal.book2.saturday.night.time
+	goals[]: .academy.goal.book2.saturday.night.dir_change
+	goals[]: .academy.goal.book2.saturday.night.no_collision
+	goals[]: .academy.goal.book2.saturday.night.follow_path
+	goals[]: .academy.goal.book2.saturday.night.finish
+
+	goals[]: .academy.goal.book2.saturday.night.time_limit.bonus
+	goals[]: .academy.goal.book2.saturday.night.dir_change.bonus
+	goals[]: .academy.goal.book2.saturday.night.ext_drive
+
+
+
+@include "share/scenario_common.sui"
+@include "share/trigger_state_cameras.sui"
+@include "share/trigger_state_direction.sui"
+@include "share/trigger_state_collision.sui"
+@include "share/scenario_ranks_stars.sui"
+
+}
+academy_scenario_variant: .academy.scenario.book2.saturday.night.variant.steer_left
+{
+	map_scenes[]:  ac_b2_33
+	map_scene_position_tags[]: park2_right
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: left
+	trigger_states[]: steering_left
+}
+academy_scenario_variant: .academy.scenario.book2.saturday.night.variant.steer_right
+{
+	map_scenes[]:  ac_b2_33
+	map_scene_position_tags[]: park2_left
+	map_scenes_mirrored[]: true
+
+	replay_mirrored: true
+	replay_recording_origin_tag: park2_right
+	replay_playback_origin_tag: park2_left
+
+	intro_cutscene_tag: intro
+
+	start_position_tag: start
+
+	required_steering: right
+	trigger_states[]: steering_right
+}
+
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.no_collision
+{
+@include "share/goal_no_collision.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.finish
+{
+@include "share/goal_finish.sui"
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.time
+{
+@include "share/goal_pass_time_limit.sui"
+
+	allowed_value_max: 480
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.dir_change
+{
+@include "share/goal_pass_direction_change.sui"
+
+	allowed_value_max: 10
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.ext_drive
+{
+@include "share/goal_bonus_exterior_drive.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.dir_change.bonus
+{
+@include "share/goal_bonus_direction_change.sui"
+
+	allowed_value_max: 0
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.time_limit.bonus
+{
+@include "share/goal_bonus_time_limit.sui"
+
+	allowed_value_max: 120
+
+}
+
+academy_scenario_goal : .academy.goal.book2.saturday.night.follow_path
+{
+@include "share/goal_follow_path.sui"
+}
+
+
+
+
+
+
+
+

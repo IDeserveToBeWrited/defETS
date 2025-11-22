@@ -5,19 +5,20 @@ accessory_interior_data: exclusive_uk.volvo.fh16_2012.interior
 	name: "@@exclusive@@ UK"
 	price: 30960
 	unlock: 12
-	icon: "interior_volvo_fh16_2012_ecl_uk"
+	icon: "truck/volvo_fh16_2012/accessory/fh_2012_uk"
 	part_type: factory
 
-	model: "/vehicle/truck/volvo_fh16_2012/interior/uk/hi_roof_uk.pmd"
-	collision: "/vehicle/truck/volvo_fh16_2012/interior/uk/hi_roof_uk.pmc"
-	animated_model: "/vehicle/truck/volvo_fh16_2012/interior/uk/anim.pmd"
+	model: "/vehicle/truck/volvo_fh16_2012/interior/uk/gt_xl.pmd"
+	collision: "/vehicle/truck/volvo_fh16_2012/interior/uk/gt_xl.pmc"
+	animated_model: "/vehicle/truck/volvo_fh16_2012/interior/uk/anim/anim_2012.pmd"
+	ext_model: "/vehicle/truck/volvo_fh16_2012/interior/external/gt_xl_fh16_2012_uk.pmd"
+	look: Default
+	variant: fh16_12
+
 	active_mirrors_part: a_mirrors
 	passive_mirrors_part: p_mirrors
 
-	look: look2
-	variant: exclusive
-
-@include "animations_uk.sui"
+@include "animations_2012_uk.sui"
 @include "sound.sui"
 @include "sound_effects.sui"
 
@@ -30,21 +31,14 @@ accessory_interior_data: exclusive_uk.volvo.fh16_2012.interior
 	glass_panes[]: .volvo.fh16_2012.pane.right
 	glass_panes[]: .volvo.fh16_2012.pane.top
 
-	suitable_for[]: "l2h2.volvo.fh16_2012.cabin"
 	suitable_for[]: "l2h3.volvo.fh16_2012.cabin"
 	suitable_for[]: "l2h3_8x4.volvo.fh16_2012.cabin"
-	ext_model: "/vehicle/truck/volvo_fh16_2012/accessory/ext_interior/stock.pmd"
-	ext_variant: excl_uk
-	ext_look: exclusive
 
-	defaults[]: "/def/vehicle/truck/volvo.fh16_2012/accessory/steering_w/exclusive.sii"
-
-@include "dashboard_color.sui"
-
-@include "int_shadow_std_uk.sui"
-
+@include "dashboard_color_2012.sui"
 @include "seat_uk.sui"
+@include "mirrors_uk.sui"
+@include "int_shadow_uk.sui"
 }
-@include "glass.dat"
+@include "glass_std.sui"
 @include "sound_effects_units.sui"
 }

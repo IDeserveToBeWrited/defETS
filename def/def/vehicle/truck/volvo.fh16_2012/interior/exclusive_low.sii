@@ -1,26 +1,28 @@
 SiiNunit
 {
-accessory_interior_data: excl_low.volvo.fh16_2012.interior
+accessory_interior_data: exc_low.volvo.fh16_2012.interior
 {
 	name: "@@exclusive@@"
 	price: 30960
 	unlock: 12
-	icon: "interior_volvo_fh16_2012_ecl"
+	icon: "truck/volvo_fh16_2012/accessory/fh_2012"
 
-	model:               "/vehicle/truck/volvo_fh16_2012/interior/sleeper.pmd"
-  collision:           "/vehicle/truck/volvo_fh16_2012/interior/sleeper.pmc"
-	animated_model:      "/vehicle/truck/volvo_fh16_2012/interior/anim.pmd"
+	model: "/vehicle/truck/volvo_fh16_2012/interior/model/slp.pmd"
+	collision: "/vehicle/truck/volvo_fh16_2012/interior/model/slp.pmc"
+	animated_model: "/vehicle/truck/volvo_fh16_2012/interior/anim/anim_2012.pmd"
+	ext_model: "/vehicle/truck/volvo_fh16_2012/interior/external/slp_fh16_2012.pmd"
+	look: Default
+	variant: fh16_12
+
 	active_mirrors_part: a_mirrors
 	passive_mirrors_part: p_mirrors
-	look: look2
-	variant: exclusive
 
-@include "animations.sui"
+@include "animations_2012.sui"
 @include "sound.sui"
 @include "sound_effects.sui"
 
-	dashboard_path:"/ui/dashboard/volvo_fh16_12.sii"
-	gps_path:"/ui/gps.sii"
+	dashboard_path: "/ui/dashboard/volvo_fh16_12.sii"
+	gps_path: "/ui/gps.sii"
 
 	glass_panes[]: .volvo.fh16_2012.pane.front
 	glass_panes[]: .volvo.fh16_2012.pane.left
@@ -28,18 +30,12 @@ accessory_interior_data: excl_low.volvo.fh16_2012.interior
 	glass_panes[]: .volvo.fh16_2012.pane.top
 
 	suitable_for[]: "l2h1.volvo.fh16_2012.cabin"
-	ext_model: "/vehicle/truck/volvo_fh16_2012/accessory/ext_interior/stock.pmd"
-	ext_variant: excl_low
-	ext_look: exclusive
 
-	defaults[]: "/def/vehicle/truck/volvo.fh16_2012/accessory/steering_w/exclusive.sii"
-
-@include "dashboard_color.sui"
-
-@include "int_shadow_std_low.sui"
-
+@include "dashboard_color_2012.sui"
 @include "seat.sui"
+@include "mirrors.sui"
+@include "int_shadow_low.sui"
 }
-@include "glass_low.dat"
+@include "glass_low.sui"
 @include "sound_effects_units.sui"
 }

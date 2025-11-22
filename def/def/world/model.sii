@@ -8671,11 +8671,17 @@ model_def : model.dlc_fr_288
 model_def : model.dlc_fr_289
 {
 	model_desc: "/model2/building/administration/admin_08b_fr.pmd"
-	static_lod_name[]: "LOD from 30m"
-	static_lod_path[]: "/model2/building/administration/admin_08b_fr_lod1.pmd"
-	static_lod_name[]: "LOD from 300m"
-	static_lod_path[]: "/model2/building/administration/admin_08b_fr_lod2.pmd"
 	category: "dlc_fr/close_city"
+
+	static_lod_path[]: "/model2/building/administration/admin_08b_fr_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+	static_lod_path[]: "/model2/building/administration/admin_08b_fr_lod2.pmd"
+	static_lod_name[]: "LOD from 300m"
+
+	dynamic_lod_desc[]: "/model2/building/administration/admin_08b_fr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/model2/building/administration/admin_08b_fr_lod2.pmd"
+	dynamic_lod_dist[]: 200
 }
 model_def : model.dlc_fr_290
 {
@@ -9778,23 +9784,25 @@ model_def : model.dlc_it_21
 	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/administration/admin_small_01_it_lod2.pmd"
 }
+
 model_def : model.dlc_it_22
 {
 	model_desc: "/model2/building/administration/admin_big_06_it.pmd"
 	category: "dlc_it"
-	static_lod_name[]: "LOD from 100m"
+
+	color_variant[]: "Base | *_c1 : 141,155,157 | *_c2 : 124,124,124 | *_c3 : 255,255,255 | *_c4 : 255,255,255"
+	color_variant[]: "White_Dark | *_c1 : 105,114,121 | *_c2 : 255,255,255 | *_c3 : 135,139,145 | *_c4 : 255,255,255"
+	color_variant[]: "Steel | *_c1 : 188,188,188 | *_c2 : 246,246,246 | *_c3 : 255,255,255 | *_c4 : 174,185,182"
+
 	static_lod_path[]: "/model2/building/administration/admin_big_06_it_lod1.pmd"
-	static_lod_name[]: "LOD from 200m"
+	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/administration/admin_big_06_it_lod2.pmd"
+	static_lod_name[]: "LOD from 200m"
+
 	dynamic_lod_desc[]: "/model2/building/administration/admin_big_06_it_lod1.pmd"
 	dynamic_lod_dist[]: 100
 	dynamic_lod_desc[]: "/model2/building/administration/admin_big_06_it_lod2.pmd"
 	dynamic_lod_dist[]: 200
-
-	color_variant[]: "Base | walls1 : 255,255,255 | walls2 : 255,255,255 | colums : 124,124,124 | glass1 : 141,155,157 | glass2 : 141,155,157"
-	color_variant[]: "White_Dark | walls1 : 255,255,255 | walls2 : 135,139,145 | colums : 255,255,255 | glass1 : 105,114,121 | glass2 : 105,114,121"
-	color_variant[]: "Steel | walls1 : 174,185,182 | walls2 : 255,255,255 | colums : 246,246,246 | glass1 : 188,188,188 | glass2 : 188,188,188"
-
 }
 model_def : model.dlc_it_25
 {
@@ -11696,36 +11704,7 @@ model_def : model.dlc_it_479
 {
 	vegetation_model: vegetmodel.foliage4.dry_it
 	category: "dlc_it"
-}
-model_def : model.3l001
-{
-	vegetation_model: vegetmodel.birch.slim1
-	name: "birch slim 1"
-}
-model_def : model.3l002
-{
-	vegetation_model: vegetmodel.birch.slim2
-	name: "birch slim 2"
-}
-model_def : model.3l003
-{
-	vegetation_model: vegetmodel.birch.slim3
-	name: "birch slim 3"
-}
-model_def : model.3l004
-{
-	vegetation_model: vegetmodel.birch.slim.group1
-	name: "birch slim group 1"
-}
-model_def : model.3l005
-{
-	vegetation_model: vegetmodel.birch.slim.group2
-	name: "birch slim group 2"
-}
-model_def : model.3l006
-{
-	vegetation_model: vegetmodel.birch.slim.group3
-	name: "birch slim group 3"
+
 }
 model_def : model.5350vl
 {
@@ -12386,7 +12365,21 @@ model_def : model.dlc_it_285
 model_def : model.dlc_it_286
 {
 	model_desc: "/model2/building/industry/rafinery_tower_07_it.pmd"
+	name: "rafinery tower 07 it"
 
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/industry/rafinery_tower_07_it_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+	static_lod_path[1]: "/model2/building/industry/rafinery_tower_07_it_lod2.pmd"
+	static_lod_name[1]: "LOD from 200m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/industry/rafinery_tower_07_it_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/industry/rafinery_tower_07_it_lod2.pmd"
+	dynamic_lod_dist[1]: 200
 }
 model_def : model.dlc_it_289
 {
@@ -13157,7 +13150,7 @@ model_def : model.dlc_balt_246
 }
 
 #model_def : model.dlc_balt_433 {
-#	model_desc: "/model2/vegetation/tree_balt/aspen1_balt.pmd"
+#	model_desc: "/model2/vegetation/deciduous/aspen/aspen1_balt.pmd"
 #	category: "dlc_balt"
 #}
 
@@ -13796,17 +13789,20 @@ model_def : model.dlc_balt_98
 model_def : model.dlc_balt_108
 {
 	vegetation_model: vegetmodel.birch.big_sc
+	name: "birch 02"
 
 }
 model_def : model.dlc_balt_109
 {
 	vegetation_model: vegetmodel.birch.small_sc
+	name: "birch 01"
 
 }
 model_def : model.dlc_balt_110
 {
 	vegetation_model: vegetmodel.birch.tall1
 	category: "dlc_balt"
+	name: "birch 03"
 
 }
 model_def : model.dlc_balt_122
@@ -13998,73 +13994,73 @@ model_def : model.dlc_balt_290
 
 model_def : model.dlc_balt_346
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken1a_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken1a_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_347
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken1b_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken1b_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_348
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken1c_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken1c_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_349
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken2_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken2_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_350
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken2a_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken2a_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_351
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken3_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken3_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_352
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken3a_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken3a_balt.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_353
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken1_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken01.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_354
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken2_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken02.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_355
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken2a_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken03.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_356
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken3_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken04.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_357
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken3a_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken05.pmd"
 	category: "dlc_balt"
 }
 model_def : model.dlc_balt_358
 {
-	model_desc: "/model2/vegetation/tree_balt/birch_tree_broken3b_high.pmd"
+	model_desc: "/asset/vegetation/deciduous/birch/birch_tree_broken06.pmd"
 	category: "dlc_balt"
 
 }
 model_def : model.dlc_balt_359
 {
-	model_desc: "/model2/vegetation/tree_balt/aspen_tree_broken1_balt.pmd"
+	model_desc: "/model2/vegetation/deciduous/aspen/aspen_tree_broken1_balt.pmd"
 	category: "dlc_balt"
 
 }
@@ -14152,16 +14148,7 @@ model_def : model.dlc_balt_820
 {
 	model_desc: "/model2/props/street/arrow_ahead_sides_balt.pmd"
 	category: "dlc_balt"
-}
-model_def : model.dlc_balt_821
-{
-	vegetation_model: vegetmodel.birch.very.tall1.balt
-	category: "dlc_balt"
-}
-model_def : model.dlc_balt_822
-{
-	vegetation_model: vegetmodel.birch.very.tall2.balt
-	category: "dlc_balt"
+
 }
 model_def : model.dlc_balt_823
 {
@@ -14442,22 +14429,7 @@ model_def : model.dlc_fr_436
 	model_desc: "/model2/props/street/playground/toys_tube_01_fr.pmd"
 	category: "dlc_fr"
 	drop_sun_shadows: 1
-}
-model_def : model.blke_74
-{
-	vegetation_model: vegetmodel.sparse1
-}
-model_def : model.blke_75
-{
-	vegetation_model: vegetmodel.sparse2
-}
-model_def : model.blke_76
-{
-	vegetation_model: vegetmodel.sparse3
-}
-model_def : model.blke_77
-{
-	vegetation_model: vegetmodel.sparse4
+
 }
 model_def : model.1143
 {
@@ -14798,9 +14770,10 @@ model_def : model.dlc_blke_42
 	model_desc: "/model2/building/administration/admin_tr/admin_05_tr_blke.pmd"
 	category: "dlc_blke"
 
-	color_variant[]: "original | color : 165,164,155 | win_l_color : 188,188,188 | win_r_color : 188,188,188"
-	color_variant[]: "blue | color : 98,120,122 | win_l_color : 98,120,122 | win_r_color : 98,120,122"
-	color_variant[]: "red | color : 134,98,88 | win_l_color : 73,73,73 | win_r_color : 73,73,73"
+	color_variant[]: "original | *_c1 : 165,164,155 | *_c2 : 188,188,188"
+	color_variant[]: "blue | *_c1 : 98,120,122 | *_c2 : 98,120,122"
+	color_variant[]: "red | *_c1 : 134,98,88 | *_c2 : 73,73,73"
+
 
 	static_lod_name[]: "LOD from 50m"
 	static_lod_path[]: "/model2/building/administration/admin_tr/admin_05_tr_blke_lod1.pmd"
@@ -15446,23 +15419,23 @@ model_def : model.dlc_blke_40
 
 	# Converted old model for new baking and export. It will be necessary to remove LOD 2 and then replace on the map.
 }
+
 model_def : model.dlc_blke_55
 {
 	model_desc: "/model2/building/shop/shop_01_tr_blke.pmd"
 	category: "dlc_blke"
 
-	color_variant[]: "White | visc1 : 255,255,255 | visc2 : 255,255,255 | visc3 : 255,255,255"
-	color_variant[]: "Grey | visc1 : 204,204,204 | visc2 : 204,204,204 | visc3 : 204,204,204"
-	color_variant[]: "Brown | visc1 : 187,154,115 | visc2 : 187,154,115 | visc3 : 187,154,115"
-	color_variant[]: "Blue | visc1 : 114,195,232 | visc2 : 114,195,232 | visc3 : 114,195,232"
-	color_variant[]: "Pink | visc1 : 244,170,163 | visc2 : 244,170,163 | visc3 : 244,170,163"
-	color_variant[]: "Orange | visc1 : 255,190,127 | visc2 : 255,190,127 | visc3 : 255,190,127"
+	color_variant[]: "White | *_c1 : 255,255,255"
+	color_variant[]: "Grey | *_c1 : 204,204,204"
+	color_variant[]: "Brown | *_c1 : 187,154,115"
+	color_variant[]: "Blue | *_c1 : 114,195,232"
+	color_variant[]: "Pink | *_c1 : 244,170,163"
+	color_variant[]: "Orange | *_c1 : 255,190,127"
 
-	static_lod_name[]: "LOD from 50m"
 	static_lod_path[]: "/model2/building/shop/shop_01_tr_blke_lod1.pmd"
 	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/shop/shop_01_tr_blke_lod2.pmd"
-
+	static_lod_name[]: "LOD from 200m"
 }
 model_def : model.dlc_blke_56
 {
@@ -16907,9 +16880,9 @@ model_def : model.dlc_balt_99
 	model_desc: "/model2/building/administration/admin_fi/admin_01_fi_balt.pmd"
 	category: "dlc_balt"
 
-	color_variant[]: "Original | c_stena : 90,92,106 | c_stlpik : 237,174,150"
-	color_variant[]: "Red | c_stena : 150,115,118 | c_stlpik : 59,64,75"
-	color_variant[]: "Blue | c_stena : 90,92,106 | c_stlpik : 66,114,170"
+	color_variant[]: "Original | *_c1 : 237,174,150 | *_c2 : 90,92,106"
+	color_variant[]: "Red | *_c1 : 59,64,75 | *_c2 : 150,115,118"
+	color_variant[]: "Blue | *_c1 : 66,114,170 | *_c2 : 90,92,106"
 
 	static_lod_name[]: "LOD from 50m"
 	static_lod_path[]: "/model2/building/administration/admin_fi/admin_01_fi_balt_lod1.pmd"
@@ -17274,9 +17247,10 @@ model_def : model.dlc_balt_259
 	model_desc: "/model2/building/administration/admin_fi/admin_05_fi_balt.pmd"
 	category: "dlc_balt"
 
-	color_variant[]: "Original | vis_c1 : 132,108,86 | vis_c2 : 98,98,98"
-	color_variant[]: "Gray | vis_c1 : 165,145,124 | vis_c2 : 231,231,231"
-	color_variant[]: "DarkLight | vis_c1 : 99,86,73 | vis_c2 : 219,219,219"
+	color_variant[]: "Original | *_c1 : 98,98,98 | *_c2 : 132,108,86"
+	color_variant[]: "Gray | *_c1 : 231,231,231 | *_c2 : 165,145,124"
+	color_variant[]: "DarkLight | *_c1 : 219,219,219 | *_c2 : 99,86,73"
+
 
 	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/administration/admin_fi/admin_05_fi_balt_lod1.pmd"
@@ -17455,9 +17429,9 @@ model_def : model.dlc_balt_344
 	static_lod_name[]: "LOD from 100m"
 	static_lod_path[]: "/model2/building/shop/shop_03_balt_lod2.pmd"
 
-	color_variant[]: "white/red | concrete : 255,255,255 | metal : 255,255,255 | roof : 208,182,167"
-	color_variant[]: "yellow/dark | concrete : 220,207,189 | metal : 220,207,189 | roof : 154,154,168"
-	color_variant[]: "blue/red | concrete : 147,152,177 | metal : 147,152,177 | roof : 173,159,158"
+	color_variant[]: "white/red | *_c1 : 255,255,255 | *_c2 : 208,182,167"
+	color_variant[]: "yellow/dark | *_c1 : 220,207,189 | *_c2 : 154,154,168"
+	color_variant[]: "blue/red | *_c1 : 147,152,177 | *_c2 : 173,159,158"
 }
 
 model_def : model.dlc_balt_365
@@ -17850,11 +17824,12 @@ model_def : model.dlc_balt_477
 	name: "rafinery tower 02 balt"
 	category: "dlc_balt"
 
-	static_lod_path[]: "/model2/building/industry/rafinery/rafinery_tower_02_balt_lod1.pmd"
-	static_lod_name[]: "LOD from 100m"
-
-	dynamic_lod_desc[]: "/model2/building/industry/rafinery/rafinery_tower_02_balt_lod1.pmd"
-	dynamic_lod_dist[]: 100
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/industry/rafinery/rafinery_tower_02_balt_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/industry/rafinery/rafinery_tower_02_balt_lod2.pmd"
+	dynamic_lod_dist[1]: 200
 }
 model_def : model.dlc_balt_478
 {
@@ -18359,10 +18334,12 @@ model_def : model.blke_02
 model_def : model.blke_03
 {
 	model_desc: "/model2/props/garbage/scrap_metal_pile_01_blke.pmd"
+	name: "scrap metal pile mid 01 blke"
 }
 model_def : model.blke_04
 {
 	model_desc: "/model2/props/garbage/scrap_metal_pile_02_blke.pmd"
+	name: "scrap metal pile mid 02 blke"
 }
 model_def : model.blke_05
 {
@@ -18863,24 +18840,12 @@ model_def : model.blke_106
 model_def : model.blke_107
 {
 	vegetation_model: vegetmodel.cherry3.stripe.blke
-}
-model_def : model.blke_111
-{
-	vegetation_model: vegetmodel.city.tree.sparse1_blke
-}
-model_def : model.blke_112
-{
-	vegetation_model: vegetmodel.city.tree.sparse2_blke
-}
-model_def : model.blke_113
-{
-	vegetation_model: vegetmodel.city.tree.sparse3_blke
 
 }
 model_def : model.blke_114
 {
 
-	model_desc: "/model2/vegetation/grass_curve_items/city_flower_hanged1_blke.pmd"
+	model_desc: "/model2/vegetation/grass_curve_items/city_flowers/city_flower_hanged1_blke.pmd"
 	category: "dlc_blke"
 
 }
@@ -18978,6 +18943,9 @@ model_def : model.blke_137
 {
 	model_desc: "/model2/props/street/arrow_ahead_blke.pmd"
 	category: "dlc_blke"
+
+	color_variant[]: "white | big : 255,255,255 | small : 255,255,255"
+	color_variant[]: "yellow | big : 210,180,90 | small : 210,180,90"
 }
 model_def : model.blke_138
 {
@@ -19215,12 +19183,6 @@ model_def : model.dlc_fr_406
 	category: "dlc_fr"
 
 }
-model_def : model.2u12
-{
-	vegetation_model: vegetmodel.sparse1.sdry
-	name: "sparse semidry"
-	category: "veget"
-}
 
 
 model_def : model.2u14
@@ -19252,20 +19214,7 @@ model_def : model.2u18
 	vegetation_model: vegetmodel.maple.sdry4
 	name: "maple 4 semidry"
 	category: "veget"
-}
 
-model_def : model.2u19
-{
-	vegetation_model: vegetmodel.sparse3.sdry
-	name: "sparse 3 semidry"
-	category: "veget"
-}
-
-model_def : model.2u20
-{
-	vegetation_model: vegetmodel.sparse4.sdry
-	name: "sparse 4 semidry"
-	category: "veget"
 }
 
 model_def : model.2u13
@@ -19286,40 +19235,8 @@ model_def : model.2u22
 	vegetation_model: vegetmodel.dense.tall4.sdry
 	name: "dense tall 4 semidry"
 	category: "ibe_veget"
-}
 
 
-model_def : model.2u23
-{
-	vegetation_model: vegetmodel.sparse2.sdry
-	name: "sparse 2 semidry"
-	category: "veget"
-}
-
-
-model_def : model.2u24
-{
-	vegetation_model: vegetmodel.sparse.shrub1.sdry
-	name: "sparse shrub 1 semidry"
-	category: "veget"
-}
-model_def : model.2u25
-{
-	vegetation_model: vegetmodel.sparse.shrub2.sdry
-	name: "sparse shrub 2 semidry"
-	category: "veget"
-}
-model_def : model.2u26
-{
-	vegetation_model: vegetmodel.sparse.shrub3.sdry
-	name: "sparse shrub 3 semidry"
-	category: "veget"
-}
-model_def : model.2u27
-{
-	vegetation_model: vegetmodel.sparse.shrub4.sdry
-	name: "sparse shrub 4 semidry"
-	category: "veget"
 }
 model_def : model.2u28
 {
@@ -19503,14 +19420,14 @@ model_def : model.dlc_blke_223
 	name: "gatehouse 05 a blke"
 	category: "dlc_blke"
 
-color_variant[]: "original | *_c1 : 239,239,239 | *_c2 : 255,255,255"
-color_variant[]: "green | *_c1 : 177,184,170 | *_c2 : 255,255,255"
-color_variant[]: "sand | *_c1 : 224,214,199 | *_c2 : 255,255,255"
-color_variant[]: "blue | *_c1 : 166,186,200 | *_c2 : 255,255,255"
-color_variant[]: "original | *_c1 : 255,255,255 | *_c2 : 239,239,239"
-color_variant[]: "green | *_c1 : 255,255,255 | *_c2 : 177,184,170"
-color_variant[]: "sand | *_c1 : 255,255,255 | *_c2 : 224,214,199"
-color_variant[]: "blue | *_c1 : 255,255,255 | *_c2 : 166,186,200"
+	color_variant[]: "original | *_c1 : 239,239,239 | *_c2 : 255,255,255"
+	color_variant[]: "green | *_c1 : 177,184,170 | *_c2 : 255,255,255"
+	color_variant[]: "sand | *_c1 : 224,214,199 | *_c2 : 255,255,255"
+	color_variant[]: "blue | *_c1 : 166,186,200 | *_c2 : 255,255,255"
+	color_variant[]: "original | *_c1 : 255,255,255 | *_c2 : 239,239,239"
+	color_variant[]: "green | *_c1 : 255,255,255 | *_c2 : 177,184,170"
+	color_variant[]: "sand | *_c1 : 255,255,255 | *_c2 : 224,214,199"
+	color_variant[]: "blue | *_c1 : 255,255,255 | *_c2 : 166,186,200"
 
 
 	static_lod_path[]: "/model2/building/logistic/gatehouse_05_a_blke_lod1.pmd"
@@ -19523,7 +19440,7 @@ color_variant[]: "blue | *_c1 : 255,255,255 | *_c2 : 166,186,200"
 }
 model_def : model.ibe_1u26
 {
-	model_desc: "/model2/vegetation/trees/fir_tall1_cutdwn_ibe.pmd"
+	model_desc: "/model2/vegetation/coniferous/fir/fir_tall1_cutdwn_ibe.pmd"
 	name: "fir tall cutdown 1 model"
 
 }
@@ -19634,17 +19551,17 @@ model_def : model.0z00n
 
 model_def : model.0z00o
 {
-	model_desc: "/model2/lamp/lamp_industrial_01_de.pmd"
-	name: "lamp industrial 01 de"
+	model_desc: "/model2/lamp/lamp_industrial_03_de.pmd"
+	name: "lamp industrial 03 de"
 
 	static_lod_path: 1
 	static_lod_name: 1
-	static_lod_path[0]: "/model2/lamp/lamp_industrial_01_de_lod1.pmd"
+	static_lod_path[0]: "/model2/lamp/lamp_industrial_03_de_lod1.pmd"
 	static_lod_name[0]: "LOD from 50m"
 
 	dynamic_lod_desc: 1
 	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/lamp/lamp_industrial_01_de_lod1.pmd"
+	dynamic_lod_desc[0]: "/model2/lamp/lamp_industrial_03_de_lod1.pmd"
 	dynamic_lod_dist[0]: 50
 }
 
@@ -20038,9 +19955,9 @@ model_def : model.dlc_no_213
 }
 model_def : model.ibe_2u025
 {
-	model_desc: "/model2/vegetation/landmark/ibe/acoruna_flowers_01_ibe_lod_0.pmd"
+	model_desc: "/model2/vegetation/decorative/landmark_acoruna_flowers/acoruna_flowers_01_ibe_lod_0.pmd"
 	name: "acoruna flowers landmark 01 ibe"
-	dynamic_lod_desc[0]: "/model2/vegetation/landmark/ibe/acoruna_flowers_01_ibe_lod_1.pmd"
+	dynamic_lod_desc[0]: "/model2/vegetation/decorative/landmark_acoruna_flowers/acoruna_flowers_01_ibe_lod_1.pmd"
 	dynamic_lod_dist[0]: 300
 }
 model_def : model.dlc_blke_150
@@ -20476,6 +20393,12 @@ model_def : model.ger_0v001
 {
 	model_desc: "/model2/landmark/munich_arena_ger.pmd"
 	name: "munich arena ger"
+
+	static_lod_path[]: "/model2/landmark/munich_arena_ger_lod1.pmd"
+	static_lod_name[]: "LOD from 200m"
+
+	dynamic_lod_desc[]: "/model2/landmark/munich_arena_ger_lod1.pmd"
+	dynamic_lod_dist[]: 200
 }
 
 model_def : model.nlght_0j001
@@ -21060,20 +20983,7 @@ model_def : model.ibe_1p00x
 {
 	model_desc: "/model2/rock/ibe_rock_1e_regular_tunnel_entrance2.pmd"
 	name: "ibe rock 1e regular tunnel entrance2"
-}
 
-model_def : model.ibe_1v016
-{
-	vegetation_model: vegetmodel.orange1.ibe
-	name: "orenge tree 1 ibe"
-	category: "ibe_veget"
-
-}
-model_def : model.ibe_1v017
-{
-	vegetation_model: vegetmodel.orange2.ibe
-	name: "orenge tree 2 ibe"
-	category: "ibe_veget"
 
 }
 model_def : model.ibe_1z001
@@ -21401,14 +21311,6 @@ model_def : model.ibe_1x029
 	name: "bush 5 red ibe"
 	category: "ibe_veget"
 
-
-}
-
-model_def : model.ibe_1x030
-{
-	vegetation_model: vegetmodel.orange3.ibe
-	name: "orange tree 3 small"
-	category: "ibe_veget"
 
 
 }
@@ -21833,16 +21735,21 @@ model_def : model.dlc_blke_25
 	name: "block of flats 01 ro blke"
 	category: "dlc_blke"
 
-	color_variant[]: "orange | *_c1 : 246,227,214 | *_c2 : 255,255,255 | *_c3 : 246,227,214 | *_c4 : 249,210,175 | *_c5 : 172,131,86"
-	color_variant[]: "rouge | *_c1 : 246,227,214 | *_c2 : 255,255,255 | *_c3 : 229,196,196 | *_c4 : 233,203,203 | *_c5 : 168,79,79"
-	color_variant[]: "blue | *_c1 : 255,255,255 | *_c2 : 189,196,206 | *_c3 : 149,164,180 | *_c4 : 189,196,206 | *_c5 : 255,255,255"
-	color_variant[]: "green old/gray new | *_c1 : 189,196,206 | *_c2 : 193,208,191 | *_c3 : 255,255,255 | *_c4 : 185,185,185 | *_c5 : 255,255,255"
+	color_variant: 4
+	color_variant[0]: "orange | *_c1 : 246,227,214 | *_c2 : 255,255,255 | *_c3 : 246,227,214 | *_c4 : 249,210,175 | *_c5 : 172,131,86"
+	color_variant[1]: "rouge | *_c1 : 246,227,214 | *_c2 : 255,255,255 | *_c3 : 229,196,196 | *_c4 : 233,203,203 | *_c5 : 168,79,79"
+	color_variant[2]: "blue | *_c1 : 255,255,255 | *_c2 : 189,196,206 | *_c3 : 149,164,180 | *_c4 : 189,196,206 | *_c5 : 255,255,255"
+	color_variant[3]: "green old/gray new | *_c1 : 189,196,206 | *_c2 : 193,208,191 | *_c3 : 255,255,255 | *_c4 : 185,185,185 | *_c5 : 255,255,255"
 
-	static_lod_path[]: "/model2/building/flats/flats_ro/block_of_flats_01_ro_blke_lod1.pmd"
-	static_lod_name[]: "LOD from 95m"
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_ro/block_of_flats_01_ro_blke_lod1.pmd"
+	static_lod_name[0]: "LOD from 95m"
 
-	dynamic_lod_desc[]: "/model2/building/flats/flats_ro/block_of_flats_01_ro_blke_lod1.pmd"
-	dynamic_lod_dist[]: 95
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_ro/block_of_flats_01_ro_blke_lod1.pmd"
+	dynamic_lod_dist[0]: 95
 }
 model_def : model.dlc_blke_26
 {
@@ -22180,9 +22087,9 @@ model_def : model.dlc_blke_86
 	model_desc: "/model2/building/hotel/hotel_01_blke.pmd"
 	category: "dlc_blke"
 
-	color_variant[]: "yellow | walls1 : 243,210,152 | walls2 : 185,114,92"
-	color_variant[]: "white | walls1 : 229,229,229 | walls2 : 131,109,109"
-	color_variant[]: "green | walls1 : 213,226,194 | walls2 : 166,190,145"
+	color_variant[]: "yellow | *_c1 : 185,114,92 | *_c2 : 243,210,152"
+	color_variant[]: "white | *_c1 : 131,109,109 | *_c2 : 229,229,229"
+	color_variant[]: "green | *_c1 : 166,190,145 | *_c2 : 213,226,194"
 
 }
 
@@ -22328,18 +22235,21 @@ model_def : model.dlc_blke_176
 model_def : model.dlc_blke_197
 {
 	model_desc: "/model2/building/street/truck_park_wc_2_tr_blke.pmd"
+	name: "truck park wc 2 tr blke"
 	category: "dlc_blke"
 
-	color_variant[]: "original/green | met_f : 219,219,219 | met_b : 219,219,219 | met_s : 219,219,219 | roof : 120,242,237 | roof_f : 120,242,237 | roof_b : 120,242,237 | g_trim_f : 155,238,203 | g_trim_b : 155,238,203 | g_trim : 155,238,203 | met2_b : 219,219,219 | met2_f : 219,219,219"
-	color_variant[]: "orange | met_f : 219,219,219 | met_b : 219,219,219 | met_s : 153,153,153 | roof : 159,216,241 | roof_f : 159,216,241 | roof_b : 159,216,241 | g_trim : 240,205,202 | g_trim_f : 240,205,202 | g_trim_b : 240,205,202 | met2_b : 219,219,219 | met2_f : 219,219,219"
-	color_variant[]: "blue/yell | met_f : 219,219,219 | met_b : 219,219,219 | met_s : 219,219,219 | roof : 75,180,255 | roof_f : 75,180,255 | roof_b : 75,180,255 | g_trim : 155,206,255 | g_trim_f : 155,206,255 | g_trim_b : 155,206,255 | met2_b : 219,219,219 | met2_f : 219,219,219"
-	color_variant[]: "brown/green | met_f : 219,219,219 | met_b : 219,219,219 | met_s : 219,219,219 | roof : 134,203,227 | roof_f : 134,203,227 | roof_b : 134,203,227 | g_trim : 242,219,205 | g_trim_f : 242,219,205 | g_trim_b : 242,219,205 | met2_b : 219,219,219 | met2_f : 219,219,219"
+	color_variant: 4
+	color_variant[0]: "original/green | *_c1 : 120,242,237 | *_c2 : 219,219,219 | *_c3 : 155,238,203 | *_c4 : 219,219,219"
+	color_variant[1]: "orange | *_c1 : 159,216,241 | *_c2 : 219,219,219 | *_c3 : 240,205,202 | *_c4 : 153,153,153"
+	color_variant[2]: "blue/yell | *_c1 : 75,180,255 | *_c2 : 219,219,219 | *_c3 : 155,206,255 | *_c4 : 219,219,219"
+	color_variant[3]: "brown/green | *_c1 : 134,203,227 | *_c2 : 219,219,219 | *_c3 : 242,219,205 | *_c4 : 219,219,219"
 
-	static_lod_name[]: "LOD from 50m"
-	static_lod_path[]: "/model2/building/street/truck_park_wc_2_tr_blke_lod1.pmd"
-	static_lod_name[]: "LOD from 100m"
-	static_lod_path[]: "/model2/building/street/truck_park_wc_2_tr_blke_lod2.pmd"
-
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/street/truck_park_wc_2_tr_blke_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+	static_lod_path[1]: "/model2/building/street/truck_park_wc_2_tr_blke_lod2.pmd"
+	static_lod_name[1]: "LOD from 100m"
 }
 
 model_def : model.dlc_blke_198
@@ -23154,7 +23064,7 @@ model_def : model.ibe_9x04x
 model_def : model.ibe_9x05x
 {
 	model_desc: "/model2/distribution/pipes_knee_04_cdu_ibe.pmd"
-	name: "pipes knee 04 cdu ibe"
+	name: "pipes knee 04 cdu ibe - do_not_use"
 
 	static_lod_path: 1
 	static_lod_name: 1
@@ -23169,7 +23079,7 @@ model_def : model.ibe_9x05x
 model_def : model.ibe_9x06x
 {
 	model_desc: "/model2/distribution/pipes_knee_05_cdu_ibe.pmd"
-	name: "pipes knee 05 cdu ibe"
+	name: "pipes knee 05 cdu ibe - do_not_use"
 
 	static_lod_path: 1
 	static_lod_name: 1
@@ -25301,12 +25211,12 @@ model_def : model.at_2m00c
 	static_lod_path: 1
 	static_lod_name: 1
 	static_lod_path[0]: "/model2/building/flats/block_of_flats_05_at_lod1.pmd"
-	static_lod_name[0]: "LOD from 100m"
+	static_lod_name[0]: "LOD from 120m"
 
 	dynamic_lod_desc: 1
 	dynamic_lod_dist: 1
 	dynamic_lod_desc[0]: "/model2/building/flats/block_of_flats_05_at_lod1.pmd"
-	dynamic_lod_dist[0]: 100
+	dynamic_lod_dist[0]: 120
 }
 
 model_def : model.at_2m00d
@@ -25576,20 +25486,15 @@ model_def : model.at_0f00b
 	model_desc: "/model2/building/flats/block_of_flats_03_corner_at.pmd"
 	name: "block of flats 03 corner at"
 
-	color_variant: 3
-	color_variant[0]: "grey_blue | *_c1 : 217,217,217 | *_c2 : 165,201,203"
-	color_variant[1]: "biege_wine | *_c1 : 242,235,215 | *_c2 : 200,144,140"
-	color_variant[2]: "new_original | *_c1 : 217,196,175 | *_c2 : 163,209,199"
+	color_variant[]: "grey_blue | *_c1 : 217,217,217 | *_c2 : 165,201,203"
+	color_variant[]: "biege_wine | *_c1 : 242,235,215 | *_c2 : 200,144,140"
+	color_variant[]: "new_original | *_c1 : 217,196,175 | *_c2 : 163,209,199"
 
-	static_lod_path: 1
-	static_lod_name: 1
-	static_lod_path[0]: "/model2/building/flats/block_of_flats_03_corner_at_lod1.pmd"
-	static_lod_name[0]: "LOD from 100m"
+	static_lod_path[]: "/model2/building/flats/block_of_flats_03_corner_at_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/building/flats/block_of_flats_03_corner_at_lod1.pmd"
-	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[]: "/model2/building/flats/block_of_flats_03_corner_at_lod1.pmd"
+	dynamic_lod_dist[]: 120
 }
 
 model_def : model.at_0f00a
@@ -28949,10 +28854,15 @@ model_def : model.rus_0i001
 	model_desc: "/model2/props/street/caravan_old_01_rus.pmd"
 	name: "caravan old 01 rus"
 
-	color_variant: 3
-	color_variant[0]: "red | vis1 : 255,195,184"
-	color_variant[1]: "blue | vis1 : 171,209,255"
-	color_variant[2]: "default | vis1 : 255,255,255"
+	color_variant[]: "red | *_c1 : 255,195,184"
+	color_variant[]: "blue | *_c1 : 171,209,255"
+	color_variant[]: "default | *_c1 : 255,255,255"
+
+	static_lod_path[]: "/model2/props/street/caravan_old_01_rus_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/props/street/caravan_old_01_rus_lod1.pmd"
+	dynamic_lod_dist[]: 80
 }
 
 model_def : model.rus_0i003
@@ -31257,6 +31167,9 @@ model_def : model.rus_2k001
 	color_variant[]: "white | v_13 : 255,255,255 | v_26 : 255,255,255 | _hf_crcl_sm : 255,255,255 | _sq_fnnl_sm : 255,255,255 | _sq_funnel : 255,255,255 | _wider_top : 255,255,255 | _half_circle : 255,255,255"
 	color_variant[]: "grey | v_13 : 208,208,208 | v_26 : 208,208,208 | _hf_crcl_sm : 208,208,208 | _sq_fnnl_sm : 208,208,208 | _sq_funnel : 208,208,208 | _wider_top : 208,208,208 | _half_circle : 208,208,208"
 
+	dynamic_lod_desc[0]: "/model2/pillar/generic_bridge_pillar_rus_round_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+
 }
 
 model_def : model.rus_2k002
@@ -31267,6 +31180,9 @@ model_def : model.rus_2k002
 	color_variant[]: "white | v_20 : 255,255,255 | _wider_top : 255,255,255 | _sq_fnnl_lg : 255,255,255 | _sq_fnnl_sm : 255,255,255 | _extr_top_sm : 255,255,255 | _extr_top_lg : 255,255,255"
 	color_variant[]: "grey | v_20 : 208,208,208 | _wider_top : 208,208,208 | _sq_fnnl_lg : 208,208,208 | _sq_fnnl_sm : 208,208,208 | _extr_top_sm : 208,208,208 | _extr_top_lg : 208,208,208"
 
+	dynamic_lod_desc[0]: "/model2/pillar/generic_bridge_pillar_rus_octagon_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+
 }
 
 model_def : model.rus_2k003
@@ -31276,6 +31192,9 @@ model_def : model.rus_2k003
 
 	color_variant[]: "white | v_13 : 255,255,255 | v_26 : 255,255,255 | _sq_fnnl_lg : 255,255,255 | _hf_crcl_lg : 255,255,255 | _hf_crcl_sm : 255,255,255 | _sq_fnnl_sm : 255,255,255 | _extr_top : 255,255,255 | _wider_top : 255,255,255"
 	color_variant[]: "grey | v_13 : 208,208,208 | v_26 : 208,208,208 | _sq_fnnl_lg : 208,208,208 | _hf_crcl_lg : 208,208,208 | _hf_crcl_sm : 208,208,208 | _sq_fnnl_sm : 208,208,208 | _extr_top : 208,208,208 | _wider_top : 208,208,208"
+
+	dynamic_lod_desc[0]: "/model2/pillar/generic_bridge_pillar_rus_rounded_rect_narrow_lod1.pmd"
+	dynamic_lod_dist[0]: 100
 }
 
 model_def : model.rus_2k004
@@ -31286,6 +31205,8 @@ model_def : model.rus_2k004
 	color_variant[]: "white | v_13 : 255,255,255 | v_26 : 255,255,255 | _hf_crcl_lg : 255,255,255 | _hf_crcl_sm : 255,255,255 | _sq_fnnl_sm : 255,255,255 | _extr_top : 255,255,255 | _wider_top : 255,255,255 | _sq_fnnl_lg : 255,255,255"
 	color_variant[]: "grey | v_13 : 208,208,208 | v_26 : 208,208,208 | _hf_crcl_lg : 208,208,208 | _hf_crcl_sm : 208,208,208 | _sq_fnnl_sm : 208,208,208 | _extr_top : 208,208,208 | _wider_top : 208,208,208 | _sq_fnnl_lg : 208,208,208"
 
+	dynamic_lod_desc[0]: "/model2/pillar/generic_bridge_pillar_rus_rounded_rect_wide_lod1.pmd"
+	dynamic_lod_dist[0]: 100
 }
 
 model_def : model.rus_0f001
@@ -31557,15 +31478,19 @@ model_def : model.rus_2n003
 	model_desc: "/model2/props/garbage/debris_03_rus.pmd"
 	name: "debris 03 rus"
 
-	static_lod_path: 1
-	static_lod_name: 1
+	static_lod_path: 2
+	static_lod_name: 2
 	static_lod_path[0]: "/model2/props/garbage/debris_03_rus_lod1.pmd"
 	static_lod_name[0]: "LOD from 25m"
+	static_lod_path[1]: "/model2/props/garbage/debris_03_rus_lod2.pmd"
+	static_lod_name[1]: "LOD from 80m"
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
 	dynamic_lod_desc[0]: "/model2/props/garbage/debris_03_rus_lod1.pmd"
 	dynamic_lod_dist[0]: 25
+	dynamic_lod_desc[1]: "/model2/props/garbage/debris_03_rus_lod2.pmd"
+	dynamic_lod_dist[1]: 80
 }
 
 model_def : model.2n00s
@@ -31957,15 +31882,15 @@ model_def : model.12011
 	model_desc: "/model2/building/industry/silo/silo_chemical_02_de.pmd"
 	name: "silo chemical 02 de"
 
-	static_lod_path: 1
-	static_lod_name: 1
-	static_lod_path[0]: "/model2/building/industry/silo/silo_chemical_02_de_lod1.pmd"
-	static_lod_name[0]: "LOD from 90m"
+	static_lod_path[]: "/model2/building/industry/silo/silo_chemical_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 90m"
+	static_lod_path[]: "/model2/building/industry/silo/silo_chemical_02_de_lod2.pmd"
+	static_lod_name[]: "LOD from 200m"
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/building/industry/silo/silo_chemical_02_de_lod1.pmd"
-	dynamic_lod_dist[0]: 90
+	dynamic_lod_desc[]: "/model2/building/industry/silo/silo_chemical_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 90
+	dynamic_lod_desc[]: "/model2/building/industry/silo/silo_chemical_02_de_lod2.pmd"
+	dynamic_lod_dist[]: 200
 }
 
 model_def : model.ibe_21002
@@ -32209,12 +32134,12 @@ model_def : model.ibe_07006
 	name: "gate big 01 ibe"
 	category: "dlc_ibe"
 
-	color_variant: 5
-	color_variant[0]: "Grey | open : 255,255,255 | closed : 255,255,255 | vis : 255,255,255 | signs : 255,255,255 | addpart : 255,255,255"
-	color_variant[1]: "Red | open : 170,108,93 | closed : 170,108,93 | vis : 170,108,93 | signs : 255,255,255 | addpart : 255,255,255"
-	color_variant[2]: "Green | open : 138,190,126 | closed : 138,190,126 | vis : 138,200,126 | signs : 255,255,255 | addpart : 255,255,255"
-	color_variant[3]: "Blue | open : 45,133,225 | closed : 45,133,225 | vis : 45,133,225 | signs : 255,255,255 | addpart : 255,255,255"
-	color_variant[4]: "Yellow | open : 204,190,122 | closed : 204,190,122 | vis : 204,190,122 | signs : 255,255,255 | addpart : 255,255,255"
+	color_variant[]: "Grey | *_c1 : 255,255,255 | *_c2 : 255,255,255 | *_c3 : 255,255,255"
+	color_variant[]: "Red | *_c1 : 170,108,93 | *_c2 : 255,255,255 | *_c3 : 170,108,93"
+	color_variant[]: "Green | *_c1 : 138,190,126 | *_c2 : 255,255,255 | *_c3 : 138,200,126"
+	color_variant[]: "Blue | *_c1 : 45,133,225 | *_c2 : 255,255,255 | *_c3 : 45,133,225"
+	color_variant[]: "Yellow | *_c1 : 204,190,122 | *_c2 : 255,255,255 | *_c3 : 204,190,122"
+
 }
 
 model_def : model.ibe_07009
@@ -32679,15 +32604,19 @@ model_def : model.3g008
 	model_desc: "/model2/distribution/cement_works_storage_silo2_blkw.pmd"
 	name: "cement works storage silo2 blkw"
 
-	static_lod_path: 1
-	static_lod_name: 1
+	static_lod_path: 2
+	static_lod_name: 2
 	static_lod_path[0]: "/model2/distribution/cement_works_storage_silo2_blkw_lod1.pmd"
 	static_lod_name[0]: "LOD from 80m"
+	static_lod_path[1]: "/model2/distribution/cement_works_storage_silo2_blkw_lod2.pmd"
+	static_lod_name[1]: "LOD from 150m"
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
 	dynamic_lod_desc[0]: "/model2/distribution/cement_works_storage_silo2_blkw_lod1.pmd"
 	dynamic_lod_dist[0]: 80
+	dynamic_lod_desc[1]: "/model2/distribution/cement_works_storage_silo2_blkw_lod2.pmd"
+	dynamic_lod_dist[1]: 150
 }
 
 model_def : model.3g009
@@ -33820,6 +33749,12 @@ model_def : model.3w007
 {
 	model_desc: "/model2/building/industry/silo/silo_double_01_de.pmd"
 	name: "silo double 01 de"
+
+	static_lod_path[]: "/model2/building/industry/silo/silo_double_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/building/industry/silo/silo_double_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 150
 }
 
 model_def : model.3s008
@@ -33902,6 +33837,12 @@ model_def : model.4e005
 {
 	model_desc: "/model2/building/shop/generic_brands_01_blkw.pmd"
 	name: "generic brands 01 blkw"
+
+	static_lod_path[]: "/model2/building/shop/generic_brands_01_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/shop/generic_brands_01_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.blkw_2x001
@@ -35455,7 +35396,7 @@ model_def : model.blkw_2m004
 model_def : model.blkw_2900b
 {
 	model_desc: "/prefab2/depot/marina/marina_gas_stand_01_blkw.pmd"
-	name: "marina gas stand 01 blkw"
+	name: "marine gas stand 01 blkw"
 
 	static_lod_path: 2
 	static_lod_name: 2
@@ -39435,26 +39376,6 @@ model_def : model.dlc_blke_116
 	dynamic_lod_dist[0]: 100
 }
 
-model_def : model.blkw_01004
-{
-	model_desc: "/prefab2/depot/river_port/port_crane_01_blkw.pmd"
-	name: "port crane 01 blkw"
-
-	static_lod_path: 2
-	static_lod_name: 2
-	static_lod_path[0]: "/prefab2/depot/river_port/port_crane_01_blkw_lod1.pmd"
-	static_lod_name[0]: "LOD from 100m"
-	static_lod_path[1]: "/prefab2/depot/river_port/port_crane_01_blkw_lod2.pmd"
-	static_lod_name[1]: "LOD from 200m"
-
-	dynamic_lod_desc: 2
-	dynamic_lod_dist: 2
-	dynamic_lod_desc[0]: "/prefab2/depot/river_port/port_crane_01_blkw_lod1.pmd"
-	dynamic_lod_dist[0]: 100
-	dynamic_lod_desc[1]: "/prefab2/depot/river_port/port_crane_01_blkw_lod2.pmd"
-	dynamic_lod_dist[1]: 200
-}
-
 model_def : model.blkw_0v00i
 {
 	model_desc: "/model2/props/street/underpass_01_blkw.pmd"
@@ -40697,7 +40618,7 @@ model_def : model.blkw_3s009
 model_def : model.blkw_0j000
 {
 	model_desc: "/prefab2/depot/marina/marina_plaza_01_blkw_1.pmd"
-	name: "marina plaza building 01 blkw"
+	name: "marine plaza building 01 blkw"
 
 	static_lod_path: 1
 	static_lod_name: 1
@@ -41148,12 +41069,12 @@ model_def : model.4e00c
 {
 	model_desc: "/model2/building/shop/generic_brands_01_ch.pmd"
 	name: "generic brands 01 ch"
-}
 
-model_def : model.4e00e
-{
-	model_desc: "/model2/mover/flags/company/banner_long_small_01_blkw.pmd"
-	name: "banner long small 01 blkw"
+	static_lod_path[]: "/model2/building/shop/generic_brands_01_ch_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/shop/generic_brands_01_ch_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.blkw_1m001
@@ -42163,12 +42084,24 @@ model_def : model.blkw_2t00b
 {
 	model_desc: "/model2/ship/fishing_boat_01_blkw.pmd"
 	name: "fishing boat 01 blkw"
+
+	static_lod_path[]: "/model2/ship/fishing_boat_01_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/ship/fishing_boat_01_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.blkw_2t00c
 {
 	model_desc: "/model2/ship/fishing_boat_02_blkw.pmd"
 	name: "fishing boat 02 blkw"
+
+	static_lod_path[]: "/model2/ship/fishing_boat_02_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/ship/fishing_boat_02_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.blkw_2t00j
@@ -42256,6 +42189,12 @@ model_def : model.4e00h
 {
 	model_desc: "/model2/building/shop/generic_brands_01_de.pmd"
 	name: "generic brands 01 de"
+
+	static_lod_path[]: "/model2/building/shop/generic_brands_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/shop/generic_brands_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.4e00i
@@ -42610,6 +42549,12 @@ model_def : model.1r01e
 	dynamic_lod_dist[1]: 250
 }
 
+model_def : model.1r01f
+{
+	model_desc: "/model2/sign/company_logos/fcp/building_sign_fcp_de.pmd"
+	name: "building sign fcp de"
+}
+
 model_def : model.ibe_1
 {
 	model_desc: "/model2/building/village_close/village_es/village_close_03_es_ibe.pmd"
@@ -42844,30 +42789,26 @@ model_def : model.ibe_19
 	dynamic_lod_desc[1]: "/model2/building/flats/flats_es/block_of_flats_07_es_ibe_lod2.pmd"
 	dynamic_lod_dist[1]: 200
 }
+
 model_def : model.ibe_21
 {
 	model_desc: "/model2/building/village_close/village_es/village_close_10_es_ibe.pmd"
 	name: "village close 10 es ibe"
 
-	color_variant: 4
-	color_variant[0]: "Default | v0_c1 : 235,235,235 | v0_c2 : 210,192,167"
-	color_variant[1]: "Green | v0_c1 : 168,197,146 | v0_c2 : 135,134,133"
-	color_variant[2]: "Yellow | v0_c1 : 224,190,122 | v0_c2 : 210,192,167"
-	color_variant[3]: "Blue | v0_c1 : 182,203,230 | v0_c2 : 210,192,167"
+	color_variant[]: "Default | *_c1 : 235,235,235 | *_c2 : 210,192,167"
+	color_variant[]: "Green | *_c1 : 168,197,146 | *_c2 : 135,134,133"
+	color_variant[]: "Yellow | *_c1 : 224,190,122 | *_c2 : 210,192,167"
+	color_variant[]: "Blue | *_c1 : 182,203,230 | *_c2 : 210,192,167"
 
-	static_lod_path: 2
-	static_lod_name: 2
-	static_lod_path[0]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod1.pmd"
-	static_lod_name[0]: "LOD from 100m"
-	static_lod_path[1]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod2.pmd"
-	static_lod_name[1]: "LOD from 200m"
+	static_lod_path[]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+	static_lod_path[]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod2.pmd"
+	static_lod_name[]: "LOD from 200m"
 
-	dynamic_lod_desc: 2
-	dynamic_lod_dist: 2
-	dynamic_lod_desc[0]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 100
-	dynamic_lod_desc[1]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod2.pmd"
-	dynamic_lod_dist[1]: 200
+	dynamic_lod_desc[]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/model2/building/village_close/village_es/village_close_10_es_ibe_lod2.pmd"
+	dynamic_lod_dist[]: 200
 }
 
 model_def : model.ibe_26
@@ -43823,12 +43764,12 @@ model_def : model.poc_4p003
 	static_lod_path: 1
 	static_lod_name: 1
 	static_lod_path[0]: "/model2/building/flats/flats_poc/flats_close_04_poc_lod1.pmd"
-	static_lod_name[0]: "LOD from 100m"
+	static_lod_name[0]: "LOD from 150m"
 
 	dynamic_lod_desc: 1
 	dynamic_lod_dist: 1
 	dynamic_lod_desc[0]: "/model2/building/flats/flats_poc/flats_close_04_poc_lod1.pmd"
-	dynamic_lod_dist[0]: 100
+	dynamic_lod_dist[0]: 150
 }
 
 model_def : model.poc_31002
@@ -43963,18 +43904,6 @@ model_def : model.poc_4e005
 	name: "scania gate 01 poc"
 }
 
-model_def : model.4e00k
-{
-	model_desc: "/model2/mover/flags/country/flag_small_2x1_gr.pmd"
-	name: "flag small 2x1 gr"
-}
-
-model_def : model.4e00l
-{
-	model_desc: "/model2/mover/flags/country/flag_small_angled_2x1_gr.pmd"
-	name: "flag small angled 2x1 gr"
-}
-
 model_def : model.2060
 {
 	model_desc: "/model2/barrier/wooden/fence_wooden1-white-gate.pmd"
@@ -44076,6 +44005,12 @@ model_def : model.329um
 {
 	model_desc: "/model2/railing/barrier/barrier_gate_static_01_poc.pmd"
 	name: "barrier gate static 01 poc"
+
+	static_lod_path[]: "/model2/railing/barrier/barrier_gate_static_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 75m"
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_gate_static_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 75
 }
 
 model_def : model.tx_1g00j
@@ -44561,6 +44496,16 @@ model_def : model.4y99a
 {
 	model_desc: "/model2/landmark/se/hardanger_bridge_01_poc.pmd"
 	name: "hardanger bridge 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/se/hardanger_bridge_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/se/hardanger_bridge_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 100
 }
 
 model_def : model.5g002
@@ -44969,6 +44914,12 @@ model_def : model.greece_1n001
 model_def : model.6j001
 {
 	model_desc: "/model2/railing/barrier/crash_barrier_end_01_gr.pmd"
+
+	static_lod_path[]: "/model2/railing/barrier/crash_barrier_end_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/crash_barrier_end_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 model_def : model.tx_2701d
 {
@@ -45016,6 +44967,12 @@ model_def : model.48000
 model_def : model.6e000
 {
 	model_desc: "/model2/props/construction/close/steel_tubular_01_de.pmd"
+
+	static_lod_path[]: "/model2/props/construction/close/steel_tubular_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/construction/close/steel_tubular_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 
 model_def : model.3m007
@@ -45069,4 +45026,4305 @@ model_def : model.ok_29003
 	dynamic_lod_desc[2]: "/prefab2/depot/tire_factory/ok_tire_truck_pile_lod3.pmd"
 	dynamic_lod_dist[2]: 80
 }
+
+model_def : model.2m00h
+{
+	model_desc: "/model2/props/storage/pallet_fertilizer_01_gr.pmd"
+	name: "pallet fertilizer 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/storage/pallet_fertilizer_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 75m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/storage/pallet_fertilizer_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+}
+
+model_def : model.4h003
+{
+	model_desc: "/model2/props/street/advert/gr/building_sign_hotgrill_01_gr.pmd"
+	name: "building sign hotgrill 01 gr"
+}
+
+model_def : model.4h004
+{
+	model_desc: "/model2/landmark/de/gavle_palace_01_poc.pmd"
+	name: "gavle palace 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/gavle_palace_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/gavle_palace_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.reskin_1e000
+{
+	model_desc: "/model2/props/distribution/ca_fuel_gas_tank.pmd"
+	name: "fuel gas tank 01 gr"
+
+	static_lod_path[]: "/model2/props/distribution/ca_fuel_gas_tank_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+	static_lod_path[]: "/model2/props/distribution/ca_fuel_gas_tank_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/distribution/ca_fuel_gas_tank_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/model2/props/distribution/ca_fuel_gas_tank_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.46001
+{
+	model_desc: "/model2/building/flats/de/block_of_flats_03_corner_de_02.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/block_of_flats_03_corner_de_02_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/block_of_flats_03_corner_de_02_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+model_def : model.tx_2701c
+{
+	model_desc: "/prefab2/depot/grain_elevator/tx_grain_silo_01.pmd"
+	name: "grain silo 01"
+
+	color_variant: 2
+	color_variant[0]: "white | *_c1 : 255,255,255"
+	color_variant[1]: "grey | *_c1 : 225,225,225"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/prefab2/depot/grain_elevator/tx_grain_silo_01_lod1.pmd"
+	static_lod_name[0]: "LOD from 150m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/prefab2/depot/grain_elevator/tx_grain_silo_01_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+}
+model_def : model.tx_2701e
+{
+	model_desc: "/prefab2/depot/grain_elevator/tx_grain_silo_03.pmd"
+	name: "grain silo 03"
+
+	color_variant: 2
+	color_variant[0]: "white | *_c1 : 255,255,255"
+	color_variant[1]: "grey | *_c1 : 225,225,225"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/prefab2/depot/grain_elevator/tx_grain_silo_03_lod1.pmd"
+	static_lod_name[0]: "LOD from 150m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/prefab2/depot/grain_elevator/tx_grain_silo_03_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+
+}
+model_def : model.ne_27000
+{
+	model_desc: "/prefab2/depot/soybean_processing_factory/ne_unloading_box_grille.pmd"
+	name: "unloading box grille 01 poc"
+
+	static_lod_path[]: "/prefab2/depot/soybean_processing_factory/ne_unloading_box_grille_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/soybean_processing_factory/ne_unloading_box_grille_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+model_def : model.ar_4r005
+{
+	model_desc: "/model2/building/farm/ar_animal_feed_silo.pmd"
+	name: "farm animal feed silo 01 poc"
+
+	static_lod_path[]: "/model2/building/farm/ar_animal_feed_silo_lod1.pmd"
+	static_lod_name[]: "LOD from 75m"
+
+	dynamic_lod_desc[]: "/model2/building/farm/ar_animal_feed_silo_lod1.pmd"
+	dynamic_lod_dist[]: 75
+}
+model_def : model.ok_2700j
+{
+	model_desc: "/model2/props/distribution/liquid/ok_propane_tank_1.pmd"
+	name: "propane tank 01 poc"
+
+	static_lod_path[]: "/model2/props/distribution/liquid/ok_propane_tank_1_lod1.pmd"
+	static_lod_name[]: "LOD from 25m"
+	static_lod_path[]: "/model2/props/distribution/liquid/ok_propane_tank_1_lod2.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/props/distribution/liquid/ok_propane_tank_1_lod1.pmd"
+	dynamic_lod_dist[]: 25
+	dynamic_lod_desc[]: "/model2/props/distribution/liquid/ok_propane_tank_1_lod2.pmd"
+	dynamic_lod_dist[]: 60
+}
+model_def : model.poc_30103
+{
+	model_desc: "/model2/props/storage/fishing_nets_01_poc.pmd"
+	name: "fishing nets 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/storage/fishing_nets_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/storage/fishing_nets_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+model_def : model.de_32004
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_roundabout_01_de.pmd"
+	name: "berlin roundabout 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/berlin/berlin_roundabout_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/berlin/berlin_roundabout_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_32007
+{
+	model_desc: "/model2/landmark/de/dresden_town_center_04_02_de.pmd"
+	name: "dresden town center 05 de"
+}
+
+model_def : model.de_32008
+{
+	model_desc: "/model2/landmark/de/dresden_town_center_04_01_de.pmd"
+	name: "dresden town center 04 de"
+}
+
+model_def : model.de_11003
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_tv_tower_building_01_de.pmd"
+	name: "berlin tv tower building 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_tv_tower_building_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 110m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_tv_tower_building_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 110
+}
+
+model_def : model.de_0100y
+{
+	model_desc: "/model2/landmark/de/dresden_fountain_01_de.pmd"
+	name: "dresden fountain 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_fountain_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_fountain_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0100z
+{
+	model_desc: "/model2/landmark/de/dresden_temple_01_de.pmd"
+	name: "dresden temple 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_temple_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_temple_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_01010
+{
+	model_desc: "/model2/landmark/de/dresden_palace_01_de.pmd"
+	name: "dresden palace 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_palace_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 180m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_palace_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 180
+}
+
+model_def : model.de_01011
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_victory_column_de.pmd"
+	name: "berlin victory column de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/berlin/berlin_victory_column_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/berlin/berlin_victory_column_de_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.de_01012
+{
+	model_desc: "/model2/landmark/de/dresden_chateau_01_de.pmd"
+	name: "dresden chateau 01 de"
+}
+
+model_def : model.de_1200a
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_church_01_de.pmd"
+	name: "berlin church 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/berlin/berlin_church_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/berlin/berlin_church_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0t002
+{
+	model_desc: "/model2/landmark/de/dresden_train_station_01_de.pmd"
+	name: "dresden train station 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_train_station_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 130m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_train_station_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 130
+}
+
+model_def : model.de_0t003
+{
+	model_desc: "/model2/landmark/de/dresden_train_station_02_de.pmd"
+	name: "dresden train station 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_train_station_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_train_station_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.de_0t004
+{
+	model_desc: "/model2/landmark/de/dresden_train_station_03_de.pmd"
+	name: "dresden train station 03 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_train_station_03_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_train_station_03_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0u009
+{
+	model_desc: "/model2/landmark/de/dresden_mill_01_de.pmd"
+	name: "dresden mill 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_mill_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_mill_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_0u00a
+{
+	model_desc: "/model2/landmark/de/dresden_mill_02_de.pmd"
+	name: "dresden mill 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_mill_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_mill_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_4700a
+{
+	model_desc: "/model2/landmark/de/dresden_sports_hall_01_de.pmd"
+	name: "dresden sports hall 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_sports_hall_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_sports_hall_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_3u006
+{
+	model_desc: "/model2/landmark/de/dresden_palace_02_de.pmd"
+	name: "dresden palace 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_palace_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_palace_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.de_0k007
+{
+	model_desc: "/model2/landmark/de/dresden_academy_01_de.pmd"
+	name: "dresden academy 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/dresden_academy_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/dresden_academy_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.de_0k008
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_brandenburg_gate_01_de.pmd"
+	name: "berlin brandenburg gate 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/berlin/berlin_brandenburg_gate_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/berlin/berlin_brandenburg_gate_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0k009
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_brandenburg_gate_02_de.pmd"
+	name: "berlin brandenburg gate 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/berlin/berlin_brandenburg_gate_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/berlin/berlin_brandenburg_gate_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_5f001
+{
+	model_desc: "/model2/landmark/de/dresden_viaduct_mural_01_de.pmd"
+	name: "dresden viaduct mural 01 de"
+}
+
+model_def : model.de_4e009
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_railway_station_02_de.pmd"
+	name: "berlin railway station 02 de"
+}
+
+model_def : model.de_0m000
+{
+	model_desc: "/model2/landmark/de/leipzig_admin_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_admin_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_admin_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.de_0x000
+{
+	model_desc: "/model2/landmark/de/leipzig_admin_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_admin_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_admin_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0o000
+{
+	model_desc: "/model2/landmark/de/dresden_police_hq_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/dresden_police_hq_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/dresden_police_hq_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.de_0u000
+{
+	model_desc: "/model2/landmark/de/leipzig_hall_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_hall_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_hall_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_01000
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_port_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_port_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_port_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_24003
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_port_01_de.pmd"
+	name: "berlin port 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_port_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_port_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_01013
+{
+	model_desc: "/model2/landmark/de/dresden_restaurant_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/dresden_restaurant_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/dresden_restaurant_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_01014
+{
+	model_desc: "/model2/landmark/de/leipzig_opera_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_opera_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_opera_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.de_0u00b
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_port_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_port_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_port_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0x007
+{
+	model_desc: "/model2/landmark/de/leipzig_flat_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_flat_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_flat_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0x006
+{
+	model_desc: "/model2/landmark/de/leipzig_university_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_university_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_university_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0x008
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_admin_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_admin_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_admin_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0t007
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_university_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_university_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_university_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0m003
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_university_02_de.pmd"
+}
+
+model_def : model.de_0x009
+{
+	model_desc: "/model2/landmark/de/leipzig_race_center_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_race_center_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_race_center_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0o004
+{
+	model_desc: "/model2/landmark/de/leipzig_tower_01_de.pmd"
+}
+
+model_def : model.de_01016
+{
+	model_desc: "/model2/props/art/generic_statues_01_de.pmd"
+
+	static_lod_path[]: "/model2/props/art/generic_statues_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/props/art/generic_statues_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_0s000
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_congress_04_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_congress_04_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_congress_04_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_4w001
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_university_03_de.pmd"
+	name: "berlin university 03 de"
+}
+
+model_def : model.de_5x001
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_hall_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_hall_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_hall_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_0x00b
+{
+	model_desc: "/model2/landmark/de/leipzig_admin_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_admin_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_admin_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.de_0u00c
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_05_de.pmd"
+}
+
+model_def : model.de_0o007
+{
+	model_desc: "/model2/landmark/de/dresden_congress_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/dresden_congress_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/dresden_congress_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_4l000
+{
+	model_desc: "/model2/landmark/de/dresden_town_center_01_de.pmd"
+	name: "dresden town center 01 de"
+}
+
+model_def : model.de_4l006
+{
+	model_desc: "/model2/landmark/de/dresden_town_center_03_de.pmd"
+	name: "dresden town center 03 de"
+}
+
+model_def : model.de_0x00a
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_congress_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_congress_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_congress_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0m001
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_06_de.pmd"
+}
+
+model_def : model.de_0m004
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_entrance_sign_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_entrance_sign_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_entrance_sign_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_01017
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_bridge_statue_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_bridge_statue_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_bridge_statue_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_01018
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_bridge_statue_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_bridge_statue_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_bridge_statue_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_01019
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_bridge_statue_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_bridge_statue_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_bridge_statue_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_0101a
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_bridge_statue_04_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_bridge_statue_04_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_bridge_statue_04_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_0101b
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_bridge_column_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_bridge_column_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_bridge_column_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_2t000
+{
+	model_desc: "/model2/landmark/de/dresden_admin_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/dresden_admin_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/dresden_admin_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0101c
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_statue_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_statue_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_statue_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.de_3p001
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_townhall_de.pmd"
+}
+
+model_def : model.de_0m006
+{
+	model_desc: "/model2/building/flats/de/flats_close_06_de.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/flats_close_06_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/flats_close_06_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0x00c
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_reichstag_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_reichstag_de_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_reichstag_de_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.de_0m005
+{
+	model_desc: "/model2/building/flats/de/flats_close_02_de.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/flats_close_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/flats_close_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0o008
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_palace_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_palace_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 200m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_palace_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 200
+}
+
+model_def : model.de_4y001
+{
+	model_desc: "/model2/landmark/de/dresden_town_center_02_de.pmd"
+	name: "dresden town center 02 de"
+}
+
+model_def : model.de_01008
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_tv_tower_de.pmd"
+	name: "berlin tv tower de"
+
+	distance_scale: 40
+	distance_min: 600
+	distance_max: 1600
+
+}
+
+model_def : model.de_0101d
+{
+	model_desc: "/model2/landmark/de/mannheim_bridge_03_de.pmd"
+	name: "mannheim bridge 03 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/mannheim_bridge_03_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/mannheim_bridge_03_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_6r001
+{
+	model_desc: "/model2/building/flats/de/flats_close_04_de.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/flats_close_04_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/flats_close_04_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_3q000
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_museum_02_de.pmd"
+	name: "berlin museum 02 de"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_museum_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_museum_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0o009
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_congress_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_congress_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_congress_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_5j000
+{
+	model_desc: "/model2/building/flats/de/flats_close_05_de.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/flats_close_05_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/flats_close_05_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0b00d
+{
+	model_desc: "/model2/building/flats/de/flats_close_03_de.pmd"
+
+	static_lod_path[]: "/model2/building/flats/de/flats_close_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/de/flats_close_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 130
+}
+
+model_def : model.de_0b00e
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_old_museum_01_de.pmd"
+	name: "berlin old museum 01 de"
+}
+
+model_def : model.de_4u001
+{
+	model_desc: "/model2/landmark/de/leipzig_airport_01_de.pmd"
+	name: "leipzig airport 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/leipzig_airport_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 150m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/leipzig_airport_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+}
+
+model_def : model.de_4u002
+{
+	model_desc: "/model2/landmark/de/leipzig_airport_02_de.pmd"
+	name: "leipzig airport 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/leipzig_airport_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 150m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/leipzig_airport_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+}
+
+model_def : model.de_6e000
+{
+	model_desc: "/model2/landmark/de/leipzig_roundabout_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_roundabout_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_roundabout_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0b00f
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_memorial_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_memorial_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_memorial_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0x00d
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_congress_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_congress_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_congress_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_65001
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_railway_station_01_de.pmd"
+	name: "berlin railway station 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_railway_station_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_railway_station_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_65002
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_messe_tower_01_de.pmd"
+	name: "berlin messe tower 01 de"
+}
+
+model_def : model.6500j
+{
+	model_desc: "/model2/landmark/ro/hunedoara_train_station_01_bus.pmd"
+	name: "hunedoara train station 01 bus"
+
+	static_lod_path[]: "/model2/landmark/ro/hunedoara_train_station_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/ro/hunedoara_train_station_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_4y002
+{
+	model_desc: "/model2/landmark/de/berlin/generic_statues_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/generic_statues_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/generic_statues_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_5q002
+{
+	model_desc: "/model2/landmark/de/dresden_powerplant_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/dresden_powerplant_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 300m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/dresden_powerplant_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 300
+}
+
+model_def : model.de_0v00g
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_station_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_station_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0v00k
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_station_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_station_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0v00l
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_03_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_station_03_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_station_03_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0v00m
+{
+	model_desc: "/model2/landmark/de/leipzig_railway_station_04_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/leipzig_railway_station_04_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/leipzig_railway_station_04_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_6j001
+{
+	model_desc: "/model2/landmark/de/berlin/generic_statues_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/generic_statues_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/generic_statues_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_4h000
+{
+	model_desc: "/model2/landmark/de/bremen_billboard_01_de.pmd"
+	name: "bremen billboard 01 de"
+}
+
+model_def : model.de_1r005
+{
+	model_desc: "/model2/landmark/de/munich_stadium_01_de.pmd"
+	name: "munich stadium 01 de"
+}
+
+model_def : model.de_0t008
+{
+	model_desc: "/model2/landmark/de/leipzig_concert_hall_01_de.pmd"
+}
+
+model_def : model.de_4l008
+{
+	model_desc: "/model2/landmark/de/leipzig_sculpture_01_de.pmd"
+}
+
+model_def : model.de_4l007
+{
+	model_desc: "/model2/landmark/de/munich_sports_hall_01_de.pmd"
+}
+
+model_def : model.ia_2g004
+{
+	model_desc: "/model2/distribution/ia_pipes_knee_08.pmd"
+	name: "pipes knee 05 cdu ibe"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/distribution/ia_pipes_knee_08_lod1.pmd"
+	static_lod_name[0]: "LOD from 75m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/distribution/ia_pipes_knee_08_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+}
+
+model_def : model.de_4h001
+{
+	model_desc: "/model2/landmark/de/maxdorf_roundabout_01_de.pmd"
+	name: "maxdorf roundabout 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/maxdorf_roundabout_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/maxdorf_roundabout_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.de_4h002
+{
+	model_desc: "/model2/landmark/de/maxdorf_sculpture_01_de.pmd"
+	name: "maxdorf sculpture 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/maxdorf_sculpture_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/maxdorf_sculpture_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.de_4h003
+{
+	model_desc: "/model2/landmark/de/maxdorf_sculpture_02_de.pmd"
+	name: "maxdorf sculpture 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/maxdorf_sculpture_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 30m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/maxdorf_sculpture_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 30
+}
+
+model_def : model.de_4l00a
+{
+	model_desc: "/model2/props/country/hunting_stand_01_de.pmd"
+
+	static_lod_path[]: "/model2/props/country/hunting_stand_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/country/hunting_stand_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_5q005
+{
+	model_desc: "/model2/landmark/de/halle_entrance_sign_02_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/halle_entrance_sign_02_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/halle_entrance_sign_02_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_5q006
+{
+	model_desc: "/model2/landmark/de/halle_entrance_sign_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/halle_entrance_sign_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/halle_entrance_sign_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_0101e
+{
+	model_desc: "/model2/landmark/de/berlin/berlin_cathedral_01_de.pmd"
+
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_cathedral_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+	static_lod_path[]: "/model2/landmark/de/berlin/berlin_cathedral_01_de_lod2.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_cathedral_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/model2/landmark/de/berlin/berlin_cathedral_01_de_lod2.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.de_5r000
+{
+	model_desc: "/model2/landmark/de/leipzig_fountain_01_de.pmd"
+	name: "leipzig fountain 01 de"
+}
+
+model_def : model.de_3g003
+{
+	model_desc: "/model2/landmark/de/munich_car_museum_01_de.pmd"
+	name: "munich car museum 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_car_museum_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 150m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_car_museum_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 150
+}
+
+model_def : model.de_3g004
+{
+	model_desc: "/model2/landmark/de/munich_car_museum_02_de.pmd"
+	name: "munich car museum 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_car_museum_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_car_museum_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_3g005
+{
+	model_desc: "/model2/landmark/de/munich_car_tower_de.pmd"
+	name: "munich car tower de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_car_tower_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 350m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_car_tower_de_lod1.pmd"
+	dynamic_lod_dist[0]: 350
+}
+
+model_def : model.de_3g006
+{
+	model_desc: "/model2/landmark/de/munich_car_museum_bridge_de.pmd"
+	name: "munich car museum bridge de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_car_museum_bridge_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_car_museum_bridge_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_0q003
+{
+	model_desc: "/model2/landmark/de/munich_theatre_01_de.pmd"
+	name: "munich theatre 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_theatre_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_theatre_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0q004
+{
+	model_desc: "/model2/landmark/de/munich_bear_statue_de.pmd"
+	name: "munich bear statue de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_bear_statue_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_bear_statue_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_2m003
+{
+	model_desc: "/model2/landmark/de/mannheim_palace_01_de.pmd"
+	name: "mannheim palace 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/mannheim_palace_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/mannheim_palace_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.de_2m004
+{
+	model_desc: "/model2/landmark/de/mannheim_palace_02_de.pmd"
+	name: "mannheim palace 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/mannheim_palace_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 110m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/mannheim_palace_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 110
+}
+
+model_def : model.de_2m007
+{
+	model_desc: "/model2/landmark/de/mannheim_palace_03_de.pmd"
+	name: "mannheim palace 03 de"
+}
+
+model_def : model.de_0u003
+{
+	model_desc: "/model2/landmark/de/munich_church_03_de.pmd"
+	name: "munich church 03 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_church_03_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_church_03_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_0u005
+{
+	model_desc: "/model2/landmark/de/mannheim_train_station_01_de.pmd"
+	name: "mannheim train station 01 de"
+
+	static_lod_path[]: "/model2/landmark/de/mannheim_train_station_01_de_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/landmark/de/mannheim_train_station_01_de_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.de_12006
+{
+	model_desc: "/model2/landmark/de/munich_church_03_parish_de.pmd"
+	name: "munich church 03 parish de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_church_03_parish_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_church_03_parish_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_3m007
+{
+	model_desc: "/model2/landmark/de/munich_olympic_tower_de.pmd"
+	name: "munich olympic tower de"
+}
+
+model_def : model.de_30003
+{
+	model_desc: "/model2/landmark/de/munich_complex_tower_de.pmd"
+	name: "munich complex tower de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_complex_tower_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_complex_tower_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_30004
+{
+	model_desc: "/model2/landmark/de/munich_complex_02_de.pmd"
+	name: "munich complex 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_complex_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 180m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_complex_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 180
+}
+
+model_def : model.de_30005
+{
+	model_desc: "/model2/landmark/de/munich_complex_01_de.pmd"
+	name: "munich complex 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_complex_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 170m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_complex_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 170
+}
+
+model_def : model.de_32003
+{
+	model_desc: "/model2/landmark/de/munich_arc_de.pmd"
+	name: "munich arc de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_arc_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_arc_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_25008
+{
+	model_desc: "/model2/landmark/de/mannheim_bridge_01_de.pmd"
+	name: "mannheim bridge 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/mannheim_bridge_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/mannheim_bridge_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.de_0100f
+{
+	model_desc: "/model2/landmark/de/mannheim_bridge_02_de.pmd"
+	name: "mannheim bridge 02 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/mannheim_bridge_02_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/mannheim_bridge_02_de_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.de_0100h
+{
+	model_desc: "/model2/landmark/de/munich_angel_de.pmd"
+	name: "munich angel de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/de/munich_angel_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/de/munich_angel_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.de_0k005
+{
+	model_desc: "/model2/landmark/de/mannheim_church_01_de.pmd"
+	name: "mannheim church 01 de"
+}
+
+model_def : model.poc_01019
+{
+	model_desc: "/model2/building/industry/utility_building_01_poc.pmd"
+	name: "utility building 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/industry/utility_building_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 75m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/industry/utility_building_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+}
+
+model_def : model.poc_0101a
+{
+	model_desc: "/model2/building/administration/admin_12_poc.pmd"
+	name: "admin 12 poc"
+
+	static_lod_path[]: "/model2/building/administration/admin_12_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/administration/admin_12_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.poc_25002
+{
+	model_desc: "/model2/building/parking/village_garage_03_poc.pmd"
+	name: "village garage 03 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/parking/village_garage_03_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/parking/village_garage_03_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.poc_0k004
+{
+	model_desc: "/model2/building/ruined/ruined_shack_01_poc.pmd"
+	name: "ruined shack 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/ruined/ruined_shack_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/ruined/ruined_shack_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.poc_2m004
+{
+	model_desc: "/model2/building/parking/village_garage_02_poc.pmd"
+	name: "village garage 02 poc"
+
+	static_lod_path[]: "/model2/building/parking/village_garage_02_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/building/parking/village_garage_02_poc_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.poc_0k55p
+{
+	model_desc: "/model2/building/flats/flats_poc/flats_close_18_poc.pmd"
+	name: "flats close 18 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_poc/flats_close_18_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_poc/flats_close_18_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.poc_1r001
+{
+	model_desc: "/model2/building/parking/village_garage_06_poc.pmd"
+	name: "village garage 06 poc"
+
+	static_lod_path[]: "/model2/building/parking/village_garage_06_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 90m"
+
+	dynamic_lod_desc[]: "/model2/building/parking/village_garage_06_poc_lod1.pmd"
+	dynamic_lod_dist[]: 90
+}
+
+model_def : model.poc_4y001
+{
+	model_desc: "/model2/building/flats/flats_poc/flats_close_07_poc.pmd"
+	name: "flats close 07 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_poc/flats_close_07_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_poc/flats_close_07_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.poc_4x002
+{
+	model_desc: "/model2/building/flats/flats_poc/flats_close_17_poc.pmd"
+	name: "flats close 17 poc"
+
+	static_lod_path[]: "/model2/building/flats/flats_poc/flats_close_17_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 180m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/flats_poc/flats_close_17_poc_lod1.pmd"
+	dynamic_lod_dist[]: 180
+}
+
+model_def : model.poc_3200i
+{
+	model_desc: "/model2/building/administration/admin_11_poc.pmd"
+	name: "admin 11 poc"
+
+	static_lod_path[]: "/model2/building/administration/admin_11_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/administration/admin_11_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.poc_5s003
+{
+	model_desc: "/model2/props/street/concrete_manhole_01_poc.pmd"
+
+	static_lod_path[]: "/model2/props/street/concrete_manhole_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/model2/props/street/concrete_manhole_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.poc_0k00d
+{
+	model_desc: "/model2/building/flats/flats_poc/flats_close_14_poc.pmd"
+	name: "flats close 14 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_poc/flats_close_14_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_poc/flats_close_14_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.poc_0100j
+{
+	model_desc: "/model2/building/shop/mall_tower_01_poc.pmd"
+	name: "mall tower 01 poc"
+
+	static_lod_path[]: "/model2/building/shop/mall_tower_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/shop/mall_tower_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.rus_0m007
+{
+	model_desc: "/model2/building/flats/block_of_flats_07_rus.pmd"
+	name: "block of flats 07 rus"
+
+	color_variant: 7
+	color_variant[0]: "Cyan | *_c1 : 110,138,175 | *_c2 : 222,218,196 | *_c3 : 171,233,238"
+	color_variant[1]: "Red | *_c1 : 158,100,77 | *_c2 : 182,174,161 | *_c3 : 151,96,74 | *_c4 : 211,202,187"
+	color_variant[2]: "Beige | *_c1 : 200,192,183 | *_c2 : 218,210,207 | *_c3 : 255,244,231 | *_c4 : 255,244,231"
+	color_variant[3]: "Orange/Brown | *_c1 : 210,202,184 | *_c2 : 199,154,139 | *_c3 : 199,154,139 | *_c4 : 255,244,216"
+	color_variant[4]: "Gray/Brown | *_c1 : 210,209,205 | *_c2 : 130,100,96 | *_c3 : 255,255,255 | *_c4 : 255,219,212"
+	color_variant[5]: "White/Yellow | *_c1 : 210,210,210 | *_c2 : 205,181,150 | *_c3 : 255,255,255 | *_c4 : 255,255,255"
+	color_variant[6]: "Gray | *_c1 : 180,180,180 | *_c2 : 210,210,210 | *_c3 : 255,255,255 | *_c4 : 255,241,220"
+
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/flats/block_of_flats_07_rus_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+	static_lod_path[1]: "/model2/building/flats/block_of_flats_07_rus_lod2.pmd"
+	static_lod_name[1]: "LOD from 120m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/flats/block_of_flats_07_rus_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/building/flats/block_of_flats_07_rus_lod2.pmd"
+	dynamic_lod_dist[1]: 120
+}
+
+model_def : model.rus_0v00h
+{
+	model_desc: "/model2/landmark/oryol_brick_silo_01_rus.pmd"
+	name: "oryol brick silo 01 rus"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/oryol_brick_silo_01_rus_lod1.pmd"
+	static_lod_name[0]: "LOD from 90m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/oryol_brick_silo_01_rus_lod1.pmd"
+	dynamic_lod_dist[0]: 90
+}
+
+model_def : model.rus_0700y
+{
+	model_desc: "/model2/landmark/kaluga_fountain_tornado_rus.pmd"
+	name: "kaluga fountain tornado rus"
+	drop_sun_shadows: 1
+}
+
+model_def : model.lux_0t002
+{
+	model_desc: "/model2/building/village_mid/village_nl/village_mid_05_nl_lux.pmd"
+	name: "village mid 05 nl lux"
+}
+
+model_def : model.lux_11000
+{
+	model_desc: "/model2/gates/gate_decorative_01_lux.pmd"
+	name: "gate decorative 01 lux"
+
+	static_lod_path[]: "/model2/gates/gate_decorative_01_lux_lod1.pmd"
+	static_lod_name[]: "LOD from 90m"
+
+	dynamic_lod_desc[]: "/model2/gates/gate_decorative_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 90
+}
+
+model_def : model.lux_0m001
+{
+	model_desc: "/model2/gates/gate_decorative_03_lux.pmd"
+
+	static_lod_path[]: "/model2/gates/gate_decorative_03_lux_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/gates/gate_decorative_03_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_47001
+{
+	model_desc: "/model2/props/street/lamp_industrial_01_gr.pmd"
+	name: "lamp industrial 01 gr"
+
+	static_lod_path[]: "/model2/props/street/lamp_industrial_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/props/street/lamp_industrial_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.greece_4l000
+{
+	model_desc: "/model2/props/street/firehose_box_01_gr.pmd"
+	name: "firehose box 01 gr"
+
+	static_lod_path[]: "/model2/props/street/firehose_box_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/props/street/firehose_box_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.greece_4e006
+{
+	model_desc: "/model2/props/street/lamp_standalone_01_gr.pmd"
+	name: "lamp standalone 01 gr"
+
+	static_lod_path[]: "/model2/props/street/lamp_standalone_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/props/street/lamp_standalone_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.greece_4f00a
+{
+	model_desc: "/model2/gas_station/gas_arrow_01_gr.pmd"
+	name: "gas arrow 01 gr"
+
+	static_lod_path[]: "/model2/gas_station/gas_arrow_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 75m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_arrow_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 75
+}
+
+model_def : model.greece_48000
+{
+	model_desc: "/model2/gas_station/gas_entrance_sign_medas_gr.pmd"
+	name: "gas entrance sign medas gr"
+
+	static_lod_path[]: "/model2/gas_station/gas_entrance_sign_medas_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_entrance_sign_medas_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_12004
+{
+	model_desc: "/model2/building/village_mid/village_gr/village_mid_04_gr.pmd"
+	name: "village mid 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_mid/village_gr/village_mid_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_mid/village_gr/village_mid_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k002
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_04_gr.pmd"
+	name: "village close 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00a
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_old_01_gr.pmd"
+	name: "village close old 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_old_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_old_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00c
+{
+	model_desc: "/model2/building/shop/car_service_01_gr.pmd"
+	name: "car service 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/car_service_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/car_service_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00e
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_25_gr.pmd"
+	name: "village close 25 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_25_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_25_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00i
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_old_02_gr.pmd"
+	name: "village close old 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_old_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_old_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00k
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_30_gr.pmd"
+	name: "village close 30 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_30_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_30_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k00q
+{
+	model_desc: "/model2/building/shop/restaurant_05_gr.pmd"
+	name: "restaurant 05 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/restaurant_05_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/restaurant_05_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0k00r
+{
+	model_desc: "/model2/props/street/chapel_small_01_gr.pmd"
+	name: "chapel small 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/street/chapel_small_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/chapel_small_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+model_def : model.greece_0k010
+{
+	model_desc: "/model2/building/shop/restaurant_07_gr.pmd"
+	name: "restaurant 07 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/restaurant_07_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/restaurant_07_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0k015
+{
+	model_desc: "/model2/landmark/gr/border_medzitlija_duty_free_shop_01_gr.pmd"
+	name: "border medzitlija duty free shop 01 gr"
+
+	static_lod_path[]: "/model2/landmark/gr/border_medzitlija_duty_free_shop_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_medzitlija_duty_free_shop_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.greece_32003
+{
+	model_desc: "/model2/building/flats/flats_gr/flats_close_10_gr.pmd"
+	name: "flats close 10 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_gr/flats_close_10_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_gr/flats_close_10_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_32005
+{
+	model_desc: "/model2/building/administration/admin_08_gr.pmd"
+	name: "admin 08 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/administration/admin_08_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/administration/admin_08_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_01001
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_07_gr.pmd"
+	name: "village close 07 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_07_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_07_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0100b
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_29_gr.pmd"
+	name: "village close 29 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_29_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_29_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0100i
+{
+	model_desc: "/model2/farm/barn_01_gr.pmd"
+	name: "barn 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/farm/barn_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/farm/barn_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0100k
+{
+	model_desc: "/model2/props/street/trash_bin_small_01_gr.pmd"
+	name: "trash bin small 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/street/trash_bin_small_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/trash_bin_small_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_0100n
+{
+	model_desc: "/model2/props/street/chapel_small_02_gr.pmd"
+	name: "chapel small 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/street/chapel_small_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/chapel_small_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+model_def : model.greece_0100r
+{
+	model_desc: "/model2/gates/gate_village_02_gr.pmd"
+	name: "gate village 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/gates/gate_village_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/gates/gate_village_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+model_def : model.greece_11001
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_08_gr.pmd"
+	name: "village close 08 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_08_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 95m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_08_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 95
+}
+
+model_def : model.greece_11003
+{
+	model_desc: "/model2/fences/gate_01_gr.pmd"
+	name: "gate 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/fences/gate_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/fences/gate_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_25002
+{
+	model_desc: "/model2/building/logistic/warehouse_open_01_gr.pmd"
+	name: "warehouse open 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/logistic/warehouse_open_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/logistic/warehouse_open_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.greece_25007
+{
+	model_desc: "/model2/building/village_mid/village_gr/village_mid_05_gr.pmd"
+	name: "village mid 05 gr"
+}
+
+model_def : model.greece_25009
+{
+	model_desc: "/model2/building/flats/flats_gr/flats_close_25_gr.pmd"
+	name: "flats close 25 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_gr/flats_close_25_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_gr/flats_close_25_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_2500c
+{
+	model_desc: "/model2/building/administration/admin_10_gr.pmd"
+	name: "admin 10 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/administration/admin_10_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/administration/admin_10_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_4o001
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_23_gr.pmd"
+	name: "village close 23 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_23_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_23_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_4o002
+{
+	model_desc: "/model2/building/logistic/gatehouse_02_gr.pmd"
+	name: "gatehouse 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/logistic/gatehouse_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/logistic/gatehouse_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_3p001
+{
+	model_desc: "/model2/building/shop/flats_close_04_gr.pmd"
+	name: "flats close 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/flats_close_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/flats_close_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_3p002
+{
+	model_desc: "/model2/building/shop/restaurant_04_gr.pmd"
+	name: "restaurant 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/restaurant_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/restaurant_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_3p004
+{
+	model_desc: "/model2/building/shop/shop_13_gr.pmd"
+	name: "shop 13 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/shop_13_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/shop_13_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_4e004
+{
+	model_desc: "/model2/gas_station/vapor_vents_01_gr.pmd"
+	name: "vapor vents 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/gas_station/vapor_vents_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 30m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/gas_station/vapor_vents_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 30
+}
+
+model_def : model.greece_31001
+{
+	model_desc: "/model2/building/shop/shop_small_02_gr.pmd"
+	name: "shop small 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/shop_small_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/shop_small_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0p001
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_14_gr.pmd"
+	name: "village close 14 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_14_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_14_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0u005
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_37_gr.pmd"
+	name: "village close 37 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_37_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_37_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_4g003
+{
+	model_desc: "/prefab2/border_crossing/gr/border_promachonas_main_building_01_gr.pmd"
+	name: "border promachonas main building 01 gr"
+
+	static_lod_path[]: "/prefab2/border_crossing/gr/border_promachonas_main_building_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/prefab2/border_crossing/gr/border_promachonas_main_building_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_4g004
+{
+	model_desc: "/prefab2/border_crossing/gr/generic/border_weigh_station_01_gr.pmd"
+	name: "border weigh station 01 gr"
+
+	static_lod_path[]: "/prefab2/border_crossing/gr/generic/border_weigh_station_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/prefab2/border_crossing/gr/generic/border_weigh_station_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_4g005
+{
+	model_desc: "/prefab2/border_crossing/mk/border_medzitlija_main_building_01_mk_gr.pmd"
+	name: "border medzitlija main building 01 mk gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/prefab2/border_crossing/mk/border_medzitlija_main_building_01_mk_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 175m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/prefab2/border_crossing/mk/border_medzitlija_main_building_01_mk_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 175
+}
+
+model_def : model.greece_3n001
+{
+	model_desc: "/model2/building/administration/admin_01_gr.pmd"
+	name: "admin 01 gr"
+
+	static_lod_path[]: "/model2/building/administration/admin_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/administration/admin_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_3n002
+{
+	model_desc: "/model2/building/ruined/ruined_garage_01_gr.pmd"
+	name: "ruined garage 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/ruined/ruined_garage_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/ruined/ruined_garage_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_0v001
+{
+	model_desc: "/model2/building/logistic/logistic_small_01_gr.pmd"
+	name: "logistic small 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/logistic/logistic_small_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/logistic/logistic_small_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_4o004
+{
+	model_desc: "/model2/props/street/advert/gr/advert_oneside_01_gr.pmd"
+	name: "advert oneside 01 gr"
+}
+
+model_def : model.greece_4o005
+{
+	model_desc: "/model2/props/street/advert/gr/advert_tall_01_gr.pmd"
+	name: "advert tall 01 gr"
+}
+
+model_def : model.greece_4o008
+{
+	model_desc: "/model2/landmark/gr/llogara_smile_bunker_01_gr.pmd"
+	name: "llogara smile bunker 01 gr"
+
+	static_lod_path[]: "/model2/landmark/gr/llogara_smile_bunker_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/llogara_smile_bunker_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_5k003
+{
+	model_desc: "/model2/building/ruined/ruined_house_05_gr.pmd"
+	name: "ruined house 05 gr"
+
+	static_lod_path[]: "/model2/building/ruined/ruined_house_05_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 10m"
+
+	dynamic_lod_desc[]: "/model2/building/ruined/ruined_house_05_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_4y002
+{
+	model_desc: "/model2/building/ruined/ruined_house_04_gr.pmd"
+	name: "ruined house 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/ruined/ruined_house_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/ruined/ruined_house_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_4y005
+{
+	model_desc: "/model2/props/street/market_stall_01_gr.pmd"
+	name: "market stall 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/street/market_stall_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/market_stall_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_4x003
+{
+	model_desc: "/model2/building/ruined/ruined_house_03_gr.pmd"
+	name: "ruined house 03 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/ruined/ruined_house_03_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/ruined/ruined_house_03_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_5f00c
+{
+	model_desc: "/model2/props/street/summerhouse_01_gr.pmd"
+	name: "summerhouse 01 gr"
+
+	static_lod_path[]: "/model2/props/street/summerhouse_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/props/street/summerhouse_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.greece_2l000
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_33_gr.pmd"
+	name: "village close 33 gr"
+
+	static_lod_path[]: "/model2/building/village_close/village_gr/village_close_33_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/village_close/village_gr/village_close_33_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_13001
+{
+	model_desc: "/model2/fences/gate_metal_01_gr.pmd"
+	name: "gate metal 01 gr"
+
+	static_lod_path[]: "/model2/fences/gate_metal_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/fences/gate_metal_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_13003
+{
+	model_desc: "/model2/gates/gate_metal_02_gr.pmd"
+	name: "gate metal 02 gr"
+
+	static_lod_path[]: "/model2/gates/gate_metal_02_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/gates/gate_metal_02_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_3n004
+{
+	model_desc: "/model2/props/street/trash_bin_04_gr.pmd"
+	name: "trash bin 04 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/props/street/trash_bin_04_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/props/street/trash_bin_04_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.greece_4u001
+{
+	model_desc: "/model2/building/ruined/ruined_house_02_gr.pmd"
+	name: "ruined house 02 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/ruined/ruined_house_02_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/ruined/ruined_house_02_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_4l001
+{
+	model_desc: "/model2/props/street/advert/gr/shop_advert_01_gr.pmd"
+	name: "shop advert 01 gr"
+}
+
+model_def : model.greece_4l003
+{
+	model_desc: "/model2/props/street/advert/gr/advert_big_02_gr.pmd"
+	name: "advert big 02 gr"
+}
+
+model_def : model.greece_4l004
+{
+	model_desc: "/model2/props/street/advert/gr/advert_big_03_gr.pmd"
+	name: "advert big 03 gr"
+}
+
+model_def : model.greece_4f005
+{
+	model_desc: "/model2/props/street/advert/gr/advert_big_07_gr.pmd"
+	name: "advert big 07 gr"
+}
+
+model_def : model.greece_4f007
+{
+	model_desc: "/model2/props/street/advert/gr/advert_big_09_gr.pmd"
+	name: "advert big 09 gr"
+}
+
+model_def : model.greece_5j000
+{
+	model_desc: "/model2/building/bus_stops/bus_stop_02_gr.pmd"
+
+	static_lod_path[]: "/model2/building/bus_stops/bus_stop_02_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/building/bus_stops/bus_stop_02_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.greece_5j003
+{
+	model_desc: "/model2/landmark/gr/border_kulata_arcade_01_gr.pmd"
+	name: "border kulata arcade 01 gr"
+
+	static_lod_path[]: "/model2/landmark/gr/border_kulata_arcade_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_kulata_arcade_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.greece_3f001
+{
+	model_desc: "/model2/building/village_close/village_gr/village_close_26_gr.pmd"
+	name: "village close 26 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_gr/village_close_26_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_gr/village_close_26_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_1r003
+{
+	model_desc: "/model2/landmark/gr/border_kulata_arcade_totem_01_gr.pmd"
+	name: "border kulata arcade totem 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/gr/border_kulata_arcade_totem_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/gr/border_kulata_arcade_totem_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_1r004
+{
+	model_desc: "/model2/building/shop/gas_shop_01_gr.pmd"
+	name: "gas shop 01 gr"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/gas_shop_01_gr_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/gas_shop_01_gr_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.greece_1r008
+{
+	model_desc: "/model2/landmark/gr/evzoni_welcome_sign_gr.pmd"
+	name: "evzoni welcome sign gr"
+}
+
+model_def : model.greece_5w001
+{
+	model_desc: "/model2/building/village_mid/village_gr/village_close_36_gr.pmd"
+	name: "village close 36 gr"
+
+	static_lod_path[]: "/model2/building/village_mid/village_gr/village_close_36_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/village_mid/village_gr/village_close_36_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_0m004
+{
+	model_desc: "/model2/landmark/gr/border_statue_01_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/border_statue_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_statue_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.greece_66002
+{
+	model_desc: "/model2/landmark/gr/border_medzitlija_booth_01_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/border_medzitlija_booth_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_medzitlija_booth_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.greece_0v003
+{
+	model_desc: "/model2/tunnel/tunnel_entrance_02_gr.pmd"
+
+	static_lod_path[]: "/model2/tunnel/tunnel_entrance_02_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/tunnel/tunnel_entrance_02_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_0o000
+{
+	model_desc: "/model2/landmark/gr/border_medzitlija_admin_01_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/border_medzitlija_admin_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_medzitlija_admin_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_0x001
+{
+	model_desc: "/model2/landmark/gr/border_bogorodica_arcade_01_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/border_bogorodica_arcade_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 140m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/border_bogorodica_arcade_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 140
+}
+
+model_def : model.greece_4f000
+{
+	model_desc: "/model2/props/street/atm_01_gr.pmd"
+
+	static_lod_path[]: "/model2/props/street/atm_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 65m"
+
+	dynamic_lod_desc[]: "/model2/props/street/atm_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 65
+}
+
+model_def : model.greece_66003
+{
+	model_desc: "/model2/props/street/bench_02_gr.pmd"
+
+	static_lod_path[]: "/model2/props/street/bench_02_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/model2/props/street/bench_02_gr_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.greece_47000
+{
+	model_desc: "/model2/gas_station/gas_fuel_insertion_01_gr.pmd"
+	name: "gas fuel insertion 01 gr"
+
+	static_lod_path[]: "/model2/gas_station/gas_fuel_insertion_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_fuel_insertion_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.greece_6e001
+{
+	model_desc: "/model2/props/storage/storage_boxes_01_gr.pmd"
+
+	static_lod_path[]: "/model2/props/storage/storage_boxes_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+	static_lod_path[]: "/model2/props/storage/storage_boxes_01_gr_lod2.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/props/storage/storage_boxes_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 30
+	dynamic_lod_desc[]: "/model2/props/storage/storage_boxes_01_gr_lod2.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+model_def : model.greece_2e001
+{
+	model_desc: "/model2/gates/gate_05_gr.pmd"
+
+	static_lod_path[]: "/model2/gates/gate_05_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/gates/gate_05_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_3w001
+{
+	model_desc: "/model2/props/street/emergency_phone_02_gr.pmd"
+	name: "emergency phone 02 gr"
+
+	static_lod_path[]: "/model2/props/street/emergency_phone_02_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/street/emergency_phone_02_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_3w002
+{
+	model_desc: "/model2/props/street/emergency_phone_01_gr.pmd"
+	name: "emergency phone 01 gr"
+
+	static_lod_path[]: "/model2/props/street/emergency_phone_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/street/emergency_phone_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_6e002
+{
+	model_desc: "/model2/props/garbage/scrap_metal_piles_01_gr.pmd"
+
+	static_lod_path[]: "/model2/props/garbage/scrap_metal_piles_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/props/garbage/scrap_metal_piles_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.greece_01018
+{
+	model_desc: "/model2/landmark/gr/ipsala_roundabout_monument_01_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/ipsala_roundabout_monument_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/ipsala_roundabout_monument_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+model_def : model.greece_11004
+{
+	model_desc: "/model2/landmark/gr/ipsala_city_gate_01_gr.pmd"
+	name: "ipsala city gate 01 gr"
+
+	static_lod_path[]: "/model2/landmark/gr/ipsala_city_gate_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/ipsala_city_gate_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_47003
+{
+	model_desc: "/model2/gates/industrial_gate_01_gr.pmd"
+	name: "industrial gate 01 gr"
+
+	static_lod_path[]: "/model2/gates/industrial_gate_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/gates/industrial_gate_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.greece_6i000
+{
+	model_desc: "/model2/building/church/promachonas_church_01_gr.pmd"
+	name: "promachonas church 01 gr"
+
+	static_lod_path[]: "/model2/building/church/promachonas_church_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/church/promachonas_church_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.greece_2m00e
+{
+	model_desc: "/model2/gates/roof_gate_01_gr.pmd"
+}
+
+model_def : model.greece_2500e
+{
+	model_desc: "/model2/landmark/gr/niki_church_gr.pmd"
+
+	static_lod_path[]: "/model2/landmark/gr/niki_church_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 200m"
+
+	dynamic_lod_desc[]: "/model2/landmark/gr/niki_church_gr_lod1.pmd"
+	dynamic_lod_dist[]: 200
+}
+
+model_def : model.greece_1n002
+{
+	model_desc: "/prefab2/depot/marble_processing_factory/marble_block_01_gr.pmd"
+	name: "marble block 01 gr"
+
+	static_lod_path[]: "/prefab2/depot/marble_processing_factory/marble_block_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 35m"
+	static_lod_path[]: "/prefab2/depot/marble_processing_factory/marble_block_01_gr_lod2.pmd"
+	static_lod_name[]: "LOD from 75m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/marble_processing_factory/marble_block_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 35
+	dynamic_lod_desc[]: "/prefab2/depot/marble_processing_factory/marble_block_01_gr_lod2.pmd"
+	dynamic_lod_dist[]: 75
+}
+
+model_def : model.greece_1n003
+{
+	model_desc: "/prefab2/depot/marble_processing_factory/marble_plates_01_gr.pmd"
+	name: "marble plates 01 gr"
+
+	static_lod_path[]: "/prefab2/depot/marble_processing_factory/marble_plates_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 30m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/marble_processing_factory/marble_plates_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 30
+}
+
+model_def : model.greece_27000
+{
+	model_desc: "/prefab2/depot/marble_processing_factory/marble_block_group_01_gr.pmd"
+
+	static_lod_path[]: "/prefab2/depot/marble_processing_factory/marble_block_group_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 35m"
+	static_lod_path[]: "/prefab2/depot/marble_processing_factory/marble_block_group_01_gr_lod2.pmd"
+	static_lod_name[]: "LOD from 75m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/marble_processing_factory/marble_block_group_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 35
+	dynamic_lod_desc[]: "/prefab2/depot/marble_processing_factory/marble_block_group_01_gr_lod2.pmd"
+	dynamic_lod_dist[]: 75
+}
+
+model_def : model.ia_2g003
+{
+	model_desc: "/model2/distribution/ia_pipes_knee_07.pmd"
+	name: "pipes knee 04 cdu ibe"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "//model2/distribution/ia_pipes_knee_07_lod1.pmd"
+	static_lod_name[0]: "LOD from 75m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/distribution/ia_pipes_knee_07_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+}
+
+model_def : model.blkw_2f001
+{
+	model_desc: "/model2/building/flats/flats_al/block_of_flats_06_al_blkw.pmd"
+	name: "block of flats 06 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_al/block_of_flats_06_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_al/block_of_flats_06_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_0v00n
+{
+	model_desc: "/model2/landmark/mk/prilep_chapel_01_blkw.pmd"
+	name: "prilep chapel 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/mk/prilep_chapel_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/mk/prilep_chapel_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.blkw_35007
+{
+	model_desc: "/model2/building/village_close/village_hr/village_close_01_hr_blkw.pmd"
+	name: "village close 01 hr blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_hr/village_close_01_hr_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_hr/village_close_01_hr_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_30006
+{
+	model_desc: "/model2/building/church/mosque_01_blkw.pmd"
+	name: "mosque 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/church/mosque_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/church/mosque_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_30007
+{
+	model_desc: "/model2/building/church/mosque_minaret_01_blkw.pmd"
+	name: "mosque minaret 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/church/mosque_minaret_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/church/mosque_minaret_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_01003
+{
+	model_desc: "/model2/landmark/mk/bitola/bitola_roundabout_shield_blkw.pmd"
+	name: "bitola roundabout shield blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/mk/bitola/bitola_roundabout_shield_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/mk/bitola/bitola_roundabout_shield_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_0b001
+{
+	model_desc: "/model2/building/flats/flats_al/block_of_flats_05_al_blkw.pmd"
+	name: "block of flats 05 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_al/block_of_flats_05_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_al/block_of_flats_05_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2t001
+{
+	model_desc: "/model2/props/street/chapel_small_02_mk_blkw.pmd"
+	name: "chapel small 02 mk blkw"
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_3m00k
+{
+	model_desc: "/model2/props/street/advert/mk/advert_big_03_mk_blkw.pmd"
+	name: "advert big 03 mk blkw"
+}
+
+model_def : model.blkw_07001
+{
+	model_desc: "/model2/landmark/mk/bitola/bitola_church_02_blkw.pmd"
+	name: "bitola church 02 blkw"
+}
+
+model_def : model.blkw_3r001
+{
+	model_desc: "/model2/landmark/mk/bitola/bitola_roundabout_sphere_blkw.pmd"
+	name: "bitola roundabout sphere blkw"
+}
+
+model_def : model.blkw_3r006
+{
+	model_desc: "/model2/landmark/hr/dubrovnik_bridge_01_blkw.pmd"
+	name: "dubrovnik bridge 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/hr/dubrovnik_bridge_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/hr/dubrovnik_bridge_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_3p001
+{
+	model_desc: "/model2/landmark/mk/bitola/bitola_church_01_blkw.pmd"
+	name: "bitola church 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/mk/bitola/bitola_church_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/mk/bitola/bitola_church_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_1r005
+{
+	model_desc: "/model2/props/street/advert/mk/restaurant_advert_01_mk_blkw.pmd"
+	name: "restaurant advert 01 mk blkw"
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_1r00m
+{
+	model_desc: "/model2/props/street/advert/mk/advert_big_01_mk_blkw.pmd"
+	name: "advert big 01 mk blkw"
+}
+
+model_def : model.blkw_1r00t
+{
+	model_desc: "/model2/props/street/advert/ba/advert_big_03_ba_blkw.pmd"
+	name: "advert big 03 ba blkw"
+}
+
+model_def : model.blkw_1r00w
+{
+	model_desc: "/model2/props/street/advert/ba/advert_tall_03_ba_blkw.pmd"
+	name: "advert tall 03 ba blkw"
+}
+
+model_def : model.blkw_1r010
+{
+	model_desc: "/model2/building/church/mosque_minaret_02_blkw.pmd"
+	name: "mosque minaret 02 blkw"
+
+	static_lod_path[]: "/model2/building/church/mosque_minaret_02_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/church/mosque_minaret_02_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.blkw_43002
+{
+	model_desc: "/model2/props/street/advert/ba/advert_billboard_ba_01_blkw.pmd"
+	name: "advert billboard ba 01 blkw"
+}
+
+model_def : model.blkw_1r018
+{
+	model_desc: "/model2/building/logistic/helipad_01_blkw.pmd"
+	name: "helipad 01 blkw"
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_0r001
+{
+	model_desc: "/model2/building/flats/flats_ba/block_of_flats_03_ba_blkw.pmd"
+	name: "block of flats 03 ba blkw"
+
+	static_lod_path[]: "/model2/building/flats/flats_ba/block_of_flats_03_ba_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 80m"
+
+	dynamic_lod_desc[]: "/model2/building/flats/flats_ba/block_of_flats_03_ba_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 80
+}
+
+model_def : model.ibe_1000a
+{
+	model_desc: "/model2/building/ruined/round_tower_ibe.pmd"
+	name: "round tower ibe"
+
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/ruined/round_tower_ibe_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+	static_lod_path[1]: "/model2/building/ruined/round_tower_ibe_lod2.pmd"
+	static_lod_name[1]: "LOD from 160m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/ruined/round_tower_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+	dynamic_lod_desc[1]: "/model2/building/ruined/round_tower_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 160
+}
+
+model_def : model.greece_6e000
+{
+	model_desc: "/model2/props/garbage/garbage_generic_01_gr.pmd"
+
+	static_lod_path[]: "/model2/props/garbage/garbage_generic_01_gr_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+	static_lod_path[]: "/model2/props/garbage/garbage_generic_01_gr_lod2.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/props/garbage/garbage_generic_01_gr_lod1.pmd"
+	dynamic_lod_dist[]: 60
+	dynamic_lod_desc[]: "/model2/props/garbage/garbage_generic_01_gr_lod2.pmd"
+	dynamic_lod_dist[]: 150
+	drop_sun_shadows: 2
+}
+
+model_def : model.01003
+{
+	model_desc: "/model2/landmark/es/ciudad_roundabout_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/es/ciudad_roundabout_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/es/ciudad_roundabout_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.01002
+{
+	model_desc: "/model2/landmark/es/acoruna_roundabout_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/es/acoruna_roundabout_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/es/acoruna_roundabout_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.blkw_3200l
+{
+	model_desc: "/model2/building/village_close/village_al/village_close_10_al_blkw.pmd"
+	name: "village close 10 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_al/village_close_10_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_al/village_close_10_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2f002
+{
+	model_desc: "/model2/building/flats/flats_al/block_of_flats_02_al_blkw.pmd"
+	name: "block of flats 02 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_al/block_of_flats_02_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_al/block_of_flats_02_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2f004
+{
+	model_desc: "/model2/building/village_close/village_al/village_close_06_al_blkw.pmd"
+	name: "village close 06 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_al/village_close_06_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_al/village_close_06_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2f008
+{
+	model_desc: "/model2/building/flats/flats_al/block_of_flats_01_al_blkw.pmd"
+	name: "block of flats 01 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_al/block_of_flats_01_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_al/block_of_flats_01_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2f00f
+{
+	model_desc: "/model2/building/hotel/hotel_06_blkw.pmd"
+	name: "hotel 06 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/hotel/hotel_06_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/hotel/hotel_06_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_0u00b
+{
+	model_desc: "/model2/bridge/footbridge_03_blkw.pmd"
+	name: "footbridge 03 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/bridge/footbridge_03_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/bridge/footbridge_03_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.blkw_0u00f
+{
+	model_desc: "/model2/building/village_close/village_al/village_close_11_al_blkw.pmd"
+	name: "village close 11 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_al/village_close_11_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 80m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_al/village_close_11_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 80
+}
+
+model_def : model.blkw_3000v
+{
+	model_desc: "/model2/building/village_mid/me/village_mid_01_me_blkw.pmd"
+	name: "village mid 01 me blkw"
+}
+
+model_def : model.blkw_01009
+{
+	model_desc: "/model2/landmark/hr/split_fort_tower_blkw.pmd"
+	name: "split fort tower blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/hr/split_fort_tower_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/hr/split_fort_tower_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_01012
+{
+	model_desc: "/model2/landmark/ba/banjaluka_fountain_01_blkw.pmd"
+	name: "banjaluka fountain 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/ba/banjaluka_fountain_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/ba/banjaluka_fountain_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_3f000
+{
+	model_desc: "/model2/building/bus_stops/bus_stop_old_01_blkw.pmd"
+	name: "bus stop old 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/bus_stops/bus_stop_old_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 75m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/bus_stops/bus_stop_old_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 75
+}
+
+model_def : model.blkw_0b003
+{
+	model_desc: "/model2/building/village_close/village_al/village_close_03_al_blkw.pmd"
+	name: "village close 03 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_al/village_close_03_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_al/village_close_03_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_0b00d
+{
+	model_desc: "/model2/building/flats/flats_al/block_of_flats_09_al_blkw.pmd"
+	name: "block of flats 09 al blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/flats_al/block_of_flats_09_al_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_al/block_of_flats_09_al_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_2t002
+{
+	model_desc: "/model2/props/street/chapel_small_01_mk_blkw.pmd"
+	name: "chapel small 01 mk blkw"
+	drop_sun_shadows: 1
+}
+
+
+
+model_def : model.blkw_1e001
+{
+	model_desc: "/model2/building/flats/block_of_flats_05_blkw.pmd"
+	name: "block of flats 05 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/flats/block_of_flats_05_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/flats/block_of_flats_05_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_1r002
+{
+	model_desc: "/model2/props/street/advert/al/restaurant_advert_01_al_blkw.pmd"
+	name: "restaurant advert 01 al blkw"
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_0t001
+{
+	model_desc: "/model2/landmark/al/durres_church_01_blkw.pmd"
+	name: "durres church 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/landmark/al/durres_church_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 120m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/landmark/al/durres_church_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 120
+}
+
+model_def : model.blkw_1r00o
+{
+	model_desc: "/model2/props/street/advert/rs/advert_big_01_rs_blkw.pmd"
+	name: "advert big 01 rs blkw"
+}
+
+model_def : model.blkw_1r011
+{
+	model_desc: "/model2/building/church/mosque_02_blkw.pmd"
+	name: "mosque 02 blkw"
+
+	static_lod_path[]: "/model2/building/church/mosque_02_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/church/mosque_02_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.blkw_1200z
+{
+	model_desc: "/prefab2/border_crossing/xk/generic/border_gate_barrier_01_xk_blkw.pmd"
+	name: "border gate barrier 01 xk blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/prefab2/border_crossing/xk/generic/border_gate_barrier_01_xk_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/prefab2/border_crossing/xk/generic/border_gate_barrier_01_xk_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+}
+
+model_def : model.blkw_2m00d
+{
+	model_desc: "/model2/building/village_close/village_xk/village_close_01_xk_blkw.pmd"
+	name: "village close 01 xk blkw"
+
+	static_lod_path[]: "/model2/building/village_close/village_xk/village_close_01_xk_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/village_close/village_xk/village_close_01_xk_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.blkw_2m00o
+{
+	model_desc: "/model2/props/street/advert/al/advert_big_04_al_blkw.pmd"
+	name: "advert big 04 al blkw"
+}
+
+model_def : model.blkw_2m00p
+{
+	model_desc: "/model2/props/street/advert/al/advert_tall_01_al_blkw.pmd"
+	name: "advert tall 01 al blkw"
+}
+
+model_def : model.blkw_4e006
+{
+	model_desc: "/model2/props/street/advert/al/advert_billboard_al_01_blkw.pmd"
+	name: "advert billboard al 01 blkw"
+}
+
+model_def : model.blkw_4e00c
+{
+	model_desc: "/model2/props/street/hotel_signs_01_blkw.pmd"
+	name: "hotel signs 01 blkw"
+}
+
+model_def : model.blkw_2m00z
+{
+	model_desc: "/model2/building/ruined/ruined_factory_01_blkw.pmd"
+	name: "ruined factory 01 blkw"
+
+	static_lod_path[]: "/model2/building/ruined/ruined_factory_01_blkw_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/building/ruined/ruined_factory_01_blkw_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.blkw_4f001
+{
+	model_desc: "/model2/props/street/advert/al/advert_small_01_al_blkw.pmd"
+	name: "advert small 01 al blkw"
+	drop_sun_shadows: 1
+}
+
+model_def : model.blkw_4o005
+{
+	model_desc: "/model2/building/village_close/village_close_24_blkw.pmd"
+	name: "village close 24 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/village_close/village_close_24_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_close_24_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.blkw_4g001
+{
+	model_desc: "/model2/building/shop/car_service_02_blkw.pmd"
+	name: "car service 02 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/shop/car_service_02_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/shop/car_service_02_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.dlc_blke_332
+{
+	model_desc: "/model2/landmark/military_ship_2_ro_blke.pmd"
+	category: "dlc_blke"
+
+}
+model_def : model.dlc_blke_421
+{
+	model_desc: "/model2/props/road/blke_road_decal_tr.pmd"
+	category: "dlc_blke"
+}
+model_def : model.blke_08003
+{
+	model_desc: "/model2/props/street/advert/advert_oneside_02_bg_blke.pmd"
+	name: "advert oneside 02 bg blke"
+	drop_sun_shadows: 1
+}
+model_def : model.ibe_5
+{
+	model_desc: "/model2/building/village_close/village_es/village_close_02_es_ibe.pmd"
+	name: "village close 02 es ibe"
+
+	color_variant: 4
+	color_variant[0]: "Default | v0_c1 : 255,255,255 | v0_c2 : 255,255,255 | v0_c3 : 71,71,71 | v1_c1 : 255,255,255 | v1_c2 : 255,255,255"
+	color_variant[1]: "RedWhite | v0_c1 : 170,110,86 | v0_c2 : 255,255,255 | v0_c3 : 71,71,71 | v1_c1 : 170,110,86 | v1_c2 : 255,255,255"
+	color_variant[2]: "GreenWhite | v0_c1 : 139,192,169 | v0_c2 : 255,255,255 | v0_c3 : 255,255,255 | v1_c1 : 139,192,169 | v1_c2 : 255,255,255"
+	color_variant[3]: "VioletWhite | v0_c1 : 227,189,235 | v0_c2 : 255,255,255 | v0_c3 : 255,255,255 | v1_c1 : 227,189,235 | v1_c2 : 255,255,255"
+
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/village_close/village_es/village_close_02_es_ibe_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+	static_lod_path[1]: "/model2/building/village_close/village_es/village_close_02_es_ibe_lod2.pmd"
+	static_lod_name[1]: "LOD from 200m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/village_close/village_es/village_close_02_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/village_close/village_es/village_close_02_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+
+model_def : model.ibe_18
+{
+	model_desc: "/model2/building/administration/logistic_es/logistic_03_es_ibe.pmd"
+	name: "logistic 03 es ibe"
+
+	color_variant: 3
+	color_variant[0]: "Peach | v0_c1 : 249,202,171 | v0_c2 : 208,208,208 | v1_c2 : 208,208,208 | v1h_c1 : 249,202,171 | v3_c2 : 208,208,208 | v3h_c1 : 249,202,171 | v3h_c2 : 208,208,208 | v4_c1 : 249,202,171 | v4_c2 : 208,208,208"
+	color_variant[1]: "Mustard | v0_c1 : 177,149,86 | v0_c2 : 208,208,208 | v1_c2 : 208,208,208 | v1h_c1 : 177,149,86 | v3_c2 : 208,208,208 | v3h_c1 : 177,149,86 | v3h_c2 : 208,208,208 | v4_c1 : 177,149,86 | v4_c2 : 208,208,208"
+	color_variant[2]: "Mentol | v0_c1 : 175,204,211 | v0_c2 : 66,155,170 | v1_c2 : 66,155,170 | v1h_c1 : 175,204,211 | v3_c2 : 66,155,170 | v3h_c1 : 175,204,211 | v3h_c2 : 66,155,170 | v4_c1 : 175,204,211 | v4_c2 : 66,155,170"
+
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/administration/logistic_es/logistic_03_es_ibe_lod1.pmd"
+	static_lod_name[0]: "LOD from 50m"
+	static_lod_path[1]: "/model2/building/administration/logistic_es/logistic_03_es_ibe_lod2.pmd"
+	static_lod_name[1]: "LOD from 150m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/administration/logistic_es/logistic_03_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 50
+	dynamic_lod_desc[1]: "/model2/building/administration/logistic_es/logistic_03_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 150
+}
+model_def : model.ibe_1r001
+{
+	model_desc: "/model2/fences/village_gate_01_ibe.pmd"
+	name: "village gate 01 ibe"
+}
+model_def : model.ibe_2k002
+{
+	model_desc: "/model2/props/street/arrow_merge_ibe.pmd"
+	name: "arrow merge ibe"
+	category: "dlc_ibe"
+}
+model_def : model.ibe_0u00c
+{
+	model_desc: "/model2/landmark/landmark_es/huelva_watchtower_ibe.pmd"
+	name: "huelva watchtower ibe"
+}
+
+model_def : model.ibe_10001
+{
+	model_desc: "/model2/building/flats/flats_es/block_of_flats_set1_01_es_ibe.pmd"
+	name: "block of flats set1 01 es ibe"
+
+	color_variant: 3
+	color_variant[0]: "white | v0_c1 : 255,255,255 | v1_c1 : 247,247,247 | v1_c2 : 255,255,255"
+	color_variant[1]: "yellow | v0_c1 : 255,255,255 | v1_c1 : 255,242,213 | v1_c2 : 255,255,255"
+	color_variant[2]: "red | v0_c1 : 255,255,255 | v1_c1 : 255,208,204 | v1_c2 : 255,255,255"
+
+	static_lod_path: 2
+	static_lod_name: 2
+	static_lod_path[0]: "/model2/building/flats/flats_es/block_of_flats_set1_01_es_ibe_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+	static_lod_path[1]: "/model2/building/flats/flats_es/block_of_flats_set1_01_es_ibe_lod2.pmd"
+	static_lod_name[1]: "LOD from 200m"
+
+	dynamic_lod_desc: 2
+	dynamic_lod_dist: 2
+	dynamic_lod_desc[0]: "/model2/building/flats/flats_es/block_of_flats_set1_01_es_ibe_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+	dynamic_lod_desc[1]: "/model2/building/flats/flats_es/block_of_flats_set1_01_es_ibe_lod2.pmd"
+	dynamic_lod_dist[1]: 200
+}
+
+model_def : model.ibe_2o003
+{
+	model_desc: "/model2/props/road/ibe_warning_traffic_light.pmd"
+	name: "ibe warning traffic light"
+}
+
+model_def : model.dlc_no_63
+{
+	model_desc: "/model2/village_far/village_no/no_church_03_sc.pmd"
+	category: "dlc_north/villages"
+}
+model_def : model.dlc_no_648
+{
+	model_desc: "/model2/mover/train/sjk_postvagnen_lod_sc.pmd"
+	category: "dlc_north"
+}
+model_def : model.blkw_2m00l
+{
+	model_desc: "/model2/props/street/advert/al/advert_big_01_al_blkw.pmd"
+	name: "advert big 01 al blkw"
+}
+model_def : model.blkw_2x01d
+{
+	model_desc: "/prefab2/depot/construction_site/construction_hall_01_blkw.pmd"
+	name: "construction hall 01 blkw"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/prefab2/depot/construction_site/construction_hall_01_blkw_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/prefab2/depot/construction_site/construction_hall_01_blkw_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.1n000
+{
+	model_desc: "/asset/rock/concrete/butunnelen_entrance_01.pmd"
+}
+
+model_def : model.1n001
+{
+	model_desc: "/asset/rock/concrete/butunnelen_entrance_02.pmd"
+}
+
+model_def : model.1n002
+{
+	model_desc: "/asset/rock/concrete/rock_limestone_01_concrete_roundabout_02.pmd"
+	name: "rock bedrock 01 concrete roundabout t 02"
+}
+
+model_def : model.6w000
+{
+	model_desc: "/model2/props/street/advert/eu/citycrust_totem_01_eu.pmd"
+
+	static_lod_path[]: "/model2/props/street/advert/eu/citycrust_totem_01_eu_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+	static_lod_path[]: "/model2/props/street/advert/eu/citycrust_totem_01_eu_lod2.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/citycrust_totem_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 60
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/citycrust_totem_01_eu_lod2.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.7a000
+{
+	model_desc: "/model/particle/fog1_poc.pmd"
+}
+
+model_def : model.6x000
+{
+	model_desc: "/model2/gas_station/gas_arrow_01_poc.pmd"
+	name: "gas arrow 01 poc"
+
+	static_lod_path[]: "/model2/gas_station/gas_arrow_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_arrow_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+model_def : model.4y001
+{
+	model_desc: "/model2/landmark/ro/hunedoara_bus_station_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/ro/hunedoara_bus_station_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/ro/hunedoara_bus_station_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.6w001
+{
+	model_desc: "/model2/props/street/advert/eu/citycrust_advert_horizontal_01_eu.pmd"
+}
+
+model_def : model.6w002
+{
+	model_desc: "/model2/props/street/advert/eu/citycrust_advert_01_eu.pmd"
+}
+
+model_def : model.6w004
+{
+	model_desc: "/model2/props/street/advert/eu/citycrust_sunshade_01_eu.pmd"
+
+	static_lod_path[]: "/model2/props/street/advert/eu/citycrust_sunshade_01_eu_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/citycrust_sunshade_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.0o000
+{
+	model_desc: "/model2/landmark/at/klagenfurt_bus_station_02_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/at/klagenfurt_bus_station_02_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/at/klagenfurt_bus_station_02_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.0o003
+{
+	model_desc: "/model2/landmark/at/klagenfurt_bus_station_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/at/klagenfurt_bus_station_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/at/klagenfurt_bus_station_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.5r000
+{
+	model_desc: "/model2/gas_station/gas_entrance_sign_01_poc.pmd"
+
+	static_lod_path[]: "/model2/gas_station/gas_entrance_sign_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_entrance_sign_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.0b000
+{
+	model_desc: "/model2/landmark/dk/oresund_tunnel_02_poc.pmd"
+
+	static_lod_path[]: "/model2/landmark/dk/oresund_tunnel_02_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 150m"
+
+	dynamic_lod_desc[]: "/model2/landmark/dk/oresund_tunnel_02_poc_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+model_def : model.5r001
+{
+	model_desc: "/model2/gas_station/gas_fuel_insertion_01_poc.pmd"
+
+	static_lod_path[]: "/model2/gas_station/gas_fuel_insertion_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_fuel_insertion_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.3m006
+{
+	model_desc: "/model2/gas_station/gas_shop_sign_01_poc.pmd"
+
+	static_lod_path[]: "/model2/gas_station/gas_shop_sign_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_shop_sign_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+model_def : model.6e001
+{
+	model_desc: "/model2/props/harbour/anchor_01_poc.pmd"
+
+	static_lod_path[]: "/model2/props/harbour/anchor_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+	static_lod_path[]: "/model2/props/harbour/anchor_01_poc_lod2.pmd"
+	static_lod_name[]: "LOD from 110m"
+
+	dynamic_lod_desc[]: "/model2/props/harbour/anchor_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 60
+	dynamic_lod_desc[]: "/model2/props/harbour/anchor_01_poc_lod2.pmd"
+	dynamic_lod_dist[]: 110
+}
+
+model_def : model.3m009
+{
+	model_desc: "/model2/gas_station/gas_station_pillar_01_poc.pmd"
+
+	static_lod_path[]: "/model2/gas_station/gas_station_pillar_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_station_pillar_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+model_def : model.1n004
+{
+	model_desc: "/asset/rock/concrete/rock_bedrock_01_concrete_roundabout_y_02.pmd"
+}
+
+model_def : model.2m00i
+{
+	model_desc: "/model2/gates/gate_anim_01_poc.pmd"
+}
+
+model_def : model.1n005
+{
+	model_desc: "/asset/rock/limestone/kiirunavaara_rock_limestone_underground_entrance_01.pmd"
+}
+
+model_def : model.3m00b
+{
+	model_desc: "/model2/gas_station/gas_shop_advert_01_poc.pmd"
+}
+
+model_def : model.48001
+{
+	model_desc: "/model2/gas_station/gas_station_atm_01_poc.pmd"
+	name: "gas station atm 01 poc"
+
+	static_lod_path[]: "/model2/gas_station/gas_station_atm_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_station_atm_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.ia_0j004
+{
+	model_desc: "/prefab2/depot/ethanol_factory/ia_liquid_tank_02.pmd"
+	name: "liquid tank 02 poc"
+
+	static_lod_path[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_02_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_02_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_02_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_02_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.ia_50001
+{
+	model_desc: "/prefab2/depot/ethanol_factory/ia_liquid_tank_03.pmd"
+	name: "liquid tank 03 poc"
+
+	static_lod_path[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_03_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_03_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_03_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/prefab2/depot/ethanol_factory/ia_liquid_tank_03_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.mo_4r003
+{
+	model_desc: "/model2/building/industry/silo_load_hopper_01_poc.pmd"
+	name: "silo load hopper 01 poc"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/model2/building/industry/silo_load_hopper_01_poc_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/model2/building/industry/silo_load_hopper_01_poc_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.6e002
+{
+	model_desc: "/model2/props/harbour/propeller_01_poc.pmd"
+
+	static_lod_path[]: "/model2/props/harbour/propeller_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 60m"
+	static_lod_path[]: "/model2/props/harbour/propeller_01_poc_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/props/harbour/propeller_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 60
+	dynamic_lod_desc[]: "/model2/props/harbour/propeller_01_poc_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.4h002
+{
+	model_desc: "/model2/mover/flags/company/restaurant_flag_01_lux.pmd"
+	name: "restaurant flag 01 lux"
+}
+
+model_def : model.6i000
+{
+	model_desc: "/model2/gas_station/gas_station_echarger_01_lux.pmd"
+
+	static_lod_path[]: "/model2/gas_station/gas_station_echarger_01_lux_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_station_echarger_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+model_def : model.5q000
+{
+	model_desc: "/model2/landmark/tr/tekirdag_bus_station_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/tr/tekirdag_bus_station_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/tr/tekirdag_bus_station_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+model_def : model.ia_4j005
+{
+	model_desc: "/model2/building/industry/ia_bulk_unload_shed.pmd"
+	name: "bulk unload shed 01 poc"
+
+	static_lod_path[]: "/model2/building/industry/ia_bulk_unload_shed_lod1.pmd"
+	static_lod_name[]: "LOD from 70m"
+
+	dynamic_lod_desc[]: "/model2/building/industry/ia_bulk_unload_shed_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
+model_def : model.01004
+{
+	model_desc: "/model2/landmark/fi/helsinki_sculpture_01_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/fi/helsinki_sculpture_01_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 90m"
+
+	dynamic_lod_desc[]: "/model2/landmark/fi/helsinki_sculpture_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 90
+}
+
+model_def : model.5q001
+{
+	model_desc: "/model2/landmark/tr/tekirdag_bus_station_02_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/tr/tekirdag_bus_station_02_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/tr/tekirdag_bus_station_02_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.6x001
+{
+	model_desc: "/model2/vehicle/agricultural/tractor_old_mid_01_poc.pmd"
+	name: "tractor old mid 01 poc"
+
+	static_lod_path[]: "/model2/vehicle/agricultural/tractor_old_mid_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/vehicle/agricultural/tractor_old_mid_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.4h006
+{
+	model_desc: "/model/props/lumber/planks_stack_packed_pile_01_poc_pile.pmd"
+
+	static_lod_path[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_pile_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+	static_lod_path[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_pile_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_pile_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_pile_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.4h007
+{
+	model_desc: "/model/props/lumber/planks_stack_packed_pile_01_poc_single.pmd"
+
+	static_lod_path[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_single_lod1.pmd"
+	static_lod_name[]: "LOD from 50m"
+	static_lod_path[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_single_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_single_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/model/props/lumber/planks_stack_packed_pile_01_poc_single_lod2.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.6x002
+{
+	model_desc: "/model2/vehicle/agricultural/harvester_old_mid_01_poc.pmd"
+	name: "harvester old mid 01 poc"
+
+	static_lod_path[]: "/model2/vehicle/agricultural/harvester_old_mid_01_poc_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/vehicle/agricultural/harvester_old_mid_01_poc_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.5q002
+{
+	model_desc: "/model2/landmark/tr/tekirdag_bus_station_03_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/tr/tekirdag_bus_station_03_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/tr/tekirdag_bus_station_03_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.2z000
+{
+	model_desc: "/model2/landmark/fi/helsinki_library_01_bus.pmd"
+}
+
+model_def : model.5q003
+{
+	model_desc: "/model2/landmark/tr/tekirdag_bus_station_04_bus.pmd"
+
+	static_lod_path[]: "/model2/landmark/tr/tekirdag_bus_station_04_bus_lod1.pmd"
+	static_lod_name[]: "LOD from 100m"
+
+	dynamic_lod_desc[]: "/model2/landmark/tr/tekirdag_bus_station_04_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+model_def : model.2t002
+{
+	model_desc: "/model2/landmark/fi/helsinki_museum_01_bus.pmd"
+}
+
+model_def : model.6w003
+{
+	model_desc: "/model2/landmark/fi/helsinki_bus_station_04_bus.pmd"
+}
+
+model_def : model.6w006
+{
+	model_desc: "/model2/landmark/fi/helsinki_bus_gate_01_bus.pmd"
+}
+
+model_def : model.76000
+{
+	model_desc: "/model2/landmark/ee/tartu_bus_station_01_bus.pmd"
+}
+
+model_def : model.78000
+{
+	model_desc: "/model2/landmark/ee/tartu_admin_01_bus.pmd"
+}
+
+model_def : model.6y000
+{
+	model_desc: "/model2/landmark/ee/tartu_mall_02_bus.pmd"
+	name: "tartu mall 02 bus"
+}
+
+model_def : model.3f000
+{
+	model_desc: "/model2/landmark/ee/tartu_hotel_01_bus.pmd"
+	name: "tartu hotel 01 bus"
+}
+
+model_def : model.lux_4f00c
+{
+	model_desc: "/model2/sign/truck_company_logos/daf/totem_sign_daf_lux.pmd"
+}
+
+model_def : model.lux_4f00d
+{
+	model_desc: "/model2/sign/truck_company_logos/daf/building_sign_01_daf_lux.pmd"
+}
+
 }

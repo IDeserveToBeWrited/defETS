@@ -1,0 +1,24 @@
+
+	trigger_states[]: "drive_forward"
+	trigger_state_conditions[]: "speed > 0.5"
+
+	trigger_states[]: "drive_backward"
+	trigger_state_conditions[]: "speed < -0.5"
+
+	trigger_states[]: "direction_forward"
+	trigger_state_conditions[]: "speed > 0.5 && ! state direction_forward"
+
+	trigger_states[]: "direction_forward"
+	trigger_state_conditions[]: "state_remove; speed < -0.5"
+
+	trigger_states[]: "direction_backward"
+	trigger_state_conditions[]: "speed < -0.5 && ! state direction_backward"
+
+	trigger_states[]: "direction_backward"
+	trigger_state_conditions[]: "state_remove; speed > 0.5"
+
+	trigger_states[]: "direction_change"
+	trigger_state_conditions[]: "state direction_backward && state drive_forward"
+
+	trigger_states[]: "direction_change"
+	trigger_state_conditions[]: "state direction_forward && state drive_backward"

@@ -155,7 +155,24 @@ traffic_trailer : train_car.cargo.container
 	sound_move: "/sound/traffic/train_car_cargo.soundref"
 
 	displacement_limit: 0.0
+
 	tags[]: cargo
+	tags[]: container
+	tags[]: depot
+
+	spawn_condition[]: .train_car.cargo.container.spawn.condition
+	spawn_condition[]: .train_car.cargo.container.spawn.condition2
+}
+traffic_spawn_condition: .train_car.cargo.container.spawn.condition
+{
+	type: area
+	str_param[]: "company"
+	str_param[]: "industrial"
+}
+traffic_spawn_condition: .train_car.cargo.container.spawn.condition2
+{
+	type: area
+	str_param[]: "container"
 }
 
 vehicle_accessory: .cargo.container.tchassis
@@ -201,7 +218,7 @@ traffic_trailer : train_car.cargo.grain
 
 	sound_move: "/sound/traffic/train_car_cargo.soundref"
 
-	displacement_limit: 0.0	
+	displacement_limit: 0.0
 	tags[]: cargo
 }
 

@@ -1,0 +1,114 @@
+
+##############################################################Diesel################################################################
+traffic_vehicle : traffic.fs_e_405.diesel.cargo.gr
+{
+	accessories[]: .fs_e_405.diesel.cargo.gr.chassis
+	accessories[]: .fs_e_405.diesel.cargo.gr.fwheel
+	accessories[]: .fs_e_405.diesel.cargo.gr.rwheel
+	accessories[]: .fs_e_405.diesel.cargo.gr.rwheel2
+	accessories[]: .fs_e_405.diesel.cargo.gr.rwheel3
+
+	max_speed: 160
+
+	vehicle_mass: 82000
+	engine_power: 6000
+
+	trailer_chains[]: "train_cargo 6-10"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+	spawn_ratio: 0
+	
+}
+
+vehicle_accessory: .fs_e_405.diesel.cargo.gr.chassis
+{
+	data_path: "/def/vehicle/ai/train_e_405/chassis_loco_diesel_gr.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.cargo.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.cargo.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.cargo.gr.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.cargo.gr.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+####################################################################################################
+traffic_vehicle : traffic.fs_e_405.diesel.pass.gr
+{
+	accessories[]: .fs_e_405.diesel.pass.gr.chassis
+	accessories[]: .fs_e_405.diesel.pass.gr.fwheel
+	accessories[]: .fs_e_405.diesel.pass.gr.rwheel
+	accessories[]: .fs_e_405.diesel.pass.gr.rwheel2
+	accessories[]: .fs_e_405.diesel.pass.gr.rwheel3
+
+	max_speed: 160
+
+	vehicle_mass: 82000
+	engine_power: 6000
+
+	trailer_chains[]: "train_car.w_passenger 6-10"
+	tags[]: passenger
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+	spawn_ratio: 0
+	spawn_condition[]: .traffic.fs_e_405.diesel.pass.gr.condition.city
+
+}
+
+vehicle_accessory: .fs_e_405.diesel.pass.gr.chassis
+{
+	data_path: "/def/vehicle/ai/train_e_405/chassis_loco_diesel_gr.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.pass.gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.pass.gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.pass.gr.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .fs_e_405.diesel.pass.gr.rwheel3
+{
+	offset: 4
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.fs_e_405.diesel.pass.gr.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "!athens"
+}

@@ -10,8 +10,8 @@ accessory_trailer_body_data : flatbed_c.scs.flatbed.body
 	size: (2.55, 2.65, 13.62)	# width, height, length (internal size of the body)
 	total_size: (2.55, 4.0, 13.62)	# width, height, length (size of the body + chassis)
 
-	volume: 87
-	body_type: flatbed_cont
+	volume: 80
+	body_type: container
 
 	# Mass of the cargo container in KG.
 	#
@@ -25,5 +25,13 @@ accessory_trailer_body_data : flatbed_c.scs.flatbed.body
 	collision: "/vehicle/trailer_owned/scs_flatbed/body/flat_bed_container.pmc"
 
 	defaults[]: "/def/vehicle/trailer_owned/scs.flatbed/accessory/markers/simple.sii"
+
+	#xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
+
+	cargo_loading_methods[]: area_cont_40ft
+
+	cargo_regular_width: 2.5
+
+	cargo_areas[]: (2.44, 12.18)
 }
 }

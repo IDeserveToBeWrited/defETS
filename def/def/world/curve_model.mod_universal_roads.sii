@@ -1,5 +1,6 @@
 SiiNunit
 {
+
 # For modders: Please do not modify this file if you want to add a new entry. Create in
 # this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
 # base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
@@ -7,40 +8,502 @@ SiiNunit
 #
 # Warning: Even if the units are specified in more than one source file, they share the
 # same namespace so suffixes or prefixes should be used to avoid conflicts.
-
-
 #########################################################################
-
 curve_model : curve.un_14001
 {
 	model_desc: "/model2/props/road/swe_lines.pmd"
+	category: "roadlines/se"
 	name: "swe lines"
 
-	variation[0]: "parking | prk_1,prk_2,prk_3 : 1.0"
-	variation[1]: "prk_cross | prkcross_1,prkcross_2 : 1.0"
-	variation[2]: "broken | brk_1,brk_2,brk_3,brk_4,brk_5,brk_6 : 1.0"
-	variation[3]: "broken_l | brk_l_1,brk_l_2,brk_l_3,brk_l_4,brk_l_5,brk_l_6 : 1.0"
-	variation[4]: "broken_r | brk_r_1,brk_r_2,brk_r_3,brk_r_4,brk_r_5,brk_r_6 : 1.0"
-	variation[5]: "broken_dbl | brk_dbl_1,brk_dbl_2,brk_dbl_3,brk_dbl_4,brk_dbl_5,brk_dbl_6 : 1.0"
-	variation[6]: "single | sngl_1,sngl_2,sngl_3 : 1.0"
-	variation[7]: "single_dbl | sngl_dbl_1,sngl_dbl_2,sngl_dbl_3 : 1.0"
-	variation[8]: "warning | wrn_1,wrn_2,wrn_3,wrn_4,wrn_5,wrn_6 : 1.0"
-	variation[9]: "warning_l | wrn_l_1,wrn_l_2,wrn_l_3,wrn_l_4,wrn_l_5,wrn_l_6 : 1.0"
-	variation[10]: "warning_r | wrn_r_1,wrn_r_2,wrn_r_3,wrn_r_4,wrn_r_5,wrn_r_6 : 1.0"
-	variation[11]: "warning_dbl | wrn_dbl_1,wrn_dbl_2,wrn_dbl_3,wrn_dbl_4,wrn_dbl_5,wrn_dbl_6 : 1.0"
-	variation[12]: "give_road | giveroad_1,giveroad_2,giveroad_3,giveroad_4 : 1.0"
-	variation[13]: "cross | crss_1,crss_2,crss_3 : 1.0"
-	variation[14]: "city | cty_1,cty_2,cty_3 : 1.0"
-	variation[15]: "exit | ext_1,ext_2,ext_3 : 1.0"
-	variation[16]: "merge | mrg_1,mrg_2,mrg_3 : 1.0"
-	variation[17]: "semaphore | smph_1,smph_2,smph_3 : 1.0"
-	variation[18]: "stopline | stop_1,stop_2,stop_3 : 1.0"
+	color_variant[]: "white: 255,255,255"
+	color_variant[]: "yellow: 250,190,80"
 
+	variation[]: "parking | prk : 1.0"
 	start_part[]: ""
-
 	end_part[]: ""
-	
+	variation[]: "prk_cross | prkcrs1 : 1.0 | prkcrs2 : 1.0 | prkcrs3 : 1.0 | prkcrs4 : 1.0 | prkcrs5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken | brk : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_l | brkl : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_r | brkr : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_dbl | brkdb : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "single | sng : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "single_dbl | sngdb : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning | wrn : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_l | wrnl : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_r | wrnr : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_dbl | wrndb : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "give_road | gvr1 : 1.0 | gvr2 : 1.0 | gvr3 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "cross | crs1 : 1.0 | crs2 : 1.0 | crs3 : 1.0 | crs4 : 1.0 | crs5 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "city | cty1 : 1.0 | cty2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "exit | ext1 : 1.0 | ext2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "merge | mrg1 : 1.0 | mrg2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "semaphore | smp1 : 1.0 | smp2 : 1.0 | smp3 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "stopline | stl1 : 1.0 | stl2 : 1.0 | stl3 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "parking_hw | prkh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_hw | brkh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_l_hw | brklh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_r_hw | brkrh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "broken_db_hw | brkdbh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "single_hw | sngh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "single_db_hw | sngdbh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_hw | wrnh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_l_hw | wrnlh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warning_r_hw | wrnrh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "warningdb_hw | wrndbh : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "cross_hw | crsh1 : 1.0 | crsh2 : 1.0 | crsh3 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "exit_hw | exth1 : 1.0 | exth2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "merge_hw | mrgh1 : 1.0 | mrgh2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "chevron | chv1 : 1.0 | chv2 : 1.0 | chv3 : 1.0"
+	start_part[]: "chv_s1 | chv_s2"
+	end_part[]: "chv_e1 | chv_e2"
 
+	high_tess[]: parking
+	high_tess[]: prk_cross
+	high_tess[]: broken
+	high_tess[]: broken_l
+	high_tess[]: broken_r
+	high_tess[]: broken_dbl
+	high_tess[]: single
+	high_tess[]: single_dbl
+	high_tess[]: warning
+	high_tess[]: warning_l
+	high_tess[]: warning_r
+	high_tess[]: warning_dbl
+	high_tess[]: give_road
+	high_tess[]: cross
+	high_tess[]: city
+	high_tess[]: exit
+	high_tess[]: merge
+	high_tess[]: parking_hw
+	high_tess[]: broken_hw
+	high_tess[]: broken_l_hw
+	high_tess[]: broken_r_hw
+	high_tess[]: broken_db_hw
+	high_tess[]: single_hw
+	high_tess[]: single_db_hw
+	high_tess[]: warning_hw
+	high_tess[]: warning_l_hw
+	high_tess[]: warning_r_hw
+	high_tess[]: warningdb_hw
+	high_tess[]: cross_hw
+	high_tess[]: exit_hw
+	high_tess[]: merge_hw
+}
+
+	curve_model : curve.un_42000
+	{
+		model_desc: "/model2/props/road/un_rail_curve.pmd"
+		name: "un rail curve"
+
+		variation[0]: "shoulder_5m | center5 : 1.0"
+		start_part[0]: "start1 | start2"
+		end_part[0]: "end1 | end2"
+
+		variation[1]: "shoulder_15m | center15 : 1.0"
+		start_part[1]: "start1 | start2"
+		end_part[1]: "end1 | end2"
+
+		variation[2]: "default_5m | center52 : 1.0"
+		start_part[2]: "start1"
+		end_part[2]: "end1"
+
+		variation[3]: "default_15m | center152 : 1.0"
+		start_part[3]: "start1"
+		end_part[3]: "end1"
+
+		variation[4]: "rail_5m | center53 : 1.0"
+		start_part[4]: "start1"
+		end_part[4]: "end1"
+
+		variation[5]: "rail_15m | center153 : 1.0"
+		start_part[5]: "start1"
+		end_part[5]: "end1"
+
+		dynamic_lod_desc[0]: "/model2/props/road/un_rail_curve_lod1.pmd"
+		dynamic_lod_dist[0]: 100
+
+		dynamic_lod_desc[1]: "/model2/props/road/un_rail_curve_lod2.pmd"
+		dynamic_lod_dist[1]: 200
+	}
+
+	curve_model : curve.un_42001
+	{
+		model_desc: "/model2/props/road/un_sidewalk_curve.pmd"
+		name: "un sidewalk curve"
+
+		variation[]: "sh_5m | cent_sh_51, cent_sh_52, cent_sh_53 : 1.0"
+		start_part[]: "t_sh_s | u_sh_s | y_mr_sh_s | y_sh_s"
+		end_part[]: "t_sh_e | u_sh_e | y_mr_sh_e | y_sh_e"
+		variation[]: "sh_1m | cent_sh_01, cent_sh_02, cent_sh_03, cent_sh_04, cent_sh_05, cent_sh_06, cent_sh_07, cent_sh_08, cent_sh_09, cent_sh_10, cent_sh_11, cent_sh_12, cent_sh_13, cent_sh_14, cent_sh_15 : 1.0"
+		start_part[]: "t_sh_s | u_sh_s | y_mr_sh_s | y_sh_s"
+		end_part[]: "t_sh_e | u_sh_e | y_mr_sh_e | y_sh_e"
+		variation[]: "curb_5m | cent_cr_51, cent_cr_52, cent_cr_53 : 1.0"
+		start_part[]: "y_cb_s | u_cb_s | t_cb_s | y_mr_cb_s"
+		end_part[]: "t_cb_e | u_cb_e | y_cb_e | y_mr_cb_e"
+		variation[]: "curb_1m | cent_cr_01, cent_cr_02, cent_cr_03, cent_cr_04, cent_cr_05, cent_cr_06, cent_cr_07, cent_cr_08, cent_cr_09, cent_cr_10, cent_cr_11, cent_cr_12, cent_cr_13, cent_cr_14, cent_cr_15 : 1.0"
+		start_part[]: "y_cb_s | u_cb_s | t_cb_s | y_mr_cb_s"
+		end_part[]: "y_mr_cb_e | t_cb_e | u_cb_e | y_cb_e"
+		variation[]: "t_right_sh | cent_sh_tr : 1.0"
+		start_part[]: "t_sh_s | u_sh_s | y_mr_sh_s | y_sh_s"
+		end_part[]: "t_sh_e | u_sh_e | y_mr_sh_e | y_sh_e"
+		variation[]: "t_left_sh | cent_sh_tl : 1.0"
+		start_part[]: "y_sh_s | t_sh_s | u_sh_s | y_mr_sh_s"
+		end_part[]: "t_sh_e | u_sh_e | y_mr_sh_e | y_sh_e"
+		variation[]: "t_right_cb | cent_cb_tr : 1.0"
+		start_part[]: "y_cb_s | u_cb_s | t_cb_s | y_mr_cb_s"
+		end_part[]: "y_mr_cb_e | t_cb_e | u_cb_e | y_cb_e"
+		variation[]: "t_left_cb | cent_cb_tl : 1.0"
+		start_part[]: "y_cb_s | u_cb_s | t_cb_s | y_mr_cb_s"
+		end_part[]: "y_mr_cb_e | t_cb_e | u_cb_e | y_cb_e"
+		no_stretch_start: "0 | t_sh_s | 1.0\n0 | u_sh_s | 1.0\n0 | y_mr_sh_s | 1.0\n0 | y_sh_s | 1.0\n0 | y_cb_s | 1.0\n0 | u_cb_s | 1.0\n0 | t_cb_s | 0.0\n0 | y_mr_cb_s | 1.0\n"
+		no_stretch_end: "2 | y_sh_e | 1.0\n2 | t_sh_e | 1.0\n2 | u_sh_e | 1.0\n2 | y_mr_sh_e | 1.0\n2 | y_mr_cb_e | 1.0\n2 | t_cb_e | 1.0\n2 | u_cb_e | 1.0\n2 | y_cb_e | 1.0\n"
+	}
+	
+	curve_model : curve.un_14003
+	{
+		model_desc: "/model2/props/road/un_stripe_line.pmd"
+		name: "un stripe line"
+
+		variation[0]: "new_3m_01 | new01 : 1.0 | new02 : 1.0 | new03 : 1.0"
+		start_part[0]: "news01"
+		end_part[0]: "newe01"
+		
+		variation[1]: "used_3m_01 | usd01 : 1.0 | usd02 : 1.0 | usd03 : 1.0 | usd04 : 1.0 | usd05 : 0.5 | usd06 : 0.5"
+		start_part[1]: "usds01"
+		end_part[1]: "usde01"
+		
+		variation[2]: "broken_3m_01 | brk01 : 1.0 | brk02 : 1.0 | brk03 : 1.0 | brk04 : 1.0 | brk05 : 1.0 | brk06 : 1.0"
+		start_part[2]: "brks01"
+		end_part[2]: "brke01"
+
+		variation[3]: "broken_3m_02 | brk07,brk08,brk09 : 1.0"
+		start_part[3]: "brks02"
+		end_part[3]: "brke02"
+
+	}	
+
+	curve_model : curve.un_42002
+	{
+		model_desc: "/model2/props/road/un_dirt_narrow_curve.pmd"
+		name: "un dirt narrow curve"
+
+		variation[0]: "default | center15 : 1.0"
+		start_part[0]: "start1 | start2"
+		end_part[0]: "end1 | end2"
+
+		variation[1]: "default_5m | center51, center52, center53 : 1.0"
+		start_part[1]: "start1 | start2"
+		end_part[1]: "end1 | end2"
+
+		variation[2]: "default_2_5m | center21, center22, center23, center24, center25, center26 : 1.0"
+		start_part[2]: "start1 | start2"
+		end_part[2]: "end1 | end2"
+
+	}
+
+	curve_model : curve.un_14002
+	{
+		model_desc: "/model2/props/road/un_dirt_minim_curve.pmd"
+		name: "un dirt minim curve"
+
+		variation[0]: "default | center15 : 1.0"
+		start_part[0]: "start1 | start2"
+		end_part[0]: "end1 | end2"
+
+		variation[1]: "default_5m | center51, center52, center53 : 1.0"
+		start_part[1]: "start1 | start2"
+		end_part[1]: "end1 | end2"
+
+		variation[2]: "default_2_5m | center21, center22, center23, center24, center25, center26 : 1.0"
+		start_part[2]: "start1 | start2"
+		end_part[2]: "end1 | end2"
+
+	}
+
+	curve_model : curve.un_sw37000
+	{
+		model_desc: "/model2/props/road/un_sidewalk.pmd"
+		name: "un sidewalk"
+
+		variation[]: "_5m | center501, center502, center503 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		variation[]: "_3m | center301, center302, center303, center304, center305 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		variation[]: "_1m | center101, center102, center103, center104, center105, center106, center107, center108, center109, center110, center111, center112, center113, center114, center115 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		variation[]: "_dw2m | center201, center501, center502, center503, center501, center502, center503 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		variation[]: "_dw4m | center401, center501, center502, center503, center501, center502, center503 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		variation[]: "_dw6m | center601, center501, center502, center503, center501, center502, center503 : 1.0"
+		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+		no_stretch_start: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+		no_stretch_end: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end3"
+
+		color_variant[]: "default: 255,255,255"
+		color_variant[]: "medium: 222,222,222"
+		color_variant[]: "dark: 190,190,190"
+		
+		drop_sun_shadows: 1
+	}
+
+	curve_model : curve.un_cr_1m
+	{
+		model_desc: "/model2/props/road/un_curb_island_1m.pmd"
+		name: "un curb island 1m"
+
+		variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		no_stretch_start: "start1 | start2 | start3"
+		no_stretch_end: "end1 | end2 | end3"
+
+		color_variant[]: "default: 255,255,255"
+		color_variant[]: "medium: 222,222,222"
+		color_variant[]: "dark: 190,190,190"
+		
+		drop_sun_shadows: 1
+	}
+
+	curve_model : curve.un_cr_2m
+	{
+		model_desc: "/model2/props/road/un_curb_island_2m.pmd"
+		name: "un curb island 2m"
+
+		variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		no_stretch_start: "start1 | start2 | start3"
+		no_stretch_end: "end1 | end2 | end3"
+
+		color_variant[]: "default: 255,255,255"
+		color_variant[]: "medium: 222,222,222"
+		color_variant[]: "dark: 190,190,190"
+		
+		drop_sun_shadows: 1
+	}
+
+	curve_model : curve.un_cr_3m
+	{
+		model_desc: "/model2/props/road/un_curb_island_3m.pmd"
+		name: "un curb island 3m"
+
+		variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+		start_part[]: "start1 | start2 | start3"
+		end_part[]: "end1 | end2 | end3"
+		no_stretch_start: "start1 | start2 | start3"
+		no_stretch_end: "end1 | end2 | end3"
+
+		color_variant[]: "default: 255,255,255"
+		color_variant[]: "medium: 222,222,222"
+		color_variant[]: "dark: 190,190,190"
+			
+		drop_sun_shadows: 1
+	}
+
+curve_model : curve.un_curb
+{
+	model_desc: "/model2/props/road/un_curb.pmd"
+	name: "un curb"
+
+	variation[]: "_6m | center6m1, center6m2, center6m3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_4m | center4m1, center4m2, center4m3, center4m4 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_2m | center2m1, center2m2, center2m3, center2m4, center2m5, center2m6, center2m7, center2m8 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_2m | dw2m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_4m | dw4m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_6m | dw6m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	no_stretch_start: "start1 | start2 | start3"
+	no_stretch_end: "end1 | end2 | end3"
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 222,222,222"
+	color_variant[]: "dark: 190,190,190"
+	
+	drop_sun_shadows: 1
+}
+
+curve_model : curve.un_cr_wide
+{
+	model_desc: "/model2/props/road/un_curb_wide.pmd"
+	name: "un curb wide"
+
+	variation[]: "_6m | center6m1, center6m2, center6m3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_4m | center4m1, center4m2, center4m3, center4m4 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_2m | center2m1, center2m2, center2m3, center2m4, center2m5, center2m6, center2m7 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_6m | dw6m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_4m | dw4m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_2m | dw2m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	no_stretch_start: "start1 | start2 | start3"
+	no_stretch_end: "end1 | end2 | end3"
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 222,222,222"
+	color_variant[]: "dark: 190,190,190"
+	
+	drop_sun_shadows: 1
+}
+
+curve_model : curve.un_curb_trn
+{
+	model_desc: "/model2/props/road/un_curb_terrain.pmd"
+	name: "un curb terrain"
+
+	variation[]: "_5m | center5m1, center5m2, center5m3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_3m | center3m1, center3m2, center3m3, center3m4, center3m5 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_2m | dw2m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_4m | dw4m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "driveway_6m | dw6m : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	no_stretch_start: "start1 | start2 | start3"
+	no_stretch_end: "end1 | end2 | end3"
+
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 222,222,222"
+	color_variant[]: "dark: 190,190,190"
+
+	drop_sun_shadows: 1
 }
 
 

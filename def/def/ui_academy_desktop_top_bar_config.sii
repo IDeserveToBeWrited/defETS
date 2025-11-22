@@ -1,0 +1,49 @@
+SiiNunit
+{
+ui_desktop_top_bar_config : .config {
+	window_path: "/ui/academy/academy_desktop_top_bar.sii"
+
+	screen_history_separator_text_look: "txt.desktop.top_bar.separator"
+	screen_history_previous_screen_button_look: "btn.desktop.top_bar.screen_hist"
+	screen_history_current_screen_text_look: "txt.desktop.top_bar.screen_hist"
+	screen_history_current_screen_tutorial_button_look: "btn.help"
+	screen_history_current_screen_tutorial_hint_text_look: "txt.bubble_help.right"
+
+	modes[]: .book.menu
+	modes[]: .scenario.menu
+	modes[]: .others
+}
+
+ui_desktop_top_bar_mode : .book.menu {
+	type: white_list
+	screen_list[]: "screen.academy.book"
+
+	sections[]: burger_menu
+	sections[]: home
+	sections[]: prof_info
+}
+
+ui_desktop_top_bar_mode : .scenario.menu {
+	type: white_list
+	screen_list[]: "screen.academy.scenario"
+	screen_list[]: "screen.academy.truck.dealer"
+
+	sections[]: burger_menu
+	sections[]: home
+	sections[]: screen_hist
+	sections[]: book_info
+}
+
+ui_desktop_top_bar_mode : .others {
+	type: black_list
+	screen_list[]: "screen.academy.finish"
+	screen_list[]: "screen.academy.replay_menu"
+	screen_list[]: "screen.academy.completed.chapter"
+
+	sections[]: burger_menu
+	sections[]: home
+	sections[]: drive
+	sections[]: screen_hist
+}
+
+}

@@ -1,4 +1,3 @@
-
 ######## Van - Color #########################################
 
 traffic_vehicle : traffic.crafter
@@ -20,7 +19,8 @@ traffic_vehicle : traffic.crafter
 	color[]: (0.0886, 0.0908, 0.0953) #silver
 	color[]: (0.0012, 0.0529, 0.2299)  #blue
 	color[]: (0.0343, 0.0343, 0.0343) #black
-	color[]: (0.0802, 0.0307, 0.0109)  #brown
+	#color[]: (0.0802, 0.0307, 0.0109)  #brown
+	color[]: (0.1559, 0.0648, 0.0319)
 
 	spawn_ratio: 0.5
 
@@ -158,6 +158,80 @@ vehicle_wheel_accessory: .crafter.cmp_ba.fwheel
 }
 
 vehicle_wheel_accessory: .crafter.cmp_ba.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+######## Company Van Greece - Flower Shop #########################################
+
+traffic_vehicle : traffic.crafter.cmp_av
+{
+	accessories[]: .crafter.cmp_av.chassis
+	accessories[]: .crafter.cmp_av.fwheel
+	accessories[]: .crafter.cmp_av.rwheel
+
+	variant[]: traffic.crafter.cmp_ra
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_av.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_av.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_av.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_av.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+######## Company Van Greece - Transport #########################################
+
+traffic_vehicle : traffic.crafter.cmp_ra
+{
+	accessories[]: .crafter.cmp_ra.chassis
+	accessories[]: .crafter.cmp_ra.fwheel
+	accessories[]: .crafter.cmp_ra.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_ra.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_ra.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ra.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_ra.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"

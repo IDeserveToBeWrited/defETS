@@ -1,0 +1,48 @@
+traffic_vehicle : traffic.tram.baureihe.481
+{
+	accessories[]: .tram.baureihe.481.chassis
+	accessories[]: .tram.baureihe.481.fwheel
+	accessories[]: .tram.baureihe.481.rwheel
+
+	trailer_chains[]: "train_car.baureihe.481.car1 | train_car.baureihe.481.car1i | train_car.baureihe.481.end | train_car.baureihe.481.front | train_car.baureihe.481.car1 | train_car.baureihe.481.car1i | train_car.baureihe.481.end"
+	
+	max_speed: 65
+
+	vehicle_mass: 10500	# 16t whole tram + cca 50 ppl
+	engine_power: 160	# 4x40kW
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	tags[]: metro
+
+	spawn_condition[]: .traffic.baureihe.481.condition.city
+	
+}
+
+vehicle_accessory: .tram.baureihe.481.chassis
+{
+	data_path: "/def/vehicle/ai/train_baureihe_481/loco.sii"
+}
+vehicle_wheel_accessory: .tram.baureihe.481.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .tram.baureihe.481.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.baureihe.481.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "berlin"
+}
+
+

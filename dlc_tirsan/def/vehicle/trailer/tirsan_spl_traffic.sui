@@ -1,10 +1,11 @@
 traffic_trailer : traffic.tirsan_spl
 {
+	trailer_definition: trailer_def.tirsan.spl.single_3.brick_al
 	accessories[]: .tirsan_spl.chassis
 	accessories[]: .tirsan_spl.rwheel
 	accessories[]: .tirsan_spl.rwheel2
 	accessories[]: .tirsan_spl.rwheel3
-	accessories[]: .tirsan_spl.cargo
+	accessories[]: .tirsan_spl.body
 	
 	cargo_mass: 20000
 
@@ -17,7 +18,10 @@ traffic_trailer : traffic.tirsan_spl
 	tags[]: brand 
 	tags[]: tirsan
 	
-
+	cargoes[]: fertilizer
+	cargoes[]: bricks
+	cargoes[]: outdr_flr_tl
+	cargoes[]: plant_substr
 
 	base: traffic.trailer.scs_brick_r
 }
@@ -44,7 +48,8 @@ vehicle_wheel_accessory: .tirsan_spl.rwheel3
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/single_385_65_steel.sii"
 }
-vehicle_accessory: .tirsan_spl.cargo
+
+vehicle_accessory: .tirsan_spl.body
 {
-    	data_path: "/def/vehicle/trailer_cargo/tirsan_spl/bricks_13.sii"
+	data_path: "/def/vehicle/trailer/tirsan_spl/accessory/body.sii"
 }

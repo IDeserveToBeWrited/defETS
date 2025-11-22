@@ -1,0 +1,24 @@
+SiiNunit
+{
+
+# Definition For Formatting Xmas WoTr Events
+#
+# Could be expanded in the future to be hold formatting information on different types of events and delivery goals
+#
+# In this case each goal is a company that needs to be delivered to or from (or as the Xmas event defines).
+# The progress is fetched via the wotr_event_manager and mapping the completion of each individual company on the lower 16 bits of the player progress,
+# in the order defined on each event_format_data unit.
+# This order is provided by Komat before the start of each event.
+# The upper 16 bits are a count of the cities, for the player progress all completed or deliveries up until this point of the event, 
+# and for the max progress the overall ammount of goals to be completed for the personal reward.
+
+event_hud_format_data : event.hud.format.halloween.25
+{
+	achievement_name: haulowwit25
+	icon_name: "horn_reward"
+	title_text: "Reward unlocked!"
+	subtitle_text: "Witches' Spooky Horn"
+	sounds[]: "intro|/sound/ui/ui_reward_halloween.soundref"
+}
+
+}

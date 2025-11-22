@@ -5,6 +5,7 @@ intro_screen_data : .intro.data
 {
 	layer[]: .intro.layer.video
 	layer[]: .intro.layer.text
+	layer[]: .intro.layer.logo
 }
 
 intro_screen_layer : .intro.layer.video
@@ -86,12 +87,37 @@ intro_screen_item : .intro.txt.0
 	show_time: 13.20
 	fade_out_time: 0.0
 }
+
 intro_screen_item : .intro.txt.1
 {
- 	pml: "<color value=$ALPHA$FFFFFF><align hstyle=center><font face=/font/small.font xscale=0.85 yscale=0.85>All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission.<br>The MAN\xc2\xae trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o.<br>\"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o.<br>The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license.<br>The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license.</font></align><ret><align vstyle=bottom left=30 bottom=-13><img src=/material/ui/logo/bullet.mat width=93 height=45 ka=left></align><align vstyle=bottom hstyle=right right=-34 bottom=-6><img src=/material/ui/logo/ogg.mat width=32 height=32 ka=right><offset hshift=12 vshift=-8><img src=/material/ui/logo/fmod.mat width=93 height=45 ka=right></align>"
+ 	pml: "<color value=$ALPHA$FFFFFF><margin left=60 right=-60><align hstyle=center vstyle=center><font face=/font/small.font xscale=0.95 yscale=0.95>All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN\xc2\xae trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license.</font></align></margin>"
 	fade_in_time: 1.0
 	show_time: 1.8
 	fade_out_time: 1.0
 	scene_fade: false
 }
+
+intro_screen_layer : .intro.layer.logo
+{
+ 	item[]:	.intro.logo.0
+ 	item[]:	.intro.logo.1
+	text_id: 120
+}
+
+intro_screen_item : .intro.logo.0
+{
+	fade_in_time: 0.0
+	show_time: 13.20
+	fade_out_time: 0.0
+}
+
+intro_screen_item : .intro.logo.1
+{
+	pml: "<color value=$ALPHA$FFFFFF><align hstyle=center><img src=/material/ui/logo/physx_w.mat width=93 height=45 ka=center><offset hshift=35><img src=/material/ui/logo/ogg.mat width=45 height=45 ka=center><offset hshift=35><img src=/material/ui/logo/fmod.mat width=100 height=50 ka=center><offset hshift=35><img src=/material/ui/logo/bullet.mat width=93 height=45 ka=center></align>"
+	fade_in_time: 1.0
+	show_time: 1.8
+	fade_out_time: 1.0
+	scene_fade: false
+}
+
 }

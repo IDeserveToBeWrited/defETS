@@ -2907,20 +2907,40 @@ model_def : model.1119
 
 model_def : model.55
 {
-	model_desc: "/vehicle/share/models/dumper/dumper.pmd"
-	static_lod_name[]: "LOD from 30m"
-	static_lod_path[]: "/vehicle/share/models/dumper/dumper_lod1.pmd"
-	static_lod_name[]: "LOD from 50m"
-	static_lod_path[]: "/vehicle/share/models/dumper/dumper_lod2.pmd"
-	static_lod_name[]: "LOD from 100m"
-	static_lod_path[]: "/vehicle/share/models/dumper/dumper_lod4.pmd"
-
+	model_desc: "/vehicle/machine/dumper/static/dumper.pmd"
 	dynamic_lod_dist[]: 30
-	dynamic_lod_desc[]: "/vehicle/share/models/dumper/dumper_lod1.pmd"
+	dynamic_lod_desc[]: "/vehicle/machine/dumper/static/dumper_lod1.pmd"
 	dynamic_lod_dist[]: 50
-	dynamic_lod_desc[]: "/vehicle/share/models/dumper/dumper_lod2.pmd"
+	dynamic_lod_desc[]: "/vehicle/machine/dumper/static/dumper_lod2.pmd"
 	dynamic_lod_dist[]: 100
-	dynamic_lod_desc[]: "/vehicle/share/models/dumper/dumper_lod4.pmd"
+	dynamic_lod_desc[]: "/vehicle/machine/dumper/static/dumper_lod3.pmd"
+
+	static_lod_name[]: "LOD - 30m"
+	static_lod_path[]: "/vehicle/machine/dumper/static/dumper_lod1.pmd"
+	static_lod_name[]: "LOD - 50m"
+	static_lod_path[]: "/vehicle/machine/dumper/static/dumper_lod2.pmd"
+	static_lod_name[]: "LOD - 100m"
+	static_lod_path[]: "/vehicle/machine/dumper/static/dumper_lod3.pmd"
+
+}	
+
+
+model_def : model.1044
+{
+	model_desc: "/vehicle/machine/dumper_articulated/static/articulated_dumper.pmd"
+	dynamic_lod_dist[]: 30
+	dynamic_lod_desc[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod2.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod3.pmd"
+
+	static_lod_name[]: "LOD - 30m"
+	static_lod_path[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod1.pmd"
+	static_lod_name[]: "LOD - 50m"
+	static_lod_path[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod2.pmd"
+	static_lod_name[]: "LOD - 100m"
+	static_lod_path[]: "/vehicle/machine/dumper_articulated/static/articulated_dumper_lod3.pmd"
 }
 
 model_def : model.312
@@ -2946,20 +2966,20 @@ model_def : model.312
 model_def : model.313
 {
 	#digger500
-	model_desc: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod0.pmd"
+	model_desc: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod0.pmd"
 	static_lod_name[]: "LOD from 30m"
-	static_lod_path[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod1.pmd"
+	static_lod_path[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod1.pmd"
 	static_lod_name[]: "LOD from 50m"
-	static_lod_path[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod2.pmd"
+	static_lod_path[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod2.pmd"
 	static_lod_name[]: "LOD from 100m"
-	static_lod_path[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod5.pmd"
+	static_lod_path[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod5.pmd"
 
 	dynamic_lod_dist[]: 30
-	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod1.pmd"
+	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod1.pmd"
 	dynamic_lod_dist[]: 50
-	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod2.pmd"
+	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod2.pmd"
 	dynamic_lod_dist[]: 100
-	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod5.pmd"
+	dynamic_lod_desc[]: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod5.pmd"
 
 }
 
@@ -3008,13 +3028,13 @@ model_def : model.1076
 model_def : model.1077
 {
 	#digger500
-	model_desc: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod2.pmd"
+	model_desc: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod2.pmd"
 }
 
 model_def : model.1078
 {
 	#digger500
-	model_desc: "/vehicle/share/models/backhoe_loader/backhoe_loader_lod3.pmd"
+	model_desc: "/vehicle/share/models/backhoe_loader/assets/backhoe_loader_lod3.pmd"
 }
 
 model_def : model.1081
@@ -3208,16 +3228,21 @@ model_def : model.1144
 
 model_def : model.1148
 {
-	model_desc: "/model/farm/harvester/farm_harvester.pmd"
+	name: "farm harvester"
+	model_desc: "/vehicle/machine/harvester/static/static.pmd"
 	static_lod_name[]: "LOD from 50m"
-	static_lod_path[]: "/model/farm/harvester/farm_harvester_lod1.pmd"
+	static_lod_path[]: "/vehicle/machine/harvester/static/static_lod1.pmd"
 	static_lod_name[]: "LOD from 100m"
-	static_lod_path[]: "/model/farm/harvester/farm_harvester_lod2.pmd"
+	static_lod_path[]: "/vehicle/machine/harvester/static/static_lod2.pmd"
+	static_lod_name[]: "LOD from 200m"
+	static_lod_path[]: "/vehicle/machine/harvester/static/static_lod3.pmd"
 
 	dynamic_lod_dist[]: 50
-	dynamic_lod_desc[]: "/model/farm/harvester/farm_harvester_lod1.pmd"
+	dynamic_lod_desc[]: "/vehicle/machine/harvester/static/static_lod1.pmd"
 	dynamic_lod_dist[]: 100
-	dynamic_lod_desc[]: "/model/farm/harvester/farm_harvester_lod2.pmd"
+	dynamic_lod_desc[]: "/vehicle/machine/harvester/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 200
+	dynamic_lod_desc[]: "/vehicle/machine/harvester/static/static_lod3.pmd"
 
 }
 
@@ -3441,6 +3466,12 @@ model_def : model.scene_22
 {
 	model_desc: "/model/event/physics/garbage_truck.pmd"
 }
+
+model_def : model.garbage_p
+{
+	model_desc: "/model/event/physics/garbage_truck_parked.pmd"
+}
+
 model_def : model.scene_23
 {
 	model_desc: "/model/event/static/trailer_teared.pmd"
@@ -3748,6 +3779,7 @@ model_def : model.1213
 {
 	model_desc: "/model/animated/forwarder/forwarder.pmd"
 	category: "vehicle"
+
 }
 
 model_def : model.dlc_balt_744
@@ -4331,5 +4363,408 @@ model_def : model.vhcl_2n000
 
 }
 
+model_def : model.gr_boxold
+{
+	model_desc: "/vehicle/car/trailer_box_old/static/static_lod0.pmd"
+	name: "trailer box old"
+
+	static_lod_path[]: "/vehicle/car/trailer_box_old/static/static_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/vehicle/car/trailer_box_old/static/static_lod2.pmd"
+	static_lod_name[]: "LOD from 80m"
+	static_lod_path[]: "/vehicle/car/trailer_box_old/static/static_lod3.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/vehicle/car/trailer_box_old/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/trailer_box_old/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/trailer_box_old/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+
+
+model_def : model.mobscreener
+{
+	model_desc: "/vehicle/machine/mobile_screener/static/static.pmd"
+	
+	category: "vehicle"
+	name: "mobile_screener"
+	
+	
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_screener/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_screener/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_screener/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 200
+	
+	
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/machine/mobile_screener/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/machine/mobile_screener/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/machine/mobile_screener/static/static_lod3.pmd"
+
+}
+
+
+model_def : model.gr_m_02
+{
+	model_desc: "/vehicle/machine/mobile_crusher/static/static_lod1.pmd"
+	name: "Mobile Crusher"
+	category: vehicle
+
+	static_lod_path[]: "/vehicle/machine/mobile_crusher/static/static_lod2.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/vehicle/machine/mobile_crusher/static/static_lod3.pmd"
+	static_lod_name[]: "LOD from 80m"
+	static_lod_path[]: "/vehicle/machine/mobile_crusher/static/static_lod3.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_crusher/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_crusher/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_crusher/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.gr_m_03
+{
+	model_desc: "/vehicle/machine/mobile_stacker/static/static_lod0.pmd"
+	category: "vehicle"
+
+	name: "Mobile Stacker"
+
+	static_lod_path[]: "/vehicle/machine/mobile_stacker/static/static_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/vehicle/machine/mobile_stacker/static/static_lod2.pmd"
+	static_lod_name[]: "LOD from 80m"
+	static_lod_path[]: "/vehicle/machine/mobile_stacker/static/static_lod3.pmd"
+	static_lod_name[]: "LOD from 120m"
+
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_stacker/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_stacker/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/machine/mobile_stacker/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+
+}
+
+model_def : model.gr_aircon_01
+{
+	model_desc: "/vehicle/props/hvac/static/air_conditioner_01.pmd"
+	name: "Air Conditioner 01"
+	category: vehicle
+
+	static_lod_path[]: "/vehicle/props/hvac/static/air_conditioner_01_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/vehicle/props/hvac/static/air_conditioner_01_lod2.pmd"
+	static_lod_name[]: "LOD from 100m"
+	
+
+	dynamic_lod_desc[]: "/vehicle/props/hvac/static/air_conditioner_01_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/props/hvac/static/air_conditioner_01_lod2.pmd"
+	dynamic_lod_dist[]: 100
+
+}
+
+
+model_def : model.gr_water
+{
+	model_desc: "/vehicle/car/trailer_tank_water/static/static.pmd"
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/car/trailer_tank_water/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/car/trailer_tank_water/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/car/trailer_tank_water/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/trailer_tank_water/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/trailer_tank_water/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/trailer_tank_water/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+	
+	category: "vehicle"
+
+	name: "trailer tank water"
+}
+
+model_def : model.golf_cart
+{
+	model_desc: "/vehicle/car/golf_cart/static/static_lod0.pmd"
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/car/golf_cart/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/car/golf_cart/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/car/golf_cart/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/golf_cart/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/golf_cart/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/golf_cart/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+	
+	category: "vehicle"
+
+	name: "golf cart"
+}
+
+model_def : model.gr_cotton
+{
+	model_desc: "/vehicle/car/trailer_cotton/static/static.pmd"
+	
+	category: "vehicle"
+	name: "trailer cotton"
+
+	static_lod_name[]: "lod from 50m"
+	static_lod_path[]: "/vehicle/car/trailer_cotton/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 100m"
+	static_lod_path[]: "/vehicle/car/trailer_cotton/static/static_lod2.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/trailer_cotton/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/vehicle/car/trailer_cotton/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 100
+
+	color_variant[]: "red | part1 : 255,255,255 | part2 : 132,54,38 | part3 : 101,101,101 | part4 : 109,51,39"
+}
+
+model_def : model.g_h_cotton
+{
+	model_desc: "/vehicle/machine/harvester_cotton/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "harvester cotton"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/machine/harvester_cotton/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/machine/harvester_cotton/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/machine/harvester_cotton/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/machine/harvester_cotton/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/harvester_cotton/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/machine/harvester_cotton/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.g_roughfork
+{
+	model_desc: "/vehicle/machine/rough_terrain_forklift/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "rough terrain forklift"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/machine/rough_terrain_forklift/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/machine/rough_terrain_forklift/static/static_lod2.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/machine/rough_terrain_forklift/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/rough_terrain_forklift/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+
+}
+
+model_def : model.racecar
+{
+	model_desc: "/vehicle/car/car_race/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "race car"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/car/car_race/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/car/car_race/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/car/car_race/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/car_race/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/car_race/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/car_race/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+
+}
+
+model_def : model.gr_horse01
+{
+	model_desc: "/vehicle/car/trailer_horse_01/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "trailer horse 01"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/car/trailer_horse_01/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/car/trailer_horse_01/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/car/trailer_horse_01/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/trailer_horse_01/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/trailer_horse_01/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/trailer_horse_01/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.gr_smboat01
+{
+	model_desc: "/vehicle/car/trailer_boat_small_01/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "trailer boat small 01"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/car/trailer_boat_small_01/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/car/trailer_boat_small_01/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/car/trailer_boat_small_01/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/trailer_boat_small_01/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/car/trailer_boat_small_01/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/car/trailer_boat_small_01/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.covered_car
+{
+	model_desc: "/vehicle/car/covered_car/static/static_lod0.pmd"
+	static_lod_name[]: "lod from 50m"
+	static_lod_path[]: "/vehicle/car/covered_car/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 100m"
+	static_lod_path[]: "/vehicle/car/covered_car/static/static_lod2.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/car/covered_car/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/vehicle/car/covered_car/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 100
+	
+	category: "vehicle"
+
+	name: "Covered Car"
+}
+
+model_def : model.teleh
+{
+	model_desc: "/vehicle/machine/telehandler/static/static_lod0.pmd"
+	
+	category: "vehicle"
+	name: "telehandler"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/machine/telehandler/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/machine/telehandler/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/machine/telehandler/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/machine/telehandler/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/telehandler/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/machine/telehandler/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.de_2n008
+{
+	model_desc: "/vehicle/ship/yacht/yacht_01_de.pmd"
+	name: "yacht 01 de"
+
+	static_lod_path: 1
+	static_lod_name: 1
+	static_lod_path[0]: "/vehicle/ship/yacht/yacht_01_de_lod1.pmd"
+	static_lod_name[0]: "LOD from 100m"
+
+	dynamic_lod_desc: 1
+	dynamic_lod_dist: 1
+	dynamic_lod_desc[0]: "/vehicle/ship/yacht/yacht_01_de_lod1.pmd"
+	dynamic_lod_dist[0]: 100
+}
+
+model_def : model.w_hopper
+{
+	model_desc: "/vehicle/railcar/wagon_hopper_fouraxle/static/static.pmd"
+	name: "wagon hopper fouraxle WIP"
+
+	static_lod_name[]: "lod from 40m"
+	static_lod_path[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 80m"
+	static_lod_path[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 120m"
+	static_lod_path[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod3.pmd"
+
+	dynamic_lod_desc[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+	dynamic_lod_desc[]: "/vehicle/railcar/wagon_hopper_fouraxle/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+model_def : model.mhandler
+{
+  model_desc: "/vehicle/machine/material_handler/static/static.pmd"
+  category: "vehicle"
+
+  name: "material handler"
+
+	static_lod_path[]: "/vehicle/machine/material_handler/static/static_lod1.pmd"
+	static_lod_name[]: "LOD from 40m"
+	static_lod_path[]: "/vehicle/machine/material_handler/static/static_lod2.pmd"
+	static_lod_name[]: "LOD from 80m"	
+
+
+
+
+	dynamic_lod_desc[]: "/vehicle/machine/material_handler/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	dynamic_lod_desc[]: "/vehicle/machine/material_handler/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 80
+
+}
+
+model_def : model.tractor_g
+{
+	model_desc: "/vehicle/machine/tractor_generic/static/static.pmd"
+	name: "tractor 01"
+	category: "vehicle"
+
+	static_lod_name[]: "lod from 50m"
+	static_lod_path[]: "/vehicle/machine/tractor_generic/static/static_lod1.pmd"
+	static_lod_name[]: "lod from 90m"
+	static_lod_path[]: "/vehicle/machine/tractor_generic/static/static_lod2.pmd"
+	static_lod_name[]: "lod from 130m"
+	static_lod_path[]: "/vehicle/machine/tractor_generic/static/static_lod3.pmd"
+
+
+	dynamic_lod_desc[]: "/vehicle/machine/tractor_generic/static/static_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/vehicle/machine/tractor_generic/static/static_lod2.pmd"
+	dynamic_lod_dist[]: 90
+	dynamic_lod_desc[]: "/vehicle/machine/tractor_generic/static/static_lod3.pmd"
+	dynamic_lod_dist[]: 130
+}
 
 }

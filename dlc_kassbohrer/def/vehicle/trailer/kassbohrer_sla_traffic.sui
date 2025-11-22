@@ -1,10 +1,13 @@
 traffic_trailer : traffic.kasbhr_sla
 {
+	trailer_definition: trailer_def.kassbohrer.sla.single_3_sh.lowbed
+
 	accessories[]: .kasbhr_sla.chassis
 	accessories[]: .kasbhr_sla.rwheel
 	accessories[]: .kasbhr_sla.rwheel2
 	accessories[]: .kasbhr_sla.rwheel3
 	accessories[]: .kasbhr_sla.paint_job
+	accessories[]: .kasbhr_sla.body
 	
 	cargo_mass: 8000
 
@@ -14,6 +17,10 @@ traffic_trailer : traffic.kasbhr_sla
 	tags[]: short
 	tags[]: kassbohrer
 
+	cargoes[]: excavator
+	cargoes[]: tractors
+	cargoes[]: digger1000
+	cargoes[]: digger500
 
 	company_paint_job: false
 
@@ -49,4 +56,9 @@ vehicle_wheel_accessory: .kasbhr_sla.rwheel3
 vehicle_paint_job_accessory: .kasbhr_sla.paint_job
 {
 	data_path: "/def/vehicle/trailer/kassbohrer_sla/company_paint_job/red.sii"
+}
+
+vehicle_accessory: .kasbhr_sla.body
+{
+	data_path: "/def/vehicle/trailer/kassbohrer_sla/accessory/short.sii"
 }

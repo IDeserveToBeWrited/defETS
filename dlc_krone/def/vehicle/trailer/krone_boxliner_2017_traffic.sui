@@ -1,10 +1,12 @@
 traffic_trailer : traffic.trailer.boxliner_c2
 {
+	trailer_definition: trailer_def.krone.boxliner.single_3.container
+
 	accessories[]: traffic.boxliner_c2.tchassis
 	accessories[]: traffic.boxliner_c2.trwheel0
 	accessories[]: traffic.boxliner_c2.trwheel1
 	accessories[]: traffic.boxliner_c2.trwheel2
-	accessories[]: traffic.boxliner_c2.cargo
+	accessories[]: traffic.boxliner_c2.body
 	cargo_mass: 19000
 	
 	tags[]: high
@@ -16,14 +18,12 @@ traffic_trailer : traffic.trailer.boxliner_c2
 	tags[]: krone
 	tags[]: basic
 
+	cargoes[]: carrots_c
+	cargoes[]: chlorine
+	cargoes[]: neon
+	cargoes[]: nitrocel
+
 	base: traffic.trailer.scs_gosck20
-	
-	variant[]: traffic.trailer.boxliner_c22
-	variant[]: traffic.trailer.boxliner_c4
-	variant[]: traffic.trailer.boxliner_c4r
-	variant[]: traffic.trailer.box22nit
-	variant[]: traffic.trailer.box50flu
-	variant[]: traffic.trailer.box75neo
 	
 }
 
@@ -46,19 +46,21 @@ vehicle_wheel_accessory: traffic.boxliner_c2.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
 }
-vehicle_accessory: traffic.boxliner_c2.cargo
+vehicle_accessory: traffic.boxliner_c2.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_20.sii"
+	data_path: "/def/vehicle/trailer/krone/boxliner/accessory/cont20.sii"
 }
 
 
 traffic_trailer : traffic.trailer.boxliner_c22
 {
+trailer_definition: trailer_def.krone.boxliner.single_3_220.container
+
 	accessories[]: traffic.boxliner_c22.tchassis
 	accessories[]: traffic.boxliner_c22.trwheel0
 	accessories[]: traffic.boxliner_c22.trwheel1
 	accessories[]: traffic.boxliner_c22.trwheel2
-	accessories[]: traffic.boxliner_c22.cargo
+	accessories[]: traffic.boxliner_c22.body
 	cargo_mass: 19000
 	
 	tags[]: high
@@ -69,6 +71,10 @@ traffic_trailer : traffic.trailer.boxliner_c22
 	tags[]: brand
 	tags[]: krone
 	tags[]: basic
+
+	cargoes[]: carrots_c
+
+base: traffic.trailer.scs_gosck20
 
 }
 vehicle_accessory: traffic.boxliner_c22.tchassis
@@ -90,19 +96,21 @@ vehicle_wheel_accessory: traffic.boxliner_c22.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
 }
-vehicle_accessory: traffic.boxliner_c22.cargo
+vehicle_accessory: traffic.boxliner_c22.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_2x20_green.sii"
+	data_path: "/def/vehicle/trailer/krone/boxliner/accessory/cont220.sii"
 }
 
 
 traffic_trailer : traffic.trailer.boxliner_c4
 {
+	trailer_definition: trailer_def.krone.boxliner.single_3_40.container
+
 	accessories[]: traffic.boxliner_c4.tchassis
 	accessories[]: traffic.boxliner_c4.trwheel0
 	accessories[]: traffic.boxliner_c4.trwheel1
 	accessories[]: traffic.boxliner_c4.trwheel2
-	accessories[]: traffic.boxliner_c4.cargo
+	accessories[]: traffic.boxliner_c4.body
 	cargo_mass: 19000
 	
 	tags[]: high
@@ -113,6 +121,10 @@ traffic_trailer : traffic.trailer.boxliner_c4
 	tags[]: brand
 	tags[]: krone
 	tags[]: basic
+
+	cargoes[]: carrots_c
+
+base: traffic.trailer.scs_gosck20
 
 }
 vehicle_accessory: traffic.boxliner_c4.tchassis
@@ -134,186 +146,7 @@ vehicle_wheel_accessory: traffic.boxliner_c4.trwheel2
 	offset: 4
 	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
 }
-vehicle_accessory: traffic.boxliner_c4.cargo
+vehicle_accessory: traffic.boxliner_c4.body
 {
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_40_blue.sii"
-}
-
-
-traffic_trailer : traffic.trailer.boxliner_c4r
-{
-	accessories[]: traffic.boxliner_c4r.tchassis
-	accessories[]: traffic.boxliner_c4r.trwheel0
-	accessories[]: traffic.boxliner_c4r.trwheel1
-	accessories[]: traffic.boxliner_c4r.trwheel2
-	accessories[]: traffic.boxliner_c4r.cargo
-	cargo_mass: 19000
-	
-	tags[]: high
-	tags[]: gooseneck
-	tags[]: container 
-	tags[]: medium
-	tags[]: cargo
-	tags[]: brand
-	tags[]: krone
-	tags[]: basic
-
-}
-vehicle_accessory: traffic.boxliner_c4r.tchassis
-{
-	data_path: "/def/vehicle/trailer/krone/boxliner/chassis_40.sii"
-}
-vehicle_wheel_accessory: traffic.boxliner_c4r.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.boxliner_c4r.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.boxliner_c4r.trwheel2
-{
-	offset: 4
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_accessory: traffic.boxliner_c4r.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_40r.sii"
-}
-
-
-
-traffic_trailer : traffic.trailer.box22nit
-{
-	accessories[]: traffic.box22nit.tchassis
-	accessories[]: traffic.box22nit.trwheel0
-	accessories[]: traffic.box22nit.trwheel1
-	accessories[]: traffic.box22nit.trwheel2
-	accessories[]: traffic.box22nit.cargo
-	cargo_mass: 19000
-	
-	tags[]: low
-	tags[]: high
-	tags[]: gooseneck
-	tags[]: adr
-	tags[]: medium
-	tags[]: cargo
-	tags[]: brand
-	tags[]: krone
-
-
-}
-vehicle_accessory: traffic.box22nit.tchassis
-{
-	data_path: "/def/vehicle/trailer/krone/boxliner/chassis_20.sii"
-}
-vehicle_wheel_accessory: traffic.box22nit.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box22nit.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box22nit.trwheel2
-{
-	offset: 4
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_accessory: traffic.box22nit.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_t22_nitrocel.sii"
-}
-
-
-traffic_trailer : traffic.trailer.box50flu
-{
-	accessories[]: traffic.box50flu.tchassis
-	accessories[]: traffic.box50flu.trwheel0
-	accessories[]: traffic.box50flu.trwheel1
-	accessories[]: traffic.box50flu.trwheel2
-	accessories[]: traffic.box50flu.cargo
-	cargo_mass: 19000
-	
-	tags[]: low
-	tags[]: high
-	tags[]: gooseneck
-	tags[]: adr
-	tags[]: medium
-	tags[]: cargo
-	tags[]: brand
-	tags[]: krone
-	
-
-}
-vehicle_accessory: traffic.box50flu.tchassis
-{
-	data_path: "/def/vehicle/trailer/krone/boxliner/chassis_20.sii"
-}
-vehicle_wheel_accessory: traffic.box50flu.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box50flu.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box50flu.trwheel2
-{
-	offset: 4
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_accessory: traffic.box50flu.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_t50_fluorine.sii"
-}
-
-
-traffic_trailer : traffic.trailer.box75neo
-{
-	accessories[]: traffic.box75neo.tchassis
-	accessories[]: traffic.box75neo.trwheel0
-	accessories[]: traffic.box75neo.trwheel1
-	accessories[]: traffic.box75neo.trwheel2
-	accessories[]: traffic.box75neo.cargo
-	cargo_mass: 19000
-	
-	tags[]: low
-	tags[]: high
-	tags[]: gooseneck
-	tags[]: adr
-	tags[]: medium
-	tags[]: cargo
-	tags[]: brand
-	tags[]: krone
-
-}
-vehicle_accessory: traffic.box75neo.tchassis
-{
-	data_path: "/def/vehicle/trailer/krone/boxliner/chassis_20.sii"
-}
-vehicle_wheel_accessory: traffic.box75neo.trwheel0
-{
-	offset: 0
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box75neo.trwheel1
-{
-	offset: 2
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_wheel_accessory: traffic.box75neo.trwheel2
-{
-	offset: 4
-	data_path: "/def/vehicle/t_wheel/krone_385_65_r22_5.sii"
-}
-vehicle_accessory: traffic.box75neo.cargo
-{
-	data_path: "/def/vehicle/trailer_cargo/scs_container/container_t75_neon.sii"
+	data_path: "/def/vehicle/trailer/krone/boxliner/accessory/cont40.sii"
 }

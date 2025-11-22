@@ -626,10 +626,7 @@ traffic_vehicle : traffic.lowcab_box
 	variant[]: traffic.lowcab_box.r_eu_02
 	variant[]: traffic.lowcab_box.r_eu_03
 	variant[]: traffic.lowcab_box.r_eu_04
-	variant[]: traffic.lowcab_box.r_ibe_01
-	variant[]: traffic.lowcab_box.r_ibe_02
-	variant[]: traffic.lowcab_box.r_ibe_03
-	variant[]: traffic.lowcab_box.r_ibe_04
+	
 
 
 @include "drivers_generic.sui"
@@ -926,6 +923,8 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_02
 	accessories[]: .lowcab_box.r_ibe_02.chassis
 	accessories[]: .lowcab_box.r_ibe_02.fwheel
 	accessories[]: .lowcab_box.r_ibe_02.rwheel
+	
+	base: traffic.lowcab_box
 
 	tags[]: sm_truck
 
@@ -985,6 +984,8 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_03
 	accessories[]: .lowcab_box.r_ibe_03.chassis
 	accessories[]: .lowcab_box.r_ibe_03.fwheel
 	accessories[]: .lowcab_box.r_ibe_03.rwheel
+	
+	base: traffic.lowcab_box
 
 	tags[]: sm_truck
 
@@ -1044,6 +1045,8 @@ traffic_vehicle : traffic.lowcab_box.r_ibe_04
 	accessories[]: .lowcab_box.r_ibe_04.chassis
 	accessories[]: .lowcab_box.r_ibe_04.fwheel
 	accessories[]: .lowcab_box.r_ibe_04.rwheel
+	
+	base: traffic.lowcab_box
 
 	tags[]: sm_truck
 
@@ -1097,3 +1100,63 @@ traffic_spawn_condition: .traffic.lowcab_box.r_ibe_04.condition.country
     str_param[]: "spain"
 }
 
+
+###################################### Greece - Box | Supermarket ######################################
+
+traffic_vehicle : traffic.lowcab_box.r_gr
+{
+	accessories[]: .lowcab_box.r_gr.chassis
+	accessories[]: .lowcab_box.r_gr.fwheel
+	accessories[]: .lowcab_box.r_gr.rwheel
+	
+	base: traffic.lowcab_box
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	engine_power: 140
+	
+
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	# Green
+	color[]: (0.1568, 0.4666, 0.2352)
+	# Sand
+	color[]: (0.9607, 0.9450, 0.7607)
+	
+	spawn_condition[]: .traffic.lowcab_box.r_gr.condition.country
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.r_gr.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_r_gr.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_gr.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.r_gr.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
+}
+
+traffic_spawn_condition: .traffic.lowcab_box.r_gr.condition.country
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: country
+    str_param[]: "greece"
+}

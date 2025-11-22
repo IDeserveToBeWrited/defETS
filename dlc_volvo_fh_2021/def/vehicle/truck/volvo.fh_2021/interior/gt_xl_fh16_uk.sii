@@ -1,0 +1,45 @@
+SiiNunit
+{
+accessory_interior_data: gtxl_fh16_u.volvo.fh_2021.interior
+{
+	name: "FH16 UK"
+	price: 30960
+	unlock: 12
+	icon: "truck/volvo_fh16_2012/accessory/fh16_2021_uk"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2021/interior/uk/gt_xl.pmd"
+	collision: "/vehicle/truck/volvo_fh_2021/interior/uk/gt_xl.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/uk/anim/anim_2021.pmd"
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh16
+	left_hand_traffic: true
+
+@include "animations_2021_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+@include "computers_uk.sui"
+
+	glass_panes[]: .volvo.fh_2021.pane.front
+	glass_panes[]: .volvo.fh_2021.pane.left
+	glass_panes[]: .volvo.fh_2021.pane.right
+	glass_panes[]: .volvo.fh_2021.pane.top
+
+	suitable_for[]: "l2h3.volvo.fh_2021.cabin"
+	suitable_for[]: "l2h3_8x4.volvo.fh_2021.cabin"
+
+	ext_model: "/vehicle/truck/volvo_fh_2021/interior/external/gt_xl_fh16_2021.pmd"
+	ext_variant: cabin_uk
+	ext_look: default
+
+@include "dashboard_color_2021.sui"
+#@include "seat.sui"
+@include "mirrors_uk.sui"
+@include "int_shadow_gt_xl_uk.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

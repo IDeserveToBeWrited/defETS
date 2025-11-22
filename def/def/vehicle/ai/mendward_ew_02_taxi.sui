@@ -14,7 +14,7 @@ traffic_vehicle : traffic.mendward.ew_02.taxi_alb
 	sound_move[]: "/sound/traffic/car_default_2.soundref"
 	sound_move[]: "/sound/traffic/car_normal_3.soundref"
 
-	tags[]: expensive
+	
 	tags[]: urban
 	tags[]: taxi
 	tags[]: context
@@ -58,7 +58,7 @@ traffic_vehicle : traffic.mendward.ew_02.taxi_blk
 	sound_move[]: "/sound/traffic/car_default_2.soundref"
 	sound_move[]: "/sound/traffic/car_normal_3.soundref"
 
-	tags[]: expensive
+	
 	tags[]: urban
 	tags[]: taxi
 	tags[]: context
@@ -83,4 +83,167 @@ vehicle_wheel_accessory: .mendward.ew_02.taxi_blk.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+
+# XXXXXXXXXXXXXXXXXXX Greece | Thessaloniki XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.mendward.ew_02.taxi_gr_th
+{
+	accessories[]: .mendward.ew_02.taxi_gr_th.chassis
+	accessories[]: .mendward.ew_02.taxi_gr_th.fwheel
+	accessories[]: .mendward.ew_02.taxi_gr_th.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+	
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"	
+
+	spawn_condition[]: .traffic.mendward.ew_02.taxi_gr_th.condition.city
+}
+
+vehicle_accessory: .mendward.ew_02.taxi_gr_th.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_ew_02/chassis_taxi_gr_th.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_th.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_th.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+traffic_spawn_condition: .traffic.mendward.ew_02.taxi_gr_th.condition.city
+{
+	#spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "thessaloniki"
+    str_param[]: "rhodes"
+}
+
+# XXXXXXXXXXXXXXXXXXX Greece | Universal White XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.mendward.ew_02.taxi_gr_wh
+{
+	accessories[]: .mendward.ew_02.taxi_gr_wh.chassis
+	accessories[]: .mendward.ew_02.taxi_gr_wh.fwheel
+	accessories[]: .mendward.ew_02.taxi_gr_wh.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+	
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"	
+
+	spawn_condition[]: .traffic.mendward.ew_02.taxi_gr_wh.condition.city
+}
+
+vehicle_accessory: .mendward.ew_02.taxi_gr_wh.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_ew_02/chassis_taxi_gr_wh.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_wh.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_wh.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+traffic_spawn_condition: .traffic.mendward.ew_02.taxi_gr_wh.condition.city
+{
+	#spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "kavala"
+    str_param[]: "kalamata"
+}
+
+# XXXXXXXXXXXXXXXXXXX Greece | Universal Silver XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.mendward.ew_02.taxi_gr_si
+{
+	accessories[]: .mendward.ew_02.taxi_gr_si.chassis
+	accessories[]: .mendward.ew_02.taxi_gr_si.fwheel
+	accessories[]: .mendward.ew_02.taxi_gr_si.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+	
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"	
+
+	spawn_condition[]: .traffic.mendward.ew_02.taxi_gr_si.condition.city
+}
+
+vehicle_accessory: .mendward.ew_02.taxi_gr_si.chassis
+{
+	data_path: "/def/vehicle/ai/mendward_ew_02/chassis_taxi_gr_si.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_si.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .mendward.ew_02.taxi_gr_si.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+traffic_spawn_condition: .traffic.mendward.ew_02.taxi_gr_si.condition.city
+{
+	#spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "heraklion"
+    str_param[]: "larissa"	
 }
