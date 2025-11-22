@@ -21,16 +21,17 @@ accessory_trailer_body_data : short.scs.lowloader.body
 
 	# visual data
 
-		model: "/vehicle/trailer_owned/scs_lowloader/body/body_short.pmd"
-		collision: "/vehicle/trailer_owned/scs_lowloader/body/body_short.pmc"
-		
-		
+	model: "/vehicle/trailer_owned/scs_lowloader/body/body_short.pmd"
+	collision: "/vehicle/trailer_owned/scs_lowloader/body/body_short.pmc"
+
 #xxxxxxxxxxxxxxxx new cargo system xxxxxxxxxxxxxxxxx
 
-cargo_loading_methods[]: area
-cargo_loading_methods[]: custom
+	cargo_loading_methods[]: area
+	cargo_loading_methods[]: custom
 
 	cargo_areas[]: (2.5, 6.36)
+	
+	cargo_custom_loads_path: "/def/vehicle/trailer_owned/scs.lowloader/body/short"
 
 	cargo_regular_width: 2.5
 
@@ -42,9 +43,8 @@ cargo_loading_methods[]: custom
 	cargo_lashing_mounts[]: .lashm3
 	cargo_lashing_mounts[]: .lashm4
 	cargo_lashing_mounts[]: .lashm5
-	
+
 @include "/def/vehicle/lashing_gear.sui"
-@include "/def/vehicle/trailer_owned/scs.lowloader/body/cargo_custom_loads_short.sui"
 }
 
 #xxxxxxxxxx left side
@@ -53,23 +53,19 @@ cargo_lashing_mount : .lashm0
 {
 	spacing: 1.42966
 	hook_angle_constraints: (45, 90, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_1.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_1.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_1.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_1.pmd"
 }
 
 #xxxxxxxxxx right side
 cargo_lashing_mount : .lashm1
 {
-	
-	
+
 	spacing: 1.42966
 	hook_angle_constraints: (45, 90, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_2.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_2.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_2.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_2.pmd"
 }
-
 
 #xxxxxxxxxx front
 
@@ -77,17 +73,15 @@ cargo_lashing_mount : .lashm2
 {
 	spacing: 1.0
 	#hook_angle_constraints: (20, 20, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_3.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_3.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_3.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_3.pmd"
 }
 cargo_lashing_mount : .lashm3
 {
 	spacing: 1.0
 	#hook_angle_constraints: (20, 20, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_3.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_3.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_3.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_3.pmd"
 }
 
 #xxxxxxxxxx rear
@@ -96,19 +90,16 @@ cargo_lashing_mount : .lashm4
 {
 	spacing: 1.0
 	#hook_angle_constraints: (20, 20, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_4.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_4.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_4.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_4.pmd"
 }
 cargo_lashing_mount : .lashm5
 {
 	spacing: 1.0
 	#hook_angle_constraints: (20, 20, 10)
-	open_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_open_4.pmd"
-	closed_model: 	"/vehicle/trailer_owned/scs_lowloader/body/ring_close_4.pmd"
-
+	open_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_open_4.pmd"
+	closed_model: "/vehicle/trailer_owned/scs_lowloader/body/ring_close_4.pmd"
 }
 
 @include "/def/vehicle/lashing_gear_data.sui"
-@include "/def/vehicle/trailer_owned/scs.lowloader/body/cargo_custom_load_data_short.sui"
 }

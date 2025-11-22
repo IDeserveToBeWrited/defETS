@@ -1,0 +1,53 @@
+#-------------------------------CAMPER-------------------------------#
+traffic_vehicle : traffic.ixcent.pickup.midclass_24.mine
+{
+	accessories[]: .ixcent.pickup.midclass_24.mine.chassis
+	accessories[]: .ixcent.pickup.midclass_24.mine.fwheel
+	accessories[]: .ixcent.pickup.midclass_24.mine.rwheel
+
+	max_speed: 240
+	vehicle_mass: 2600
+
+	sound_move[]: "/sound/traffic/car_v8_1.soundref"
+	sound_move[]: "/sound/traffic/car_v8_2.soundref"
+	sound_horn[]: "/sound/traffic/car_horn_4.soundref"
+
+	spawn_ratio: 0.5
+	
+	tags[]: nord_sten
+	tags[]: context
+
+@include "drivers_generic.sui"
+
+	spawn_condition[]: .traffic.ixcent.pickup.midclass_24.mine.condition
+	spawn_condition[]: .traffic.ixcent.pickup.midclass_24.mine.condition2
+
+}
+
+traffic_spawn_condition: .traffic.ixcent.pickup.midclass_24.mine.condition
+{
+	type: area
+	str_param[]: "nord_sten"
+}
+traffic_spawn_condition: .traffic.ixcent.pickup.midclass_24.mine.condition2
+{
+	type: area
+	str_param[]: "company"
+}
+
+vehicle_accessory: .ixcent.pickup.midclass_24.mine.chassis
+{
+	data_path: "/def/vehicle/ai/ixcent_pickup_midclass_24/chassis_mine.sii"
+}
+
+vehicle_wheel_accessory: .ixcent.pickup.midclass_24.mine.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_car_modern_18in_02.sii"
+}
+
+vehicle_wheel_accessory: .ixcent.pickup.midclass_24.mine.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_car_modern_18in_02.sii"
+}

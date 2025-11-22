@@ -1,11 +1,15 @@
 SiiNunit
 {
 core_interior_glass_config : .glass.config.rain {
-	distort_material: "/material/environment/blobs_rain.mat"
+	drop_material: "/material/environment/blobs_rain.mat"
+
 	drop_count_per_meter: 5000
 
-	initial_splash_scale: 3.333
-	splash_duration: 0.2
+	min_initial_splash_scale: 3.333
+	max_initial_splash_scale: 3.333
+
+	min_splash_duration: 0.2
+	max_splash_duration: 0.2
 
 	minimal_lifetime: 1
 	maximal_lifetime: 8
@@ -13,7 +17,8 @@ core_interior_glass_config : .glass.config.rain {
 	minimal_fadeout: 0.3
 	maximal_fadeout: 2.0
 
-	distortion_strength: 1.0
+	min_distortion_strength: 1.0
+	max_distortion_strength: 1.0
 	blur_strength: 1.0
 
 	deformation_duration: 0.8

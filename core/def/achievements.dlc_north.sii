@@ -1,0 +1,172 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC North --
+
+# Discover at least 15 Scandinavian cities.
+
+achievement_visit_city_data : .achievement.sc_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: aalborg
+	cities[]: bergen
+	cities[]: esbjerg
+	cities[]: frederikshv
+	cities[]: gedser
+	cities[]: goteborg
+	cities[]: helsingborg
+	cities[]: hirtshals
+	cities[]: jonkoping
+	cities[]: kalmar
+	cities[]: kapellskar
+	cities[]: karlskrona
+	cities[]: kobenhavn
+	cities[]: kristiansand
+	cities[]: linkoping
+	cities[]: malmo
+	cities[]: nynashamn
+	cities[]: odense
+	cities[]: orebro
+	cities[]: oslo
+	cities[]: sodertalje
+	cities[]: stavanger
+	cities[]: stockholm
+	cities[]: trelleborg
+	cities[]: uppsala
+	cities[]: vasteraas
+	cities[]: vaxjo
+	target: 15
+
+	achievement_name: sc_visit_cities
+
+	steam_progress_id: "sc_visit_cities-progress"
+	steam_id: sc_visit_cities
+}
+
+achievement_each_company_data : .achievement.boat_cargo
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: marina.stockholm
+	targets[]: marina.oslo
+	targets[]: marina.esbjerg
+	target: 3
+
+	achievement_name: sc_deliver_marinas
+
+	steam_progress_id: "sc_deliver_marinas-progress"
+	steam_id: sc_deliver_marinas
+}
+
+# Deliver cargo to at least 1 container port in Scandinavia DLC.
+
+achievement_each_company_data : .achievement.port_cargo
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: cont_port.oslo
+	targets[]: cont_port.esbjerg
+	target: 1
+
+	achievement_name: sc_container_ports
+
+	steam_id: sc_container_ports
+}
+
+# Complete delivery jobs to at least 3 quarries in Scandinavia DLC.
+
+achievement_each_company_data : .achievement.quarry_cargo
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: ms_stein.stavanger
+	targets[]: ms_stein.kristiansand
+	targets[]: ms_stein.oslo
+	targets[]: nord_sten.jonkoping
+	targets[]: nord_sten.kalmar
+	targets[]: nord_sten.linkoping
+	targets[]: nord_sten.vaxjo
+	target: 3
+
+	achievement_name: sc_quarries_cargo
+
+	steam_progress_id: "sc_quarries_cargo-progress"
+	steam_id: sc_quarries_cargo
+}
+
+# Deliver truck cargo from Volvo Trucks factory.
+
+achievement_delivery_log_data : .achievement.volvo_cargo
+{
+	event_name: job_done
+	consecutive: true
+	cargos[]: volvo_tr
+	source_companies[]: volvo_fac.goteborg
+
+	achievement_name: sc_volvo_cargo
+
+	steam_id: sc_volvo_cargo
+}
+
+# Deliver truck cargo from Scania factory.
+
+achievement_delivery_log_data : .achievement.scania_cargo
+{
+	event_name: job_done
+	consecutive: true
+	cargos[]: scania_tr
+	source_companies[]: scania_fac.sodertalje
+
+	achievement_name: sc_scania_cargo
+
+	steam_id: sc_scania_cargo
+}
+
+# Complete a cattle delivery to any company in Scandinavia DLC.
+
+achievement_deliver_cargo_data : .achievement.cows_cargo
+{
+	event_name: job_done
+	initial_check: false
+	cargo: live_cattle
+	targets[]: fle.kobenhavn
+	targets[]: freyr.aalborg
+	targets[]: freyr.esbjerg
+	targets[]: freyr.jonkoping
+	targets[]: freyr.trelleborg
+
+	achievement_name: sc_cows_to_farm
+
+	steam_id: sc_cows_to_farm
+}
+
+# Travel across the Øresund Bridge between København and Malmö.
+
+achievement_trigger_data : .achievement.oresund_brid
+{
+	event_name: trig_activat
+	trigger_param: sc_oresund_bridge
+	target: 1
+
+	achievement_name: sc_oresund_bridge
+
+	steam_id: sc_oresund_bridge
+}
+
+}

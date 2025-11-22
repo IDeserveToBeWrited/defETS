@@ -1,0 +1,860 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Greece --
+
+# Discover at least 12 cities in Greece.
+
+achievement_visit_city_data : .achievement.gr_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	country_name: greece
+	target: 12
+
+	achievement_name: gr_visit_cities
+
+	steam_progress_id: "gr_visit_cities-progress"
+	steam_id: gr_visit_cities
+}
+
+# View cutscenes from at least 8 viewpoints in Greece.
+
+achievement_trigger_data : .achievement.gr_cutscenes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: gr_cutscenes
+	target: 8
+
+	achievement_name: gr_cutscenes
+
+	steam_progress_id: "gr_cutscenes-progress"
+	steam_id: gr_cutscenes
+}
+
+# Deliver cargo to at least 4 unique hotels in Greece.
+
+achievement_delivery : .achievement.gr_hotels
+{
+	event_name: job_done
+	initial_check: true
+	condition: .gr_hotels.condition
+	target: 4 
+
+	achievement_name: gr_hotels
+
+	steam_progress_id: "gr_hotels-progress"
+	steam_id: gr_hotels
+}
+
+achievement_delivery_sequence : .gr_hotels.condition
+{
+	list[]: .gr_hotels.argostoli
+	list[]: .gr_hotels.chania
+	list[]: .gr_hotels.chios
+	list[]: .gr_hotels.mitilini
+	list[]: .gr_hotels.rhodes
+}
+
+achievement_delivery_company : .gr_hotels.argostoli
+{
+	role: target
+	company_name: artemia
+	city_name: argostoli
+}
+
+achievement_delivery_company : .gr_hotels.chania
+{
+	role: target
+	company_name: artemia
+	city_name: chania
+}
+
+achievement_delivery_company : .gr_hotels.chios
+{
+	role: target
+	company_name: artemia
+	city_name: chios
+}
+
+achievement_delivery_company : .gr_hotels.mitilini
+{
+	role: target
+	company_name: artemia
+	city_name: mitilini
+}
+
+achievement_delivery_company : .gr_hotels.rhodes
+{
+	role: target
+	company_name: artemia
+	city_name: rhodes
+}
+
+# Deliver olives or olive oil from Eliarchos Olive Farm to 5 different cities in Greece.
+
+achievement_delivery : .achievement.gr_olive
+{
+	event_name: job_done
+	initial_check: true
+	condition: .gr_olive.condition
+	target: 5
+
+	achievement_name: gr_olive
+
+	steam_progress_id: "gr_olive-progress"
+	steam_id: gr_olive
+}
+
+achievement_delivery_sequence : .gr_olive.condition
+{
+	list[]: .gr_olive.argostoli
+	list[]: .gr_olive.athens
+	list[]: .gr_olive.chania
+	list[]: .gr_olive.chios
+	list[]: .gr_olive.heraklion
+	list[]: .gr_olive.ioannina
+	list[]: .gr_olive.kalamata
+	list[]: .gr_olive.kavala
+	list[]: .gr_olive.lamia
+	list[]: .gr_olive.larissa
+	list[]: .gr_olive.mitilini
+	list[]: .gr_olive.patras
+	list[]: .gr_olive.rhodes
+	list[]: .gr_olive.thessaloniki
+	list[]: .gr_olive.trikala
+}
+
+achievement_delivery_each : .gr_olive.argostoli
+{
+	list[]: .gr_olive.argostoli.cargo
+	list[]: .gr_olive.argostoli.source
+	list[]: .gr_olive.argostoli.target
+}
+
+achievement_delivery_any : .gr_olive.argostoli.cargo
+{
+	list[]: .gr_olive.argostoli.cargo.olive_oil
+	list[]: .gr_olive.argostoli.cargo.olive_oil_t
+	list[]: .gr_olive.argostoli.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.argostoli.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.argostoli.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.argostoli.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.argostoli.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.argostoli.target
+{
+	role: target
+	city_name: argostoli
+}
+
+achievement_delivery_each : .gr_olive.athens
+{
+	list[]: .gr_olive.athens.cargo
+	list[]: .gr_olive.athens.source
+	list[]: .gr_olive.athens.target
+}
+
+achievement_delivery_any : .gr_olive.athens.cargo
+{
+	list[]: .gr_olive.athens.cargo.olive_oil
+	list[]: .gr_olive.athens.cargo.olive_oil_t
+	list[]: .gr_olive.athens.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.athens.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.athens.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.athens.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.athens.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.athens.target
+{
+	role: target
+	city_name: athens
+}
+
+achievement_delivery_each : .gr_olive.chania
+{
+	list[]: .gr_olive.chania.cargo
+	list[]: .gr_olive.chania.source
+	list[]: .gr_olive.chania.target
+}
+
+achievement_delivery_any : .gr_olive.chania.cargo
+{
+	list[]: .gr_olive.chania.cargo.olive_oil
+	list[]: .gr_olive.chania.cargo.olive_oil_t
+	list[]: .gr_olive.chania.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.chania.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.chania.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.chania.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.chania.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.chania.target
+{
+	role: target
+	city_name: chania
+}
+
+achievement_delivery_each : .gr_olive.chios
+{
+	list[]: .gr_olive.chios.cargo
+	list[]: .gr_olive.chios.source
+	list[]: .gr_olive.chios.target
+}
+
+achievement_delivery_any : .gr_olive.chios.cargo
+{
+	list[]: .gr_olive.chios.cargo.olive_oil
+	list[]: .gr_olive.chios.cargo.olive_oil_t
+	list[]: .gr_olive.chios.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.chios.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.chios.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.chios.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.chios.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.chios.target
+{
+	role: target
+	city_name: chios
+}
+
+achievement_delivery_each : .gr_olive.heraklion
+{
+	list[]: .gr_olive.heraklion.cargo
+	list[]: .gr_olive.heraklion.source
+	list[]: .gr_olive.heraklion.target
+}
+
+achievement_delivery_any : .gr_olive.heraklion.cargo
+{
+	list[]: .gr_olive.heraklion.cargo.olive_oil
+	list[]: .gr_olive.heraklion.cargo.olive_oil_t
+	list[]: .gr_olive.heraklion.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.heraklion.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.heraklion.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.heraklion.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.heraklion.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.heraklion.target
+{
+	role: target
+	city_name: heraklion
+}
+
+achievement_delivery_each : .gr_olive.ioannina
+{
+	list[]: .gr_olive.ioannina.cargo
+	list[]: .gr_olive.ioannina.source
+	list[]: .gr_olive.ioannina.target
+}
+
+achievement_delivery_any : .gr_olive.ioannina.cargo
+{
+	list[]: .gr_olive.ioannina.cargo.olive_oil
+	list[]: .gr_olive.ioannina.cargo.olive_oil_t
+	list[]: .gr_olive.ioannina.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.ioannina.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.ioannina.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.ioannina.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.ioannina.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.ioannina.target
+{
+	role: target
+	city_name: ioannina
+}
+
+achievement_delivery_each : .gr_olive.kalamata
+{
+	list[]: .gr_olive.kalamata.cargo
+	list[]: .gr_olive.kalamata.source
+	list[]: .gr_olive.kalamata.target
+}
+
+achievement_delivery_any : .gr_olive.kalamata.cargo
+{
+	list[]: .gr_olive.kalamata.cargo.olive_oil
+	list[]: .gr_olive.kalamata.cargo.olive_oil_t
+	list[]: .gr_olive.kalamata.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.kalamata.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.kalamata.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.kalamata.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.kalamata.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.kalamata.target
+{
+	role: target
+	city_name: kalamata
+}
+
+achievement_delivery_each : .gr_olive.kavala
+{
+	list[]: .gr_olive.kavala.cargo
+	list[]: .gr_olive.kavala.source
+	list[]: .gr_olive.kavala.target
+}
+
+achievement_delivery_any : .gr_olive.kavala.cargo
+{
+	list[]: .gr_olive.kavala.cargo.olive_oil
+	list[]: .gr_olive.kavala.cargo.olive_oil_t
+	list[]: .gr_olive.kavala.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.kavala.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.kavala.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.kavala.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.kavala.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.kavala.target
+{
+	role: target
+	city_name: kavala
+}
+
+achievement_delivery_each : .gr_olive.lamia
+{
+	list[]: .gr_olive.lamia.cargo
+	list[]: .gr_olive.lamia.source
+	list[]: .gr_olive.lamia.target
+}
+
+achievement_delivery_any : .gr_olive.lamia.cargo
+{
+	list[]: .gr_olive.lamia.cargo.olive_oil
+	list[]: .gr_olive.lamia.cargo.olive_oil_t
+	list[]: .gr_olive.lamia.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.lamia.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.lamia.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.lamia.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.lamia.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.lamia.target
+{
+	role: target
+	city_name: lamia
+}
+
+achievement_delivery_each : .gr_olive.larissa
+{
+	list[]: .gr_olive.larissa.cargo
+	list[]: .gr_olive.larissa.source
+	list[]: .gr_olive.larissa.target
+}
+
+achievement_delivery_any : .gr_olive.larissa.cargo
+{
+	list[]: .gr_olive.larissa.cargo.olive_oil
+	list[]: .gr_olive.larissa.cargo.olive_oil_t
+	list[]: .gr_olive.larissa.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.larissa.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.larissa.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.larissa.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.larissa.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.larissa.target
+{
+	role: target
+	city_name: larissa
+}
+
+achievement_delivery_each : .gr_olive.mitilini
+{
+	list[]: .gr_olive.mitilini.cargo
+	list[]: .gr_olive.mitilini.source
+	list[]: .gr_olive.mitilini.target
+}
+
+achievement_delivery_any : .gr_olive.mitilini.cargo
+{
+	list[]: .gr_olive.mitilini.cargo.olive_oil
+	list[]: .gr_olive.mitilini.cargo.olive_oil_t
+	list[]: .gr_olive.mitilini.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.mitilini.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.mitilini.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.mitilini.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.mitilini.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.mitilini.target
+{
+	role: target
+	city_name: mitilini
+}
+
+achievement_delivery_each : .gr_olive.patras
+{
+	list[]: .gr_olive.patras.cargo
+	list[]: .gr_olive.patras.source
+	list[]: .gr_olive.patras.target
+}
+
+achievement_delivery_any : .gr_olive.patras.cargo
+{
+	list[]: .gr_olive.patras.cargo.olive_oil
+	list[]: .gr_olive.patras.cargo.olive_oil_t
+	list[]: .gr_olive.patras.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.patras.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.patras.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.patras.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.patras.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.patras.target
+{
+	role: target
+	city_name: patras
+}
+
+achievement_delivery_each : .gr_olive.rhodes
+{
+	list[]: .gr_olive.rhodes.cargo
+	list[]: .gr_olive.rhodes.source
+	list[]: .gr_olive.rhodes.target
+}
+
+achievement_delivery_any : .gr_olive.rhodes.cargo
+{
+	list[]: .gr_olive.rhodes.cargo.olive_oil
+	list[]: .gr_olive.rhodes.cargo.olive_oil_t
+	list[]: .gr_olive.rhodes.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.rhodes.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.rhodes.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.rhodes.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.rhodes.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.rhodes.target
+{
+	role: target
+	city_name: rhodes
+}
+
+achievement_delivery_each : .gr_olive.thessaloniki
+{
+	list[]: .gr_olive.thessaloniki.cargo
+	list[]: .gr_olive.thessaloniki.source
+	list[]: .gr_olive.thessaloniki.target
+}
+
+achievement_delivery_any : .gr_olive.thessaloniki.cargo
+{
+	list[]: .gr_olive.thessaloniki.cargo.olive_oil
+	list[]: .gr_olive.thessaloniki.cargo.olive_oil_t
+	list[]: .gr_olive.thessaloniki.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.thessaloniki.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.thessaloniki.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.thessaloniki.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.thessaloniki.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.thessaloniki.target
+{
+	role: target
+	city_name: thessaloniki
+}
+
+achievement_delivery_each : .gr_olive.trikala
+{
+	list[]: .gr_olive.trikala.cargo
+	list[]: .gr_olive.trikala.source
+	list[]: .gr_olive.trikala.target
+}
+
+achievement_delivery_any : .gr_olive.trikala.cargo
+{
+	list[]: .gr_olive.trikala.cargo.olive_oil
+	list[]: .gr_olive.trikala.cargo.olive_oil_t
+	list[]: .gr_olive.trikala.cargo.olives
+}
+
+achievement_delivery_cargo : .gr_olive.trikala.cargo.olive_oil
+{
+	cargo_name: olive_oil 
+}
+
+achievement_delivery_cargo : .gr_olive.trikala.cargo.olive_oil_t
+{
+	cargo_name: olive_oil_t 
+}
+
+achievement_delivery_cargo : .gr_olive.trikala.cargo.olives
+{
+	cargo_name: olives 
+}
+
+achievement_delivery_company : .gr_olive.trikala.source
+{
+	role: source
+	company_name: eliarchos
+	country_name: greece
+}
+
+achievement_delivery_point_city : .gr_olive.trikala.target
+{
+	role: target
+	city_name: trikala
+}
+
+# Deliver 3 Marble Blocks and 3 undamaged Marble Slabs from Rock Eater Quarry in Greece.
+
+achievement_delivery : .achievement.gr_marble
+{
+	event_name: job_done
+	initial_check: true
+	condition: .gr_marble.condition
+	target: 6 
+
+	achievement_name: gr_marble
+
+	steam_progress_id: "gr_marble-progress"
+	steam_id: gr_marble
+}
+
+achievement_delivery_sequence : .gr_marble.condition
+{
+	list[]: .gr_marble.marb_blck
+	list[]: .gr_marble.marb_slab
+}
+
+achievement_delivery_count : .gr_marble.marb_blck
+{
+	condition: .gr_marble.marb_blck.3
+	count: 3
+}
+
+achievement_delivery_each : .gr_marble.marb_blck.3
+{
+	list[]: .gr_marble.marb_blck.3.cargo
+	list[]: .gr_marble.marb_blck.3.source
+}
+
+achievement_delivery_any : .gr_marble.marb_blck.3.cargo
+{
+	list[]: .gr_marble.marb_blck.3.cargo.marb_blck
+	list[]: .gr_marble.marb_blck.3.cargo.marb_blck2
+}
+
+achievement_delivery_cargo : .gr_marble.marb_blck.3.cargo.marb_blck
+{
+	cargo_name: marb_blck 
+}
+
+achievement_delivery_cargo : .gr_marble.marb_blck.3.cargo.marb_blck2
+{
+	cargo_name: marb_blck2
+}
+
+achievement_delivery_company : .gr_marble.marb_blck.3.source
+{
+	role: source
+	company_name: rock_eater
+	country_name: greece
+}
+
+achievement_delivery_count : .gr_marble.marb_slab
+{
+	condition: .gr_marble.marb_slab.3
+	count: 3
+}
+
+achievement_delivery_each : .gr_marble.marb_slab.3
+{
+	list[]: .gr_marble.marb_slab.3.cargo
+	list[]: .gr_marble.marb_slab.3.damage
+	list[]: .gr_marble.marb_slab.3.source
+}
+
+achievement_delivery_cargo : .gr_marble.marb_slab.3.cargo
+{
+	cargo_name: marb_slab 
+}
+
+achievement_delivery_cargo_damage : .gr_marble.marb_slab.3.damage
+{
+        damage_max: 0.0
+}
+
+achievement_delivery_company : .gr_marble.marb_slab.3.source
+{
+	role: source
+	company_name: rock_eater
+	country_name: greece
+}
+
+}

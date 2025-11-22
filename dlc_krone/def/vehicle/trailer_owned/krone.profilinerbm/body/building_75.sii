@@ -1,0 +1,63 @@
+SiiNunit
+{
+accessory_trailer_body_data : build_75.krone.profilinerbm.body
+{
+	name: "@@series_krone_profi_liner_bm@@"
+	price: 7500
+	unlock: 0
+	icon: "body/krone/profiliner_bm75"
+	part_type: factory
+
+	# All is based on Krone Profi Liner trailer data
+	# https://www.krone-trailer.com/english/products/curtainsider/profi-liner/
+
+	size: (2.48, 2.65, 13.62)	# width, height, length (internal size of the body)
+	total_size: (2.55, 4.0, 13.62)	# width, height, length (size of the body + chassis)
+
+	volume: 87
+	body_type: flatbed_brck
+
+	# Mass of the cargo container in KG.
+	# Base mass for trailer is in chassis, bodies have only deltas for eventual variants.
+
+	mass: 0
+
+	# visual data
+
+	model: "/vehicle/trailer_owned/krone_profilinerbm/body/building_75.pmd"
+	collision: "/vehicle/trailer_owned/krone_profilinerbm/body/building_75.pmc"
+
+# new cargo system
+
+	cargo_loading_methods[]: area
+	#cargo_loading_methods[]: custom
+
+	cargo_areas[]: (2.40, 13.43)
+
+	cargo_regular_width: 2.4
+
+	#cargo_custom_loads[]: .glass_rack_c
+
+	cargo_lashing_mounts[]: .lashm1
+	cargo_lashing_mounts[]: .lashm2
+@include "/def/vehicle/lashing_gear.sui"
+}
+
+cargo_lashing_mount : .lashm1
+{
+
+	spacing: 0.1
+	hook_angle_constraints: (25, 90, 10)
+	#open_model: 	"/vehicle/trailer_owned/upgrade/body/krone_profilinerhd/ring_open_1.pmd"
+	#closed_model: 	"/vehicle/trailer_owned/upgrade/body/krone_profilinerhd/ring_close_1.pmd"
+}
+cargo_lashing_mount : .lashm2
+{
+
+	spacing: 0.1
+	hook_angle_constraints: (25, 90, 10)
+	#open_model: 	"/vehicle/trailer_owned/upgrade/body/krone_profilinerhd/ring_open_2.pmd"
+	#closed_model: 	"/vehicle/trailer_owned/upgrade/body/krone_profilinerhd/ring_close_2.pmd"
+}
+@include "/def/vehicle/lashing_gear_data.sui"
+}

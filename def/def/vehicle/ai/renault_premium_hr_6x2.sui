@@ -1,0 +1,55 @@
+traffic_vehicle : traffic.renault.premium.hr_6x2
+{
+	accessories[]: .renault.premium.hr_6x2.chassis
+	accessories[]: .renault.premium.hr_6x2.fwheel
+	accessories[]: .renault.premium.hr_6x2.rwheel
+	accessories[]: .renault.premium.hr_6x2.rwheel2
+	accessories[]: .renault.premium.hr_6x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	vehicle_mass: 7440
+	engine_power: 298
+
+	#color from upgrade shop
+	color[]: (0.0948, 0.101, 0.1102) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.0251, 0.0578, 0.1328) #blue
+	
+	spawn_ratio: 0.05
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .renault.premium.hr_6x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/renault.premium/renault_premium_hr_6x2.sii"
+}
+vehicle_wheel_accessory: .renault.premium.hr_6x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .renault.premium.hr_6x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .renault.premium.hr_6x2.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .renault.premium.hr_6x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/renault.premium/accessory/trlr_cables/stock.sii"
+}

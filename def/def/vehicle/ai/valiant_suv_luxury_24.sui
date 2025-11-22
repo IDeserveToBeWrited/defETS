@@ -1,0 +1,46 @@
+
+###################################### Border Police | DENMARK ######################################
+
+traffic_vehicle : traffic.valiant.suv.luxury_24
+{
+	accessories[]: .valiant.suv.luxury_24.chassis
+	accessories[]: .valiant.suv.luxury_24.fwheel
+	accessories[]: .valiant.suv.luxury_24.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+	
+	allow_parked: true
+	color[]: (0.0723, 0.1356, 0.2016)
+	color[]: (0.0382, 0.0318, 0.0273) 
+	color[]: (0, 0.0263, 0.1347) 
+	color[]: (0.5394, 0.5711, 0.5906) 
+	color[]: (0.8713, 0.8631, 0.8227) 
+	color[]: (0.1596, 0.0093, 0.0197) 
+
+	spawn_ratio: 1.0
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .valiant.suv.luxury_24.chassis
+{
+	data_path: "/def/vehicle/ai/valiant_suv_luxury_24/chassis.sii"
+}
+
+vehicle_wheel_accessory: .valiant.suv.luxury_24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_1.sii"
+}
+
+vehicle_wheel_accessory: .valiant.suv.luxury_24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
+}

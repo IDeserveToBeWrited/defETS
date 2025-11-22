@@ -1,0 +1,362 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Balt --
+
+# Discover at least 20 Beyond the Baltic Sea DLC cities.
+
+achievement_visit_city_data : .achievement.ba_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: daugavpils
+	cities[]: helsinki
+	cities[]: kaliningrad
+	cities[]: kaunas
+	cities[]: klaipeda
+	cities[]: kotka
+	cities[]: kouvola
+	cities[]: kunda
+	cities[]: lahti
+	cities[]: liepaja
+	cities[]: loviisa
+	cities[]: luga
+	cities[]: mazeikiai
+	cities[]: naantali
+	cities[]: narva
+	cities[]: olkiluoto
+	cities[]: paldiski
+	cities[]: panevezys
+	cities[]: parnu
+	cities[]: petersburg
+	cities[]: pori
+	cities[]: pskov
+	cities[]: rezekne
+	cities[]: riga
+	cities[]: siauliai
+	cities[]: sosnovy_bor
+	cities[]: tallinn
+	cities[]: tampere
+	cities[]: tartu
+	cities[]: turku
+	cities[]: utena
+	cities[]: valmiera
+	cities[]: ventspils
+	cities[]: vilnius
+	cities[]: vyborg
+	target: 20
+
+	achievement_name: ba_visit_cities
+
+	steam_progress_id: "ba_visit_cities-progress"
+	steam_id: ba_visit_cities
+}
+
+# Complete excellent deliveries between the following countries: Russia - Lithuania; Lithuania - Latvia; Latvia - Estonia; Estonia - Russia; Russia - Finland. Any order or direction counts.
+
+achievement_each_delivery_point : .achievement.ba_job_count
+{
+	event_name: job_done
+	initial_check: true
+	both_directions: true
+	damage_max: 0.0
+	late: false
+	sources[]: .ba_job_count.russia.lithuania.source
+	targets[]: .ba_job_count.russia.lithuania.target
+	sources[]: .ba_job_count.lithuania.latvia.source
+	targets[]: .ba_job_count.lithuania.latvia.target
+	sources[]: .ba_job_count.latvia.estonia.source
+	targets[]: .ba_job_count.latvia.estonia.target
+	sources[]: .ba_job_count.estonia.russia.source
+	targets[]: .ba_job_count.estonia.russia.target
+	sources[]: .ba_job_count.russia.finland.source
+	targets[]: .ba_job_count.russia.finland.target
+	target: 5
+
+	achievement_name: ba_job_countries
+
+	steam_progress_id: "ba_job_countries-progress"
+	steam_id: ba_job_countries
+}
+
+achievement_delivery_country : .ba_job_count.russia.lithuania.source
+{
+	country_name: russia
+}
+
+achievement_delivery_country : .ba_job_count.russia.lithuania.target
+{
+	country_name: lithuania
+}
+
+achievement_delivery_country : .ba_job_count.lithuania.latvia.source
+{
+	country_name: lithuania
+}
+
+achievement_delivery_country : .ba_job_count.lithuania.latvia.target
+{
+	country_name: latvia
+}
+
+achievement_delivery_country : .ba_job_count.latvia.estonia.source
+{
+	country_name: latvia
+}
+
+achievement_delivery_country : .ba_job_count.latvia.estonia.target
+{
+	country_name: estonia
+}
+
+achievement_delivery_country : .ba_job_count.estonia.russia.source
+{
+	country_name: estonia
+}
+
+achievement_delivery_country : .ba_job_count.estonia.russia.target
+{
+	country_name: russia
+}
+
+achievement_delivery_country : .ba_job_count.russia.finland.source
+{
+	country_name: russia
+}
+
+achievement_delivery_country : .ba_job_count.russia.finland.target
+{
+	country_name: finland
+}
+
+# Complete 5 deliveries between Kaliningrad and any other Russian city.
+
+achievement_delivery_log_data : .achievement.ba_to_russia
+{
+	event_name: job_done
+	source_cities[]: kaliningrad
+	target_cities[]: luga
+	target_cities[]: petersburg
+	target_cities[]: pskov
+	target_cities[]: sosnovy_bor
+	target_cities[]: vyborg
+	target: 5
+
+	achievement_name: ba_to_russia
+
+	steam_progress_id: "ba_to_russia-progress"
+	steam_id: ba_to_russia
+}
+
+# Complete 10 deliveries from concrete plants.
+
+achievement_delivery_log_data : .achievement.ba_concrete
+{
+	event_name: job_done
+	initial_check: true
+	source_companies[]: radus.kouvola
+	source_companies[]: radus.tampere
+	source_companies[]: radus.tartu
+	source_companies[]: radus_ru.petersburg
+	target: 10
+
+	achievement_name: ba_concrete
+
+	steam_progress_id: "ba_concrete-progress"
+	steam_id: ba_concrete
+}
+
+# Make 2 deliveries to locomotive, furniture and paper mill factories.
+
+achievement_delivery : .achievement.ba_industry
+{
+	event_name: job_done
+	initial_check: true
+	condition: .ba_industry.condition
+	target: 6
+
+	achievement_name: ba_industry
+
+	steam_progress_id: "ba_industry-progress"
+	steam_id: ba_industry
+}
+
+achievement_delivery_sequence : .ba_industry.condition
+{
+	list[]: .ba_industry.lvr
+	list[]: .ba_industry.renat
+	list[]: .ba_industry.paper
+}
+
+achievement_delivery_count : .ba_industry.lvr
+{
+	condition: .ba_industry.lvr.2
+	count: 2
+}
+
+achievement_delivery_any : .ba_industry.lvr.2
+{
+	list[]: .ba_industry.lvr.daugavpils
+	list[]: .ba_industry.lvr.riga
+}
+
+achievement_delivery_company : .ba_industry.lvr.daugavpils
+{
+	role: target
+	company_name: lvr
+	city_name: daugavpils
+}
+
+achievement_delivery_company : .ba_industry.lvr.riga
+{
+	role: target
+	company_name: lvr
+	city_name: riga
+}
+
+achievement_delivery_count : .ba_industry.renat
+{
+	condition: .ba_industry.renat.2
+	count: 2
+}
+
+achievement_delivery_any : .ba_industry.renat.2
+{
+	list[]: .ba_industry.renat.daugavpils
+	list[]: .ba_industry.renat.helsinki
+	list[]: .ba_industry.renat.rezekne
+	list[]: .ba_industry.renat.riga
+	list[]: .ba_industry.renat.siauliai
+	list[]: .ba_industry.renat.tartu
+}
+
+achievement_delivery_company : .ba_industry.renat.daugavpils
+{
+	role: target
+	company_name: renat
+	city_name: daugavpils
+}
+
+achievement_delivery_company : .ba_industry.renat.helsinki
+{
+	role: target
+	company_name: renat
+	city_name: helsinki
+}
+
+achievement_delivery_company : .ba_industry.renat.rezekne
+{
+	role: target
+	company_name: renat
+	city_name: rezekne
+}
+
+achievement_delivery_company : .ba_industry.renat.riga
+{
+	role: target
+	company_name: renat
+	city_name: riga
+}
+
+achievement_delivery_company : .ba_industry.renat.siauliai
+{
+	role: target
+	company_name: renat
+	city_name: siauliai
+}
+
+achievement_delivery_company : .ba_industry.renat.tartu
+{
+	role: target
+	company_name: renat
+	city_name: tartu
+}
+
+achievement_delivery_count : .ba_industry.paper
+{
+	condition: .ba_industry.paper.2
+	count: 2
+}
+
+achievement_delivery_any : .ba_industry.paper.2
+{
+	list[]: .ba_industry.paper.kunda
+	list[]: .ba_industry.paper.kouvola
+	list[]: .ba_industry.paper.tampere
+	list[]: .ba_industry.paper.vilnius
+}
+
+achievement_delivery_company : .ba_industry.paper.kunda
+{
+	role: target
+	company_name: ee_paper
+	city_name: kunda
+}
+
+achievement_delivery_company : .ba_industry.paper.kouvola
+{
+	role: target
+	company_name: viljo_paper
+	city_name: kouvola
+}
+
+achievement_delivery_company : .ba_industry.paper.tampere
+{
+	role: target
+	company_name: viljo_paper
+	city_name: tampere
+}
+
+achievement_delivery_company : .ba_industry.paper.vilnius
+{
+	role: target
+	company_name: viln_paper
+	city_name: vilnius
+}
+
+# Deliver cargo to at least 4 farms in Beyond the Baltic Sea DLC.
+
+achievement_each_company_data : .achievement.ba_farm
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: agrominta.utena
+	targets[]: eviksi.daugavpils
+	targets[]: eviksi.liepaja
+	targets[]: eviksi.riga
+	targets[]: onnelik.narva
+	targets[]: onnelik.parnu
+	targets[]: zelenye.petersburg
+	targets[]: egres.helsinki
+	targets[]: egres.kouvola
+	targets[]: agrominta_a.utena
+	targets[]: eviksi_a.liepaja
+	targets[]: eviksi_a.valmiera
+	targets[]: eviksi_a.ventspils
+	targets[]: onnelik_a.parnu
+	targets[]: onnelik_a.tartu
+	targets[]: zelenye_a.kaliningrad
+	target: 4
+
+	achievement_name: ba_farm
+
+	steam_progress_id: "ba_farm-progress"
+	steam_id: ba_farm
+}
+
+}

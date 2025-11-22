@@ -1,0 +1,204 @@
+SiiNunit
+{
+
+##### MATERIAL HANDLER
+
+mover_action : mover_action.dc_m_handlr.default_g_ti
+{
+	type: "idle"
+	action_name: "default_grab_timber_grab"
+	
+	props[]: dc_grab_prop.dc_m_handlr.timber_grab
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.get_up
+{
+	type: "effect"
+	action_name: "get_up"
+	
+    animations[]: "/vehicle/machine/material_handler/mover/get_up.pma"
+    animation_params[]: "delay: 0.5 ; layer: 2"
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.dc.procedural
+{
+    type: "effect"
+    action_name: "dc_procedural"
+
+    procedural_animation_params[]: "layer: 4;
+	bones:root; bones: base; bones:ik_arm; bones:ik_forearm; bones:ik_hand; bones:grab_bind; bones:pis_top; bones:pis_arm; bones:pis_t; bones:pis_bas; effect_name: 'proc_effect'"
+    
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.dc.effect.head_light
+{
+	type: "effect"
+	action_name: "dc_effect_head_light"
+	
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+
+	props[]: mover_props.m_handlr.head_light
+}
+
+mover_action : mover_action.dc_m_handlr.dc.effect.sound
+{
+    type: "effect"
+	action_name: "dc_effect_sound_engine"
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/sawmill_big_4"
+	sound_params[]: "effect_name: 'dc_sound_mhandlr_active' looped: true"
+	
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+## MATERIAL HANDLER GRAB HEADS
+
+mover_action : mover_action.dc_m_handlr.bucketshell
+{
+	type: "effect"
+	action_name: "dc_grab_bucketshell"
+
+	props[]: dc_grab_prop.dc_m_handlr.bucketshell
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.grabber
+{
+	type: "effect"
+	action_name: "dc_grab_grabber"
+
+	props[]: dc_grab_prop.dc_m_handlr.grabber
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.hook
+{
+	type: "effect"
+	action_name: "dc_grab_hook"
+
+	props[]: dc_grab_prop.dc_m_handlr.hook
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.magnet
+{
+	type: "effect"
+	action_name: "dc_grab_magnet"
+
+	props[]: dc_grab_prop.dc_m_handlr.magnet
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.sort_grapple
+{
+	type: "effect"
+	action_name: "dc_grab_sort_grapple"
+
+	props[]: dc_grab_prop.dc_m_handlr.sort_grapple
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.timber_grab
+{
+	type: "effect"
+	action_name: "dc_grab_timber_grab"
+
+	props[]: dc_grab_prop.dc_m_handlr.timber_grab
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_m_handlr.vacuum_tel
+{
+	type: "effect"
+	action_name: "dc_grab_vacuum_tel"
+
+	props[]: dc_grab_prop.dc_m_handlr.vacuum_tel
+
+	group_tags[]: dc_m_handlr
+	group_tags[]: dc_body
+}
+
+
+##### EXCAVATOR CRAWLER
+
+mover_action : mover_action.dc_excavatr.default_g_ti
+{
+	type: "idle"
+	action_name: "default_grab_timber_grab"
+
+	props[]: dc_grab_prop.dc_excavatr.timber_grab
+
+	group_tags[]: dc_excavatr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_excavatr.dc.effect.sound
+{
+	type: "effect"
+	action_name: "dc_effect_sound_engine"
+	sounds[]: "/sound/world/sounds/machines.bank#artificial/machines/sawmill_big_4"
+	sound_params[]: "effect_name: 'dc_sound_excavatr_active' looped: true"
+	
+	group_tags[]: dc_excavatr
+	group_tags[]: dc_body
+}
+
+mover_action : mover_action.dc_excavatr.dc.effect.head_light
+{
+	type: "effect"
+	action_name: "dc_effect_head_light"
+	
+	group_tags[]: dc_excavatr
+	group_tags[]: dc_body
+
+	props[]: mover_props.excavatr.head_light
+}
+
+mover_action : mover_action.excavatr.dc.procedural
+{
+	type: "effect"
+	action_name: "dc_procedural"
+
+    procedural_animation_params[]: "layer: 4;
+	bones:root; bones: base; bones:ik_arm; bones:ik_forearm; bones:ik_hand; bones:grab_bind; bones:pis_top; bones:pis_arm; bones:pis_t; bones:pis_bas; effect_name: 'proc_effect'"
+    
+	group_tags[]: dc_excavatr
+	group_tags[]: dc_body
+}
+
+
+##### EXCAVATOR CRAWLER GRAB HEADS
+
+mover_action : mover_action.dc_excavatr.timber_grab
+{
+	type: "effect"
+	action_name: "dc_grab_timber_grab"
+
+	props[]: dc_grab_prop.dc_excavatr.timber_grab
+
+	group_tags[]: dc_excavatr
+	group_tags[]: dc_body
+}
+
+}

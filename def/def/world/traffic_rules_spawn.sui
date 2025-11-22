@@ -885,7 +885,7 @@ traffic_rule_data : traffic_rule.s_train_dp
 
 traffic_rule_data : traffic_rule.s_train_w_dp
 {
-	# name: "Spawn density train depot"
+	# name: "Spawn density train wire depot"
 
 	rule: "density"
 
@@ -900,6 +900,24 @@ traffic_rule_data : traffic_rule.s_train_w_dp
 	num_params[]: 0.02	# frequency
 	num_params[]: 1		# count limit
 }
+
+traffic_rule_data : traffic_rule.s_train_c_dp
+{
+	# name: "Spawn density train custom depot"
+
+	rule: "density"
+
+	str_params[]: "ranged: true"
+	str_params[]: "context: true"
+
+	str_params[]: "crossing_distance_min: 400"
+	str_params[]: "train_custom context"
+
+	num_params[]: 0.0	# 00:00
+	num_params[]: 0.02	# frequency
+	num_params[]: 1		# count limit
+}
+
 
 traffic_rule_data : traffic_rule.s_truck_c_d
 {

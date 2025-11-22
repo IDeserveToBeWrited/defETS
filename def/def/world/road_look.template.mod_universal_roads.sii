@@ -22,6 +22,8 @@ road_look : road.un01
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
 	compatible_edges_right[]: un_bus_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
@@ -37,6 +39,13 @@ road_look : road.un01
 	compatible_edges_right[]: un_sw_dw
 	compatible_edges_right[]: un_sww_dw
 	compatible_edges_right[]: un_sww_dwn
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -116,6 +125,8 @@ road_look : road.un02
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
 	compatible_edges_right[]: un_bus_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
@@ -131,6 +142,13 @@ road_look : road.un02
 	compatible_edges_right[]: un_sw_dw
 	compatible_edges_right[]: un_sww_dw
 	compatible_edges_right[]: un_sww_dwn
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -298,16 +316,16 @@ road_look : road.un03
 	lanes_fixed_direction: true
 
 	lane_variants[]: .lane.variant.road.un03.local.full_in_out
-	lane_variants[]: .lane.variant.road.un03.local.mid_full_in
-	lane_variants[]: .lane.variant.road.un03.local.mid_full_out
+	lane_variants[]: .lane.variant.road.un03.local.l2_full_in
+	lane_variants[]: .lane.variant.road.un03.local.l2_full_out
 	lane_variants[]: .lane.variant.road.un03.expressway
 	lane_variants[]: .lane.variant.road.un03.expressway.full_in_out
-	lane_variants[]: .lane.variant.road.un03.expressway.mid_full_in
-	lane_variants[]: .lane.variant.road.un03.expressway.mid_full_out
+	lane_variants[]: .lane.variant.road.un03.expressway.l2_full_in
+	lane_variants[]: .lane.variant.road.un03.expressway.l2_full_out
 	lane_variants[]: .lane.variant.road.un03.motorway
 	lane_variants[]: .lane.variant.road.un03.motorway.full_in_out
-	lane_variants[]: .lane.variant.road.un03.motorway.mid_full_in
-	lane_variants[]: .lane.variant.road.un03.motorway.mid_full_out
+	lane_variants[]: .lane.variant.road.un03.motorway.l2_full_in
+	lane_variants[]: .lane.variant.road.un03.motorway.l2_full_out
 
 	overlay_schemes[]: "sparse : 1.0 : _d0|5 : _d1|2 : _d2|1 : _d3|5 : _d4|7 : _d5|2 : _d6|1 : _d7|5 : _d8|5 : _d9|5 : _d10|5 : _d11|5 : _d12|5 : _d13|5 : _d14|5"
 	overlay_schemes[]: "light : 1.0 : _a0|5 : _a1|2 : _a2|1 : _a3|5 : _a4|7 : _a5|2 : _a6|1 : _a7|5 : _a8|5 : _a9|5 : _a10|5 : _a11|5 : _a12|5 : _a13|5"
@@ -322,11 +340,20 @@ road_look : road.un03
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
 	compatible_edges_right[]: un_bus_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_bus_e_15
 	compatible_edges_right[]: un_bus_s_15
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -364,7 +391,7 @@ road_look : road.un03
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
 	}
-	road_template_variant : .lane.variant.road.un03.local.mid_full_in
+	road_template_variant : .lane.variant.road.un03.local.l2_full_in
 	{
 		lane_variant: local_road
 
@@ -374,7 +401,7 @@ road_look : road.un03
 		lanes_right[]: traffic_lane.road.local.high_density.full_in
 		lanes_right[]: traffic_lane.road.local.high_density
 	}
-	road_template_variant : .lane.variant.road.un03.local.mid_full_out
+	road_template_variant : .lane.variant.road.un03.local.l2_full_out
 	{
 		lane_variant: local_road
 
@@ -403,7 +430,7 @@ road_look : road.un03
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
 	}
-	road_template_variant : .lane.variant.road.un03.expressway.mid_full_in
+	road_template_variant : .lane.variant.road.un03.expressway.l2_full_in
 	{
 		lane_variant: expressway
 
@@ -413,7 +440,7 @@ road_look : road.un03
 		lanes_right[]: traffic_lane.road.expressway.full_in
 		lanes_right[]: traffic_lane.road.expressway
 	}
-	road_template_variant : .lane.variant.road.un03.expressway.mid_full_out
+	road_template_variant : .lane.variant.road.un03.expressway.l2_full_out
 	{
 		lane_variant: expressway
 
@@ -434,7 +461,7 @@ road_look : road.un03
 	road_template_variant : .lane.variant.road.un03.motorway.full_in_out
 	{
 		lane_variant: motorway
-		
+
 		model_variants[]: sg_sg
 		model_variants[]: sg_sg_hw
 
@@ -442,20 +469,20 @@ road_look : road.un03
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 	}
-	road_template_variant : .lane.variant.road.un03.motorway.mid_full_in
+	road_template_variant : .lane.variant.road.un03.motorway.l2_full_in
 	{
 		lane_variant: motorway
-		
+
 		model_variants[]: sngmrg_l_hw
 
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway.full_in
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un03.motorway.mid_full_out
+	road_template_variant : .lane.variant.road.un03.motorway.l2_full_out
 	{
 		lane_variant: motorway
-		
+
 		model_variants[]: sngmrg_r_hw
 
 		lanes_right[]: traffic_lane.road.motorway
@@ -479,21 +506,21 @@ road_look : road.un04
 
 	lane_variants[]: .lane.variant.road.un04.expressway
 	lane_variants[]: .lane.variant.road.un04.motorway
-	lane_variants[]: .lane.variant.road.un04.motorway.full.middle
-	lane_variants[]: .lane.variant.road.un04.motorway.full.outer
-	lane_variants[]: .lane.variant.road.un04.motorway.full_brk.outer
-	lane_variants[]: .lane.variant.road.un04.motorway.full.inner
-	lane_variants[]: .lane.variant.road.un04.motorway.brk_full.inner
-	lane_variants[]: .lane.variant.road.un04.expressway.full.middle
-	lane_variants[]: .lane.variant.road.un04.expressway.full.outer
-	lane_variants[]: .lane.variant.road.un04.expressway.full_brk.outer
-	lane_variants[]: .lane.variant.road.un04.expressway.full.inner
-	lane_variants[]: .lane.variant.road.un04.expressway.brk_full.inner
-	lane_variants[]: .lane.variant.road.un04.local.high_density.full.middle
-	lane_variants[]: .lane.variant.road.un04.local.high_density.full.outer
-	lane_variants[]: .lane.variant.road.un04.local.high_density.full_brk.outer
-	lane_variants[]: .lane.variant.road.un04.local.high_density.full.inner
-	lane_variants[]: .lane.variant.road.un04.local.high_density.brk_full.inner
+	lane_variants[]: .lane.variant.road.un04.motorway.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un04.motorway.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un04.motorway.l3_full_out
+	lane_variants[]: .lane.variant.road.un04.motorway.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un04.motorway.l2_full_in
+	lane_variants[]: .lane.variant.road.un04.expressway.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un04.expressway.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un04.expressway.l3_full_out
+	lane_variants[]: .lane.variant.road.un04.expressway.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un04.expressway.l2_full_in
+	lane_variants[]: .lane.variant.road.un04.local.high_density.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un04.local.high_density.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un04.local.high_density.l3_full_out
+	lane_variants[]: .lane.variant.road.un04.local.high_density.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un04.local.high_density.l2_full_in
 
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
@@ -503,6 +530,17 @@ road_look : road.un04
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
+	
+	#overrides
+	#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -547,7 +585,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un04.motorway.full.middle
+	road_template_variant : .lane.variant.road.un04.motorway.l2_full_out.l3_full_in
 	{
 		lane_variant: motorway
 
@@ -559,7 +597,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway.full_in
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un04.motorway.full.outer
+	road_template_variant : .lane.variant.road.un04.motorway.l3_full_out.l4_full_in
 	{
 		lane_variant: motorway
 
@@ -571,7 +609,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway.full_out
 		lanes_right[]: traffic_lane.road.motorway.full_in
 	}
-	road_template_variant : .lane.variant.road.un04.motorway.full_brk.outer
+	road_template_variant : .lane.variant.road.un04.motorway.l3_full_out
 	{
 		lane_variant: motorway
 
@@ -582,7 +620,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway.full_out
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un04.motorway.full.inner
+	road_template_variant : .lane.variant.road.un04.motorway.l1_full_out.l2_full_in
 	{
 		lane_variant: motorway
 
@@ -594,7 +632,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un04.motorway.brk_full.inner
+	road_template_variant : .lane.variant.road.un04.motorway.l2_full_in
 	{
 		lane_variant: motorway
 
@@ -605,7 +643,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 	}
-	road_template_variant : .lane.variant.road.un04.expressway.full.middle
+	road_template_variant : .lane.variant.road.un04.expressway.l2_full_out.l3_full_in
 	{
 		lane_variant: expressway
 
@@ -617,7 +655,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.expressway.full_in
 		lanes_right[]: traffic_lane.road.expressway
 	}
-	road_template_variant : .lane.variant.road.un04.expressway.full.outer
+	road_template_variant : .lane.variant.road.un04.expressway.l3_full_out.l4_full_in
 	{
 		lane_variant: expressway
 
@@ -629,7 +667,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.expressway.full_out
 		lanes_right[]: traffic_lane.road.expressway.full_in
 	}
-	road_template_variant : .lane.variant.road.un04.expressway.full_brk.outer
+	road_template_variant : .lane.variant.road.un04.expressway.l3_full_out
 	{
 		lane_variant: expressway
 
@@ -640,7 +678,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.expressway.full_out
 		lanes_right[]: traffic_lane.road.expressway
 	}
-	road_template_variant : .lane.variant.road.un04.expressway.full.inner
+	road_template_variant : .lane.variant.road.un04.expressway.l1_full_out.l2_full_in
 	{
 		lane_variant: expressway
 
@@ -652,7 +690,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
 	}
-	road_template_variant : .lane.variant.road.un04.expressway.brk_full.inner
+	road_template_variant : .lane.variant.road.un04.expressway.l2_full_in
 	{
 		lane_variant: expressway
 
@@ -664,7 +702,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.expressway
 	}
 
-	road_template_variant : .lane.variant.road.un04.local.high_density.full.middle
+	road_template_variant : .lane.variant.road.un04.local.high_density.l2_full_out.l3_full_in
 	{
 		lane_variant: local_road
 
@@ -676,7 +714,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.local.high_density.full_in
 		lanes_right[]: traffic_lane.road.local.high_density
 	}
-	road_template_variant : .lane.variant.road.un04.local.high_density.full.outer
+	road_template_variant : .lane.variant.road.un04.local.high_density.l3_full_out.l4_full_in
 	{
 		lane_variant: local_road
 
@@ -688,7 +726,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.local.high_density.full_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in
 	}
-	road_template_variant : .lane.variant.road.un04.local.high_density.full_brk.outer
+	road_template_variant : .lane.variant.road.un04.local.high_density.l3_full_out
 	{
 		lane_variant: local_road
 
@@ -699,7 +737,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.local.high_density.full_out
 		lanes_right[]: traffic_lane.road.local.high_density
 	}
-	road_template_variant : .lane.variant.road.un04.local.high_density.full.inner
+	road_template_variant : .lane.variant.road.un04.local.high_density.l1_full_out.l2_full_in
 	{
 		lane_variant: local_road
 
@@ -711,7 +749,7 @@ road_look : road.un04
 		lanes_right[]: traffic_lane.road.local.high_density
 		lanes_right[]: traffic_lane.road.local.high_density
 	}
-	road_template_variant : .lane.variant.road.un04.local.high_density.brk_full.inner
+	road_template_variant : .lane.variant.road.un04.local.high_density.l2_full_in
 	{
 		lane_variant: local_road
 
@@ -807,8 +845,12 @@ road_look : road.un11
 	lanes_right[]: traffic_lane.road.local.overtake
 
 	lane_variants[]: .lane.variant.road.un11.local.full_in_out
+	lane_variants[]: .lane.variant.road.un11.local.full.left
+	lane_variants[]: .lane.variant.road.un11.local.full.right
 	lane_variants[]: .lane.variant.road.un11.expressway
+	lane_variants[]: .lane.variant.road.un11.expressway.full_in_out
 	lane_variants[]: .lane.variant.road.un11.motorway
+	lane_variants[]: .lane.variant.road.un11.motorway.full_in_out
 
 	overlay_schemes[]: "sparse : 1.0 : _d0|5 : _d1|2 : _d2|1 : _d3|5 : _d4|7 : _d5|2 : _d6|1 : _d7|5 : _d8|5 : _d9|5 : _d10|5 : _d11|5 : _d12|5 : _d13|5 : _d14|5"
 	overlay_schemes[]: "light : 1.0 : _a0|5 : _a1|2 : _a2|1 : _a3|5 : _a4|7 : _a5|2 : _a6|1 : _a7|5 : _a8|5 : _a9|5 : _a10|5 : _a11|5 : _a12|5 : _a13|5"
@@ -824,6 +866,10 @@ road_look : road.un11
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
 	compatible_edges_right[]: un_bus_15
+	compatible_edges_right[]: un_drn_01_n
+	#compatible_edges_right[]: un_drn_01_o
+	compatible_edges_right[]: un_hwdrn01_n
+	#compatible_edges_right[]: un_hwdrn01_o
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
@@ -843,6 +889,13 @@ road_look : road.un11
 	compatible_edges_right[]: un_din_s1
 	compatible_edges_right[]: un_din_g1
 	compatible_edges_right[]: un_din_g2
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -868,10 +921,36 @@ road_look : road.un11
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
+
+		lanes_left[]:  traffic_lane.road.local.full_in_out
+		lanes_right[]: traffic_lane.road.local.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un11.local.full.right
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.overtake
+		lanes_right[]: traffic_lane.road.local
+	}
+	road_template_variant : .lane.variant.road.un11.local.full.left
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
 
 		lanes_left[]:  traffic_lane.road.local
-		lanes_right[]: traffic_lane.road.local
+		lanes_right[]: traffic_lane.road.local.overtake
 	}
 	road_template_variant : .lane.variant.road.un11.expressway
 	{
@@ -880,12 +959,36 @@ road_look : road.un11
 		lanes_left[]:  traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
 	}
+	road_template_variant : .lane.variant.road.un11.expressway.full_in_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: single
+		model_variants[]: single_hw
+		model_variants[]: double
+		model_variants[]: double_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+	}
 	road_template_variant : .lane.variant.road.un11.motorway
 	{
 		lane_variant: motorway
 
 		lanes_left[]:  traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un11.motorway.full_in_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: single
+		model_variants[]: single_hw
+		model_variants[]: double
+		model_variants[]: double_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
 	}
 
 road_look : road.un11spec
@@ -1047,6 +1150,8 @@ road_look : road.un11_nar
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
 	compatible_edges_right[]: un_bus_15
+	compatible_edges_right[]: un_drn_01_n
+	#compatible_edges_right[]: un_drn_01_o
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
@@ -1062,6 +1167,13 @@ road_look : road.un11_nar
 	compatible_edges_right[]: un_sw_dw
 	compatible_edges_right[]: un_sww_dw
 	compatible_edges_right[]: un_sww_dwn
+	#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -1079,7 +1191,9 @@ road_look : road.un11_nar
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.narrow.full_in_out
 		lanes_right[]: traffic_lane.road.local.narrow.full_in_out
@@ -1202,7 +1316,7 @@ road_look : road.un11_spec
 
 road_look : road.un11_onelane
 {
-	name: "un 1-1 single lane"
+	name: "un 1-1 single lane (special)"
 	template_right: "/road_template/un/un_1-1_special.pmd"
 
 	lanes_left[]:  traffic_lane.road.local.narrow.full_in_out
@@ -1369,7 +1483,9 @@ road_look : road.un21
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.full_in_out
 		lanes_left[]:  traffic_lane.road.local.full_in_out
@@ -1388,7 +1504,9 @@ road_look : road.un21
 		lane_variant: expressway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
@@ -1407,7 +1525,9 @@ road_look : road.un21
 		lane_variant: motorway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
@@ -1467,7 +1587,7 @@ road_look : road.un12
 		lane_variant: local_road
 
 		model_variants[]: single
-		model_variants[]: double
+		model_variants[]: single_hw
 
 		lanes_left[]:  traffic_lane.road.local.full_in_out
 		lanes_right[]: traffic_lane.road.local.full_in_out
@@ -1486,7 +1606,7 @@ road_look : road.un12
 		lane_variant: expressway
 
 		model_variants[]: single
-		model_variants[]: double
+		model_variants[]: single_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
@@ -1505,13 +1625,13 @@ road_look : road.un12
 		lane_variant: motorway
 
 		model_variants[]: single
-		model_variants[]: double
+		model_variants[]: single_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 	}
-
+	
 road_look : road.un22
 {
 	name: "un 2-2"
@@ -1570,7 +1690,9 @@ road_look : road.un22
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
@@ -1591,7 +1713,9 @@ road_look : road.un22
 		lane_variant: expressway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
@@ -1612,7 +1736,9 @@ road_look : road.un22
 		lane_variant: motorway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
@@ -1642,10 +1768,16 @@ road_look : road.un22_2m
 	lanes_left[]:  traffic_lane.road.local.high_density
 
 	lane_variants[]: .lane.variant.road.un22_2m.local.full_in_out
+	lane_variants[]: .lane.variant.road.un22_2m.local.full_in
+	lane_variants[]: .lane.variant.road.un22_2m.local.full_out
 	lane_variants[]: .lane.variant.road.un22_2m.expressway
 	lane_variants[]: .lane.variant.road.un22_2m.expressway.full_in_out
+	lane_variants[]: .lane.variant.road.un22_2m.expressway.full_in
+	lane_variants[]: .lane.variant.road.un22_2m.expressway.full_out
 	lane_variants[]: .lane.variant.road.un22_2m.motorway
 	lane_variants[]: .lane.variant.road.un22_2m.motorway.full_in_out
+	lane_variants[]: .lane.variant.road.un22_2m.motorway.full_in
+	lane_variants[]: .lane.variant.road.un22_2m.motorway.full_out
 
 	compatible_edges_left[]: un_sh_15
 	compatible_edges_left[]: un_shasp_15
@@ -1656,6 +1788,8 @@ road_look : road.un22_2m
 	#compatible_edges_left[]: un_shaspw_15
 	compatible_edges_left[]: un_hw_15
 	compatible_edges_left[]: un_hwasp_15
+	compatible_edges_left[]: un_drn_01_n
+	compatible_edges_left[]: un_hwdrn01_n
 	#overrides
 	compatible_edges_left[]: un_hwt_15
 	compatible_edges_left[]: un_hwat_15
@@ -1671,6 +1805,13 @@ road_look : road.un22_2m
 	compatible_edges_left[]: un_sw_dw
 	compatible_edges_left[]: un_sww_dw
 	compatible_edges_left[]: un_sww_dwn
+		#drains
+	compatible_edges_left[]: un_drn_01_ne
+	compatible_edges_left[]: un_drn_01_ns
+	compatible_edges_left[]: un_drn_01_nm
+	compatible_edges_left[]: un_hwd_01_ne
+	compatible_edges_left[]: un_hwd_01_ns
+	compatible_edges_left[]: un_hwd_01_nm
 
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
@@ -1681,6 +1822,8 @@ road_look : road.un22_2m
 	#compatible_edges_right[]: un_shaspw_15
 	compatible_edges_right[]: un_hw_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
 	#overrides
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
@@ -1696,6 +1839,13 @@ road_look : road.un22_2m
 	compatible_edges_right[]: un_sw_dw
 	compatible_edges_right[]: un_sww_dw
 	compatible_edges_right[]: un_sww_dwn
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	lane_offsets_left[]: (-4.5, 0.0)
 	lane_offsets_left[]: (-4.5, 0.0)
@@ -1751,12 +1901,42 @@ road_look : road.un22_2m
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_2m.local.full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+	}
+	road_template_variant : .lane.variant.road.un22_2m.local.full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
 	}
 	road_template_variant : .lane.variant.road.un22_2m.expressway
 	{
@@ -1772,12 +1952,42 @@ road_look : road.un22_2m
 		lane_variant: expressway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_2m.expressway.full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_in
+	}
+	road_template_variant : .lane.variant.road.un22_2m.expressway.full_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway
 	}
 	road_template_variant : .lane.variant.road.un22_2m.motorway
 	{
@@ -1793,12 +2003,42 @@ road_look : road.un22_2m
 		lane_variant: motorway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_2m.motorway.full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_in
+	}
+	road_template_variant : .lane.variant.road.un22_2m.motorway.full_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway
 	}
 
 road_look : road.un22_4m
@@ -1823,10 +2063,16 @@ road_look : road.un22_4m
 	lanes_left[]:  traffic_lane.road.local.high_density
 
 	lane_variants[]: .lane.variant.road.un22_4m.local.full_in_out
+	lane_variants[]: .lane.variant.road.un22_4m.local.full_in
+	lane_variants[]: .lane.variant.road.un22_4m.local.full_out
 	lane_variants[]: .lane.variant.road.un22_4m.expressway
 	lane_variants[]: .lane.variant.road.un22_4m.expressway.full_in_out
+	lane_variants[]: .lane.variant.road.un22_4m.expressway.full_in
+	lane_variants[]: .lane.variant.road.un22_4m.expressway.full_out
 	lane_variants[]: .lane.variant.road.un22_4m.motorway
 	lane_variants[]: .lane.variant.road.un22_4m.motorway.full_in_out
+	lane_variants[]: .lane.variant.road.un22_4m.motorway.full_in
+	lane_variants[]: .lane.variant.road.un22_4m.motorway.full_out
 
 	lane_offsets_left[]: (-4.5, 0.0)
 	lane_offsets_left[]: (-4.5, 0.0)
@@ -1843,6 +2089,17 @@ road_look : road.un22_4m
 	compatible_edges_left[]: un_hwt_15
 	compatible_edges_left[]: un_hwat_15
 	compatible_edges_left[]: un_hwasp_15
+	compatible_edges_left[]: un_drn_01_n
+	compatible_edges_left[]: un_hwdrn01_n
+	
+	#overrides
+		#drains
+	compatible_edges_left[]: un_drn_01_ne
+	compatible_edges_left[]: un_drn_01_ns
+	compatible_edges_left[]: un_drn_01_nm
+	compatible_edges_left[]: un_hwd_01_ne
+	compatible_edges_left[]: un_hwd_01_ns
+	compatible_edges_left[]: un_hwd_01_nm
 
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
@@ -1854,6 +2111,17 @@ road_look : road.un22_4m
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
+	
+	#overrides
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -1903,12 +2171,44 @@ road_look : road.un22_4m
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
 		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_4m.local.full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_hw
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un22_4m.local.full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: mrgsng_hw
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
 	}
 	road_template_variant : .lane.variant.road.un22_4m.expressway
 	{
@@ -1924,12 +2224,44 @@ road_look : road.un22_4m
 		lane_variant: expressway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
 		lanes_right[]: traffic_lane.road.expressway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_4m.expressway.full_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_hw
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un22_4m.expressway.full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: mrgsng_hw
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_in
 	}
 	road_template_variant : .lane.variant.road.un22_4m.motorway
 	{
@@ -1945,12 +2277,44 @@ road_look : road.un22_4m
 		lane_variant: motorway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
 		lanes_right[]: traffic_lane.road.motorway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un22_4m.motorway.full_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_hw
+		model_variants[]: broken_right
+		model_variants[]: broken_r_hw
+		model_variants[]: warn_right
+		model_variants[]: warn_r_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un22_4m.motorway.full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: mrgsng_hw
+		model_variants[]: broken_left
+		model_variants[]: broken_l_hw
+		model_variants[]: warn_left
+		model_variants[]: warn_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_in
 	}
 
 road_look : road.un22_10m
@@ -1995,6 +2359,16 @@ road_look : road.un22_10m
 	compatible_edges_left[]: un_hwt_15
 	compatible_edges_left[]: un_hwat_15
 	compatible_edges_left[]: un_hwasp_15
+	compatible_edges_left[]: un_drn_01_n
+	compatible_edges_left[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_left[]: un_drn_01_ne
+	compatible_edges_left[]: un_drn_01_ns
+	compatible_edges_left[]: un_drn_01_nm
+	compatible_edges_left[]: un_hwd_01_ne
+	compatible_edges_left[]: un_hwd_01_ns
+	compatible_edges_left[]: un_hwd_01_nm
 
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
@@ -2006,6 +2380,16 @@ road_look : road.un22_10m
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	shoulder_space_left: 0.25
 	shoulder_space_right: 0.25
@@ -2055,7 +2439,9 @@ road_look : road.un22_10m
 		lane_variant: local_road
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
 		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
@@ -2076,7 +2462,9 @@ road_look : road.un22_10m
 		lane_variant: expressway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
 		lanes_left[]:  traffic_lane.road.expressway.full_in_out
@@ -2097,7 +2485,9 @@ road_look : road.un22_10m
 		lane_variant: motorway
 
 		model_variants[]: single
+		model_variants[]: single_hw
 		model_variants[]: double
+		model_variants[]: double_hw
 
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
 		lanes_left[]:  traffic_lane.road.motorway.full_in_out
@@ -2128,8 +2518,17 @@ road_look : road.un33_2m
 	lanes_left[]:  traffic_lane.road.local.high_density
 	lanes_left[]:  traffic_lane.road.local.high_density
 
+	lane_variants[]: .lane.variant.road.un33_2m.local.full_in_out
+	lane_variants[]: .lane.variant.road.un33_2m.local.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_2m.local.l2_full_in
 	lane_variants[]: .lane.variant.road.un33_2m.expressway
+	lane_variants[]: .lane.variant.road.un33_2m.expressway.full_in_out
+	lane_variants[]: .lane.variant.road.un33_2m.expressway.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_2m.expressway.l2_full_in
 	lane_variants[]: .lane.variant.road.un33_2m.motorway
+	lane_variants[]: .lane.variant.road.un33_2m.motorway.full_in_out
+	lane_variants[]: .lane.variant.road.un33_2m.motorway.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_2m.motorway.l2_full_in
 
 	compatible_edges_left[]: un_sh_15
 	compatible_edges_left[]: un_shasp_15
@@ -2141,6 +2540,16 @@ road_look : road.un33_2m
 	compatible_edges_left[]: un_hwt_15
 	compatible_edges_left[]: un_hwat_15
 	compatible_edges_left[]: un_hwasp_15
+	compatible_edges_left[]: un_drn_01_n
+	compatible_edges_left[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_left[]: un_drn_01_ne
+	compatible_edges_left[]: un_drn_01_ns
+	compatible_edges_left[]: un_drn_01_nm
+	compatible_edges_left[]: un_hwd_01_ne
+	compatible_edges_left[]: un_hwd_01_ns
+	compatible_edges_left[]: un_hwd_01_nm
 
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
@@ -2152,6 +2561,16 @@ road_look : road.un33_2m
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	lane_offsets_left[]: (-9.0, 0.0)
 	lane_offsets_left[]: (-9.0, 0.0)
@@ -2206,6 +2625,46 @@ road_look : road.un33_2m
 	add_parts_right[]: tll
 
 }
+	road_template_variant : .lane.variant.road.un33_2m.local.full_in_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_2m.local.l2_full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un33_2m.local.l2_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
 	road_template_variant : .lane.variant.road.un33_2m.expressway
 	{
 		lane_variant: expressway
@@ -2217,6 +2676,46 @@ road_look : road.un33_2m
 		lanes_right[]: traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
 	}
+	road_template_variant : .lane.variant.road.un33_2m.expressway.full_in_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_2m.expressway.l2_full_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un33_2m.expressway.l2_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+	}
 	road_template_variant : .lane.variant.road.un33_2m.motorway
 	{
 		lane_variant: motorway
@@ -2226,6 +2725,46 @@ road_look : road.un33_2m
 		lanes_left[]:  traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un33_2m.motorway.full_in_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_2m.motorway.l2_full_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un33_2m.motorway.l2_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_in
 		lanes_right[]: traffic_lane.road.motorway
 	}
 
@@ -2252,8 +2791,17 @@ road_look : road.un33_4m
 	lanes_left[]:  traffic_lane.road.local.high_density
 	lanes_left[]:  traffic_lane.road.local.high_density
 
+	lane_variants[]: .lane.variant.road.un33_4m.local.full_in_out
+	lane_variants[]: .lane.variant.road.un33_4m.local.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_4m.local.l2_full_in
 	lane_variants[]: .lane.variant.road.un33_4m.expressway
+	lane_variants[]: .lane.variant.road.un33_4m.expressway.full_in_out
+	lane_variants[]: .lane.variant.road.un33_4m.expressway.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_4m.expressway.l2_full_in
 	lane_variants[]: .lane.variant.road.un33_4m.motorway
+	lane_variants[]: .lane.variant.road.un33_4m.motorway.full_in_out
+	lane_variants[]: .lane.variant.road.un33_4m.motorway.l2_full_out
+	lane_variants[]: .lane.variant.road.un33_4m.motorway.l2_full_in
 
 	compatible_edges_left[]: un_sh_15
 	compatible_edges_left[]: un_shasp_15
@@ -2265,7 +2813,17 @@ road_look : road.un33_4m
 	compatible_edges_left[]: un_hwt_15
 	compatible_edges_left[]: un_hwat_15
 	compatible_edges_left[]: un_hwasp_15
-
+	compatible_edges_left[]: un_drn_01_n
+	compatible_edges_left[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_left[]: un_drn_01_ne
+	compatible_edges_left[]: un_drn_01_ns
+	compatible_edges_left[]: un_drn_01_nm
+	compatible_edges_left[]: un_hwd_01_ne
+	compatible_edges_left[]: un_hwd_01_ns
+	compatible_edges_left[]: un_hwd_01_nm
+	
 	compatible_edges_right[]: un_sh_15
 	compatible_edges_right[]: un_shasp_15
 	compatible_edges_right[]: un_crb_15
@@ -2276,6 +2834,16 @@ road_look : road.un33_4m
 	compatible_edges_right[]: un_hwt_15
 	compatible_edges_right[]: un_hwat_15
 	compatible_edges_right[]: un_hwasp_15
+	compatible_edges_right[]: un_drn_01_n
+	compatible_edges_right[]: un_hwdrn01_n
+	#overrides
+		#drains
+	compatible_edges_right[]: un_drn_01_ne
+	compatible_edges_right[]: un_drn_01_ns
+	compatible_edges_right[]: un_drn_01_nm
+	compatible_edges_right[]: un_hwd_01_ne
+	compatible_edges_right[]: un_hwd_01_ns
+	compatible_edges_right[]: un_hwd_01_nm
 
 	lane_offsets_left[]: (-9.0, 0.0)
 	lane_offsets_left[]: (-9.0, 0.0)
@@ -2329,6 +2897,46 @@ road_look : road.un33_4m
 	add_parts_left[]: tll
 
 }
+	road_template_variant : .lane.variant.road.un33_4m.local.full_in_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_4m.local.l2_full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un33_4m.local.l2_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
 	road_template_variant : .lane.variant.road.un33_4m.expressway
 	{
 		lane_variant: expressway
@@ -2338,6 +2946,46 @@ road_look : road.un33_4m
 		lanes_left[]:  traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un33_4m.expressway.full_in_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+		lanes_right[]: traffic_lane.road.expressway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_4m.expressway.l2_full_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un33_4m.expressway.l2_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_in
 		lanes_right[]: traffic_lane.road.expressway
 	}
 	road_template_variant : .lane.variant.road.un33_4m.motorway
@@ -2351,6 +2999,47 @@ road_look : road.un33_4m
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 	}
+	road_template_variant : .lane.variant.road.un33_4m.motorway.full_in_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sg_sg
+		model_variants[]: sg_sg_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+		lanes_right[]: traffic_lane.road.motorway.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_4m.motorway.l2_full_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un33_4m.motorway.l2_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+	}
+
 
 road_look : road.un44_2m
 {
@@ -2371,8 +3060,23 @@ road_look : road.un44_2m
 	lanes_left[]:  traffic_lane.road.local.high_density
 	lanes_left[]:  traffic_lane.road.local.high_density
 
+	lane_variants[]: .lane.variant.road.un44_2m.local.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.local.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.local.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.local.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.local.l3_full_out
 	lane_variants[]: .lane.variant.road.un44_2m.expressway
+	lane_variants[]: .lane.variant.road.un44_2m.expressway.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.expressway.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.expressway.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.expressway.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.expressway.l3_full_out
 	lane_variants[]: .lane.variant.road.un44_2m.motorway
+	lane_variants[]: .lane.variant.road.un44_2m.motorway.l3_full_out.l4_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.motorway.l1_full_out.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.motorway.l2_full_out.l3_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.motorway.l2_full_in
+	lane_variants[]: .lane.variant.road.un44_2m.motorway.l3_full_out
 
 	compatible_edges_left[]: un_sh_15
 	compatible_edges_left[]: un_shasp_15
@@ -2453,6 +3157,84 @@ road_look : road.un44_2m
 
 
 }
+	road_template_variant : .lane.variant.road.un44_2m.local.l3_full_out.l4_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: single
+		model_variants[]: single_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+	}
+	road_template_variant : .lane.variant.road.un44_2m.local.l1_full_out.l2_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: single_l
+		model_variants[]: single_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un44_2m.local.l2_full_out.l3_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: br_sg_br
+		model_variants[]: br_sg_br_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un44_2m.local.l2_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
+	road_template_variant : .lane.variant.road.un44_2m.local.l3_full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
 	road_template_variant : .lane.variant.road.un44_2m.expressway
 	{
 		lane_variant: expressway
@@ -2466,6 +3248,84 @@ road_look : road.un44_2m
 		lanes_right[]: traffic_lane.road.expressway
 		lanes_right[]: traffic_lane.road.expressway
 	}
+	road_template_variant : .lane.variant.road.un44_2m.expressway.l3_full_out.l4_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: single
+		model_variants[]: single_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway.full_in
+	}
+	road_template_variant : .lane.variant.road.un44_2m.expressway.l1_full_out.l2_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: single_l
+		model_variants[]: single_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.expressway.l2_full_out.l3_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: br_sg_br
+		model_variants[]: br_sg_br_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.expressway.l2_full_in
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_in
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_in
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.expressway.l3_full_out
+	{
+		lane_variant: expressway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_left[]:  traffic_lane.road.expressway.full_out
+		lanes_left[]:  traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway
+		lanes_right[]: traffic_lane.road.expressway.full_out
+		lanes_right[]: traffic_lane.road.expressway
+	}
 	road_template_variant : .lane.variant.road.un44_2m.motorway
 	{
 		lane_variant: motorway
@@ -2477,6 +3337,84 @@ road_look : road.un44_2m
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
 		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.motorway.l3_full_out.l4_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: single
+		model_variants[]: single_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway.full_in
+	}
+	road_template_variant : .lane.variant.road.un44_2m.motorway.l1_full_out.l2_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: single_l
+		model_variants[]: single_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.motorway.l2_full_out.l3_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: br_sg_br
+		model_variants[]: br_sg_br_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
+		lanes_right[]: traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.motorway.l2_full_in
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_l_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_in
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_in
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+	}
+	road_template_variant : .lane.variant.road.un44_2m.motorway.l3_full_out
+	{
+		lane_variant: motorway
+
+		model_variants[]: sngmrg_r_hw
+
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_left[]:  traffic_lane.road.motorway.full_out
+		lanes_left[]:  traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway
+		lanes_right[]: traffic_lane.road.motorway.full_out
 		lanes_right[]: traffic_lane.road.motorway
 	}
 
@@ -2528,6 +3466,7 @@ road_look : road.unrai
 	lane_variants[]: .lane_var.road.unrai.passenger
 	lane_variants[]: .lane_var.road.unrai.pass_wire
 	lane_variants[]: .lane_var.road.unrai.cargo_wire
+	lane_variants[]: .lane_var.road.unrai.custom
 
 	compatible_edges_left[]: un_sh_rail
 	compatible_edges_right[]: un_sh_rail
@@ -2571,6 +3510,12 @@ road_look : road.unrai
 
 		lanes_right[]: traffic_lane.rail.train.cargo.wire
 	}
+	road_template_variant : .lane_var.road.unrai.custom
+	{
+		lane_variant: custom
+
+		lanes_right[]: traffic_lane.rail.train.custom
+	}
 
 road_look : road.unrdai
 {
@@ -2586,6 +3531,7 @@ road_look : road.unrdai
 	lane_variants[]: .lane_var.road.unrdai.passenger
 	lane_variants[]: .lane_var.road.unrdai.pass_wire
 	lane_variants[]: .lane_var.road.unrdai.cargo_wire
+	lane_variants[]: .lane_var.road.unrdai.custom
 
 	lanes_left[]:  traffic_lane.rail.train
 	lanes_right[]: traffic_lane.rail.train
@@ -2640,6 +3586,13 @@ road_look : road.unrdai
 
 		lanes_right[]: traffic_lane.rail.train.cargo.wire
 		lanes_left[]:  traffic_lane.rail.train.cargo.wire
+	}
+	road_template_variant : .lane_var.road.unrdai.custom
+	{
+		lane_variant: custom
+
+		lanes_right[]: traffic_lane.rail.train.custom
+		lanes_left[]:  traffic_lane.rail.train.custom
 	}
 
 road_look : road.untdai
@@ -2807,6 +3760,10 @@ road_look : road.un33_tdai
 	lanes_left[]: traffic_lane.road.local.high_density
 	lanes_left[]: traffic_lane.road.local.high_density
 
+	lane_variants[]: .lane.variant.road.un33_tdai.local.full_in_out
+	lane_variants[]: .lane.variant.road.un33_tdai.local.l3_full_in
+	lane_variants[]: .lane.variant.road.un33_tdai.local.l2_full_out
+
 	add_parts_right[]: prk
 	add_parts_right[]: prkr
 	add_parts_right[]: prkl
@@ -2829,5 +3786,46 @@ road_look : road.un33_tdai
 	shoulder_space_right: 0.25
 
 }
+	road_template_variant : .lane.variant.road.un33_tdai.local.full_in_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: single
+
+		lanes_left[]:  traffic_lane.rail.tram
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.rail.tram
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+		lanes_right[]: traffic_lane.road.local.high_density.full_in_out
+	}
+	road_template_variant : .lane.variant.road.un33_tdai.local.l3_full_in
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_left
+		model_variants[]: warn_left
+
+		lanes_left[]:  traffic_lane.rail.tram
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_left[]:  traffic_lane.road.local.high_density.full_in
+		lanes_right[]: traffic_lane.rail.tram
+		lanes_right[]: traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.road.local.high_density.full_in
+	}
+	road_template_variant : .lane.variant.road.un33_tdai.local.l2_full_out
+	{
+		lane_variant: local_road
+
+		model_variants[]: broken_right
+		model_variants[]: warn_right
+
+		lanes_left[]:  traffic_lane.rail.tram
+		lanes_left[]:  traffic_lane.road.local.high_density.full_out
+		lanes_left[]:  traffic_lane.road.local.high_density
+		lanes_right[]: traffic_lane.rail.tram
+		lanes_right[]: traffic_lane.road.local.high_density.full_out
+		lanes_right[]: traffic_lane.road.local.high_density
+	}
 
 }

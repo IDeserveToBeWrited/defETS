@@ -3027,7 +3027,7 @@ prefab_model : prefab.un_1403z
 
 prefab_model : prefab.un_3700l
 {
-	name: "un cross 1-1 t 1-1 in invis enter"
+	name: "un cross 1-1 t 0-1 in invis enter"
 	model_desc: "/prefab2/cross_temp/un/un_cross_1-1_t_0-1_in_invis_enter.pmd"
 	prefab_desc: "/prefab2/cross_temp/un/un_cross_1-1_t_0-1_in_invis_enter.ppd"
 	category: ""
@@ -3039,12 +3039,16 @@ prefab_model : prefab.un_3700l
 	corner0[]: ungc3m
 
 	corner2[]: un_ciesh
+	
+	compatible_roads[0]: road.un11
+	compatible_roads[1]: road.blke_40
+	compatible_roads[2]: road.un11
 
 }
 
 prefab_model : prefab.un_3700n
 {
-	name: "un cross 1-1 t 1-1 out invis enter"
+	name: "un cross 1-1 t 0-1 out invis enter"
 	model_desc: "/prefab2/cross_temp/un/un_cross_1-1_t_0-1_out_invis_enter.pmd"
 	prefab_desc: "/prefab2/cross_temp/un/un_cross_1-1_t_0-1_out_invis_enter.ppd"
 	category: ""
@@ -3056,6 +3060,10 @@ prefab_model : prefab.un_3700n
 	corner0[]: ungc3m
 
 	corner2[]: un_ciesh
+	
+	compatible_roads[0]: road.un11
+	compatible_roads[1]: road.blke_40
+	compatible_roads[2]: road.un11
 
 }
 
@@ -5858,9 +5866,8 @@ prefab_model : prefab.un_14114
 	corner4[]: ungsdw1m
 	corner4[]: ungc1m
 
-	corner5[]: un1135sh
-	corner5[]: un1135cb
-
+	corner5[]: un1150sh
+	corner5[]: un1150cb
 }
 
 prefab_model : prefab.un_14115
@@ -11730,6 +11737,31 @@ prefab_model : prefab.un_14131
 
 }
 
+prefab_model : prefab.un_14133
+{
+	name: "un fork 2-1 divide 0-1 mirrored / alt / 21m"
+	model_desc: "/prefab2/fork_temp/un/un_fork_2-1_divide_0-1_21m_mirrored_alt.pmd"
+	prefab_desc: "/prefab2/fork_temp/un/un_fork_2-1_divide_0-1_21m_mirrored_alt.ppd"
+	category: ""
+
+	corner0[]: ungsh1_5m
+	#corner0[]: ungshw1_5m
+	corner0[]: ungfw1_5m
+	corner0[]: ungsdw1_5m
+	corner0[]: ungc1_5m
+
+	corner1[]: ungsh1_5m
+	#corner1[]: ungshw1_5m
+	corner1[]: ungfw1_5m
+	corner1[]: ungsdw1_5m
+	corner1[]: ungc1_5m
+
+	corner2[]: un1150sh
+	corner2[]: un1150cb
+
+}
+
+
 #######################################   Rail prefabs   ####################################
 
 
@@ -12453,22 +12485,23 @@ prefab_model : prefab.un_4201d
 	category: ""
 
 	corner0[]: ungsh1_5m
-	#corner0[]: ungshw1_5m
 	corner0[]: ungfw1_5m
 	corner0[]: ungsdw1_5m
 	corner0[]: ungc1_5m
 
 	corner1[]: ungsh1_5m
-	#corner1[]: ungshw1_5m
 	corner1[]: ungfw1_5m
 	corner1[]: ungsdw1_5m
 	corner1[]: ungc1_5m
 
-	corner2[]: ungsh1_5m
-	#corner2[]: ungshw1_5m
-	corner2[]: ungfw1_5m
-	corner2[]: ungsdw1_5m
-	corner2[]: ungc1_5m
+	corner2[]: ungsh1m
+	corner2[]: ungfw1m
+	corner2[]: ungsdw1m
+	corner2[]: ungc1m
+
+	compatible_roads[0]: road.un22_2m
+	compatible_roads[1]: road.un33_tdai
+	compatible_roads[2]: road.un33_tdai
 }
 
 prefab_model : prefab.un_4201e
@@ -13024,6 +13057,39 @@ prefab_model : prefab.un_4201w
 	compatible_roads[1]: road.un03
 }
 
+prefab_model : prefab.un_42030
+{
+	name: "un cross 2-2 2m offset / 3-3 tram x 3-3 tram / 1-1 tram"
+	model_desc: "/prefab2/cross_temp/un/un_cross_2-2_2m_offset_3-3_tram_x_3-3_tram_1-1_tram.pmd"
+	prefab_desc: "/prefab2/cross_temp/un/un_cross_2-2_2m_offset_3-3_tram_x_3-3_tram_1-1_tram.ppd"
+	category: ""
+
+	corner0[]: ungsh1m
+	corner0[]: ungfw1m
+	corner0[]: ungsdw1m
+	corner0[]: ungc1m
+
+	corner1[]: ungsh1_5m
+	corner1[]: ungfw1_5m
+	corner1[]: ungsdw1_5m
+	corner1[]: ungc1_5m
+
+	corner2[]: ungsh1m
+	corner2[]: ungfw1m
+	corner2[]: ungsdw1m
+	corner2[]: ungc1m
+	
+	corner3[]: ungsh1_5m
+	corner3[]: ungfw1_5m
+	corner3[]: ungsdw1_5m
+	corner3[]: ungc1_5m
+
+	compatible_roads[0]: road.un22_2m
+	compatible_roads[1]: road.un33_tdai
+	compatible_roads[2]: road.un33_tdai
+	compatible_roads[3]: road.untdai
+}
+
 prefab_model : prefab.un_3700m
 {
 	name: "un bus TEST 1-1 DO NOT USE"
@@ -13107,6 +13173,21 @@ prefab_model : prefab.un_1412f
 	corner1[]: un_42007
 	corner2[]: un_42006
 	corner3[]: un_42007
+}
+
+prefab_model : prefab.un_14132
+{
+	name: "un cross 1-1 x 0-1 rail / 0-1 rail"
+	model_desc: "/prefab2/cross_temp/un/un_cross_1-1_x_rail_0-1_0-1.pmd"
+	prefab_desc: "/prefab2/cross_temp/un/un_cross_1-1_x_rail_0-1_0-1.ppd"
+	category: ""
+	
+	corner0[]: un_42006
+	corner1[]: un_42007
+	corner2[]: un_1400k
+	corner3[]: un_42006
+	corner4[]: un_42007
+	corner5[]: un_1400k
 }
 
 #######################################   invis prefabs   ####################################

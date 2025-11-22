@@ -1,0 +1,449 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Iberia --
+
+# Discover at least 30 cities in Iberia.
+
+achievement_visit_city_data : .achievement.ib_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: a_coruna
+	cities[]: albacete
+	cities[]: algeciras
+	cities[]: almaraz
+	cities[]: almeria
+	cities[]: badajoz
+	cities[]: bailen
+	cities[]: barcelona
+	cities[]: beja
+	cities[]: bilbao
+	cities[]: burgos
+	cities[]: ciudad_real
+	cities[]: coimbra
+	cities[]: cordoba
+	cities[]: corticadas
+	cities[]: el_ejido
+	cities[]: evora
+	cities[]: faro
+	cities[]: gijon
+	cities[]: granada
+	cities[]: guarda
+	cities[]: huelva
+	cities[]: leon
+	cities[]: lisboa
+	cities[]: lleida
+	cities[]: madrid
+	cities[]: malaga
+	cities[]: mengibar
+	cities[]: murcia
+	cities[]: navia
+	cities[]: o_barco
+	cities[]: olhao
+	cities[]: pamplona
+	cities[]: ponte_de_sor
+	cities[]: port_sagunt
+	cities[]: porto
+	cities[]: puertollano
+	cities[]: salamanca
+	cities[]: santander
+	cities[]: setubal
+	cities[]: sevilla
+	cities[]: sines
+	cities[]: soria
+	cities[]: tarragona
+	cities[]: teruel
+	cities[]: valencia
+	cities[]: valladolid
+	cities[]: vandellos
+	cities[]: vigo
+	cities[]: villarreal
+	cities[]: zaragoza
+	target: 30
+
+	achievement_name: ib_visit_cities
+
+	steam_progress_id: "ib_visit_cities-progress"
+	steam_id: ib_visit_cities
+}
+
+# View cutscenes from at least 12 viewpoints in Iberia.
+
+achievement_trigger_data : .achievement.ib_cutscenes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: ib_cutscenes
+	target: 12
+
+	achievement_name: ib_cutscenes
+
+	steam_progress_id: "ib_cutscenes-progress"
+	steam_id: ib_cutscenes
+}
+
+# Deliver cargo to at least 4 container ports in Iberia.
+
+achievement_delivery : .achievement.ib_container
+{
+	event_name: job_done
+	initial_check: true
+	condition: .ib_container.condition
+	target: 4
+
+	achievement_name: ib_container_ports
+
+	steam_progress_id: "ib_container_ports-progress"
+	steam_id: ib_container_ports
+}
+
+achievement_delivery_sequence : .ib_container.condition
+{
+	list[]: .ib_container.algeciras
+	list[]: .ib_container.barcelona
+	list[]: .ib_container.bilbao
+	list[]: .ib_container.gijon
+	list[]: .ib_container.lisboa
+	list[]: .ib_container.malaga
+	list[]: .ib_container.porto
+	list[]: .ib_container.sines
+	list[]: .ib_container.tarragona
+	list[]: .ib_container.valencia
+	list[]: .ib_container.vigo
+}
+
+achievement_delivery_company : .ib_container.algeciras
+{
+	role: target
+	company_name: ts_atlas
+	city_name: algeciras
+}
+
+achievement_delivery_company : .ib_container.barcelona
+{
+	role: target
+	company_name: ts_atlas
+	city_name: barcelona
+}
+
+achievement_delivery_company : .ib_container.bilbao
+{
+	role: target
+	company_name: ts_atlas
+	city_name: bilbao
+}
+
+achievement_delivery_company : .ib_container.gijon
+{
+	role: target
+	company_name: ts_atlas
+	city_name: gijon
+}
+
+achievement_delivery_company : .ib_container.lisboa
+{
+	role: target
+	company_name: ts_atlas
+	city_name: lisboa
+}
+
+achievement_delivery_company : .ib_container.malaga
+{
+	role: target
+	company_name: ts_atlas
+	city_name: malaga
+}
+
+achievement_delivery_company : .ib_container.porto
+{
+	role: target
+	company_name: ts_atlas
+	city_name: porto
+}
+
+achievement_delivery_company : .ib_container.sines
+{
+	role: target
+	company_name: ts_atlas
+	city_name: sines
+}
+
+achievement_delivery_company : .ib_container.tarragona
+{
+	role: target
+	company_name: ts_atlas
+	city_name: tarragona
+}
+
+achievement_delivery_company : .ib_container.valencia
+{
+	role: target
+	company_name: ts_atlas
+	city_name: valencia
+}
+
+achievement_delivery_company : .ib_container.vigo
+{
+	role: target
+	company_name: ts_atlas
+	city_name: vigo
+}
+
+# Deliver ADR cargo to at least 2 solar power plants in Iberia.
+
+achievement_delivery : .achievement.ib_solar_pow
+{
+	event_name: job_done
+	initial_check: true
+	condition: .ib_solar_pow.condition
+	target: 2
+
+	achievement_name: ib_solar_power_plants
+
+	steam_progress_id: "ib_solar_power_plants-progress"
+	steam_id: ib_solar_power_plants
+}
+
+achievement_delivery_sequence : .ib_solar_pow.condition
+{
+	list[]: .ib_solar_pow.badajoz
+	list[]: .ib_solar_pow.ciudad_real
+	list[]: .ib_solar_pow.granada
+	list[]: .ib_solar_pow.puertollano
+	list[]: .ib_solar_pow.sevilla
+}
+
+achievement_delivery_each : .ib_solar_pow.badajoz
+{
+	list[]: .ib_solar_pow.badajoz.cargo
+	list[]: .ib_solar_pow.badajoz.company
+}
+
+achievement_delivery_cargo : .ib_solar_pow.badajoz.cargo
+{
+	adr: any_class
+}
+
+achievement_delivery_company : .ib_solar_pow.badajoz.company
+{
+	role: target
+	company_name: engeron
+	city_name: badajoz
+}
+
+achievement_delivery_each : .ib_solar_pow.ciudad_real
+{
+	list[]: .ib_solar_pow.ciudad_real.cargo
+	list[]: .ib_solar_pow.ciudad_real.company
+}
+
+achievement_delivery_cargo : .ib_solar_pow.ciudad_real.cargo
+{
+	adr: any_class
+}
+
+achievement_delivery_company : .ib_solar_pow.ciudad_real.company
+{
+	role: target
+	company_name: engeron
+	city_name: ciudad_real
+}
+
+achievement_delivery_each : .ib_solar_pow.granada
+{
+	list[]: .ib_solar_pow.granada.cargo
+	list[]: .ib_solar_pow.granada.company
+}
+
+achievement_delivery_cargo : .ib_solar_pow.granada.cargo
+{
+	adr: any_class
+}
+
+achievement_delivery_company : .ib_solar_pow.granada.company
+{
+	role: target
+	company_name: engeron
+	city_name: granada
+}
+
+achievement_delivery_each : .ib_solar_pow.puertollano
+{
+	list[]: .ib_solar_pow.puertollano.cargo
+	list[]: .ib_solar_pow.puertollano.company
+}
+
+achievement_delivery_cargo : .ib_solar_pow.puertollano.cargo
+{
+	adr: any_class
+}
+
+achievement_delivery_company : .ib_solar_pow.puertollano.company
+{
+	role: target
+	company_name: engeron
+	city_name: puertollano
+}
+
+achievement_delivery_each : .ib_solar_pow.sevilla
+{
+	list[]: .ib_solar_pow.sevilla.cargo
+	list[]: .ib_solar_pow.sevilla.company
+}
+
+achievement_delivery_cargo : .ib_solar_pow.sevilla.cargo
+{
+	adr: any_class
+}
+
+achievement_delivery_company : .ib_solar_pow.sevilla.company
+{
+	role: target
+	company_name: engeron
+	city_name: sevilla
+}
+
+# Deliver cargo to at least 3 shipyards in Iberia.
+
+achievement_delivery : .achievement.ib_shipyards
+{
+	event_name: job_done
+	initial_check: true
+	condition: .ib_shipyards.condition
+	target: 3
+
+	achievement_name: ib_shipyards
+
+	steam_progress_id: "ib_shipyards-progress"
+	steam_id: ib_shipyards
+}
+
+achievement_delivery_sequence : .ib_shipyards.condition
+{
+	list[]: .ib_shipyards.algeciras
+	list[]: .ib_shipyards.gijon
+	list[]: .ib_shipyards.setubal
+	list[]: .ib_shipyards.vigo
+}
+
+achievement_delivery_company : .ib_shipyards.algeciras
+{
+	role: target
+	company_name: ocean_sol
+	city_name: algeciras
+}
+
+achievement_delivery_company : .ib_shipyards.gijon
+{
+	role: target
+	company_name: ocean_sol
+	city_name: gijon
+}
+
+achievement_delivery_company : .ib_shipyards.setubal
+{
+	role: target
+	company_name: ocean_sol
+	city_name: setubal
+}
+
+achievement_delivery_company : .ib_shipyards.vigo
+{
+	role: target
+	company_name: ocean_sol
+	city_name: vigo
+}
+
+# Complete a delivery from Lisbon, Seville, and Pamplona to A Coruña.
+
+achievement_delivery : .achievement.ib_a_coruna
+{
+	event_name: job_done
+	initial_check: true
+	condition: .ib_a_coruna.condition
+	target: 3
+
+	achievement_name: ib_a_coruna
+
+	steam_progress_id: "ib_a_coruna-progress"
+	steam_id: ib_a_coruna
+}
+
+achievement_delivery_sequence : .ib_a_coruna.condition
+{
+	list[]: .ib_a_coruna.lisboa
+	list[]: .ib_a_coruna.pamplona
+	list[]: .ib_a_coruna.sevilla
+}
+
+achievement_delivery_each : .ib_a_coruna.lisboa
+{
+	list[]: .ib_a_coruna.lisboa.source
+	list[]: .ib_a_coruna.lisboa.target
+}
+
+achievement_delivery_point_city : .ib_a_coruna.lisboa.source
+{
+	role: source
+	city_name: lisboa
+}
+
+achievement_delivery_point_city : .ib_a_coruna.lisboa.target
+{
+	role: target
+	city_name: a_coruna
+}
+
+achievement_delivery_each : .ib_a_coruna.pamplona
+{
+	list[]: .ib_a_coruna.pamplona.source
+	list[]: .ib_a_coruna.pamplona.target
+}
+
+achievement_delivery_point_city : .ib_a_coruna.pamplona.source
+{
+	role: source
+	city_name: pamplona
+}
+
+achievement_delivery_point_city : .ib_a_coruna.pamplona.target
+{
+	role: target
+	city_name: a_coruna
+}
+
+achievement_delivery_each : .ib_a_coruna.sevilla
+{
+	list[]: .ib_a_coruna.sevilla.source
+	list[]: .ib_a_coruna.sevilla.target
+}
+
+achievement_delivery_point_city : .ib_a_coruna.sevilla.source
+{
+	role: source
+	city_name: sevilla
+}
+
+achievement_delivery_point_city : .ib_a_coruna.sevilla.target
+{
+	role: target
+	city_name: a_coruna
+}
+
+}

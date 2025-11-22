@@ -1,0 +1,61 @@
+traffic_vehicle : traffic.mercedes.actros_2014.st_6x2
+{
+	accessories[]: .mercedes.actros_2014.st_6x2.chassis
+	accessories[]: .mercedes.actros_2014.st_6x2.fwheel
+	accessories[]: .mercedes.actros_2014.st_6x2.rwheel
+	accessories[]: .mercedes.actros_2014.st_6x2.rwheel2
+	accessories[]: .mercedes.actros_2014.st_6x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 8298
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	#color from upgrade shop
+	color[]: (0.1596, 0.002, 0.0104) #bordo
+	color[]: (0.1559, 0.1844, 0.2269) #gray
+	color[]: (0.3185, 0.4324, 0.577) # gray
+	color[]: (0.7854, 0.8194, 0.8419) #light grey
+	color[]: (0.6488, 0.7142, 0.7522) #white
+	color[]: (0.6488, 0.7142, 0.7522) #white
+	color[]: (0.6488, 0.7142, 0.7522) #white
+	
+	spawn_ratio: 0.2
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mercedes.actros_2014.st_6x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros_2014/mercedes_actros_2014_st_6x2.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros_2014.st_6x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros_2014.st_6x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros_2014.st_6x2.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .mercedes.actros_2014.st_6x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros_2014/accessory/trlr_cables/stock.sii"
+}

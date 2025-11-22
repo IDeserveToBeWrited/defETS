@@ -1,0 +1,48 @@
+########################### Polar Circle - Default ###########################
+
+traffic_vehicle : traffic.copenhagen.locomotive
+{
+	accessories[]: .copenhagen.locomotive.chassis
+	accessories[]: .copenhagen.locomotive.fwheel
+	accessories[]: .copenhagen.locomotive.rwheel
+
+	spawn_condition[]: .copenhagen.locomotive.city
+	trailer_chains[]: "train_car.copenhagen.cart1 | train_car.copenhagen.cart2 | train_car.copenhagen.cart3 | train_car.copenhagen.cart3i | train_car.copenhagen.cart2i | train_car.copenhagen.cart1i | train_car.copenhagen.end"
+
+	max_speed: 160
+	vehicle_mass: 52000
+	engine_power: 1000
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+	tags[]: passenger
+
+}
+
+vehicle_accessory: .copenhagen.locomotive.chassis
+{
+	data_path: "/def/vehicle/ai/train_copenhagen/chassis.sii"
+}
+
+vehicle_wheel_accessory: .copenhagen.locomotive.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .copenhagen.locomotive.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .copenhagen.locomotive.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "kobenhavn"
+}

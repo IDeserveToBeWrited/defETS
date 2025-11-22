@@ -1123,8 +1123,6 @@ traffic_vehicle : traffic.lowcab_box.r_gr
 
 	engine_power: 140
 	
-
-
 	# WHITE/GRAY
 	color[]: (0.9, 0.9, 0.9)
 	# Green
@@ -1159,4 +1157,53 @@ traffic_spawn_condition: .traffic.lowcab_box.r_gr.condition.country
 	# spawn only near city with name equal to traffic vehicle name suffix
 	type: country
     str_param[]: "greece"
+}
+
+
+################################## Polar Circle
+
+traffic_vehicle : traffic.lowcab_box.d_vit
+{
+
+	accessories[]: .lowcab_box.d_vit.chassis
+	accessories[]: .lowcab_box.d_vit.fwheel
+	accessories[]: .lowcab_box.d_vit.rwheel
+
+	tags[]: sm_truck
+
+	max_speed: 120
+
+	vehicle_mass: 8000
+
+	spawn_ratio: 0
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	engine_power: 140
+
+	# WHITE/GRAY
+	color[]: (0.9, 0.9, 0.9)
+	color[]: (0.1, 0.1, 0.1)
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .lowcab_box.d_vit.chassis
+{
+	data_path: "/def/vehicle/ai/lowcab/chassis_d_vit.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.d_vit.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_lowcab.sii"
+}
+
+vehicle_wheel_accessory: .lowcab_box.d_vit.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_lowcab.sii"
 }

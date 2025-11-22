@@ -1,0 +1,131 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Italy --
+
+# Discover at least 15 Italian cities.
+
+achievement_visit_city_data : .achievement.it_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	country_name: italy
+	target: 15
+
+	achievement_name: it_visit_cities
+
+	steam_progress_id: "it_visit_cities-progress"
+	steam_id: it_visit_cities
+}
+
+# Own a garage in at least 2 Sicilian cities.
+
+achievement_garages_data : .achievement.it_garages
+{
+	event_name: garag_change
+	initial_check: true
+	filter: list
+	cities[]: catania
+	cities[]: messina
+	cities[]: palermo
+	target: 2
+
+	achievement_name: it_garages
+
+	steam_progress_id: "it_garages-progress"
+	steam_id: it_garages
+}
+
+# Deliver cargo to at least 1 Italian shipyard.
+
+achievement_each_company_data : .achievement.it_shipyards
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: c_navale.ancona
+	targets[]: c_navale.messina
+	targets[]: c_navale.olbia
+	target: 1
+
+	achievement_name: it_shipyards
+
+	steam_id: it_shipyards
+}
+
+# Visit Etna and Vesuvius volcanoes.
+
+achievement_trigger_data : .achievement.it_volcanoes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: it_volcanoes
+	target: 2
+
+	achievement_name: it_volcanoes
+
+	steam_progress_id: "it_volcanoes-progress"
+	steam_id: it_volcanoes
+}
+
+# Enter Rome from at least 3 corridors that lead to it.
+
+achievement_trigger_data : .achievement.it_road_rome
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: it_roads_to_rome
+	target: 3
+
+	achievement_name: it_roads_to_rome
+
+	steam_progress_id: "it_roads_to_rome-progress"
+	steam_id: it_roads_to_rome
+}
+
+# Complete a delivery from Carrara quarry.
+
+achievement_each_company_data : .achievement.it_quarry
+{
+	event_name: job_done
+	initial_check: true
+	sources[]: marmo.livorno
+	target: 1
+
+	achievement_name: it_quarry
+
+	steam_id: it_quarry
+}
+
+# Discover at least 2 Sardinian cities.
+
+achievement_visit_city_data : .achievement.it_visit_sar
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: cagliari
+	cities[]: olbia
+	cities[]: sassari
+	target: 2
+
+	achievement_name: it_visit_sardinia
+
+	steam_progress_id: "it_visit_sardinia-progress"
+	steam_id: it_visit_sardinia
+}
+
+}

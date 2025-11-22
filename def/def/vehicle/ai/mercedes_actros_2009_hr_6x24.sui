@@ -1,0 +1,65 @@
+traffic_vehicle : traffic.mercedes.actros.hr_6x24
+{
+	accessories[]: .mercedes.actros.hr_6x24.chassis
+	accessories[]: .mercedes.actros.hr_6x24.fwheel
+	accessories[]: .mercedes.actros.hr_6x24.rwheel
+	accessories[]: .mercedes.actros.hr_6x24.rwheel2
+	accessories[]: .mercedes.actros.hr_6x24.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 9516
+	engine_power: 373
+
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_3.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.151, 0.0104, 0.0057) #dark scarlet
+	color[]: (0.3185, 0.2979, 0.2591) #combage gray
+	color[]: (0.0528, 0.0528, 0.0578) #deep basalt
+	color[]: (0.1916, 0.1949, 0.214) #royal gray
+	color[]: (0.7579, 0.0690, 0.0650) #garnet red
+	color[]: (1.000000, 0.651406, 0.171441) #light ivory gold
+	color[]: (0.346704, 0.617207, 0.854993) #ice blue
+	color[]: (0.564712, 0.610496, 0.644480) #brilliant silver
+	color[]: (0.300544, 0.003035, 0.035601) #burgundy
+	color[]: (0.066626, 0.119538, 0.226966) #blue lagoon
+	color[]: (0.7083, 0.7083, 0.7083) #white
+	color[]: (0.7083, 0.7083, 0.7083) #white
+	color[]: (0.7083, 0.7083, 0.7083) #white
+	color[]: (0.7083, 0.7083, 0.7083) #white
+	
+
+	spawn_ratio: 0.05
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .mercedes.actros.hr_6x24.chassis
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros/mercedes_actros_2009_hr_6x24.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros.hr_6x24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros.hr_6x24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel_single.sii"
+}
+vehicle_wheel_accessory: .mercedes.actros.hr_6x24.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .mercedes.actros.hr_6x24.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/mercedes.actros/accessory/trlr_cables/stock.sii"
+}

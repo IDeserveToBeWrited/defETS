@@ -1,0 +1,64 @@
+traffic_vehicle : traffic.daf.xf_euro6.ssp_6x4
+{
+	accessories[]: .daf.xf_euro6.ssp_6x4.chassis
+	accessories[]: .daf.xf_euro6.ssp_6x4.fwheel
+	accessories[]: .daf.xf_euro6.ssp_6x4.rwheel
+	accessories[]: .daf.xf_euro6.ssp_6x4.rwheel2
+	accessories[]: .daf.xf_euro6.ssp_6x4.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	#tags[]: dealer
+
+	vehicle_mass: 7472
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	#color from upgrade shop
+	#color[]: (0.1433, 0.159, 0.1916) #blue
+	color[]: (0.8307, 0.8307, 0.8307) #white
+
+	color[]: (0.032222, 0.287264, 0.723059) #pure excellence 
+	color[]: (0.5647, 0.5647, 0.5647) #snowwhite 	
+	color[]: (0.462, 0.0074, 0.0074) #passion red 
+	color[]: (0.0047, 0.0331, 0.1878) #cobalt blue
+	color[]: (0.7304, 0.0742, 0.0116) #orange
+	color[]: (0.0018, 0.0069, 0.0612) #ultramarine blue
+	#color[]: (0, 0.0481, 0.0097) #green
+
+	spawn_ratio: 0.1
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .daf.xf_euro6.ssp_6x4.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_euro6/daf_xf_euro6_ssp_6x4.sii"
+}
+vehicle_wheel_accessory: .daf.xf_euro6.ssp_6x4.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xf_euro6.ssp_6x4.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xf_euro6.ssp_6x4.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.xf_euro6.ssp_6x4.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_euro6/accessory/trlr_cables/stock.sii"
+}
+

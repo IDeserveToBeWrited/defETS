@@ -1,0 +1,59 @@
+traffic_vehicle : traffic.man.tgx_euro6.xlx_6x24
+{
+	accessories[]: .man.tgx_euro6.xlx_6x24.chassis
+	accessories[]: .man.tgx_euro6.xlx_6x24.fwheel
+	accessories[]: .man.tgx_euro6.xlx_6x24.rwheel
+	accessories[]: .man.tgx_euro6.xlx_6x24.rwheel2
+	accessories[]: .man.tgx_euro6.xlx_6x24.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	spawn_ratio: 0.1
+
+	vehicle_mass: 7327
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0664, 0.0664, 0.0664) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2458, 0.0134, 0.013) #red
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.9911, 0.5906, 0.0781) #yellow
+	color[]: (0.0103, 0.0171, 0.0835) #blue
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .man.tgx_euro6.xlx_6x24.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/man_tgx_euro6_xlx_6x24.sii"
+}
+vehicle_wheel_accessory: .man.tgx_euro6.xlx_6x24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man.tgx_euro6.xlx_6x24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel_single.sii"
+}
+vehicle_wheel_accessory: .man.tgx_euro6.xlx_6x24.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .man.tgx_euro6.xlx_6x24.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_euro6/accessory/trlr_cables/stock.sii"
+}

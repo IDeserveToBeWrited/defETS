@@ -351,3 +351,86 @@ vehicle_wheel_accessory: .transport_t6.sl_custom.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
 }
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finland Municipal Police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.transport_t6.fi
+{
+	accessories[]: .transport_t6.fi.chassis
+	accessories[]: .transport_t6.fi.fwheel
+	accessories[]: .transport_t6.fi.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (1, 1, 1) #white
+
+	allow_parked: true
+
+	spawn_ratio: 0.0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .transport_t6.fi.chassis
+{
+	data_path: "/def/vehicle/ai/transporter_t6/chassis_fi.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.fi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.fi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finland BORDER 2 Police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.transport_t6.fi_cus2
+{
+	accessories[]: .transport_t6.fi_cus2.chassis
+	accessories[]: .transport_t6.fi_cus2.fwheel
+	accessories[]: .transport_t6.fi_cus2.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (1, 1, 1) #white
+
+	allow_parked: true
+	spawn_ratio: 0.0
+	tags[]: customs
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .transport_t6.fi_cus2.chassis
+{
+	data_path: "/def/vehicle/ai/transporter_t6/chassis_fi_cus2.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.fi_cus2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.fi_cus2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}
+

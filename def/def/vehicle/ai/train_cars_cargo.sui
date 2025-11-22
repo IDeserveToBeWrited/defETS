@@ -854,3 +854,35 @@ vehicle_wheel_accessory: .cargo.coverg.rwheel3
 	offset: 6
 	data_path: "/def/vehicle/ai_wheel/train_cars.sii"
 }
+
+################ Polar Circle
+
+traffic_trailer : train_car.hopper_ore
+{
+	accessories[]: .cargo.hopper_ore.tchassis
+	accessories[]: .cargo.hopper_ore.trwheel0
+	accessories[]: .cargo.hopper_ore.trwheel1
+	
+	sound_move: "/sound/traffic/train_car_cargo.soundref"
+
+	displacement_limit: 0.0
+
+	tags[]: cargo
+}
+
+vehicle_accessory: .cargo.hopper_ore.tchassis
+{
+	data_path: "/def/vehicle/ai/train_cars/chassis_hopper_ore.sii"
+}
+
+vehicle_wheel_accessory: .cargo.hopper_ore.trwheel0
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/train_cars.sii"
+}
+
+vehicle_wheel_accessory: .cargo.hopper_ore.trwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/ai_wheel/train_cars.sii"
+}

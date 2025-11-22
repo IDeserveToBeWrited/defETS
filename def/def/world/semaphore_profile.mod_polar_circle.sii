@@ -1,0 +1,96 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+
+tr_semaphore_profile : tr_sem_prof.odd_br
+{
+	name: "oddesund_swing_bridge"
+	cycle[]: 0.0
+	# Minimum delay after orange-to-green distance before barriers go up
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red) CAS OTEVIRANI MOSTU
+	# object front <-> crossing (red) OTEVRENY MOST 
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	#  MOST 
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (150.0, 150.0, 45.0, 45.0)     # Activation distances in [m] for mover speed 4.0 m/s
+	id_map[0]: 0
+
+	
+	# SEMAFORY
+	type[1]: barrier_distance
+	interval[1]: (160.0, 225.0, 175.0, 150.0)     # Activation distances in [m] for mover speed 4.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# BARIERY
+	type[2]: barrier_distance
+	interval[2]: (155.0, 170.0, 165.0, 145.0)     # Activation distances in [m] for mover speed 4.0 m/s
+	model[2]: ""
+	id_map[2]: 2
+
+
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "odde_br"
+
+	# models of semaphore
+	id_map[4]: 1
+	model[4]: "odde_br_s"
+
+	id_map[5]: 1
+	model[5]: "odde_br_c"
+
+	# models of bariers
+	id_map[6]: 2
+	model[6]: "bar_br_10"
+
+	id_map[7]: 2
+	model[7]: "bar_br_10"
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

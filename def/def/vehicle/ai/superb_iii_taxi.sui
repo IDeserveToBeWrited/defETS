@@ -1,0 +1,51 @@
+# XXXXXXXXXXXXXXXXXXX Finland | Vaasa XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.superb.taxi_fi_va
+{
+	accessories[]: .superb.taxi_fi_va.chassis
+	accessories[]: .superb.taxi_fi_va.fwheel
+	accessories[]: .superb.taxi_fi_va.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+	
+	tags[]: urban
+	tags[]: taxi
+	tags[]: context
+
+	license_plate_type: taxi
+	
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"	
+
+	spawn_condition[]: .traffic.superb.taxi_fi_va.condition.city
+}
+
+vehicle_accessory: .superb.taxi_fi_va.chassis
+{
+	data_path: "/def/vehicle/ai/superb_iii/chassis_taxi_fi_va.sii"
+}
+
+vehicle_wheel_accessory: .superb.taxi_fi_va.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_19in_l.sii"
+}
+
+vehicle_wheel_accessory: .superb.taxi_fi_va.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_19in_l.sii"
+}
+
+traffic_spawn_condition: .traffic.superb.taxi_fi_va.condition.city
+{
+	#spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "vaasa"	
+}

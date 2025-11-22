@@ -1,0 +1,42 @@
+SiiNunit
+{
+accessory_interior_data: b_sda_lgh.scania.s_2016.interior
+{
+	name: "@@smart_dash_advanced@@, @@light@@"
+	price: 39120
+	unlock: 16
+	icon: "truck/scania_2016/accessory/interior/smart_dash_exc_light_advanced"
+	part_type: factory
+
+	model: "/vehicle/truck/scania_2016/interior/super/model_super.pmd"
+	collision: "/vehicle/truck/scania_2016/interior/super/model_super.pmc"
+	animated_model: "/vehicle/truck/scania_2016/interior/super/anim_super/anim_super.pmd"
+
+	active_mirrors_part: a_mirrors
+	passive_mirrors_part: p_mirrors
+	look: exc_light
+	variant: cab_s_b_ad
+
+@include "animations_di.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	glass_panes[]: .scania.s_2016.pane.f_glasspane
+	glass_panes[]: .scania.s_2016.pane.l_glasspane
+	glass_panes[]: .scania.s_2016.pane.r_glasspane
+	glass_panes[]: .scania.s_2016.pane.t_glasspane
+
+	ext_model: "/vehicle/truck/scania_2016/interior/external/stock.pmd"
+	ext_variant: s_b_di
+	ext_look: exc_light_di
+
+	suitable_for[]: "normal.scania.s_2016.cabin"
+
+@include "computers_2025.sui"
+@include "dashboard_color.sui"
+@include "int_shadow_cab_norm_eu.sui"
+@include "mirrors.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

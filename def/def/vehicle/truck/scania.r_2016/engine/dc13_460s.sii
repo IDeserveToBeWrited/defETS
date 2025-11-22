@@ -1,0 +1,37 @@
+SiiNunit
+{
+accessory_engine_data : dc13_460s.scania.r_2016.engine
+{
+	name: "DC13 175 460 Euro 6 SUPER"
+	price: 20280
+	unlock: 11
+	info[]: "460 @@hp@@ (338@@kw@@)"
+	info[]: "2@@dg@@500 @@nm@@"
+	info[]: "900-1@@dg@@290 @@rpm@@"
+	icon: "engine_scania_dc13super"
+	part_type: factory
+
+	torque: 2500
+	torque_curve[]: (300, 0.1)
+	torque_curve[]: (440, 0.5)
+	torque_curve[]: (900, 1.0)
+	torque_curve[]: (1290, 1.0)
+	torque_curve[]: (1600, 0.81)
+	torque_curve[]: (1800, 0.73)
+	torque_curve[]: (2300, 0.4)
+	torque_curve[]: (2500, 0.1)
+
+	rpm_range_low_gear: (800, 1500)
+	rpm_range_high_gear: (850, 1150)
+	rpm_range_power: (1400, 1850)
+
+	volume: 12.7
+	adblue_consumption: 0.06
+	no_adblue_power_limit: 0.5
+
+@include "sound_r560.sui"
+
+	overrides[]: "/def/vehicle/truck/scania.r_2016/badge/r460.sii"
+	overrides[]: "/def/vehicle/truck/scania.r_2016/accessory/c_badge/super.sii"
+}
+}

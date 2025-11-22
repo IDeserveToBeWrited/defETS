@@ -265,40 +265,6 @@ curve_model : curve.ibe_11008
 	dynamic_lod_dist[0]: 100
 }
 
-curve_model : curve.ibe_11009
-{
-	model_desc: "/model2/landmark/landmark_es/malaga_racetrack_tires_ibe.pmd"
-	name: "malaga racetrack tires ibe"
-
-	variation: 2
-	start_part: 2
-	end_part: 2
-	variation[0]: "default | center1,center2,center3,center4 : 1.0"
-	start_part[0]: "start1"
-	end_part[0]: "end1"
-	variation[1]: "var1 | center2,center4,center1,center3 : 1.0"
-	start_part[1]: "start1"
-	end_part[1]: "end1"
-
-	overlay: 6
-	overlay[0]: "start1 | ovr1 : 1.0"
-	overlay[1]: "center1 | ovr1 : 1.0"
-	overlay[2]: "center2 | ovr1 : 1.0"
-	overlay[3]: "center3 | ovr1 : 1.0"
-	overlay[4]: "center4 | ovr1 : 1.0"
-	overlay[5]: "end1 | ovr1 : 1.0"
-
-	high_tess: 0
-
-	dynamic_lod_desc: 2
-	dynamic_lod_dist: 2
-	dynamic_lod_desc[0]: "/model2/landmark/landmark_es/malaga_racetrack_tires_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 30
-	dynamic_lod_desc[1]: "/model2/landmark/landmark_es/malaga_racetrack_tires_ibe_lod2.pmd"
-	dynamic_lod_dist[1]: 70
-	drop_sun_shadows: 1
-}
-
 curve_model : curve.ibe_07002
 {
 	model_desc: "/model2/landmark/almeria_greenhouse_01_ibe.pmd"
@@ -646,45 +612,6 @@ curve_model : curve.ibe_14019
 	high_tess: 0
 }
 
-curve_model : curve.ibe_0900d
-{
-	model_desc: "/model2/farm/calf_hutch_01_ibe.pmd"
-	name: "calf hutch 01 ibe"
-
-	variation: 7
-	start_part: 7
-	end_part: 7
-	variation[0]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0"
-	start_part[0]: "start1"
-	end_part[0]: "end1"
-	variation[1]: "blue | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0"
-	start_part[1]: "start2"
-	end_part[1]: "end2"
-	variation[2]: "green | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0"
-	start_part[2]: "start3"
-	end_part[2]: "end3"
-	variation[3]: "red | center16 : 1.0 | center17 : 1.0 | center18 : 1.0 | center19 : 1.0 | center20 : 1.0"
-	start_part[3]: "start4"
-	end_part[3]: "end4"
-	variation[4]: "brown | center21 : 1.0 | center22 : 1.0 | center23 : 1.0 | center24 : 1.0 | center25 : 1.0"
-	start_part[4]: "start5"
-	end_part[4]: "end5"
-	variation[5]: "gray | center26 : 1.0 | center27 : 1.0 | center28 : 1.0 | center29 : 1.0 | center30 : 1.0"
-	start_part[5]: "start6"
-	end_part[5]: "end6"
-	variation[6]: "black | center31 : 1.0 | center32 : 1.0 | center33 : 1.0 | center34 : 1.0 | center35 : 1.0"
-	start_part[6]: "start7"
-	end_part[6]: "end7"
-
-	dynamic_lod_desc: 2
-	dynamic_lod_dist: 2
-	dynamic_lod_desc[0]: "/model2/farm/calf_hutch_01_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 80
-	dynamic_lod_desc[1]: "/model2/farm/calf_hutch_01_ibe_lod2.pmd"
-	dynamic_lod_dist[1]: 200
-	drop_sun_shadows: 1
-}
-
 curve_model : curve.ibe_0900h
 {
 	model_desc: "/model2/water/lateral_irrigation_ibe.pmd"
@@ -835,6 +762,36 @@ curve_model : curve.ibe_23019
 	variation[0]: "default | c1,c2,c2 : 1.0"
 
 	high_tess: 0
+}
+
+curve_model : curve.ibe_70000
+{
+	model_desc: "/model2/landmark/landmark_es/barcelona_bollards_01_bus.pmd"
+
+	variation[]: "var1 | center1, center2, center3, center4, center5 : 1.0 | center3, center5, center1, center2, center4 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/landmark/landmark_es/barcelona_bollards_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.ibe_6i000
+{
+	model_desc: "/model2/landmark/landmark_es/barcelona_overpass_01_bus.pmd"
+
+	variation[]: "variant1 | center1, center2 : 1.0 | center3, center4 : 1.0"
+	start_part[]: "start1 | start2"
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/landmark/landmark_es/barcelona_overpass_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	smooth_surface: true
+	overlay[]: "center4 | ovr1 : 1.0 | ovr2 : 1.0 | ovr3 : 1.0 | ovr4 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0 | ovr2 : 1.0 | ovr3 : 1.0 | ovr4 : 1.0"
+	overlay[]: "start1 | ovr1 : 1.0 | ovr2 : 1.0 | ovr3 : 1.0 | ovr4 : 1.0"
+	overlay[]: "start2 | ovr1 : 1.0 | ovr2 : 1.0 | ovr3 : 1.0 | ovr4 : 1.0"
 }
 
 }

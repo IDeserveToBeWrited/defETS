@@ -1,0 +1,933 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+
+#################################################################################### TOLLGATE ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.col_l_toll
+{
+	name: "collumn tollgate left poc"
+
+	model_desc: "/model/traffic_light/semaphore_tollgate_01_left_poc.pmd"
+	model_coll: "/model/traffic_light/semaphore_tollgate_01_left_poc.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r_toll
+{
+	name: "collumn tollgate right poc"
+
+	model_desc: "/model/traffic_light/semaphore_tollgate_01_right_poc.pmd"
+	model_coll: "/model/traffic_light/semaphore_tollgate_01_right_poc.pmc"
+}
+
+##################################################################################### LANDMARKS ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.odde_br
+{
+
+	name: "oddesund_bridge_02_poc"
+
+	model_desc: "/prefab2/landmark/dk/oddesund_bridge_02_poc_ne.pmd"
+	model_coll: "/prefab2/landmark/dk/oddesund_bridge_02_poc_ne.pmc"
+
+	draw_distance: 1500
+
+	#state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: "/prefab2/landmark/dk/oddesund_bridge_02_poc_ne_open.pma"
+	
+	# red
+	state_anim[1]: ""
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/landmark/dk/oddesund_bridge_02_poc_ne_close.pma"
+	
+	# green
+	state_anim[3]: ""
+    
+	#sound
+	sounds[]: "OY|/sound/world/sounds/refs/artificial/industrial/rafinery_pump_1.soundref"
+	sounds[]: "OY|/sound/world/sounds/refs/artificial/machines/swing_bridge_loop_1.soundref"
+}
+
+tr_semaphore_model : tr_sem_mdl.odde_br_c
+{
+	name: "oddesund_bridge_semaphore_collumn"
+
+	model_desc: "/model/traffic_light/landmark/oddesund_bridge_collumn_dk.pmd"
+	model_coll: "/model/traffic_light/landmark/oddesund_bridge_collumn_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.odde_br_s
+{
+	name: "oddesund_bridge_semaphore_single"
+
+	model_desc: "/model/traffic_light/landmark/oddesund_bridge_single_dk.pmd"
+	model_coll: "/model/traffic_light/landmark/oddesund_bridge_single_dk.pmc"
+}
+
+##################################################################################### LIGHT ONLY ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.lighto_r.norway
+{
+	name: "collumn_light_only_no"
+
+	model_desc: "/model/traffic_light/collumn_light_only_no.pmd"
+	model_coll: "/model/traffic_light/collumn_light_only_no.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.lighto_r.sweden
+{
+	name: "collumn_light_only_se"
+
+	model_desc: "/model/traffic_light/collumn_light_only_se.pmd"
+	model_coll: "/model/traffic_light/collumn_light_only_se.pmc"
+}
+
+
+##################################################################################### COLLUMN ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.col_l.finland
+{
+	name: "collumn_left_fi"
+
+	model_desc: "/model/traffic_light/collumn_fi.pmd"
+	model_coll: "/model/traffic_light/collumn_fi.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r.finland
+{
+	name: "collumn_right_fi"
+
+	model_desc: "/model/traffic_light/collumn_fi.pmd"
+	model_coll: "/model/traffic_light/collumn_fi.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_l.denmark
+{
+	name: "collumn_left_dk"
+
+	model_desc: "/model/traffic_light/collumn_dk.pmd"
+	model_coll: "/model/traffic_light/collumn_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r.denmark
+{
+	name: "collumn_right_dk"
+
+	model_desc: "/model/traffic_light/collumn_dk.pmd"
+	model_coll: "/model/traffic_light/collumn_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_l.norway
+{
+	name: "collumn_left_no"
+
+	model_desc: "/model/traffic_light/collumn_left_no.pmd"
+	model_coll: "/model/traffic_light/collumn_left_no.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r.norway
+{
+	name: "collumn_right_no"
+
+	model_desc: "/model/traffic_light/collumn_right_no.pmd"
+	model_coll: "/model/traffic_light/collumn_right_no.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_l.sweden
+{
+	name: "collumn_left_se"
+
+	model_desc: "/model/traffic_light/collumn_se.pmd"
+	model_coll: "/model/traffic_light/collumn_se.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r.sweden
+{
+	name: "collumn_right_se"
+
+	model_desc: "/model/traffic_light/collumn_se.pmd"
+	model_coll: "/model/traffic_light/collumn_se.pmc"
+}
+
+##################################################################################### DOUBLE ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.dbl.finland
+{
+	name: "double_fi"
+
+	model_desc: "/model/traffic_light/double_fi.pmd"
+	model_coll: "/model/traffic_light/double_fi.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.dbl.denmark
+{
+	name: "double_dk"
+
+	model_desc: "/model/traffic_light/double_dk.pmd"
+	model_coll: "/model/traffic_light/double_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.dbl.norway
+{
+	name: "double_no"
+
+	model_desc: "/model/traffic_light/double_no.pmd"
+	model_coll: "/model/traffic_light/double_no.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.dbl.sweden
+{
+	name: "double_se"
+
+	model_desc: "/model/traffic_light/double_se.pmd"
+	model_coll: "/model/traffic_light/double_se.pmc"
+}
+
+##################################################################################### SINGLE ###########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.sng_l.sweden
+{
+	name: "single_left_se"
+
+	model_desc: "/model/traffic_light/single_se.pmd"
+	model_coll: "/model/traffic_light/single_se.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_r.sweden
+{
+	name: "single_right_se"
+
+	model_desc: "/model/traffic_light/single_se.pmd"
+	model_coll: "/model/traffic_light/single_se.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_l.denmark
+{
+	name: "single_left_dk"
+
+	model_desc: "/model/traffic_light/single_dk.pmd"
+	model_coll: "/model/traffic_light/single_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_r.denmark
+{
+	name: "single_right_dk"
+
+	model_desc: "/model/traffic_light/single_dk.pmd"
+	model_coll: "/model/traffic_light/single_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_l.finland
+{
+	name: "single_left_fi"
+
+	model_desc: "/model/traffic_light/single_fi.pmd"
+	model_coll: "/model/traffic_light/single_fi.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_r.finland
+{
+	name: "single_right_fi"
+
+	model_desc: "/model/traffic_light/single_fi.pmd"
+	model_coll: "/model/traffic_light/single_fi.pmc"
+}
+
+################################################################################ SINGLE DOUBLE ######################################################################################
+
+tr_semaphore_model : tr_sem_mdl.sng_dbl.denmark
+{
+	name: "single_double_dk"
+
+	model_desc: "/model/traffic_light/single_double_dk.pmd"
+	model_coll: "/model/traffic_light/single_double_dk.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_dbl.norway
+{
+	name: "single_double_no"
+
+	model_desc: "/model/traffic_light/single_double_no.pmd"
+	model_coll: "/model/traffic_light/single_double_no.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.sng_dbl.sweden
+{
+	name: "single_double_se"
+
+	model_desc: "/model/traffic_light/single_double_se.pmd"
+	model_coll: "/model/traffic_light/single_double_se.pmc"
+}
+
+##################################################################################### CITY ##########################################################################################
+
+tr_semaphore_model : tr_sem_mdl.cty_r
+{
+	name: "single_left_se"
+
+	model_desc: "/model/traffic_light/single_se.pmd"
+	model_coll: "/model/traffic_light/single_se.pmc"
+}
+
+################################################################################ TRAM #####################################################################################
+
+tr_semaphore_model : tr_sem_mdl.coltram_r.denmark
+{
+	name: "collumn_tram_dk"
+
+	model_desc: "/model/traffic_light/collumn_tram_dk.pmd"
+	model_coll: "/model/traffic_light/collumn_tram_dk.pmc"
+}
+
+################################################################################ LEVEL CROSSING #####################################################################################
+######################### DENMARK
+tr_semaphore_model : tr_sem_mdl.lc_s_left.denmark
+{
+
+	name: "lc_s_left"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_left2.denmark
+{
+
+	name: "lc_s_left_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left2_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left2_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left2_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left2_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right.denmark
+{
+
+	name: "lc_s_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right2.denmark
+{
+
+	name: "lc_s_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right2_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right2_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right2_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right2_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right.denmark
+{
+
+	name: "lc_b_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right2.denmark
+{
+
+	name: "lc_b_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right2_dk.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right2_dk.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right2_dk_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right2_dk_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_3"
+}
+
+#################### FINLAND
+tr_semaphore_model : tr_sem_mdl.lc_s_left.finland
+{
+
+	name: "lc_s_left"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_left2.finland
+{
+
+	name: "lc_s_left_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left2_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left2_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left2_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left2_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right.finland
+{
+
+	name: "lc_s_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right2.finland
+{
+
+	name: "lc_s_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right2_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right2_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right2_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right2_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right.finland
+{
+
+	name: "lc_b_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right2.finland
+{
+
+	name: "lc_b_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right2_fi.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right2_fi.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right2_fi_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right2_fi_open.pma"
+	
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_1"
+}
+
+#################### SWEDEN
+tr_semaphore_model : tr_sem_mdl.lc_s_left.sweden
+{
+
+	name: "lc_s_left"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_left2.sweden
+{
+
+	name: "lc_s_left_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left2_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left2_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left2_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left2_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right.sweden
+{
+
+	name: "lc_s_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right2.sweden
+{
+
+	name: "lc_s_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right2_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right2_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right2_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right2_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right.sweden
+{
+
+	name: "lc_b_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right2.sweden
+{
+
+	name: "lc_b_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right2_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right2_se.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right2_se_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right2_se_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_sa.sweden
+{
+	name: "lc standalone"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_standalone_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_standalone_se.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_sa2.sweden
+{
+	name: "lc standalone 2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_standalone2_se.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_standalone2_se.pmc"
+}
+
+#################### NORWAY
+tr_semaphore_model : tr_sem_mdl.lc_s_left.norway
+{
+
+	name: "lc_s_left"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_left2.norway
+{
+
+	name: "lc_s_left_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_left2_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_left2_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_left2_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_left2_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right.norway
+{
+
+	name: "lc_s_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_s_right2.norway
+{
+
+	name: "lc_s_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_small_right2_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_small_right2_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_small_right2_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_small_right2_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right.norway
+{
+
+	name: "lc_b_right"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+tr_semaphore_model : tr_sem_mdl.lc_b_right2.norway
+{
+
+	name: "lc_b_right_2"
+
+	model_desc: "/prefab2/level_crossing/level_crossing_big_right2_no.pmd"
+	model_coll: "/prefab2/level_crossing/level_crossing_big_right2_no.pmc"
+
+	state_anim: 4
+	
+	# orange_to_red
+	state_anim[0]: ""
+	
+	# red
+	state_anim[1]: "/prefab2/level_crossing/level_crossing_big_right2_no_open.pma"
+	
+	# orange_to_green
+	state_anim[2]: "/prefab2/level_crossing/level_crossing_big_right2_no_open.pma"
+	
+	# green
+	state_anim[3]: ""
+	
+	#sound
+	sounds[]: "ROY|/sound/world/semaphore_ets.bank#semaphore/train_nordic_bells_2"
+}
+
+}

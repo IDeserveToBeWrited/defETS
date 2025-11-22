@@ -1,0 +1,237 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Polar Circle --
+
+# Discover at least 20 cities in Nordic Horizons.
+
+achievement_visit_city_data : .achievement.pc_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: alesund
+	cities[]: alta
+	cities[]: andenes
+	cities[]: arvidsjaur
+	cities[]: bodo
+	cities[]: borlange
+	cities[]: dombas
+	cities[]: falun
+	cities[]: gavle
+	cities[]: hamar
+	cities[]: haparanda
+	cities[]: honningsvag
+	cities[]: ivalo
+	cities[]: joensuu
+	cities[]: jyvaskyla
+	cities[]: kajaani
+	cities[]: karesuando
+	cities[]: kiruna
+	cities[]: kokkola
+	cities[]: kristiansund
+	cities[]: kuopio
+	cities[]: kuusamo
+	cities[]: lappeenranta
+	cities[]: lillehammer
+	cities[]: lulea
+	cities[]: mikkeli
+	cities[]: mo_i_rana
+	cities[]: narvik
+	cities[]: ornskoldsvik
+	cities[]: ostersund
+	cities[]: oulu
+	cities[]: rovaniemi
+	cities[]: skelleftea
+	cities[]: steinkjer
+	cities[]: sundsvall
+	cities[]: svolvaer
+	cities[]: tornio
+	cities[]: tromso
+	cities[]: trondheim
+	cities[]: umea
+	cities[]: vaasa
+	target: 20
+
+	achievement_name: pc_visit_cities
+
+	steam_progress_id: "pc_visit_cities-progress"
+	steam_id: pc_visit_cities
+}
+
+# View cutscenes from at least 12 viewpoints of Nordic Horizons regions.
+
+achievement_trigger_data : .achievement.pc_cutscenes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: pc_cutscenes
+	target: 12
+
+	achievement_name: pc_cutscenes
+
+	steam_progress_id: "pc_cutscenes-progress"
+	steam_id: pc_cutscenes
+}
+
+# Deliver 2 cargoes of Salmon Fillet from the city of Tromso or Alta to 2 different countries.
+
+achievement_delivery : .achievement.pc_salm_fill
+{
+	event_name: job_done
+	initial_check: true
+	condition: .pc_salm_fill.condition
+	target: 2
+
+	achievement_name: pc_salm_fillet
+
+	steam_progress_id: "pc_salm_fillet-progress"
+	steam_id: pc_salm_fillet
+}
+
+achievement_unique_delivery_points : .pc_salm_fill.condition
+{
+	condition: .pc_salm_fill.unique
+	role: target
+	unique: country
+	count: 2
+}
+
+achievement_delivery_each : .pc_salm_fill.unique
+{
+	list[]: .pc_salm_fill.cargo
+	list[]: .pc_salm_fill.source
+	list[]: .pc_salm_fill.target
+}
+
+achievement_delivery_cargo : .pc_salm_fill.cargo
+{
+	cargo_name: salm_fillet
+}
+
+achievement_delivery_any : .pc_salm_fill.source
+{
+	list[]: .pc_salm_fill.source.tromso
+	list[]: .pc_salm_fill.source.alta
+}
+
+achievement_delivery_point_city : .pc_salm_fill.source.tromso
+{
+	role: source
+	city_name: tromso
+}
+
+achievement_delivery_point_city : .pc_salm_fill.source.alta
+{
+	role: source
+	city_name: alta
+}
+
+achievement_delivery_not : .pc_salm_fill.target
+{
+	condition: .pc_salm_fill.target.not
+}
+
+achievement_delivery_point_country : .pc_salm_fill.target.not
+{
+	role: target
+	country_name: norway
+}
+
+# Complete excellent deliveries in this order and direction: Ivalo - Kiruna - Svolvaer.
+
+achievement_delivery : .achievement.pc_polar_cir
+{
+	event_name: job_done
+	initial_check: true
+	condition: .pc_polar_cir.condition
+	target: 2 
+
+	achievement_name: pc_polar_circle
+
+	steam_progress_id: "pc_polar_circle-progress"
+	steam_id: pc_polar_circle
+}
+
+achievement_delivery_sequence : .pc_polar_cir.condition
+{
+	list[]: .pc_polar_cir.ivalo.kiruna
+	list[]: .pc_polar_cir.kiruna.svolvaer
+	in_order: true
+}
+
+achievement_delivery_each : .pc_polar_cir.ivalo.kiruna
+{
+	list[]: .pc_polar_cir.ivalo.kiruna.source
+	list[]: .pc_polar_cir.ivalo.kiruna.target
+	list[]: .pc_polar_cir.ivalo.kiruna.damage
+	list[]: .pc_polar_cir.ivalo.kiruna.late
+}
+
+achievement_delivery_point_city : .pc_polar_cir.ivalo.kiruna.source
+{
+	role: source 
+	city_name: ivalo
+}
+
+achievement_delivery_point_city : .pc_polar_cir.ivalo.kiruna.target
+{
+	role: target
+	city_name: kiruna
+}
+
+achievement_delivery_cargo_damage : .pc_polar_cir.ivalo.kiruna.damage
+{
+	damage_max: 0.0
+}
+
+achievement_delivery_late : .pc_polar_cir.ivalo.kiruna.late
+{
+        late: false
+}
+
+achievement_delivery_each : .pc_polar_cir.kiruna.svolvaer
+{
+	list[]: .pc_polar_cir.kiruna.svolvaer.source
+	list[]: .pc_polar_cir.kiruna.svolvaer.target
+	list[]: .pc_polar_cir.kiruna.svolvaer.damage
+	list[]: .pc_polar_cir.kiruna.svolvaer.late
+}
+
+achievement_delivery_point_city : .pc_polar_cir.kiruna.svolvaer.source
+{
+	role: source 
+	city_name: kiruna
+}
+
+achievement_delivery_point_city : .pc_polar_cir.kiruna.svolvaer.target
+{
+	role: target
+	city_name: svolvaer
+}
+
+achievement_delivery_cargo_damage : .pc_polar_cir.kiruna.svolvaer.damage
+{
+	damage_max: 0.0
+}
+
+achievement_delivery_late : .pc_polar_cir.kiruna.svolvaer.late
+{
+        late: false
+}
+
+}

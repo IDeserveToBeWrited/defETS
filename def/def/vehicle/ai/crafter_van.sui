@@ -236,3 +236,80 @@ vehicle_wheel_accessory: .crafter.cmp_ra.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
 }
+
+######## Company Van - Scante #########################################
+
+
+traffic_vehicle : traffic.crafter.cmp_sc
+{
+	accessories[]: .crafter.cmp_sc.chassis
+	accessories[]: .crafter.cmp_sc.fwheel
+	accessories[]: .crafter.cmp_sc.rwheel
+
+	variant[]: traffic.crafter.cmp_nt
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_sc.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_sc.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_sc.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_sc.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}
+
+
+######## Company Van - Noxit Tech #########################################
+
+
+traffic_vehicle : traffic.crafter.cmp_nt
+{
+	accessories[]: .crafter.cmp_nt.chassis
+	accessories[]: .crafter.cmp_nt.fwheel
+	accessories[]: .crafter.cmp_nt.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .crafter.cmp_nt.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/cmp_nt.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_nt.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.cmp_nt.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}

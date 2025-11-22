@@ -1,0 +1,568 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC West Balkans --
+
+# Discover at least 20 cities in West Balkans.
+
+achievement_visit_city_data : .achievement.bw_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: banja_luka
+	cities[]: beograd
+	cities[]: bihac
+	cities[]: bijelo_polje
+	cities[]: bitola
+	cities[]: durres
+	cities[]: fier
+	cities[]: karakaj
+	cities[]: koper
+	cities[]: kragujevac
+	cities[]: ljubljana
+	cities[]: maribor
+	cities[]: mostar
+	cities[]: niksic
+	cities[]: nis
+	cities[]: novi_sad
+	cities[]: novo_mesto
+	cities[]: osijek
+	cities[]: podgorica
+	cities[]: pristina
+	cities[]: rijeka
+	cities[]: sarajevo
+	cities[]: skopje
+	cities[]: split
+	cities[]: tirana
+	cities[]: tuzla
+	cities[]: vlore
+	cities[]: zadar
+	cities[]: zagreb
+	cities[]: zenica
+	target: 20
+
+	achievement_name: bw_visit_cities
+
+	steam_progress_id: "bw_visit_cities-progress"
+	steam_id: bw_visit_cities
+}
+
+# View cutscenes from at least 8 viewpoints in West Balkans.
+
+achievement_trigger_data : .achievement.bw_cutscenes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: bw_cutscenes
+	target: 8
+
+	achievement_name: bw_cutscenes
+
+	steam_progress_id: "bw_cutscenes-progress"
+	steam_id: bw_cutscenes
+}
+
+# Complete a perfect delivery (no damage, no fines, in-time) between Pristina and Bijelo Polje.
+
+achievement_each_delivery_point : .achievement.bw_pris_bije
+{
+	event_name: job_done
+	initial_check: true
+	both_directions: true
+	damage_max: 0.0
+	fines_max: 0
+	late: false
+	sources[]: .bw_pris_bije.bijelo_polje
+	targets[]: .bw_pris_bije.pristina
+	target: 1
+
+	achievement_name: bw_pristina_bijelo_polje
+
+	steam_id: bw_pristina_bijelo_polje
+}
+
+achievement_delivery_city : .bw_pris_bije.bijelo_polje
+{
+	city_name: bijelo_polje
+}
+
+achievement_delivery_city : .bw_pris_bije.pristina
+{
+	city_name: pristina
+}
+
+# Complete 3 deliveries along the coast in this order: Rijeka - Zadar - Split - Niksic.
+
+achievement_delivery : .achievement.bw_coastline
+{
+	event_name: job_done
+	initial_check: true
+	condition: .bw_coastline.condition
+	target: 3
+
+	achievement_name: bw_coastline
+
+	steam_progress_id: "bw_coastline-progress"
+	steam_id: bw_coastline
+}
+
+achievement_delivery_sequence : .bw_coastline.condition
+{
+	in_order: true
+
+	list[]: .bw_coastline.rijeka.zadar
+	list[]: .bw_coastline.zadar.split
+	list[]: .bw_coastline.split.niksic
+}
+
+achievement_delivery_each : .bw_coastline.rijeka.zadar
+{
+	list[]: .bw_coastline.rijeka.zadar.source
+	list[]: .bw_coastline.rijeka.zadar.target
+}
+
+achievement_delivery_point_city : .bw_coastline.rijeka.zadar.source
+{
+	role: source
+	city_name: rijeka
+}
+
+achievement_delivery_point_city : .bw_coastline.rijeka.zadar.target
+{
+	role: target
+	city_name: zadar
+}
+
+achievement_delivery_each : .bw_coastline.zadar.split
+{
+	list[]: .bw_coastline.zadar.split.source
+	list[]: .bw_coastline.zadar.split.target
+}
+
+achievement_delivery_point_city : .bw_coastline.zadar.split.source
+{
+	role: source
+	city_name: zadar
+}
+
+achievement_delivery_point_city : .bw_coastline.zadar.split.target
+{
+	role: target
+	city_name: split
+}
+
+achievement_delivery_each : .bw_coastline.split.niksic
+{
+	list[]: .bw_coastline.split.niksic.source
+	list[]: .bw_coastline.split.niksic.target
+}
+
+achievement_delivery_point_city : .bw_coastline.split.niksic.source
+{
+	role: source
+	city_name: split
+}
+
+achievement_delivery_point_city : .bw_coastline.split.niksic.target
+{
+	role: target
+	city_name: niksic
+}
+
+# Deliver the following cargoes from companies in West Balkans to complete a production chain in this order: Ore, Aluminium Ingots, Electrical Wiring, Electronics, Campervans.
+
+achievement_delivery : .achievement.bw_ore_carav
+{
+	event_name: job_done
+	initial_check: true
+	condition: .bw_ore_carav.condition
+	target: 5
+
+	achievement_name: bw_ore_caravans
+
+	steam_progress_id: "bw_ore_caravans-progress"
+	steam_id: bw_ore_caravans
+}
+
+achievement_delivery_sequence : .bw_ore_carav.condition
+{
+	in_order: true
+
+	list[]: .bw_ore_carav.ore
+	list[]: .bw_ore_carav.alu_ingot
+	list[]: .bw_ore_carav.elect_wiring
+	list[]: .bw_ore_carav.electronics
+	list[]: .bw_ore_carav.caravans
+}
+
+achievement_delivery_each : .bw_ore_carav.ore
+{
+	list[]: .bw_ore_carav.ore.cargo
+	list[]: .bw_ore_carav.ore.source
+}
+
+achievement_delivery_cargo : .bw_ore_carav.ore.cargo
+{
+	cargo_name: ore
+}
+
+achievement_delivery_any : .bw_ore_carav.ore.source
+{
+	list[]: .bw_ore_carav.ore.source.albania
+	list[]: .bw_ore_carav.ore.source.bosnia
+	list[]: .bw_ore_carav.ore.source.croatia
+	list[]: .bw_ore_carav.ore.source.kosovo
+	list[]: .bw_ore_carav.ore.source.macedonia
+	list[]: .bw_ore_carav.ore.source.montenegro
+	list[]: .bw_ore_carav.ore.source.serbia
+	list[]: .bw_ore_carav.ore.source.slovenia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.albania
+{
+	role: source
+	country_name: albania
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.bosnia
+{
+	role: source
+	country_name: bosnia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.croatia
+{
+	role: source
+	country_name: croatia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.kosovo
+{
+	role: source
+	country_name: kosovo
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.macedonia
+{
+	role: source
+	country_name: macedonia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.montenegro
+{
+	role: source
+	country_name: montenegro
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.serbia
+{
+	role: source
+	country_name: serbia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.ore.source.slovenia
+{
+	role: source
+	country_name: slovenia
+}
+
+achievement_delivery_each : .bw_ore_carav.alu_ingot
+{
+	list[]: .bw_ore_carav.alu_ingot.cargo
+	list[]: .bw_ore_carav.alu_ingot.source
+}
+
+achievement_delivery_cargo : .bw_ore_carav.alu_ingot.cargo
+{
+	cargo_name: alu_ingot
+}
+
+achievement_delivery_any : .bw_ore_carav.alu_ingot.source
+{
+	list[]: .bw_ore_carav.alu_ingot.source.albania
+	list[]: .bw_ore_carav.alu_ingot.source.bosnia
+	list[]: .bw_ore_carav.alu_ingot.source.croatia
+	list[]: .bw_ore_carav.alu_ingot.source.kosovo
+	list[]: .bw_ore_carav.alu_ingot.source.macedonia
+	list[]: .bw_ore_carav.alu_ingot.source.montenegro
+	list[]: .bw_ore_carav.alu_ingot.source.serbia
+	list[]: .bw_ore_carav.alu_ingot.source.slovenia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.albania
+{
+	role: source
+	country_name: albania
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.bosnia
+{
+	role: source
+	country_name: bosnia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.croatia
+{
+	role: source
+	country_name: croatia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.kosovo
+{
+	role: source
+	country_name: kosovo
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.macedonia
+{
+	role: source
+	country_name: macedonia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.montenegro
+{
+	role: source
+	country_name: montenegro
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.serbia
+{
+	role: source
+	country_name: serbia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.alu_ingot.source.slovenia
+{
+	role: source
+	country_name: slovenia
+}
+
+achievement_delivery_each : .bw_ore_carav.elect_wiring
+{
+	list[]: .bw_ore_carav.elect_wiring.cargo
+	list[]: .bw_ore_carav.elect_wiring.source
+}
+
+achievement_delivery_cargo : .bw_ore_carav.elect_wiring.cargo
+{
+	cargo_name: elect_wiring
+}
+
+achievement_delivery_any : .bw_ore_carav.elect_wiring.source
+{
+	list[]: .bw_ore_carav.elect_wiring.source.albania
+	list[]: .bw_ore_carav.elect_wiring.source.bosnia
+	list[]: .bw_ore_carav.elect_wiring.source.croatia
+	list[]: .bw_ore_carav.elect_wiring.source.kosovo
+	list[]: .bw_ore_carav.elect_wiring.source.macedonia
+	list[]: .bw_ore_carav.elect_wiring.source.montenegro
+	list[]: .bw_ore_carav.elect_wiring.source.serbia
+	list[]: .bw_ore_carav.elect_wiring.source.slovenia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.albania
+{
+	role: source
+	country_name: albania
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.bosnia
+{
+	role: source
+	country_name: bosnia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.croatia
+{
+	role: source
+	country_name: croatia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.kosovo
+{
+	role: source
+	country_name: kosovo
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.macedonia
+{
+	role: source
+	country_name: macedonia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.montenegro
+{
+	role: source
+	country_name: montenegro
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.serbia
+{
+	role: source
+	country_name: serbia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.elect_wiring.source.slovenia
+{
+	role: source
+	country_name: slovenia
+}
+
+achievement_delivery_each : .bw_ore_carav.electronics
+{
+	list[]: .bw_ore_carav.electronics.cargo
+	list[]: .bw_ore_carav.electronics.source
+}
+
+achievement_delivery_cargo : .bw_ore_carav.electronics.cargo
+{
+	cargo_name: electronics
+}
+
+achievement_delivery_any : .bw_ore_carav.electronics.source
+{
+	list[]: .bw_ore_carav.electronics.source.albania
+	list[]: .bw_ore_carav.electronics.source.bosnia
+	list[]: .bw_ore_carav.electronics.source.croatia
+	list[]: .bw_ore_carav.electronics.source.kosovo
+	list[]: .bw_ore_carav.electronics.source.macedonia
+	list[]: .bw_ore_carav.electronics.source.montenegro
+	list[]: .bw_ore_carav.electronics.source.serbia
+	list[]: .bw_ore_carav.electronics.source.slovenia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.albania
+{
+	role: source
+	country_name: albania
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.bosnia
+{
+	role: source
+	country_name: bosnia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.croatia
+{
+	role: source
+	country_name: croatia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.kosovo
+{
+	role: source
+	country_name: kosovo
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.macedonia
+{
+	role: source
+	country_name: macedonia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.montenegro
+{
+	role: source
+	country_name: montenegro
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.serbia
+{
+	role: source
+	country_name: serbia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.electronics.source.slovenia
+{
+	role: source
+	country_name: slovenia
+}
+
+achievement_delivery_each : .bw_ore_carav.caravans
+{
+	list[]: .bw_ore_carav.caravans.cargo
+	list[]: .bw_ore_carav.caravans.source
+}
+
+achievement_delivery_cargo : .bw_ore_carav.caravans.cargo
+{
+	cargo_name: caravans
+}
+
+achievement_delivery_any : .bw_ore_carav.caravans.source
+{
+	list[]: .bw_ore_carav.caravans.source.albania
+	list[]: .bw_ore_carav.caravans.source.bosnia
+	list[]: .bw_ore_carav.caravans.source.croatia
+	list[]: .bw_ore_carav.caravans.source.kosovo
+	list[]: .bw_ore_carav.caravans.source.macedonia
+	list[]: .bw_ore_carav.caravans.source.montenegro
+	list[]: .bw_ore_carav.caravans.source.serbia
+	list[]: .bw_ore_carav.caravans.source.slovenia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.albania
+{
+	role: source
+	country_name: albania
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.bosnia
+{
+	role: source
+	country_name: bosnia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.croatia
+{
+	role: source
+	country_name: croatia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.kosovo
+{
+	role: source
+	country_name: kosovo
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.macedonia
+{
+	role: source
+	country_name: macedonia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.montenegro
+{
+	role: source
+	country_name: montenegro
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.serbia
+{
+	role: source
+	country_name: serbia
+}
+
+achievement_delivery_point_country : .bw_ore_carav.caravans.source.slovenia
+{
+	role: source
+	country_name: slovenia
+}
+
+}

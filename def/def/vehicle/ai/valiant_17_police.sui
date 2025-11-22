@@ -1,0 +1,76 @@
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sweden | Municipal Police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.valiant_17.se
+{
+	accessories[]: .valiant_17.se.chassis
+	accessories[]: .valiant_17.se.fwheel
+	accessories[]: .valiant_17.se.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	allow_parked: true
+
+	spawn_ratio: 0.0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .valiant_17.se.chassis
+{
+	data_path: "/def/vehicle/ai/valiant_17/chassis_se.sii"
+}
+
+vehicle_wheel_accessory: .valiant_17.se.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .valiant_17.se.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sweden | Customs Police XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.valiant_17.cu_se
+{
+	accessories[]: .valiant_17.cu_se.chassis
+	accessories[]: .valiant_17.cu_se.fwheel
+	accessories[]: .valiant_17.cu_se.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	allow_parked: true
+	tags[]: customs
+
+	spawn_ratio: 0.0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .valiant_17.cu_se.chassis
+{
+	data_path: "/def/vehicle/ai/valiant_17/chassis_cu_se.sii"
+}
+
+vehicle_wheel_accessory: .valiant_17.cu_se.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .valiant_17.cu_se.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}

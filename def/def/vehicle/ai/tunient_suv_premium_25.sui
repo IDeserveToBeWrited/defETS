@@ -1,0 +1,42 @@
+traffic_vehicle : traffic.tunient.suv.premium_25
+{
+	accessories[]: .tunient.suv.premium_25.chassis
+	accessories[]: .tunient.suv.premium_25.fwheel
+	accessories[]: .tunient.suv.premium_25.rwheel
+
+	max_speed: 240
+
+	vehicle_mass: 2600
+
+	sound_move[]: "/sound/traffic/car_v8_1.soundref"
+	sound_move[]: "/sound/traffic/car_v8_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_4.soundref"
+	
+	
+	color[]: (0.7097, 0.7097, 0.7097)
+	color[]: (0.5650, 0.4780, 0.3760) 
+	color[]: (0.3760, 0.4430, 0.4980) 
+	color[]: (0.1760, 0.3840, 0.2000) 
+
+	tags[]: suv
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tunient.suv.premium_25.chassis
+{
+	data_path: "/def/vehicle/ai/tunient_suv_premium_25/chassis.sii"
+}
+
+vehicle_wheel_accessory: .tunient.suv.premium_25.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_20in.sii"
+}
+
+vehicle_wheel_accessory: .tunient.suv.premium_25.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_20in.sii"
+}

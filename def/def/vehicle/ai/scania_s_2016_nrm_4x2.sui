@@ -1,0 +1,55 @@
+traffic_vehicle : traffic.scania.s_2016.nrm_4x2
+{
+	accessories[]: .scania.s_2016.nrm_4x2.chassis
+	accessories[]: .scania.s_2016.nrm_4x2.fwheel
+	accessories[]: .scania.s_2016.nrm_4x2.rwheel
+	accessories[]: .scania.s_2016.nrm_4x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 7599
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	#color from upgrade shop
+	color[]: (0.4435, 0.0948, 0.0069) #Amber Orange
+	color[]: (0.0176, 0.1470, 0.0762) #Eucalyptus Green
+	color[]: (0.0585, 0.0339, 0.0209) #Coffee Brown
+	color[]: (0.045186, 0.111932, 0.423268) #Blue Ocean Metallic
+	color[]: (0.300544, 0.018500, 0.018500) #red
+	color[]: (0.8148, 0.7991, 0.7379) #Ivory White
+	color[]: (0.8148, 0.7991, 0.7379) #Ivory White
+	
+	spawn_ratio: 1.0
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .scania.s_2016.nrm_4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/scania.s_2016/scania_s_2016_nrm_4x2.sii"
+}
+vehicle_wheel_accessory: .scania.s_2016.nrm_4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .scania.s_2016.nrm_4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .scania.s_2016.nrm_4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/scania.s_2016/accessory/trlr_cables/stock.sii"
+}

@@ -237,3 +237,39 @@ vehicle_wheel_accessory: .minibus.blk3.rwheel
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
 }
 
+######################################### Polar Circle #########################################
+
+traffic_vehicle : traffic.minibus.vs
+{
+	accessories[]: .minibus.vs.chassis
+	accessories[]: .minibus.vs.fwheel
+	accessories[]: .minibus.vs.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+	
+	spawn_ratio: 0
+	allow_parked: false
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .minibus.vs.chassis
+{
+	data_path: "/def/vehicle/ai/minibus/chassis_vs.sii"
+}
+
+vehicle_wheel_accessory: .minibus.vs.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .minibus.vs.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}

@@ -1,0 +1,136 @@
+SiiNunit
+{
+sign_board_template : _nameless.71ea.53b0 {
+ board_name: "no dynamic control v6"
+ width: 2
+ height: 1
+ model_name: ""
+ items: 4
+ items[0]: _nameless.71f4.9ff0
+ items[1]: _nameless.71f4.b530
+ items[2]: _nameless.71f4.ae50
+ items[3]: _nameless.71f4.8dd0
+ dynamic_attributes: 4
+ dynamic_attributes[0]: _nameless.1.1b26.2f80
+ dynamic_attributes[1]: _nameless.1.1b26.2b00
+ dynamic_attributes[2]: _nameless.1.1b26.2440
+ dynamic_attributes[3]: _nameless.1.1b26.2bc0
+}
+
+sign_template_image : _nameless.71f4.9ff0 {
+ atlas_path: "/def/sign/atlas/bus_no.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2619342847
+ area_name: ""
+ area_idx: nil
+ coords_l: &3fb240a0
+ coords_r: &3fede88a
+ coords_t: &3ed24468
+ coords_b: &3e754b98
+ z_order: 1
+ tag: ""
+}
+
+sign_template_image : _nameless.71f4.b530 {
+ atlas_path: "/def/sign/atlas/truck_3_swe.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 429129728
+ area_name: ""
+ area_idx: nil
+ coords_l: &3fb719e0
+ coords_r: &3fe90f4a
+ coords_t: &3f3e6457
+ coords_b: &3f083313
+ z_order: 2
+ tag: ""
+}
+
+sign_template_image : _nameless.71f4.ae50 {
+ atlas_path: "/def/sign/atlas/arrow_right_no.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: true
+ vflip: false
+ image_overridable: false
+ id: 4090494974
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e24a9d0
+ coords_r: &3eea2170
+ coords_t: &3f24a9cf
+ coords_b: &3eb18712
+ z_order: 3
+ tag: ""
+}
+
+sign_template_image : _nameless.71f4.8dd0 {
+ atlas_path: "/def/sign/atlas/control_no.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 3924557822
+ area_name: ""
+ area_idx: nil
+ coords_l: &3f208bf7
+ coords_r: &3f9d12c8
+ coords_t: &3f4b8378
+ coords_b: &3e47a784
+ z_order: 4
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.1.1b26.2f80 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: arrow_right_no
+ traffic_rules: 0
+ item_id: 4090494974
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.1.1b26.2b00 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: control_no
+ traffic_rules: 0
+ item_id: 3924557822
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.1.1b26.2440 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: truck_3_swe
+ traffic_rules: 0
+ item_id: 429129728
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.1.1b26.2bc0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: bus_no
+ traffic_rules: 0
+ item_id: 2619342847
+ attr_name: image_idx
+}
+
+}

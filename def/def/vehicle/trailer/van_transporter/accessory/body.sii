@@ -6,30 +6,10 @@ accessory_trailer_body_data : body.van_trans.body
 #XXXXXXXXXXXXXXXXXXXXX NEW CARGO SYSTEM XXXXXXXXXXXXXXXXXXXXX
 
 	cargo_loading_methods[]: custom
-	
-cargo_custom_loads[]: .vans_id
-cargo_custom_loads[]: .vans_fd
-cargo_custom_loads[]: .car_balt2
+	cargo_custom_loads_path: "/def/vehicle/trailer/van_transporter/accessory/cargo"
 
 @include "/def/vehicle/lashing_gear.sui"
 }
-cargo_custom_load_data : .vans_id
-{
-	cargo_token: vans_id
-	offset: (0, 0, 0.0)
-	rotation: (0, 0, 0)
-}
-cargo_custom_load_data : .vans_fd
-{
-	cargo_token: vans_fd
-	offset: (0, 0, 0.0)
-	rotation: (0, 0, 0)
-}
-cargo_custom_load_data : .car_balt2
-{
-	cargo_token: car_balt2
-	offset: (0, 0, 0.0)
-	rotation: (0, 0, 0)
-}
+
 @include "/def/vehicle/lashing_gear_data.sui"
 }

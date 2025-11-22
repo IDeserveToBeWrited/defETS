@@ -1,0 +1,149 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Heavy Cargo --
+
+# Deliver first Heavy Cargo.
+
+achievement_delivery_log_data : .achievement.hc_firstjob
+{
+	event_name: job_done
+	consecutive: true # Prevent checking previous records
+	cargos[]: asph_miller
+	cargos[]: cable_reel
+	cargos[]: concr_beams
+	cargos[]: dozer
+	cargos[]: locomotive
+	cargos[]: metal_center
+	cargos[]: mob_crusher
+	cargos[]: mob_screener
+	cargos[]: mob_stacker
+	cargos[]: mobile_crane
+	cargos[]: transformat
+
+	achievement_name: hc_firstjob
+
+	steam_id: hc_firstjob
+}
+
+# Complete a perfect delivery (no damage, no fines, in-time) of 3 consecutive Heavy Cargo Pack jobs.
+
+achievement_delivery_log_data : .achievement.hc_threeperf
+{
+	event_name: job_done
+	fines_max: 0
+	damage_max: 0.0
+	late: false
+	consecutive: true
+	target: 3
+	cargos[]: asph_miller
+	cargos[]: cable_reel
+	cargos[]: concr_beams
+	cargos[]: dozer
+	cargos[]: locomotive
+	cargos[]: metal_center
+	cargos[]: mob_crusher
+	cargos[]: mob_screener
+	cargos[]: mob_stacker
+	cargos[]: mobile_crane
+	cargos[]: transformat
+
+	achievement_name: hc_threeperf
+
+	steam_progress_id: "hc_threeperf-progress"
+	steam_id: hc_threeperf
+}
+
+# Collect 1,000 XP from parking on Heavy Cargo Pack deliveries.
+
+achievement_xp_data : .achievement.hc_1000xps
+{
+	event_name: job_done
+	initial_check: true
+	target: 1000
+	xp_part: parking
+	cargos[]: asph_miller
+	cargos[]: cable_reel
+	cargos[]: concr_beams
+	cargos[]: dozer
+	cargos[]: locomotive
+	cargos[]: metal_center
+	cargos[]: mob_crusher
+	cargos[]: mob_screener
+	cargos[]: mob_stacker
+	cargos[]: mobile_crane
+	cargos[]: transformat
+
+	achievement_name: hc_1000xps
+
+	steam_progress_id: "hc_1000xps-progress"
+	steam_id: hc_1000xps
+}
+
+# Deliver total of 250 tons of cargo on 5 consecutive jobs.
+
+achievement_delivery_log_data : .achievement.hc_250t5jobs
+{
+	event_name: job_done
+	consecutive: true
+	target: 5
+	total_cargo_mass_min: 250000 # 250 t
+	cargos[]: asph_miller
+	cargos[]: cable_reel
+	cargos[]: concr_beams
+	cargos[]: dozer
+	cargos[]: locomotive
+	cargos[]: metal_center
+	cargos[]: mob_crusher
+	cargos[]: mob_screener
+	cargos[]: mob_stacker
+	cargos[]: mobile_crane
+	cargos[]: transformat
+
+	achievement_name: hc_250t5jobs
+
+	steam_progress_id: "hc_250t5jobs-progress"
+	steam_id: hc_250t5jobs
+}
+
+# Complete a delivery of at least 8 heavy cargoes.
+
+achievement_each_cargo_data : .achievement.hc_allcargos
+{
+	event_name: job_done
+	initial_check: true
+	target: 8 # number of cargos
+	cargos[]: asph_miller
+	cargos[]: cable_reel
+	cargos[]: concr_beams
+	cargos[]: dozer
+	cargos[]: locomotive
+	cargos[]: metal_center
+	cargos[]: mob_crusher
+	cargos[]: mob_screener
+	cargos[]: mob_stacker
+	cargos[]: mobile_crane
+	cargos[]: transformat
+
+	achievement_name: hc_allcargos
+
+	steam_progress_id: "hc_allcargos-progress"
+	steam_id: hc_allcargos
+}
+
+}

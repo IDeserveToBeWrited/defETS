@@ -294,6 +294,13 @@ traffic_rule_data : traffic_rule.limit_80_60
 	additional_rules[]: traffic_rule.limit_60_t
 }
 
+traffic_rule_data : traffic_rule.zone_30
+{
+	name: "[special] Zone speed limit 30"
+
+	additional_rules[]: traffic_rule.limit_30
+}
+
 traffic_rule_data : traffic_rule.urban_area
 {
 	rule: "lane"
@@ -770,6 +777,7 @@ traffic_rule_data : traffic_rule.company_area
 
 	additional_rules[]: traffic_rule.s_train_dp
 	additional_rules[]: traffic_rule.s_train_w_dp
+	additional_rules[]: traffic_rule.s_train_c_dp
 	additional_rules[]: traffic_rule.s_truck_c_d
 	additional_rules[]: traffic_rule.s_truck_d
 	additional_rules[]: traffic_rule.s_car_d
@@ -779,6 +787,24 @@ traffic_rule_data : traffic_rule.company_area
 traffic_rule_data : traffic_rule.dealer
 {
 	name: "[context] Truck dealer area"
+
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.ferry
+{
+	name: "[context] Ferry area (transport)"
+
+	additional_rules[]: traffic_rule.private_area
+	additional_rules[]: traffic_rule.no_pl_limit
+	additional_rules[]: traffic_rule.limit_30
+}
+
+traffic_rule_data : traffic_rule.bus_station
+{
+	name: "[context] Bus station area"
 
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.no_pl_limit

@@ -1,14 +1,18 @@
 SiiNunit
 {
 core_interior_glass_config : .glass.config.snow {
-	distort_material: "/material/environment/blobs_snow_distort.mat"
-	transparent_material: "/material/environment/blobs_snow.mat"
+	drop_material: "/material/environment/blobs_snow.mat"
+
+	min_drop_size: 0.0015
+	max_drop_size: 0.0075
 
 	drop_count_per_meter: 5000
-	drop_scale_factor: 0.3
 
-	initial_splash_scale: 1.0
-	splash_duration: 0.0
+	min_initial_splash_scale: 1.0
+	max_initial_splash_scale: 1.0
+
+	min_splash_duration: 0.0
+	max_splash_duration: 0.0
 
 	minimal_lifetime: 10
 	maximal_lifetime: 20
@@ -16,7 +20,8 @@ core_interior_glass_config : .glass.config.snow {
 	minimal_fadeout: 2.5
 	maximal_fadeout: 10.0
 
-	distortion_strength: 1.0
+	min_distortion_strength: 1.0
+	max_distortion_strength: 1.0
 	blur_strength: 1.0
 
 	deformation_duration: 0.0

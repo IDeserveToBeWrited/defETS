@@ -1,0 +1,56 @@
+traffic_vehicle : traffic.volvo.fh16.gtxl_4x2
+{
+	accessories[]: .volvo.fh16.gtxl_4x2.chassis
+	accessories[]: .volvo.fh16.gtxl_4x2.fwheel
+	accessories[]: .volvo.fh16.gtxl_4x2.rwheel
+	accessories[]: .volvo.fh16.gtxl_4x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 7587
+	engine_power: 298
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.3467, 0.3467, 0.3467) #silver
+	color[]: (0.3467, 0.3467, 0.3467) #silver
+	color[]: (0.0026, 0.0139, 0.0737) #blue
+	color[]: (0.0666, 0.162, 0.1247) #green
+	color[]: (0.0666, 0.162, 0.1247) #green
+	color[]: (0.0585, 0.0339, 0.0209) #brown
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	
+	spawn_ratio: 0.5
+
+	
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .volvo.fh16.gtxl_4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/volvo.fh16/volvo_fh16_2009_gtxl_4x2.sii"
+}
+vehicle_wheel_accessory: .volvo.fh16.gtxl_4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .volvo.fh16.gtxl_4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .volvo.fh16.gtxl_4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/volvo.fh16/accessory/trlr_cables/stock.sii"
+}

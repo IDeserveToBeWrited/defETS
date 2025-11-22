@@ -1,0 +1,56 @@
+traffic_vehicle : traffic.renault.magnum.std_6x24
+{
+	accessories[]: .renault.magnum.std_6x24.chassis
+	accessories[]: .renault.magnum.std_6x24.fwheel
+	accessories[]: .renault.magnum.std_6x24.rwheel
+	accessories[]: .renault.magnum.std_6x24.rwheel2
+	accessories[]: .renault.magnum.std_6x24.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	vehicle_mass: 7240
+	engine_power: 373
+
+	#color from upgrade shop
+	color[]: (0.0948, 0.101, 0.1102) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.0251, 0.0578, 0.1328) #blue
+	
+	spawn_ratio: 0.01
+
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .renault.magnum.std_6x24.chassis
+{
+	data_path: "/def/vehicle/ai/truck/renault.magnum/renault_magnum_2009_std_6x24.sii"
+}
+vehicle_wheel_accessory: .renault.magnum.std_6x24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .renault.magnum.std_6x24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel_single.sii"
+}
+vehicle_wheel_accessory: .renault.magnum.std_6x24.rwheel2
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .renault.magnum.std_6x24.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/renault.magnum/accessory/trlr_cables/stock.sii"
+}

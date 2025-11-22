@@ -1,0 +1,484 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- Academy module --
+
+# Complete the first scenario of the first chapter in Truck Driving Basics.
+
+achievement_academy : .achievement.aca_first
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_first.condition
+
+	achievement_name: aca_first
+
+	steam_id: aca_first
+}
+
+achievement_academy_each : .aca_first.condition
+{
+	list[]: .aca_first.completed
+	list[]: .aca_first.scenario
+}
+
+achievement_academy_scenario_state : .aca_first.completed
+{
+	result: completed
+}
+
+achievement_academy_scenario : .aca_first.scenario
+{
+	scenario_name: academy.scenario.book1.1_01
+}
+
+# Complete at least 6 scenarios in the fourth chapter of the Truck Driving Licence book while using only the interior camera.
+
+achievement_academy : .achievement.aca_interior
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_interior.condition
+	target: 6
+
+	achievement_name: aca_interior
+
+	steam_progress_id: "aca_interior-progress"
+	steam_id: aca_interior
+}
+
+achievement_academy_unique_scenarios : .aca_interior.condition
+{
+	condition: .aca_interior.condition.6
+	count: 6
+}
+
+achievement_academy_each : .aca_interior.condition.6
+{
+	list[]: .aca_interior.completed
+	list[]: .aca_interior.chapter
+	list[]: .aca_interior.interior_cam
+}
+
+achievement_academy_scenario_state : .aca_interior.completed
+{
+	result: completed
+}
+
+achievement_academy_chapter : .aca_interior.chapter
+{
+	chapter_name: academy.chapter.book1.4
+}
+
+achievement_academy_state_value : .aca_interior.interior_cam
+{
+	state_name: exterior_camera_use
+	state_operator: equal
+	state_value: 0
+}
+
+# Complete at least 28 scenarios in Truck Driving Basics including the final exams.
+
+achievement_academy : .achievement.aca_truck_dr
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_truck_dr.condition
+	target: 28
+
+	achievement_name: aca_truck_driving
+
+	steam_progress_id: "aca_truck_driving-progress"
+	steam_id: aca_truck_driving
+}
+
+achievement_academy_sequence : .aca_truck_dr.condition
+{
+	list[]:	.aca_truck_dr.sc_final_1
+	list[]:	.aca_truck_dr.sc_final_2
+	list[]:	.aca_truck_dr.sc_other
+}
+
+achievement_academy_each : .aca_truck_dr.sc_final_1
+{
+	list[]: .aca_truck_dr.sc_final_1.completed
+	list[]: .aca_truck_dr.sc_final_1.scenario
+}
+
+achievement_academy_scenario_state : .aca_truck_dr.sc_final_1.completed
+{
+	result: completed
+}
+
+achievement_academy_scenario : .aca_truck_dr.sc_final_1.scenario
+{
+	scenario_name: academy.scenario.book1.3_19
+}
+
+achievement_academy_each : .aca_truck_dr.sc_final_2
+{
+	list[]: .aca_truck_dr.sc_final_2.completed
+	list[]: .aca_truck_dr.sc_final_2.scenario
+}
+
+achievement_academy_scenario_state : .aca_truck_dr.sc_final_2.completed
+{
+	result: completed
+}
+
+achievement_academy_scenario : .aca_truck_dr.sc_final_2.scenario
+{
+	scenario_name: academy.scenario.book1.3_20
+}
+
+achievement_academy_unique_scenarios : .aca_truck_dr.sc_other
+{
+	condition: .aca_truck_dr.sc_other.26
+	count: 26
+}
+
+achievement_academy_each : .aca_truck_dr.sc_other.26
+{
+	list[]: .aca_truck_dr.sc_other.completed
+	list[]: .aca_truck_dr.sc_other.book
+	list[]: .aca_truck_dr.sc_other.not
+}
+
+achievement_academy_scenario_state : .aca_truck_dr.sc_other.completed
+{
+	result: completed
+}
+
+achievement_academy_book : .aca_truck_dr.sc_other.book
+{
+	book_name: academy.book.book1
+}
+
+achievement_academy_not : .aca_truck_dr.sc_other.not
+{
+	condition: .aca_truck_dr.sc_other.not.sc_final
+}
+
+achievement_academy_any : .aca_truck_dr.sc_other.not.sc_final
+{
+	list[]: .aca_truck_dr.sc_other.not.sc_final.sc_final_1
+	list[]: .aca_truck_dr.sc_other.not.sc_final.sc_final_2
+}
+
+achievement_academy_scenario : .aca_truck_dr.sc_other.not.sc_final.sc_final_1
+{
+	scenario_name: academy.scenario.book1.3_19
+}
+
+achievement_academy_scenario : .aca_truck_dr.sc_other.not.sc_final.sc_final_2
+{
+	scenario_name: academy.scenario.book1.3_20
+}
+
+# Complete any scenario in fourth chapter of Truck Driving Basics in one attempt without correcting by driving forward.
+
+achievement_academy : .achievement.aca_no_forwa
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_no_forwa.condition
+
+	achievement_name: aca_no_forward
+
+	steam_id: aca_no_forward
+}
+
+achievement_academy_each : .aca_no_forwa.condition
+{
+	list[]: .aca_no_forwa.completed
+	list[]: .aca_no_forwa.chapter
+	list[]: .aca_no_forwa.no_forward
+}
+
+achievement_academy_scenario_state : .aca_no_forwa.completed
+{
+	result: completed
+}
+
+achievement_academy_chapter : .aca_no_forwa.chapter
+{
+	chapter_name: academy.chapter.book1.4
+}
+
+achievement_academy_state_value : .aca_no_forwa.no_forward
+{
+	state_name: drive_forward
+	state_operator: lower_or_equal
+	state_value: 1
+}
+
+# Complete 20 scenarios in chapters two, three or four using manual transmission in Truck Driving Basics.
+
+achievement_academy : .achievement.aca_manual
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_manual.condition
+	target: 20
+
+	achievement_name: aca_manual_transmission
+
+	steam_progress_id: "aca_manual_transmission-progress"
+	steam_id: aca_manual_transmission
+}
+
+achievement_academy_unique_scenarios : .aca_manual.condition
+{
+	condition: .aca_manual.condition.20
+	count: 20
+}
+
+achievement_academy_each : .aca_manual.condition.20
+{
+	list[]: .aca_manual.completed
+	list[]: .aca_manual.book
+	list[]: .aca_manual.chapter
+	list[]: .aca_manual.manual_trans
+}
+
+achievement_academy_scenario_state : .aca_manual.completed
+{
+	result: completed
+}
+
+achievement_academy_book : .aca_manual.book
+{
+	book_name: academy.book.book1
+}
+
+achievement_academy_not : .aca_manual.chapter
+{
+	condition: .aca_manual.chapter.not
+}
+
+achievement_academy_each : .aca_manual.chapter.not
+{
+	list[]: .aca_manual.chapter.not.chapter_1
+	list[]: .aca_manual.chapter.not.chapter_5
+}
+
+achievement_academy_chapter : .aca_manual.chapter.not.chapter_1
+{
+	chapter_name: academy.chapter.book1.1
+}
+
+achievement_academy_chapter : .aca_manual.chapter.not.chapter_5
+{
+	chapter_name: academy.chapter.book1.5
+}
+
+achievement_academy_each : .aca_manual.manual_trans
+{
+	list[]: .aca_manual.manual_trans.no_trans_arc
+	list[]: .aca_manual.manual_trans.no_trans_aut
+}
+
+achievement_academy_state_value : .aca_manual.manual_trans.no_trans_arc
+{
+	state_name: trans_arcade
+	state_operator: equal
+	state_value: 0
+}
+
+achievement_academy_state_value : .aca_manual.manual_trans.no_trans_aut
+{
+	state_name: trans_automatic
+	state_operator: equal
+	state_value: 0
+}
+
+# Complete any 5 scenarios in a row without failure from the third or fourth chapter in Truck Driving Basics.
+
+achievement_academy : .achievement.aca_consecut
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_consecut.condition
+	consecutive: true
+	target: 5
+
+	achievement_name: aca_consecutive
+
+	steam_progress_id: "aca_consecutive-progress"
+	steam_id: aca_consecutive
+}
+
+achievement_academy_unique_scenarios : .aca_consecut.condition
+{
+	condition: .aca_consecut.condition.5
+	count: 5
+}
+
+achievement_academy_each : .aca_consecut.condition.5
+{
+	list[]: .aca_consecut.completed
+	list[]: .aca_consecut.chapter
+}
+
+achievement_academy_scenario_state : .aca_consecut.completed
+{
+	result: completed
+}
+
+achievement_academy_any : .aca_consecut.chapter
+{
+	list[]: .aca_consecut.chapter.chapter_3
+	list[]: .aca_consecut.chapter.chapter_4
+}
+
+achievement_academy_chapter : .aca_consecut.chapter.chapter_3
+{
+	chapter_name: academy.chapter.book1.3
+}
+
+achievement_academy_chapter : .aca_consecut.chapter.chapter_4
+{
+	chapter_name: academy.chapter.book1.4
+}
+
+# -- Academy module - 2nd book --
+
+# Complete the pass conditions in at least 23 scenarios in Truck Driving Proficiency.
+
+achievement_academy : .achievement.aca_pass_con
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_pass_con.condition
+	target: 23
+
+	achievement_name: aca_pass_conditions
+
+	steam_progress_id: "aca_pass_conditions-progress"
+	steam_id: aca_pass_conditions
+}
+
+achievement_academy_unique_scenarios : .aca_pass_con.condition
+{
+	condition: .aca_pass_con.23
+	count: 23
+}
+
+achievement_academy_each : .aca_pass_con.23
+{
+	list[]: .aca_pass_con.completed
+	list[]: .aca_pass_con.book
+}
+
+achievement_academy_scenario_state : .aca_pass_con.completed
+{
+	result: completed
+}
+
+achievement_academy_book : .aca_pass_con.book
+{
+	book_name: academy.book.book2
+}
+
+# Obtain 3 stars in at least 23 scenarios in Truck Driving Proficiency.
+
+achievement_academy : .achievement.aca_stars
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_stars.condition
+	target: 23
+
+	achievement_name: aca_stars
+
+	steam_progress_id: "aca_stars-progress"
+	steam_id: aca_stars
+}
+
+achievement_academy_unique_scenarios : .aca_stars.condition
+{
+	condition: .aca_stars.23
+	count: 23
+}
+
+achievement_academy_each : .aca_stars.23
+{
+	list[]: .aca_stars.rank
+	list[]: .aca_stars.book
+}
+
+achievement_academy_scenario_rank : .aca_stars.rank
+{
+	rank_operator: greater_or_equal
+	rank_value: 3
+}
+
+achievement_academy_book : .aca_stars.book
+{
+	book_name: academy.book.book2
+}
+
+# Obtain 3 stars in any 3 scenarios played in a row in Truck Driving Proficiency.
+
+achievement_academy : .achievement.aca_stars_co
+{
+	gameplay: academy
+	event_name: aca_log_entr
+	initial_check: true
+	condition: .aca_stars_co.condition
+	consecutive: true
+	target: 3
+
+	achievement_name: aca_stars_consecutive
+
+	steam_progress_id: "aca_stars_consecutive-progress"
+	steam_id: aca_stars_consecutive
+}
+
+achievement_academy_unique_scenarios : .aca_stars_co.condition
+{
+	condition: .aca_stars_co.3
+	count: 3
+}
+
+achievement_academy_each : .aca_stars_co.3
+{
+	list[]: .aca_stars_co.rank
+	list[]: .aca_stars_co.book
+}
+
+achievement_academy_scenario_rank : .aca_stars_co.rank
+{
+	rank_operator: greater_or_equal
+	rank_value: 3
+}
+
+achievement_academy_book : .aca_stars_co.book
+{
+	book_name: academy.book.book2
+}
+
+}

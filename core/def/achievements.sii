@@ -1,0 +1,463 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- Base --
+
+# Take an urgent delivery for a minimum of 550 km and complete it with less than 30 minutes remaining.
+
+achievement_delivery_log_data : .achievement.job_urgent
+{
+	event_name: job_done
+	distance_min: 550
+	remaining_time_max: 30
+	late: false
+	urgency: urgent
+
+	achievement_name: job_urgent
+
+	steam_id: job_urgent
+}
+
+# Complete a delivery that was greater than 2,000 km.
+
+achievement_delivery_log_data : .achievement.job_2000_km
+{
+	event_name: job_done
+	distance_min: 2000
+	
+	achievement_name: job_2000_km
+
+	steam_id: job_2000_km
+}
+
+# Complete a job worth over €130,000 and minimum 2,200 km.
+
+achievement_delivery_log_data : .achievement.job_no_ferry
+{
+	event_name: job_done
+	price: 130000
+	distance_min: 2200
+
+	achievement_name: job_no_ferry
+
+	steam_id: job_no_ferry
+}
+
+# Complete a perfect delivery for a job that is at least 1,000 km.
+
+achievement_delivery_log_data : .achievement.perfect_job
+{
+	event_name: job_done
+	damage_max: 0.0
+	fines_max: 0
+	late: false
+	distance_min: 1000
+
+	achievement_name: perfect_delivery
+
+	steam_id: perfect_delivery
+}
+
+# Take and complete jobs with at least 30 different cargo.
+
+achievement_limit_data : .achievement.job_30_cargo
+{
+	event_name: job_done
+	initial_check: true
+	target: 30
+	current: get_cargo_type_count
+	notifications[]: 5
+	notifications[]: 10
+	notifications[]: 15
+	notifications[]: 20
+	notifications[]: 25
+
+	achievement_name: jobs_30_cargo
+
+	steam_progress_id: "jobs_30_cargo-progress"
+	steam_id: jobs_30_cargo
+}
+
+# Perform jobs for at least 15 different companies in the game
+
+achievement_limit_data : .achievement.job_15_comp
+{
+	event_name: job_done
+	initial_check: true
+	target: 15
+	current: get_company_count
+	notifications[]: 5
+	notifications[]: 10
+
+	achievement_name: job_15_companies
+
+	steam_progress_id: "job_15_companies-progress"
+	steam_id: job_15_companies
+}
+
+# Use automatic parking.
+
+achievement_delivery_log_data : .achievement.use_autopark
+{
+	event_name: job_done
+	autoparking: true
+
+	achievement_name: use_automatic_parking
+
+	steam_id: use_automatic_parking
+}
+
+# Complete 5 jobs in a row - in-time, without taking any damage to cargo and without using autoparking.
+
+achievement_delivery_log_data : .achievement.5jobs_inarow
+{
+	event_name: job_done
+	initial_check: true
+	consecutive: true
+	autoparking: false
+	damage_max: 0.0
+	late: false
+	target: 5
+
+	achievement_name: 5_jobs_in_a_row
+
+	steam_progress_id: "5_jobs_in_a_row-progress"
+	steam_id: 5_jobs_in_a_row
+}
+
+# Use a rest stop.
+
+achievement_data : .achievement.use_reststop
+{
+	event_name: use_rest
+
+	achievement_name: use_rest_stop
+
+	steam_id: use_rest_stop
+}
+
+# Use a filling station.
+
+achievement_data : .achievement.use_gas
+{
+	event_name: use_gas
+
+	achievement_name: use_gas_station
+
+	steam_id: use_gas_station
+}
+
+# Buy a truck online.
+
+achievement_limit_data : .achievement.buy_online
+{
+	event_name: truck_bought
+	current: trucks_bought_online
+	target: 1
+
+	achievement_name: buy_truck_online
+
+	steam_id: buy_truck_online
+}
+
+# Discover at least 20,000 kilometers of roads.
+
+achievement_limit_data : .achievement.map_disc_60
+{
+	event_name: road_disc
+	initial_check: true
+	current: get_explored_km
+	target: 20000
+
+	achievement_name: map_discover_60
+
+	steam_id: map_discover_60
+}
+
+# Discover at least 40,000 kilometers of roads.
+
+achievement_limit_data : .achievement.map_disc_100
+{
+	event_name: road_disc
+	initial_check: true
+	current: get_explored_km
+	target: 40000
+
+	achievement_name: map_discover_100
+
+	steam_id: map_discover_100
+}
+
+# Use the train to cross the channel.
+
+achievement_ferry_data : .achievement.use_train
+{
+	event_name: ferry_used
+	ferry_type: train
+	delayed_submit: true
+
+	achievement_name: use_train
+
+	steam_id: use_train
+}
+
+# Utilize a boat.
+
+achievement_ferry_data : .achievement.use_boat
+{
+	event_name: ferry_used
+	ferry_type: ferry
+	delayed_submit: true
+
+	achievement_name: use_boat
+
+	steam_id: use_boat
+}
+
+# Use at least 5 ports in the game (counts sea and train ports).
+
+achievement_limit_data : .achievement.use_ports
+{
+	event_name: ferry_used
+	current: get_used_ports_count
+	target: 5
+	delayed_submit: true
+
+	achievement_name: use_all_ports
+
+	steam_progress_id: "use_all_ports-progress"
+	steam_id: use_all_ports
+}
+
+# Complete deliveries with at least 8 trailer types.
+
+achievement_cargo_group_data : .achievement.job_trailers
+{
+	event_name: job_done
+	initial_check: true
+	target: 8
+
+	achievement_name: job_all_trailer_types
+
+	steam_progress_id: "job_all_trailer_types-progress"
+	steam_id: job_all_trailer_types
+}
+
+# Discover at least 40 recruitment agencies.
+
+achievement_limit_data : .achievement.disc_agenc
+{
+	event_name: service_disc
+	initial_check: true
+	current: get_unlocked_recruitments_count_current_map
+	target: 40
+
+	achievement_name: discover_all_agencies
+
+	steam_progress_id: "discover_all_agencies-progress"
+	steam_id: discover_all_agencies
+}
+
+# Own at least one largest garage in your headquarter country.
+
+achievement_garages_data : .achievement.garage_in_hq
+{
+	event_name: garag_change
+	initial_check: true
+	filter: hq_country
+	level: large
+
+	achievement_name: garages_in_hq_country
+
+	steam_id: garages_in_hq_country
+}
+
+# Own at least 30 garages.
+
+achievement_garages_data : .achievement.garag_cities
+{
+	event_name: garag_change
+	initial_check: true
+	filter: none
+	target: 30
+
+	achievement_name: garage_in_every_city
+
+	steam_progress_id: "garage_in_every_city-progress"
+	steam_id: garage_in_every_city
+}
+
+# Use quick travel to return to your headquarters.
+
+achievement_position_data : .achievement.qtravel_hq
+{
+	event_name: quick_travel
+	target: hq_garage
+	delayed_submit: true
+
+	achievement_name: quick_travel_to_hq
+
+	steam_id: quick_travel_to_hq
+}
+
+# Achieve 100% of productivity for at least 5 large garages at the same time.
+
+achievement_profit_data : .achievement.prod_100
+{
+	event_name: new_week
+	initial_check: true
+	productivity_min: 100
+	productivity_garages: filtered
+	garage_count: 5
+	garage_size: large
+
+	achievement_name: large_garage_productivity
+
+	steam_id: large_garage_productivity
+}
+
+# Reach an average daily profit of €450,000.
+
+achievement_profit_data : .achievement.daily_profit
+{
+	event_name: new_day
+	avg_daily_profit_min: 450000
+
+	achievement_name: daily_profit
+
+	steam_id: daily_profit
+}
+
+# Achieve at least 75% of the average garage productivity for 10 large garages in your company.
+
+achievement_profit_data : .achievement.avg_prod_75
+{
+	event_name: new_week
+	initial_check: true
+	avg_productivity_min: 75
+	productivity_garages: filtered
+	garage_count: 10
+	garage_size: large
+
+	achievement_name: productivity_all_garages
+
+	steam_id: productivity_all_garages
+}
+
+# Design and apply to your truck a custom multi-color metallic paint.
+
+achievement_paintjob_data : .achievement.metallic_pj
+{
+	event_name: pj_applied
+	flipflake: true
+	color_changed: true
+
+	achievement_name: metallic_multi_color_paint
+
+	steam_id: metallic_multi_color_paint
+}
+
+# Drive 999 km during jobs with each of at least 5 truck brands, only your owned trucks count.
+
+achievement_truck_brand_data : .achievement.999km_brands
+{
+	event_name: job_done
+	initial_check: true
+	brands[]: vehicle.daf
+	brands[]: vehicle.iveco
+	brands[]: vehicle.man
+	brands[]: vehicle.mercedes
+	brands[]: vehicle.renault
+	brands[]: vehicle.scania
+	brands[]: vehicle.volvo
+	distance: 999
+	target: 5 # number of brands
+
+	achievement_name: 999_km_with_each_brand
+
+	steam_progress_id: "999_km_with_each_brand-progress"
+	steam_id: 999_km_with_each_brand
+}
+
+# Gain 20,000 XP for several consecutive jobs with the total distance below 10,000 km.
+
+achievement_xp_data : .achievement.jobs_20k_xp
+{
+	event_name: job_done
+	target: 20000
+	sum_distance_max: 10000
+	consecutive: true
+
+	achievement_name: jobs_20k_xp
+
+	steam_id: jobs_20k_xp
+}
+
+# Have at least 10 female and 10 male employees of maximum level in your company.
+
+achievement_profit_data : .achievement.male_female
+{
+	event_name: new_week
+	initial_check: true
+	driver_gender: each
+	driver_max_skills: true
+	driver_count_min: 10
+
+	achievement_name: maxed_male_female
+
+	steam_id: maxed_male_female
+}
+
+# Complete 20 deliveries choosing the trailer delivery option which requires reversing.
+
+achievement_delivery : .achievement.unload_diff
+{
+	event_name: job_done
+	initial_check: true
+	condition: .unload_diff.condition
+	target: 20
+
+	achievement_name: unload_difficulty
+
+	steam_progress_id: "unload_difficulty-progress"
+	steam_id: unload_difficulty
+}
+
+achievement_delivery_count : .unload_diff.condition
+{
+	condition: .unload_diff.condition.20
+	count: 20
+}
+
+achievement_delivery_any : .unload_diff.condition.20
+{
+	list[]: .unload_diff.hard
+	list[]: .unload_diff.medium
+}
+
+achievement_delivery_unload_difficulty : .unload_diff.hard
+{
+	difficulty: hard
+}
+
+achievement_delivery_unload_difficulty : .unload_diff.medium
+{
+	difficulty: medium
+}
+
+}

@@ -198,3 +198,45 @@ traffic_spawn_condition: .traffic.transport_t6.gr_hw.condition.city
     str_param[]: "!"
     str_param[]: "?*"		
 }
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Company Ravan Tool - Polar Circle XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.transport_t6.cmp_rt
+{
+	accessories[]: .transport_t6.cmp_rt.chassis
+	accessories[]: .transport_t6.cmp_rt.fwheel
+	accessories[]: .transport_t6.cmp_rt.rwheel
+
+	max_speed: 130
+
+	vehicle_mass: 2000
+
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	color[]: (1, 1, 1) #white
+
+	tags[]: van
+
+	spawn_ratio: 0
+
+@include "drivers_generic.sui"
+
+}
+
+vehicle_accessory: .transport_t6.cmp_rt.chassis
+{
+	data_path: "/def/vehicle/ai/transporter_t6/chassis_cmp_rt.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.cmp_rt.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_2.sii"
+}
+
+vehicle_wheel_accessory: .transport_t6.cmp_rt.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_2.sii"
+}

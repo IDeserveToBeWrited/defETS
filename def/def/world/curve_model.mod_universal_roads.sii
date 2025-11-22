@@ -314,7 +314,7 @@ curve_model : curve.un_14001
 		color_variant[]: "medium: 222,222,222"
 		color_variant[]: "dark: 190,190,190"
 		
-		drop_sun_shadows: 1
+		drop_sun_shadows: 2
 	}
 
 	curve_model : curve.un_cr_1m
@@ -338,7 +338,7 @@ curve_model : curve.un_14001
 		color_variant[]: "medium: 222,222,222"
 		color_variant[]: "dark: 190,190,190"
 		
-		drop_sun_shadows: 1
+		drop_sun_shadows: 2
 	}
 
 	curve_model : curve.un_cr_2m
@@ -362,7 +362,7 @@ curve_model : curve.un_14001
 		color_variant[]: "medium: 222,222,222"
 		color_variant[]: "dark: 190,190,190"
 		
-		drop_sun_shadows: 1
+		drop_sun_shadows: 2
 	}
 
 	curve_model : curve.un_cr_3m
@@ -386,7 +386,7 @@ curve_model : curve.un_14001
 		color_variant[]: "medium: 222,222,222"
 		color_variant[]: "dark: 190,190,190"
 			
-		drop_sun_shadows: 1
+		drop_sun_shadows: 2
 	}
 
 curve_model : curve.un_curb
@@ -428,7 +428,7 @@ curve_model : curve.un_curb
 	color_variant[]: "medium: 222,222,222"
 	color_variant[]: "dark: 190,190,190"
 	
-	drop_sun_shadows: 1
+	drop_sun_shadows: 2
 }
 
 curve_model : curve.un_cr_wide
@@ -470,7 +470,7 @@ curve_model : curve.un_cr_wide
 	color_variant[]: "medium: 222,222,222"
 	color_variant[]: "dark: 190,190,190"
 	
-	drop_sun_shadows: 1
+	drop_sun_shadows: 2
 }
 
 curve_model : curve.un_curb_trn
@@ -503,10 +503,31 @@ curve_model : curve.un_curb_trn
 	color_variant[]: "medium: 222,222,222"
 	color_variant[]: "dark: 190,190,190"
 
-	drop_sun_shadows: 1
+	drop_sun_shadows: 2
 }
 
+curve_model : curve.un_cr_slope
+{
+	model_desc: "/model2/props/road/un_curb_slope.pmd"
+	name: "un curb slope"
 
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 222,222,222"
+	color_variant[]: "dark: 190,190,190"
+
+	variation[]: "_4m | center4m1, center4m2, center4m3, center4m4 : 1.0"
+	start_part[]: "start0 | start1 | start2 | start3"
+	end_part[]: "end0 | end1 | end2 | end3"
+	variation[]: "_2m | center2m1, center2m2, center2m3, center2m4, center2m5, center2m6, center2m7, center2m8 : 1.0"
+	start_part[]: "start0 | start1 | start2 | start3"
+	end_part[]: "end0 | end1 | end2 | end3"
+	variation[]: "_1m | center1m1, center1m2, center1m3, center1m4, center1m5, center1m6, center1m7, center1m8, center1m9, center1m10, center1m11, center1m12, center1m13, center1m14, center1m15 : 1.0"
+	start_part[]: "start0 | start1 | start2 | start3"
+	end_part[]: "end0 | end1 | end2 | end3"
+	drop_sun_shadows: 2
+	no_stretch_start: "start0 | start1 | start2 | start3"
+	no_stretch_end: "end0 | end1 | end2 | end3"
+}
 
 
 }

@@ -258,4 +258,53 @@ traffic_spawn_condition: .traffic.flexity.ch_zu.condition.city
 	str_param[]: "zurich"
 }
 
+################################ Aarhus | Denmark ###################################
+
+traffic_vehicle : traffic.flexity.dk_aa
+{
+	accessories[]: .flexity.dk_aa.chassis
+	accessories[]: .flexity.dk_aa.fwheel
+	accessories[]: .flexity.dk_aa.rwheel
+
+	max_speed: 70 
+
+	vehicle_mass: 48000	# 48t each wagon (loaded)
+	engine_power: 2240	# 4x112kW each wagon, 5wagons
+
+	trailer_chains[]: "tram_car.flexity.dk_aa.c1 | tram_car.flexity.dk_aa.c2 | tram_car.flexity.dk_aa.c3 | tram_car.flexity.dk_aa.c4"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+	spawn_ratio: 0.0
+
+ 	spawn_condition[]: .traffic.flexity.dk_aa.condition.city
+}
+
+vehicle_accessory: .flexity.dk_aa.chassis
+{
+	data_path: "/def/vehicle/ai/tram_flexity/loco_dk_aa.sii"
+}
+
+vehicle_wheel_accessory: .flexity.dk_aa.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .flexity.dk_aa.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+traffic_spawn_condition: .traffic.flexity.dk_aa.condition.city
+{
+# 	spawn only near city with specified name
+	type: city
+	str_param[]: "aarhus"
+}
+
 

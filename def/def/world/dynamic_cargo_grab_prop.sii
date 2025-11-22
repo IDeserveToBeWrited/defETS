@@ -1,3 +1,109 @@
 SiiNunit
 {
+
+#### MATERIAL HANDLER GRAB HEADS 
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.bucketshell
+{
+	model: "/vehicle/machine/material_handler/mover/extension_bucketshell_mov.pmd"
+	model_animation: "/vehicle/machine/material_handler/mover/ex_bucketshell_open.pma"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.grabber
+{
+	model: "/vehicle/machine/material_handler/mover/extension_grabber_mov.pmd"
+	model_animation: "/vehicle/machine/material_handler/mover/ex_grabber_open.pma"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+
+	# full animation time is 1.4
+    radius_time[]: (0.25, 0.2)  
+    radius_time[]: (0.7, 0.95)
+    radius_time[]: (0.9, 1.0)
+    radius_time[]: (1.0, 1.1)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.hook
+{
+	model: "/vehicle/machine/material_handler/mover/extension_hook_mov.pmd"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.magnet
+{
+	model: "/vehicle/machine/material_handler/mover/extension_magnet_mov.pmd"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.sort_grapple
+{
+	model: "/vehicle/machine/material_handler/mover/extension_sorting_grapple_mov.pmd"
+	model_animation: "/vehicle/machine/material_handler/mover/ex_grapple_open.pma"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.timber_grab
+{
+	model: "/vehicle/machine/material_handler/mover/extension_timber_grab_mov.pmd"
+	model_animation: "/vehicle/machine/material_handler/mover/ex_timber_open.pma"
+
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+
+    # (radius, anim_time) pairs - must be sorted according to radius!
+    radius_time[]: (0.25, 0.0)
+    radius_time[]: (0.5, 0.36)  
+    radius_time[]: (0.54, 0.42)
+    radius_time[]: (0.55, 0.44)
+}
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_m_handlr.vacuum_tel
+{
+	model: "/vehicle/machine/material_handler/mover/extension_vacuum_telescopic_mov.pmd"
+	model_animation: "/vehicle/machine/material_handler/mover/ex_vacuum_close.pma"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+
+	radius_time[]: (0.25, 0.0)
+    radius_time[]: (0.5, 1.1)  
+    radius_time[]: (0.54, 1.2)
+    radius_time[]: (0.55, 1.3)
+}
+
+#### EXCAVATOR CRAWLER GRAB HEADS
+
+dynamic_cargo_grab_prop : dc_grab_prop.dc_excavatr.timber_grab
+{
+	model: "/vehicle/machine/excavator_crawler/mover/extension_mov.pmd"
+	model_animation: "/vehicle/machine/excavator_crawler/mover/ex_crawler_open.pma"
+	bone_a: grab_bind
+	bone_offset_a: (0.0, 0.0, -0.12)
+	model_offset: (0.0, 0.0, 0.0)
+	model_rotation: (90.0, 90.0, -90.0)
+
+    # (radius, anim_time) pairs - must be sorted according to radius!
+    radius_time[]: (0.25, 0.0) 
+    radius_time[]: (0.54, 2.0)
+    radius_time[]: (0.55, 2.1)
+}
+
 }

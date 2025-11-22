@@ -9,9 +9,7 @@ accessory_trailer_body_data : short42.scs.lowloader.body
 cargo_loading_methods[]: area
 cargo_loading_methods[]: custom
 
-	cargo_custom_loads[]: .ex_bucket
-	cargo_custom_loads[]: .boiler_parts
-	cargo_custom_loads[]: .tank
+cargo_custom_loads_path: "/def/vehicle/trailer_owned/scs.lowloader/body/short"
 
 	cargo_areas[]: (2.5, 6.36)
 
@@ -35,28 +33,6 @@ cargo_loading_methods[]: custom
 	cargo_lashing_mounts[]: .lashm13
 	
 @include "/def/vehicle/lashing_gear.sui"
-@include "/def/vehicle/trailer_owned/scs.lowloader/body/cargo_custom_loads_short.sui"
-}
-
-cargo_custom_load_data : .ex_bucket
-{
-	cargo_token: ex_bucket
-	offset: (0, 0, 0)
-	rotation: (0, 0, 0)
-}
-
-cargo_custom_load_data : .boiler_parts
-{
-	cargo_token: boiler_parts
-	offset: (0, 0, 0)
-	rotation: (0, 0, 0)
-}
-
-cargo_custom_load_data : .tank
-{
-	cargo_token: tank
-	offset: (0.000, 0.000, 0.920)
-	rotation: (0.000, 0.000, 0.000)
 }
 
 
@@ -180,5 +156,4 @@ hook_angle_constraints: (45, 90, 10)
 }
 
 @include "/def/vehicle/lashing_gear_data.sui"
-@include "/def/vehicle/trailer_owned/scs.lowloader/body/cargo_custom_load_data_short.sui"
 }

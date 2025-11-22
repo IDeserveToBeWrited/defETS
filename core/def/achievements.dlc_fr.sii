@@ -1,0 +1,137 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC France --
+
+# Discover at least 20 French cities.
+
+achievement_visit_city_data : .achievement.fr_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	country_name: france
+	target: 20
+
+	achievement_name: fr_visit_cities
+
+	steam_progress_id: "fr_visit_cities-progress"
+	steam_id: fr_visit_cities
+}
+
+# Discover following landmarks of France: Carcassonne, Brotonne bridge, Tiger tank, Peyrat-le-Château, Château de Ventadour, Château d'Ussé.
+
+achievement_trigger_data : .achievement.fr_landmarks
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: fr_landmarks
+	target: 6
+
+	achievement_name: fr_landmarks
+
+	steam_progress_id: "fr_landmarks-progress"
+	steam_id: fr_landmarks
+}
+
+# Deliver cargo to at least 3 nuclear plants in France.
+
+achievement_each_company_data : .achievement.fr_nucplants
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: nucleon.alban
+	targets[]: nucleon.civaux
+	targets[]: nucleon.golfech
+	targets[]: nucleon.laurent
+	targets[]: nucleon.paluel
+	target: 3
+
+	achievement_name: fr_nucplants
+
+	steam_progress_id: "fr_nucplants-progress"
+	steam_id: fr_nucplants
+}
+
+# Deliver cargo to at least 3 cargo airport terminals in France.
+
+achievement_each_company_data : .achievement.fr_airports
+{
+	event_name: job_done
+	initial_check: true
+	targets[]: fle.bastia
+	targets[]: fle.brest
+	targets[]: fle.calvi
+	targets[]: fle.paris
+	targets[]: fle.nantes
+	targets[]: fle.toulouse
+	targets[]: fle.montpellier
+	targets[]: fle.clermont
+	target: 3
+
+	achievement_name: fr_airports
+
+	steam_progress_id: "fr_airports-progress"
+	steam_id: fr_airports
+}
+
+# Deliver diesel, LPG or petrol to at least 3 truck stops in France.
+
+achievement_each_company_data : .achievement.fr_truckstop
+{
+	event_name: job_done
+	initial_check: true
+	cargos[]: lpg
+	cargos[]: lpg_t
+	cargos[]: petrol
+	cargos[]: diesel
+	targets[]: eco.lemans
+	targets[]: eco.nantes
+	targets[]: eco.lehavre
+	targets[]: eco.bordeaux
+	targets[]: eco.montpellier
+	targets[]: eco.marseille
+	targets[]: eco.limoges
+	target: 3 
+
+	achievement_name: fr_truckstop
+
+	steam_progress_id: "fr_truckstop-progress"
+	steam_id: fr_truckstop
+}
+
+# Discover at least 4 Corsican cities.
+
+achievement_visit_city_data : .achievement.fr_visit_cor
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: ajaccio
+	cities[]: bastia
+	cities[]: bonifacio
+	cities[]: calvi
+	cities[]: lile_rousse
+	cities[]: porto_vecchi
+	target: 4
+
+	achievement_name: fr_visit_corsica
+
+	steam_progress_id: "fr_visit_corsica-progress"
+	steam_id: fr_visit_corsica
+}
+
+}

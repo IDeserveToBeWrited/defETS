@@ -297,7 +297,9 @@ trigger_action : trig_action.no_trl_disc
 trigger_action : trig_action.slow_time
 {
 	name: "Slow time (auto reset)"
-	command: "_slow_time"
+	#command: "_slow_time"
+	command: "echo"
+	str_params[]: "Slow time trigger"
 }
 
 
@@ -357,5 +359,61 @@ trigger_action : trig_action.toll_kar_tun
 	command: "_pay_toll"
 	num_params[]: 12
 }
+#Norway (DLC North/Scandinavia)
+trigger_action : trig_action.toll_no_18_1
+{
+	name: "toll Norway E18 Stillinga"
 
+	command: "_pay_toll"
+	num_params[]: 7.46
+}
+trigger_action : trig_action.toll_no_18_2
+{
+	name: "toll Norway E18 Stølen + Mørland"
+
+	command: "_pay_toll"
+	num_params[]: 9.37
+}
+trigger_action : trig_action.toll_no_18_3
+{
+	name: "toll Norway E18 Mandal - Kr.sand merged"
+
+	command: "_pay_toll"
+	num_params[]: 34.85
+}
+trigger_action : trig_action.toll_no_134
+{
+	name: "toll Norway E134 Damåsen"
+
+	command: "_pay_toll"
+	num_params[]: 9.45
+}
+trigger_action : trig_action.toll_no_134_
+{
+	name: "toll Norway E134 Kongsberg/Notodden grense"
+
+	command: "_pay_toll"
+	num_params[]: 9.46
+}
+trigger_action : trig_action.toll_no_13_1
+{
+	name: "toll Norway 13 Hardanger bridge"
+
+	command: "_pay_toll"
+	num_params[]: 36.16
+}
+trigger_action : trig_action.toll_no_e6_g
+{
+	name: "toll Norway E6 Abildsø"
+
+	command: "_pay_toll"
+	num_params[]: 9.79
+}
+trigger_action : trig_action.toll_no_e6_9
+{
+	name: "toll Norway E6 Taraldrud"
+
+	command: "_pay_toll"
+	num_params[]: 9.81
+}
 }

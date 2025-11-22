@@ -1,0 +1,54 @@
+########################### Polar Circle - Default ###########################
+
+traffic_vehicle : traffic.iore_loco
+{
+	accessories[]: .iore_loco.chassis
+	accessories[]: .iore_loco.fwheel
+	accessories[]: .iore_loco.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 52000
+	engine_power: 1000
+
+	trailer_chains[]: "train_car.iore_loco | train_car.hopper_ore 12-15"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: context
+
+	spawn_condition[]: .traffic.iore_loco.spawn.condition
+	spawn_condition[]: .traffic.iore_loco.spawn.condition2
+}
+traffic_spawn_condition: .traffic.iore_loco.spawn.condition
+{
+	type: area
+	str_param[]: "company"
+}
+traffic_spawn_condition: .traffic.iore_loco.spawn.condition2
+{
+	type: area
+	str_param[]: "nord_sten"
+}
+
+vehicle_accessory: .iore_loco.chassis
+{
+	data_path: "/def/vehicle/ai/train_iore/chassis_iore.sii"
+}
+
+vehicle_wheel_accessory: .iore_loco.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .iore_loco.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}

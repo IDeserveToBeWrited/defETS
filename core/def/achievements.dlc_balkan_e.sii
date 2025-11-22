@@ -1,0 +1,277 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Road to the Black Sea --
+
+# Discover at least 20 Road to the Black Sea DLC cities.
+
+achievement_visit_city_data : .achievement.be_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	cities[]: bacau
+	cities[]: brasov
+	cities[]: bucuresti
+	cities[]: burgas
+	cities[]: calarasi
+	cities[]: cernavoda
+	cities[]: cluj_napoca
+	cities[]: constanta
+	cities[]: craiova
+	cities[]: edirne
+	cities[]: galati
+	cities[]: hunedoara
+	cities[]: iasi
+	cities[]: istanbul
+	cities[]: karlovo
+	cities[]: kozloduy
+	cities[]: mangalia
+	cities[]: pernik
+	cities[]: pirdop
+	cities[]: pitesti
+	cities[]: pleven
+	cities[]: plovdiv
+	cities[]: resita
+	cities[]: ruse
+	cities[]: sofia
+	cities[]: targu_mures
+	cities[]: tekirdag
+	cities[]: timisoara
+	cities[]: varna
+	cities[]: veli_tarnovo
+	target: 20
+
+	achievement_name: be_visit_cities
+
+	steam_progress_id: "be_visit_cities-progress"
+	steam_id: be_visit_cities
+}
+
+# Visit at least 4 border crossings between Romania, Bulgaria and Turkey.
+
+achievement_trigger_data : .achievement.be_border_cr
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: be_border_crossings
+	target: 4
+
+	achievement_name: be_border_crossings
+
+	steam_progress_id: "be_border_crossings-progress"
+	steam_id: be_border_crossings
+}
+
+# Use a river ferry.
+
+achievement_trigger_data : .achievement.be_blke_ferr
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: be_blke_ferry
+	target: 1
+
+	achievement_name: be_blke_ferry
+
+	steam_id: be_blke_ferry
+}
+
+# Visit the following landmarks and locations: Iron Gates, Bran Castle (Romania), Pomorie Beach, Wall of Heroes in Varna (Bulgaria), Lake Küçükçekmece in Istanbul (Turkey).
+
+achievement_trigger_data : .achievement.be_landmarks
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: be_landmarks
+	target: 5
+
+	achievement_name: be_landmarks
+
+	steam_progress_id: "be_landmarks-progress"
+	steam_id: be_landmarks
+}
+
+# Complete 3 deliveries from Istanbul which are at least 2,500 km long.
+
+achievement_delivery_log_data : .achievement.be_istanbul
+{
+	event_name: job_done
+	distance_min: 2500
+	source_cities[]: istanbul
+	target: 3
+
+	achievement_name: be_istanbul_jobs
+
+	steam_progress_id: "be_istanbul_jobs-progress"
+	steam_id: be_istanbul_jobs
+}
+
+# Complete excellent deliveries between these coastal cities: Istanbul-Burgas, Burgas-Varna, Varna-Mangalia, Mangalia-Constanța. Any order or direction counts.
+
+achievement_each_delivery_point : .achievement.be_black_sea
+{
+	event_name: job_done
+	initial_check: true
+	both_directions: true
+	damage_max: 0.0
+	late: false
+	sources[]: .be_black_sea.istanbul.burgas.source
+	targets[]: .be_black_sea.istanbul.burgas.target
+	sources[]: .be_black_sea.burgas.varna.source
+	targets[]: .be_black_sea.burgas.varna.target
+	sources[]: .be_black_sea.varna.mangalia.source
+	targets[]: .be_black_sea.varna.mangalia.target
+	sources[]: .be_black_sea.mangalia.constanta.source
+	targets[]: .be_black_sea.mangalia.constanta.target
+	target: 4
+
+	achievement_name: be_black_sea
+
+	steam_progress_id: "be_black_sea-progress"
+	steam_id: be_black_sea
+}
+
+achievement_delivery_city : .be_black_sea.istanbul.burgas.source
+{
+	city_name: istanbul
+}
+
+achievement_delivery_city : .be_black_sea.istanbul.burgas.target
+{
+	city_name: burgas
+}
+
+achievement_delivery_city : .be_black_sea.burgas.varna.source
+{
+	city_name: burgas
+}
+
+achievement_delivery_city : .be_black_sea.burgas.varna.target
+{
+	city_name: varna
+}
+
+achievement_delivery_city : .be_black_sea.varna.mangalia.source
+{
+	city_name: varna
+}
+
+achievement_delivery_city : .be_black_sea.varna.mangalia.target
+{
+	city_name: mangalia
+}
+
+achievement_delivery_city : .be_black_sea.mangalia.constanta.source
+{
+	city_name: mangalia
+}
+
+achievement_delivery_city : .be_black_sea.mangalia.constanta.target
+{
+	city_name: constanta
+}
+
+# Complete deliveries between following cities, in this order and direction: Paris-Strasbourg, Strasbourg-Munich, Munich-Vienna, Vienna-Budapest, Budapest-Bucurest, Bucurest-Istanbul.
+
+achievement_each_delivery_point : .achievement.be_express
+{
+	event_name: job_done
+	initial_check: true
+	both_directions: false
+	in_order: true
+	sources[]: .be_express.paris.strasbourg.source
+	targets[]: .be_express.paris.strasbourg.target
+	sources[]: .be_express.strasbourg.munchen.source
+	targets[]: .be_express.strasbourg.munchen.target
+	sources[]: .be_express.munchen.wien.source
+	targets[]: .be_express.munchen.wien.target
+	sources[]: .be_express.wien.budapest.source
+	targets[]: .be_express.wien.budapest.target
+	sources[]: .be_express.budapest.bucuresti.source
+	targets[]: .be_express.budapest.bucuresti.target
+	sources[]: .be_express.bucuresti.istanbul.source
+	targets[]: .be_express.bucuresti.istanbul.target
+	target: 6
+
+	achievement_name: be_express
+
+	steam_progress_id: "be_express-progress"
+	steam_id: be_express
+}
+
+achievement_delivery_city : .be_express.paris.strasbourg.source
+{
+	city_name: paris
+}
+
+achievement_delivery_city : .be_express.paris.strasbourg.target
+{
+	city_name: strasbourg
+}
+
+achievement_delivery_city : .be_express.strasbourg.munchen.source
+{
+	city_name: strasbourg
+}
+
+achievement_delivery_city : .be_express.strasbourg.munchen.target
+{
+	city_name: munchen
+}
+
+achievement_delivery_city : .be_express.munchen.wien.source
+{
+	city_name: munchen
+}
+
+achievement_delivery_city : .be_express.munchen.wien.target
+{
+	city_name: wien
+}
+
+achievement_delivery_city : .be_express.wien.budapest.source
+{
+	city_name: wien
+}
+
+achievement_delivery_city : .be_express.wien.budapest.target
+{
+	city_name: budapest
+}
+
+achievement_delivery_city : .be_express.budapest.bucuresti.source
+{
+	city_name: budapest
+}
+
+achievement_delivery_city : .be_express.budapest.bucuresti.target
+{
+	city_name: bucuresti
+}
+
+achievement_delivery_city : .be_express.bucuresti.istanbul.source
+{
+	city_name: bucuresti
+}
+
+achievement_delivery_city : .be_express.bucuresti.istanbul.target
+{
+	city_name: istanbul
+}
+
+}

@@ -1,0 +1,314 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Special Transport --
+
+# Deliver first oversize cargo.
+
+achievement_delivery_log_data : .achievement.st_first_car
+{
+	event_name: job_done
+	consecutive: true # Prevent checking previous records
+	cargos[]: art_dumper
+	cargos[]: boiler_parts
+	cargos[]: condensator
+	cargos[]: czl_es1000
+	cargos[]: dumper
+	cargos[]: dumper_tire
+	cargos[]: ex_bucket
+	cargos[]: heat_exch
+	cargos[]: lattice
+	cargos[]: load_un
+	cargos[]: mystery_box
+	cargos[]: mystery_cyl
+	cargos[]: pilot_boat
+	cargos[]: silo
+	cargos[]: tank
+	cargos[]: wagon
+	cargos[]: windblade
+	target: 1
+
+	achievement_name: st_first_cargo
+
+	steam_id: st_first_cargo
+}
+
+# Complete delivery of at least 10 oversize cargoes.
+
+achievement_each_cargo_data : .achievement.st_all_cargo
+{
+	event_name: job_done
+	initial_check: true
+	cargos[]: art_dumper
+	cargos[]: boiler_parts
+	cargos[]: condensator
+	cargos[]: czl_es1000
+	cargos[]: dumper
+	cargos[]: dumper_tire
+	cargos[]: ex_bucket
+	cargos[]: heat_exch
+	cargos[]: lattice
+	cargos[]: load_un
+	cargos[]: mystery_box
+	cargos[]: mystery_cyl
+	cargos[]: pilot_boat
+	cargos[]: silo
+	cargos[]: tank
+	cargos[]: wagon
+	cargos[]: windblade
+	target: 10
+
+	achievement_name: st_all_cargos
+
+	steam_progress_id: "st_all_cargos-progress"
+	steam_id: st_all_cargos
+}
+
+# Complete deliveries on at least 10 oversize routes in base game.
+
+achievement_delivery : .achievement.st_all_route
+{
+	event_name: job_done
+	initial_check: true
+	condition: .st_all_route.condition
+	target: 10
+
+	achievement_name: st_all_routes
+
+	steam_id: st_all_routes
+	steam_progress_id: "st_all_routes-progress"
+}
+
+achievement_delivery_sequence : .st_all_route.condition
+{
+	list[]: .st_all_route.ber_szcz1
+	list[]: .st_all_route.brat_graz1
+	list[]: .st_all_route.bre_tra1
+	list[]: .st_all_route.brus_amster1
+	list[]: .st_all_route.car_bir1	
+	list[]: .st_all_route.dij_gen1
+	list[]: .st_all_route.dort_hann1
+	list[]: .st_all_route.dres_wroc1
+	list[]: .st_all_route.glas_aber1	
+	list[]: .st_all_route.koln_amster1
+	list[]: .st_all_route.lin_br1
+	list[]: .st_all_route.lon_fel1	
+	list[]: .st_all_route.lux_lieg1
+	list[]: .st_all_route.munch_inns1
+	list[]: .st_all_route.ply_dov1	
+	list[]: .st_all_route.prag_nurn1
+	list[]: .st_all_route.reim_stra1
+	list[]: .st_all_route.shef_bir1	
+}
+
+achievement_delivery_route : .st_all_route.ber_szcz1
+{
+	route_name: ber_szcz1
+}
+
+achievement_delivery_route : .st_all_route.brat_graz1
+{
+	route_name: brat_graz1
+}
+
+achievement_delivery_route : .st_all_route.bre_tra1
+{
+	route_name: bre_tra1
+}
+
+achievement_delivery_route : .st_all_route.brus_amster1
+{
+	route_name: brus_amster1
+}
+
+achievement_delivery_route : .st_all_route.car_bir1
+{
+	route_name: car_bir1
+}
+
+achievement_delivery_route : .st_all_route.dij_gen1
+{
+	route_name: dij_gen1
+}
+
+achievement_delivery_route : .st_all_route.dort_hann1
+{
+	route_name: dort_hann1
+}
+
+achievement_delivery_route : .st_all_route.dres_wroc1
+{
+	route_name: dres_wroc1
+}
+
+achievement_delivery_route : .st_all_route.glas_aber1
+{
+	route_name: glas_aber1
+}
+
+achievement_delivery_route : .st_all_route.koln_amster1
+{
+	route_name: koln_amster1
+}
+
+achievement_delivery_route : .st_all_route.lin_br1
+{
+	route_name: lin_br1
+}
+
+achievement_delivery_route : .st_all_route.lon_fel1
+{
+	route_name: lon_fel1
+}
+
+achievement_delivery_route : .st_all_route.lux_lieg1
+{
+	route_name: lux_lieg1
+}
+
+achievement_delivery_route : .st_all_route.munch_inns1
+{
+	route_name: munch_inns1
+}
+
+achievement_delivery_route : .st_all_route.ply_dov1
+{
+	route_name: ply_dov1
+}
+
+achievement_delivery_route : .st_all_route.prag_nurn1
+{
+	route_name: prag_nurn1
+}
+
+achievement_delivery_route : .st_all_route.reim_stra1
+{
+	route_name: reim_stra1
+}
+
+achievement_delivery_route : .st_all_route.shef_bir1
+{
+	route_name: shef_bir1
+}
+
+# Complete 3 consecutive oversize jobs without any damage.
+
+achievement_delivery_log_data : .achievement.st_no_damage
+{
+	event_name: job_done
+	consecutive: true
+	damage_max: 0.0
+	cargos[]: art_dumper
+	cargos[]: boiler_parts
+	cargos[]: condensator
+	cargos[]: czl_es1000
+	cargos[]: dumper
+	cargos[]: dumper_tire
+	cargos[]: ex_bucket
+	cargos[]: heat_exch
+	cargos[]: lattice
+	cargos[]: load_un
+	cargos[]: mystery_box
+	cargos[]: mystery_cyl
+	cargos[]: pilot_boat
+	cargos[]: silo
+	cargos[]: tank
+	cargos[]: wagon
+	cargos[]: windblade
+	target: 3
+
+	achievement_name: st_no_damage
+
+	steam_progress_id: "st_no_damage-progress"
+	steam_id: st_no_damage
+}
+
+# Complete delivery of the Silo cargo.
+
+achievement_delivery_log_data : .achievement.st_silo
+{
+	event_name: job_done
+	consecutive: true # Prevent checking previous records
+	cargos[]: silo
+	target: 1
+
+	achievement_name: st_silo
+
+	steam_id: st_silo
+}
+
+# Complete delivery of the Haul Truck Chassis.
+
+achievement_delivery_log_data : .achievement.st_cat_785c
+{
+	event_name: job_done
+	consecutive: true # Prevent checking previous records
+	cargos[]: dumper
+	target: 1
+
+	achievement_name: st_cat_785c
+
+	steam_id: st_cat_785c
+}
+
+# Complete delivery of the Service Boat.
+
+achievement_delivery_log_data : .achievement.st_pilotboat
+{
+	event_name: job_done
+	consecutive: true # Prevent checking previous records
+	cargos[]: pilot_boat
+	target: 1
+
+	achievement_name: st_pilot_boat
+
+	steam_id: st_pilot_boat
+}
+
+# Deliver at least 195 tons of oversized cargo in just 3 consecutive deliveries.
+
+achievement_delivery_log_data : .achievement.st_mass
+{
+	event_name: job_done
+	consecutive: true
+	total_cargo_mass_min: 195000 # 195 t
+	cargos[]: art_dumper
+	cargos[]: boiler_parts
+	cargos[]: condensator
+	cargos[]: czl_es1000
+	cargos[]: dumper
+	cargos[]: dumper_tire
+	cargos[]: ex_bucket
+	cargos[]: heat_exch
+	cargos[]: lattice
+	cargos[]: load_un
+	cargos[]: mystery_box
+	cargos[]: mystery_cyl
+	cargos[]: pilot_boat
+	cargos[]: silo
+	cargos[]: tank
+	cargos[]: wagon
+	cargos[]: windblade
+	target: 3
+
+	achievement_name: st_mass
+
+	steam_id: st_mass
+}
+
+}

@@ -1,0 +1,176 @@
+SiiNunit
+{
+sign_board_template : _nameless.fa93.7f80 {
+ board_name: "no dynamic control vert"
+ width: 1
+ height: &3fc00000
+ model_name: ""
+ items: 6
+ items[0]: _nameless.f9f7.6400
+ items[1]: _nameless.f9f7.5c80
+ items[2]: _nameless.f9f7.5d20
+ items[3]: _nameless.fa5c.a390
+ items[4]: _nameless.f9f7.5e60
+ items[5]: _nameless.f9f7.6f40
+ dynamic_attributes: 4
+ dynamic_attributes[0]: _nameless.fa5c.a8d0
+ dynamic_attributes[1]: _nameless.fa5c.a990
+ dynamic_attributes[2]: _nameless.1.18a0.6620
+ dynamic_attributes[3]: _nameless.1.18a0.5de0
+}
+
+sign_template_image : _nameless.f9f7.6400 {
+ atlas_path: "/def/sign/atlas/control_no.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2909536254
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e4e4f72
+ coords_r: &3f4d2d76
+ coords_t: &3fa554d9
+ coords_b: &3f31101a
+ z_order: 1
+ tag: ""
+}
+
+sign_template_image : _nameless.f9f7.5c80 {
+ atlas_path: "/def/sign/atlas/bus_no.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2723282943
+ area_name: ""
+ area_idx: nil
+ coords_l: &3e9907f1
+ coords_r: &3f343d5a
+ coords_t: &3ebee2be
+ coords_b: &3e656d38
+ z_order: 2
+ tag: ""
+}
+
+sign_template_image : _nameless.f9f7.5d20 {
+ atlas_path: "/def/sign/atlas/truck_3_swe.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 2170159103
+ area_name: ""
+ area_idx: nil
+ coords_l: &3ea9e446
+ coords_r: &3f2bcf2f
+ coords_t: &3f1d592a
+ coords_b: &3edc78c7
+ z_order: 3
+ tag: ""
+}
+
+sign_template_text : _nameless.fa5c.a390 {
+ text: 500m
+ font_face: "/font/sign/no.font"
+ font_size: &3e19999a
+ text_halign: center
+ text_valign: center
+ font_color: nil
+ font_opacity: 1
+ line_spacing: &3e4ccccd
+ letter_spacing: &3c23d70a
+ id: 1519255551
+ area_name: ""
+ area_idx: nil
+ coords_l: 0
+ coords_r: 1
+ coords_t: &3e537208
+ coords_b: 0
+ z_order: 4
+ tag: ""
+}
+
+sign_template_image : _nameless.f9f7.5e60 {
+ atlas_path: "/def/sign/atlas/exit_nr_hu.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 3069181950
+ area_name: ""
+ area_idx: nil
+ coords_l: &3d41ecf7
+ coords_r: &3e20182c
+ coords_t: &3fb89e49
+ coords_b: &3faaaaab
+ z_order: 5
+ tag: ""
+}
+
+sign_template_image : _nameless.f9f7.6f40 {
+ atlas_path: "/def/sign/atlas/exit_nr_hu.sii"
+ image_idx: 0
+ color: nil
+ opacity: 1
+ hflip: false
+ vflip: false
+ image_overridable: false
+ id: 4238082046
+ area_name: ""
+ area_idx: nil
+ coords_l: &3f579e21
+ coords_r: &3f73855d
+ coords_t: &3fb89e49
+ coords_b: &3faaaaab
+ z_order: 6
+ tag: ""
+}
+
+sign_conditional_attribute : _nameless.fa5c.a8d0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: control_no
+ traffic_rules: 0
+ item_id: 2909536254
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.fa5c.a990 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 1
+ values[0]: 500m
+ traffic_rules: 0
+ item_id: 1519255551
+ attr_name: text
+}
+
+sign_conditional_attribute : _nameless.1.18a0.6620 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 0
+ traffic_rules: 0
+ item_id: 2170159103
+ attr_name: image_idx
+}
+
+sign_conditional_attribute : _nameless.1.18a0.5de0 {
+ conditions: 1
+ conditions[0]: "road_event weigh"
+ values: 0
+ traffic_rules: 0
+ item_id: 2723282943
+ attr_name: image_idx
+}
+
+}
