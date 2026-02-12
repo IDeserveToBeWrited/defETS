@@ -1884,6 +1884,7 @@ default_input_entry : input.ui_joy.x360.gamepad
 	weight: 160
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{028E045E-0000-0000-0000-504944564944}'"
+	configs[]: "duplicate.device"
 }
 
 default_input_entry : input.ui_joy.xbone.gamepad
@@ -1892,6 +1893,7 @@ default_input_entry : input.ui_joy.xbone.gamepad
 	weight: 157
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02FF045E-0000-0000-0000-504944564944}'"
+	configs[]: "duplicate.device"
 }
 
 default_input_entry : input.ui_joy.xbone7.gamepad
@@ -1900,6 +1902,7 @@ default_input_entry : input.ui_joy.xbone7.gamepad
 	weight: 156
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02DD045E-0000-0000-0000-504944564944}'"
+	configs[]: "duplicate.device"
 }
 
 default_input_entry : input.ui_joy.xone.gamepad
@@ -1908,6 +1911,7 @@ default_input_entry : input.ui_joy.xone.gamepad
 	weight: 155
 
 	names[]: "di8.'{00000000-0000-0000-0000-000000000000}|{02D1045E-0000-0000-0000-504944564944}'"
+	configs[]: "duplicate.device"
 }
 
 default_input_entry : input.ui_joy.logitech.rumblepad.2.usb
@@ -1997,20 +2001,20 @@ default_input_entry : input.ui_joy.ps4.gamepad
 	configs[]: "shortcut4 b12"
 	configs[]: "nav_prv b5"
 	configs[]: "nav_nxt b6"
-	configs[]: "sec_prv rx"
-	configs[]: "sec_nxt ry"
+	configs[]: "sec_prv b7"
+	configs[]: "sec_nxt b8"
 	configs[]: "scroll_j_x z"
 	configs[]: "scroll_j_y rz"
 	configs[]: "j_mappan_x z"
 	configs[]: "j_mappan_y rz"
-	configs[]: "j_mapzom_in ry"
-	configs[]: "j_mapzom_out rx"
+	configs[]: "j_mapzom_in b8"
+	configs[]: "j_mapzom_out b7"
 	configs[]: "j_cam_lk_lr z"
 	configs[]: "j_cam_lk_ud rz"
 	configs[]: "j_cam_mv_lr x"
 	configs[]: "j_cam_mv_ud y"
-	configs[]: "j_trzoom_in ry"
-	configs[]: "j_trzoom_out rx"
+	configs[]: "j_trzoom_in b8"
+	configs[]: "j_trzoom_out b7"
 	configs[]: "photoup b8"
 	configs[]: "photodown b7"
 	configs[]: "photosnap b1"
@@ -2035,20 +2039,20 @@ default_input_entry : input.ui_joy.ps5.gamepad
 	configs[]: "shortcut4 b12"
 	configs[]: "nav_prv b5"
 	configs[]: "nav_nxt b6"
-	configs[]: "sec_prv rx"
-	configs[]: "sec_nxt ry"
+	configs[]: "sec_prv b7"
+	configs[]: "sec_nxt b8"
 	configs[]: "scroll_j_x z"
 	configs[]: "scroll_j_y rz"
 	configs[]: "j_mappan_x z"
 	configs[]: "j_mappan_y rz"
-	configs[]: "j_mapzom_in ry"
-	configs[]: "j_mapzom_out rx"
+	configs[]: "j_mapzom_in b8"
+	configs[]: "j_mapzom_out b7"
 	configs[]: "j_cam_lk_lr z"
 	configs[]: "j_cam_lk_ud rz"
 	configs[]: "j_cam_mv_lr x"
 	configs[]: "j_cam_mv_ud y"
-	configs[]: "j_trzoom_in ry"
-	configs[]: "j_trzoom_out rx"
+	configs[]: "j_trzoom_in b8"
+	configs[]: "j_trzoom_out b7"
 	configs[]: "photoup b8"
 	configs[]: "photodown b7"
 	configs[]: "photosnap b1"
@@ -2070,8 +2074,6 @@ default_input_entry : input.misc.tcs.wheel
 
 	configs[]: "advzoomin <1> b1"
 	configs[]: "advzoomout <1> b3"
-	configs[]: "advpagen <1> b2"
-	configs[]: "advpagep <1> b4"
 	configs[]: "radio <1> b37"
 	configs[]: "radionext <1> pov1_right"
 	configs[]: "radioprev <1> pov1_left"
@@ -2102,10 +2104,6 @@ default_input_entry : input.misc.tcs.wheel
 	configs[]: "tripreset <1> b29"
 	configs[]: "mpptt <1> b12"
 	configs[]: "quick_chat <1> b13"
-	configs[]: "advpage0 <1> b14"
-	configs[]: "advpage1 <1> b15"
-	configs[]: "advpage2 <1> b16"
-	configs[]: "advpage4 <1> b17"
 	configs[]: "camzoom <1> b18"
 	configs[]: "photo_zoom <1> b19"
 	configs[]: "navmap <1> b20"
@@ -2115,6 +2113,8 @@ default_input_entry : input.misc.tcs.wheel
 	configs[]: "assistact4 <1> b33"
 	configs[]: "assistact5 <1> b34"
 	configs[]: "adjuster <1> b9"
+	configs[]: "advoptions <1> b15"
+	configs[]: "services <1> b16"
 	configs[]: "camwalk_for <1> pov1_up"
 	configs[]: "camwalk_back <1> pov1_down"
 	configs[]: "camwalk_left <1> pov1_left"
@@ -2212,8 +2212,7 @@ default_input_entry : input.misc.xinput.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b2?0)"
 	configs[]: "light.full_or short_press(<1>.b3?0)"
 	configs[]: "hblight.full_or long_press(<1>.b3?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b9"
 	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
@@ -2253,8 +2252,7 @@ default_input_entry : input.misc.x360.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b2?0)"
 	configs[]: "light.full_or short_press(<1>.b3?0)"
 	configs[]: "hblight.full_or long_press(<1>.b3?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b9"
 	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
@@ -2288,8 +2286,7 @@ default_input_entry : input.misc.xbone.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b2?0)"
 	configs[]: "light.full_or short_press(<1>.b3?0)"
 	configs[]: "hblight.full_or long_press(<1>.b3?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b9"
 	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
@@ -2323,8 +2320,7 @@ default_input_entry : input.misc.xbone7.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b2?0)"
 	configs[]: "light.full_or short_press(<1>.b3?0)"
 	configs[]: "hblight.full_or long_press(<1>.b3?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b9"
 	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
@@ -2358,8 +2354,7 @@ default_input_entry : input.misc.xone.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b2?0)"
 	configs[]: "light.full_or short_press(<1>.b3?0)"
 	configs[]: "hblight.full_or long_press(<1>.b3?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b9"
 	configs[]: "camzoom.no_cstm_mod <1>.b10?0"
@@ -2400,8 +2395,7 @@ default_input_entry : input.misc.ps4.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b3?0)"
 	configs[]: "light.full_or short_press(<1>.b1?0)"
 	configs[]: "hblight.full_or long_press(<1>.b1?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b11"
 	configs[]: "camzoom.no_cstm_mod <1>.b12?0"
@@ -2437,8 +2431,7 @@ default_input_entry : input.misc.ps5.gamepad
 	configs[]: "cruise.full_or long_press(<1>.b3?0)"
 	configs[]: "light.full_or short_press(<1>.b1?0)"
 	configs[]: "hblight.full_or long_press(<1>.b1?0)"
-	configs[]: "advpagen.full_or short_press(<1>.b4?0)"
-	configs[]: "advpage0.full_or long_press(<1>.b4?0)"
+	configs[]: "advzoomout.full_or short_press(<1>.b4?0)"
 
 	configs[]: "horn <1> b11"
 	configs[]: "camzoom.no_cstm_mod <1>.b12?0"
@@ -2835,8 +2828,7 @@ default_input_config : icfg.preset.driving.gamepad.standard
 	values[]: "cruiectrl=keyboard.c?0 || long_press(<1>.<5>?0) | semantical.cruiectrl?0"
 	values[]: "light=keyboard.l?0 || short_press(<1>.<6>?0) | semantical.light?0"
 	values[]: "hblight=keyboard.k?0 || long_press(<1>.<6>?0) | semantical.hblight?0"
-	values[]: "advpagen=keyboard.num0?0 || short_press(<1>.<7>?0) | semantical.advpagen?0"
-	values[]: "advpage0=keyboard.f5?0 || long_press(<1>.<7>?0) | semantical.advpage0?0"
+	values[]: "advzoomout=keyboard.f5?0 || short_press(<1>.<7>?0) | semantical.advzoomout?0"
 
 	values[]: "horn=keyboard.h?0 | <1>.<8>?0 | semantical.horn?0"
 	values[]: "camzoom=mouse.button_middle?0 || modifier(no_cstm_mod?0, <1>.<9>?0) | semantical.camzoom?0"
@@ -2869,8 +2861,7 @@ default_input_config : icfg.preset.driving.gamepad.extended
 	values[]: "cruiectrl=keyboard.c?0 || modifier(no_cstm_mod?0, long_press(<1>.<5>?0)) | semantical.cruiectrl?0"
 	values[]: "light=keyboard.l?0 || modifier(no_cstm_mod?0, short_press(<1>.<6>?0)) | semantical.light?0"
 	values[]: "hblight=keyboard.k?0 || modifier(no_cstm_mod?0, long_press(<1>.<6>?0)) | semantical.hblight?0"
-	values[]: "advpagen=keyboard.num0?0 || modifier(no_cstm_mod?0, short_press(<1>.<7>?0)) | semantical.advpagen?0"
-	values[]: "advpage0=keyboard.f5?0 || modifier(no_cstm_mod?0, long_press(<1>.<7>?0)) | semantical.advpage0?0"
+	values[]: "advzoomout=keyboard.f5?0 || modifier(no_cstm_mod?0, short_press(<1>.<7>?0)) | semantical.advzoomout?0"
 
 	values[]: "horn=keyboard.h?0 | modifier(no_cstm_mod?0, <1>.<8>?0) | semantical.horn?0"
 	values[]: "camzoom=mouse.button_middle?0 || modifier(no_cstm_mod?0, <1>.<9>?0) | semantical.camzoom?0"
@@ -3330,42 +3321,46 @@ default_input_config: icfg.selectfcs
 
 default_input_config: icfg.shortcut1
 {
-	values[]: "shortcut_1=ui_joy.<1>?0"
+	values[]: "shortcut_1=short_press(ui_joy.<1>?0)"
+	values[]: "shortcut_1h=long_press(ui_joy.<1>?0)"
 }
 
 default_input_config: icfg.shortcut2
 {
-	values[]: "shortcut_2=ui_joy.<1>?0"
+	values[]: "shortcut_2=short_press(ui_joy.<1>?0)"
+  	values[]: "shortcut_2h=long_press(ui_joy.<1>?0)"
 }
 
 default_input_config: icfg.shortcut3
 {
-	values[]: "shortcut_3=ui_joy.<1>?0"
+	values[]: "shortcut_3=short_press(ui_joy.<1>?0)"
+  	values[]: "shortcut_3h=long_press(ui_joy.<1>?0)"
 }
 
 default_input_config: icfg.shortcut4
 {
-	values[]: "shortcut_4=ui_joy.<1>?0"
+	values[]: "shortcut_4=short_press(ui_joy.<1>?0)"
+  	values[]: "shortcut_4h=long_press(ui_joy.<1>?0)"
 }
 
 default_input_config: icfg.nav_prv
 {
-	values[]: "joy_nav_prv=bool(ui_joy.<1>?0)"
+	values[]: "joy_nav_prv=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.nav_nxt
 {
-	values[]: "joy_nav_nxt=bool(ui_joy.<1>?0)"
+	values[]: "joy_nav_nxt=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.sec_prv
 {
-	values[]: "joy_sec_prv=bool(ui_joy.<1>?0)"
+	values[]: "joy_sec_prv=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.sec_nxt
 {
-	values[]: "joy_sec_nxt=bool(ui_joy.<1>?0)"
+	values[]: "joy_sec_nxt=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.scroll_j_x
@@ -3390,12 +3385,12 @@ default_input_config: icfg.j_mappan_y
 
 default_input_config: icfg.j_mapzom_in
 {
-	values[]: "j_mapzom_in=bool(ui_joy.<1>?0)"
+	values[]: "j_mapzom_in=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.j_mapzom_out
 {
-	values[]: "j_mapzom_out=bool(ui_joy.<1>?0)"
+	values[]: "j_mapzom_out=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.j_cam_lk_lr
@@ -3420,62 +3415,62 @@ default_input_config: icfg.j_cam_mv_ud
 
 default_input_config: icfg.j_trzoom_in
 {
-	values[]: "j_trzoom_in=bool(ui_joy.<1>?0)"
+	values[]: "j_trzoom_in=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.j_trzoom_out
 {
-	values[]: "j_trzoom_out=bool(ui_joy.<1>?0)"
+	values[]: "j_trzoom_out=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photoup
 {
-	values[]: "photoup=bool(ui_joy.<1>?0)"
+	values[]: "photoup=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photodown
 {
-	values[]: "photodown=bool(ui_joy.<1>?0)"
+	values[]: "photodown=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photosnap
 {
-	values[]: "photosnap=bool(ui_joy.<1>?0)"
+	values[]: "photosnap=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photosman
 {
-	values[]: "photosman=bool(ui_joy.<1>?0)"
+	values[]: "photosman=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photo_hctrl
 {
-	values[]: "photo_hctrl=bool(ui_joy.<1>?0)"
+	values[]: "photo_hctrl=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photores
 {
-	values[]: "photores=bool(ui_joy.<1>?0)"
+	values[]: "photores=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.camwalk_crou
 {
-	values[]: "camwalk_crou=bool(ui_joy.<1>?0)"
+	values[]: "camwalk_crou=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.photo_opts
 {
-	values[]: "photo_opts=bool(ui_joy.<1>?0)"
+	values[]: "photo_opts=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.phot_z_j_in
 {
-	values[]: "phot_z_j_in=bool(ui_joy.<1>?0)"
+	values[]: "phot_z_j_in=ui_joy.<1>?0"
 }
 
 default_input_config: icfg.phot_z_j_out
 {
-	values[]: "phot_z_j_out=bool(ui_joy.<1>?0)"
+	values[]: "phot_z_j_out=ui_joy.<1>?0"
 }
 
 # Configuration of various functionalities
@@ -3602,9 +3597,9 @@ default_input_config: icfg.advzoomin
 	values[]: "advzoomin=unbound?0 | <1>.<2>?0 | semantical.advzoomin?0"
 }
 
-default_input_config: icfg.advzoomout
+default_input_config: icfg.advoptions
 {
-	values[]: "advzoomout=unbound?0 | <1>.<2>?0 | semantical.advzoomout?0"
+	values[]: "advoptions=keyboard.f6?0 | <1>.<2>?0 | semantical.advoptions?0"
 }
 
 default_input_config: icfg.lwinopen
@@ -3625,21 +3620,6 @@ default_input_config: icfg.rwinopen
 default_input_config: icfg.rwinclose
 {
 	values[]: "rwinclose=unbound?0 | <1>.<2>?0 | semantical.rwinclose?0"
-}
-
-default_input_config: icfg.advpagen
-{
-	values[]: "advpagen=keyboard.num0?0 | <1>.<2>?0 | semantical.advpagen?0"
-}
-
-default_input_config: icfg.advpagen.full_or
-{
-	values[]: "advpagen=keyboard.num0?0 || <1> | semantical.advpagen?0"
-}
-
-default_input_config: icfg.advpagep
-{
-	values[]: "advpagep=unbound?0 | <1>.<2>?0 | semantical.advpagep?0"
 }
 
 default_input_config: icfg.frontsuspdwn
@@ -3877,29 +3857,14 @@ default_input_config: icfg.quick_chat
 	values[]: "quick_chat=keyboard.q?0 | <1>.<2>?0 | semantical.quick_chat?0"
 }
 
-default_input_config: icfg.advpage0
+default_input_config: icfg.advzoomout
 {
-	values[]: "advpage0=keyboard.f5?0 | <1>.<2>?0 | semantical.advpage0?0"
+	values[]: "advzoomout=keyboard.f5?0 | <1>.<2>?0 | semantical.advzoomout?0"
 }
 
-default_input_config: icfg.advpage0.full_or
+default_input_config: icfg.advzoomout.full_or
 {
-	values[]: "advpage0=keyboard.f5?0 || <1> | semantical.advpage0?0"
-}
-
-default_input_config: icfg.advpage1
-{
-	values[]: "advpage1=keyboard.f6?0 | <1>.<2>?0 | semantical.advpage1?0"
-}
-
-default_input_config: icfg.advpage2
-{
-	values[]: "advpage2=keyboard.f7?0 | <1>.<2>?0 | semantical.advpage2?0"
-}
-
-default_input_config: icfg.advpage4
-{
-	values[]: "advpage4=keyboard.f9?0 | <1>.<2>?0 | semantical.advpage4?0"
+	values[]: "advzoomout=keyboard.f5?0 || <1> | semantical.advzoomout?0"
 }
 
 default_input_config: icfg.camzoom
@@ -3945,6 +3910,11 @@ default_input_config: icfg.assistact5
 default_input_config: icfg.adjuster
 {
 	values[]: "adjuster=keyboard.f4?0 | <1>.<2>?0 | semantical.adjuster?0"
+}
+
+default_input_config: icfg.services
+{
+	values[]: "services=keyboard.f7?0 | <1>.<2>?0 | semantical.services?0"
 }
 
 default_input_config: icfg.camwalk_for

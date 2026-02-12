@@ -5,6 +5,44 @@ SiiNunit
 # base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
 # some string which is unlikely to conflict with other mod.
 
+tr_semaphore_profile : tr_sem_prof.2ph		
+{
+	name: "two phases"
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)		# green > yellow > red > yellow
+	
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+	
+}
+
+#	Special profile with swaped offset of cycle for cases like 'un_14059' (which is a SideWalk prefab) that is connected to another prefab integrated 
+#	with its semaphore system. However, it must distinguish between major and minor road, hence the swapped timing to keep 
+# 	ID on AI locators the same, avoiding the need to create a new prefab, and simplify for mapdesigners to just swap semaphore profile.
+tr_semaphore_profile : tr_sem_prof.2phm	
+{
+	name: "two phases mirrored (special)"
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)		# green > yellow > red > yellow
+	
+	cycle[]: 21.0							# phase 1
+	cycle[]: 0.0							# phase 2
+	
+}
+
+tr_semaphore_profile : tr_sem_prof.3ph		
+{
+	name: "three phases"
+
+	interval[]: (15.0, 2.0, 44.0, 2.0)		# green > yellow > red > yellow
+
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+	cycle[]: 42.0							# phase 3
+	
+	
+}
+
 tr_semaphore_profile : tr_sem_prof.cr_1x1
 {
 
@@ -1367,7 +1405,55 @@ tr_semaphore_profile : tr_sem_prof.city
 	cycle[2]: 0.0
 	cycle[3]: 21.0
 }
+######################################################
 
+tr_semaphore_profile : tr_sem_prof.hw22xcity22
+{
+
+	name: "(old) spec hw2-2 x city 2-2"
+	
+	model: 8
+	model[0]: "city"
+	model[1]: "city"
+	model[2]: "single_l"
+	model[3]: "city"
+	model[4]: "city"
+	model[5]: "city"
+	model[6]: "single_l"
+	model[7]: "city"
+
+	interval: 8
+	interval[0]: (15.0, 2.0, 44.0, 2.0)
+	interval[1]: (36.0, 2.0, 23.0, 2.0)
+	interval[2]: (15.0, 2.0, 44.0, 2.0)
+	interval[3]: (15.0, 2.0, 44.0, 2.0)
+	interval[4]: (15.0, 2.0, 44.0, 2.0)
+	interval[5]: (15.0, 2.0, 44.0, 2.0)
+	interval[6]: (15.0, 2.0, 44.0, 2.0)
+	interval[7]: (36.0, 2.0, 23.0, 2.0)
+
+	type: 8
+	type[0]: traffic_light_major
+	type[1]: traffic_light_major
+	type[2]: traffic_light_major
+	type[3]: traffic_light_minor
+	type[4]: traffic_light_major
+	type[5]: traffic_light_major
+	type[6]: traffic_light_major
+	type[7]: traffic_light_minor
+
+	cycle: 8
+	cycle[0]: 0.0
+	cycle[1]: 21.0
+	cycle[2]: 21.0
+	cycle[3]: 42.0
+	cycle[4]: 0.0
+	cycle[5]: 42.0
+	cycle[6]: 21.0
+	cycle[7]: 21.0
+}
+
+######################################################
 ### DLC Balt
 
 ###################

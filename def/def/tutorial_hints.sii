@@ -1,0 +1,884 @@
+SiiNunit
+{
+
+# 1A
+tutorial_hint : hint.engine.a
+{
+    start_conditions[]: cond.engine_ele.without
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.job.on_any
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.engine_ele.with
+
+    complete_conditions[]: cond.part.engine_on
+
+    max_show_count: 1
+
+    introductory: true
+}
+
+# 1B
+tutorial_hint : hint.engine.b
+{
+    start_conditions[]: cond.job_trans.on_quick15
+    start_state_transition: true
+    start_conditions[]: cond.engine_ele.without
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.job_fuel0.quick10
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.engine_ele.with
+
+    complete_conditions[]: cond.part.engine_on
+
+    max_complete_count: 1
+}
+
+# 1C
+tutorial_hint : hint.engine.c
+{
+    start_conditions[]: cond.engine_ele.without
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.damage.core_max10
+    start_conditions[]: cond.impulse.steering
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.engine_ele.with
+
+    complete_conditions[]: cond.part.engine_on
+
+    cancel_cooldown: 120
+    complete_cooldown: 120
+}
+
+# 1D
+tutorial_hint : hint.engine.d
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_on
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.job.on_any
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.elec_off_or.eng_ele_wo
+
+    complete_conditions[]: cond.part.engine_on
+
+    max_show_count: 1
+
+    introductory: true
+}
+
+# 1E
+tutorial_hint : hint.engine.e
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_on
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.job_fuel0.quick10
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.elec_off_or.eng_ele_wo
+
+    complete_conditions[]: cond.part.engine_on
+
+    max_complete_count: 1
+}
+
+# 1F
+tutorial_hint : hint.engine.f
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_on
+    start_conditions[]: cond.part.engine_off
+    start_conditions[]: cond.damage.core_max10
+    start_conditions[]: cond.impulse.pedal_steer
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.elec_off_or.eng_ele_wo
+
+    complete_conditions[]: cond.part.engine_on
+
+    cancel_cooldown: 120
+    complete_cooldown: 120
+}
+
+# 15A
+tutorial_hint : hint.ignition.a
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_off
+    start_conditions[]: cond.job.on_any
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.engine_ele.without
+
+    complete_conditions[]: cond.part.elec_on
+
+    max_show_count: 1
+
+    introductory: true
+}
+
+# 15B
+tutorial_hint : hint.ignition.b
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_off
+    start_conditions[]: cond.job_fuel0.quick10
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.engine_ele.without
+
+    complete_conditions[]: cond.part.elec_on
+
+    max_complete_count: 1
+}
+
+# 15C
+tutorial_hint : hint.ignition.c
+{
+    start_conditions[]: cond.engine_ele.with
+    start_conditions[]: cond.part.elec_off
+    start_conditions[]: cond.damage.core_max10
+    start_conditions[]: cond.impulse.pedal_steer
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.engine_ele.without
+
+    complete_conditions[]: cond.part.elec_on
+
+    cancel_cooldown: 120
+    complete_cooldown: 120
+}
+
+# 17A
+tutorial_hint : hint.tow.a
+{
+    start_conditions[]: cond.wheels.air5
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 120
+
+    complete_conditions[]: cond.wheels.ground
+    complete_fadeout_delay: 5
+
+    cancel_cooldown: 5
+}
+
+# 17B
+tutorial_hint : hint.tow.b
+{
+    start_conditions[]: cond.part.diff_on
+    start_conditions[]: cond.and.acc_slip_1
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 120
+
+    dismiss_conditions[]: cond.and.acc_grip_5
+
+    complete_conditions[]: cond.dist.service10
+    complete_fadeout_delay: 5
+
+    cancel_cooldown: 5
+}
+
+# 5A
+tutorial_hint : hint.lights.a
+{
+    start_conditions[]: cond.visibility.low_safe
+    start_conditions[]: cond.part.lights_off
+    start_conditions[]: cond.part.engine_on
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.part.engine_off
+
+    complete_conditions[]: cond.part.lights_on
+
+    max_cancel_count: 4
+    cancel_cooldown: 30
+    max_complete_count: 1
+}
+
+# 16A
+tutorial_hint : hint.high_beam.a
+{
+    start_conditions[]: cond.visibility.low_safe
+    start_conditions[]: cond.part.lowbeam_on
+    start_conditions[]: cond.part.highbeam_off
+    start_conditions[]: cond.part.engine_on
+    start_conditions[]: cond.dist_50.n_city
+    start_conditions[]: cond.dist_200.n_cars_front
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.part.engine_off
+
+    complete_conditions[]: cond.part.highbeam_on
+
+    max_cancel_count: 4
+    cancel_cooldown: 30
+    max_complete_count: 1
+}
+
+# 2A
+tutorial_hint : hint.driv_arc.a
+{
+    start_conditions[]: cond.hint_ref.9An_compl
+    start_conditions[]: cond.hint_ref.7An_compl
+    start_conditions[]: cond.hint_ref.14An_compl
+    start_conditions[]: cond.transmission.arcade
+    start_conditions[]: cond.part.engine_on
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.dismiss.arcade
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 2B
+tutorial_hint : hint.driv_arc.b
+{
+    start_conditions[]: cond.part_trans.engine_on15
+    start_state_transition: true
+    start_conditions[]: cond.transmission.arcade
+    start_conditions[]: cond.speed.stop10
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 15
+
+    dismiss_conditions[]: cond.dismiss.arcade
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+}
+
+# 2C
+tutorial_hint : hint.driv_arc.c
+{
+    start_conditions[]: cond.trans_trans.arcade5
+    start_state_transition: true
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.transmission.n_arcade
+
+    complete_conditions[]: cond.impulse.driving
+    complete_fadeout_delay: 7
+}
+
+# 9A
+tutorial_hint : hint.driv_auto.a
+{
+    start_conditions[]: cond.transmission.auto
+    start_conditions[]: cond.hint_ref.2An_compl
+    start_conditions[]: cond.hint_ref.7An_compl
+    start_conditions[]: cond.hint_ref.14An_compl
+    start_conditions[]: cond.part.engine_on
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.dismiss.auto
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 9C
+tutorial_hint : hint.driv_auto.c
+{
+    start_conditions[]: cond.trans_trans.auto5
+    start_state_transition: true
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.transmission.n_auto
+
+    complete_conditions[]: cond.impulse.driving
+    complete_fadeout_delay: 7
+}
+
+# 9D
+tutorial_hint : hint.driv_auto.d
+{
+    start_conditions[]: cond.transmission.auto
+    start_conditions[]: cond.gear.neutral
+    start_conditions[]: cond.part.engine_on
+    start_conditions[]: cond.impulse.gas1
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.dismiss.auto
+
+    complete_conditions[]: cond.gear.n_neutral
+
+    cancel_cooldown: 120
+    complete_cooldown: 120
+
+    max_cancel_count: 3
+    complete_fadeout_delay: 4
+}
+
+# 7A
+tutorial_hint : hint.driv_seq.a
+{
+    start_conditions[]: cond.transmission.seq
+    start_conditions[]: cond.hint_ref.2An_compl
+    start_conditions[]: cond.hint_ref.9An_compl
+    start_conditions[]: cond.hint_ref.14An_compl
+    start_conditions[]: cond.part.engine_on
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.dismiss.sequential
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 7C
+tutorial_hint : hint.driv_seq.c
+{
+    start_conditions[]: cond.trans_trans.seq5
+    start_state_transition: true
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.transmission.n_seq
+
+    complete_conditions[]: cond.impulse.driving
+    complete_fadeout_delay: 7
+}
+
+# 7D
+tutorial_hint : hint.driv_seq.d
+{
+    start_conditions[]: cond.transmission.seq
+    start_conditions[]: cond.gear.neutral
+    start_conditions[]: cond.part.engine_on
+    start_conditions[]: cond.impulse.gas1
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.dismiss.sequential
+
+    complete_conditions[]: cond.gear.n_neutral
+
+    cancel_cooldown: 120
+    complete_cooldown: 120
+
+    max_cancel_count: 3
+    complete_fadeout_delay: 4
+}
+
+# 14A
+tutorial_hint : hint.driv_hshift.a
+{
+    start_conditions[]: cond.transmission.hshifter
+    start_conditions[]: cond.hint_ref.2An_compl
+    start_conditions[]: cond.hint_ref.9An_compl
+    start_conditions[]: cond.hint_ref.7An_compl
+    start_conditions[]: cond.part.engine_on
+
+    cancel_conditions[]: cond.always.false
+
+    dismiss_conditions[]: cond.dismiss.hshifter
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 14B
+tutorial_hint : hint.driv_hshift.b
+{
+    start_conditions[]: cond.part_trans.engine_on15
+    start_state_transition: true
+    start_conditions[]: cond.transmission.hshifter
+    start_conditions[]: cond.speed.stop10
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.dismiss.hshifter
+
+    complete_conditions[]: cond.impulse.gas
+    complete_conditions[]: cond.speed.moving
+
+    max_complete_count: 1
+}
+
+# 14C
+tutorial_hint : hint.driv_hshift.c
+{
+    start_conditions[]: cond.trans_trans.hshifter5
+    start_state_transition: true
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    dismiss_conditions[]: cond.transmission.n_hshifter
+
+    complete_conditions[]: cond.impulse.driving
+    complete_fadeout_delay: 7
+}
+
+# 6A
+tutorial_hint : hint.depot_deliv.a
+{
+    start_conditions[]: cond.deliv_diff.none
+    start_conditions[]: cond.dist.delivery50
+
+    cancel_conditions[]: cond.min_dist.delivery100
+
+    complete_conditions[]: cond.deliv_diff.any
+    complete_fadeout_delay: 5
+
+    max_complete_count: 1
+
+    for_bus: false
+    for_car: false
+
+    introductory: true
+}
+
+# 10A
+tutorial_hint : hint.fin_deliv.a
+{
+    start_conditions[]: cond.hint_ref.29An_compl
+    start_conditions[]: cond.deliv_diff.any
+    start_conditions[]: cond.autopark.on
+    start_conditions[]: cond.dist.depot50
+
+    cancel_conditions[]: cond.min_dist.depot60
+
+    dismiss_conditions[]: cond.autopark.off
+
+    complete_conditions[]: cond.cargo.can_deliver
+
+    max_complete_count: 1
+
+    for_bus: false
+    for_car: false
+
+    introductory: true
+}
+
+# 10B
+tutorial_hint : hint.fin_deliv.b
+{
+    start_conditions[]: cond.deliv_diff.any
+    start_conditions[]: cond.autopark.on
+    start_conditions[]: cond.dist.depot50_240
+
+    cancel_conditions[]: cond.min_dist.depot60
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.autopark.off
+
+    complete_conditions[]: cond.cargo.can_deliver
+
+    for_bus: false
+    for_car: false
+}
+
+# 29A
+tutorial_hint : hint.fin_deliv2.a
+{
+    start_conditions[]: cond.hint_ref.10An_compl
+    start_conditions[]: cond.deliv_diff.any
+    start_conditions[]: cond.autopark.off
+    start_conditions[]: cond.dist.depot50
+
+    cancel_conditions[]: cond.min_dist.depot60
+
+    dismiss_conditions[]: cond.autopark.on
+
+    complete_conditions[]: cond.cargo.can_deliver
+
+    max_complete_count: 1
+
+    for_bus: false
+    for_car: false
+
+    introductory: true
+}
+
+# 29B
+tutorial_hint : hint.fin_deliv2.b
+{
+    start_conditions[]: cond.deliv_diff.any
+    start_conditions[]: cond.autopark.off
+    start_conditions[]: cond.dist.depot50_300
+
+    cancel_conditions[]: cond.min_dist.depot60
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.autopark.on
+
+    complete_conditions[]: cond.cargo.can_deliver
+
+    for_bus: false
+    for_car: false
+}
+
+# 3A
+tutorial_hint : hint.wipers.a
+{
+    start_conditions[]: cond.trans_and.wipers15
+    start_state_transition: true
+    start_conditions[]: cond.part.wipers_off3
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    complete_conditions[]: cond.part.wipers_on
+
+    dismiss_conditions[]: cond.dismiss.wipers
+
+    max_show_count: 1
+    cancel_cooldown: 60
+    complete_cooldown: 60
+
+    introductory: true
+}
+
+# 3B
+tutorial_hint : hint.wipers.b
+{
+    start_conditions[]: cond.trans_and.wipers15
+    start_state_transition: true
+    start_conditions[]: cond.hint_ref.3Acomplete
+    start_conditions[]: cond.part.wipers_off10
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.dismiss.wipers
+
+    complete_conditions[]: cond.part.wipers_on
+
+    cooldown_conditions[]: cond.weather.n_raining
+
+    max_cancel_count: 4
+}
+
+# 11A
+tutorial_hint : hint.cam_int.a
+{
+    start_conditions[]: cond.camera.exterior_all
+    start_conditions[]: cond.show.cam_int
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.camera.interior
+
+    max_cancel_count: 3
+    cancel_cooldown: 60
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 8A
+tutorial_hint : hint.cam_ext.a
+{
+    start_conditions[]: cond.camera.interior
+    start_conditions[]: cond.show.cam_ext
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.camera.exterior_all
+
+    max_cancel_count: 3
+    cancel_cooldown: 60
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 12A
+tutorial_hint : hint.zoom.a
+{
+    start_conditions[]: cond.camera.interior
+    start_conditions[]: cond.speed.stop2
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.impulse.zoom
+
+    max_cancel_count: 3
+    cancel_cooldown: 600
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 4A
+tutorial_hint : hint.indicators.a
+{
+    start_conditions[]: cond.blinkers_req.on
+    start_conditions[]: cond.part.blinkers_off
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.part.blinkers_on
+
+    max_cancel_count: 2
+    cancel_cooldown: 60
+    max_complete_count: 1
+
+    introductory: true
+}
+
+# 4B
+tutorial_hint : hint.indicators.b
+{
+    start_conditions[]: cond.blinkers_req.on
+    start_conditions[]: cond.part.blinkers_off
+    start_conditions[]: cond.hint_ref.4Acancel
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.part.blinkers_on
+
+    max_cancel_count: 3
+    cancel_cooldown: 1440
+    max_complete_count: 1
+}
+
+# 18A
+tutorial_hint : hint.diff_lock.a
+{
+    start_conditions[]: cond.auto_diff.off
+    start_conditions[]: cond.part.diff_off # When diff lock is not available, this always evaluates to false
+    start_conditions[]: cond.and.acc_slip_1
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.part.diff_off
+    dismiss_conditions[]: cond.and.acc_grip_5
+
+    complete_conditions[]: cond.part.diff_on
+
+    cancel_cooldown: 5
+    complete_cooldown: 5
+}
+
+# 20A
+tutorial_hint : hint.wipers_off.a
+{
+    start_conditions[]: cond.part.engine_on
+    start_conditions[]: cond.camera.interior
+    start_conditions[]: cond.weather.n_raining
+    start_conditions[]: cond.part.wipers_on10
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    dismiss_conditions[]: cond.part.engine_off
+
+    complete_conditions[]: cond.part.wipers_off
+
+    max_show_count: 1
+}
+
+# 22A
+tutorial_hint : hint.world_map.a
+{
+    start_conditions[]: cond.deliveries.min1
+    start_conditions[]: cond.notif_block.persistent
+    start_conditions[]: cond.speed.stop
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 15
+
+    complete_conditions[]: cond.visited.map
+    complete_fadeout_delay: 5
+
+    max_show_count: 1
+
+    introductory: true
+}
+
+# 27A
+tutorial_hint : hint.pause.a
+{
+    start_conditions[]: cond.deliveries.min3
+    start_conditions[]: cond.speed.stop3
+    start_conditions[]: cond.hint_ref.28An_compl
+    start_conditions[]: cond.notif_block.persistent
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    complete_conditions[]: cond.paused.was
+    complete_fadeout_delay: 5
+
+    max_show_count: 1
+}
+
+# 19A
+tutorial_hint : hint.diff_unlock.a
+{
+    start_conditions[]: cond.auto_diff.off
+    start_conditions[]: cond.part.diff_on
+    start_conditions[]: cond.speed.over50
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.part.diff_off
+
+    cancel_cooldown: 60
+    complete_cooldown: 60
+}
+
+# 21A
+tutorial_hint : hint.photo_trophy.a
+{
+    start_conditions[]: cond.deliveries.min3
+    start_conditions[]: cond.no_items.landmark
+    start_conditions[]: cond.dist.landmark200
+
+    cancel_conditions[]: cond.min_dist_10.landmark250
+    cancel_timeout: 90
+
+    complete_conditions[]: cond.has_items.landmark
+    complete_fadeout_delay: 5
+
+    cancel_cooldown: 120
+
+    max_cancel_count: 2
+    max_complete_count: 1
+}
+
+# 23A
+tutorial_hint : hint.viewpoint.a
+{
+    start_conditions[]: cond.deliveries.min3
+    start_conditions[]: cond.no_items.viewpoint
+    start_conditions[]: cond.dist.viewpoint200
+
+    cancel_conditions[]: cond.min_dist_10.viewpoint250
+    cancel_timeout: 90
+
+    complete_conditions[]: cond.has_items.viewpoint
+    complete_fadeout_delay: 5
+
+    cancel_cooldown: 60
+
+    max_cancel_count: 2
+    max_complete_count: 1
+}
+
+# 24A
+tutorial_hint : hint.resting.a
+{
+    start_conditions[]: cond.fatigue.on
+    start_conditions[]: cond.fatigue.min_50
+    start_conditions[]: cond.dist.rest200
+
+    cancel_conditions[]: cond.min_dist_10.rest250
+    cancel_timeout: 90
+
+    dismiss_conditions[]: cond.fatigue.off
+
+    complete_conditions[]: cond.fatigue.max_10
+    complete_fadeout_delay: 5
+
+    cancel_cooldown: 10
+
+    max_cancel_count: 2
+    max_complete_count: 1
+}
+
+# 26A
+tutorial_hint : hint.gas.a
+{
+    start_conditions[]: cond.gas.max_50
+    start_conditions[]: cond.dist.gas200
+
+    cancel_conditions[]: cond.min_dist_10.gas250
+    cancel_timeout: 90
+
+    complete_conditions[]: cond.trigger.gas
+    complete_conditions[]: cond.impulse.activate1
+
+    cancel_cooldown: 60
+
+    max_cancel_count: 2
+    max_complete_count: 1
+}
+
+# 28A
+tutorial_hint : hint.pause_border.a
+{
+    start_conditions[]: cond.borders.crossed
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    complete_conditions[]: cond.paused.was
+    complete_fadeout_delay: 5
+
+    max_show_count: 1
+}
+
+}

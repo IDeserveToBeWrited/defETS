@@ -540,7 +540,7 @@ curve_model : curve.07007
 	fixed_inner_end[0]: "inner_e"
 
 	fixed_step: 50.0
-	drop_sun_shadows: 1
+	drop_sun_shadows: 2
 }
 curve_model : curve.07008
 {
@@ -1440,8 +1440,8 @@ curve_model : curve.blke_18
 	name: barrier_concrete_01_blke
 
 	variation[]: "var1 | c01 : 1.0"
-	start_part[]: e01
-	end_part[]: e01
+	start_part[]: "e01 | e1"
+	end_part[]: "e01 | e1"
 	fixed_inner_start[]: in_c01
 	fixed_inner_end[]: in_c02
 
@@ -1790,13 +1790,13 @@ curve_model : curve.blke37
 curve_model : curve.blke38
 {
 	name: "ivy hanged curve1"
-	model_desc: "/model2/vegetation/hedges/ivy/ivy_hanged.pmd"
+	model_desc: "/model2/vegetation/creeper/ivy_obsolete/ivy_hanged.pmd"
 	variation[]: "basic | Default1,Default2,Default3,Default4,Default2,Default3,Default1,Default4 : 1.0"
 
 	start_part[]: ""
 	end_part[]: ""
 
-	dynamic_lod_desc[]: "/model2/vegetation/hedges/ivy/ivy_hanged_lod1.pmd"
+	dynamic_lod_desc[]: "/model2/vegetation/creeper/ivy_obsolete/ivy_hanged_lod1.pmd"
 	dynamic_lod_dist[]: 250
 }
 curve_model : curve.blke39
@@ -2312,13 +2312,13 @@ curve_model : curve.blke_85
 curve_model : curve.blke86
 {
 	name: "ivy hanged curve1 far"
-	model_desc: "/model2/vegetation/hedges/ivy/ivy_hanged_far.pmd"
+	model_desc: "/model2/vegetation/creeper/ivy_obsolete/ivy_hanged_far.pmd"
 	variation[]: "basic | center1,center2,center3,center4,center2,center3,center1,center4 : 1.0"
-    variation[]: "Default | center1,center2,center3,center4,center2,center3,center1,center4 : 1.0"
+	variation[]: "Default | center1,center2,center3,center4,center2,center3,center1,center4 : 1.0"
 
 	start_part[]: ""
 	end_part[]: ""
-    start_part[]: ""
+	start_part[]: ""
 	end_part[]: ""
 }
 
@@ -10866,9 +10866,9 @@ curve_model : curve.dlc_blke_56
 	dynamic_lod_desc: 3
 	dynamic_lod_dist: 3
 	dynamic_lod_desc[0]: "/model2/barrier/concrete_fence_01_blke_lod1.pmd"
-	dynamic_lod_dist[0]: 50
+	dynamic_lod_dist[0]: 70
 	dynamic_lod_desc[1]: "/model2/barrier/concrete_fence_01_blke_lod2.pmd"
-	dynamic_lod_dist[1]: 170
+	dynamic_lod_dist[1]: 220
 	dynamic_lod_desc[2]: "/model2/barrier/concrete_fence_01_blke_lod3.pmd"
 	dynamic_lod_dist[2]: 300
 	drop_sun_shadows: 1
@@ -18315,8 +18315,8 @@ curve_model : curve.de_20001
 	name: "generic city street mid 01 de"
 
 	variation[]: "mid1_short | center1 : 1.0"
-	start_part[]: start1
-	end_part[]: left90a
+	start_part[]: "start1"
+	end_part[]: "left90a"
 	variation[]: "mid2_short | center2 : 1.0"
 	start_part[]: ""
 	end_part[]: ""
@@ -18324,14 +18324,14 @@ curve_model : curve.de_20001
 	start_part[]: ""
 	end_part[]: ""
 	variation[]: "mid4_short | center4 : 1.0"
-	start_part[]: start4
-	end_part[]: left90b
+	start_part[]: "start4"
+	end_part[]: "left90b"
 	variation[]: "random | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
 	start_part[]: "start1 | start4"
 	end_part[]: "left90a | left90b"
 	variation[]: "mid1_long | center8 : 1.0"
-	start_part[]: start5
-	end_part[]: left90c
+	start_part[]: "start5"
+	end_part[]: "left90c"
 	variation[]: "mid2_long | center9 : 1.0"
 	start_part[]: ""
 	end_part[]: ""
@@ -18339,8 +18339,8 @@ curve_model : curve.de_20001
 	start_part[]: ""
 	end_part[]: ""
 	variation[]: "mid4_long | center11 : 1.0"
-	start_part[]: start6
-	end_part[]: left90d
+	start_part[]: "start6"
+	end_part[]: "left90d"
 	variation[]: "random2 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0 | center11 : 1.0"
 	start_part[]: "start5 | start6"
 	end_part[]: "left90c | left90d"
@@ -19863,20 +19863,20 @@ curve_model : curve.blkw_0q002
 	name: "traffic barrier line 01 blkw"
 
 	variation[]: "v1 | center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "v2 | center2 : 10.0 | center1, center1, center1, center1, center2, center1, center1, center1, center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "v2 | center2 : 10.0 | center1,center1,center1,center1,center2,center1,center1,center1,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "v3 | center2 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "v4 | center3 : 1.0 | center3, center3, center3, center3, center2, center3, center3, center3, center3 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "v4 | center3 : 1.0 | center3,center3,center3,center3,center2,center3,center3,center3,center3 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "v5 | center2 : 10.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/barrier/traffic_barrier_line_01_blkw_lod1.pmd"
 	dynamic_lod_dist[]: 35
@@ -26087,14 +26087,14 @@ curve_model : curve.37002
 	variation[3]: "flat_5m | center_f7 : 1.0 | center_f8 : 1.0 | center_f9 : 1.0"
 	variation[4]: "flat_3m | center_f4 : 1.0 | center_f5 : 1.0 | center_f6 : 1.0"
 	variation[5]: "flat_1m | center_f1 : 1.0 | center_f2 : 1.0 | center_f3 : 1.0"
-	
+
 	start_part[0]: "start1"
 	start_part[1]: "start1"
 	start_part[2]: "start1"
 	start_part[3]: "start_f1"
 	start_part[4]: "start_f1"
 	start_part[5]: "start_f1"
-	
+
 	end_part[0]: "end1"
 	end_part[1]: "end1"
 	end_part[2]: "end1"
@@ -26119,14 +26119,14 @@ curve_model : curve.37002t
 	variation[3]: "flat_5m | center_f7 : 1.0 | center_f8 : 1.0 | center_f9 : 1.0"
 	variation[4]: "flat_3m | center_f4 : 1.0 | center_f5 : 1.0 | center_f6 : 1.0"
 	variation[5]: "flat_1m | center_f1 : 1.0 | center_f2 : 1.0 | center_f3 : 1.0"
-	
+
 	start_part[0]: "start1"
 	start_part[1]: "start1"
 	start_part[2]: "start1"
 	start_part[3]: "start_f1"
 	start_part[4]: "start_f1"
 	start_part[5]: "start_f1"
-	
+
 	end_part[0]: "end1"
 	end_part[1]: "end1"
 	end_part[2]: "end1"
@@ -29273,13 +29273,13 @@ curve_model : curve.lux_0b000
 	model_desc: "/model2/wall/stone_wall/wall_stone_03_lux.pmd"
 	name: "wall stone 03 lux"
 
-	variation[]: "4_meters | center12, center11, center13 : 1.0 | center11, center12, center13 : 1.0"
+	variation[]: "4_meters | center12,center11,center13 : 1.0 | center11,center12,center13 : 1.0"
 	start_part[]: "start11 | start12"
 	end_part[]: "end11 | end12"
-	variation[]: "6_meters | center21, center22, center23 : 1.0 | center22, center21, center23 : 1.0"
+	variation[]: "6_meters | center21,center22,center23 : 1.0 | center22,center21,center23 : 1.0"
 	start_part[]: "start21 | start22"
 	end_part[]: "end21 | end22"
-	variation[]: "10_meters | center31, center32, center33, center34 : 1.0 | center31, center31, center33, center34 : 1.0 | center31, center33, center32, center34 : 1.0 | center33, center32, center31, center34 : 1.0 | center32, center31, center33, center34 : 1.0"
+	variation[]: "10_meters | center31,center32,center33,center34 : 1.0 | center31,center31,center33,center34 : 1.0 | center31,center33,center32,center34 : 1.0 | center33,center32,center31,center34 : 1.0 | center32,center31,center33,center34 : 1.0"
 	start_part[]: "start31 | start32"
 	end_part[]: "end31 | end32"
 
@@ -31212,40 +31212,40 @@ curve_model : curve.3m002
 
 	variation[]: "fj_no_lightt | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "fj_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 	variation[]: "fnl_no_light | center3 : 1.0"
 	start_part[]: "start5 | start6"
-	end_part[]: end3
+	end_part[]: "end3"
 	variation[]: "fnl_light | center4 : 1.0"
 	start_part[]: "start7 | start8"
-	end_part[]: end4
+	end_part[]: "end4"
 	variation[]: "tqg_light | center5 : 1.0"
 	start_part[]: "start10 | start9"
-	end_part[]: end5
+	end_part[]: "end5"
 	variation[]: "tqg_no_light | center6 : 1.0"
 	start_part[]: "start11 | start12"
-	end_part[]: end6
+	end_part[]: "end6"
 	variation[]: "ykl_light | center7 : 1.0"
 	start_part[]: "start13 | start14"
-	end_part[]: end7
+	end_part[]: "end7"
 	variation[]: "ykl_no_light | center8 : 1.0"
 	start_part[]: "start15 | start16"
-	end_part[]: end8
+	end_part[]: "end8"
 	variation[]: "ip1_light | center9 : 1.0"
 	start_part[]: "start17 | start25"
-	end_part[]: end9
+	end_part[]: "end9"
 	variation[]: "ip1_no_light | center10 : 1.0"
 	start_part[]: "start18 | start24"
-	end_part[]: end10
+	end_part[]: "end10"
 	variation[]: "sk_light | center11 : 1.0"
 	start_part[]: "start19 | start20"
-	end_part[]: end11
+	end_part[]: "end11"
 	variation[]: "sk_no_light | center12 : 1.0"
 	start_part[]: "start21 | start22"
-	end_part[]: end12
+	end_part[]: "end12"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_station_roof_modern_01_poc_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -31257,40 +31257,40 @@ curve_model : curve.3m003
 
 	variation[]: "fj_no_light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "fj_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 	variation[]: "fnl_no_light | center3 : 1.0"
 	start_part[]: "start5 | start6"
-	end_part[]: end3
+	end_part[]: "end3"
 	variation[]: "fnl_light | center4 : 1.0"
 	start_part[]: "start7 | start8"
-	end_part[]: end4
+	end_part[]: "end4"
 	variation[]: "sk_no_light | center6 : 1.0"
 	start_part[]: "start11 | start12"
-	end_part[]: end6
+	end_part[]: "end6"
 	variation[]: "sk_light | center5 : 1.0"
 	start_part[]: "start9 | start10"
-	end_part[]: end5
+	end_part[]: "end5"
 	variation[]: "tqg_no_light | center8 : 1.0"
 	start_part[]: "start15 | start16"
-	end_part[]: end8
+	end_part[]: "end8"
 	variation[]: "tqg_light | center7 : 1.0"
 	start_part[]: "start13 | start14"
-	end_part[]: end7
+	end_part[]: "end7"
 	variation[]: "ykl_no_light | center10 : 1.0"
 	start_part[]: "start19 | start20"
-	end_part[]: end10
+	end_part[]: "end10"
 	variation[]: "ykl_light | center9 : 1.0"
 	start_part[]: "start17 | start18"
-	end_part[]: end9
+	end_part[]: "end9"
 	variation[]: "ip1_light | center11 : 1.0"
 	start_part[]: "start21 | start22"
-	end_part[]: end11
+	end_part[]: "end11"
 	variation[]: "ip1_no_light | center12 : 1.0"
 	start_part[]: "start23 | start24"
-	end_part[]: end12
+	end_part[]: "end12"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_station_roof_modern_02_poc_lod1.pmd"
 	dynamic_lod_dist[]: 100
@@ -31472,31 +31472,228 @@ curve_model : curve.3l00f
 	variation[]: "var1_line | tree1 : 1.0 | tree2 : 1.0 | tree3 : 1.0 | tree4 : 1.0"
 	variation[]: "var2_wide | tree5 : 1.0 | tree6 : 1.0 | tree7 : 1.0 | tree8 : 1.0"
 
-	vegetation[]: "tree1 : vegetmodel.young.tree.sparse.semidry.low.01 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree2 : vegetmodel.young.tree.sparse.semidry.low.02 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree3 : vegetmodel.young.tree.sparse.semidry.low.03 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree4 : vegetmodel.young.tree.sparse.semidry.low.04 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
+	vegetation[]: "tree1 : vegetmodel.young.tree.sparse.semidry.low.01 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.young.tree.sparse.semidry.low.02 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.young.tree.sparse.semidry.low.03 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.young.tree.sparse.semidry.low.04 | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
 
-	vegetation[]: "tree5 : vegetmodel.young.tree.sparse.semidry.low.01 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree6 : vegetmodel.young.tree.sparse.semidry.low.02 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree7 : vegetmodel.young.tree.sparse.semidry.low.03 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree8 : vegetmodel.young.tree.sparse.semidry.low.04 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | -359.0 : 359.0"
+	vegetation[]: "tree5 : vegetmodel.young.tree.sparse.semidry.low.01 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree6 : vegetmodel.young.tree.sparse.semidry.low.02 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree7 : vegetmodel.young.tree.sparse.semidry.low.03 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree8 : vegetmodel.young.tree.sparse.semidry.low.04 | 5.0 : 6.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 359.0"
 }
 
 curve_model : curve.3l01j
 {
 	name: "maple trees blke"
 
-	variation[]: "var1_line | tree1 : 0.7 | tree2 : 1.0 | tree3 : 1.0 "
-	variation[]: "var2_wide | tree4 : 0.7 | tree5 : 1.0 | tree6 : 1.0 "
+	variation[]: "var1_line | tree1 : 0.7 | tree2 : 1.0 | tree3 : 1.0"
+	variation[]: "var2_wide | tree4 : 0.7 | tree5 : 1.0 | tree6 : 1.0"
 
-	vegetation[]: "tree1 : vegetmodel.maple2.balt | 5.0 : 6.0 | -1.0 : 1.0 | 1.3 : 1.5 | -359.0 : 359.0"
-	vegetation[]: "tree2 : vegetmodel.maple3.balt | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree3 : vegetmodel.maple4.balt | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | -359.0 : 359.0"
+	vegetation[]: "tree1 : vegetmodel.maple2.balt | 5.0 : 6.0 | -1.0 : 1.0 | 1.3 : 1.5 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.maple3.balt | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.maple4.balt | 5.0 : 6.0 | -1.0 : 1.0 | 0.9 : 1.1 | 0.0 : 359.0"
 
-	vegetation[]: "tree4 : vegetmodel.maple2.balt | 5.0 : 6.0 | -7.0 : 7.0 | 1.3 : 1.5 | -359.0 : 359.0"
-	vegetation[]: "tree5 : vegetmodel.maple3.balt | 5.0 : 6.0 | -7.0 : 7.0 | 0.9 : 1.1 | -359.0 : 359.0"
-	vegetation[]: "tree6 : vegetmodel.maple4.balt | 5.0 : 6.0 | -7.0 : 7.0 | 0.9 : 1.1 | -359.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.maple2.balt | 5.0 : 6.0 | -7.0 : 7.0 | 1.3 : 1.5 | 0.0 : 359.0"
+	vegetation[]: "tree5 : vegetmodel.maple3.balt | 5.0 : 6.0 | -7.0 : 7.0 | 0.9 : 1.1 | 0.0 : 359.0"
+	vegetation[]: "tree6 : vegetmodel.maple4.balt | 5.0 : 6.0 | -7.0 : 7.0 | 0.9 : 1.1 | 0.0 : 359.0"
+}
+
+curve_model : curve.3l02d
+{
+	name: "BI roadside woodland south crv"
+
+	variation[]: "2_wide | tree1 : 1.0 | tree2 : 2.0 | tree3 : 1.0 | tree4 : 1.0 "
+
+	vegetation[]: "tree1 : vegetmodel.nuttall.oak_5 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.nuttall.oak_4 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.maple.dense.tree04 | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.black.walnut.tall02 | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+
+}
+
+curve_model : curve.3l02e
+{
+	name: "BI roadside woodland north crv"
+
+	variation[]: "2_wide | tree1 : 1.0 | tree2 : 2.0 | tree3 : 1.0 | tree4 : 1.0 | tree5 : 1.0 | tree6 : 1.0 "
+
+	vegetation[]: "tree1 : vegetmodel.maple.dense.tree04 | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.wooly.willow6.green | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.maple.dense.tree03 | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.black.willow.02 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree5 : vegetmodel.birch.slim.group3 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree6 : vegetmodel.cottonwood10 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+}
+
+curve_model : curve.3l02f
+{
+	name: "BI wild irregular hedge crv"
+
+	variation[]: "1_line | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.2 | bush4 : 1.2 | bush5 : 1.0 | bush6 : 1.0 | bush7 : 1.0 | bush8 : 1.0"
+	variation[]: "2_wide | bush9 : 1.0 | bush10 : 1.0 | bush11 : 1.2 | bush12 : 1.2 | bush13 : 1.0 | bush14 : 1.0 | bush15 : 1.0 | bush16 : 1.0"
+
+
+	vegetation[]: "bush1 : vegetmodel.blackberry.2 | 1.0 : 2.0 | -1.5 : 1.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.blackberry.4 | 1.0 : 2.0 | -1.5 : 1.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.bush.dry2 | 1.0 : 2.0 | -1.5 : 1.5 | 1.5 : 1.7 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.bush.dry1 | 1.0 : 2.0 | -1.5 : 1.5 | 1.5 : 1.7 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.hawthorn.01 | 1.0 : 2.0 | -1.5 : 1.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.hawthorn.03 | 1.0 : 2.0 | -1.5 : 1.5 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "bush7 : vegetmodel.boxelder.shrub.dense01 | 1.0 : 2.0 | -1.5 : 1.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush8 : vegetmodel.boxelder.shrub.dense04 | 1.0 : 2.0 | -1.5 : 1.5 | 0.7 : 0.9 | 0.0 : 360.0"
+
+	vegetation[]: "bush9 : vegetmodel.blackberry.2 | 1.0 : 2.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush10 : vegetmodel.blackberry.4 | 1.0 : 2.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush11 : vegetmodel.bush.dry2 | 1.0 : 2.0 | -8.5 : 8.5 | 1.5 : 1.7 | 0.0 : 360.0"
+	vegetation[]: "bush12 : vegetmodel.bush.dry1 | 1.0 : 2.0 | -8.5 : 8.5 | 1.5 : 1.7 | 0.0 : 360.0"
+	vegetation[]: "bush13 : vegetmodel.hawthorn.01 | 1.0 : 2.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush14 : vegetmodel.hawthorn.03 | 1.0 : 2.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "bush15 : vegetmodel.boxelder.shrub.dense01 | 1.0 : 2.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush16 : vegetmodel.boxelder.shrub.dense04 | 1.0 : 2.0 | -8.5 : 8.5 | 0.7 : 0.9 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02g
+{
+	name: "BI roadside woodland north undergrowth crv"
+
+	variation[]: "2_wide | tree1 : 1.0 | tree2 : 2.0 | tree3 : 1.0 | tree4 : 1.0 "
+
+	vegetation[]: "tree1 : vegetmodel.wooly.willow5.green | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.european.hazelnut.tall01 | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.shrub_osier3.balt | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.salix.wild5.rus | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+}
+
+curve_model : curve.3l02h
+{
+	name: "BI roadside woodland south undergrowth crv"
+
+	variation[]: "2_wide | tree1 : 1.0 | tree2 : 1.0 | tree3 : 2.0 | tree4 : 1.0 "
+
+	vegetation[]: "tree1 : vegetmodel.wooly.willow6.green | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree2 : vegetmodel.salix.wild5.rus | 4.0 : 5.0 | -8.0 : 8.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree3 : vegetmodel.hawthorn.03 | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+	vegetation[]: "tree4 : vegetmodel.shrub_osier3.balt | 4.0 : 5.0 | -10.0 : 10.0 | 1.0 : 1.2 | 0.0 : 359.0"
+}
+
+curve_model : curve.3l02i
+{
+	name: "BI NORTH - roadside vegetation mixed trees"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 | bush5 : 1.0 | bush6 : 2.0 | bush7 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.black.walnut.medium01 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.pine4.ibe | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.tree.dry.generic.medium05 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.pine7.ibe | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.black.walnut.small01 | 1.0 : 2.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.pine1.ibe | 5.0 : 7.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "bush7 : vegetmodel.boxelder.tree.dense03 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+
+}
+
+curve_model : curve.3l02j
+{
+	name: "BI NORTH - roadside vegetation mixed undergrowth"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.shrub_osier3.balt | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.boxelder.shrub.dense01 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.boxelder.shrub.dense04 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.shrub.green2 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02k
+{
+	name: "BI NORTH - roadside vegetation leaved"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 | bush5 : 1.0 | bush6 : 1.0 | bush7 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.quaking.aspen.group | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.quaking.aspen.middle3 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.id.cottonwood4 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.black.poplar.medium04 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.black.poplar.small08 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.birch.slim.small.group1 | 5.0 : 7.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "bush7 : vegetmodel.birch.slim.small.group4 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02l
+{
+	name: "BI NORTH - roadside vegetation leaved undergrowth"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.black.poplar.shrub03 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.black.poplar.shrub01 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.young.tree.sparse.low.02 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.young.tree.sparse.low.04 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02m
+{
+	name: "BI NORTH - roadside shrubs higher"
+
+	variation[]: "2_wide | bush1 : 0.7 | bush2 : 1.2 | bush3 : 1.0 | bush4 : 1.0 | bush5 : 1.0 | bush6 : 1.1 | bush7 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.black.walnut.medium01 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.nuttall.oak_4 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.black.walnut.small01 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.nuttall.oak_8 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.boxelder.tree.dense04 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.hawthorn.03 | 5.0 : 7.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
+	vegetation[]: "bush7 : vegetmodel.hawthorn.02 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02n
+{
+	name: "BI NORTH - roadside shrubs lower"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 | bush5 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.blackberry.4 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.blackberry.3 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.bush.dry2 | 2.0 : 4.0 | -8.5 : 8.5 | 1.2 : 1.4 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.young.tree.under.growth.big.1 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.young.tree.under.growth.big.2 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02o
+{
+	name: "BI NORTH - heathland sparse lower trees"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 2.0 | bush5 : 2.0 | bush6 : 2.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.stressed.tree.poplar.03 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.stressed.tree.poplar.02 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.stressed.tree.poplar.04 | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.quaking.aspen.group | 5.0 : 7.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.young.trees.group.aspen.01 | 5.0 : 7.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.young.trees.group.birch.02 | 5.0 : 7.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
+}
+
+curve_model : curve.3l02p
+{
+	name: "BI NORTH - heathland sparse undergrowth"
+
+	variation[]: "2_wide | bush1 : 1.0 | bush2 : 1.0 | bush3 : 1.0 | bush4 : 1.0 | bush5 : 1.0 | bush6 : 1.0 "
+
+
+	vegetation[]: "bush1 : vegetmodel.wooly.willow6 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush2 : vegetmodel.wooly.willow3 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush3 : vegetmodel.quaking.aspen.small1.id | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush4 : vegetmodel.pine_small6 | 2.0 : 4.0 | -8.5 : 8.5 | 1.0 : 1.2 | 0.0 : 360.0"
+	vegetation[]: "bush5 : vegetmodel.young.tree.under.growth.big.1 | 2.0 : 4.0 | -8.5 : 8.5 | 0.9 : 1.1 | 0.0 : 360.0"
+	vegetation[]: "bush6 : vegetmodel.young.trees.group.birch.low | 2.0 : 4.0 | -8.5 : 8.5 | 0.8 : 1.0 | 0.0 : 360.0"
 }
 
 curve_model : curve.01000
@@ -31550,35 +31747,35 @@ curve_model : curve.4f002
 	model_desc: "/model2/props/street/decal_asphalt_new_01_poc.pmd"
 
 	variation[]: "var1 | center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "var2 | center2 : 1.0"
-	start_part[]: start2
-	end_part[]: end2
+	start_part[]: "start2"
+	end_part[]: "end2"
 	variation[]: "var3 | center3 : 1.0"
-	start_part[]: start3
-	end_part[]: end3
+	start_part[]: "start3"
+	end_part[]: "end3"
 }
 
 curve_model : curve.6w002
 {
 	model_desc: "/model2/landmark/fi/helsinki_bus_station_01_bus.pmd"
 
-	variation[]: "plain | center1, center7, center8 : 1.0"
-	start_part[]: start2
-	end_part[]: end1
-	variation[]: "pillar1 | center2, center5, center6 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pillar2 | center3, center9, center11 : 1.0"
-	start_part[]: start1
-	end_part[]: end2
+	variation[]: "plain | center1,center7,center8 : 1.0"
+	start_part[]: "start2"
+	end_part[]: "end1"
+	variation[]: "pillar1 | center2,center5,center6 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pillar2 | center3,center9,center11 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end2"
 	variation[]: "door | center4 : 1.0"
-	start_part[]: start2
-	end_part[]: end1
+	start_part[]: "start2"
+	end_part[]: "end1"
 	variation[]: "doorpillar | center10 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/landmark/fi/helsinki_bus_station_01_bus_lod1.pmd"
 	dynamic_lod_dist[]: 40
@@ -31588,9 +31785,9 @@ curve_model : curve.6w003
 {
 	model_desc: "/model2/landmark/fi/helsinki_bus_station_02_bus.pmd"
 
-	variation[]: "var1 | center3, center2, center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	variation[]: "var1 | center3,center2,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/landmark/fi/helsinki_bus_station_02_bus_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -31600,12 +31797,12 @@ curve_model : curve.6w004
 {
 	model_desc: "/model2/landmark/fi/helsinki_bus_station_03_bus.pmd"
 
-	variation[]: "var1 | center1, center2 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	variation[]: "var1 | center1,center2 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "var2 | center4 : 1.0"
-	start_part[]: start2
-	end_part[]: end2
+	start_part[]: "start2"
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/landmark/fi/helsinki_bus_station_03_bus_lod1.pmd"
 	dynamic_lod_dist[]: 45
@@ -31640,23 +31837,23 @@ curve_model : curve.6x000
 	name: "parked trailers mid 01 lux"
 
 	variation[]: "45deg_color | center1 : 1.0 | center2 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	fixed_inner_start[]: start1
 	fixed_inner_end[]: end1
 	variation[]: "45deg_mix | center3 : 2.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center10 : 1.0 | center11 : 1.0 | center12 : 1.0 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	fixed_inner_start[]: start1
 	fixed_inner_end[]: end1
 	variation[]: "90deg_color | center17 : 1.0 | center18 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	fixed_inner_start[]: start1
 	fixed_inner_end[]: end1
 	variation[]: "90deg_mix | center19 : 2.0 | center20 : 1.0 | center21 : 1.0 | center22 : 1.0 | center23 : 1.0 | center24 : 1.0 | center25 : 1.0 | center26 : 1.0 | center27 : 1.0 | center28 : 1.0 | center29 : 1.0 | center30 : 1.0 | center31 : 1.0 | center32 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	fixed_inner_start[]: start1
 	fixed_inner_end[]: end1
 
@@ -31671,8 +31868,8 @@ curve_model : curve.7e000
 	model_desc: "/model2/props/street/advert/eu/angryburger_restaurant_awning_01_eu.pmd"
 
 	variation[]: "Default | center1 : 1.0 | center2 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/props/street/advert/eu/angryburger_restaurant_awning_01_eu_lod1.pmd"
 	dynamic_lod_dist[]: 55
@@ -31692,44 +31889,44 @@ curve_model : curve.lux_0m000
 {
 	model_desc: "/model2/wall/gabion_wall_01_lux.pmd"
 
-	variation[]: "tall | center1 : 1.0 | center4 : 1.0 | center5 : 1.0 | center1, center4, center5 : 1.0 | center4, center1, center5 : 1.0 | center5, center4, center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "short | center3 : 1.0 | center8 : 1.0 | center9 : 1.0 | center3, center8, center9 : 1.0"
-	start_part[]: start3
-	end_part[]: end3
-	variation[]: "medium | center2 : 1.0 | center6 : 1.0 | center7 : 1.0 | center2, center6, center7 : 1.0"
-	start_part[]: start2
-	end_part[]: end2
+	variation[]: "tall | center1 : 1.0 | center4 : 1.0 | center5 : 1.0 | center1,center4,center5 : 1.0 | center4,center1,center5 : 1.0 | center5,center4,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "short | center3 : 1.0 | center8 : 1.0 | center9 : 1.0 | center3,center8,center9 : 1.0"
+	start_part[]: "start3"
+	end_part[]: "end3"
+	variation[]: "medium | center2 : 1.0 | center6 : 1.0 | center7 : 1.0 | center2,center6,center7 : 1.0"
+	start_part[]: "start2"
+	end_part[]: "end2"
 }
 curve_model : curve.lux_0s000
 {
 	model_desc: "/model2/wall/barrier_antinoise_01_lux.pmd"
 
-	variation[]: "2m_top | center1, center2, center3, center4, center5 : 1.0 | center2, center3, center1, center5, center4 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "2m | center6, center7, center8, center9, center10 : 1.0 | center7, center8, center6, center10, center9 : 1.0"
-	start_part[]: start2
-	end_part[]: end2
-	variation[]: "1m_top | center11, center12, center13, center14, center15 : 1.0 | center12, center13, center11, center15, center14 : 1.0"
-	start_part[]: start3
-	end_part[]: end3
-	variation[]: "1m | center16, center17, center18, center19, center20 : 1.0 | center17, center18, center16, center20, center19 : 1.0"
-	start_part[]: start4
-	end_part[]: end4
-	variation[]: "2m_top_LB | center21, center22, center23, center24, center25 : 1.0 | center22, center23, center21, center25, center24 : 1.0"
-	start_part[]: start5
-	end_part[]: end5
-	variation[]: "2m_LB | center26, center27, center28, center29, center30 : 1.0 | center27, center28, center26, center30, center29 : 1.0"
-	start_part[]: start6
-	end_part[]: end6
-	variation[]: "1m_top_LB | center31, center32, center33, center34, center35 : 1.0 | center32, center33, center31, center35, center34 : 1.0"
-	start_part[]: start7
-	end_part[]: end7
-	variation[]: "1m_LB | center36, center37, center38, center39, center40 : 1.0 | center37, center38, center36, center40, center39 : 1.0"
-	start_part[]: start8
-	end_part[]: end8
+	variation[]: "2m_top | center1,center2,center3,center4,center5 : 1.0 | center2,center3,center1,center5,center4 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "2m | center6,center7,center8,center9,center10 : 1.0 | center7,center8,center6,center10,center9 : 1.0"
+	start_part[]: "start2"
+	end_part[]: "end2"
+	variation[]: "1m_top | center11,center12,center13,center14,center15 : 1.0 | center12,center13,center11,center15,center14 : 1.0"
+	start_part[]: "start3"
+	end_part[]: "end3"
+	variation[]: "1m | center16,center17,center18,center19,center20 : 1.0 | center17,center18,center16,center20,center19 : 1.0"
+	start_part[]: "start4"
+	end_part[]: "end4"
+	variation[]: "2m_top_LB | center21,center22,center23,center24,center25 : 1.0 | center22,center23,center21,center25,center24 : 1.0"
+	start_part[]: "start5"
+	end_part[]: "end5"
+	variation[]: "2m_LB | center26,center27,center28,center29,center30 : 1.0 | center27,center28,center26,center30,center29 : 1.0"
+	start_part[]: "start6"
+	end_part[]: "end6"
+	variation[]: "1m_top_LB | center31,center32,center33,center34,center35 : 1.0 | center32,center33,center31,center35,center34 : 1.0"
+	start_part[]: "start7"
+	end_part[]: "end7"
+	variation[]: "1m_LB | center36,center37,center38,center39,center40 : 1.0 | center37,center38,center36,center40,center39 : 1.0"
+	start_part[]: "start8"
+	end_part[]: "end8"
 
 	dynamic_lod_desc[]: "/model2/wall/barrier_antinoise_01_lux_lod1.pmd"
 	dynamic_lod_dist[]: 100
@@ -31739,9 +31936,9 @@ curve_model : curve.6w005
 {
 	model_desc: "/model2/landmark/fi/helsinki_bus_station_05_bus.pmd"
 
-	variation[]: "var1 | center2, center1, center2, center1, center3, center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	variation[]: "var1 | center2,center1,center2,center1,center3,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/landmark/fi/helsinki_bus_station_05_bus_lod1.pmd"
 	dynamic_lod_dist[]: 40
@@ -31776,10 +31973,10 @@ curve_model : curve.lux_0u002
 {
 	model_desc: "/model2/building/flats_mid/flats_mid_03_lu_lux.pmd"
 
-	variation[]: "tree_floors | center1, center2, center3 : 1.0 | center1, center4, center3 : 1.0"
+	variation[]: "tree_floors | center1,center2,center3 : 1.0 | center1,center4,center3 : 1.0"
 	start_part[]: "start1 | start2 | start5"
 	end_part[]: "end1 | end2 | end5"
-	variation[]: "two_floors | center5, center6, center7 : 1.0 | center5, center8, center7 : 1.0"
+	variation[]: "two_floors | center5,center6,center7 : 1.0 | center5,center8,center7 : 1.0"
 	start_part[]: "start3 | start4 | start6"
 	end_part[]: "end3 | end4 | end6"
 
@@ -31838,8 +32035,8 @@ curve_model : curve.4h000
 	model_desc: "/model2/railing/railing_bridge_07_poc.pmd"
 
 	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	overlay[]: "center1 | ovr1 : 1.0 | ovr2 : 1.0"
 	overlay[]: "center2 | ovr1 : 1.0 | ovr2 : 1.0"
 	overlay[]: "center3 | ovr1 : 1.0 | ovr2 : 1.0"
@@ -31851,11 +32048,14 @@ curve_model : curve.1r000
 	model_desc: "/model2/landmark/es/madrid_bus_station_01_bus.pmd"
 
 	variation[]: "open | part1 : 1.0 | part2 : 1.0 | part3 : 1.0 | part4 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "closed | part5 : 1.0 | part6 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
+
+	dynamic_lod_desc[]: "/model2/landmark/es/madrid_bus_station_01_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 curve_model : curve.poc_3m001
 {
@@ -31931,50 +32131,50 @@ curve_model : curve.poc_3r001
 	name: "tunnel 05 poc"
 
 	variation[]: "middle_one | center1 : 1.0 | center2 : 1.0 | center3 : 0.3"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "middle_two | center4 : 1.0 | center5 : 1.0 | center6 : 0.3"
-	start_part[]: start3
-	end_part[]: end3
+	start_part[]: "start3"
+	end_part[]: "end3"
 	variation[]: "light_white | center7 : 1.0 | center8 : 1.0 | center9 : 0.3"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "light_yellow | center10 : 1.0 | center11 : 1.0 | center12 : 0.3"
-	start_part[]: start2
-	end_part[]: end2
-	variation[]: "pat_m_o_0_2 | center1, center1, center2, center1, center1, center1, center3, center1 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pat_m_t_0_2 | center4, center4, center5, center4, center4, center4, center6, center4 : 1.0"
-	start_part[]: start3
-	end_part[]: end3
-	variation[]: "pat_l_w_0_2 | center7, center7, center8, center7, center7, center7, center9, center7 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pat_l_y_0_2 | center10, center10, center11, center10, center10, center10, center12, center11 : 1.0"
-	start_part[]: start2
-	end_part[]: end2
+	start_part[]: "start2"
+	end_part[]: "end2"
+	variation[]: "pat_m_o_0_2 | center1,center1,center2,center1,center1,center1,center3,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pat_m_t_0_2 | center4,center4,center5,center4,center4,center4,center6,center4 : 1.0"
+	start_part[]: "start3"
+	end_part[]: "end3"
+	variation[]: "pat_l_w_0_2 | center7,center7,center8,center7,center7,center7,center9,center7 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pat_l_y_0_2 | center10,center10,center11,center10,center10,center10,center12,center11 : 1.0"
+	start_part[]: "start2"
+	end_part[]: "end2"
 	variation[]: "lanes | center7 : 1.0 | center8 : 1.0 | center9 : 1.0 | center13 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "stop_0_2 | center13 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "stop_0_2_l | center15 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "stop_0_2_r | center14 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pat_m_o_top | center26, center26, center27, center26, center26, center28, center26 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pat_m_o_left | center21, center21, center23, center21, center21, center25, center21 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
-	variation[]: "pat_m_o_rght | center20, center20, center22, center20, center20, center24, center20 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pat_m_o_top | center26,center26,center27,center26,center26,center28,center26 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pat_m_o_left | center21,center21,center23,center21,center21,center25,center21 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "pat_m_o_rght | center20,center20,center22,center20,center20,center24,center20 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 
 	dynamic_lod_desc[]: "/model2/tunnel/tunnel_05_poc_lod1.pmd"
 	dynamic_lod_dist[]: 100
@@ -32038,46 +32238,46 @@ curve_model : curve.poc_25004
 {
 	model_desc: "/model2/tunnel/tunnel_07_poc.pmd"
 
-	variation[]: "var1 | center1, center2, center12, center1, center1, center2, center3, center1, center2, center11, center12, center1, center1, center2, center3, center11 : 1.0"
+	variation[]: "var1 | center1,center2,center12,center1,center1,center2,center3,center1,center2,center11,center12,center1,center1,center2,center3,center11 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var2 | center8, center8, center14, center8, center8, center8, center9, center8 : 1.0"
+	variation[]: "var2 | center8,center8,center14,center8,center8,center8,center9,center8 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start13 | start12"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var3 | center5, center5, center13, center5, center5, center5, center6, center5 : 1.0"
+	variation[]: "var3 | center5,center5,center13,center5,center5,center5,center6,center5 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var1_s | center4, center1, center1, center2, center12, center1, center1, center2, center3, center1, center2, center11, center12, center1, center1, center2, center3, center11, center1, center2, center12, center1, center1, center2, center3, center1 : 1.0"
+	variation[]: "var1_s | center4,center1,center1,center2,center12,center1,center1,center2,center3,center1,center2,center11,center12,center1,center1,center2,center3,center11,center1,center2,center12,center1,center1,center2,center3,center1 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var1_s_l | center15, center1, center1, center2, center12, center1, center1, center2, center3, center1, center2, center11, center12, center1, center1, center2, center3, center11, center1, center2, center12, center1, center1, center2, center3, center1 : 1.0"
+	variation[]: "var1_s_l | center15,center1,center1,center2,center12,center1,center1,center2,center3,center1,center2,center11,center12,center1,center1,center2,center3,center11,center1,center2,center12,center1,center1,center2,center3,center1 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var1_s_r | center16, center1, center1, center2, center12, center1, center1, center2, center3, center1, center2, center11, center12, center1, center1, center2, center3, center11, center1, center2, center12, center1, center1, center2, center3, center1 : 1.0"
+	variation[]: "var1_s_r | center16,center1,center1,center2,center12,center1,center1,center2,center3,center1,center2,center11,center12,center1,center1,center2,center3,center11,center1,center2,center12,center1,center1,center2,center3,center1 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var2_s | center10, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8 : 1.0"
+	variation[]: "var2_s | center10,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var2_s_l | center19, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8 : 1.0"
+	variation[]: "var2_s_l | center19,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var2_s_r | center20, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8, center8, center8, center14, center8, center8, center8, center9, center8 : 1.0"
+	variation[]: "var2_s_r | center20,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8,center8,center8,center14,center8,center8,center8,center9,center8 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end12 | end13"
-	variation[]: "var3_s | center7, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5 : 1.0"
+	variation[]: "var3_s | center7,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end13 | end12"
-	variation[]: "var3_s_l | center17, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5 : 1.0"
+	variation[]: "var3_s_l | center17,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end5 | end4 | end3 | end2 | end1 | end12 | end13"
-	variation[]: "var3_s_r | center18, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5, center5, center5, center13, center5, center5, center5, center6, center5 : 1.0"
+	variation[]: "var3_s_r | center18,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5,center5,center5,center13,center5,center5,center5,center6,center5 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start12 | start13"
 	end_part[]: "end5 | end4 | end3 | end2 | end1 | end12 | end13"
-	variation[]: "var1_l | center22, center24, center30, center22, center22, center24, center26, center22, center24, center28, center30, center22, center22, center24, center26, center28 : 1.0"
+	variation[]: "var1_l | center22,center24,center30,center22,center22,center24,center26,center22,center24,center28,center30,center22,center22,center24,center26,center28 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start8 | start10 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end8 | end10 | end12 | end13"
-	variation[]: "var1_r | center21, center23, center29, center21, center21, center23, center25, center21, center23, center27, center29, center21, center21, center23, center25, center27 : 1.0"
+	variation[]: "var1_r | center21,center23,center29,center21,center21,center23,center25,center21,center23,center27,center29,center21,center21,center23,center25,center27 : 1.0"
 	start_part[]: "start1 | start2 | start3 | start4 | start5 | start7 | start9 | start11 | start12 | start13"
 	end_part[]: "end1 | end2 | end3 | end4 | end5 | end7 | end9 | end11 | end12 | end13"
 	variation[]: "var1_t | center31 : 1.0"
@@ -33253,10 +33453,10 @@ curve_model : curve.3v001
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_gazgamel_modern_02_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33269,10 +33469,10 @@ curve_model : curve.3v000
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_gazgamel_modern_01_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33285,10 +33485,10 @@ curve_model : curve.3v002
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_oranje_modern_01_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33301,10 +33501,10 @@ curve_model : curve.3v003
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_oranje_modern_02_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33317,10 +33517,10 @@ curve_model : curve.3v008
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_bnlx_modern_01_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33333,10 +33533,10 @@ curve_model : curve.3v009
 
 	variation[]: "light | center1 : 1.0"
 	start_part[]: "start1 | start2"
-	end_part[]: end1
+	end_part[]: "end1"
 	variation[]: "no_light | center2 : 1.0"
 	start_part[]: "start3 | start4"
-	end_part[]: end2
+	end_part[]: "end2"
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_roof_bnlx_modern_02_lux_lod1.pmd"
 	dynamic_lod_dist[]: 50
@@ -33344,9 +33544,9 @@ curve_model : curve.3v009
 }
 curve_model : curve.4b00d
 {
-	name: "mix uk wild hedge wip"
+	name: "BI wild hedge crv"
 
-	variation[]: "line | bush_10 : 1.0 | bush_8 : 1.0 | bush_12 : 1.0 | bush_4 : 1.0 | bush_1 : 1.0 | bush_9 : 1.0| bush_7 : 1.0 | bush_5 : 1.0 | bush_3 : 1.0 | bush_2 : 1.0 | bush_11 : 1.0 | bush_6 : 1.0"
+	variation[]: "line | bush_10 : 1.0 | bush_8 : 1.0 | bush_12 : 1.0 | bush_4 : 1.0 | bush_1 : 1.0 | bush_9 : 1.0 | bush_7 : 1.0 | bush_5 : 1.0 | bush_3 : 1.0 | bush_2 : 1.0 | bush_11 : 1.0 | bush_6 : 1.0"
 
 
 	vegetation[0]: "bush_1 : vegetmodel.hawthorn.01 | 1.0 : 2.0 | 0.0 : 0.0 | 0.8 : 1.0 | 90.0 : 91.0"
@@ -33356,66 +33556,99 @@ curve_model : curve.4b00d
 	vegetation[4]: "bush_5 : vegetmodel.blackberry.3 | 1.0 : 2.0 | 0.0 : 0.0 | 0.9 : 1.2 | 90.0 : 91.0"
 	vegetation[5]: "bush_6 : vegetmodel.blackberry.4 | 1.0 : 2.0 | 0.0 : 0.0 | 0.8 : 1.0 | 90.0 : 91.0"
 	vegetation[6]: "bush_7 : vegetmodel.european.hazelnut.hedge_a | 1.0 : 1.2 | 0.0 : 0.0 | 0.8 : 1.2 | 0.0 : 360.0"
-	vegetation[7]: "bush_8 : vegetmodel.european.hazelnut.hedge_b | 1.0 : 1.2 | 0.0 : 0.0 | 0.7 : 1.3 |0.0 : 360.0"
+	vegetation[7]: "bush_8 : vegetmodel.european.hazelnut.hedge_b | 1.0 : 1.2 | 0.0 : 0.0 | 0.7 : 1.3 | 0.0 : 360.0"
 	vegetation[8]: "bush_9 : vegetmodel.european.hazelnut.hedge_c | 1.0 : 1.2 | 0.0 : 0.0 | 0.8 : 1.2 | 0.0 : 360.0"
-	vegetation[9]: "bush_10 : vegetmodel.european.hazelnut.hedge_d | 1.0 : 1.2 | 0.0 : 0.0 | 0.7 : 1.2 |0.0 : 360.0"
+	vegetation[9]: "bush_10 : vegetmodel.european.hazelnut.hedge_d | 1.0 : 1.2 | 0.0 : 0.0 | 0.7 : 1.2 | 0.0 : 360.0"
 	vegetation[10]: "bush_11 : vegetmodel.european.hazelnut.hedge_e | 1.0 : 1.2 | 0.0 : 0.0 | 0.8 : 1.3 | 0.0 : 360.0"
-	vegetation[11]: "bush_12 : vegetmodel.european.hazelnut.hedge_f | 1.0 : 1.2 | 0.0 : 0.0 | 0.9 : 1.2 |0.0 : 360.0"
-	
+	vegetation[11]: "bush_12 : vegetmodel.european.hazelnut.hedge_f | 1.0 : 1.2 | 0.0 : 0.0 | 0.9 : 1.2 | 0.0 : 360.0"
+
 }
 
 curve_model : curve.6k00g
 {
-	name: "common gorse crv"
+	name: "common gorse bloom crv"
 
-	variation[]: "line_bloom_1 | bush_1 : 1.0 | bush_2 : 1.0 | bush_3 : 1.0"
-	variation[]: "wide_bloom_1 | bush_4 : 1.0 | bush_5 : 1.0 | bush_6 : 1.0"
-	variation[]: "line_bloom_2 | bush_7 : 1.0 | bush_8 : 1.0 | bush_9 : 1.0"
-	variation[]: "wide_bloom_2 | bush_10 : 1.0 | bush_11 : 1.0 | bush_12 : 1.0"
-	variation[]: "line_nobloom | bush_13 : 1.0 | bush_14 : 1.0 | bush_15 : 1.0"
-	variation[]: "wide_nobloom | bush_16 : 1.0 | bush_17 : 1.0 | bush_18 : 1.0"
+	variation[]: "line_1 | bush_1 : 1.0 | bush_2 : 1.0 | bush_3 : 1.0"
+	variation[]: "wide_1 | bush_4 : 1.0 | bush_5 : 1.0 | bush_6 : 1.0"
+	variation[]: "line_2 | bush_7 : 1.0 | bush_8 : 1.0 | bush_9 : 1.0"
+	variation[]: "wide_2 | bush_10 : 1.0 | bush_11 : 1.0 | bush_12 : 1.0"
 
 
 	vegetation[0]: "bush_1 : vegetmodel.common.gorse.bloom.01 | 2.0 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[1]: "bush_2 : vegetmodel.common.gorse.bloom.02 | 1.5 : 2.5 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[2]: "bush_3 : vegetmodel.common.gorse.bloom.03 | 2.5 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
-	
+
 	vegetation[3]: "bush_4 : vegetmodel.common.gorse.bloom.01 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[4]: "bush_5 : vegetmodel.common.gorse.bloom.02 | 1.0 : 2.5 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[5]: "bush_6 : vegetmodel.common.gorse.bloom.03 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
-	
+
 	vegetation[6]: "bush_7 : vegetmodel.common.gorse.half.bloom.01 | 2.0 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[7]: "bush_8 : vegetmodel.common.gorse.half.bloom.02 | 1.5 : 2.5 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[8]: "bush_9 : vegetmodel.common.gorse.half.bloom.03 | 2.5 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
-	
+
 	vegetation[9]: "bush_10 : vegetmodel.common.gorse.half.bloom.01 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[10]: "bush_11 : vegetmodel.common.gorse.half.bloom.02 | 1.0 : 2.5 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
 	vegetation[11]: "bush_12 : vegetmodel.common.gorse.half.bloom.03 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
-	
-	vegetation[12]: "bush_13 : vegetmodel.common.gorse.no.bloom.01 | 2.0 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
-	vegetation[13]: "bush_14 : vegetmodel.common.gorse.no.bloom.02 | 1.5 : 2.5 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
-	vegetation[14]: "bush_15 : vegetmodel.common.gorse.no.bloom.03 | 2.5 : 3.0 | 0.0 : 0.1 | 0.9 : 1.1 | 0.0 : 360.0"
-	
-	vegetation[15]: "bush_16 : vegetmodel.common.gorse.no.bloom.01 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
-	vegetation[16]: "bush_17 : vegetmodel.common.gorse.no.bloom.02 | 1.0 : 2.5 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
-	vegetation[17]: "bush_18 : vegetmodel.common.gorse.no.bloom.03 | 1.0 : 3.0 | -5.0 : 5.0 | 0.9 : 1.1 | 0.0 : 360.0"
+
 }
 
 curve_model : curve.0o003
 {
 	model_desc: "/model2/landmark/es/madrid_bus_station_02_bus.pmd"
 
-	variation[]: "Glass | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	variation[]: "Glass | center4,center1 : 1.0 | center2,center1 : 1.0 | center4,center3 : 1.0 | center2,center3 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
 	variation[]: "Door | center5 : 1.0"
-	start_part[]: start1
-	end_part[]: end1
+	start_part[]: "start1"
+	end_part[]: "end1"
+
+	dynamic_lod_desc[]: "/model2/landmark/es/madrid_bus_station_02_bus_lod1.pmd"
+	dynamic_lod_dist[]: 100
 	overlay[]: "center1 | ovr1 : 1.0"
 	overlay[]: "center2 | ovr1 : 1.0"
 	overlay[]: "center3 | ovr1 : 1.0"
 	overlay[]: "center4 | ovr1 : 1.0"
 	overlay[]: "center5 | ovr1 : 1.0"
 	overlay[]: "start1 | ovr1 : 1.0"
+}
+
+curve_model : curve.7e002
+{
+	model_desc: "/model2/props/street/advert/eu/rusticrolls_restaurant_awning_01_eu.pmd"
+
+	variation[]: "Default | center1,center2 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1 | end2"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/rusticrolls_restaurant_awning_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 60
+}
+
+curve_model : curve.7e001
+{
+	model_desc: "/model2/props/street/advert/eu/rusticrolls_fence_01_eu.pmd"
+
+	variation[]: "Default | center1,center2 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/rusticrolls_fence_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 40
+	overlay[]: "start1 | part5 : 1.0"
+	overlay[]: "center1 | part5 : 1.0"
+	overlay[]: "center2 | part5 : 1.0"
+}
+
+curve_model : curve.0m000
+{
+	model_desc: "/model2/props/street/advert/eu/queenskebab_restaurant_awning_01_eu.pmd"
+
+	variation[]: "default | part1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/queenskebab_restaurant_awning_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 100
 }
 }

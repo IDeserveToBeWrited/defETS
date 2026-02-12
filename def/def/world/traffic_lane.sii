@@ -525,5 +525,47 @@ traffic_lane_data : traffic_lane.road.expressway.bus_transit
 	traffic_rules[]: traffic_rule.s_bus_t
 }
 
+traffic_lane_data : traffic_lane.road.local.bus_lane
+{
+	speed_class: local_road
+
+	rank: 50
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.bus_lane
+	traffic_rules[]: traffic_rule.s_bus_l
+	
+	traffic_rules[]: traffic_rule.no_chng_in
+    traffic_rules[]: traffic_rule.no_chng_out
+}
+
+traffic_lane_data : traffic_lane.road.expressway.bus_lane
+{
+	speed_class: expressway
+
+	rank: 100
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.bus_lane
+	traffic_rules[]: traffic_rule.s_bus_l
+	
+	traffic_rules[]: traffic_rule.no_chng_in
+    traffic_rules[]: traffic_rule.no_chng_out
+}
+
+traffic_lane_data : traffic_lane.road.motorway.bus_lane
+{
+	speed_class: motorway
+
+	rank: 200
+
+	traffic_rules[]: traffic_rule.road
+	traffic_rules[]: traffic_rule.bus_lane
+	traffic_rules[]: traffic_rule.s_bus_h
+	
+	traffic_rules[]: traffic_rule.no_chng_in
+    traffic_rules[]: traffic_rule.no_chng_out
+}
+
 
 }

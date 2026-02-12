@@ -1,10 +1,13 @@
 vehicle_top_camera: camera.top.basic
 {
-	minimum_height: 4.0
-	maximum_height: 29.0
-	speed: 2.0
-	x_offset_forward: -5.0
-	x_offset_backward: 8.0
+	minimum_height: 10.0 
+	maximum_height: 35.0
+	speed: 2.5
+
+	offset_forward: 0.0
+	offset_backward: 0.0
+	camera_height_factor: 1.3 // Factor controlling the influence of truck length on adaptive camera height
+	use_adaptive_camera_height: true // If true, use the adaptive height; if false, set camera height to maximum_height
 
 	near_plane: 3
 	far_plane: 200
@@ -13,7 +16,7 @@ vehicle_top_camera: camera.top.basic
 	validation_speed_positive: 0.3
 	validation_speed_negative: 0.9
 
-	camera_fov: 57
+	camera_fov: 70
 	
 	shake_anim_step: 0.015
 	shake_anim_scale_min: 0.0002

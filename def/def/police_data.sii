@@ -84,53 +84,38 @@ police_data : police.data
 	offence_police_probabilty[12]: 1.0	# damaged vehicle usage
 	offence_police_probabilty[13]: 1.0	# illegal trailer (weight station)
 
-	# car crash
-	offence_message[0]: "<img src=/material/ui/hud/car_crash.mat kr=center><br offset=-5>@@offence_crash@@"
+	offence_message[0]: "@@offence_crash@@<color value=@@clr_sel@@>"	# car crash
+	offence_message[1]: "@@offence_sleeping@@<color value=@@clr_sel@@>" 				# avoid sleeping
+	offence_message[2]: "@@offence_wrong_way@@<color value=@@clr_sel@@>" 				# wrong way
+	offence_message[3]: "@@offence_speeding@@<color value=@@clr_sel@@>" 				# speeding (camera)
+	offence_message[4]: "@@offence_lights@@<color value=@@clr_sel@@>" 					# no lights during night
+	offence_message[5]: "@@offence_red_signal@@<color value=@@clr_sel@@>" 				# red lights
+	offence_message[6]: "@@offence_speeding@@<color value=@@clr_sel@@>" 				# speeding
+	offence_message[7]: "@@offence_weighing@@<color value=@@clr_sel@@>" 				# avoid weighing
+	offence_message[8]: "@@offence_illegal_trailer@@<color value=@@clr_sel@@>" 			# illegal trailer
+	offence_message[9]: "@@offence_avoid_inspection@@<color value=@@clr_sel@@>" 		# avoid inspection
+	offence_message[10]: "@@offence_illegal_border@@<color value=@@clr_sel@@>" 			# illegal border crossing
+	offence_message[11]: "@@offence_shoulder_violation@@<color value=@@clr_sel@@>" 		# hard shoulder violation
+	offence_message[12]: "@@offence_damaged_vehicle_usage@@<color value=@@clr_sel@@>"	# damaged vehicle usage
+	offence_message[13]: "@@offence_illegal_trailer@@<color value=@@clr_sel@@>" 		# illegal trailer (weight station)
 
-	# avoid sleeping
-	offence_message[1]: "<img src=/material/ui/hud/sleepy_driver.mat kr=center><br offset hshift=-5>@@offence_sleeping@@"
-
-	# wrong way
-	offence_message[2]: "<img src=/material/ui/hud/wrong_way.mat kr=center><br offset=-5>@@offence_wrong_way@@"
-
-	# speeding (camera)
-	offence_message[3]: "<img src=/material/ui/hud/speed_camera.mat kr=center><br offset=-5>@@offence_speeding@@"
-
-	# no lights during night
-	offence_message[4]: "<img src=/material/ui/hud/head_lights.mat kr=center><br offset=-5>@@offence_lights@@"
-
-	# red lights
-	offence_message[5]: "<img src=/material/ui/hud/red_light.mat kr=center><br offset=-5>@@offence_red_signal@@"
-
-	# speeding
-	offence_message[6]: "<img src=/material/ui/hud/speed_camera.mat kr=center><br offset=-5>@@offence_speeding@@"
-
-	# avoid weighing
-	offence_message[7]: "<img src=/material/ui/hud/avoid_weighing.mat kr=center><br offset=-5>@@offence_weighing@@"
-
-	# illegal trailer
-	offence_message[8]: "<img src=/material/ui/hud/illegal_trailer.mat kr=center><br offset=-5>@@offence_illegal_trailer@@"
-
-	# avoid inspection
-	offence_message[9]: "<img src=/material/ui/hud/avoid_inspection.mat kr=center><br offset=-5>@@offence_avoid_inspection@@"
-
-	# illegal border crossing
-	offence_message[10]: "<img src=/material/ui/hud/avoid_inspection.mat kr=center><br offset=-5>@@offence_illegal_border@@"
-
-	# hard shoulder violation
-	offence_message[11]: "<img src=/material/ui/hud/eds.mat kr=center><br offset=-5>@@offence_shoulder_violation@@"
-
-	# damaged vehicle usage
-	offence_message[12]: "<img src=/material/ui/hud/damaged_vehicle.mat kr=center><br offset=-5>@@offence_damaged_vehicle_usage@@"
-
-	# illegal trailer (weight station)
-	offence_message[13]: "<img src=/material/ui/hud/illegal_trailer.mat kr=center><br offset=-5>@@offence_illegal_trailer@@"
+	offence_icon[0]: "/material/ui/hud/car_crash.mat" 		# car crash
+	offence_icon[1]: "/material/ui/hud/sleepy_driver.mat" 	# avoid sleeping
+	offence_icon[2]: "/material/ui/hud/wrong_way.mat" 		# wrong way
+	offence_icon[3]: "/material/ui/hud/speed_camera.mat" 	# speeding (camera)
+	offence_icon[4]: "/material/ui/hud/head_lights.mat" 	# no lights during night
+	offence_icon[5]: "/material/ui/hud/red_light.mat" 		# red lights
+	offence_icon[6]: "/material/ui/hud/speed_camera.mat" 	# speeding
+	offence_icon[7]: "/material/ui/hud/avoid_weighing.mat" 	# avoid weighing
+	offence_icon[8]: "/material/ui/hud/illegal_trailer.mat" # illegal trailer
+	offence_icon[9]: "/material/ui/hud/avoid_inspection.mat"# avoid inspection
+	offence_icon[10]: "/material/ui/hud/avoid_inspection.mat" # illegal border crossing
+	offence_icon[11]: "/material/ui/hud/eds.mat" 			# hard shoulder violation
+	offence_icon[12]: "/material/ui/hud/damaged_vehicle.mat"# damaged vehicle usage
+	offence_icon[13]: "/material/ui/hud/illegal_trailer.mat"# illegal trailer (weight station)
 
 	# timer decrease rate how much time it takes to decrease timer by 1 second (in seconds of real time)
 	timer_decrease_rate: 120	# 2 minutes
-
-	# police offence information message delay in seconds of real time
-	message_delay: 4.0
 
 	# increase fine if there is some police car nearby
 	police_nearby_fine_rate: 2

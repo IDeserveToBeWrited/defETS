@@ -93265,20 +93265,6 @@ sign_model : sign.5g09d
 	mass: 100.0
 }
 
-sign_model : sign.blkw_4e001
-{
-	sign_name: "fence mobile steel 01 blkw"
-	model_desc: "/model2/fences/fence_mobile_steel_01_blkw.pmd"
-	model_coll: "/model2/fences/fence_mobile_steel_01_blkw.pmc"
-	look_name: "default"
-	category: ""
-
-	dynamic: true
-	instanced: true
-	drop_sun_shadows: 1
-	mass: 100.0
-}
-
 sign_model : sign.4e008
 {
 	sign_name: "lamp industrial 02 de"
@@ -96357,8 +96343,14 @@ sign_model : sign.5q006
 	sign_name: "gas price gazgamel 01 lux"
 	model_desc: "/model2/gas_station/gas_price_gazgamel_01_lux.pmd"
 	model_coll: "/model2/gas_station/gas_price_gazgamel_01_lux.pmc"
+	look_name: "Default"
+	variant_name: threepan
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_gazgamel_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
 
 	dynamic: false
+	editable: true
 }
 sign_model : sign.greece_2t001
 {
@@ -96376,8 +96368,15 @@ sign_model : sign.5q007
 	sign_name: "gas price bnlx 01 lux"
 	model_desc: "/model2/gas_station/gas_price_bnlx_01_lux.pmd"
 	model_coll: "/model2/gas_station/gas_price_bnlx_01_lux.pmc"
+	look_name: "Default"
+	variant_name: threepan
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_bnlx_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
 
 	dynamic: false
+	editable: true
+	mass: &42c80000
 }
 
 sign_model : sign.6w008
@@ -96385,10 +96384,175 @@ sign_model : sign.6w008
 	sign_name: "gas price oranje 01 lux"
 	model_desc: "/model2/gas_station/gas_price_oranje_01_lux.pmd"
 	model_coll: "/model2/gas_station/gas_price_oranje_01_lux.pmc"
+	look_name: "Default"
+	variant_name: Default
+
+	dynamic_lod_desc[]: "/model2/gas_station/gas_price_oranje_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 80
 
 	dynamic: false
-	drop_sun_shadows: 0
-	mass: &42c80000
+	editable: true
+	mass: 100.0
 }
+
+sign_model : sign.bus_37001
+{
+	sign_name: "bus jankovic 01"
+	model_desc: "/model/sign/traffic/bus_jankovic_01.pmd"
+	model_coll: "/model/sign/traffic/bus_jankovic_01.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37002
+{
+	sign_name: "bus jankovic 02"
+	model_desc: "/model/sign/traffic/bus_jankovic_02.pmd"
+	model_coll: "/model/sign/traffic/bus_jankovic_02.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37003
+{
+	sign_name: "bus narva direction"
+	model_desc: "/model/sign/traffic/bus_narva_direction.pmd"
+	model_coll: "/model/sign/traffic/bus_narva_direction.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37004
+{
+	sign_name: "bus nynasham marine"
+	model_desc: "/model/sign/traffic/bus_nynasham_marine.pmd"
+	model_coll: "/model/sign/traffic/bus_nynasham_marine.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37005
+{
+	sign_name: "bus esbjerg marine"
+	model_desc: "/model/sign/traffic/bus_esbjerg_marine.pmd"
+	model_coll: "/model/sign/traffic/bus_esbjerg_marine.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37006
+{
+	sign_name: "bus kapikule lane merge"
+	model_desc: "/model/sign/traffic/bus_kapikule_lane_merge.pmd"
+	model_coll: "/model/sign/traffic/bus_kapikule_lane_merge.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37007
+{
+	sign_name: "bus kapikule info"
+	model_desc: "/model/sign/traffic/bus_kapikule_info.pmd"
+	model_coll: "/model/sign/traffic/bus_kapikule_info.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: false
+	drop_sun_shadows: 1
+}
+
+sign_model : sign.bus_37008
+{
+	sign_name: "bus narva direction mirrored"
+	model_desc: "/model/sign/traffic/bus_narva_direction_mirrored.pmd"
+	model_coll: "/model/sign/traffic/bus_narva_direction_mirrored.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_37009
+{
+	sign_name: "bus cone arrow"
+	model_desc: "/model/sign/traffic/bus_cone_arrow.pmd"
+	model_coll: "/model/sign/traffic/bus_cone_arrow.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.bus_3700a
+{
+	sign_name: "bus grebneva lanes"
+	model_desc: "/model/sign/traffic/bus_grebneva_lanes.pmd"
+	model_coll: "/model/sign/traffic/bus_grebneva_lanes.pmc"
+	look_name: "default"
+	category: "signs/bus"
+
+	dynamic: true
+	drop_sun_shadows: 1
+	mass: 100.0
+}
+
+sign_model : sign.7e005
+{
+	sign_name: "rusticrolls a stand 01 eu"
+	model_desc: "/model2/props/street/advert/eu/rusticrolls_a_stand_01_eu.pmd"
+	model_coll: "/model2/props/street/advert/eu/rusticrolls_a_stand_01_eu.pmc"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/rusticrolls_a_stand_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 35
+}
+
+sign_model : sign.04000
+{
+	sign_name: "red level 6 barrier"
+	model_desc: "/model/scania_competition/red_level_6_barrier.pmd"
+	model_coll: "/model/scania_competition/red_level_6_barrier.pmc"
+
+	dynamic: true
+	mass: &41a00000
+}
+
+sign_model : sign.0m001
+{
+	sign_name: "queenskebab a stand 01 eu"
+	model_desc: "/model2/props/street/advert/eu/queenskebab_a_stand_01_eu.pmd"
+	model_coll: "/model2/props/street/advert/eu/queenskebab_a_stand_01_eu.pmc"
+
+	dynamic_lod_desc[]: "/model2/props/street/advert/eu/queenskebab_a_stand_01_eu_lod1.pmd"
+	dynamic_lod_dist[]: 70
+}
+
 
 }

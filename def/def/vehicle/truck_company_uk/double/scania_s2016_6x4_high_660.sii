@@ -15,21 +15,23 @@ vehicle : .truck {
 	accessories[]: .exhaust_l
 	accessories[]: .f_badge
 	accessories[]: .f_bumper
+	accessories[]: .f_disc
 	accessories[]: .f_fender
+	accessories[]: .f_fendr_chs
+	accessories[]: .f_hub
 	accessories[]: .f_inlay_cab
 	accessories[]: .f_inlay_chs
 	accessories[]: .f_intake_cab
 	accessories[]: .f_intake_chs
 	accessories[]: .f_intk_b_cab
 	accessories[]: .f_intk_b_chs
+	accessories[]: .f_light_bmp
 	accessories[]: .f_light_chs
 	accessories[]: .f_light_mid
 	accessories[]: .f_light_top
 	accessories[]: .f_logo
 	accessories[]: .f_mirror
 	accessories[]: .f_wnd_frame
-	accessories[]: .fdisc
-	accessories[]: .fhub
 	accessories[]: .fnuts
 	accessories[]: .ftire
 	accessories[]: .intlight_bck
@@ -38,18 +40,17 @@ vehicle : .truck {
 	accessories[]: .paint
 	accessories[]: .r_bumper
 	accessories[]: .r_chs_cover
-	accessories[]: .r_fender
+	accessories[]: .r_disc
+	accessories[]: .r_disc2
 	accessories[]: .r_fendr_top
+	accessories[]: .r_hub
+	accessories[]: .r_hub2
 	accessories[]: .r_light
 	accessories[]: .r_mudflap
-	accessories[]: .rdisc
-	accessories[]: .rdisc2
-	accessories[]: .rhub
-	accessories[]: .rhub2
-	accessories[]: .rnuts
-	accessories[]: .rnuts2
-	accessories[]: .rtire
-	accessories[]: .rtire2
+	accessories[]: .r_nuts
+	accessories[]: .r_nuts2
+	accessories[]: .r_tire
+	accessories[]: .r_tire2
 	accessories[]: .s_badge
 	accessories[]: .s_mirror
 	accessories[]: .s_panel
@@ -76,7 +77,7 @@ vehicle_accessory : .cabin {
 
 
 vehicle_accessory : .transm {
-	data_path: "/def/vehicle/truck/scania.s_2016/transmission/g25cm_r.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/transmission/g33cm_r.sii"
 }
 
 
@@ -130,8 +131,25 @@ vehicle_addon_accessory : .f_bumper {
 }
 
 
+vehicle_wheel_accessory : .f_disc {
+	offset: 0
+	data_path: "/def/vehicle/f_disc/front_disc_02_matt_gray.sii"
+}
+
+
 vehicle_addon_accessory : .f_fender {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_fender/hgh_p_sensor.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_fender/hgh_p_sensor_2.sii"
+}
+
+
+vehicle_addon_accessory : .f_fendr_chs {
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_fendr_chs/paint.sii"
+}
+
+
+vehicle_wheel_accessory : .f_hub {
+	offset: 0
+	data_path: "/def/vehicle/f_hub/front_hub_01.sii"
 }
 
 
@@ -156,12 +174,17 @@ vehicle_addon_accessory : .f_intake_chs {
 
 
 vehicle_addon_accessory : .f_intk_b_cab {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_intk_b_cab/blk_glos.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_intk_b_cab/epicblack.sii"
 }
 
 
 vehicle_addon_accessory : .f_intk_b_chs {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_intk_b_chs/blk_glos.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_intk_b_chs/epicblack.sii"
+}
+
+
+vehicle_addon_accessory : .f_light_bmp {
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_light_bmp/modern.sii"
 }
 
 
@@ -171,17 +194,17 @@ vehicle_addon_accessory : .f_light_chs {
 
 
 vehicle_addon_accessory : .f_light_mid {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_light_mid/stock.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_light_mid/modern.sii"
 }
 
 
 vehicle_addon_accessory : .f_light_top {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_light_top/stock_p.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_light_top/modern_v8_paint.sii"
 }
 
 
 vehicle_addon_accessory : .f_logo {
-	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_logo/stock.sii"
+	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_logo/chrome.sii"
 }
 
 
@@ -192,18 +215,6 @@ vehicle_addon_accessory : .f_mirror {
 
 vehicle_addon_accessory : .f_wnd_frame {
 	data_path: "/def/vehicle/truck/scania.s_2016/accessory/f_wnd_frame/stock.sii"
-}
-
-
-vehicle_wheel_accessory : .fdisc {
-	offset: 0
-	data_path: "/def/vehicle/f_disc/front_disc_02_matt_gray.sii"
-}
-
-
-vehicle_wheel_accessory : .fhub {
-	offset: 0
-	data_path: "/def/vehicle/f_hub/front_hub_01.sii"
 }
 
 
@@ -255,6 +266,18 @@ vehicle_addon_accessory : .r_chs_cover {
 }
 
 
+vehicle_wheel_accessory : .r_disc {
+	offset: 0
+	data_path: "/def/vehicle/r_disc/rear_disc_01_matt_gray.sii"
+}
+
+
+vehicle_wheel_accessory : .r_disc2 {
+	offset: 2
+	data_path: "/def/vehicle/r_disc/rear_disc_01_matt_gray.sii"
+}
+
+
 vehicle_addon_accessory : .r_fender {
 	data_path: "/def/vehicle/truck/scania.s_2016/accessory/r_fender/6x2l_p.sii"
 }
@@ -263,6 +286,19 @@ vehicle_addon_accessory : .r_fender {
 vehicle_addon_accessory : .r_fendr_top {
 	data_path: "/def/vehicle/truck/scania.s_2016/accessory/r_fendr_top/6x2l_p.sii"
 }
+
+
+vehicle_wheel_accessory : .r_hub {
+	offset: 0
+	data_path: "/def/vehicle/r_hub/rear_hub_01.sii"
+}
+
+
+vehicle_wheel_accessory : .r_hub2 {
+	offset: 2
+	data_path: "/def/vehicle/r_hub/rear_hub_01.sii"
+}
+
 
 
 vehicle_addon_accessory : .r_light {
@@ -275,52 +311,30 @@ vehicle_addon_accessory : .r_mudflap {
 }
 
 
-vehicle_wheel_accessory : .rdisc {
-	offset: 0
-	data_path: "/def/vehicle/r_disc/rear_disc_01_matt_gray.sii"
-}
-
-
-vehicle_wheel_accessory : .rdisc2 {
-	offset: 2
-	data_path: "/def/vehicle/r_disc/rear_disc_01_matt_gray.sii"
-}
-
-
-vehicle_wheel_accessory : .rhub {
-	offset: 0
-	data_path: "/def/vehicle/r_hub/rear_hub_01.sii"
-}
-
-
-vehicle_wheel_accessory : .rhub2 {
-	offset: 2
-	data_path: "/def/vehicle/r_hub/rear_hub_01.sii"
-}
-
-
-vehicle_wheel_accessory : .rnuts {
+vehicle_wheel_accessory : .r_nuts {
 	offset: 0
 	data_path: "/def/vehicle/r_nuts/rear_nuts_01_steel.sii"
 }
 
 
-vehicle_wheel_accessory : .rnuts2 {
+vehicle_wheel_accessory : .r_nuts2 {
 	offset: 2
 	data_path: "/def/vehicle/r_nuts/rear_nuts_01_steel.sii"
 }
 
 
-vehicle_wheel_accessory : .rtire {
+
+vehicle_wheel_accessory : .r_tire {
 	offset: 0
 	data_path: "/def/vehicle/r_tire/1.sii"
 }
 
 
-vehicle_wheel_accessory : .rtire2 {
+vehicle_wheel_accessory : .r_tire2 {
 	offset: 2
 	data_path: "/def/vehicle/r_tire/1.sii"
 }
+
 
 
 vehicle_addon_accessory : .s_badge {

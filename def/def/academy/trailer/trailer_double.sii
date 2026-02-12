@@ -1,0 +1,94 @@
+SiiNunit
+{
+
+trailer : academy.trailer.double   		# double  13,6m + 7,8m
+{
+	trailer_definition: trailer_def.scs.box.double_3_2.curtain
+
+	accessories[]: .academy.trailer.double.chassis
+	accessories[]: .academy.trailer.double.rwheel
+	accessories[]: .academy.trailer.double.rwheel2
+	accessories[]: .academy.trailer.double.rwheel3
+	accessories[]: .academy.trailer.double.paint_job
+	accessories[]: .academy.trailer.double.trlr_cables
+	accessories[]: .academy.trailer.double.body
+
+	slave_trailer: .academy.trailer.double.second
+}
+
+vehicle_accessory: .academy.trailer.double.chassis
+{
+    	data_path: "/def/vehicle/trailer/scs_box/curtain_sider/chassis_hook.sii"
+}
+
+vehicle_wheel_accessory: .academy.trailer.double.rwheel
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .academy.trailer.double.rwheel2
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .academy.trailer.double.rwheel3
+{
+	offset: 4
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_paint_job_accessory: .academy.trailer.double.paint_job
+{
+    	data_path: "/def/academy/trailer/scs_box/curtain_sider/special_paint_job/academy_bd1.sii"
+}
+
+vehicle_addon_accessory: .academy.trailer.double.trlr_cables
+{
+    	data_path: "/def/vehicle/trailer/scs_box/curtain_sider/accessory/trlr_cablesd.sii"
+}
+
+vehicle_accessory: .academy.trailer.double.body
+{
+    	data_path: "/def/vehicle/trailer/scs_box/curtain_sider/accessory/body.sii"
+}
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXX second trailer - center axle XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+trailer : .academy.trailer.double.second
+{
+	accessories[]: .academy.trailer.double.second.chassis
+	accessories[]: .academy.trailer.double.second.rwheel
+	accessories[]: .academy.trailer.double.second.rwheel2
+	accessories[]: .academy.trailer.double.second.paint_job
+	accessories[]: .academy.trailer.double.second.body
+}
+
+vehicle_accessory: .academy.trailer.double.second.chassis
+{
+    	data_path: "/def/vehicle/trailer/scs_box/curtain_sider/chassis_ca.sii"
+}
+
+vehicle_wheel_accessory: .academy.trailer.double.second.rwheel
+{
+	offset: 0
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_wheel_accessory: .academy.trailer.double.second.rwheel2
+{
+	offset: 2
+    	data_path: "/def/vehicle/t_wheel/single_385_55_steel.sii"
+}
+
+vehicle_paint_job_accessory: .academy.trailer.double.second.paint_job
+{
+    	data_path: "/def/academy/trailer/scs_box/curtain_sider/special_paint_job/academy_bd1.sii"
+}
+vehicle_accessory: .academy.trailer.double.second.body
+{
+    	data_path: "/def/vehicle/trailer/scs_box/curtain_sider/accessory/body.sii"
+}
+
+}

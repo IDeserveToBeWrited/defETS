@@ -233,13 +233,8 @@ bindings_color_effect : .game.bindings.basic {
  mixes[]: "radiodown"
  mixes[]: "transemi"
  mixes[]: "adjuster" # keyboard.f4
- mixes[]: "advpage0" # keyboard.f5
- mixes[]: "advpage1" # keyboard.f6
- mixes[]: "advpage2" # keyboard.f7
- mixes[]: "advpage3" # keyboard.f8
- mixes[]: "advpage4" # keyboard.f9
- mixes[]: "advpagen" # keyboard.num0
- mixes[]: "advpagep"
+ mixes[]: "advzoomout" # keyboard.f5
+ mixes[]: "advoptions" # keyboard.f6
  mixes[]: "advmouse" # keyboard.f1
  mixes[]: "gar_man" # keyboard.g
  mixes[]: "photo_mode" # keyboard.equal
@@ -269,11 +264,10 @@ bindings_color_effect : .game.bindings.adviser {
  mixes[]: "showmirrors" # keyboard.f2
  mixes[]: "showhud" # keyboard.f3
  mixes[]: "adjuster" # keyboard.f4
- mixes[]: "advpage0" # keyboard.f5
- mixes[]: "advpage1" # keyboard.f6
- mixes[]: "advpage2" # keyboard.f7
- mixes[]: "advpage3" # keyboard.f8
- mixes[]: "advpage4" # keyboard.f9
+ mixes[]: "advzoomout" # keyboard.f5
+ mixes[]: "advzoomin" 
+ mixes[]: "advoptions" # keyboard.f6
+ mixes[]: "advetamode"
 }
 
 bindings_color_effect : .game.bindings.movement {
@@ -367,9 +361,8 @@ toggles_color_effect : .game.toggles {
  lift_axle_active_color: (0, 0.5, 1)
  lift_axle_trailer_passive_color: (1.0, 0.85, 0)
  lift_axle_trailer_active_color: (0, 0.5, 1)
- differential_lock_color: (0, 0.5, 1)
+ #differential_lock_color: (0, 0.5, 1)
  active_camera_color: (1, 0.66, 0)
- adviser_page_color: (0.76, 0, 1)
  attach_passive_color: (1.0, 0.85, 0)
  attach_active_color: (0, 1, 0)
  coupling_active_color: (1, 0, 0)
@@ -406,10 +399,10 @@ hurry_up_effect : .effect.game.hurry_up {
 police_color_effect : .effect.game.fine {
  animation_duration: 0.4
  repeats: 9
- keys_color1: (0.0, 0.11, 0.82)
- keys_color2: (0.0, 0.11, 0.82)
- base_color1: (0.0, 0.11, 0.82)
- base_color2: (0.05, 0.05, 0.05)
+ keys_color1: (0, 0, 1)
+ keys_color2: (1, 0, 0)
+ base_color1: (1, 0, 0)
+ base_color2: (0, 0, 1)
  fade_out_duration: 0.5
 }
 
@@ -433,265 +426,6 @@ beacon_effect : .effect.game.beacon {
  speed: 720
  # Available modes: rotate_left, rotate_right, blink, rotate_left_right, double_rotate_cross, double_rotate_left, double_rotate_right, double_blink_triple_wait.
  mode: rotate_right
-}
-
-########## TUTORIAL (GAME) ##########
-
-color_context : context.tutorial {
- layers[]: .layer.tutorial.base
- layers[]: .layer.tutorial.bindings
-}
-
-color_layer : .layer.tutorial.base {
- effects[]: .tutorial.base
-}
-
-base_color_effect : .tutorial.base {
- color: (0.1, 0.1, 0.1)
-}
-
-color_layer : .layer.tutorial.bindings {
- effects[]: .tutorial.bindings.init
- effects[]: .tutorial.bindings.move
- effects[]: .tutorial.bindings.cam1
- effects[]: .tutorial.bindings.cam1_blink
- effects[]: .tutorial.bindings.cam2
- effects[]: .tutorial.bindings.cam2_blink
- effects[]: .tutorial.bindings.adviser
- effects[]: .tutorial.bindings.transport
- effects[]: .tutorial.bindings.approach_mv
- effects[]: .tutorial.bindings.approach_ad
- effects[]: .tutorial.bindings.park
- effects[]: .tutorial.toggles
-}
-
-tutorial_color_effect : .tutorial.bindings.adviser {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: adviser
- blinking: true
-
- mixes[]: "advmouse" # keyboard.f1
-}
-
-tutorial_color_effect : .tutorial.bindings.init {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: init
- blinking: true
-
- mixes[]: "engine" # keyboard.e
-}
-
-tutorial_color_effect : .tutorial.bindings.move {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: move
- blinking: false
-
- mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
- mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
- mixes[]: "dforward" # keyboard.uarrow | keyboard.w
- mixes[]: "dbackward" # keyboard.darrow | keyboard.s
- mixes[]: "mve_left" # keyboard.larrow
- mixes[]: "mve_right" # keyboard.rarrow
- mixes[]: "mve_up" # keyboard.uarrow
- mixes[]: "mve_down" # keyboard.darrow
-}
-
-tutorial_color_effect : .tutorial.bindings.cam1 {
- color: (1.0, 0.85, 0)
- tutorial_stage: cam1
- blinking: false
-
- mixes[]: "cam1" # keyboard.key1
- mixes[]: "cam2" # keyboard.key2
- mixes[]: "cam3" # keyboard.key3
- mixes[]: "camcycle" # keyboard.key9
-}
-
-tutorial_color_effect : .tutorial.bindings.cam1_blink {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: cam1
- blinking: true
-
- mixes[]: "activate" # keyboard.enter
- mixes[]: "selectfcs" # keyboard.enter
-}
-
-tutorial_color_effect : .tutorial.bindings.cam2 {
- color: (1.0, 0.85, 0)
- tutorial_stage: cam2
- blinking: false
-
- mixes[]: "cam4" # keyboard.key4
- mixes[]: "cam5" # keyboard.key5
- mixes[]: "cam6" # keyboard.key6
- mixes[]: "cam7" # keyboard.key7
- mixes[]: "cam8" # keyboard.key8
-}
-
-tutorial_color_effect : .tutorial.bindings.cam2_blink {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: cam2
- blinking: true
-
- mixes[]: "activate" # keyboard.enter
- mixes[]: "selectfcs" # keyboard.enter
-}
-
-tutorial_color_effect : .tutorial.bindings.transport {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: transport
-
- mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
- mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
- mixes[]: "dforward" # keyboard.uarrow | keyboard.w
- mixes[]: "dbackward" # keyboard.darrow | keyboard.s
- mixes[]: "mve_left" # keyboard.larrow
- mixes[]: "mve_right" # keyboard.rarrow
- mixes[]: "mve_up" # keyboard.uarrow
- mixes[]: "mve_down" # keyboard.darrow
-}
-
-tutorial_color_effect : .tutorial.bindings.approach_mv {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: approach
- blinking: false
-
- mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
- mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
- mixes[]: "dforward" # keyboard.uarrow | keyboard.w
- mixes[]: "dbackward" # keyboard.darrow | keyboard.s
- mixes[]: "mve_left" # keyboard.larrow
- mixes[]: "mve_right" # keyboard.rarrow
- mixes[]: "mve_up" # keyboard.uarrow
- mixes[]: "mve_down" # keyboard.darrow
-}
-
-tutorial_color_effect : .tutorial.bindings.approach_ad {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: approach
- blinking: false
-
- mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
- mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
- mixes[]: "dforward" # keyboard.uarrow | keyboard.w
- mixes[]: "dbackward" # keyboard.darrow | keyboard.s
- mixes[]: "mve_left" # keyboard.larrow
- mixes[]: "mve_right" # keyboard.rarrow
- mixes[]: "mve_up" # keyboard.uarrow
- mixes[]: "mve_down" # keyboard.darrow
-
- mixes[]: "advpage0" # keyboard.f5
-}
-
-tutorial_color_effect : .tutorial.bindings.park {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: park
- blinking: false
-
- mixes[]: "dsteerleft" # keyboard.larrow | keyboard.a
- mixes[]: "dsteerright" # keyboard.rarrow | keyboard.d
- mixes[]: "dforward" # keyboard.uarrow | keyboard.w
- mixes[]: "dbackward" # keyboard.darrow | keyboard.s
- mixes[]: "mve_left" # keyboard.larrow
- mixes[]: "mve_right" # keyboard.rarrow
- mixes[]: "mve_up" # keyboard.uarrow
- mixes[]: "mve_down" # keyboard.darrow
-}
-
-toggles_color_effect : .tutorial.toggles {
- lblinker_color: (0, 1, 0)
- rblinker_color: (0, 1, 0)
- fwayflasher_color: (1, 0, 0)
- parking_brake_color: (1, 0, 0)
- wipers_slow_color: (0, 0.18, 1)
- wipers_fast_color: (0, 0.5, 1)
- wipers_fastest_color: (0, 0.9, 1)
- beacon_color: (1, 0.42, 0)
- parking_light_color: (0, 0, 1)
- low_beam_color: (0, 1, 0)
- high_beam_color: (0, 0, 1)
- cruise_ctrl_passive_color: (1.0, 0.85, 0)
- cruise_ctrl_active_color: (0, 0.5, 1)
- lift_axle_passive_color: (1.0, 0.85, 0)
- lift_axle_active_color: (0, 0.5, 1)
- lift_axle_trailer_passive_color: (1.0, 0.85, 0)
- lift_axle_trailer_active_color: (0, 0.5, 1)
- differential_lock_color: (0, 0.5, 1)
- #active_camera_color: (0, 0, 1)
- #adviser_page_color: (0, 0, 1)
- #attach_passive_color: (1.0, 0.85, 0)
- attach_active_color: (0, 1, 0)
- coupling_active_color: (1, 0, 0)
- activation_color: (0, 1, 0)
- retarder_color: (0, 0.5, 1)
- trailer_brake_passive_color: (1.0, 0.85, 0)
- trailer_brake_active_color: (0, 0.5, 1)
-}
-
-########## TUTORIAL (UI) ##########
-
-color_context : context.tutorial_ui {
- layers[]: .layer.tutorial_ui.base
- layers[]: .layer.tutorial_ui.bindings
-}
-
-color_layer : .layer.tutorial_ui.base {
- effects[]: .tutorial_ui.base
-}
-
-base_color_effect : .tutorial_ui.base {
- color: (0.1, 0.1, 0.1)
-}
-
-color_layer : .layer.tutorial_ui.bindings {
- effects[]: .tutorial_ui.bindings.init
- effects[]: .tutorial_ui.bindings.adviser.nav_page
- effects[]: .tutorial_ui.bindings.adviser.job_page
- effects[]: .tutorial_ui.bindings.adviser.outro
- effects[]: .tutorial_ui.bindings.delivered
-}
-
-tutorial_color_effect : .tutorial_ui.bindings.init {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: init
- blinking: true
-
- mixes[]: "selectfcs" # keyboard.enter
-}
-
-tutorial_color_effect : .tutorial_ui.bindings.adviser.nav_page {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: adviser
- adviser_stage: nav_page
- blinking: true
-
- mixes[]: "advpage1" # keyboard.f6
-}
-
-tutorial_color_effect : .tutorial_ui.bindings.adviser.job_page {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: adviser
- adviser_stage: job_page
- blinking: true
-
- mixes[]: "advpage2" # keyboard.f7
-}
-
-tutorial_color_effect : .tutorial_ui.bindings.adviser.outro {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: adviser
- adviser_stage: outro
- blinking: true
-
- mixes[]: "advmouse" # keyboard.f1
-}
-
-tutorial_color_effect : .tutorial_ui.bindings.delivered {
- color: (0.21, 0.83, 0.2)
- tutorial_stage: delivered
- blinking: true
-
- mixes[]: "selectfcs" # keyboard.enter
 }
 
 }

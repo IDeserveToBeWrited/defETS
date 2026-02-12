@@ -213,6 +213,14 @@ traffic_rule_data : traffic_rule.limit_60_t
 	str_params[]: "truck_all"
 }
 
+traffic_rule_data : traffic_rule.limit_70_t
+{
+	# name: "[speed] Speed limit 70 (trucks only)"
+
+	rule: "speed_limit"
+	num_params[]: 70
+	str_params[]: "truck_all"
+}
 
 traffic_rule_data : traffic_rule.limit_70
 {
@@ -292,6 +300,18 @@ traffic_rule_data : traffic_rule.limit_80_60
 	str_params[]: "truck_all"
 
 	additional_rules[]: traffic_rule.limit_60_t
+}
+
+traffic_rule_data : traffic_rule.limit_90_70
+{
+	# name: "[speed] Speed limit 90 (70 for trucks)"
+
+	rule: "speed_limit"
+	num_params[]: 90
+	num_params[]: 1		# 0 - include vehicle types (default), 1 - exclude vehicle types
+	str_params[]: "truck_all"
+
+	additional_rules[]: traffic_rule.limit_70_t
 }
 
 traffic_rule_data : traffic_rule.zone_30
@@ -407,6 +427,16 @@ traffic_rule_data : traffic_rule.buses_only
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "bus"
+}
+
+traffic_rule_data : traffic_rule.bus_lane
+{
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	str_params[]: "bus"
+
+    	additional_rules[]: traffic_rule.excl_nav
 }
 
 traffic_rule_data : traffic_rule.tr_bus_only

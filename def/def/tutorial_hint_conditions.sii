@@ -1,0 +1,935 @@
+SiiNunit
+{
+
+hcd::on_job : cond.job.on_any
+{
+    type: any
+    value_type: none
+}
+
+hcd::on_job : cond.job_trans.on_quick15
+{
+    type: quick
+    value_type: none
+    duration: 15
+}
+
+hcd::on_job : cond.job_fuel0.quick10
+{
+    type: quick
+    value_type: fuel_consumed
+    comparison_type: at_most
+    value: 0
+    duration: 10
+}
+
+hcd::on_job : cond.job_trans.to_quick15
+{
+    type: quick
+    value_type: none
+    duration: 15
+}
+
+hcd::completed_delivery_count : cond.deliveries.zero
+{
+    count: 0
+    comparison_type: equal
+}
+
+hcd::completed_delivery_count : cond.deliveries.min1
+{
+    count: 1
+    comparison_type: at_least
+}
+
+hcd::completed_delivery_count : cond.deliveries.min3
+{
+    count: 3
+    comparison_type: at_least
+}
+
+hcd::vehicle_component : cond.part.engine_off
+{
+    component: engine
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.engine_on
+{
+    component: engine
+}
+
+hcd::vehicle_component : cond.part.elec_off
+{
+    component: engine_electricity
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.elec_on
+{
+    component: engine_electricity
+}
+
+hcd::vehicle_component : cond.part_trans.engine_on15
+{
+    component: engine
+    duration: 15
+}
+
+hcd::vehicle_component : cond.part.lights_off
+{
+    component: lights
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.lights_on
+{
+    component: lights
+}
+
+hcd::vehicle_component : cond.part.lowbeam_off
+{
+    component: low_beam_lights
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.lowbeam_on
+{
+    component: low_beam_lights
+}
+
+hcd::vehicle_component : cond.part.highbeam_off
+{
+    component: high_beam_lights
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.highbeam_on
+{
+    component: high_beam_lights
+}
+
+hcd::vehicle_component : cond.part.wipers_off
+{
+    component: wipers
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.wipers_off3
+{
+    component: wipers
+    negate: true
+    duration: 3
+}
+
+hcd::vehicle_component : cond.part.wipers_off10
+{
+    component: wipers
+    negate: true
+    duration: 10
+}
+
+hcd::vehicle_component : cond.part.wipers_on
+{
+    component: wipers
+}
+
+hcd::vehicle_component : cond.part.wipers_on10
+{
+    component: wipers
+    duration: 10
+}
+
+hcd::vehicle_component : cond.part.blinkers_off
+{
+    component: blinkers
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.blinkers_on
+{
+    component: blinkers
+}
+
+hcd::vehicle_component : cond.part.diff_off
+{
+    component: diff_lock
+    negate: true
+}
+
+hcd::vehicle_component : cond.part.diff_on
+{
+    component: diff_lock
+}
+
+hcd::camera : cond.camera.interior
+{
+    modes[]: interior
+}
+
+hcd::camera : cond.cam_trans.interior5
+{
+    modes[]: interior
+    duration: 5
+}
+
+hcd::camera : cond.camera.exterior_all
+{
+    modes[]: behind
+    modes[]: top
+    modes[]: cabin
+    modes[]: window
+    modes[]: bumper
+    modes[]: wheel
+    modes[]: tv
+}
+
+hcd::speed : cond.speed.moving
+{
+    type: at_least
+    value: 5
+}
+
+hcd::speed : cond.speed.stop
+{
+    type: equal
+    value: 0
+}
+
+hcd::speed : cond.speed.stop2
+{
+    type: equal
+    value: 0
+    duration: 2
+}
+
+hcd::speed : cond.speed.stop3
+{
+    type: equal
+    value: 0
+    duration: 3
+}
+
+hcd::speed : cond.speed.stop10
+{
+    type: equal
+    value: 0
+    duration: 10
+}
+
+hcd::speed : cond.speed.stop15
+{
+    type: equal
+    value: 0
+    duration: 15
+}
+
+hcd::speed : cond.speed.over50
+{
+    type: at_least
+    value: 50
+}
+
+hcd::time : cond.time.night
+{
+    from: 21
+    to: 6
+}
+
+hcd::weather : cond.weather.n_raining
+{
+    type: raining
+    negate: true
+}
+
+hcd::weather : cond.weather.v_raining
+{
+    type: raining_on_vehicle
+}
+
+hcd::weather : cond.weath_trans.v_raining5
+{
+    type: raining_on_vehicle
+    duration: 5
+}
+
+hcd::weather : cond.weath_trans.v_raining15
+{
+    type: raining_on_vehicle
+    duration: 15
+}
+
+hcd::distance_to : cond.dist.delivery50
+{
+    object: delivery_point
+    value: 50
+}
+
+hcd::distance_to : cond.min_dist.delivery100
+{
+    object: delivery_point
+    value: 100
+    negate: true
+}
+
+hcd::distance_to : cond.min_dist.depot60
+{
+    object: target_depot
+    value: 60
+    negate: true
+}
+
+hcd::distance_to : cond.dist.depot50
+{
+    object: target_depot
+    value: 50
+}
+
+hcd::distance_to : cond.dist.depot50_240
+{
+    object: target_depot
+    value: 50
+    duration: 240
+}
+
+hcd::distance_to : cond.dist.depot50_300
+{
+    object: target_depot
+    value: 50
+    duration: 300
+}
+
+hcd::distance_to : cond.dist.service10
+{
+    object: service
+    value: 10
+}
+
+hcd::distance_to : cond.dist_50.n_city
+{
+    object: city
+    value: 50
+    negate: true
+}
+
+hcd::distance_to : cond.dist_200.n_cars_front
+{
+    object: vehicles_in_front
+    value: 200
+    negate: true
+}
+
+hcd::distance_to : cond.dist.landmark200
+{
+    object: landmark
+    value: 200
+}
+
+hcd::distance_to : cond.min_dist_10.landmark250
+{
+    object: landmark
+    value: 250
+    duration: 10
+    negate: true
+}
+
+hcd::distance_to : cond.dist.viewpoint200
+{
+    object: viewpoint
+    value: 200
+}
+
+hcd::distance_to : cond.min_dist_10.viewpoint250
+{
+    object: viewpoint
+    value: 250
+    duration: 10
+    negate: true
+}
+
+hcd::distance_to : cond.dist.rest200
+{
+    object: resting_place
+    value: 200
+}
+
+hcd::distance_to : cond.min_dist_10.rest250
+{
+    object: resting_place
+    value: 250
+    duration: 10
+    negate: true
+}
+
+hcd::distance_to : cond.dist.gas200
+{
+    object: filling_station
+    value: 200
+}
+
+hcd::distance_to : cond.min_dist_10.gas250
+{
+    object: filling_station
+    value: 250
+    duration: 10
+    negate: true
+}
+
+hcd::blinkers_required : cond.blinkers_req.on
+{
+}
+
+hcd::blinkers_required : cond.blinkers_req.off10
+{
+    negate: true
+    duration: 10
+}
+
+hcd::delivery_difficulty : cond.deliv_diff.any
+{
+    type: any
+}
+
+hcd::delivery_difficulty : cond.deliv_diff.none
+{
+    type: none
+}
+
+hcd::cargo_deliverable : cond.cargo.can_deliver
+{
+}
+
+hcd::impulse : cond.impulse.gas
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.5
+}
+
+hcd::impulse : cond.impulse.gas1
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.5
+    duration: 1
+}
+
+hcd::impulse : cond.impulse.gas_little
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.1
+}
+
+hcd::impulse : cond.impulse.pedals
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.5
+    mixes[]: backward
+    mix_thresholds[]: 0.5
+    mixes[]: clutch
+    mix_thresholds[]: 0.5
+}
+
+hcd::impulse : cond.impulse.gears
+{
+    impulses[]: gearup
+    impulses[]: geardown
+}
+
+hcd::impulse : cond.impulse.steering
+{
+    mixes[]: steering
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: -0.3
+}
+
+hcd::impulse : cond.impulse.pedal_steer
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.3
+    mixes[]: backward
+    mix_thresholds[]: 0.3
+    mixes[]: clutch
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: -0.3
+}
+
+hcd::impulse : cond.impulse.driving
+{
+    impulses[]: gearup
+    impulses[]: geardown
+    mixes[]: forward
+    mix_thresholds[]: 0.3
+    mixes[]: backward
+    mix_thresholds[]: 0.3
+    mixes[]: clutch
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: -0.3
+}
+
+hcd::impulse : cond.impulse.zoom
+{
+    impulses[]: camzoom
+}
+
+hcd::impulse : cond.impulse.activate1
+{
+    impulses[]: activate
+    duration: 1
+}
+
+hcd::transmission : cond.transmission.arcade
+{
+    type: arcade
+}
+
+hcd::transmission : cond.trans_trans.arcade5
+{
+    type: arcade
+    duration: 5
+}
+
+hcd::transmission : cond.transmission.seq
+{
+    type: sequential
+}
+
+hcd::transmission : cond.trans_trans.seq5
+{
+    type: sequential
+    duration: 5
+}
+
+hcd::transmission : cond.transmission.hshifter
+{
+    type: hshifter
+}
+
+hcd::transmission : cond.trans_trans.hshifter5
+{
+    type: hshifter
+    duration: 5
+}
+
+hcd::transmission : cond.transmission.auto
+{
+    type: automatic
+}
+
+hcd::transmission : cond.trans_trans.auto5
+{
+    type: automatic
+    duration: 5
+}
+
+hcd::transmission : cond.transmission.n_arcade
+{
+    type: arcade
+    negate: true
+}
+
+hcd::transmission : cond.transmission.n_seq
+{
+    type: sequential
+    negate: true
+}
+
+hcd::transmission : cond.transmission.n_hshifter
+{
+    type: hshifter
+    negate: true
+}
+
+hcd::transmission : cond.transmission.n_auto
+{
+    type: automatic
+    negate: true
+}
+
+hcd::gear : cond.gear.neutral
+{
+    value: 0
+}
+
+hcd::gear : cond.gear.n_neutral
+{
+    value: 0
+    negate: true
+}
+
+hcd::wheel_slip : cond.wheel_slip.true
+{
+}
+
+hcd::wheel_slip : cond.wheel_slip.false
+{
+    negate: true
+}
+
+hcd::wheels_on_ground : cond.wheels.air5
+{
+    percentage: 60
+    type: at_most
+    duration: 5
+}
+
+hcd::wheels_on_ground : cond.wheels.ground
+{
+    percentage: 90
+    type: at_least
+}
+
+hcd::low_visibility : cond.visibility.low_safe
+{
+    safety_factor: 0.3
+}
+
+hcd::vehicle_damage : cond.damage.core_max10
+{
+    part: core
+    value: 10
+    comparison_type: at_most
+}
+
+hcd::cvar_value : cond.auto_engine.on
+{
+    name: g_engine_start_auto
+    value: 0
+    negate: true
+}
+
+hcd::cvar_value : cond.auto_engine.off
+{
+    name: g_engine_start_auto
+    value: 0
+}
+
+hcd::cvar_value : cond.auto_diff.on
+{
+    name: g_auto_diff_lock
+    value: 0
+    negate: true
+}
+
+hcd::cvar_value : cond.auto_diff.off
+{
+    name: g_auto_diff_lock
+    value: 0
+}
+
+hcd::cvar_value : cond.autopark.on
+{
+    name: g_adviser_auto_parking
+    value: 0
+    negate: true
+}
+
+hcd::cvar_value : cond.autopark.off
+{
+    name: g_adviser_auto_parking
+    value: 0
+}
+
+hcd::cvar_value : cond.fatigue.off
+{
+    name: g_fatigue
+    value: 0
+}
+
+hcd::cvar_value : cond.fatigue.on
+{
+    name: g_fatigue
+    value: 0
+    negate: true
+}
+
+hcd::game_paused : cond.paused.was
+{
+}
+
+hcd::screen_visited : cond.visited.map
+{
+    screen_name: screen.map
+}
+
+hcd::borders_crossed_since_game_start : cond.borders.crossed
+{
+}
+
+hcd::items_collected : cond.no_items.landmark
+{
+    item_type: landmark
+    count: 0
+    comparison_type: equal
+}
+
+hcd::items_collected : cond.has_items.landmark
+{
+    item_type: landmark
+    count: 1
+    comparison_type: at_least
+}
+
+hcd::items_collected : cond.no_items.viewpoint
+{
+    item_type: viewpoint
+    count: 0
+    comparison_type: equal
+}
+
+hcd::items_collected : cond.has_items.viewpoint
+{
+    item_type: viewpoint
+    count: 1
+    comparison_type: at_least
+}
+
+hcd::fatigue : cond.fatigue.min_50
+{
+    value: 50
+    comparison_type: at_least
+}
+
+hcd::fatigue : cond.fatigue.max_10
+{
+    value: 10
+    comparison_type: at_most
+}
+
+hcd::electric_vehicle : cond.electric.is
+{
+}
+
+hcd::tank_fullness : cond.gas.max_50
+{
+    value: 50
+    comparison_type: at_most
+}
+
+hcd::tank_fullness : cond.gas.min_90
+{
+    value: 90
+    comparison_type: at_least
+}
+
+hcd::on_trigger : cond.trigger.gas
+{
+    types[]: filling_station
+}
+
+hcd::notification_block : cond.notif_block.persistent
+{
+    persistent: true
+}
+
+hcd::can_start_engine_without_electronics : cond.engine_ele.without
+{
+}
+
+hcd::can_start_engine_without_electronics : cond.engine_ele.with
+{
+    negate: true
+}
+
+hcd::hint_ref : cond.hint_ref.4Acancel
+{
+    target_name: hint.indicators.a
+
+    check_cooldown: true
+    target_on_cooldown: false
+
+    check_cancel_count: true
+    target_cancel_count: 2
+    cancel_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.3Acomplete
+{
+    target_name: hint.wipers.a
+
+    check_cooldown: true
+    target_on_cooldown: false
+
+    check_show_count: true
+    target_show_count: 1
+    show_count_comp: at_least
+}
+
+hcd::hint_ref : cond.hint_ref.2An_compl
+{
+    target_name: hint.driv_arc.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.9An_compl
+{
+    target_name: hint.driv_auto.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.7An_compl
+{
+    target_name: hint.driv_seq.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.14An_compl
+{
+    target_name: hint.driv_hshift.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.8Acompl
+{
+    target_name: hint.cam_ext.a
+
+    check_complete_count: true
+    target_complete_count: 1
+    complete_count_comp: at_least
+}
+
+hcd::hint_ref : cond.hint_ref.11Acompl
+{
+    target_name: hint.cam_int.a
+
+    check_complete_count: true
+    target_complete_count: 1
+    complete_count_comp: at_least
+}
+
+hcd::hint_ref : cond.hint_ref.28An_compl
+{
+    target_name: hint.pause_border.a
+
+    check_show_count: true
+    target_show_count: 0
+    show_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.10An_compl
+{
+    target_name: hint.fin_deliv.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::hint_ref : cond.hint_ref.29An_compl
+{
+    target_name: hint.fin_deliv2.a
+
+    check_complete_count: true
+    target_complete_count: 0
+    complete_count_comp: equal
+}
+
+hcd::condition_and : cond.and.acc_slip_1
+{
+    conditions[]: cond.impulse.gas_little
+    conditions[]: cond.wheel_slip.true
+
+    duration: 1
+}
+
+hcd::condition_and : cond.and.acc_grip_5
+{
+    conditions[]: cond.impulse.gas_little
+    conditions[]: cond.wheel_slip.false
+
+    duration: 5
+}
+
+hcd::condition_and : cond.trans_and.wipers15
+{
+    conditions[]: cond.part.engine_on
+    conditions[]: cond.weather.v_raining
+    conditions[]: cond.camera.interior
+
+    duration: 15
+}
+
+hcd::condition_or : cond.dismiss.arcade
+{
+    conditions[]: cond.part.engine_off
+    conditions[]: cond.transmission.n_arcade
+}
+
+hcd::condition_or : cond.dismiss.auto
+{
+    conditions[]: cond.part.engine_off
+    conditions[]: cond.transmission.n_auto
+}
+
+hcd::condition_or : cond.dismiss.sequential
+{
+    conditions[]: cond.part.engine_off
+    conditions[]: cond.transmission.n_seq
+}
+
+hcd::condition_or : cond.dismiss.hshifter
+{
+    conditions[]: cond.part.engine_off
+    conditions[]: cond.transmission.n_hshifter
+}
+
+hcd::condition_or : cond.dismiss.wipers
+{
+    conditions[]: cond.part.engine_off
+    conditions[]: cond.weather.n_raining
+}
+
+hcd::condition_or : cond.show.cam_int
+{
+    conditions[]: cond.speed.stop
+    conditions[]: cond.hint_ref.8Acompl
+}
+
+hcd::condition_or : cond.show.cam_ext
+{
+    conditions[]: cond.speed.stop
+    conditions[]: cond.hint_ref.11Acompl
+}
+
+hcd::condition_or : cond.elec_off_or.eng_ele_wo
+{
+    conditions[]: cond.part.elec_off
+    conditions[]: cond.engine_ele.without
+}
+
+hcd::always_true : cond.always.true
+{}
+
+hcd::always_true : cond.always.true3
+{
+    duration: 3
+}
+
+hcd::always_true : cond.always.true60
+{
+    duration: 60
+}
+
+hcd::always_true : cond.always.false
+{
+    negate: true
+}
+
+}
