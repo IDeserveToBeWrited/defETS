@@ -172,10 +172,13 @@ trigger_action : trig_action.toll_end
 
 trigger_action : trig_action.hud_parking
 {
-	name: "Parking HUD activation (auto reset)"
+	name: "Parking HUD activation - Large vehicles"
 
 	command: "hud_activate"
 	num_params[]: 3
+
+	str_params[]: "truck"
+	str_params[]: "bus"
 }
 
 trigger_action : trig_action.toll_01

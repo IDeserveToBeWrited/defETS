@@ -1,0 +1,62 @@
+traffic_vehicle : traffic.man.tgx_2020.gm_6x4
+{
+	accessories[]: .man.tgx_2020.gm_6x4.chassis
+	accessories[]: .man.tgx_2020.gm_6x4.fwheel
+	accessories[]: .man.tgx_2020.gm_6x4.rwheel
+	accessories[]: .man.tgx_2020.gm_6x4.rwheel1
+	accessories[]: .man.tgx_2020.gm_6x4.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 7710
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	#color from upgrade shop
+        color[]:(0.0103, 0.0171, 0.0835)  #nightblue  
+	color[]:(0.0664, 0.0664, 0.0664)  #shadowgrey
+        color[]: (0.2458, 0.0134, 0.013)  #rosered
+        color[]: (0.9911, 0.5906, 0.0781) #sunnyyellow
+	color[]: (0.0343, 0.0343, 0.0343) #black
+	color[]: (0.3467, 0.3467, 0.3467) #silver
+	color[]: (0.0026, 0.0139, 0.0737) #blue
+	color[]: (0.7307, 0.7307, 0.7307) #white
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .man.tgx_2020.gm_6x4.chassis
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_2020/man_tgx_2020_gm_6x4.sii"
+}
+vehicle_wheel_accessory: .man.tgx_2020.gm_6x4.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man.tgx_2020.gm_6x4.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .man.tgx_2020.gm_6x4.rwheel1
+{
+	offset: 2
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+vehicle_addon_accessory : .man.tgx_2020.gm_6x4.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/man.tgx_2020/accessory/trlr_cables/stock.sii"
+}
+
+

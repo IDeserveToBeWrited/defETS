@@ -1,0 +1,47 @@
+traffic_vehicle : traffic.daf.xf_electric.4x2
+{
+	accessories[]: .daf.xf_electric.4x2.chassis
+	accessories[]: .daf.xf_electric.4x2.fwheel
+	accessories[]: .daf.xf_electric.4x2.rwheel
+	accessories[]: .daf.xf_electric.4x2.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	tags[]: dealer
+
+	vehicle_mass: 7710
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_2.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+
+	#color from upgrade shop
+	color[]: (0.7307, 0.7307, 0.7307) #white
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .daf.xf_electric.4x2.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_electric/daf_xf_electric_4x2.sii"
+}
+vehicle_wheel_accessory: .daf.xf_electric.4x2.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xf_electric.4x2.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+vehicle_addon_accessory : .daf.xf_electric.4x2.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_electric/accessory/trlr_cables/stock.sii"
+}

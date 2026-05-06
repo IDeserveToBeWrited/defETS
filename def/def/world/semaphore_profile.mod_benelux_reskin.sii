@@ -1,0 +1,489 @@
+SiiNunit
+{
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+
+tr_semaphore_profile : tr_sem_prof.zal_br
+{
+	name: "drawbridge_zelzatebrug"
+	
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 1.0
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (15.0, 150.0, 145.0, 15.0)     # Activation distances in [m] for mover speed 5.0 m/s
+	id_map[0]: 0
+	
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (175.0, 180.0, 155.0, 175)   # Activation distances in [m] for mover speed 5.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# semaphores around the bridge - 'functional' locator with no model
+	type[2]: barrier_distance
+	interval[2]: (180.0, 181.0, 165.0, 175)   # Activation distances in [m] for mover speed 5.0 m/s
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "zelz_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_13"
+
+	id_map[5]: 1
+	model[5]: "bar_br_13"
+
+	id_map[6]: 2
+	model[6]: "col_br_01"
+
+	id_map[7]: 2
+	model[7]: "col_br_01"
+
+	
+}
+
+tr_semaphore_profile : tr_sem_prof.zij_br
+{
+	name: "drawbridge_zijkanaalbrug"
+	# Pro rychlost moveru 2.0 m/s a animaci 50s
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 0.5
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (5.0, 60.0, 55.0, 5.0)       # Activation distances in [m] for mover speed 2.0 m/s
+	id_map[0]: 0
+
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (45.0, 80.0, 65.0, 55)     # Activation distances in [m] for mover speed 2.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# SEMAFORY
+	type[2]: barrier_distance
+	interval[2]: (49.0, 81.0, 75.0, 57)     # Activation distances in [m] for mover speed 2.0 m/s
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "zijk_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_11"
+
+	id_map[5]: 1
+	model[5]: "bar_br_11"
+
+	id_map[6]: 2
+	model[6]: "col_br_01"
+
+	id_map[7]: 2
+	model[7]: "col_br_01"
+
+}
+
+tr_semaphore_profile : tr_sem_prof.zij_br2
+{
+	name: "drawbridge_zijkanaalbrug"
+	# Pro rychlost moveru 2.0 m/s a animaci 50s
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 0.5
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (5.0, 60.0, 55.0, 5.0)       # Activation distances in [m] for mover speed 2.0 m/s
+	id_map[0]: 0
+
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (45.0, 80.0, 65.0, 55)     # Activation distances in [m] for mover speed 2.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# SEMAFORY
+	type[2]: barrier_distance
+	interval[2]: (49.0, 81.0, 75.0, 57)     # Activation distances in [m] for mover speed 2.0 m/s
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "zijk_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_11"
+
+	id_map[5]: 1
+	model[5]: "bar_br_11"
+
+	id_map[6]: 2
+	model[6]: "col_br_02"
+
+	id_map[7]: 2
+	model[7]: "col_br_02"
+
+}
+
+tr_semaphore_profile : tr_sem_prof.voll_br
+{
+	name: "drawbridge_vollenhoverbrug"
+	
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 1.0
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]:  (1.0, 90.0, 85.0, 1.0)     # Activation distances in [m] for mover speed 3.0 m/s
+	id_map[0]: 0
+	
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (100.0, 95.0, 90.0, 100.0)   # Activation distances in [m] for mover speed 3.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# semaphores - 'functional' locator with no model
+	type[2]: barrier_distance
+	interval[2]: (106.0, 96.0, 100.0, 103.0)   # Activation distances in [m] for mover speed 3.0 m/s
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "volle_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_12"
+
+	id_map[5]: 1
+	model[5]: "bar_br_12"
+
+	# models of semaphores
+	id_map[6]: 2
+	model[6]: "col_br_02"
+
+	id_map[7]: 2
+	model[7]: "col_br_02"
+	
+}
+
+tr_semaphore_profile : tr_sem_prof.ste_br
+{
+	name: "swingbridge_stevinsluizen"
+	
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 1.0
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (60.0, 137.5, 130.0, 35)     # Activation distances in [m] for mover speed 2.0 m/s
+	id_map[0]: 0
+	
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (107.5, 150.0, 140.0, 115.0)   # Activation distances in [m] for mover speed 2.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# semaphores around the bridge - 'functional' locator with no model
+	type[2]: barrier_distance
+	interval[2]: (110.0, 151.0, 144.0, 117.0)   # Activation distances in [m] for mover speed 2.0 m/s5
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "stev_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_14"
+
+	id_map[5]: 1
+	model[5]: "bar_br_14"
+
+	# models of semaphores
+	id_map[6]: 2
+	model[6]: "col_br_01"
+
+	id_map[7]: 2
+	model[7]: "col_br_01"
+
+	id_map[8]: 2
+	model[8]: ""
+
+	
+}
+
+tr_semaphore_profile : tr_sem_prof.ste_br2
+{
+	name: "swingbridge_stevinsluizen"
+	
+	# Minimum delay after orange-to-green distance before barriers go up
+	cycle[]: 1.0
+	
+	# NOTE: 'barrier_distance' semaphore locators are used for *detecting mover* in map which will activate the bridge
+	# they must be placed in the middle of the bridge at the *expected water level* (i.e. *below* the bridge)
+	
+	# Distances in [m]:
+	#
+	# crossing <-> object rear (green)
+	# object front <-> crossing (orange-to-red)
+	# object front <-> crossing (red)
+	# crossing <-> object rear (orange-to-green)
+	#
+	# moving bridge part - 'functional' locator with no model
+	type[0]: barrier_distance
+	model[0]: ""
+	interval[0]: (60.0, 137.5, 130.0, 35)     # Activation distances in [m] for mover speed 2.0 m/s
+	id_map[0]: 0
+	
+	# barriers around the bridge - 'functional' locator with no model
+	type[1]: barrier_distance
+	interval[1]: (107.5, 150.0, 140.0, 115.0)   # Activation distances in [m] for mover speed 2.0 m/s
+	model[1]: ""
+	id_map[1]: 1
+
+	# semaphores around the bridge - 'functional' locator with no model
+	type[2]: barrier_distance
+	interval[2]: (110.0, 151.0, 144.0, 117.0)   # Activation distances in [m] for mover speed 2.0 m/s5
+	model[2]: ""
+	id_map[2]: 2
+	
+	# the rest of semaphore locators (ID 2+) are just models 'obeying' corresponding functional locators
+	type[3]: model_only
+	
+	# model of moving bridge part
+	id_map[3]: 0
+	model[3]: "stev_br"
+
+	# models of bariers
+	id_map[4]: 1
+	model[4]: "bar_br_14"
+
+	id_map[5]: 1
+	model[5]: "bar_br_14"
+
+	# models of semaphores
+	id_map[6]: 2
+	model[6]: "col_br_01"
+
+	id_map[7]: 2
+	model[7]: ""
+
+	id_map[8]: 2
+	model[8]: "gnt_br_01"
+
+	
+}
+
+
+###################################################################################### MAIN SEMAPHORE PROPHILES EDITING #############################################################
+################################################################################################# BELGIUM ###########################################################################
+tr_semaphore_profile : tr_sem_prof.2ph.belgium
+{
+
+	name: "two phases - Belgium"
+
+	inherited: tr_sem_prof.2ph
+	
+	interval[]: (15.0, 2.0, 23.0, 0.0)		# green > yellow > red > yellow
+	
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.2phm.belgium
+{
+
+	name: "two phases mirrored - Belgium "
+
+	inherited: tr_sem_prof.2phm
+	
+	interval[]: (15.0, 2.0, 23.0, 0.0)		# green > yellow > red > yellow
+
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.3ph.belgium
+{
+
+	name: "three phases - Belgium"
+
+	inherited: tr_sem_prof.3ph
+	
+	interval[]: (15.0, 2.0, 44.0, 0.0)		# green > yellow > red > yellow
+
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+################################################################################################# NETHERLANDS ###########################################################################
+tr_semaphore_profile : tr_sem_prof.2ph.netherlands
+{
+
+	name: "two phases - Netherlands"
+
+	inherited: tr_sem_prof.2ph
+	
+	interval[]: (15.0, 2.0, 23.0, 0.0)		# green > yellow > red > yellow
+
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.2phm.netherlands
+{
+
+	name: "two phases mirrored - Netherlands"
+
+	inherited: tr_sem_prof.2phm
+	
+	interval[]: (15.0, 2.0, 23.0, 0.0)		# green > yellow > red > yellow
+
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.3ph.netherlands
+{
+
+	name: "three phases - Netherlands"
+
+	inherited: tr_sem_prof.3ph
+	
+	interval[]: (15.0, 2.0, 44.0, 0.0)		# green > yellow > red > yellow
+
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+################################################################################################# LUXEMBOURG ###########################################################################
+tr_semaphore_profile : tr_sem_prof.2ph.luxembourg
+{
+
+	name: "two phases - Luxembourg"
+
+	inherited: tr_sem_prof.2ph
+	
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.2phm.luxembourg
+{
+
+	name: "two phases mirrored - Luxembourg"
+
+	inherited: tr_sem_prof.2phm
+	
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+tr_semaphore_profile : tr_sem_prof.3ph.luxembourg
+{
+
+	name: "three phases - Luxembourg"
+
+	inherited: tr_sem_prof.3ph
+	
+	sleep_time_start: 1410			 		# 23:30
+	sleep_time_end: 180 					# 03:00
+
+}
+
+
+
+}

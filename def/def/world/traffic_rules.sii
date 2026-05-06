@@ -436,7 +436,7 @@ traffic_rule_data : traffic_rule.bus_lane
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
 	str_params[]: "bus"
 
-    	additional_rules[]: traffic_rule.excl_nav
+	additional_rules[]: traffic_rule.excl_nav
 }
 
 traffic_rule_data : traffic_rule.tr_bus_only
@@ -496,6 +496,8 @@ traffic_rule_data : traffic_rule.border_area
 
 	additional_rules[]: traffic_rule.s_car_h
 	additional_rules[]: traffic_rule.s_truck_h
+
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.s_no_train
@@ -673,6 +675,7 @@ traffic_rule_data : traffic_rule.rest_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.gas_area
@@ -694,6 +697,7 @@ traffic_rule_data : traffic_rule.gas_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.truck_stop
@@ -722,6 +726,7 @@ traffic_rule_data : traffic_rule.weigh_area
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.tollgate
@@ -729,6 +734,7 @@ traffic_rule_data : traffic_rule.tollgate
 	name: "[context] Tollgate area"
 
 	additional_rules[]: traffic_rule.excl_nav
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.border_cross
@@ -738,6 +744,7 @@ traffic_rule_data : traffic_rule.border_cross
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.limit_30
 	additional_rules[]: traffic_rule.excl_nav
+	additional_rules[]: traffic_rule.no_tow
 
 	additional_rules[]: traffic_rule.s_car_b
 	additional_rules[]: traffic_rule.s_truck_b
@@ -750,6 +757,7 @@ traffic_rule_data : traffic_rule.border_cr_s
 
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.excl_nav
+	additional_rules[]: traffic_rule.no_tow
 
 	additional_rules[]: traffic_rule.s_car_b
 	additional_rules[]: traffic_rule.s_truck_b
@@ -812,6 +820,7 @@ traffic_rule_data : traffic_rule.company_area
 	additional_rules[]: traffic_rule.s_truck_d
 	additional_rules[]: traffic_rule.s_car_d
 	additional_rules[]: traffic_rule.s_car_c_d
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.dealer
@@ -821,6 +830,7 @@ traffic_rule_data : traffic_rule.dealer
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.ferry
@@ -830,6 +840,7 @@ traffic_rule_data : traffic_rule.ferry
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.bus_station
@@ -839,6 +850,7 @@ traffic_rule_data : traffic_rule.bus_station
 	additional_rules[]: traffic_rule.private_area
 	additional_rules[]: traffic_rule.no_pl_limit
 	additional_rules[]: traffic_rule.limit_30
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.depot_area
@@ -847,6 +859,7 @@ traffic_rule_data : traffic_rule.depot_area
 
 	str_params[]: "Please use rule '[context] Company area' instead over the *whole* company area - including entrance roads and the company prefab."
 	additional_rules[]: traffic_rule.company_area
+	additional_rules[]: traffic_rule.no_tow
 }
 
 traffic_rule_data : traffic_rule.urban_start
@@ -1109,7 +1122,24 @@ traffic_rule_data : traffic_rule.rail_train
 	num_params[]: 1 	# set vehicle access
 	num_params[]: 1 	# set trailer access
 	num_params[]: 0 	# disable player access
-	str_params[]: "rail_train"
+	str_params[]: "train"
+	str_params[]: "train_custom"
+
+	additional_rules[]: traffic_rule.lights_on
+	additional_rules[]: traffic_rule.private_area
+}
+
+traffic_rule_data : traffic_rule.rail_train_w
+{
+	rule: "actor_access"
+	num_params[]: 1 	# 0 - disallow, 1 - allow
+	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
+	num_params[]: 1 	# set vehicle access
+	num_params[]: 1 	# set trailer access
+	num_params[]: 0 	# disable player access
+	str_params[]: "train"
+	str_params[]: "train_wire"
+	str_params[]: "train_custom"
 
 	additional_rules[]: traffic_rule.lights_on
 	additional_rules[]: traffic_rule.private_area
@@ -1118,7 +1148,7 @@ traffic_rule_data : traffic_rule.rail_train
 traffic_rule_data : traffic_rule.train_cross
 {
 	# name: [prefab] Train crossing
-	additional_rules[]: traffic_rule.rail_train
+	additional_rules[]: traffic_rule.rail_train_w
 }
 
 traffic_rule_data : traffic_rule.rail_tram
@@ -1367,6 +1397,12 @@ traffic_rule_data : traffic_rule.border_truck
 
 	additional_rules[]: traffic_rule.trucks_only
 	additional_rules[]: traffic_rule.excl_nav
+}
+
+traffic_rule_data : traffic_rule.no_tow
+{
+	rule: "property"
+	num_params[]: 31
 }
 
 }

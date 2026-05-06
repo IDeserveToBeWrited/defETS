@@ -1,0 +1,43 @@
+#----------------------------------------------------------------
+# Default - Netherland
+#----------------------------------------------------------------
+traffic_vehicle : traffic.dd_loco
+{
+	accessories[]: .dd.chassis
+	accessories[]: .dd.fwheel
+	accessories[]: .dd.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 132000
+	engine_power: 2000
+
+	trailer_chains[]: "train_car.dd.cart1 | train_car.dd.cart2 | train_car.dd.end"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: passenger
+}
+
+vehicle_accessory: .dd.chassis
+{
+	data_path: "/def/vehicle/ai/train_dutch_double/loco.sii"
+}
+
+vehicle_wheel_accessory: .dd.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .dd.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+

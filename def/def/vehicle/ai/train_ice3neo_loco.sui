@@ -1,0 +1,98 @@
+traffic_vehicle : traffic.ice3_loco
+{
+	accessories[]: .ice3_loco.chassis
+	accessories[]: .ice3_loco.fwheel
+	accessories[]: .ice3_loco.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	#
+	engine_power: 520	#
+
+	trailer_chains[]: "train_car.ice3_car1 | train_car.ice3_car2 | train_car.ice3_car3 | train_car.ice3_car4 | train_car.ice3_end"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+	lod_dist[]: 150
+
+
+	spawn_condition[]: .traffic.ice3_loco.condition.city
+}
+
+vehicle_accessory: .ice3_loco.chassis
+{
+	data_path: "/def/vehicle/ai/ice3neo/chassis_loco.sii"
+}
+vehicle_wheel_accessory: .ice3_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .ice3_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.ice3_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "amsterdam"
+	str_param[]: "calais"
+	str_param[]: "paris"
+	str_param[]: "brussel"
+	str_param[]: "rotterdam"
+	str_param[]: "dover"
+	str_param[]: "antwerp"
+	str_param[]: "reims"
+	str_param[]: "eindhoven"
+	
+}
+################################### RED Variant (German,Belgium,Netherlands)###############
+traffic_vehicle : traffic.ice3_r_loco
+{
+	accessories[]: .ice3_r_loco.chassis
+	accessories[]: .ice3_r_loco.fwheel
+	accessories[]: .ice3_r_loco.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	#
+	engine_power: 520	#
+
+	trailer_chains[]: "train_car.ice3_r_car1 | train_car.ice3_r_car2 | train_car.ice3_r_car3 | train_car.ice3_r_car4 | train_car.ice3_r_end"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+
+	lod_dist[]: 50
+	lod_dist[]: 100
+	lod_dist[]: 150
+
+
+}
+
+vehicle_accessory: .ice3_r_loco.chassis
+{
+	data_path: "/def/vehicle/ai/ice3neo/chassis_loco_red.sii"
+}
+vehicle_wheel_accessory: .ice3_r_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .ice3_r_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+

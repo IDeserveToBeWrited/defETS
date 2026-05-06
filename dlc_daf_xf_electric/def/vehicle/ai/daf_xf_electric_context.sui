@@ -1,0 +1,66 @@
+traffic_vehicle : traffic.daf.xf_electric.np.context
+{
+	accessories[]: .daf.xf_electric.np.context.chassis
+	accessories[]: .daf.xf_electric.np.context.fwheel
+	accessories[]: .daf.xf_electric.np.context.rwheel
+	accessories[]: .daf.xf_electric.np.context.trlr_cables
+
+	max_speed: 90
+
+	vehicle_mass: 7164
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+
+	color[]: (0.8307, 0.8307, 0.8307) #white
+
+
+	tags[]: daf_fac
+	tags[]: context
+	tags[]: electric
+	tags[]: no_lp
+
+	spawn_condition[]: .traffic.daf.xf_electric.np.context.spawn.condition
+	spawn_condition[]: .traffic.daf.xf_electric.np.context.spawn.condition2
+
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.daf.xf_electric.np.context.spawn.condition
+{
+	type: area
+	str_param[]: "daf_fac"
+}
+traffic_spawn_condition: .traffic.daf.xf_electric.np.context.spawn.condition2
+{
+	type: area
+	str_param[]: "electric"
+}
+
+
+vehicle_accessory: .daf.xf_electric.np.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xf_electric/daf_xf_electric_4x2.sii"
+
+}
+vehicle_wheel_accessory: .daf.xf_electric.np.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xf_electric.np.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.xf_electric.np.context.trlr_cables
+{
+
+	data_path: "/def/vehicle/ai/truck/daf.xf_electric/accessory/trlr_cables/stock.sii"
+}

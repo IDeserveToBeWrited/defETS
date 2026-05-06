@@ -1,0 +1,609 @@
+SiiNunit
+{
+
+# For modders: Please do not modify this file if you want to add a new entry. Create in
+# this directory a new file "<base_name>.<idofyourmod>.sii" where <base_name> is name of
+# base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
+# some string which is unlikely to conflict with other mod.
+#
+# Warning: Even if the units are specified in more than one source file, they share the
+# same namespace so suffixes or prefixes should be used to avoid conflicts.
+curve_model : curve.lux_3r001
+{
+	model_desc: "/model2/building/flats/flats_lux/flats_close_05_lu_lux.pmd"
+	name: "flats close 05 lux"
+
+	variation[]: "var1 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center1,center2,center2,center3,center1 : 1.0 | center2,center3,center1,center1,center3 : 1.0 | center3,center2,center1,center3,center2,center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	variation[]: "var2 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center4,center5,center6,center4,center5,center6 : 1.0 | center5,center4,center6,center6,center4 : 1.0 | center6,center4,center5,center6 : 1.0"
+	start_part[]: "start2"
+	end_part[]: "end2"
+
+	dynamic_lod_desc[]: "/model2/building/flats/flats_lux/flats_close_05_lu_lux_lod1.pmd"
+	dynamic_lod_dist[]: 80
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "center4 | ovr1 : 1.0"
+	overlay[]: "center5 | ovr1 : 1.0"
+	overlay[]: "center6 | ovr1 : 1.0"
+}
+
+curve_model : curve.lux_4g001
+{
+	model_desc: "/model2/building/flats_mid/flats_mid_01_nl_lux.pmd"
+
+	variation[]: "mix | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "low | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	dynamic_lod_desc[]: "/model2/building/flats_mid/flats_mid_01_nl_lux_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+curve_model : curve.lux_0o000
+{
+	model_desc: "/model2/railing/barrier/barrier_metal_01_be_lux.pmd"
+
+	variation[]: "var1 | center1 : 1.0 | center2 : 1.0"
+	start_part[]: "start1 | start2"
+	end_part[]: "end1 | end2"
+	variation[]: "var2 | center3 : 1.0 | center4 : 1.0"
+	start_part[]: "start3 | start4"
+	end_part[]: "end3 | end4"
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_metal_01_be_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "center4 | ovr1 : 1.0"
+}
+
+curve_model : curve.lux_0u000
+{
+	model_desc: "/model2/railing/barrier/barrier_column_01_be_lux.pmd"
+
+	variation[]: "old | center1 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	fixed_inner_start[]: ins1
+	fixed_inner_end[]: ine1
+	variation[]: "new | center2 : 1.0"
+	start_part[]: "start1"
+	end_part[]: "end1"
+	fixed_inner_start[]: ins2
+	fixed_inner_end[]: ine2
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_column_01_be_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+
+	fixed_step: &40000000
+}
+
+curve_model : curve.lux_0u001
+{
+	model_desc: "/model2/railing/barrier/barrier_concrete_01_be_lux.pmd"
+
+	variation[]: "no_gaps | center5,center6,center9,center10 : 1.0 | center7,center8,center11,center12 : 1.0 | center6,center5,center12,center11 : 1.0 | center8,center7,center10,center9 : 1.0"
+	start_part[]: "start3 | start4"
+	end_part[]: "end3 | end4"
+	variation[]: "gaps | center1,center3 : 1.0 | center1,center4 : 1.0 | center2,center3 : 1.0 | center2,center4 : 1.0"
+	start_part[]: "start1 | start2"
+	end_part[]: "end1 | end2"
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_concrete_01_be_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_01001
+{
+	model_desc: "/model2/wall/barrier_antinoise_02_lux.pmd"
+
+	variation[]: "mid | center1, center2, center3, center4, center5, center6 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+	variation[]: "low | center7, center8, center9, center10, center11, center12 : 1.0"
+	start_part[]: start2
+	end_part[]: end2
+	variation[]: "mid_nobase | center13, center14, center15, center16, center17, center18 : 1.0"
+	start_part[]: start3
+	end_part[]: end3
+	variation[]: "low_nobase | center19, center20, center21, center22, center23, center24 : 1.0"
+	start_part[]: start4
+	end_part[]: end4
+
+	dynamic_lod_desc[]: "/model2/wall/barrier_antinoise_02_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_3q000
+{
+	model_desc: "/model2/building/flats/flats_nl/flats_close_05_nl_lux.pmd"
+
+	variation[]: "var1 | center1 : 1.0 | center2 : 1.0 | center7 : 1.0"
+	start_part[]: "right90 | start1"
+	end_part[]: "left90 | end1"
+	variation[]: "var2 | center3 : 1.0 | center4 : 1.0 | center8 : 1.0"
+	start_part[]: "right90 | start1"
+	end_part[]: "left90 | end1"
+	variation[]: "var3 | center5 : 1.0 | center6 : 1.0 | center9 : 1.0"
+	start_part[]: "right90 | start2"
+	end_part[]: "left90 | end2"
+
+	dynamic_lod_desc[]: "/model2/building/flats/flats_nl/flats_close_05_nl_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_5q000
+{
+	model_desc: "/model2/barrier/crash_barrier_profile2_01_lu_lux.pmd"
+
+	variation[]: "center5m | center1 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "center5m_ht | center2 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	high_tess[]: center5m_ht
+
+	dynamic_lod_desc[]: "/model2/barrier/crash_barrier_profile2_01_lu_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/model2/barrier/crash_barrier_profile2_01_lu_lux_lod2.pmd"
+	dynamic_lod_dist[]: 200
+}
+
+curve_model : curve.lux_5u000
+{
+	model_desc: "/model2/landmark/be/overpass_01_lux.pmd"
+
+	variation[]: "default | center1, center2 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+
+	dynamic_lod_desc[]: "/model2/landmark/be/overpass_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_5q001
+{
+	model_desc: "/model2/barrier/crash_barrier_profile2_01_be_nl_lux.pmd"
+
+	variation[]: "center5m | center1 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "center5m_ht | center2 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	high_tess[]: center5m_ht
+
+	dynamic_lod_desc[]: "/model2/barrier/crash_barrier_profile2_01_be_nl_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	dynamic_lod_desc[]: "/model2/barrier/crash_barrier_profile2_01_be_nl_lux_lod2.pmd"
+	dynamic_lod_dist[]: 200
+}
+
+curve_model : curve.lux_4f000
+{
+	model_desc: "/model2/props/street/advert/nl/advert_poster_01_nl_lux.pmd"
+	
+	variation[]: "var01 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 0.5 | center5 : 0.5 | center6 : 0.5 | center7 : 0.2 | center8 : 0.2 | center9 : 0.2 | center10 : 0.1 | center11 : 0.1 | center12 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var02 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 0.6 | center17 : 0.6 | center18 : 0.6 | center19 : 0.4 | center20 : 0.4 | center21 : 0.4 | center22 : 0.1 | center23 : 0.1 | center24 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var03 | center25 : 1.0 | center26 : 1.0 | center27 : 1.0 | center28 : 0.5 | center29 : 0.5 | center30 : 0.5 | center31 : 0.4 | center32 : 0.4 | center33 : 0.4 | center34 : 0.3 | center35 : 0.3 | center36 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var04 | center37 : 1.0 | center38 : 1.0 | center39 : 1.0 | center40 : 0.5 | center41 : 0.5 | center42 : 0.5 | center43 : 0.4 | center44 : 0.4 | center45 : 0.4 | center46 : 0.3 | center47 : 0.3 | center48 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var05 | center49 : 1.0 | center50 : 1.0 | center51 : 1.0 | center52 : 0.3 | center53 : 0.3 | center54 : 0.3 | center55 : 0.3 | center56 : 0.3 | center57 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var06 | center58 : 1.0 | center59 : 1.0 | center60 : 1.0 | center61 : 0.5 | center62 : 0.5 | center63 : 0.5 | center64 : 0.2 | center65 : 0.2 | center66 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var07 | center67 : 1.0 | center68 : 1.0 | center69 : 1.0 | center70 : 0.4 | center71 : 0.4 | center72 : 0.4 | center73 : 0.2 | center74 : 0.2 | center75 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var08 | center76 : 1.0 | center77 : 1.0 | center78 : 1.0 | center79 : 0.2 | center80 : 0.2 | center81 : 0.2 | center82 : 0.2 | center83 : 0.2 | center84 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var09 | center85 : 1.0 | center86 : 1.0 | center87 : 1.0 | center88 : 0.5 | center89 : 0.5 | center90 : 0.5 | center91 : 0.2 | center92 : 0.2 | center93 : 0.2 | center94 : 0.2 | center95 : 0.2 | center96 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var10 | center97 : 1.0 | center98 : 1.0 | center99 : 1.0 | center100 : 0.3 | center101 : 0.3 | center102 : 0.3 | center103 : 0.1 | center104 : 0.1 | center105 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var11 | center106 : 1.0 | center107 : 1.0 | center108 : 1.0 | center109 : 0.4 | center110 : 0.4 | center111 : 0.4 | center112 : 0.1 | center113 : 0.1 | center114 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var12 | center115 : 1.0 | center116 : 1.0 | center117 : 1.0 | center118 : 0.4 | center119 : 0.4 | center120 : 0.4 | center121 : 0.1 | center122 : 0.1 | center123 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var13 | center124 : 1.0 | center125 : 1.0 | center126 : 1.0 | center127 : 0.3 | center128 : 0.3 | center129 : 0.3 | center130 : 0.1 | center131 : 0.1 | center132 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var14 | center133 : 1.0 | center134 : 1.0 | center135 : 1.0 | center136 : 0.3 | center137 : 0.3 | center138 : 0.3 | center139 : 0.1 | center140 : 0.1 | center141 : 0.1 | center142 : 0.1 | center143 : 0.1 | center144 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "mix | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 0.5 | center5 : 0.5 | center6 : 0.5 | center7 : 0.2 | center8 : 0.2 | center9 : 0.2 | center10 : 0.1 | center11 : 0.1 | center12 : 0.1 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 0.6 | center17 : 0.6 | center18 : 0.6 | center19 : 0.4 | center20 : 0.4 | center21 : 0.4 | center22 : 0.1 | center23 : 0.1 | center24 : 0.1 | center25 : 1.0 | center26 : 1.0 | center27 : 1.0 | center28 : 0.5 | center29 : 0.5 | center30 : 0.5 | center31 : 0.4 | center32 : 0.4 | center33 : 0.4 | center34 : 0.3 | center35 : 0.3 | center36 : 0.3 | center37 : 1.0 | center38 : 1.0 | center39 : 1.0 | center40 : 0.5 | center41 : 0.5 | center42 : 0.5 | center43 : 0.4 | center44 : 0.4 | center45 : 0.4 | center46 : 0.3 | center47 : 0.3 | center48 : 0.3 | center49 : 1.0 | center50 : 1.0 | center51 : 1.0 | center52 : 0.3 | center53 : 0.3 | center54 : 0.3 | center55 : 0.3 | center56 : 0.3 | center57 : 0.3 | center58 : 1.0 | center59 : 1.0 | center60 : 1.0 | center61 : 0.5 | center62 : 0.5 | center63 : 0.5 | center64 : 0.2 | center65 : 0.2 | center66 : 0.2 | center67 : 1.0 | center68 : 1.0 | center69 : 1.0 | center70 : 0.4 | center71 : 0.4 | center72 : 0.4 | center73 : 0.2 | center74 : 0.2 | center75 : 0.2 | center76 : 1.0 | center77 : 1.0 | center78 : 1.0 | center79 : 0.2 | center80 : 0.2 | center81 : 0.2 | center82 : 0.2 | center83 : 0.2 | center84 : 0.2 | center85 : 1.0 | center86 : 1.0 | center87 : 1.0 | center88 : 0.5 | center89 : 0.5 | center90 : 0.5 | center91 : 0.2 | center92 : 0.2 | center93 : 0.2 | center94 : 0.2 | center95 : 0.2 | center96 : 0.2 | center97 : 1.0 | center98 : 1.0 | center99 : 1.0 | center100 : 0.3 | center101 : 0.3 | center102 : 0.3 | center103 : 0.1 | center104 : 0.1 | center105 : 0.1 | center106 : 1.0 | center107 : 1.0 | center108 : 1.0 | center109 : 0.4 | center110 : 0.4 | center111 : 0.4 | center112 : 0.1 | center113 : 0.1 | center114 : 0.1 | center115 : 1.0 | center116 : 1.0 | center117 : 1.0 | center118 : 0.4 | center119 : 0.4 | center120 : 0.4 | center121 : 0.1 | center122 : 0.1 | center123 : 0.1 | center124 : 1.0 | center125 : 1.0 | center126 : 1.0 | center127 : 0.3 | center128 : 0.3 | center129 : 0.3 | center130 : 0.1 | center131 : 0.1 | center132 : 0.1 | center133 : 1.0 | center134 : 1.0 | center135 : 1.0 | center136 : 0.3 | center137 : 0.3 | center138 : 0.3 | center139 : 0.1 | center140 : 0.1 | center141 : 0.1 | center142 : 0.1 | center143 : 0.1 | center144 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+}
+
+curve_model : curve.lux_3q001
+{
+	model_desc: "/model2/wall/breakwater_wall_01_nl_lux.pmd"
+	name: "breakwater wall 01 nl lux"
+
+	variation[]: "no_walkway | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+	variation[]: "with_walkway | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[]: start2
+	end_part[]: end2
+
+	dynamic_lod_desc[]: "/model2/wall/breakwater_wall_01_nl_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "center4 | ovr2 : 1.0"
+	overlay[]: "center5 | ovr2 : 1.0"
+	overlay[]: "center6 | ovr2 : 1.0"
+	overlay[]: "start1 | ovr1 : 1.0"
+	overlay[]: "start2 | ovr2 : 1.0"
+}
+
+curve_model : curve.lux_4f001
+{
+	model_desc: "/model2/props/street/advert/be/advert_poster_01_be_lux.pmd"
+	
+	variation[]: "var01 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 0.5 | center5 : 0.5 | center6 : 0.5 | center7 : 0.2 | center8 : 0.2 | center9 : 0.2 | center10 : 0.1 | center11 : 0.1 | center12 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var02 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 0.6 | center17 : 0.6 | center18 : 0.6 | center19 : 0.4 | center20 : 0.4 | center21 : 0.4 | center22 : 0.1 | center23 : 0.1 | center24 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var03 | center25 : 1.0 | center26 : 1.0 | center27 : 1.0 | center28 : 0.5 | center29 : 0.5 | center30 : 0.5 | center31 : 0.4 | center32 : 0.4 | center33 : 0.4 | center34 : 0.3 | center35 : 0.3 | center36 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var04 | center37 : 1.0 | center38 : 1.0 | center39 : 1.0 | center40 : 0.5 | center41 : 0.5 | center42 : 0.5 | center43 : 0.4 | center44 : 0.4 | center45 : 0.4 | center46 : 0.3 | center47 : 0.3 | center48 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var05 | center49 : 1.0 | center50 : 1.0 | center51 : 1.0 | center52 : 0.3 | center53 : 0.3 | center54 : 0.3 | center55 : 0.3 | center56 : 0.3 | center57 : 0.3"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var06 | center58 : 1.0 | center59 : 1.0 | center60 : 1.0 | center61 : 0.5 | center62 : 0.5 | center63 : 0.5 | center64 : 0.2 | center65 : 0.2 | center66 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var07 | center67 : 1.0 | center68 : 1.0 | center69 : 1.0 | center70 : 0.4 | center71 : 0.4 | center72 : 0.4 | center73 : 0.2 | center74 : 0.2 | center75 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var08 | center76 : 1.0 | center77 : 1.0 | center78 : 1.0 | center79 : 0.2 | center80 : 0.2 | center81 : 0.2 | center82 : 0.2 | center83 : 0.2 | center84 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var09 | center85 : 1.0 | center86 : 1.0 | center87 : 1.0 | center88 : 0.5 | center89 : 0.5 | center90 : 0.5 | center91 : 0.2 | center92 : 0.2 | center93 : 0.2 | center94 : 0.2 | center95 : 0.2 | center96 : 0.2"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var10 | center97 : 1.0 | center98 : 1.0 | center99 : 1.0 | center100 : 0.3 | center101 : 0.3 | center102 : 0.3 | center103 : 0.1 | center104 : 0.1 | center105 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var11 | center106 : 1.0 | center107 : 1.0 | center108 : 1.0 | center109 : 0.4 | center110 : 0.4 | center111 : 0.4 | center112 : 0.1 | center113 : 0.1 | center114 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var12 | center115 : 1.0 | center116 : 1.0 | center117 : 1.0 | center118 : 0.4 | center119 : 0.4 | center120 : 0.4 | center121 : 0.1 | center122 : 0.1 | center123 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var13 | center124 : 1.0 | center125 : 1.0 | center126 : 1.0 | center127 : 0.3 | center128 : 0.3 | center129 : 0.3 | center130 : 0.1 | center131 : 0.1 | center132 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "var14 | center133 : 1.0 | center134 : 1.0 | center135 : 1.0 | center136 : 0.3 | center137 : 0.3 | center138 : 0.3 | center139 : 0.1 | center140 : 0.1 | center141 : 0.1 | center142 : 0.1 | center143 : 0.1 | center144 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "mix | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 0.5 | center5 : 0.5 | center6 : 0.5 | center7 : 0.2 | center8 : 0.2 | center9 : 0.2 | center10 : 0.1 | center11 : 0.1 | center12 : 0.1 | center13 : 1.0 | center14 : 1.0 | center15 : 1.0 | center16 : 0.6 | center17 : 0.6 | center18 : 0.6 | center19 : 0.4 | center20 : 0.4 | center21 : 0.4 | center22 : 0.1 | center23 : 0.1 | center24 : 0.1 | center25 : 1.0 | center26 : 1.0 | center27 : 1.0 | center28 : 0.5 | center29 : 0.5 | center30 : 0.5 | center31 : 0.4 | center32 : 0.4 | center33 : 0.4 | center34 : 0.3 | center35 : 0.3 | center36 : 0.3 | center37 : 1.0 | center38 : 1.0 | center39 : 1.0 | center40 : 0.5 | center41 : 0.5 | center42 : 0.5 | center43 : 0.4 | center44 : 0.4 | center45 : 0.4 | center46 : 0.3 | center47 : 0.3 | center48 : 0.3 | center49 : 1.0 | center50 : 1.0 | center51 : 1.0 | center52 : 0.3 | center53 : 0.3 | center54 : 0.3 | center55 : 0.3 | center56 : 0.3 | center57 : 0.3 | center58 : 1.0 | center59 : 1.0 | center60 : 1.0 | center61 : 0.5 | center62 : 0.5 | center63 : 0.5 | center64 : 0.2 | center65 : 0.2 | center66 : 0.2 | center67 : 1.0 | center68 : 1.0 | center69 : 1.0 | center70 : 0.4 | center71 : 0.4 | center72 : 0.4 | center73 : 0.2 | center74 : 0.2 | center75 : 0.2 | center76 : 1.0 | center77 : 1.0 | center78 : 1.0 | center79 : 0.2 | center80 : 0.2 | center81 : 0.2 | center82 : 0.2 | center83 : 0.2 | center84 : 0.2 | center85 : 1.0 | center86 : 1.0 | center87 : 1.0 | center88 : 0.5 | center89 : 0.5 | center90 : 0.5 | center91 : 0.2 | center92 : 0.2 | center93 : 0.2 | center94 : 0.2 | center95 : 0.2 | center96 : 0.2 | center97 : 1.0 | center98 : 1.0 | center99 : 1.0 | center100 : 0.3 | center101 : 0.3 | center102 : 0.3 | center103 : 0.1 | center104 : 0.1 | center105 : 0.1 | center106 : 1.0 | center107 : 1.0 | center108 : 1.0 | center109 : 0.4 | center110 : 0.4 | center111 : 0.4 | center112 : 0.1 | center113 : 0.1 | center114 : 0.1 | center115 : 1.0 | center116 : 1.0 | center117 : 1.0 | center118 : 0.4 | center119 : 0.4 | center120 : 0.4 | center121 : 0.1 | center122 : 0.1 | center123 : 0.1 | center124 : 1.0 | center125 : 1.0 | center126 : 1.0 | center127 : 0.3 | center128 : 0.3 | center129 : 0.3 | center130 : 0.1 | center131 : 0.1 | center132 : 0.1 | center133 : 1.0 | center134 : 1.0 | center135 : 1.0 | center136 : 0.3 | center137 : 0.3 | center138 : 0.3 | center139 : 0.1 | center140 : 0.1 | center141 : 0.1 | center142 : 0.1 | center143 : 0.1 | center144 : 0.1"
+	start_part[]: ""
+	end_part[]: ""
+}
+curve_model : curve.lux_2z000
+{
+	model_desc: "/model2/building/flats_mid/flats_lux/flats_mid_02_nl_lux.pmd"
+	name: "flats mid 02 nl lux"
+
+	variation[]: "mix | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+}
+
+curve_model : curve.lux_6x000
+{
+	model_desc: "/model2/landmark/lu/luxembourg_bridge_02_lux.pmd"
+
+	variation[]: "default | center1 : 1.0"
+	start_part[]: "start1 | start2"
+	end_part[]: "end1 | end2"
+
+	dynamic_lod_desc[]: "/model2/landmark/lu/luxembourg_bridge_02_lux_lod1.pmd"
+	dynamic_lod_dist[]: 50
+}
+
+curve_model : curve.lux_01002
+{
+	model_desc: "/model2/building/logistic/greenhouse_01_nl_lux.pmd"
+
+	variation[]: "2floors_one | center5 : 1.0 | center6 : 1.0"
+	start_part[]: start3
+	end_part[]: end3
+	variation[]: "3floors_one | center1 : 1.0 | center2 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+	variation[]: "2floors_five | center7 : 1.0 | center8 : 1.0"
+	start_part[]: start4
+	end_part[]: end4
+	variation[]: "3floors_five | center3 : 1.0 | center4 : 1.0"
+	start_part[]: start2
+	end_part[]: end2
+
+	dynamic_lod_desc[]: "/model2/building/logistic/greenhouse_01_nl_lux_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+curve_model : curve.lux_2z001
+{
+	model_desc: "/model2/building/flats_mid/lu/flats_mid_04_lu_lux.pmd"
+
+	variation[]: "mix | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0 | center7 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	dynamic_lod_desc[]: "/model2/building/flats_mid/lu/flats_mid_04_lu_lux_lod1.pmd"
+	dynamic_lod_dist[]: 150
+}
+
+curve_model : curve.lux_0t002
+{
+	model_desc: "/model2/building/logistic/warehouse_01_floor1_lux.pmd"
+
+	variation[]: "Default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	dynamic_lod_desc[]: "/model2/building/logistic/warehouse_01_floor1_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "start1 | ovr1 : 1.0"
+	overlay[]: "start2 | ovr1 : 1.0"
+}
+
+curve_model : curve.lux_5u002
+{
+	model_desc: "/model2/building/logistic/warehouse_01_floor2_lux.pmd"
+
+	variation[]: "Default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+
+	dynamic_lod_desc[]: "/model2/building/logistic/warehouse_01_floor2_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "center4 | ovr1 : 1.0"
+	overlay[]: "start1 | ovr1 : 1.0"
+	overlay[]: "start2 | ovr1 : 1.0"
+	overlay[]: "start3 | ovr1 : 1.0"
+}
+
+curve_model : curve.lux_01003
+{
+	model_desc: "/model2/landmark/be/antwerp/antwerp_port_05_lux.pmd"
+
+	variation[]: "var1 | center1 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/landmark/be/antwerp/antwerp_port_05_lux_lod1.pmd"
+	dynamic_lod_dist[]: 120
+}
+
+curve_model : curve.lux_3q002
+{
+	model_desc: "/model2/landmark/nl/rotterdam_windbreak_01_lux.pmd"
+	name: "rotterdam windbreak 01 lux"
+
+	variation[]: "variant1 | center3 : 0.0 | center3, center3, center1, center3, center2, center2, center1, center3, center3, center1, center1 : 1.0 | center1 : 0.0"
+	start_part[]: start1
+	end_part[]: end1
+}
+
+curve_model : curve.lux_4y000
+{
+	model_desc: "/model2/landmark/nl/zwolle_ecoduct_01_lux.pmd"
+
+	variation[]: "var1 | center1, center2, center3 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/landmark/nl/zwolle_ecoduct_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_0o001
+{
+	model_desc: "/model2/landmark/be/brussels/brussels_admin_01_lux.pmd"
+
+	variation[]: "Default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+}
+
+curve_model : curve.lux_65000
+{
+	model_desc: "/model2/landmark/nl/amsterdam/amsterdam_tunnel_02_lux.pmd"
+
+	variation[]: "variant1 | center1, center2, center3, center2 : 1.0 | center3, center2, center1, center3 : 1.0 | center1, center3, center2, center1, center3 : 1.0 | center2, center3, center1, center3, center1 : 1.0 | center3, center2, center1 : 1.0 | center2, center3, center1 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+	variation[]: "variant2 | center4, center5, center6, center5 : 1.0 | center6, center4, center5, center6 : 1.0 | center5, center4, center6 : 1.0 | center4, center5, center6 : 1.0 | center6, center5, center4 : 1.0"
+	start_part[]: start2
+	end_part[]: end2
+
+	dynamic_lod_desc[]: "/model2/landmark/nl/amsterdam/amsterdam_tunnel_02_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_5f000
+{
+	model_desc: "/model2/props/street/graffiti_01_lux.pmd"
+
+	variation[]: "en | center4, center5, center6 : 1.0 | center7, center8, center10 : 1.0 | center11, center12, center13, center14, center15 : 1.0 | center16, center17, center20, center22 : 1.0 | center23, center24, center25, center26 : 1.0 | center28, center29, center30, center31 : 1.0 | center30, center31, center32, center34, center35 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	variation[]: "mix | center18 : 1.0 | center19 : 1.0 | center21 : 1.0 | center26 : 1.0 | center30 : 1.0 | center31 : 1.0 | center32 : 1.0 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0 | center9 : 1.0 | center24 : 1.0 | center27 : 1.0 | center29 : 1.0 | center23 : 1.0 | center17 : 1.0 | center22 : 1.0 | center11 : 1.0 | center28 : 1.0 | center10 : 1.0 | center7 : 1.0 | center8 : 1.0 | center25 : 1.0 | center12 : 1.0 | center33 : 1.0 | center34 : 1.0 | center35 : 1.0 | center5 : 1.0 | center13 : 1.0 | center14 : 1.0 | center6 : 1.0 | center15 : 1.0 | center16 : 1.0 | center20 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+}
+
+curve_model : curve.lux_4y001
+{
+	model_desc: "/model2/landmark/be/brussels/brussels_railing_01_lux.pmd"
+
+	variation[]: "var1 | center1, center8, center9 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/landmark/be/brussels/brussels_railing_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_3r002
+{
+	model_desc: "/model2/building/industry/gate_roof_01_lux.pmd"
+	name: "gate roof 01 lux"
+
+	variation[]: "default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: "start1 | start2 | start3"
+	end_part[]: "end1 | end2 | end3"
+	variation[]: "narrow | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[]: "start4 | start5 | start6"
+	end_part[]: "end4 | end5 | end6"
+
+	dynamic_lod_desc[]: "/model2/building/industry/gate_roof_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+	overlay[]: "center1 | ovr1 : 1.0"
+	overlay[]: "center2 | ovr1 : 1.0"
+	overlay[]: "center3 | ovr1 : 1.0"
+	overlay[]: "center4 | ovr2 : 1.0"
+	overlay[]: "center5 | ovr2 : 1.0"
+	overlay[]: "center6 | ovr2 : 1.0"
+}
+
+curve_model : curve.lux_11000
+{
+	model_desc: "/model2/railing/barrier/barrier_concrete_01_lux.pmd"
+	name: "barrier concrete 01 lux"
+
+	variation[]: "v1 | center1 : 1.0 | center2 : 1.0 | center3 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+	fixed_inner_start[]: start1
+	fixed_inner_end[]: end1
+	variation[]: "v2 | center4 : 1.0 | center5 : 1.0 | center6 : 1.0"
+	start_part[]: start2
+	end_part[]: end2
+	fixed_inner_start[]: start1
+	fixed_inner_end[]: end1
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_concrete_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 80
+
+	fixed_step: &40000000
+}
+
+curve_model : curve.lux_6w000
+{
+	model_desc: "/model2/props/street/advert/be/waffia_restaurant_awning_01_be_lux.pmd"
+
+	variation[]: "var1 | center1 : 1.0"
+	start_part[]: start1
+	end_part[]: end1
+}
+
+curve_model : curve.lux_6r000
+{
+	model_desc: "/model2/building/industry/river_port_warehouse_01_lux.pmd"
+
+	variation[]: "part1 | center1 : 1.0 | center2 : 10.0 | center3 : 3.0 | center4 : 6.0 | center5 : 10.0"
+	start_part[]: start1
+	end_part[]: end1
+
+	dynamic_lod_desc[]: "/model2/building/industry/river_port_warehouse_01_lux_lod1.pmd"
+	dynamic_lod_dist[]: 100
+}
+
+curve_model : curve.lux_14000
+{
+	model_desc: "/model2/props/road/bike_lane_01_be_lux.pmd"
+
+	variation[]: "Default | new01, new02, new03 : 1.0"
+	start_part[]: "start01 | start02 | start03"
+	end_part[]: "end01 | end02 | end03"
+	
+	variation[]: "parallel | newpar01, newpar02, newpar03 : 1.0"
+	start_part[]: "startpar01 | startpar02 | startpar03"
+	end_part[]: "endpar01 | endpar02 | endpar03"
+}
+
+curve_model : curve.lux_14001
+{
+	model_desc: "/model2/props/road/bike_lane_01_nl_lux.pmd"
+
+	variation[]: "Default | new01, new02, new03 : 1.0"
+	start_part[]: "start01 | start02 | start03"
+	end_part[]: "end01 | end02 | end03"
+	
+	variation[]: "parallel | newpar01, newpar02, newpar03 : 1.0"
+	start_part[]: "startpar01 | startpar02 | startpar03"
+	end_part[]: "endpar01 | endpar02 | endpar03"
+}
+
+curve_model : curve.lux_14002
+{
+	model_desc: "/model2/props/road/bike_lane_01_lu_lux.pmd"
+
+	variation[]: "Default | new01, new02, new03 : 1.0"
+	start_part[]: "start01 | start02 | start03"
+	end_part[]: "end01 | end02 | end03"
+}
+
+curve_model : curve.lux_01004
+{
+	model_desc: "/model2/railing/barrier/barrier_column_02_be_lux.pmd"
+	name: "barrier column 02 be lux"
+
+	variation[]: "Default | center1 : 1.0 | center2 : 1.0 | center3 : 1.0 | center4 : 1.0"
+	start_part[]: ""
+	end_part[]: ""
+	fixed_inner_start[]: ""
+	fixed_inner_end[]: ""
+
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_column_02_be_lux_lod1.pmd"
+	dynamic_lod_dist[]: 15
+	dynamic_lod_desc[]: "/model2/railing/barrier/barrier_column_02_be_lux_lod2.pmd"
+	dynamic_lod_dist[]: 30
+
+	fixed_step: &40000000
+}
+
+}

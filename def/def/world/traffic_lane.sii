@@ -22,6 +22,8 @@ traffic_lane_data : traffic_lane.default
 	rank: 0
 
 	traffic_rules[]: traffic_rule.road_rail
+	traffic_rules[]: traffic_rule.s_train_d
+	traffic_rules[]: traffic_rule.s_train_w_d
 }
 
 traffic_lane_data : traffic_lane.road.local
@@ -437,7 +439,7 @@ traffic_lane_data : traffic_lane.rail.train.wire
 {
 	speed_class: rail_train
 
-	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.rail_train_w
 	traffic_rules[]: traffic_rule.s_train
 	traffic_rules[]: traffic_rule.s_train_w
 }
@@ -448,7 +450,7 @@ traffic_lane_data : traffic_lane.rail.train.cargo.wire
 {
 	speed_class: rail_train
 
-	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.rail_train_w
 	traffic_rules[]: traffic_rule.s_train_c
 	traffic_rules[]: traffic_rule.s_train_w_c
 }
@@ -459,7 +461,7 @@ traffic_lane_data : traffic_lane.rail.train.passenger.wire
 {
 	speed_class: rail_train
 
-	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.rail_train_w
 	traffic_rules[]: traffic_rule.s_train_p
 	traffic_rules[]: traffic_rule.s_train_w_p
 }
@@ -470,7 +472,7 @@ traffic_lane_data : traffic_lane.rail.train.high_speed
 {
 	speed_class: rail_train
 
-	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.rail_train_w
 	traffic_rules[]: traffic_rule.s_train_w
 }
 
@@ -486,7 +488,7 @@ traffic_lane_data : traffic_lane.rail.train.metro
 {
 	speed_class: rail_train
 
-	traffic_rules[]: traffic_rule.rail_train
+	traffic_rules[]: traffic_rule.rail_train_w
 	traffic_rules[]: traffic_rule.s_train_m
 }
 
@@ -534,7 +536,7 @@ traffic_lane_data : traffic_lane.road.local.bus_lane
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.bus_lane
 	traffic_rules[]: traffic_rule.s_bus_l
-	
+
 	traffic_rules[]: traffic_rule.no_chng_in
     traffic_rules[]: traffic_rule.no_chng_out
 }
@@ -548,7 +550,7 @@ traffic_lane_data : traffic_lane.road.expressway.bus_lane
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.bus_lane
 	traffic_rules[]: traffic_rule.s_bus_l
-	
+
 	traffic_rules[]: traffic_rule.no_chng_in
     traffic_rules[]: traffic_rule.no_chng_out
 }
@@ -562,7 +564,7 @@ traffic_lane_data : traffic_lane.road.motorway.bus_lane
 	traffic_rules[]: traffic_rule.road
 	traffic_rules[]: traffic_rule.bus_lane
 	traffic_rules[]: traffic_rule.s_bus_h
-	
+
 	traffic_rules[]: traffic_rule.no_chng_in
     traffic_rules[]: traffic_rule.no_chng_out
 }

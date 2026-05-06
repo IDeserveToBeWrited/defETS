@@ -44,7 +44,7 @@ tutorial_hint : hint.engine.c
     start_conditions[]: cond.engine_ele.without
     start_conditions[]: cond.part.engine_off
     start_conditions[]: cond.damage.core_max10
-    start_conditions[]: cond.impulse.steering
+    start_conditions[]: cond.impulse_nm.steering
 
     cancel_conditions[]: cond.always.false
     cancel_timeout: 20
@@ -102,7 +102,7 @@ tutorial_hint : hint.engine.f
     start_conditions[]: cond.part.elec_on
     start_conditions[]: cond.part.engine_off
     start_conditions[]: cond.damage.core_max10
-    start_conditions[]: cond.impulse.pedal_steer
+    start_conditions[]: cond.impulse_nm.pedal_steer
 
     cancel_conditions[]: cond.always.false
     cancel_timeout: 20
@@ -156,7 +156,7 @@ tutorial_hint : hint.ignition.c
     start_conditions[]: cond.engine_ele.with
     start_conditions[]: cond.part.elec_off
     start_conditions[]: cond.damage.core_max10
-    start_conditions[]: cond.impulse.pedal_steer
+    start_conditions[]: cond.impulse_nm.pedal_steer
 
     cancel_conditions[]: cond.always.false
     cancel_timeout: 20
@@ -500,7 +500,7 @@ tutorial_hint : hint.fin_deliv.a
 
     dismiss_conditions[]: cond.autopark.off
 
-    complete_conditions[]: cond.cargo.can_deliver
+    complete_conditions[]: cond.can_deliv_or.deliv_done
 
     max_complete_count: 1
 
@@ -522,7 +522,7 @@ tutorial_hint : hint.fin_deliv.b
 
     dismiss_conditions[]: cond.autopark.off
 
-    complete_conditions[]: cond.cargo.can_deliver
+    complete_conditions[]: cond.can_deliv_or.deliv_done
 
     for_bus: false
     for_car: false
@@ -540,7 +540,7 @@ tutorial_hint : hint.fin_deliv2.a
 
     dismiss_conditions[]: cond.autopark.on
 
-    complete_conditions[]: cond.cargo.can_deliver
+    complete_conditions[]: cond.can_deliv_or.deliv_done
 
     max_complete_count: 1
 
@@ -562,7 +562,7 @@ tutorial_hint : hint.fin_deliv2.b
 
     dismiss_conditions[]: cond.autopark.on
 
-    complete_conditions[]: cond.cargo.can_deliver
+    complete_conditions[]: cond.can_deliv_or.deliv_done
 
     for_bus: false
     for_car: false
@@ -742,6 +742,7 @@ tutorial_hint : hint.wipers_off.a
 # 22A
 tutorial_hint : hint.world_map.a
 {
+    start_conditions[]: cond.multiplayer.off
     start_conditions[]: cond.deliveries.min1
     start_conditions[]: cond.notif_block.persistent
     start_conditions[]: cond.speed.stop
@@ -760,6 +761,7 @@ tutorial_hint : hint.world_map.a
 # 27A
 tutorial_hint : hint.pause.a
 {
+    start_conditions[]: cond.multiplayer.off
     start_conditions[]: cond.deliveries.min3
     start_conditions[]: cond.speed.stop3
     start_conditions[]: cond.hint_ref.28An_compl
@@ -870,6 +872,7 @@ tutorial_hint : hint.gas.a
 # 28A
 tutorial_hint : hint.pause_border.a
 {
+    start_conditions[]: cond.multiplayer.off
     start_conditions[]: cond.borders.crossed
 
     cancel_conditions[]: cond.always.false

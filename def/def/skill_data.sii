@@ -1,0 +1,602 @@
+SiiNunit
+{
+
+skills_data : skills.data
+{
+    long_distance_skill_data: .skills.long_dist
+    valuable_cargo_skill_data: .skills.valuable
+    fragile_cargo_skill_data: .skills.fragile
+    urgent_job_skill_data: .skills.urgent
+    ecodriving_skill_data: .skills.ecodriving
+    adr_skill_data: .skills.adr
+}
+
+skill_data : .skills.long_dist
+{
+    max_rank: 6
+
+    icon_mat: "long_distance"
+    name: "@@skill_distance_title@@"
+    description: "@@skill_distance_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+    rank_icons[]: "linear_rank_4"
+    rank_icons[]: "linear_rank_5"
+    rank_icons[]: "linear_rank_6"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance_max@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus@@<br><offset vshift=3>
+@@long_dist_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_dist_desc_distance_max@@<br><offset vshift=3>
+@@long_dist_desc_revenue_bonus_max@@</color></font>"
+
+
+    xp_reward_bonus: .skills.long_dist.xp
+    revenue_reward_bonus: .skills.long_dist.revenue
+    additional_data: .skills.long_dist.distances
+}
+
+skill_percentage_increase : .skills.long_dist.xp
+{
+    percentage_increase_per_rank[]: 0.25
+}
+
+skill_percentage_increase : .skills.long_dist.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+    percentage_increase_per_rank[]: 0.20
+    percentage_increase_per_rank[]: 0.25
+    percentage_increase_per_rank[]: 0.30
+}
+
+long_distance_skill_data : .skills.long_dist.distances
+{
+    max_distance_per_rank[]:  400.0
+    max_distance_per_rank[]:  650.0
+    max_distance_per_rank[]: 1000.0
+    max_distance_per_rank[]: 1600.0
+    max_distance_per_rank[]: 2500.0
+    max_distance_per_rank[]: 4000.0
+}
+
+
+skill_data : .skills.valuable
+{
+    max_rank: 6
+
+    icon_mat: "high_value"
+    name: "@@skill_heavy_title@@"
+    description: "@@skill_heavy_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+    rank_icons[]: "linear_rank_4"
+    rank_icons[]: "linear_rank_5"
+    rank_icons[]: "linear_rank_6"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_initial@@<br><offset vshift=3>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_initial@@<br><offset vshift=3>
+@@valuable_desc_revenue_bonus@@<br><offset vshift=3>
+@@valuable_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@valuable_desc_revenue_bonus@@</color></font>"
+
+
+    xp_reward_bonus: .skills.valuable.xp
+    revenue_reward_bonus: .skills.valuable.revenue
+}
+
+skill_percentage_increase : .skills.valuable.xp
+{
+    percentage_increase_per_rank[]: 0.18
+}
+
+skill_percentage_increase : .skills.valuable.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+    percentage_increase_per_rank[]: 0.20
+    percentage_increase_per_rank[]: 0.25
+    percentage_increase_per_rank[]: 0.30
+}
+
+
+skill_data : .skills.fragile
+{
+    max_rank: 6
+
+    icon_mat: "fragile"
+    name: "@@skill_fragile_title@@"
+    description: "@@skill_fragile_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+    rank_icons[]: "linear_rank_4"
+    rank_icons[]: "linear_rank_5"
+    rank_icons[]: "linear_rank_6"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_initial@@<br><offset vshift=3>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_initial@@<br><offset vshift=3>
+@@fragile_desc_revenue_bonus@@<br><offset vshift=3>
+@@fragile_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@fragile_desc_revenue_bonus@@</color></font>"
+
+
+    xp_reward_bonus: .skills.fragile.xp
+    revenue_reward_bonus: .skills.fragile.revenue
+}
+
+skill_percentage_increase : .skills.fragile.xp
+{
+    percentage_increase_per_rank[]: 0.22
+}
+
+skill_percentage_increase : .skills.fragile.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+    percentage_increase_per_rank[]: 0.20
+    percentage_increase_per_rank[]: 0.25
+    percentage_increase_per_rank[]: 0.30
+}
+
+
+skill_data : .skills.urgent
+{
+    max_rank: 6
+
+    icon_mat: "jit"
+    name: "@@skill_jit_title@@"
+    description: "@@skill_jit_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+    rank_icons[]: "linear_rank_4"
+    rank_icons[]: "linear_rank_5"
+    rank_icons[]: "linear_rank_6"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_initial_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_initial_urgent@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_initial_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_important@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_initial_urgent@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@<br><offset vshift=3>
+@@urgent_desc_xp_bonus_urgent@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@urgent_desc_revenue_bonus_important@@<br><offset vshift=3>
+@@urgent_desc_revenue_bonus_urgent@@</color></font>"
+
+
+    xp_reward_bonus: .skills.urgent.xp
+    revenue_reward_bonus: .skills.urgent.revenue
+    additional_data: .skills.urgent.coefs
+}
+
+skill_percentage_increase : .skills.urgent.xp
+{
+    percentage_increase_per_rank[]: 0.3
+}
+
+skill_percentage_increase : .skills.urgent.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+    percentage_increase_per_rank[]: 0.20
+    percentage_increase_per_rank[]: 0.25
+    percentage_increase_per_rank[]: 0.30
+}
+
+urgent_job_skill_data : .skills.urgent.coefs
+{
+    important_job_xp_bonus_coef: 0.66
+    important_job_revenue_bonus_coef: 0.6
+}
+
+
+skill_data : .skills.ecodriving
+{
+    max_rank: 6
+
+    icon_mat: "mechanical"
+    name: "@@skill_mechanical_title@@"
+    description: "@@skill_mechanical_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+    rank_icons[]: "linear_rank_4"
+    rank_icons[]: "linear_rank_5"
+    rank_icons[]: "linear_rank_6"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 4</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 5</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 6</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+
+    additional_data: .skills.ecodriving.saved
+}
+
+skill_percentage_decrease : .skills.ecodriving.saved
+{
+    percentage_decrease_per_rank[]: 0.10
+    percentage_decrease_per_rank[]: 0.15
+    percentage_decrease_per_rank[]: 0.20
+    percentage_decrease_per_rank[]: 0.25
+    percentage_decrease_per_rank[]: 0.30
+    percentage_decrease_per_rank[]: 0.35
+}
+
+skill_data : .skills.adr
+{
+    max_rank: 6
+
+    icon_mat: "adr"
+    name: "@@skill_adr_title@@"
+    description: "@@skill_adr_info@@"
+
+    rank_icons[]: "adr_1"
+    rank_icons[]: "adr_2"
+    rank_icons[]: "adr_3"
+    rank_icons[]: "adr_4"
+    rank_icons[]: "adr_6"
+    rank_icons[]: "adr_8"
+
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 1 - @@skill_adr_classt1@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_1.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@skill_adr_1@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 2 - @@skill_adr_classt2@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_21.mat width=60 height=60 color=@@clr_white@@><offset hshift=10><img src=/material/ui/skills/adr_22.mat width=60 height=60 color=@@clr_white@@><offset hshift=10><img src=/material/ui/skills/adr_23.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@class@@ 2.1 - @@skill_adr_21@@<br>
+<offset vshift=5>@@class@@ 2.2 - @@skill_adr_22@@<br>
+<offset vshift=5>@@class@@ 2.3 - @@skill_adr_23@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 3 - @@skill_adr_classt3@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_3.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@skill_adr_3@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 4 - @@skill_adr_classt4@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_41.mat width=60 height=60 color=@@clr_white@@><offset hshift=10><img src=/material/ui/skills/adr_42.mat width=60 height=60 color=@@clr_white@@><offset hshift=10><img src=/material/ui/skills/adr_43.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@class@@ 4.1 - @@skill_adr_41@@<br>
+<offset vshift=5>@@class@@ 4.2 - @@skill_adr_42@@<br>
+<offset vshift=5>@@class@@ 4.3 - @@skill_adr_43@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 6 - @@skill_adr_classt6@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_61.mat width=60 height=60 color=@@clr_white@@><offset hshift=10><img src=/material/ui/skills/adr_62.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@class@@ 6.1 - @@skill_adr_61@@<br>
+<offset vshift=5>@@class@@ 6.2 - @@skill_adr_62@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/big_bold.font><color value=$STATE_COLOR$>@@class@@ 8 - @@skill_adr_classt8@@</color></font><br><br>
+<offset vshift=7><img src=/material/ui/skills/adr_8.mat width=60 height=60 color=@@clr_white@@><br>
+<font face=/font/normal.font><color value=@@clr_txt@@>
+<offset vshift=10>@@skill_adr_8@@</color></font></align>"
+
+
+    rank_tooltips[]: "<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>@@class@@ 1 - @@skill_adr_1@@</color></font></align>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font>@@class@@ 2 - @@skill_adr_classt2@@</font><br><br>
+<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>
+@@class@@ 2.1 - @@skill_adr_21@@<br>
+@@class@@ 2.2 - @@skill_adr_22@@<br>
+@@class@@ 2.3 - @@skill_adr_23@@</color></font></align>"
+
+    rank_tooltips[]: "<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>@@class@@ 3 - @@skill_adr_3@@</color></font></align>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font>@@class@@ 4 - @@skill_adr_classt4@@</font><br><br>
+<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>
+@@class@@ 4.1 - @@skill_adr_41@@<br>
+@@class@@ 4.2 - @@skill_adr_42@@<br>
+@@class@@ 4.3 - @@skill_adr_43@@</color></font></align>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font>@@class@@ 6 - @@skill_adr_classt6@@</font><br><br>
+<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>
+@@class@@ 6.1 - @@skill_adr_61@@<br>
+@@class@@ 6.2 - @@skill_adr_62@@</color></font></align>"
+
+    rank_tooltips[]: "<align hstyle=left><font face=/font/normal.font><color value=@@clr_txt@@>@@class@@ 8 - @@skill_adr_8@@</color></font></align>"
+
+
+    xp_reward_bonus: .skills.adr.xp
+    additional_data: .skills.adr.classes
+}
+
+skill_percentage_increase : .skills.adr.xp
+{
+    percentage_increase_per_rank[]: 0.21
+}
+
+adr_skill_data : .skills.adr.classes
+{
+    rank_classes[]: 1
+    rank_classes[]: 2
+    rank_classes[]: 3
+    rank_classes[]: 4
+    rank_classes[]: 6
+    rank_classes[]: 8
+}
+
+}

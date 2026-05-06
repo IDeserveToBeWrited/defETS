@@ -1,0 +1,221 @@
+traffic_vehicle : traffic.daf.xd.slp_4x2.context
+{
+	accessories[]: .daf.xd.slp_4x2.context.chassis
+	accessories[]: .daf.xd.slp_4x2.context.fwheel
+	accessories[]: .daf.xd.slp_4x2.context.rwheel
+	accessories[]: .daf.xd.slp_4x2.context.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "truck_semi"
+
+	vehicle_mass: 7164
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+	color[]: (0.0948, 0.101, 0.1102) #gray
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.8307, 0.8307, 0.8307) #white
+	color[]: (0.2269, 0.0129, 0.0129) #red
+	color[]: (0.0251, 0.0578, 0.1328) #blue
+	color[]: (0.701102, 0.584079, 0.008023) #Tuscan Yellow
+	color[]: (0.104616, 0.434154, 0.003347) #Mantis Green
+	color[]: (1.000000, 0.198000, 0.004300) #Electric Orange
+	color[]: (0.031896, 0.283149, 0.723055) #Jamaica Blue
+
+	tags[]: dealer
+	tags[]: context
+
+	spawn_condition[]: .traffic.daf.xd.slp_4x2.context.spawn.condition
+	spawn_condition[]: .traffic.daf.xd.slp_4x2.context.spawn.condition2
+
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2.context.spawn.condition
+{
+	type: area
+	str_param[]: "daf"
+}
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2.context.spawn.condition2
+{
+	type: area
+	str_param[]: "dealer"
+}
+
+vehicle_accessory: .daf.xd.slp_4x2.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xd/daf_xd_slp_4x2.sii"
+
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.xd.slp_4x2.context.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.xd/accessory/trlr_cables/stock.sii"
+}
+
+
+traffic_vehicle : traffic.daf.xd.slp_4x2c_fac.context
+{
+	accessories[]: .daf.xd.slp_4x2c_fac.context.chassis
+	accessories[]: .daf.xd.slp_4x2c_fac.context.fwheel
+	accessories[]: .daf.xd.slp_4x2c_fac.context.rwheel
+	accessories[]: .daf.xd.slp_4x2c_fac.context.trlr_cables
+
+	max_speed: 90
+
+	trailer_chains[]: "traffic.trailer.scs_box.curtain.daf_fac"
+
+	vehicle_mass: 7164
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+
+	color[]: (0.428690, 0.000000, 0.000607) #Powering Your Success"
+
+
+	tags[]: daf_fac
+	tags[]: context
+
+	spawn_condition[]: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition
+	spawn_condition[]: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition2
+	spawn_condition[]: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition3
+
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition
+{
+	type: area
+	str_param[]: "daf_fac"
+}
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition2
+{
+	type: area
+	str_param[]: "company"
+}
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2c_fac.context.spawn.condition3
+{
+	type: area
+	str_param[]: "power"
+}
+
+
+vehicle_accessory: .daf.xd.slp_4x2c_fac.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xd/daf_xd_slp_4x2.sii"
+
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2c_fac.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2c_fac.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.xd.slp_4x2c_fac.context.trlr_cables
+{
+	data_path: "/def/vehicle/ai/truck/daf.2021/accessory/trlr_cables/stock.sii"
+}
+
+
+# NO LICENSE PLATES
+
+traffic_vehicle : traffic.daf.xd.slp_4x2_np.context
+{
+	accessories[]: .daf.xd.slp_4x2_np.context.chassis
+	accessories[]: .daf.xd.slp_4x2_np.context.fwheel
+	accessories[]: .daf.xd.slp_4x2_np.context.rwheel
+	accessories[]: .daf.xd.slp_4x2_np.context.trlr_cables
+
+	max_speed: 90
+
+	vehicle_mass: 7164
+	engine_power: 336
+
+	sound_move[]: "/sound/traffic/truck_eu_2.soundref"
+	sound_move[]: "/sound/traffic/truck_eu_4.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_5.soundref"
+
+	#color from upgrade shop
+
+	trailer_chains[]: ""
+
+	color[]: (0.8307, 0.8307, 0.8307) #white
+
+
+	tags[]: daf_fac
+	tags[]: context
+	tags[]: no_lp
+
+	spawn_condition[]: .traffic.daf.xd.slp_4x2_np.context.spawn.condition
+	spawn_condition[]: .traffic.daf.xd.slp_4x2_np.context.spawn.condition2
+	spawn_condition[]: .traffic.daf.xd.slp_4x2_np.context.spawn.condition3
+
+
+@include "drivers_generic.sui"
+}
+
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2_np.context.spawn.condition
+{
+	type: area
+	str_param[]: "daf_fac"
+}
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2_np.context.spawn.condition2
+{
+	type: area
+	str_param[]: "company"
+}
+traffic_spawn_condition: .traffic.daf.xd.slp_4x2_np.context.spawn.condition3
+{
+	type: area
+	str_param[]: "white"
+}
+
+vehicle_accessory: .daf.xd.slp_4x2_np.context.chassis
+{
+	data_path: "/def/vehicle/ai/truck/daf.xd/daf_xd_slp_4x2_nolp.sii"
+
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2_np.context.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+vehicle_wheel_accessory: .daf.xd.slp_4x2_np.context.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+vehicle_addon_accessory : .daf.xd.slp_4x2_np.context.trlr_cables
+{
+
+	data_path: "/def/vehicle/ai/truck/daf.2021/accessory/trlr_cables/stock.sii"
+}
+

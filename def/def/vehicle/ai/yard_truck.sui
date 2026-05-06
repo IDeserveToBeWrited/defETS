@@ -1,5 +1,8 @@
+
 traffic_vehicle : traffic.yard_truck
 {
+	# For special use only! (e.g. parked vehicle hookups for prefabs)
+
 	accessories[]: .yard_truck.chassis
 	accessories[]: .yard_truck.fwheel
 	accessories[]: .yard_truck.rwheel
@@ -14,23 +17,7 @@ traffic_vehicle : traffic.yard_truck
 
 	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
 
-	tags[]: context
-
-	spawn_condition[]: .traffic.yard_truck.spawn.condition
-	spawn_condition[]: .traffic.yard_truck.spawn.condition2
-
 @include "drivers_generic.sui"
-}
-traffic_spawn_condition: .traffic.yard_truck.spawn.condition
-{
-	type: area
-	str_param[]: "container"
-}
-traffic_spawn_condition: .traffic.yard_truck.spawn.condition2
-{
-	type: area
-	str_param[]: "company"
-	str_param[]: "industrial"
 }
 
 vehicle_accessory: .yard_truck.chassis

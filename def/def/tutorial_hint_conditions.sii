@@ -403,11 +403,15 @@ hcd::impulse : cond.impulse.gas
 {
     mixes[]: forward
     mix_thresholds[]: 0.5
+    mixes[]: mpedals
+    mix_thresholds[]: 0.5
 }
 
 hcd::impulse : cond.impulse.gas1
 {
     mixes[]: forward
+    mix_thresholds[]: 0.5
+    mixes[]: mpedals
     mix_thresholds[]: 0.5
     duration: 1
 }
@@ -416,6 +420,8 @@ hcd::impulse : cond.impulse.gas_little
 {
     mixes[]: forward
     mix_thresholds[]: 0.1
+    mixes[]: mpedals
+    mix_thresholds[]: 0.5
 }
 
 hcd::impulse : cond.impulse.pedals
@@ -424,6 +430,10 @@ hcd::impulse : cond.impulse.pedals
     mix_thresholds[]: 0.5
     mixes[]: backward
     mix_thresholds[]: 0.5
+    mixes[]: mpedals
+    mix_thresholds[]: 0.5
+    mixes[]: mpedals
+    mix_thresholds[]: -0.5
     mixes[]: clutch
     mix_thresholds[]: 0.5
 }
@@ -434,8 +444,34 @@ hcd::impulse : cond.impulse.gears
     impulses[]: geardown
 }
 
+hcd::impulse : cond.impulse_nm.steering
+{
+    mixes[]: steering
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: -0.3
+}
+
 hcd::impulse : cond.impulse.steering
 {
+    mixes[]: steering
+    mix_thresholds[]: 0.3
+    mixes[]: steering
+    mix_thresholds[]: -0.3
+    mixes[]: msteering
+    mix_thresholds[]: 0.3
+    mixes[]: msteering
+    mix_thresholds[]: -0.3
+}
+
+hcd::impulse : cond.impulse_nm.pedal_steer
+{
+    mixes[]: forward
+    mix_thresholds[]: 0.3
+    mixes[]: backward
+    mix_thresholds[]: 0.3
+    mixes[]: clutch
+    mix_thresholds[]: 0.3
     mixes[]: steering
     mix_thresholds[]: 0.3
     mixes[]: steering
@@ -448,11 +484,19 @@ hcd::impulse : cond.impulse.pedal_steer
     mix_thresholds[]: 0.3
     mixes[]: backward
     mix_thresholds[]: 0.3
+    mixes[]: mpedals
+    mix_thresholds[]: 0.5
+    mixes[]: mpedals
+    mix_thresholds[]: -0.5
     mixes[]: clutch
     mix_thresholds[]: 0.3
     mixes[]: steering
     mix_thresholds[]: 0.3
     mixes[]: steering
+    mix_thresholds[]: -0.3
+    mixes[]: msteering
+    mix_thresholds[]: 0.3
+    mixes[]: msteering
     mix_thresholds[]: -0.3
 }
 
@@ -464,11 +508,19 @@ hcd::impulse : cond.impulse.driving
     mix_thresholds[]: 0.3
     mixes[]: backward
     mix_thresholds[]: 0.3
+    mixes[]: mpedals
+    mix_thresholds[]: 0.5
+    mixes[]: mpedals
+    mix_thresholds[]: -0.5
     mixes[]: clutch
     mix_thresholds[]: 0.3
     mixes[]: steering
     mix_thresholds[]: 0.3
     mixes[]: steering
+    mix_thresholds[]: -0.3
+    mixes[]: msteering
+    mix_thresholds[]: 0.3
+    mixes[]: msteering
     mix_thresholds[]: -0.3
 }
 
@@ -736,6 +788,16 @@ hcd::can_start_engine_without_electronics : cond.engine_ele.with
     negate: true
 }
 
+hcd::on_event : cond.job.done
+{
+    event_type: job_completed
+}
+
+hcd::in_convoy : cond.multiplayer.off
+{
+    negate: true
+}
+
 hcd::hint_ref : cond.hint_ref.4Acancel
 {
     target_name: hint.indicators.a
@@ -912,6 +974,12 @@ hcd::condition_or : cond.elec_off_or.eng_ele_wo
 {
     conditions[]: cond.part.elec_off
     conditions[]: cond.engine_ele.without
+}
+
+hcd::condition_or : cond.can_deliv_or.deliv_done
+{
+    conditions[]: cond.cargo.can_deliver
+    conditions[]: cond.job.done
 }
 
 hcd::always_true : cond.always.true

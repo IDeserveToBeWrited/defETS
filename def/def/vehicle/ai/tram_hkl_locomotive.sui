@@ -439,3 +439,45 @@ traffic_spawn_condition: .traffic.hkl_loco.de_ma.condition.city
 	type: city
 	str_param[]: "mannheim"
 }
+
+traffic_vehicle : traffic.hkl_loco.be_aw
+{
+	accessories[]: .hkl_loco.be_aw.chassis
+	accessories[]: .hkl_loco.be_aw.fwheel
+	accessories[]: .hkl_loco.be_aw.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	# 42t whole tram
+	engine_power: 520	# 8x65kW
+
+	trailer_chains[]: "train_car.hkl_car1.be_aw | train_car.hkl_car2.be_aw"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+
+	spawn_condition[]: .traffic.hkl_loco.be_aw.condition.city
+}
+
+vehicle_accessory: .hkl_loco.be_aw.chassis
+{
+	data_path: "/def/vehicle/ai/tram_hkl/chassis_loc_be_aw.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.be_aw.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .hkl_loco.be_aw.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.hkl_loco.be_aw.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "antwerp"
+}

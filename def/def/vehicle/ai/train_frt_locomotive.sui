@@ -373,3 +373,53 @@ vehicle_wheel_accessory: .frt.no.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Netherlands
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+traffic_vehicle : traffic.frt.nl
+{
+	accessories[]: .frt.nl.chassis
+	accessories[]: .frt.nl.fwheel
+	accessories[]: .frt.nl.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 132000
+	engine_power: 2000
+
+	trailer_chains[]: "train_car.frt.nl.car1 | train_car.frt.nl.car2 | train_car.frt.nl.car_last"
+
+	sound_move[]: "/sound/traffic/train_electric_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 0.0
+
+	tags[]: passenger
+
+	
+	
+
+}
+
+vehicle_accessory: .frt.nl.chassis
+{
+	data_path: "/def/vehicle/ai/train_frt/chassis_loco_nl.sii"
+}
+
+vehicle_wheel_accessory: .frt.nl.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+
+vehicle_wheel_accessory: .frt.nl.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+
+
+

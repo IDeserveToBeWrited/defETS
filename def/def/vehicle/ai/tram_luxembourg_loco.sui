@@ -1,0 +1,46 @@
+##
+
+traffic_vehicle : traffic.luxem_loco
+{
+	accessories[]: .luxem_loco.chassis
+	accessories[]: .luxem_loco.fwheel
+	accessories[]: .luxem_loco.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 22000	#
+	engine_power: 520	#
+
+	 trailer_chains[]: "tram_car.luxem_car1 | tram_car.luxem_car2 | tram_car.luxem_car3 | tram_car.luxem_car4 | tram_car.luxem_car5 | tram_car.luxem_car6"
+
+	sound_move[]: "/sound/traffic/tram_1.soundref"
+	sound_horn[]: "/sound/traffic/tram_horn_1.soundref"
+	sound_gears: 1
+
+	displacement_limit: 0.0
+
+	spawn_ratio: 1.0
+
+	tags[]: tram
+
+	spawn_condition[]: .traffic.luxem_loco.condition.city
+}
+
+vehicle_accessory: .luxem_loco.chassis
+{
+	data_path: "/def/vehicle/ai/tram_luxembourg/chassis_locomotive.sii"
+}
+vehicle_wheel_accessory: .luxem_loco.fwheel
+{
+	data_path: "/def/vehicle/ai_wheel/front_empty_50cm.sii"
+}
+vehicle_wheel_accessory: .luxem_loco.rwheel
+{
+	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
+}
+traffic_spawn_condition: .traffic.luxem_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: city
+	str_param[]: "luxembourg"
+}
