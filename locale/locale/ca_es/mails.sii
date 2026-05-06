@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Sistema" #+ Message sender
+		subject: "Missatge de prova" #+ Message subject
+		body: "Hola!<br><br>Aquest és un missatge de prova del teu company administrador ;)<br><br>Salut" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Banc" #+ Message sender
+		subject: "Necessites diners? Et podem ajudar!" #+ Message subject
+		body: "Estimat/da senyor/a,<br><br>Hem pensat que li agradaria saber que oferim préstecs favorables a nous negocis. Necessita finançament per a la seva nova empresa? Estem aquí per ajudar-lo! Si us plau, $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>visiti el seu banc més proper</link> per a més informació.<br><br>Atentament,<br>Cap de Vendes<br>El banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Banc" #+ Message sender
+		subject: "Podem ajudar-te a créixer" #+ Message subject
+		body: "Estimat/da Sr./Sra,<br><br>No hem pogut evitar observar que a la seva companyia li va realment bé, i ens agradaria ajudar-vos a desenvolupar encara més el vostre potencial. El seu límit de crèdit s'ha elevat a $MONEY$. No dubti en extreure fons quan ho necessiti des del seu $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>banc local</link>.<br><br>Atentament,<br>Cap de Vendes<br>El banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Banc" #+ Message sender
+		subject: "Té un descobert en compte" #+ Message subject
+		body: "Estimat Client,<br><br>Has tret del teu compte més diners dels que hi havia disponibles. T'hem donat un crèdit a curt termini per als propers dies, sense cap recàrrec, per a que puguis solucionar el contratemps. Si us plau, torna el crèdit com més aviat millor.<br><br>Salutacions cordials,<br>El teu administrador de comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Banc" #+ Message sender
+		subject: "Tens un préstec sense pagar!" #+ Message subject
+		body: "Estimat/da Client/a,<br><br>El vostre balanç bancari és negatiu! Si us plau, pagueu els vostres deutes en els propers $DAYS$ o ens veurem forçats a embargar la vostra propietat.<br><br>Atentament,<br>El vostre administrador de comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Banc" #+ Message sender
+		subject: "Últim avís!" #+ Message subject
+		body: "Estimat/da Client/a,<br><br>Aquest és l'últim avís. El teu compte bancari està en números vermells. Si us plau, ingressa els diners com a molt tard demà o li embargarem la seva propietat per cobrir el deute.<br><br>Atentament,<br>El seu administrador de comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Banc" #+ Message sender
+		subject: "Descobert en compte solucionat" #+ Message subject
+		body: "Estimat client,<br><br>El seu descobert en compte ha estat solucionat. Estarem orgullosos d'ajudar-lo en un futur si mai necessita els nostres serveis.<br><br>Que tingui un bon dia,<br>El seu Administrador de Comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Banc" #+ Message sender
+		subject: "El teu camió personal ha estat venut" #+ Message subject
+		body: "Estimat/da Client/a,<br><br>Sentim informar-lo que hem hagut de vendre el seu camió personal ($TRUCK_NAME$) per $MONEY$. Malauradament, tenies deutes sense pagar des de feia temps i no hem tingut altra alternativa que saldar-los així. Per desgràcia, no hem pogut fer altra cosa que prendre aquestes mesures extremes. Li recomanem fer feines ràpides fins que la seva situació financera millori.<br><br>Atentament,<br>El seu administrador de comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Banc" #+ Message sender
+		subject: "El teu remolc personal ha estat venut" #+ Message subject
+		body: "Estimat/da Client/a,<br><br>Sentim informar-lo que hem hagut de vendre el seu remolc personal ($TRAILER_NAME$) per $MONEY$. Malauradament, tenies deutes sense pagar des de feia temps i no hem tingut altra alternativa que saldar-los així. Per desgràcia, no hem pogut fer altra cosa que prendre aquestes mesures extremes. Li recomanem fer feines ràpides fins que la seva situació financera millori.<br><br>Atentament,<br>El seu administrador de comptes<br>Banc" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Banc" #+ Message sender
+		subject: "La teva propietat ha estat venuda" #+ Message subject
+		body: "Estimat/da Client/a,<br><br>Vista la tardança a l'hora de liquidar un deute prolongat, ens hem vist obligats a embargar i vendre la teva propietat. Els fons recuperats, que sumen <br>$MONEY$, han estat utilitzats per saldar el teu deute. En concret, s'han embargat aquests béns:<br><br>$ITEM_LIST$<br>Sentim que aquesta situació hagi arribat tant lluny i esperem que les conseqüències no perjudiquin excessivament els teus esforços futurs.<br><br>Cordialment,<br>El teu administrador de comptes<br>Banc" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Concessionari de camions - $CITY$" #+ Message sender
+		subject: "Hi ha nous camions $BRAND$ en venda!" #+ Message subject
+		body: "Estimat/da senyor/a,<br><br>Som distribuïdors oficials de camions $BRAND$. Oferim una extensa gamma de configuracions i també realitzem encàrrecs personalitzats per satisfer qualsevol desig. Si us plau, $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>visiti la nostra exposició a $CITY$</link>. El camió que sempre ha desitjat pot estar esperant-lo just darrere la porta.<br><br>Salutacions cordials,<br>El seu concessionari $BRAND$" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Concessionari de camions usats" #+ Message sender
+		subject: "Camions usats en venda!" #+ Message subject
+		body: "Apreciat/da Sr./Sra.<br><br>Ens alegrem d'anunciar-te l'obertura del nostre concessionari de camions usats, el teu nou destí de qualitat per trobar camions usats! Tant si busques una màquina potent o simplement un vehicle fiable, tenim el camió perfecte per tu.<br><br>Si us plau, visita les nostres $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>ofertes de camions usats</link>. Estem segurs que trobaràs el camió perfecte que s'adapti a les teves necessitats.<br><br>Atentament,<br><br>L'equip del concessionari de camions usats<br><br>P. D. No t'oblidis de visitar-nos de tant en tant per veure les últimes novetats! El nostre estoc canvia constantment, i no se sap mai quina oferta podràs trobar." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Es necessiten conductors amb equipament propi" #+ Message subject
+		body: "A qui pugui interessar,<br><br>Estem buscant conductors experts amb camió propi per a una gran quantitat d'entregues. Oferim recompenses competitives de fins a $MONEY$ per encàrrec. Si us plau, si disposeu de vehicle propi, pregunteu directament al nostre moll de càrrega a $CITY$.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Conductor $NAME$" #+ Message sender
+		subject: "Necessito un camió per a treballar" #+ Message subject
+		body: "Hola cap,<br><br>No sé si se n'ha adonat, però he estat a $CITY$ sense feina durant $DAYS$. M'està començant a molestar, perquè necessito diners per pagar les meves factures i no puc fer res si estic perdent el temps sense cap feina a la vista. Si us plau, aconsegueixi'm un camió en els propers $DAYS2$ per a que pugui començar a fer encàrrecs o no tindré cap altra opció que abandonar-lo.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Conductora $NAME$" #+ Message sender - written by female
+		subject: "Necessito un camió per a treballar" #+ Message subject - written by female
+		body: "Hola cap,<br><br>No sé si se n'ha adonat, però he estat a $CITY$ sense feina durant $DAYS$. M'està començant a molestar, perquè necessito diners per pagar les meves factures i no puc fer res si estic perdent el temps sense cap feina a la vista. Si us plau, aconsegueixi'm un camió en els propers $DAYS2$ per a que pugui començar a fer encàrrecs o no tindré cap altra opció que abandonar-lo.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Conductor $NAME$" #+ Message sender
+		subject: "Adéu" #+ Message subject
+		body: "Hola,<br><br>No em puc permetre perdre més temps. No puc treballar sense un camió i no vull esperar més. M'estic perdent oportunitats bones, així que em veig obligat a marxar de la teva empresa i provar sort a qualsevol altre lloc. Tot el meu equipament està al garatge de $CITY$.<br><br>Adéu,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Conductora $NAME$" #+ Message sender - written by female
+		subject: "Adéu" #+ Message subject - written by female
+		body: "Hola,<br><br>No em puc permetre perdre més temps. No puc treballar sense un camió i no vull esperar més. M'estic perdent oportunitats bones, així que em veig obligada a marxar de la teva empresa i provar sort a qualsevol altre lloc. Tot el meu equipament està al garatge de $CITY$.<br><br>Adéu,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Conductor/a $NAME$" #+ Message sender
+		subject: "El meu camió necessita una restauració total" #+ Message subject
+		body: "Hola cap,<br><br>Sé que està ocupat, però el meu vehicle necessita una restauració total. Està desgastat i és massa vell per conduir amb seguretat. Fa $DAYS$ dies que estic sense feina, i francament, és molt frustrant per què he de pagar factures. Si us plau, m'hauria de restaurar el camió o aconseguir-me'n un de nou per poder tornar a la feina. D'altra manera no tindré cap altra opció que abandonar-lo.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Conductora $NAME$" #+ Message sender - written by female
+		subject: "El meu camió necessita una restauració total" #+ Message subject - written by female
+		body: "Hola cap,<br><br>Sé que està ocupat, però el meu vehicle necessita una restauració total. Està desgastat i és massa vell per conduir amb seguretat. Fa $DAYS$ dies que estic sense feina, i francament, és molt frustrant per què he de pagar factures. Si us plau, m'hauria de restaurar el camió o aconseguir-me'n un de nou per poder tornar a la feina. D'altra manera no tindré cap altra opció que abandonar-lo.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Conductor/a $NAME$" #+ Message sender
+		subject: "Adéu" #+ Message subject
+		body: "Hola,<br><br>Em sap greu però se m'ha acabat la paciència. El meu vehicle cau a trossos a causa del desgast. Estic sense feina i les meves despeses s'acumulen, així que he de seguir endavant. Recomano una restauració total del vehicle abans no l'assigni a un altre conductor. Trobarà tot el meu antic equipament al seu garatge a $CITY$.<br><br>Fins a una altra.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Conductora $NAME$" #+ Message sender - written by female
+		subject: "Adéu" #+ Message subject - written by female
+		body: "Hola,<br><br>Em sap greu però se m'ha acabat la paciència. El meu vehicle cau a trossos a causa del desgast. Estic sense feina i les meves despeses s'acumulen, així que he de seguir endavant. Recomano una restauració total del vehicle abans no l'assigni a un altre conductor. Trobarà tot el meu antic equipament al seu garatge a $CITY$.<br><br>Fins a una altra.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Conductor $NAME$" #+ Message sender
+		subject: "Me'n vaig" #+ Message subject
+		body: "Hola cap,<br><br>El garatge de $CITY$, on estic ubicat, tancarà aviat. Ha vingut gent del banc i m'ha dit que me n'he d'anar. Sembla que a aquesta empresa no li ha anat gaire bé últimament. Així doncs, he decidit marxar. De tota manera tampoc podria fer res de bo aquí, sense ni camió ni res. Provaré sort en un altre lloc.<br><br>Sense cap mena de rancor, adéu,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Conductora $NAME$" #+ Message sender - written by female
+		subject: "Me'n vaig" #+ Message subject - written by female
+		body: "Hola cap,<br><br>El garatge de $CITY$, on estic ubicada, tancarà aviat. Ha vingut gent del banc i m'ha dit que me n'he d'anar. Sembla que a aquesta empresa no li ha anat gaire bé últimament. Així doncs, he decidit marxar. De tota manera tampoc podria fer res de bo aquí, sense ni camió ni res. Provaré sort en un altre lloc.<br><br>Sense cap mena de rancor, adéu,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Encarregat" #+ Message sender
+		subject: "Transports especials" #+ Message subject
+		body: "Hola cap.<br><br>Tinc una cosa especial per tu. Gràcies a les nostres connexions, ara podem realitzar grans desafiaments. Algunes càrregues especials, extra grans i pesades necessiten ser transportades per un autèntic professional. No serà fàcil i requeriran habilitats especials, paciència, cooperació amb els vehicles escorta i atenció extra, però suposo que ho tens, oi? També un major risc ve amb un major benefici.<br><br>Si hi estàs interessat, pots visitar aquestes ciutats:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Encarregat" #+ Message sender
+		subject: "Nous Transports Especials" #+ Message subject
+		body: "Hola cap.<br><br>A moltes empreses els agradaria contractar les teves habilitats professionals per algunes entregues especials. Com l'última vegada - no serà fàcil i requerirà habilitats, paciència, cooperació amb els vehicles escorta i cura extra, però crec que tu encara ho tens, oi? I no ho oblidis, hi ha un benefici major per aquestes càrregues.<br><br>Pots aconseguir les feines de Transport Especial a:<br><br>$OLD_CITIES$<br><br>Ara també pots aconseguir-ne <color value=@@clr_sel@@>de noves<color value=@@clr_txt@@> a: <br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Agència immobiliària" #+ Message sender
+		subject: "Vols ampliar el teu negoci?" #+ Message subject
+		body: "Estimat/da Sr./Sra.<br><br>Et volem felicitar pels progressos de la teva empresa. Estem impressionats per l'èxit dels teus negocis i ens agradaria oferir-te una nova via per a ajudar-te a expandir encara més la teva empresa. Des d'ara mateix, pots utilitzar els nostres serveis per comprar propietats addicionals pràcticament a l'instant! Per a més informació, si us plau $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>vés a la pantalla de Compra de Garatges</link>.<br><br>Atentament,<br>Director de Relacions Públiques<br>Agència Immobiliària" #+ Message body
+	}
+	
+#@}
+}

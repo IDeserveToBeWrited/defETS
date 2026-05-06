@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Hệ thống" #+ Message sender
+		subject: "Tin nhắn kiểm tra" #+ Message subject
+		body: "Xin chào!<br><br>Đây là thông báo thử nghiệp từ quản trị viên cũa bạn ;-)<br><br>Cheers" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Nếu cần tiền, chúng tôi có thể giúp!" #+ Message subject
+		body: "Kính thưa quý ông/bà,<br><br>Chúng tôi nghĩ rằng quý vị sẽ muốn biết rằng chúng tôi cung cấp các khoản vay ưu đãi cho các doanh nghiệp mới. Quý vị có cần vốn để khởi nghiệp kinh doanh không? Chúng tôi sẵn sàng hỗ trợ! Vui lòng $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>ghé thăm chi nhánh ngân hàng địa phương của quý vị</link> để biết thêm thông tin.<br><br>Trân trọng,<br>Giám đốc Kinh doanh<br>Ngân hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Chúng tôi có thể giúp bạn phát triển" #+ Message subject
+		body: "Kính thưa quý ông/bà,<br><br>Chúng tôi nhận thấy thu nhập ổn định của quý vị và rất mong muốn hỗ trợ quý vị phát triển hơn nữa tiềm năng của mình. Hạn mức tín dụng của quý vị đã được nâng lên $MONEY$. Quý vị có thể rút tiền từ số tiền hiện có bất cứ lúc nào tại $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>chi nhánh ngân hàng địa phương của quý vị</link>.<br><br>Trân trọng,<br>Giám đốc Kinh doanh<br>Ngân hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Tài khoản của bạn đã bị âm tiền" #+ Message subject
+		body: "Kính gửi Quý khách,<br><br>Bạn đã rút số tiền lớn hơn số dư hiện có trong tài khoản của bạn. Chúng tôi đã cung cấp cho bạn một khoản tín dụng ngắn hạn miễn phí trong vài ngày tới để bạn có thể giải quyết tình trạng này. Vui lòng thanh toán số dư tín dụng sớm nhất có thể.<br><br>Trân trọng,<br>Quản lý tài khoản của bạn<br>Ngân hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Bạn đang có một khoảng nợ đang còn tồn đọng." #+ Message subject
+		body: "Xin chào quý khách,<br><br>Tài khoản của quý khách đã quá hạn! Xin vui lòng trả phần dư nợ trước ngày $DAYS$ hoặc chúng tôi sẽ tịch thu tài sản của quý khách.<br><br>Trân trọng,<br> Trưởng phòng khách hàng<br>Ngân Hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Cảnh báo lần cuối!" #+ Message subject
+		body: "Chào quý khách,<br><br>Đây là lời khuyến cáo cuối cùng> Tài khoản của quý khách đã sử dụng quá số tiền. Hãy cố gắng hoàn trả số tiền sử dụng quá cho chúng tôi nếu không chúng tôi sẽ tịch thu tài sản của quý khách .<br><br>Trân trọng,<br>Nhân viên quản lý tài khoản<br>Ngân Hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Khoản thấu chi đã được thanh toán" #+ Message subject
+		body: "Chào quý khách,<br><br>Khoản thấu chi tài khoản của quý khách đã được thanh toán. Chúng tôi rất hân hạnh được hỗ trợ nếu quý khách cần đến dịch vụ của chúng tôi trong tương lai.<br><br>Chúc một ngày tốt lành,<br>Quản lý tài khoản của quý khách<br>Ngân Hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Xe của bạn đã được bán" #+ Message subject
+		body: "Kính gửi Quý khách hàng,<br><br>Chúng tôi rất tiếc phải thông báo rằng chúng tôi buộc phải bán chiếc xe tải cá nhân của quý khách - $TRUCK_NAME$ - với giá $MONEY$. Thật không may, quý khách đã nợ chúng tôi một khoản tiền lớn và không có cách nào khác để thanh toán. Đáng buồn thay, chúng tôi không còn cách nào khác ngoài việc phải thực hiện biện pháp cực đoan này. Chúng tôi đề nghị quý khách nên làm những công việc ngắn hạn cho đến khi tình hình tài chính của quý khách được cải thiện.<br><br>Trân trọng,<br>Quản lý tài khoản của quý khách<br>Ngân hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Rơ-moóc của bạn đã được bán" #+ Message subject
+		body: "Kính gửi Quý khách hàng,<br><br>Chúng tôi rất tiếc phải thông báo rằng chúng tôi buộc phải bán rơ-moóc cá nhân của quý khách - $TRAILER_NAME$ - với giá $MONEY$. Thật không may, quý khách đã nợ chúng tôi một khoản tiền lớn và không có cách nào khác để thanh toán. Đáng buồn thay, chúng tôi không còn cách nào khác ngoài việc phải thực hiện biện pháp cực đoan này. Chúng tôi đề nghị quý khách làm những công việc ngắn hạn cho đến khi tình hình tài chính của quý khách được cải thiện.<br><br>Trân trọng,<br>Quản lý tài khoản của quý khách<br>Ngân hàng" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Ngân hàng" #+ Message sender
+		subject: "Tài sản cá nhân của bạn đã bị bán" #+ Message subject
+		body: "Kính gửi Quý khách hàng,<br><br>Do khoản nợ tồn đọng lâu ngày trong tài khoản của quý khách, chúng tôi buộc phải tịch thu và bán tài sản của quý khách. Số tiền thu hồi được, tổng cộng là <br>$MONEY$, đã được sử dụng để thanh toán các khoản nợ của quý khách. Cụ thể, các mặt hàng sau đã bị tịch thu:<br><br>$ITEM_LIST$<br>Chúng tôi rất tiếc vì tình hình đã diễn biến đến mức này và hy vọng rằng hậu quả sẽ không gây ảnh hưởng quá nghiêm trọng đến những nỗ lực tiếp theo của quý khách.<br><br>Trân trọng,<br>Quản lý tài khoản của quý khách<br>Ngân hàng" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Đại lý xe - $CITY$" #+ Message sender
+		subject: "Bán xe tải $BRAND$ hoàn toàn mới!" #+ Message subject
+		body: "Kính thưa quý ông/bà,<br><br>Chúng tôi là nhà bán lẻ được chứng nhận của các dòng xe tải $BRAND$. Chúng tôi cung cấp nhiều lựa chọn cấu hình khác nhau và cũng có thể thực hiện các tùy chỉnh để đáp ứng mọi yêu cầu đặc biệt. Vui lòng, $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>ghé thăm showroom của chúng tôi tại $CITY$</link>. Chiếc xe tải mà bạn hằng mơ ước có thể đang chờ bạn ngay sau cánh cửa.<br><br>Trân trọng,<br>Đại lý xe tải $BRAND$ của bạn" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Đại lý xe tải đã qua sử dụng" #+ Message sender
+		subject: "Bán xe tải cũ!" #+ Message subject
+		body: "Kính thưa quý ông/bà,<br><br>Chúng tôi rất vui mừng thông báo về việc khai trương đại lý xe tải đã qua sử dụng của chúng tôi, điểm đến mới nhất của quý khách cho những chiếc xe tải đã qua sử dụng chất lượng cao! Cho dù quý khách đang tìm kiếm một cỗ máy mạnh mẽ hay chỉ là một chiếc xe đáng tin cậy để làm việc, chúng tôi đều có chiếc xe tải hoàn hảo dành cho quý khách.<br><br>Vui lòng xem qua các ưu đãi xe tải của chúng tôi tại $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Xe tải đã qua sử dụng</link>. Chúng tôi tin rằng quý khách sẽ tìm thấy chiếc xe tải hoàn hảo phù hợp với nhu cầu của mình.<br><br>Trân trọng,<br><br>Đội ngũ Đại lý Xe tải Đã qua sử dụng<br><br>P.S. Đừng quên thường xuyên quay lại để xem các mẫu xe mới! Kho hàng của chúng tôi liên tục thay đổi, vì vậy quý khách không bao giờ biết mình có thể tìm thấy ưu đãi nào." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Cần tuyển tài xế có phương tiện riêng" #+ Message subject
+		body: "Kính gửi các tay lái,<br><br>Chúng tôi đang tìm kiếm các tài xế lành nghề có xe tải riêng để thực hiện số lượng lớn các chuyến giao hàng. Chúng tôi cung cấp mức lương cạnh tranh lên đến $MONEY$ cho mỗi chuyến. Nếu quý vị có xe riêng, vui lòng liên hệ trực tiếp tại bến tàu của chúng tôi ở $CITY$.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Tài xế $NAME$" #+ Message sender
+		subject: "Tôi cần một chiếc xe để làm việc" #+ Message subject
+		body: "Chào ông chủ,<br><br>Tôi không biết ông có để ý hay không chứ tôi ngồi ở thành phố $CITY$ mà chẳng có việc làm $DAYS$. Tôi thật sự rất lo lắng vì tôi còn nhiều khoảng phải chi tiêu mà giờ tôi không làm ra tiền. Làm ơn cấp cho tôi một chiếc xe vào ngày $DAYS2$ để tôi vận chuyển hàng hóa chứ nếu không tôi phải bỏ ông mà kiếm việc khác thôi..<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Tài xế $NAME$" #+ Message sender - written by female
+		subject: "Tôi cần một chiếc xe để làm việc" #+ Message subject - written by female
+		body: "Chào ông chủ,<br><br>Tôi không biết ông có để ý hay không chứ tôi ngồi ở thành phố $CITY$ mà chẳng có việc làm $DAYS$. Tôi thật sự rất lo lắng vì tôi còn nhiều khoảng phải chi tiêu mà giờ tôi không làm ra tiền. Làm ơn cấp cho tôi một chiếc xe vào ngày $DAYS2$ để tôi vận chuyển hàng hóa chứ nếu không tôi phải bỏ ông mà kiếm việc khác thôi..<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Tài xế $NAME$" #+ Message sender
+		subject: "Tạm biệt" #+ Message subject
+		body: "Chào,<br><br>Tôi không thể lãng phí thời gian thêm nữa. Tôi không thể làm việc nếu không có xe tải và tôi không muốn chờ đợi thêm nữa. Tôi đang bỏ lỡ những cơ hội tốt, vì vậy tôi rời công ty của bạn để thử vận may ở nơi khác. Bạn có thể tìm thấy bất kỳ thiết bị nào đã được cấp phát tại gara cũ của tôi ở $CITY$.<br><br>Tạm biệt,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Tài xế $NAME$" #+ Message sender - written by female
+		subject: "Tạm biệt" #+ Message subject - written by female
+		body: "Chào,<br><br>Tôi không thể lãng phí thời gian thêm nữa. Tôi không thể làm việc nếu không có xe tải và tôi không muốn chờ đợi thêm nữa. Tôi đang bỏ lỡ những cơ hội tốt, vì vậy tôi rời công ty của bạn để thử vận may ở nơi khác. Bạn có thể tìm thấy bất kỳ thiết bị nào đã được cấp phát tại gara cũ của tôi ở $CITY$.<br><br>Tạm biệt,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Tài xế $NAME$" #+ Message sender
+		subject: "Xe tải của tôi cần được đại tu toàn diện" #+ Message subject
+		body: "Chào sếp,<br><br>Tôi biết sếp bận, nhưng xe của tôi cần được phục hồi hoàn toàn. Nó quá cũ và xuống cấp, không còn an toàn để lái nữa. Tôi đã thất nghiệp $DAYS$ rồi, và thành thật mà nói, tôi khá bực bội vì cần phải trả các hóa đơn mà không có phương tiện đi lại. Làm ơn, sếp có thể kiếm cho tôi một chiếc xe tải mới hoặc phục hồi chiếc này để tôi có thể đi làm lại được không? Nếu không, tôi sẽ không còn lựa chọn nào khác ngoài việc nghỉ việc.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Tài xế $NAME$" #+ Message sender - written by female
+		subject: "Xe tải của tôi cần được phục hồi hoàn toàn." #+ Message subject - written by female
+		body: "Chào sếp,<br><br>Tôi biết sếp bận, nhưng xe của tôi cần được phục hồi hoàn toàn. Nó quá cũ và xuống cấp, không còn an toàn để lái nữa. Tôi đã thất nghiệp $DAYS$ rồi, và thành thật mà nói, tôi khá bực bội vì cần phải trả các hóa đơn mà không có phương tiện đi lại. Làm ơn, sếp có thể kiếm cho tôi một chiếc xe tải mới hoặc phục hồi chiếc này để tôi có thể đi làm lại được không? Nếu không, tôi sẽ không còn lựa chọn nào khác ngoài việc nghỉ việc.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Tài xế $NAME$" #+ Message sender
+		subject: "Tạm biệt" #+ Message subject
+		body: "Chào,<br><br>Rất tiếc phải báo tin này nhưng xe của tôi đang xuống cấp trầm trọng do hao mòn và tôi không còn thời gian nữa. Tôi không có việc làm và chi phí ngày càng tăng cao, vì vậy tôi phải chuyển đi. Tôi khuyên nên phục hồi hoàn toàn chiếc xe này trước khi người lái tiếp theo sử dụng. Bạn có thể tìm thấy bất kỳ thiết bị nào đã được cấp phát trong gara cũ của tôi ở $CITY$.<br><br>Tạm biệt.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Tài xế $NAME$" #+ Message sender - written by female
+		subject: "Tạm biệt" #+ Message subject - written by female
+		body: "Chào,<br><br>Rất tiếc phải báo tin này nhưng xe của tôi đang xuống cấp trầm trọng do hao mòn và tôi không còn thời gian nữa. Tôi không có việc làm và chi phí ngày càng tăng cao, vì vậy tôi phải chuyển đi. Tôi khuyên nên phục hồi hoàn toàn chiếc xe này trước khi người lái tiếp theo sử dụng. Bạn có thể tìm thấy bất kỳ thiết bị nào đã được cấp phát trong gara cũ của tôi ở $CITY$.<br><br>Tạm biệt.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Tài xế  $NAME$" #+ Message sender
+		subject: "Tôi đang rời đi" #+ Message subject
+		body: "Chào sếp,<br><br>Xưởng sửa xe ở $CITY$, nơi tôi ở, sắp đóng cửa. Có người từ ngân hàng đến và bảo tôi phải chuyển đi. Dạo này công ty hình như làm ăn không được tốt lắm. Vì vậy, tôi quyết định nghỉ việc. Dù sao thì tôi cũng chẳng làm được gì ra hồn ở đây – không có xe tải nữa. Tôi sẽ thử ở chỗ khác.<br><br>Tạm biệt và không có gì phải khó chịu,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Tài xế $NAME$" #+ Message sender - written by female
+		subject: "Tôi đang rời đi" #+ Message subject - written by female
+		body: "Chào sếp,<br><br>Xưởng sửa xe ở $CITY$, nơi tôi ở, sắp đóng cửa. Có người từ ngân hàng đến và bảo tôi phải chuyển đi. Dạo này công ty hình như làm ăn không được tốt lắm. Vì vậy, tôi quyết định nghỉ việc. Dù sao thì tôi cũng chẳng làm được gì ra hồn ở đây – không có xe tải nữa. Tôi sẽ thử ở chỗ khác.<br><br>Tạm biệt và không có gì phải khó chịu,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Điều phối" #+ Message sender
+		subject: "Vận chuyển đặc biệt" #+ Message subject
+		body: "Chào sếp.<br><br>Tôi có một điều đặc biệt muốn chia sẻ với sếp. Nhờ các mối quan hệ của chúng ta, giờ đây chúng ta có thể tham gia vào một thử thách thực sự. Một số kiện hàng đặc biệt, quá khổ và nặng cần được vận chuyển bởi một chuyên gia thực thụ. Việc này sẽ không dễ dàng và đòi hỏi kỹ năng, sự kiên nhẫn, sự phối hợp với các phương tiện hộ tống và sự cẩn thận hơn, nhưng tôi nghĩ sếp có tất cả những điều đó, phải không? Và rủi ro càng lớn thì lợi nhuận càng cao.<br><br>Nếu sếp quan tâm, sếp có thể ghé thăm các thành phố này:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Điều phối" #+ Message sender
+		subject: "Vận tải Đặc biệt mới" #+ Message subject
+		body: "Chào sếp.<br><br>Nhiều công ty đang muốn thuê kỹ năng lái xe chuyên nghiệp của bạn cho một vài chuyến hàng đặc biệt. Cũng giống như lần trước - sẽ không dễ dàng đâu và đòi hỏi kỹ năng, sự kiên nhẫn, sự phối hợp với xe hộ tống cũng như sự cẩn thận tối đa, nhưng tôi đoán bạn vẫn hội tụ đủ những yếu tố đó, đúng không? Và đừng quên - lợi nhuận từ những chuyến hàng này vẫn cao hơn hẳn.<br><br>Cùng với các công việc Vận tải Đặc biệt hiện có tại:<br><br>$OLD_CITIES$<br><br>Giờ đây bạn cũng có thể nhận <color value=@@clr_sel@@>những tuyến mới<color value=@@clr_txt@@> tại:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Văn phòng Bất động sản" #+ Message sender
+		subject: "Bạn đang mong muốn mở rộng công ty của mình?" #+ Message subject
+		body: "Kính thưa quý ông/bà,<br><br>Chúng tôi xin chúc mừng sự phát triển của công ty quý vị. Chúng tôi rất ấn tượng với sự thành công của doanh nghiệp quý vị và muốn đề xuất một phương thức mới để giúp công ty quý vị mở rộng hơn nữa. Từ nay, quý vị có thể sử dụng dịch vụ của chúng tôi để mua thêm bất động sản gần như ngay lập tức! Để biết thêm thông tin, vui lòng $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>truy cập giao diện Mua Gara</link>.<br><br>Trân trọng,<br>Quản lý Quan hệ Khách hàng<br>Công ty Bất động sản" #+ Message body
+	}
+	
+#@}
+}

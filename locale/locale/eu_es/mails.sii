@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Sistema" #+ Message sender
+		subject: "Proba-mezua" #+ Message subject
+		body: "Aupa!<br><br>Honakoa zure administradore maitearen proba-mezua da ;-)<br><br>Ondo segi" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Bankua" #+ Message sender
+		subject: "Dirurik behar? Hemen duzu laguntza!" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Pentsatu dugu enpresa berrientzako eskaintzen ditugun maileguak interesatzen zaizkizula. Funtsik behar duzu zure negozioa bultzatzeko? Laguntzeko prest gaude! Mesedez, $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>bisita ezazu zure bankua</link> informazio gehiagorako.<br><br>Adeitasunez,<br>Salmenta-arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Bankua" #+ Message sender
+		subject: "Hazten lagun diezazukegu" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Zure irabazien igoera geldiezina ikusirik gustatuko litzaiguke zure potentziala ahalik eta gehien bultzatzea. Hortaz, zure kreditu limitea handitu dugu $MONEY$-etara. Zifra horretararte nahi beste atera dezakezu zure $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>bankuan </link>.<br><br>Adeitasunez,<br>Salmenta-arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Bankua" #+ Message sender
+		subject: "Zenbaki gorritan zaude" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Zure kontuan duzuna baino diru gehiago atera duzu. Epe motzerako kreditu bat aplikatu dizugu datozen egunetan, interesik gabe, zure arazoa konpon dezazun. Mesedez, balantzea berreskuratu ahal bezain laister.<br><br>Agur adeitsuak,<br>Zure Kontu Arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Bankua" #+ Message sender
+		subject: "Ordaindu gabeko zorra duzu zain!" #+ Message subject
+		body: "Besero agurgarria,<br><br>Zure bankuaren balantzea negatiboa da! Mesedez, ordain ezazu zure zorra datozen $DAYS$ egunetan edo zure ondasuna konfiskatu beharko dugu.<br><br>Adeitasunez,<br>Zure Kontu Arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Bankua" #+ Message sender
+		subject: "Azken abisua!" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Hau da gure azken abisua. Zure banku kontua hankaz gora dago. Mesedez, ordaindu bihar edo zure ondasunak konfiskatu beharko ditugu zorrak ordaintzeko.<br><br>Adeitasunez,<br>Zure Kontu Arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Bankua" #+ Message sender
+		subject: "Zorra kitatu da" #+ Message subject
+		body: "Kliente maitea,<br><br>Zure kontuaren arazoa konpondu da. Zure zain egongo gara gure laguntza behar izatekotan.<br><br>Egun ona izan dezazula,<br>Zure Kontu Arduraduna<br> Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Bankua" #+ Message sender
+		subject: "Zure kamioia saldu da" #+ Message subject
+		body: "Bezero maitea,<br><br>Sentitzen dugu baina zure $TRUCK_NAME$-a saldu behar izan dugu $MONEY$-ren truk. Tamalez, zure zorrak gehiegi luzatu dira eta ez duzu ordaintzeko beste erarik. Hemendik aurrera diru egoera egonkorrago batera itzultzen zaren arte txofer modura lan egitea proposatzen dizugu.<br><br>Adeitasunez,<br>Zure kontu arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Bankua" #+ Message sender
+		subject: "Zure trailerra saldua da" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Damu gara, baina zure $TRAILER_NAME$ atoia $MONEY$-ren truke saldu behar izan dugula ohartarazten dizugu. Zoritxarrez, zure zorrak kitatzeko zenuen denbora iraungi da eta ez dugu beste erarik aurkitu zorrok kitatzeko. Lan azkarrak egitea gomendatzen dizugu zure egoera ekonomikoa hobetu arte.<br><br>Adeitasunez,<br>Zure kontuaren arduraduna<br>Bankua" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Bankua" #+ Message sender
+		subject: "Zure jabetza saldu da" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Zure denbora luzeko zorrak direla eta, zure ondasunak saldu behar izan ditugu. Honakoa da berreskuratutako dirua: <br>$MONEY$. Ondokoak dira konfiskaturiko ondasunak:<br><br>$ITEM_LIST$<br>Sentitzen dugu arazoa hain luze igaro izana, eta espero dugu zure esfortzuak hain kaltetuak ez izatea. <br><br>Desira onenekin,<br>Zure Kontu Arduraduna<br>Bankua" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Kontzesionarioa - $CITY$" #+ Message sender
+		subject: "$BRAND$ kamioi berriak salgai!" #+ Message subject
+		body: "Bezero agurgarria,<br><br>$BRAND$ kamioien salerosle ofiziala gara. Askotariko konfigurazioak eskaintzen ditugu eta bestelako doikuntza pertsonala ere gauza dezakegu zure beharrak asetzeko. Mesedez, $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>bisitatu gure kontzesionarioa $CITY$-n</link>. Betidanik nahi izan duzun kamioia zure alboan eduki dezakezu.<br><br>Agurrik beroenak,<br>Zure $BRAND$ kamioien saleroslea" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Bigarren eskuko kamioien kontzesionarioa" #+ Message sender
+		subject: "Bigarren eskuko kamioiak salmentan!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We are excited to announce the opening of our Used Trucks dealership, your newest destination for high-quality used trucks! Whether you're looking for a powerful machine or just a reliable workhorse, we have the perfect truck for you.<br><br>Please, browse our $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Used Trucks offers</link>. We trust you'll find the perfect truck that suits your needs.<br><br>Sincerely,<br><br>The Used Truck Dealership Team<br><br>P.S. Don't forget to check back often for new arrivals! Our inventory is constantly changing, so you never know what deal you might find." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Ekipamendu propioa duten gidariak behar dira" #+ Message subject
+		body: "Interesatuentzat,<br><br>Lan batzuetarako gidari trebeen bila gabiltza. $MONEY$ ordaintzera ailega gaitezke lan batengatik. Mesedez, zure kamioia izatekotan, galdetu zuzenean gure bulegoetan $CITY$-en.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "$NAME$ gidaria" #+ Message sender
+		subject: "Kamioia behar dut lan egiteko" #+ Message subject
+		body: "Egun on,<br><br>Ez dakit ohartu zaren, baina $DAYS$ daramatzat $CITY$-en lanik gabe. Nahiko nekagarria da diru sarrerarik gabe egotea nire kontuak ordaindu behar ditudan bitartean. Mesedez, eman iezadazu kamioi bat datozen $DAYS2$ egunetan edo zure konpainia utzi beharko dut.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "$NAME$ gidaria" #+ Message sender - written by female
+		subject: "Kamioia behar dut lan egiteko" #+ Message subject - written by female
+		body: "Egun on,<br><br>Ez dakit ohartu zaren, baina $DAYS$ daramatzat $CITY$-en lanik gabe. Nahiko nekagarria da diru sarrerarik gabe egotea nire kontuak ordaindu behar ditudan bitartean. Mesedez, eman iezadazu kamioi bat datozen $DAYS2$ egunetan edo zure konpainia utzi beharko dut.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "$NAME$ gidaria" #+ Message sender
+		subject: "Agur" #+ Message subject
+		body: "Kaixo,<br><br>Ezin dut denbora gehiago galdu. Ez dut lan egiteko aukerarik kamioirik gabe eta denbora galtzen ari naiz. Ziur nago beste aukera batzuk ere albo batera uzten ari naizela eta konpainia uztea erabaki dut. Nire ekipamendua $CITY$-ko garajean aurkituko duzu.<br><br>Agur,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "$NAME$ gidaria" #+ Message sender - written by female
+		subject: "Agur" #+ Message subject - written by female
+		body: "Kaixo,<br><br>Ezin dut denbora gehiago galdu. Ez dut lan egiteko aukerarik kamioirik gabe eta denbora galtzen ari naiz. Ziur nago beste aukera batzuk ere albo batera uzten ari naizela eta konpainia uztea erabaki dut. Nire ekipamendua $CITY$-ko garajean aurkituko duzu.<br><br>Agur,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "$NAME$ gidaria" #+ Message sender
+		subject: "Nire kamioiak erabateko berriztapena behar du" #+ Message subject
+		body: "Hi boss,<br><br>I know you are busy, but my rig needs a total restoration. She's too old and worn to safely drive any more. I have been without work for $DAYS$ now, and frankly I'm quite frustrated because I need to pay the bills and I can't without a roadworthy ride. Please, can you either get me a new truck or get this one restored so I can get back to work, otherwise I will have no choice but to leave you.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "$NAME$ gidaria" #+ Message sender - written by female
+		subject: "Nire kamioiak erabateko berriztapena behar du" #+ Message subject - written by female
+		body: "Hi boss,<br><br>I know you are busy, but my rig needs a total restoration. She's too old and worn to safely drive any more. I have been without work for $DAYS$ now, and frankly I'm quite frustrated because I need to pay the bills and I can't without a roadworthy ride. Please, can you either get me a new truck or get this one restored so I can get back to work, otherwise I will have no choice but to leave you.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "$NAME$ gidaria" #+ Message sender
+		subject: "Agur" #+ Message subject
+		body: "Hi,<br><br>Sorry to say it but my rig is falling apart due to wear and tear and I'm out of time. I've got no jobs and my expenses are racking up, so I have to move on. I recommend a total restoration on this rig before the next driver. You can find any issued equipment in my former garage in $CITY$.<br><br>So long.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "$NAME$ gidaria" #+ Message sender - written by female
+		subject: "Agur" #+ Message subject - written by female
+		body: "Hi,<br><br>Sorry to say it but my rig is falling apart due to wear and tear and I'm out of time. I've got no jobs and my expenses are racking up, so I have to move on. I recommend a total restoration on this rig before the next driver. You can find any issued equipment in my former garage in $CITY$.<br><br>So long.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "$NAME$ gidaria" #+ Message sender
+		subject: "Banoa" #+ Message subject
+		body: "Egun on, nagusi,<br><br>Aparkaturik nengoen $CITY$-ko garajea itxia izan da. Bankuko bat etorri eta aparkalekua utzi behar nuela esan dit. Badirudi konpainia honek arazoren bat duela, eta horregatik alde egitea erabaki dut. Bertan jarrituz gero ere ez nuke askorik egingo, kamioirik gabe. Beste norabait joaten saiatuko naiz.<br><br>Agur,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "$NAME$ gidaria" #+ Message sender - written by female
+		subject: "Banoa" #+ Message subject - written by female
+		body: "Egun on, nagusi,<br><br>Aparkaturik nengoen $CITY$-ko garajea itxia izan da. Bankuko bat etorri eta aparkalekua utzi behar nuela esan dit. Badirudi konpainia honek arazoren bat duela, eta horregatik alde egitea erabaki dut. Bertan jarrituz gero ere ez nuke askorik egingo, kamioirik gabe. Beste norabait joaten saiatuko naiz.<br><br>Agur,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Garraiolaria" #+ Message sender
+		subject: "Garraio bereziak" #+ Message subject
+		body: "Kaixo, nagusi.<br><br>Zerbait berezia daukat zuretzako. Gure kontaktuei esker, orain erronka handiagoei aurre egin diezaiekezu. Benetako profesional bat beharrezkoa da karga berezi, handi eta astun batzuk garraiatzeko. Ez da erraza izango eta trebetasuna, pazientzia, eskolta-ibilgailuekin lankidetza eta aparteko arreta eskatuko ditu, baina uste dut dena duzula, ezta? Halaber, arrisku handiagoak irabazi handiagoa dakar.<br><br>Interesik baduzu, hiri hauek bisita ditzakezu:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Garraiolaria" #+ Message sender
+		subject: "Garraio berezi berriak" #+ Message subject
+		body: "Kaixo, nagusi,<br><br>Enpresa gehiagori gustatuko litzaieke zure lanbide-trebetasunak kontratatzea, entrega berezi batzuetarako. Azken aldian bezala: ez da erraza izango eta trebetasuna, pazientzia, eskolta-ibilgailuekin lankidetza eta arreta berezia eskatuko ditu, baina hori guztia daukazu oraindik, ezta? Eta ez ahaztu, karga horiengatiko irabaziak are handiagoak dira.<br><br>Orain arte garraio bereziko lanak aurkitu ahal zenituen hiri hauetan:<br><br>$OLD_CITIES$<br><br>Hemendik aurrera <color value=@@clr_sel@@>beste lan berri batzuk<color value=@@clr_txt@@> ere egin ahal izango dituzu hiri hauetan:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Higiezinen agentzia" #+ Message sender
+		subject: "Zure enpresa handitu nahi duzu?" #+ Message subject
+		body: "Bezero agurgarria,<br><br>Zorionak eman nahi dizkizugu zure enpresaren aurrerapenengatik. Harrituta gaude zure negozioaren arrakastarekin, eta zure enpresa are gehiago handitzeko beste modu bat eskaini nahi dizugu. Hemendik aurrera, gure zerbitzuak erabil ditzakezu berehala jabetza gehigarriak erosteko! Informazio gehiago nahi izanez gero, $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>bisitatu garaje erosketa interfazea.</link><br><br>Adeitasunez,<br>Harreman publikoak<br>Higiezinen agentzia" #+ Message body
+	}
+	
+#@}
+}

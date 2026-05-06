@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Järjestelmä" #+ Message sender
+		subject: "Testiviesti" #+ Message subject
+		body: "Hei!<br><br>Tämä on testiviesti toiselta ylläpitäjältä ;-)<br><br>Terve" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Pankki" #+ Message sender
+		subject: "Tarvitsetko rahaa? Me voimme auttaa!" #+ Message subject
+		body: "Hyvä Herra/Rouva,<br><br>Ajattelimme, että teitä saattaisi kiinnostaa edulliset lainat, joita tarjoamme uusille yrityksille. Tarvitsetko rahoitusta saadaksesi yrityksesi pyörimään? Me voimme auttaa! Olkaa hyvä $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>ja vierailkaa paikallisessa pankkikeskuksessa</link> saadaksenne lisätietoa.<br><br>Kunnioittaen,<br>Myyntipäällikkö<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Pankki" #+ Message sender
+		subject: "Me voimme auttaa sinua kasvamaan" #+ Message subject
+		body: "Hyvä Herra/Rouva,<br><br>Emme voineet olla huomaamatta tasaista ansion nousuanne ja haluaisimmekin nyt auttaa teitä kehittämään kykyjänne vielä pidemmälle. Luottorajanne on nyt nostettu $MONEY$. Voitte milloin tahansa nostaa lainaa ko. summaan asti $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>paikallisesta pankistanne</link>.<br><br>Kunnioittaen,<br>Myyntipäällikkö<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Pankki" #+ Message sender
+		subject: "Pankkitilisi saldo on miinuksella" #+ Message subject
+		body: "Hyvä Asiakas,<br><br>Nostitte tililtänne enemmän rahaa kuin oli saatavilla. Tarjoamme teille maksutta lyhytaikaisen luoton muutamaksi päiväksi, jotta voitte selvittää tilanteen. Olkaa ystävällinen ja maksakaa luottonne pois niin nopeasti kuin mahdollista.<br><br>Terveisin,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Pankki" #+ Message sender
+		subject: "Sinulla on ratkaisematon tilinylitys!" #+ Message subject
+		body: "Hyvä Asiakas,<br><br>Pankkitilinne saldo on miinuksella! Olkaa hyvä ja maksakaa velkanne seuraavan $DAYS$ päivän aikana tai joudumme takavarikoimaan omaisuuttanne.<br><br>Vilpittömästi,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Pankki" #+ Message sender
+		subject: "Viimeinen varoitus!" #+ Message subject
+		body: "Hyvä asiakkaamme,<br><br>Tämä on viimeinen huomautus. Pankkitilillänne ei ole enää katetta. Olkaa hyvä ja tallettakaa tilillenne käyttövaraa tai joudumme lunastamaan lainan takuuksi omaisuuttanne<br><br>Ystävällisin terveisin,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Pankki" #+ Message sender
+		subject: "Tilinylitys selvitetty" #+ Message subject
+		body: "Hyvä Asiakas,<br><br>Tilinylityksenne on selvitetty. Autamme mielellämme, jos joskus tulevaisuudessa tarvitsette palvelujamme.<br><br>Hyvää päivänjatkoa,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Pankki" #+ Message sender
+		subject: "Henkilökohtainen rekkasi on myyty" #+ Message subject
+		body: "Hyvä asiakkaamme,<br><br>joudumme valitettavasti ilmoittamaan, että olemme joutuneet pakkolunastamaan $TRUCK_NAME$ -merkkisen kuorma-autonne hintaan $MONEY$. Teille myöntämämme laina on ollut pitkään lyhentämättömänä ja ainoa vaihtoehto kattaa velka oli ryhtyä näihin toimiin. Ehdotamme, että teette pikakeikkoja saadaksenne raha-asianne paremmalle tolalle.<br><br>Ystävällisin terveisin,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Pankki" #+ Message sender
+		subject: "Henkilökohtainen perävaunusi on myyty" #+ Message subject
+		body: "Hyvä asiakkaamme,<br><br>valitettavasti joudumme ilmoittamaan, että olemme joutuneet pakkolunastamaan - $TRAILER_NAME$ -merkkisen perävaununne hintaan $MONEY$. Teille myöntämämme laina on ollut pitkään lyhentämättömänä ja tilanne vaati kyseisen menettelytavan otettavan käyttöön. Ehdotamme, että hoidatte raha-asianne pikaisilla toimenpiteillä kuntoon.<br><br>Ystävällisin terveisin,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Pankki" #+ Message sender
+		subject: "Omaisuuttasi on myyty" #+ Message subject
+		body: "Hyvä Asiakas,<br><br>Kauan seisoneen velkanne takia jouduimme takavarikoimaan ja myymään omaisuuttanne. Saadut varat, joita tuli yhteensä <br>$MONEY$, käytettiin velvoitteidenne ratkaisemiseen. Tarkemmin, nämä kohteet takavarikoitiin:<br><br>$ITEM_LIST$<br>Pahoittelemme, että tilanne eteni tähän pisteeseen ja toivomme, etteivät seuraukset vahingoita tulevia pyrkimyksiänne liikaa.<br><br>Parhain terveisin,<br>Tilinhoitajanne<br>Pankki" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Kuorma-autojen myyjä - $CITY$" #+ Message sender
+		subject: "Upouusia $BRAND$ kuorma-autoja myytävänä!" #+ Message subject
+		body: "Hyvä Herra/Rouva,<br><br>Me olemme valtuutettu $BRAND$ kuorma-autojen jälleenmyyjä. Tarjoamme laajan valikoiman erilaisia kokoonpanoja sekä voimme myös suorittaa tilaustöitä toteuttaaksemme erikoistoiveenne. Olkaa hyvä, ja $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>vierailkaa esittelymyymälässämme kaupungissa $CITY$</link>. Unelmienne kuorma-auto saattaa odottaa teitä jo aivan nurkan takana.<br><br>Parhain terveisin,<br>$BRAND$ kuorna-autojen jälleenmyyjänne" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Käytettyjen rekkojen kauppias" #+ Message sender
+		subject: "Käytettyjä kuorma-autoja myytävänä!" #+ Message subject
+		body: "Hyvä Herra/Rouva,<br><br>Meillä on ilo ilmoittaa uudesta laadukkaiden käytettyjen kuorma-autojen kauppapaikasta! Olitpa sitten etsimässä tehokasta voimanpesää tai luotettavaa työjuhtaa, meiltä löydät sopivan kuorma-auton.<br><br>Katso tästä meidän $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>käytettyjen rekkojen tarjouksemme</link>. Löydät varmasti tarpeitasi täydellisesti vastaavan kuorma-auton.<br><br>Ystävällisin terveisin,<br><br>Käytettyjen Rekkojen myyntitiimi<br><br>P.S. Älä unohda tarkistaa valikoimaamme säännöllisesti! Valikoimamme muuttuu jatkuvasti, joten koskaan ei voi tietää minkälainen tarjous sinua odottaa." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Kuljettajia omalla kalustolla etsitään" #+ Message subject
+		body: "Niille, joita tämä saattaa koskea:<br><br>Etsimme omalla kalustolla ajavia ammattitaitoisia kuljettajia hoitamaan tavaratoimituksiamme. Tarjoamme töistä kilpailukykyisiä hintoja aina $MONEY$ asti. Jos sinulta löytyy oma ajoneuvo, ole hyvä ja tiedustele asiasta suoraan kaupungin $CITY$ lastauslaituriltamme.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Kuljettaja $NAME$" #+ Message sender
+		subject: "Tarvitsen rekan tehdäkseni töitä" #+ Message subject
+		body: "Moi,<br><br>en tiedä oletko huomannut, mutta olen odottanut töitä kaupungissa $CITY$ jo $DAYS$. Asia vaivaa minua, koska tarvitsisin rahaa maksaakseni laskuja enkä voi tuottaa mitään, jos joudun vain kuluttamaan aikaani täällä ilman töitä. Hankkisitko minulle rekan seuraavan $DAYS2$ aikana, jotta voin päästä takaisin tien päälle, muutoin minulla ei ole muuta mahdollisuutta kuin etsiä töitä muualta.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Kuljettaja $NAME$" #+ Message sender - written by female
+		subject: "Tarvitsen rekan tehdäkseni töitä" #+ Message subject - written by female
+		body: "Moi,<br><br>en tiedä oletko huomannut, mutta olen odottanut töitä kaupungissa $CITY$ jo $DAYS$. Asia vaivaa minua, koska tarvitsisin rahaa maksaakseni laskuja enkä voi tuottaa mitään, jos joudun vain kuluttamaan aikaani täällä ilman töitä. Hankkisitko minulle rekan seuraavan $DAYS2$ päivän aikana, jotta voin päästä takaisin tien päälle, muutoin minulla ei ole muuta mahdollisuutta kuin etsiä töitä muualta.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Kuljettaja $NAME$" #+ Message sender
+		subject: "Näkemiin" #+ Message subject
+		body: "Hei,<br><br>Minulla ei ole varaa tuhlata aikaani enää pidempään. En voi työskennellä ilman rekkaa enkä halua odottaa enää yhtään. Minulta menee ohi hyviä mahdollisuuksia, joten jätän yrityksenne ja koetan onneani muualla. Löydätte kaikki annetut varusteet vanhasta tallistani kaupungissa $CITY$.<br><br>Hyvästi,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Kuljettaja $NAME$" #+ Message sender - written by female
+		subject: "Näkemiin" #+ Message subject - written by female
+		body: "Hei,<br><br>Minulla ei ole varaa tuhlata aikaani enää pidempään. En voi työskennellä ilman rekkaa enkä halua odottaa enää yhtään. Minulta menee ohi hyviä mahdollisuuksia, joten jätän yrityksenne ja koetan onneani muualla. Löydätte kaikki annetut varusteet vanhasta tallistani kaupungissa $CITY$.<br><br>Hyvästi,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Kuljettaja $NAME$" #+ Message sender
+		subject: "Kuorma-autoni tarvitsee täydellistä kunnostusta" #+ Message subject
+		body: "Moi pomo,<br><br>Tiedän että olet kiireinen, mutta rekkani tarvitsee täydellistä kunnostusta. Hän on turvalliseen matkantekoon liian vanhan ja raihnainen. Olen ollut toimettomana jo $DAYS$ päivää ja alan olla suoraan sanottuna turhautunut. En voi maksaa erääntyviä laskujani ilman liikennekelpoista menopeliä. Voisitko ystävälllisesti joko hankkia minulle uuden kuorma-auton tai huollattaa nykyisen, jotta pääsen takaisin töihin. Muuten minulla ei ole muuta mahdollisuutta, kuin etsiä töitä muualta.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Kuljettaja $NAME$" #+ Message sender - written by female
+		subject: "Kuorma-autoni tarvitsee täydellistä kunnostusta" #+ Message subject - written by female
+		body: "Moi pomo,<br><br>Tiedän että olet kiireinen, mutta rekkani tarvitsee täydellistä kunnostusta. Hän on turvalliseen matkantekoon liian vanhan ja raihnainen. Olen ollut toimettomana jo $DAYS$ päivää ja alan olla suoraan sanottuna turhautunut. En voi maksaa erääntyviä laskujani ilman liikennekelpoista menopeliä. Voisitko ystävälllisesti joko hankkia minulle uuden kuorma-auton tai huollattaa nykyisen, jotta pääsen takaisin töihin. Muuten minulla ei ole muuta mahdollisuutta, kuin etsiä töitä muualta.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Kuljettaja $NAME$" #+ Message sender
+		subject: "Hyvästi" #+ Message subject
+		body: "Hei,<br><br>Ikäväkseni ilmoitan, että kuorma-autoni on kulunut ja hajoaa käsiin ja enkä voi enää odottaa. Minulla ei ole töitä ja laskuja alkaa kertyä, joten minun on aika siirtyä eteenpäin. Suosittelen kuorma-auton täydellistä kunnostusta seuraavaa kuljettajaa varten. Löydät minulle myönnetyt työvälineet entisestä tallistani kaupungista $CITY$.<br><br>Näkemiin.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Kuljettaja $NAME$" #+ Message sender - written by female
+		subject: "Hyvästi" #+ Message subject - written by female
+		body: "Hei,<br><br>Ikäväkseni ilmoitan, että kuorma-autoni on kulunut ja hajoaa käsiin ja enkä voi enää odottaa. Minulla ei ole töitä ja laskuja alkaa kertyä, joten minun on aika siirtyä eteenpäin. Suosittelen kuorma-auton täydellistä kunnostusta seuraavaa kuljettajaa varten. Löydät minulle myönnetyt työvälineet entisestä tallistani kaupungista $CITY$.<br><br>Näkemiin.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Kuljettaja $NAME$" #+ Message sender
+		subject: "Minä lähden" #+ Message subject
+		body: "Hei pomo,<br><br>Tallia kaupungissa $CITY$, jossa olin, ollaan sulkemassa. Pankin edustajia tuli paikalle ja sanoivat, että minun täytyy siirtyä pois. Näyttää siltä, ettei tällä yrityksellä ole mennyt kovin hyvin viimeaikoina. Päätin sitten lähteä. En hyödyttäisi täällä paljoa muutenkaan - ilman rekkaa jne. Kokeilen jatkaa jossain muualla.<br><br>Hei sitten eikä muistella pahalla,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Kuljettaja $NAME$" #+ Message sender - written by female
+		subject: "Minä lähden" #+ Message subject - written by female
+		body: "Hei pomo,<br><br>Tallia kaupungissa $CITY$, jossa olin, ollaan sulkemassa. Pankin edustajia tuli paikalle ja sanoivat, että minun täytyy siirtyä pois. Näyttää siltä, ettei tällä yrityksellä ole mennyt kovin hyvin viimeaikoina. Päätin sitten lähteä. En hyödyttäisi täällä paljoa muutenkaan - ilman rekkaa jne. Kokeilen jatkaa jossain muualla.<br><br>Hei sitten eikä muistella pahalla,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Viestittäjä" #+ Message sender
+		subject: "Erikoiskuljetukset" #+ Message subject
+		body: "Terve pomo!<br><br>Nyt olisi tarjolla jotain erikoista. Kiitos matkan varrella muodostamiemme suhteiden meitä voi odottaa kunnollinen haaste: raskaita, ylisuuria ja erikoiskuljetuksia todellisten ammattilaisten hoidettavaksi! Helppoa se ei tule olemaan ja lisäksi kuljetukset vaativat taitoa, kylmäpäisyyttä ja yhteistyökykyä muiden toimijoiden kanssa, mutta näitähän sinulta ei puutu!? Ja, mitä isommat riskit sitä isommat tuotot!<br><br>Jos kiinnostuit niin vieraile yhteistyökumppaniemme luona seuraavissa kaupungeissa:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Lähettäjä" #+ Message sender
+		subject: "Uusia erikoiskuljetuksia" #+ Message subject
+		body: "Terve pomo!<br><br>Sana on kiirinyt ympäriinsä ja nyt erikoiskuljetusten osaamisestasi kiinnostuneita yrityksiä on alkanut tulla lisää. Vaatimukset lisääntyvät ja kuten viimeksikin myös nyt on tarjolla haasteita, jotka vaativat taitoa, kylmäpäisyyttä ja yhteistyökykyä muiden toimijoiden kanssa. Mutta mihinpä vanhat taidot katoaisivat, vai mitä? Ja ei pidä unohtaa: mitä vaativampia kuljetuksia, sitä paremmat tuotot!.<br><br>Kaupungeista:<br><br>$OLD_CITIES$<br><br>löytyvien erikoiskuljetusten lisäksi löydät <color value=@@clr_sel@@>uusia<color value=@@clr_txt@@> seuraavista kaupungeista:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Kiinteistönvälitystoimisto" #+ Message sender
+		subject: "Oletteko harkinnut yrityksenne laajentamista?" #+ Message subject
+		body: "Hyvä Herra/Rouva,<br><br>Haluamme onnitella teitä yrityksenne nousujohteisesta kehityksestä. Menestyksenne on tehnyt meihin vaikutuksen ja haluaisimmekin tarjota teille keinon laajentaa yritystoimintaanne entisestään. Voitte jatkossa käyttää palveluitamme ostaaksenne uusia kiinteistöjä silmän räpäyksessä! Saadaksenne lisätietoja, vierailkaa $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>Tallin osto -sivuillamme</link>.<br><br>Ystävällisin terveisin,<br>Asiakkuuspäällikkö<br>Kiinteistönvälitystoimisto" #+ Message body
+	}
+	
+#@}
+}

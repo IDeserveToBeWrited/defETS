@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Systeem" #+ Message sender
+		subject: "Testbericht" #+ Message subject
+		body: "Hoi!<br><br>Dit is een testbericht van je collega-beheerder :-)<br><br>Groeten" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Bank" #+ Message sender
+		subject: "Geld nodig? Wij kunnen helpen!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We thought you might like to know that we offer favourable loans to new businesses. Do you need funding to get your business running? We are here to help! Please $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>visit your local banking centre</link> for more information.<br><br>Respectfully,<br>Sales Manager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Bank" #+ Message sender
+		subject: "We kunnen je helpen groeien" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We couldn't help but notice your steady earnings and we would like to assist you with developing your potential even further. Your credit limit has been raised to $MONEY$. Feel free to draw from the available sum any time at your $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>local bank centre</link>.<br><br>Respectfully,<br>Sales Manager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Bank" #+ Message sender
+		subject: "Je bankrekening heeft een negatief saldo" #+ Message subject
+		body: "Geachte klant,<br><br>U haalde meer geld van uw rekening dan dat er opstond. We hebben u een kortdurend gratis krediet gegeven voor de komende paar dagen zodat u de situatie kunt oplossen. Los alstublieft uw schuld zo snel mogelijk af.<br><br>Hartelijke groeten,<br>Uw accountmanager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Bank" #+ Message sender
+		subject: "Je hebt een openstaande rekening!" #+ Message subject
+		body: "Geachte klant, <br><br> Uw banksaldo is negatief! Betaal alstublieft uw schuld af binnen de volgende $DAYS$ dagen, anders zijn we gedwongen om uw eigendommen in beslag te nemen.<br><br> Met vriendelijke groet, <br> Uw accountmanager <br> Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Bank" #+ Message sender
+		subject: "Laatste waarschuwing!" #+ Message subject
+		body: "Geachte klant,<br><br>Dit is uw laatste waarschuwing. Uw bankrekeningsaldo is negatief. Vergoed ons alstublieft hetgeen wat u tekort komt, anders nemen we morgen uw bezittingen in beslag om de schuld te dekken.<br><br>Met vriendelijke groet,<br>Uw accountbeheerder<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Bank" #+ Message sender
+		subject: "Schuld afgelost" #+ Message subject
+		body: "Geachte klant,<br><br>U heeft uw schuld afgelost. We zijn blij om u in de toekomst vaker te helpen als u onze diensten nodig heeft.<br><br>Een fijne dag toegewenst,<br>Uw Accountmanager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Bank" #+ Message sender
+		subject: "Je eigen vrachtwagen is verkocht" #+ Message subject
+		body: "Beste klant,<br><br>Het spijt ons om mede te delen dat wij uw eigen vrachtwagen - $TRUCK_NAME$ - hebben moeten verkopen voor $MONEY$. U heeft geruime tijd een schuld bij ons openstaan en er was geen andere mogelijkheid om deze te dekken. Helaas was er geen andere optie dan het nemen van deze extreme maatregelen. Wij adviseren u om snelle opdrachten uit te voeren tot uw financiële situatie beter is.<br><br>Met vriendelijke groet,<br>Uw accountmanager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Bank" #+ Message sender
+		subject: "Je trailer is verkocht." #+ Message subject
+		body: "Beste klant,<br><br>Het spijt ons om mede te delen dat wij uw eigen trailer - $TRAILER_NAME$ - hebben moeten verkopen voor $MONEY$. U heeft geruime tijd een schuld bij ons openstaan en er was geen andere mogelijkheid om deze te dekken. Helaas was er geen andere optie dan het nemen van deze extreme maatregelen. Wij adviseren u om snelle opdrachten uit te voeren tot uw financiële situatie beter is.<br><br>Met vriendelijke groet,<br>Uw accountmanager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Bank" #+ Message sender
+		subject: "Je bezit is verkocht" #+ Message subject
+		body: "Geachte klant,<br><br>Door een langdurig openstaande schuld op uw rekening hebben we uw bezittingen moeten verkopen. De hieruit verkregen middelen, in totaal <br>$MONEY$, zijn gebruikt als aflossing van uw verplichtingen. In het bijzonder zijn de volgende voorwerpen in beslag genomen:<br><br>$ITEM_LIST$<br>Wij betreuren het dat het zover is gekomen en hopen dat de gevolgen geen grote schade zullen opleveren aan uw verdere inspanningen.<br><br>Met de beste wensen,<br>Uw accountmanager<br>Bank" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Vrachtwagendealer - $CITY$" #+ Message sender
+		subject: "Gloednieuwe vrachtwagens van $BRAND$ te koop!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We are a certified retailer of $BRAND$ trucks. We offer a wide selection of different configurations and we can also perform customizations to accommodate any special wishes. Please, $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>visit our showroom in $CITY$</link>. The truck you have always dreamt of might be waiting just behind the door.<br><br>Best regards,<br>Your $BRAND$ Truck Dealer" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Gebruikte trucks dealer" #+ Message sender
+		subject: "Gebruikte trucks te koop!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We are excited to announce the opening of our Used Trucks dealership, your newest destination for high-quality used trucks! Whether you're looking for a powerful machine or just a reliable workhorse, we have the perfect truck for you.<br><br>Please, browse our $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Used Trucks offers</link>. We trust you'll find the perfect truck that suits your needs.<br><br>Sincerely,<br><br>The Used Truck Dealership Team<br><br>P.S. Don't forget to check back often for new arrivals! Our inventory is constantly changing, so you never know what deal you might find." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Chauffeurs met eigen materieel nodig" #+ Message subject
+		body: "Aan wie dit leest,<br><br>We zijn op zoek naar ervaren chauffeurs met een eigen vrachtwagen voor een groot aantal leveringen. We bieden concurrerende tarieven tot wel $MONEY$ voor een opdracht. Als je een eigen vrachtwagen hebt, neem dan alsjeblieft contact met ons op bij ons dok in $CITY$.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Chauffeur $NAME$" #+ Message sender
+		subject: "Ik heb een vrachtwagen nodig om te werken" #+ Message subject
+		body: "Hallo baas,<br><br>Ik weet niet of het je is opgevallen maar ik zit nu in $CITY$ al $DAYS$ zonder werk. Ik word hier nogal geïrriteerd van want ik heb geld nodig om mijn rekeningen te kunnen betalen. Ik zit hier gewoon uit mijn neus te eten, wachtend op een opdracht. Geef me alsjeblieft een vrachtwagen in de komende $DAYS2$ zodat ik kan beginnen met opdrachten, anders heb ik geen andere keus dan ontslag te nemen.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Chauffeur $NAME$" #+ Message sender - written by female
+		subject: "Ik heb een vrachtwagen nodig om te werken" #+ Message subject - written by female
+		body: "Hallo baas,<br><br>Ik weet niet of je het is opgevallen maar ik zit nu in $CITY$ zonder werk voor $DAYS$. Ik ben nogal geïrriteerd want ik heb geld nodig om mijn rekeningen te kunnen betalen. Ik ben gewoon aan het wachten op een levering. Alstjeblieft, geef me een vrachtwagen in de komende $DAYS2$ zodat ik kan beginnen met leveringen anders heb ik geen andere keus dan je te verlaten.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Chauffeur $NAME$" #+ Message sender
+		subject: "Tot ziens" #+ Message subject
+		body: "Hoi,<<br><br>Ik kan het me niet veroorloven om mijn tijd nog langer te verspillen. Ik kan niet werken zonder truck en ik wil niet langer wachten. Ik mis goede arbeidskansen. Vandaar dat ik het bedrijf verlaat om mijn heil elders te vinden. U kunt mijn materieel vinden in mijn voormalige garage in $CITY$.<br><br>Vaarwel,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Chauffeur $NAME$" #+ Message sender - written by female
+		subject: "Tot Ziens" #+ Message subject - written by female
+		body: "Hoi,<<br><br>Ik kan het me niet veroorloven om mijn tijd nog langer te verspillen. Ik kan niet werken zonder vrachtwagen en ik wil niet langer meer wachten. Ik mis de goede kansen. Vandaar dat ik uw bedrijf ga verlaten om mijn geluk ergens anders te beproeven. U kunt mijn apparatuur vinden in mijn voormalige garage in $CITY$.<br><br>Vaarwel,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Chauffeur $NAME$" #+ Message sender
+		subject: "Mijn vrachtwagen moet volledig worden gerestaureerd" #+ Message subject
+		body: "Hallo baas,<br><br>Ik weet dat je het druk hebt, maar mijn truck moet volledig worden gerestaureerd. Ze is te oud en te versleten om veilig te besturen. Ik zit nu al $DAYS$ zonder werk en ben erg gefrustreerd omdat ik rekeningen heb die ik moet betalen, en dat gaat nu eenmaal niet zonder goed materieel. Zou je mij alsjeblieft een nieuwe truck kunnen geven of de oude laten restaureren? Zo kan ik tenminste weer aan het werk en anders heb ik geen andere keuze dan om het bedrijf te verlaten. <br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Chauffeur $NAME$" #+ Message sender - written by female
+		subject: "Mijn vrachtwagen moet volledig worden gerestaureerd" #+ Message subject - written by female
+		body: "Hallo baas,<br><br>Ik weet dat je het druk hebt, maar mijn truck moet volledig worden gerestaureerd. Ze is te oud en te versleten om veilig te besturen. Ik zit nu al $DAYS$ zonder werk en ben erg gefrustreerd omdat ik rekeningen heb die ik moet betalen, en dat gaat nu eenmaal niet zonder goed materieel. Zou je mij alsjeblieft een nieuwe truck kunnen geven of de oude laten restaureren? Zo kan ik tenminste weer aan het werk en anders heb ik geen andere keuze dan om het bedrijf te verlaten. <br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Chauffeur $NAME$" #+ Message sender
+		subject: "Tot ziens" #+ Message subject
+		body: "Hi,<br><br>" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Chauffeur $NAME$" #+ Message sender - written by female
+		subject: "Tot ziens" #+ Message subject - written by female
+		body: "Hoi,<br><br>Het spijt me dit te zeggen, maar mijn truck valt uit elkaar vanwege het achterstallige onderhoud. Ik heb nu geen inkomsten meer en mijn uitgaven blijven komen. Ik heb geen andere keus dan te vertrekken. Ik raad je aan om een volledige restauratie uit te laten voeren voordat je de truck aan een andere chauffeur geeft. Je kunt hem terugvinden in mijn voormalige standplaats in $CITY$.<br><br>Vaarwel.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Chauffeur $NAME$" #+ Message sender
+		subject: "Ik vertrek" #+ Message subject
+		body: "Hallo baas,<br><br>De garage in $CITY$, waar ik verblijf, wordt gesloten. Een paar mensen van de bank kwamen en zeiden dat ik weg moest. Het lijkt erop dat het met dit bedrijf niet zo goed gaat op dit moment. Dus heb ik besloten om te vertrekken. Ik zou het bedrijf toch niet veel goeds doen zonder vrachtwagen en zo. Ik zoek mijn heil ergens anders.<br><br>Tot ziens en even goede vrienden,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Chauffeur $NAME$" #+ Message sender - written by female
+		subject: "Ik vertrek" #+ Message subject - written by female
+		body: "Hallo baas,<br><br>De garage in $CITY$, waar ik verblijf wordt gesloten. Een paar mensen van de bank kwamen en zeiden dat ik weg moest. Het lijkt erop dat het met dit bedrijf niet zo goed gaat op dit moment. Dus heb ik besloten om te vertrekken. Ik zou het toch niet veel goeds doen zonder vrachtwagen en alles. Ik probeer het ergens anders.<br><br>Tot ziens en geen harde gevoelens,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Planner" #+ Message sender
+		subject: "Speciaal Transport" #+ Message subject
+		body: "Hallo, baas.<br><br>Ik heb iets bijzonders voor je. Dankzij onze connecties kunnen wij nu een ware uitdaging aan gaan. Enkele uitzonderlijke grote en zware vrachten moeten worden geleverd door een echte professional. Het zal niet eenvoudig zijn en het vraagt een kundige, voorzichtige en geduldige chauffeur die goed kan samenwerken met de begeleidingsvoertuigen. Maar dat is geen probleem voor je, toch? Er valt hier ook een hoop mee te verdienen.<br><br>Mocht je interesse hebben, kom dan eens langs in deze steden: <br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Planner" #+ Message sender
+		subject: "Nieuwe Speciale Leveringen" #+ Message subject
+		body: "Dag baas,<br><br>Meer bedrijven willen je professionele skills achter het stuur inhuren voor wat speciale opdrachten. Net als de laatste keer zal het niet makkelijk zijn en zal je er de benodigde skills, geduld, samenwerking met begeleidingsvoertuigen en extra zorg voor nodig hebben. Maar ik gok dat je dat allemaal bezit, ja toch? Oh, en vergeet niet dat de opbrengsten van deze vrachten steeds hoger zijn.<br><br>Dus behalve de beschikbare Speciale Transporten in: <br><br>$OLD_CITIES$ <br><br> Kun je nu ook <color value=@@clr_sel@@>nieuwe<color value=@@clr_txt@@> vinden in:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Vastgoedhandelaar" #+ Message sender
+		subject: "Wil je graag jouw bedrijf uitbreiden?" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We would like to congratulate you on the progress of your company. We are impressed by the success of your business and we would like to offer you a new way to help your company expand further. From now on, you can use our services to purchase additional properties almost instantly! For more information, please $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>visit Garage Purchase interface</link>.<br><br>Sincerely,<br>Relations Manager<br>Real Estate Agency" #+ Message body
+	}
+	
+#@}
+}

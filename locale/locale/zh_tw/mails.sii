@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "系統" #+ Message sender
+		subject: "測試訊息" #+ Message subject
+		body: "嗨！<br><br>這是管理員發給你的一個測試訊息;-)<br><br>謝謝" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "銀行" #+ Message sender
+		subject: "需要資金嗎？我們可以提供幫助！" #+ Message subject
+		body: "親愛的 先生/女士:<br><br>我們認為您可能想要知道我們正在為新開幕的公司提供優惠貸款服務，您需要更多資金來維持您公司的運作嗎？請讓我們幫忙您度過難關！$SHORTCUT1$<link url=screen.bank color=@@clr_link@@>拜訪您當地的銀行</link>，來瞭解更多的相關訊息<br><br>敬此<br>銀行銷售經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "銀行" #+ Message sender
+		subject: "我們可以幫助您成長" #+ Message subject
+		body: "親愛的 先生/女士:<br>您的營收入不斷地在增加，相對的開銷也會增加，現在我們不得介入，我們想幫助您在公司擴充上避免碰到金錢上的困難 ｡ 您的信用額度已提高至$MONEY$ ｡ 您可以在任何時間向我們借款$SHORTCUT1$<link url=screen.bank color=@@clr_link@@>當地的銀行中心業務</link> ｡ <br><br>敬此<br>銀行銷售經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "銀行" #+ Message sender
+		subject: "您的帳戶已經透支" #+ Message subject
+		body: "親愛的客戶:<br><br>您的帳戶已經宣告破產 ｡ 在接下來的幾天，我們會為您提供免利息的短期貸款，希望可以解决燃眉之急 ｡ 請趕快償還您的債務 ｡ <br><br>祝福您度過難關，<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "銀行" #+ Message sender
+		subject: "您有未付清的開銷！" #+ Message subject
+		body: "親愛的客戶:<br><br>您的銀行帳戶已透支，請在 $DAYS$ 天内還清您的貸款，否則我們將對您的財產進行強制扣押 ｡ <br><br>致此<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "銀行" #+ Message sender
+		subject: "最後一次警告！" #+ Message subject
+		body: "親愛的客戶:<br><br>這是對您發出的最後警告 ｡ 您的銀行賬戶已經負載累累，請務必於明日還清所有的款項，否則我們將強行沒收您的財產作為抵押 ｡  <br><br>敬此<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "銀行" #+ Message sender
+		subject: "透支已經解決了" #+ Message subject
+		body: "親愛的客戶:<br><br>您的賬戶透支問題已經解決了 ｡ 很高興為您服務 ｡  <br><br>祝您愉快，<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "銀行" #+ Message sender
+		subject: "你個人所擁有的卡車已經被賣出" #+ Message subject
+		body: "親愛的客戶:<br><br>很遺憾地告知您我們必須以 $MONEY$ 的價格賣掉您的卡車 - $TRUCK_NAME$ -  ｡ 您欠繳已久的債務很久沒有償還了 ｡ 很不幸地，我們別無他擇 ｡ 我們建議您從事快速工作直到您的經濟條件變得樂觀 ｡  <br><br>敬此<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "銀行" #+ Message sender
+		subject: "你個人所擁有的拖車已經被賣出" #+ Message subject
+		body: "親愛的客戶:<br><br>很遺憾地告知您我們必須以 $MONEY$ 的價格賣掉您的拖車 - $TRAILER_NAME$ -  ｡ 您欠繳已久的債務很久沒有償還了 ｡ 很不幸地，我們別無他擇 ｡ 我們建議您從事快速工作直到您的經濟條件變得樂觀 ｡  <br><br>敬此<br>您的銀行客戶經理" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "銀行" #+ Message sender
+		subject: "您個人所擁有的資產已經被賣出" #+ Message subject
+		body: "親愛的客戶:<br><br>由於您的帳戶長期的負債，我們必須沒收並且法拍您的資產，法拍得到的金額<br>$MONEY$ 將會用來償還您的債務 ｡ 這些財產包括<br><br>$ITEM_LIST$<br>很遺憾事情都悲慘到這個地步了，希望結果不會造成您太大的傷害 ｡ <br><br>祝福您，<br>您的銀行客戶經理" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "卡車經銷商 - $CITY$" #+ Message sender
+		subject: "$BRAND$ 推出新款的卡車" #+ Message subject
+		body: "親愛的 先生/女士：<br><br>我們是 $BRAND$ 卡車的授權總代理 ｡ 我們提供多種型號的卡車，並且可以接受客製化的訂單要求 ｡ 請 $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>前來參觀位於 $CITY$ 的展示中心</link> ｡ 您一直夢想的卡車可能就在這裡等著您 ｡ <br><br>商祺<br>你的 $BRAND$ 卡車經銷商" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "二手卡車經銷商" #+ Message sender
+		subject: "正在出售二手卡車！" #+ Message subject
+		body: "尊敬的先生/女士:<br><br>我們很高興的宣布我們的\"二手卡車經銷商\"開張，這是您購買高品質中古車的最新目的地！ 無論您是在尋找強大的車還是可靠的主力車，我們都能為您提供完美的卡車 ｡<br><br>請瀏覽我們的$SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>二手卡車經銷商</link> ｡ 我們相信您會找到適合您需求的完美卡車 ｡<br><br>此致，<br><br>二手卡車經銷商團隊<br><br>P.S. 不要忘記經常回來查看是否有新到的卡車！ 我們的庫存不斷變化，因此您永遠不知道可能會找到什麼樣的交易 ｡" #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$，$CITY$" #+ Message sender
+		subject: "我們非常需要你" #+ Message subject
+		body: "有志者:<br><br>我們正在尋找技術純熟 ､ 擁有自己卡車的司機參與完成大量的工作 ｡ 我們能给出很優厚的報酬，每份工作最多可得 $MONEY$ ｡ 如果你擁有自己的卡車且願意参與，請直接到我們在$CITY$的集貨場詢問詳細工作內容 ｡ <br><br>$COMPANY$公司<br>公司地址:$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "司機 $NAME$" #+ Message sender
+		subject: "我需要一輛卡車來工作" #+ Message subject
+		body: "老闆:<br><br>您好！我不知道你是否有注意到，我已經被你遺忘在 $CITY$ 而且我將近 $DAYS$ 天沒有工作了 ｡ 我對於你的管理能力相當的失望，因為我還需要支付我的帳單，而且如果我没有工作就賺不到錢！請你在接下來的 $DAYS2$ 天内给我一輛卡車讓我可以開始工作，否則我只能夠選擇離開了 ｡ <br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "司機 $NAME$" #+ Message sender - written by female
+		subject: "我需要一輛卡車來工作" #+ Message subject - written by female
+		body: "老闆:<br><br>您好！我不知道你是否有注意到，我已经被你遺忘在 $CITY$ 而且我將近 $DAYS$ 天沒有工作了 ｡ 我對於你的管理能力相當的失望，因為我還需要支付我的帳單，而且如果我没有工作就賺不到錢！請你在接下來的 $DAYS2$ 天内给我一輛卡車讓我可以開始工作，否則我只能夠選擇離開了 ｡ <br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "司機 $NAME$" #+ Message sender
+		subject: "再見" #+ Message subject
+		body: "我不能繼續浪費我的時間了 ｡ 我不能在沒有卡車的情況下工作 ｡ 我不想再等了 ｡ 我錯過了許多的機會，所以我要離開你的公司去其他公司實現我的夢想 ｡ 你可以在 $CITY$ 找到我 ｡ <br><br>再見，<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "司機 $NAME$" #+ Message sender - written by female
+		subject: "再見" #+ Message subject - written by female
+		body: "我不能繼續浪費我的時間了 ｡ 我不能在沒有卡車的情況下工作 ｡ 我不想再等了 ｡ 我錯過了許多的機會，所以我要離開你的公司去其他公司實現我的夢想 ｡ 你可以在 $CITY$ 找到我 ｡ <br><br>再見，<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "司機 $NAME$" #+ Message sender
+		subject: "我的卡車需要全車檢修" #+ Message subject
+		body: "尊敬的老闆：<br><br>您好! 感謝您在百忙之中閱讀此信，我是$NAME$，已在貴公司服務許久，但我的車子需要全面的檢修 ｡ 它已經老化到無法再安全駕駛了。我現在已經$DAYS$沒有辦法工作了，坦白說，我很失望，因為我無法支付帳單以及沒有適合上路接工作的車輛 ｡ 拜託老闆，我的卡車需要一些維修，如果您能幫我把它修好，我將能夠繼續為您工作 ｡  如果您有時間，是否可以考慮為我購買一輛新的卡車，這樣我就可以更有效地完成工作，否則我只能夠選擇離開了 ｡ <br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "司機 $NAME$" #+ Message sender - written by female
+		subject: "我的卡車需要全車檢修" #+ Message subject - written by female
+		body: "尊敬的老闆：<br><br>您好! 感謝您在百忙之中閱讀此信，我是$NAME$，已在貴公司服務許久，但我的車子需要全面的檢修 ｡ 它已經老化到無法再安全駕駛了。我現在已經$DAYS$沒有辦法工作了，坦白說，我很失望，因為我無法支付帳單以及沒有適合上路接工作的車輛 ｡ 拜託老闆，我的卡車需要一些維修，如果您能幫我把它修好，我將能夠繼續為您工作 ｡  如果您有時間，是否可以考慮為我購買一輛新的卡車，這樣我就可以更有效地完成工作，否則我只能夠選擇離開了 ｡ <br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "司機 $NAME$" #+ Message sender
+		subject: "離職申請" #+ Message subject
+		body: "嗨!<br><br>很遺憾在這個時候向公司遞出辭職申請。考量你配給我的卡車已經損壞到無法再行駛，經過審慎評估，決定向公司辭去目前的職務，於發信後正式離職 ｡  非常謝謝您悉心的教導、提拔，也相當感謝公司願意給予我在良好的環境中，工作和學習的機會 ｡  我建議在那輛車配給下一位司機之前能進行全車檢修 ｡  你可以在我之前待的\"$CITY$車庫\"裡找到出問題的車 ｡  造成不便還請見諒 ｡<br><br>祝福公司生意興隆，業績長紅<br>$NAME$ 敬上" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "司機 $NAME$" #+ Message sender - written by female
+		subject: "離職申請" #+ Message subject - written by female
+		body: "嗨!<br><br>很遺憾在這個時候向公司遞出辭職申請。考量你配給我的卡車已經損壞到無法再行駛，經過審慎評估，決定向公司辭去目前的職務，於發信後正式離職 ｡  非常謝謝您悉心的教導、提拔，也相當感謝公司願意給予我在良好的環境中，工作和學習的機會 ｡  我建議在那輛車配給下一位司機之前能進行全車檢修 ｡  你可以在我之前待的\"$CITY$車庫\"裡找到出問題的車 ｡  造成不便還請見諒 ｡<br><br>祝福公司生意興隆，業績長紅<br>$NAME$ 敬上" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "司機 $NAME$" #+ Message sender
+		subject: "我要離開了" #+ Message subject
+		body: "老闆:<br><br>位於 $CITY$ 的車庫已被查封，那是我曾經工作的地方 ｡ 銀行的人過來說我必需搬離這裡 ｡ 看起来最近公司的狀況不是很好 ｡ 所以，我不得不選擇辭掉這份工作 ｡ 反正我待在這裡也只是在混日子 ｡ 我會去別的地方繼續深造 ｡ <br><br>再見，<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "司機 $NAME$" #+ Message sender - written by female
+		subject: "我要離開了" #+ Message subject - written by female
+		body: "老闆:<br><br>位於 $CITY$ 的車庫已被查封，那是我曾經工作的地方 ｡ 銀行的人過來說我必需搬離這裡 ｡ 看起来最近公司的狀況不是很好 ｡ 所以，我不得不選擇辭掉這份工作 ｡ 反正我待在這裡也只是在混日子 ｡ 我會去別的地方繼續深造 ｡ <br><br>再見，<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "調度員" #+ Message sender
+		subject: "特殊運輸" #+ Message subject
+		body: "老闆:<br><br>我有特別的東西給你 ｡ 我們現在可以接受真正的挑戰 ｡ 一些特別 ､ 非常大型和笨重的貨物需要真正的專業司機運送 ｡ 這很不簡單並且需要一些技巧 ､ 耐性 ､ 與護送車輛協作和特別細心，但我相信你都具備，對吧？危險總會帶來機遇 ｡ <br><br>如果你有興趣，你可以參訪這些城市: <br><br>$CITIES$ ｡ " #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "調度員" #+ Message sender
+		subject: "全新的特殊運輸" #+ Message subject
+		body: "嗨，老闆:<br><br>有更多貨運公司希望僱用專業的你來運送一些特殊運輸 ｡ 一如既往，這並不簡單並且需要一些技巧 ､ 耐性 ､ 與護送車輛協作和特別細心，但我相信你仍然具備，對吧？不要忘記這些工作會為你帶來更大利潤 ｡ <br><br>除了現在提供特殊運輸工作的城市外: <br><br>$OLD_CITIES$ <br><br>你可以在這些城市接受<color value=@@clr_sel@@>新的工作<color value=@@clr_txt@@>: <br><br>$CITIES$ ｡" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "房地產仲介" #+ Message sender
+		subject: "您想擴大公司規模嗎？" #+ Message subject
+		body: "親愛的 先生/女士：<br><br>祝願貴公司蓬勃發展，日勝一日！您公司的成功給我們印象深刻，我們想為您提供一種新的方式來幫助您的公司進一步發展 ｡ 從現在開始，您可以洽詢我們來購買其他地區車庫的服務！更多詳細資訊都在$SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>房地產仲介頁面</link> ｡ <br><br>敬此<br>房地產仲介<br>關係經理" #+ Message body
+	}
+	
+#@}
+}

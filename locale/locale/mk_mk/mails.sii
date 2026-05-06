@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Систем" #+ Message sender
+		subject: "Тест порака" #+ Message subject
+		body: "Здраво!<br><br>Ова е тест порака од твојот колега администратор ;-) <br><br>Честитки" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Банка" #+ Message sender
+		subject: "Ти требаат пари? Ние можеме да помогнеме!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We thought you might like to know that we offer favourable loans to new businesses. Do you need funding to get your business running? We are here to help! Please $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>visit your local banking centre</link> for more information.<br><br>Respectfully,<br>Sales Manager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Банка" #+ Message sender
+		subject: "Ние можеме да ти помогнеме да порасне твојот бизнис" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We couldn't help but notice your steady earnings and we would like to assist you with developing your potential even further. Your credit limit has been raised to $MONEY$. Feel free to draw from the available sum any time at your $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>local bank centre</link>.<br><br>Respectfully,<br>Sales Manager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Банка" #+ Message sender
+		subject: "Твојот профил е во банкрот" #+ Message subject
+		body: "Почитуван користику,<br><br>Сте повлекле повеќе средства од што е потребно.Ние обезбедивме краткорочен кредит за следните неколку дена,за да ја решите оваа ситуација.Ве молиме испатете ги вашите долгови што поскоро.<br><br>Срдечно,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Банка" #+ Message sender
+		subject: "Имате неизмерно пречекорување на сметката!" #+ Message subject
+		body: "Почитуван клиенту,<br><br> Вашата банкарка сметка е во минусно салдо! Ве молиме, отплатете ги вашите долгови во следните $DAYS$ или ќе бидеме принудени да ви го конфискуваме имотот.<br><br> Искрено,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Банка" #+ Message sender
+		subject: "Последно предупредување!" #+ Message subject
+		body: "Почитуван кориснику,<br><br>Ова е последно предупредување.Твојота сметка е во негатива.Ве молиме да го исплатите вашиот долг до утре или ке ви одземеме од вашиот имот за да го покриеме долгот.<br><br>Искрено,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Банка" #+ Message sender
+		subject: "Прекорачувањето е подмирено" #+ Message subject
+		body: "Почитуван клиенту,<br><br> Вашиот долг беше подмирен. Ние сакаме да ви помогнеме ако во иднина ви требаат нашите услуги.<br><br>Имајте пријатен ден,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Банка" #+ Message sender
+		subject: "Твојот личен камион е продаден" #+ Message subject
+		body: "Почитуван клиенту,<br><br>Со жалење мораме да ве информираме дека ние треба да го продадеме вашиот личен камион - $TRUCK_NAME$ за $MONEY$. За жал имавте долг кој само така можеше да биде подмирен. Ние ви предложуваме да работите брза работа се додека вашата финансиска ситуација не се подобри.<br><br>Искрено,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Bank" #+ Message sender
+		subject: "Your personal trailer has been sold" #+ Message subject
+		body: "Dear Customer,<br><br>We regret to inform you that we had to sell your personal trailer - $TRAILER_NAME$ - for $MONEY$. Unfortunately, you have had a long-standing debt with us and had no other means to cover it. Sadly, there was no other way but to take these extreme measures. We suggest you drive quick jobs until your financial situation gets better.<br><br>Sincerely,<br>Your account manager<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Банка" #+ Message sender
+		subject: "Твојот имот е продаден" #+ Message subject
+		body: "Почитуван клиенту,<br><br>Поради вашето долгорочно минусно салдо на сметката ние мора да го одземеме и продадеме вашиот имот. Наплатената сума изнесува <br>$MONEY$ и ќе се искористи за да бидат подмирени вашите обврски. Конкретно овие работи се одземени:<br><br>$ITEM_LIST$<br>Жалиме што ситуацијата отиде многу далеку, но ние се надеваме дека последиците нема да и наштетат на вашата понатамошна работа.<br><br>Со најдобри желби,<br>Вашиот сметководител<br>Банка" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Продавач на камиони  - $CITY$" #+ Message sender
+		subject: "Сосема нови $BRAND$ за продавање!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We are a certified retailer of $BRAND$ trucks. We offer a wide selection of different configurations and we can also perform customizations to accommodate any special wishes. Please, $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>visit our showroom in $CITY$</link>. The truck you have always dreamt of might be waiting just behind the door.<br><br>Best regards,<br>Your $BRAND$ Truck Dealer" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Used Truck Dealership" #+ Message sender
+		subject: "Used trucks for sale!" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We are excited to announce the opening of our Used Trucks dealership, your newest destination for high-quality used trucks! Whether you're looking for a powerful machine or just a reliable workhorse, we have the perfect truck for you.<br><br>Please, browse our $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Used Trucks offers</link>. We trust you'll find the perfect truck that suits your needs.<br><br>Sincerely,<br><br>The Used Truck Dealership Team<br><br>P.S. Don't forget to check back often for new arrivals! Our inventory is constantly changing, so you never know what deal you might find." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Потребни се возачи со сопствена опрема" #+ Message subject
+		body: "За се тоа што може да ве зантересира,<br><br>Ние бараме искусни возачи со сопствени камион за голем број на испораки.Ние нудиме пимамлива заработувачка до  $MONEY$ за работа.Ве молиме ако имате сопствено возило,дојдете дирекно во нашата испостава во$CITY$.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Возач $NAME$" #+ Message sender
+		subject: "Ми треба камион за да работам" #+ Message subject
+		body: "Здраво шефе,<br><br>Не знам дали ти забележа,дека јас сум во $CITY$ без работа $DAYS$ дена.Јас сум нервозен,бидејќи ми требаат пари да ги платам мојте сметки,а неможам не можам ни да најдам работа.Те молам најди ми камион во следните $DAYS2$ дена за да можам да почнам со достава,во спротивно ќе немам друг избор освен да те напуштам.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Возач $NAME$" #+ Message sender - written by female
+		subject: "Ми треба камион за да работам" #+ Message subject - written by female
+		body: "Здраво шефе,<br><br>Не знам дали ти забележа,дека јас сум во $CITY$ без работа $DAYS$ дена.Јас сум нервозен,бидејќи ми требаат пари да ги платам мојте сметки,а неможам не можам ни да најдам работа.Те молам најди ми камион во следните $DAYS2$ дена за да можам да почнам со достава,во спротивно ќе немам друг избор освен да те напуштам.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Возач $NAME$" #+ Message sender
+		subject: "Пријатно" #+ Message subject
+		body: "Здраво,<br><br>Неможам веќе да го губам времето вака .Неможам да работам без камион и не сакам да чекам повеќе.Јас пропуштам добри можности,јас си одам од твојата компанија за да ја пробам среќата на друго место.Ти можеш да ја најдеш издадената опрема во мојата бивша гаража во $CITY$.<br><br>Збогум,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Возач $NAME$" #+ Message sender - written by female
+		subject: "Збогум" #+ Message subject - written by female
+		body: "Здраво,<br><br>Неможам да го губам времето вака. Неможам да работам без камион и не сакам да чекам повеќе.Јас пропуштам многу добри можности,па јас ја напуштам компанијата за да си ја пробам среќата на друго место.Ќе ја најдеш целата моја издадена опрема во бојата бивша гаража во $CITY$.<br><br>Збогум,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Driver $NAME$" #+ Message sender
+		subject: "My truck needs total restoration" #+ Message subject
+		body: "Hi boss,<br><br>I know you are busy, but my rig needs a total restoration. She's too old and worn to safely drive any more. I have been without work for $DAYS$ now, and frankly I'm quite frustrated because I need to pay the bills and I can't without a roadworthy ride. Please, can you either get me a new truck or get this one restored so I can get back to work, otherwise I will have no choice but to leave you.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Driver $NAME$" #+ Message sender - written by female
+		subject: "My truck needs total restoration" #+ Message subject - written by female
+		body: "Hi boss,<br><br>I know you are busy, but my rig needs a total restoration. She's too old and worn to safely drive any more. I have been without work for $DAYS$ now, and frankly I'm quite frustrated because I need to pay the bills and I can't without a roadworthy ride. Please, can you either get me a new truck or get this one restored so I can get back to work, otherwise I will have no choice but to leave you.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Driver $NAME$" #+ Message sender
+		subject: "Goodbye" #+ Message subject
+		body: "Hi,<br><br>Sorry to say it but my rig is falling apart due to wear and tear and I'm out of time. I've got no jobs and my expenses are racking up, so I have to move on. I recommend a total restoration on this rig before the next driver. You can find any issued equipment in my former garage in $CITY$.<br><br>So long.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Driver $NAME$" #+ Message sender - written by female
+		subject: "Goodbye" #+ Message subject - written by female
+		body: "Hi,<br><br>Sorry to say it but my rig is falling apart due to wear and tear and I'm out of time. I've got no jobs and my expenses are racking up, so I have to move on. I recommend a total restoration on this rig before the next driver. You can find any issued equipment in my former garage in $CITY$.<br><br>So long.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Возач $NAME$" #+ Message sender
+		subject: "Јас Напуштам" #+ Message subject
+		body: "Здраво шефе.<br><br> Гаражата во $CITY$, каде јас престојувам се затвори.Некој луѓе од банката дојдоа и рекоа дека морам да се иселам. Изгледа компанијата во последно време не работи како што треба.Затоа одлучив да си одам.А и онака не сум од корист вака без камион и без работа.Ќе ја испробам среќата на друго место<br><br>Збогум и не се љути,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Возач $NAME$" #+ Message sender - written by female
+		subject: "Јас напуштам" #+ Message subject - written by female
+		body: "Здраво Шефе,<br><br>Гаражата во $CITY$, каде јас престојувам,се затвори.Некој луѓе од банката дојдоа и ми рекое дека треба да се иселам.Изгледа дека твојата компанија работи во последно време.Одлучив да си одам.И онака не сум од некоја корист тука вака без камион и без работа.Ќе ја испробам среќата на друго место.<br><br> Довидување и не се љути,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Диспечер" #+ Message sender
+		subject: "Special Transports" #+ Message subject
+		body: "Hello boss.<br><br>I have something special for you. Thanks to our connections, we're now able to get to a real challenge. Some special, extra large and heavy cargoes need to be hauled by a true professional. It won't be easy and it'll require some skills, patience, cooperation with escorting vehicles and extra care, but I guess you have it all, right? Also bigger risk comes with a bigger profit.<br><br>If you're interested, you can visit these cities:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Диспечер" #+ Message sender
+		subject: "New Special Transports" #+ Message subject
+		body: "Hi boss.<br><br>More companies would like to hire your professional skills behind the wheel for some special deliveries. Just as last time - it won't be easy and it'll require some skills, patience, cooperation with escorting vehicles and extra care, but I guess you still have it all, am I right? And don't forget - there's still bigger profit for these cargoes.<br><br>Along with the currently available Special Transport jobs at:<br><br>$OLD_CITIES$<br><br>You can now also take <color value=@@clr_sel@@>new ones<color value=@@clr_txt@@> at:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Real Estate Agency" #+ Message sender
+		subject: "Are you looking to expand your company?" #+ Message subject
+		body: "Dear Sir/Madam,<br><br>We would like to congratulate you on the progress of your company. We are impressed by the success of your business and we would like to offer you a new way to help your company expand further. From now on, you can use our services to purchase additional properties almost instantly! For more information, please $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>visit Garage Purchase interface</link>.<br><br>Sincerely,<br>Relations Manager<br>Real Estate Agency" #+ Message body
+	}
+	
+#@}
+}

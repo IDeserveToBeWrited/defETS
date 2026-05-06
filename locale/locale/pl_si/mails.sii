@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Systym" #+ Message sender
+		subject: "Testowŏ wiadōmość" #+ Message subject
+		body: "Witej!<br><br>To je testowŏ wiadōmość ôd twojigo administratōra ;-)<br><br>Pyrsk" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Bank" #+ Message sender
+		subject: "Chybiŏ Ci piyniyndzy? Pōmogymy!" #+ Message subject
+		body: "Szanowni Państwo,<br><br>uznaliśmy, że mogą być Państwo zainteresowani naszymi korzystnymi ofertami pożyczek udzielanych nowym firmom. Potrzebują Państwo funduszy na rozpoczęcie działalności? My możemy pomóc! Prosimy $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>o wizytę w lokalnym banku</link> celem uzyskania dalszych informacji.<br><br>Z wyrazami szacunku<br>Dyrektor Sprzedaży<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Bank" #+ Message sender
+		subject: "Pomogymy Ci sie rozwijać" #+ Message subject
+		body: "Szanowni Państwo,<br><br>zauważyliśmy że Państwa firma świetnie sobie radzi, dlatego chcielibyśmy pomóc w dalszym rozwoju jej potencjałów. Państwa limit kredytowy wzrósł do $MONEY$. Prosimy śmiało pobrać dostępną kwotę w każdej chwili z Państwa $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>lokalnej filii banku</link>.<br><br>Z wyrazami szacunku<br>Dyrektor do spraw sprzedaży<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Bank" #+ Message sender
+		subject: "Mŏsz dug na kōncie" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>Wziōn żeś wiyncyj piyniyndzy ze swojigo kōnta aniżeli bōło na niym dostympne. Dali my Ci darmowy krōtkoterminowy kredyt na nŏjbliższe dni, cobyś mōg wszyjsko dokludzić do porzōndku. Proszymy, abcaluj dug tak gibko jak idzie.<br><br>Z reszpektym,<br>Mynedżer Twojigo Kōnta<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Bank" #+ Message sender
+		subject: "Mŏsz dug do abcalowaniŏ!" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>Wasze saldo je ujymne! Abcalujcie dug we nŏjbliższych $DAYS$ abo bydymy musieli zabrać Waszõ włŏszczyznã.<br><br>Z reszpektym,<br>Mynedżer Waszego Kōnta<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Bank" #+ Message sender
+		subject: "Ôstatni pozōr!" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>To je Twoje ôstatnie upozorniyniy. Mŏsz dug na kōncie w banku. Proszymy, abcaluj go do jutra abo zabierymy Twojã włoszczyznã i przedōmy, coby go pokryć.<br><br>Z reszpektym,<br>Mynedżer Twojigo Kōnta<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Bank" #+ Message sender
+		subject: "Dug abcalowany" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>Twōj dug na kōncie je abcalowany. Miyło bydzie nōm pōmōc Ci jak zaś bydziesz potrzebować naszych usug.<br><br>Miyłego dnia,<br>Mynedżer Twojigo Kōnta<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Bank" #+ Message sender
+		subject: "Twoje włŏsne lastauto je przedane" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>Niymiyło nōm Cie ô tym informować, ale musieli my przedać Twoje włŏsne lastauto - $TRUCK_NAME$ - za $MONEY$. Niystety mioł żeś u nŏs dugo trwajōncy dug i żŏdnych przileżytości, coby go abcalować. Niy bōło żŏdnyj inkszyj drōgi, ino zrobić taki ekstrymalny krok. Sugerujymy, cobyś broł gibke roboty podwiela Twoja finansowŏ sytuacyjŏ bydzie lepszŏ.<br><br>Z reszpektym,<br>Mynedżer Twojigo Kōnta<br>Bank" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Bank" #+ Message sender
+		subject: "Twoja własna naczepa została sprzedana" #+ Message subject
+		body: "Szanowny Kliencie,<br><br>Z przykrością informujemy że byliśmy zmuszeni do sprzedania Twojej naczepy - $TRAILER_NAME$ - za $MONEY$. Niestety, w naszych rozliczeniach od dawna figurował dług z twojej strony i nie miałeś innych środków do spłaty tegoż długu. Z przykrością podjęliśmy takie ekstremalne kroki. Sugerujemy podejmowanie szybkich zleceń na rzecz poprawienia Twojej sytuacji finansowej.<br><br>Z wyrazami szacunku,<br>Opiekun Klienta<br>Bank " #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Bank" #+ Message sender
+		subject: "Twoja włŏszczyzna je przedanŏ" #+ Message subject
+		body: "Zŏcny Klijyńcie,<br><br>Skuli dugo trwajōncygo dugu na Twojim kōncie musieli my zabrać i przedać Twojã włoszczyznã. Ôdzyskanŏ suma <br> $MONEY$ je użytŏ do abcalowaniŏ Twojich zobowiōnzań. Tukej je lista rzeczy, co my je wziōnli:<br><br>$ITEM_LIST$<br>Przikro nōm, że sytuacyjŏ je takŏ, a niy inkszŏ i mōmy nadziejã, co kōnsekwyncyje niy bydōm za srogōm szkodōm dlŏ Twojigo gyszeftu.<br><br>Z reszpektym,<br>Mynedżer Twojigo Kōnta<br>Bank" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Dealer lastautōw - $CITY$" #+ Message sender
+		subject: "Blank nowe $BRAND$ na przedej!" #+ Message subject
+		body: "Drodzy Państwo,<br><br>jesteśmy certyfikowanym sprzedawcą ciężarówek marki $BRAND$. Oferujemy szeroki wachlarz najróżniejszych konfiguracji - jesteśmy w stanie dokonywać personalizacji wedle uznania klientów. Zachęcamy do odwiedzin $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>naszego salonu w mieście $CITY$</link>, a możliwe, że za drzwiami znajdą państwo ciężarówkę, o której zawsze marzyli.<br><br>Serdecznie pozdrawiamy<br>Państwa dealer ciężarówek $BRAND$" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Sprzedaż używanych ciężarówek" #+ Message sender
+		subject: "Używane ciężarówki na sprzedaż!" #+ Message subject
+		body: "Szanowny Panie/Szanowna Pani,<br><br>Z radością ogłaszamy otwarcie naszego dealera używanych samochodów ciężarowych, najnowszego miejsca sprzedaży używanych ciężarówek wysokiej jakości! Niezależnie od tego, czy szukasz mocnej maszyny, czy po prostu niezawodnego konia pociągowego, mamy dla Pana/Pani idealną ciężarówkę.<br><br>Proszę przejrzeć nasze $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Oferty używanych ciężarówek</link>. Ufamy, że znajdzie Pan/Pani idealny samochód ciężarowy odpowiadający Pana/Pani potrzebom.<br><br>Z poważaniem<br><br>Zespół dealerów używanych samochodów ciężarowych<br><br>P.S. Nie zapomnij często sprawdzać, czy nie pojawiły się nowe oferty! Nasz asortyment stale się zmienia, więc nigdy nie wiesz, jaką ofertę możesz znaleźć." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Potrzebujymy kerowcōw ze włŏsnym sprzyntym" #+ Message subject
+		body: "Do kożdego, kerego to może dotyczyć,<br><br>Szukōmy kerowcōw ze szprymami i włŏsnymi lastautami do srogij wielości dostŏw. Oferujymy dobry geltag aji do $MONEY$ za robotã. Proszymy, jeźli mŏcie swōj autŏk, przidźcie ôd razu do naszego doku we $CITY$.<br><br>$COMPANY$,<br>$CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Kerowca $NAME$" #+ Message sender
+		subject: "Potrzebujã lastauto do roboty" #+ Message subject
+		body: "Witej Szefie,<br><br>Niy wiym eli żeś sie już spōmiarkowoł, atoli siedzã sam we $CITY$ bez roboty ôd $DAYS$. Corŏzki to barzij sie już nerwujã, bo potrzebujã piyniyndzy, coby pocalować rachunki, a niy mogã nic zarobić jak marniã sam czas bez żŏdnyj roboty. Proszã, dej mi jake lastauto w ciōngu nŏjbliższych $DAYS2$, cobych zaś jeździyła abo niy bydã mogła zrobić nic inkszego ino ôstawić fyrmã.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Kerowca $NAME$" #+ Message sender - written by female
+		subject: "Potrzebujã lastauto do roboty" #+ Message subject - written by female
+		body: "Witej Szefie,<br><br>Niy wiym eli żeś sie już spōmiarkowoł, atoli siedzã sam we $CITY$ bez roboty ôd $DAYS$. Corŏzki to barzij sie już nerwujã, bo potrzebujã piyniyndzy, coby pocalować rachunki, a niy mogã nic zarobić jak marniã sam czas bez żŏdnyj roboty. Proszã, dej mi jake lastauto w ciōngu nŏjbliższych $DAYS2$, cobych zaś jeździyła abo niy bydã mogła zrobić nic inkszego ino ôstawić fyrmã.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Kerowca $NAME$" #+ Message sender
+		subject: "Pożegnaniy" #+ Message subject
+		body: "Witej,<br><br>Niy mogã sie dużyj zwolić na marniynie swojigo czasu. Niy mogã prŏcować bez lastauta i niy chcã durch czekać. Tracã dobre przileżytości, także ôdłażã ze Twojij fyrmy, coby prōbować kaj indzij. Cołki sprzynt znojdziesz we garażu we $CITY$.<br><br>Pyrsk,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Kerowca $NAME$" #+ Message sender - written by female
+		subject: "Pożegnaniy" #+ Message subject - written by female
+		body: "Witej,<br><br>Niy mogã sie dużyj zwolić na marniynie swojigo czasu. Niy mogã prŏcować bez lastauta i niy chcã durch czekać. Tracã dobre przileżytości, także ôdłażã ze Twojij fyrmy, coby prōbować kaj indzij. Cołki sprzynt znojdziesz we garażu we $CITY$.<br><br>Pyrsk,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Kierowca $NAME$" #+ Message sender
+		subject: "Moja ciężarówka wymaga całkowitej renowacji" #+ Message subject
+		body: "Cześć szefie,<br><br>wiem, że jesteś zajęty, ale mój sprzęt wymaga całkowitej renowacji. Moja ciężarówka jest za stara i zbyt zużyta, żeby bezpiecznie jeździć. Od $DAYS$ jestem bez pracy i szczerze mówiąc, jestem dość sfrustrowana, ponieważ muszę zapłacić rachunki, a nie zarobię na nie bez sprawnego samochodu. Proszę, czy możesz kupić mi nową ciężarówkę lub odnowić tę, abym mogła wrócić do pracy, w przeciwnym razie nie będę miała innego wyboru, jak Cię opuścić.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Kierowca $NAME$" #+ Message sender - written by female
+		subject: "Moja ciężarówka wymaga całkowitej renowacji" #+ Message subject - written by female
+		body: "Cześć szefie,<br><br>wiem, że jesteś zajęty, ale mój sprzęt wymaga całkowitej renowacji. Moja ciężarówka jest za stara i zbyt zużyta, żeby bezpiecznie jeździć. Od $DAYS$ jestem bez pracy i szczerze mówiąc, jestem dość sfrustrowana, ponieważ muszę zapłacić rachunki, a nie zarobię na nie bez sprawnego samochodu. Proszę, czy możesz kupić mi nową ciężarówkę lub odnowić tę, abym mogła wrócić do pracy, w przeciwnym razie nie będę miała innego wyboru, jak Cię opuścić.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Kierowca $NAME$" #+ Message sender
+		subject: "Do widzenia" #+ Message subject
+		body: "Cześć,<br><br>przepraszam, że to mówię, ale mój sprzęt rozpada się z powodu zużycia i nie mam już dużo czasu by czekać na wynagrodzenie. Nie mam pracy, a moje wydatki rosną, więc muszę zmienić pracodawcę. Zalecam całkowitą renowację tego zestawu przed następnym kierowcą. Każdy wydany mi sprzęt znajdziesz w moim dawnym garażu w $CITY$.<br><br>Do zobaczenia.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Kierowca $NAME$" #+ Message sender - written by female
+		subject: "Do widzenia" #+ Message subject - written by female
+		body: "Cześć,<br><br>przepraszam, że to mówię, ale mój sprzęt rozpada się z powodu zużycia i nie mam już czasu czekać na wynagrodzenie. Nie mam pracy, a moje wydatki rosną, więc muszę zmienić pracodawcę. Zalecam całkowitą renowację tego zestawu przed następnym kierowcą. Każdy wydany mi sprzęt znajdziesz w moim dawnym garażu w $CITY$.<br><br>Do zobaczenia.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Kerowca $NAME$" #+ Message sender
+		subject: "Ôdłażã" #+ Message subject
+		body: "Witej Szefie,<br><br>Garaż we $CITY$, kaj żech była, terŏzki zawiyrajōm. Prziszli ludzie z banku i pedzieli, że muszã sie ôdkludzić. Wyłazi na to, że ta fyrma niy wiy sie radã i beztōż uzdałach sie, że ôdłażã. Bez lastauta i wszyjskigo zuwizu bych dyć psińco zrobiyła. Bydã prōbować kaj indzij.<br><br>Pyrsk, niy miej żŏlu,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Kerowca $NAME$" #+ Message sender - written by female
+		subject: "Ôdłażã" #+ Message subject - written by female
+		body: "Witej Szefie,<br><br>Garaż we $CITY$, kaj żech była, terŏzki zawiyrajōm. Prziszli ludzie z banku i pedzieli, że muszã sie ôdkludzić. Wyłazi na to, że ta fyrma niy wiy sie radã i beztōż uzdałach sie, że ôdłażã. Bez lastauta i wszyjskigo zuwizu bych dyć psińco zrobiyła. Bydã prōbować kaj indzij.<br><br>Pyrsk, niy miej żŏlu,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Dyspozytōr" #+ Message sender
+		subject: "Ekstra transporty" #+ Message subject
+		body: "Witaj szefie.<br><br>Mam dla Ciebie coś wyjątkowego. Dzięki naszym kontaktom możemy podjąć się teraz prawdziwego wyzwania. Niektóre specjalne, wielkogabarytowe i ciężkie towary muszą być przewiezione przez prawdziwego profesjonalistę. Nie będzie to łatwe oraz wymaga to pewnych umiejętności, cierpliwości, współpracy z pojazdami eskortującymi i specjalnej uwagi, ale myślę, że masz wszystkie niezbędne predyspozycje, zgadza się? Większe ryzyko wiąże się również z większymi korzyściami.<br><br>Jeżeli jesteś tym zainteresowany, możesz odwiedzić te oto miasta:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Dyspozytor" #+ Message sender
+		subject: "Nowe Transporty Specjalne" #+ Message subject
+		body: "Witaj szefie.<br><br>Więcej firm chciałoby Ci powierzyć przewożenie specjalnych ładunków. Tak samo jak ostatnim razem - nie będzie łatwo i będzie to wymagało pewnych umiejętności, cierpliwości, współpracy z eskortującymi pojazdami i dużej ostrożności, ale wydaje mi się że wciąż masz to wszystko, mam racje? Nie zapomnij - z tymi transportami wiąże się większy zarobek.<br><br>Oprócz aktualnie dostępnych zleceń Transportu Specjalnego w:<br><br>$OLD_CITIES$<br><br>Możesz także podjąć <color value=@@clr_sel@@>nowe<color value=@@clr_txt@@> w:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Agencja nieruchomości" #+ Message sender
+		subject: "Chcesz rozbudować swoją firmę?" #+ Message subject
+		body: "Szanowni Państwo,<br><br>chcielibyśmy pogratulować rozwoju Pańskiej firmy. Jesteśmy pod wrażeniem sukcesu firmy i chcielibyśmy zaoferować nowy sposób, aby pomóc firmie rozwijać się dalej. Od teraz możecie Państwo korzystać z naszych usług, aby kupować dodatkowe nieruchomości niemal natychmiast! Aby uzyskać więcej informacji, proszę $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>odwiedź okno zakupu garażu</link>.<br><br>Z poważaniem<br>Menedżer ds. Relacji<br>Agencja nieruchomości" #+ Message body
+	}
+	
+#@}
+}

@@ -1,0 +1,194 @@
+SiiNunit
+{
+#+ Mails delivered to the player.
+#@{
+
+/**
+ * Test / debug mails
+ */
+
+	mail_text: mailtext.test1 {
+		from: "Sistema" #+ Message sender
+		subject: "Messaggio di prova" #+ Message subject
+		body: "Ciao!<br><br>Questo è un messaggio di prova dal tuo collega amministratore ;-)<br><br>Salve" #+ Message body
+	}
+
+/**
+ * Bank mails
+ */
+
+	mail_text: mailtext.bank_start {
+		from: "Banca" #+ Message sender
+		subject: "Ha bisogno di denaro? Noi possiamo aiutarla!" #+ Message subject
+		body: "Gentile Signore/a,<br><br>Abbiamo pensato che avreste gradito sapere che offriamo prestiti agevolati alle nuove imprese. Necessita di finanziamenti per far funzionare il Suo business? Noi siamo qui per aiutarla! $SHORTCUT1$<link url=screen.bank color=@@clr_link@@>Visiti la Sua filiale di riferimento</link> per maggiori informazioni. <br><br>Rispettosamente,<br>Responsabile prestiti<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_credit {
+		from: "Banca" #+ Message sender
+		subject: "Siamo in grado di aiutarti a crescere" #+ Message subject
+		body: "Gentile Signore/a,<br><br>Non potevamo fare a meno di notare i Suoi guadagni costanti e vorremmo aiutarla a sviluppare il Suo potenziale ancora di più. Il suo limite di credito è stato aumentato a $MONEY$. Si senta libero di attingere alla somma disponibile in qualsiasi momento dalla Sua $SHORTCUT1$<link url=screen.bank color=@@clr_link@@> filiale di riferimento</link>.<br><br> Rispettosamente,<br>Direttore delle vendite<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debt0 {
+		from: "Banca" #+ Message sender
+		subject: "Il tuo conto in banca è scoperto" #+ Message subject
+		body: "Gentile Cliente,<br><br> Ha ritirato più soldi dal suo conto di quanto ne avesse a disposizione. Le abbiamo fornito un credito a breve termine per i prossimi giorni, senza alcun interesse, quindi può risolvere la situazione. Per favore, la preghiamo di pagare lo scoperto al più presto possibile.<br><br> Cordiali saluti,<br>Responsabile prestiti<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtx {
+		from: "Banca" #+ Message sender
+		subject: "Hai uno debito da saldare!" #+ Message subject
+		body: "Gentile Cliente,<br><br>Il suo conto in banca è in negativo! La invitiamo pertanto a pagare il suo debito nei prossimi $DAYS$ o saremo costretti a sequestrare la sua proprietà.<br><br> Cordiali saluti,<br>Il suo consulente<br>Banca " #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtf {
+		from: "Banca" #+ Message sender
+		subject: "Ultimo avvertimento!" #+ Message subject
+		body: "Gentile Cliente,<br><br>Questo è il nostro ultimo avvertimento. Il suo conto in banca è scoperto. Per favore, ci rimborsi entro domani o ritireremo le sue proprietà per coprire il debito.<br><br>Cordiali saluti,<br>Il suo responsabile prestiti<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_debtr {
+		from: "Banca" #+ Message sender
+		subject: "Scoperto pagato" #+ Message subject
+		body: "Gentile Cliente,<br><br>Lo scoperto del suo conto è stato risolto. Saremo felici di poterla aiutare se in futuro avrà ancora bisogno dei nostri servizi.<br><br>Buona giornata, <br>Il suo responsabile prestiti<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellpt {
+		from: "Banca" #+ Message sender
+		subject: "Il tuo camion è stato venduto" #+ Message subject
+		body: "Gentile Cliente,<br><br>Siamo spiacenti di informarla che abbiamo dovuto vendere il suo camion personale - $TRUCK_NAME$ - per $MONEY$. Purtroppo, ha avuto un debito da lunga data con noi e non possedeva altri mezzi necessari alla copertura. Purtroppo, non c'era altro modo che prendere queste misure estreme. Le consigliamo di accettare qualche offerta di lavoro come dipendente fino a quando la sua situazione finanziaria non migliorerà.<br><br> Cordiali saluti,<br>Il suo responsabile prestiti<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellptr {
+		from: "Banca" #+ Message sender
+		subject: "Il tuo rimorchio è stato venduto" #+ Message subject
+		body: "Gentile cliente,<br><br>Siamo spiacenti di informarla che abbiamo dovuto vendere il suo rimorchio - $TRAILER_NAME$ - per $MONEY$. Il suo vecchio debito non è stato saldato e non c'era il denaro per coprirlo. Purtroppo questa soluzione estrema era l'unica disponibile. Le consigliamo di iniziare a lavorare come dipendente fino a quando la sua situazione bancaria non sarà migliorata.<br><br>Cordiali saluti,<br>Il suo responsabile prestiti.<br>Banca" #+ Message body
+	}
+
+	mail_text: mailtext.bank_sellrep {
+		from: "Banca" #+ Message sender
+		subject: "La tua proprietà è stata venduta" #+ Message subject
+		body: "Gentile Cliente,<br><br>A causa di un considerevole debito persistente sul suo conto, abbiamo dovuto sequestrare e vendere le sue proprietà. I fondi recuperati nella somma totale di<br>$MONEY$ sono stati utilizzati per risolvere i suoi obblighi. In particolare, questi oggetti sono stati posti sotto sequestro:<br><br>$ITEM_LIST$<br>Ci dispiace che la situazione sia precipitata fino a questo punto, ci auguriamo che le conseguenze non la danneggino troppo severamente.<br><br>Con i migliori auguri,<br>Il responsabile prestiti<br>Banca" #+ Message body
+	}
+
+/**
+ * Truck dealer mails
+ */
+
+	mail_text: mailtext.td_visit {
+		from: "Concessionario - $CITY$" #+ Message sender
+		subject: "Novità $BRAND$ in vendita!" #+ Message subject
+		body: "Gentile Signore/a,<br><br>Siamo rivenditori certificati $BRAND$. Offriamo una vasta gamma di configurazioni diverse e possiamo soddisfare le vostre richieste particolari potendo applicare notevoli personalizzazioni. La invitiamo a $SHORTCUT1$<link url=truck.dealer_map color=@@clr_link@@>visitare il nostro showroom a $CITY$</link>. Il camion che avete sempre sognato vi attende nei nostri concessionari.<br><br>Cordiali saluti,<br>Il vostro rivenditore $BRAND$" #+ Message body
+	}
+
+/**
+ * Used truck dealer mails
+ */
+
+	mail_text: mailtext.used_teaser {
+		from: "Concessionario di camion usati" #+ Message sender
+		subject: "Camion usati in vendita!" #+ Message subject
+		body: "Gentile Signore/a,<br><br>Siamo felici di annunciare l'apertura del nostro Concessionario di camion usati, la sua nuova destinazione per camion usati di alta qualità! Che sia in cerca di un mezzo potente o semplicemente di un mulo affidabile, abbiamo il camion perfetto per lei.<br><br>La invitiamo a visitare le nostre $SHORTCUT1$<link url=truck.eshop.used_trucks color=@@clr_link@@>Offerte di camion usati</link>. Confidiamo che lei possa trovare il camion perfetto per le sue esigenze.<br><br>Cordialmente,<br><br>Il team del Concessionario di camion usati<br><br>P.S. Non dimentichi di restare aggiornato sui nuovi arrivi! Il nostro inventario è in costante aggiornamento, per cui non si sa mai che affare si possa trovare." #+ Message body
+	}
+
+/**
+ * Company mails
+ */
+
+	mail_text: mailtext.comp_teaser {
+		from: "$COMPANY$, $CITY$" #+ Message sender
+		subject: "Cercasi autotrasportatori autonomi" #+ Message subject
+		body: "A chiunque possa interessare,<br><br>Siamo alla ricerca di autotrasportatori esperti con mezzi propri per una vasta gamma di consegne. Offriamo prezzi competitivi fino a $MONEY$ per trasporto. Prego, se disponete di mezzi propri, rivolgetevi direttamente al nostro magazzino a $CITY$.<br><br> $COMPANY$,<br> $CITY$" #+ Message body
+	}
+
+/**
+ * Driver mails
+ */
+
+	mail_text: mailtext.drv_idle {
+		from: "Camionista $NAME$" #+ Message sender
+		subject: "Ho bisogno di un camion per lavorare" #+ Message subject
+		body: "Buongiorno capo, <br><br>non so se l'ha notato, ma sono fermo a $CITY$ senza lavoro da oltre $DAYS$ ormai. È una situazione frustrante perché anche io ho bisogno di soldi per pagare le bollette e non posso fare altro se sto qui a bighellonare senza alcun lavoro in vista. Per favore, procurami un camion nei prossimi $DAYS2$ in modo da poter iniziare a lavorare altrimenti non avrò altra scelta che rassegnare le mie dimissioni.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_idle.female {
+		from: "Camionista $NAME$" #+ Message sender - written by female
+		subject: "Ho bisogno di un camion per lavorare" #+ Message subject - written by female
+		body: "Buon giorno capo, <br><br>non so se l' ha notato, ma sono ferma a $CITY$ senza lavoro da oltre $DAYS$ ormai. È una situazione frustrante perché anche io ho bisogno di soldi per pagare le bollette e non posso fare altro se sto qui a bighellonare senza alcun lavoro in vista. Per favore, procurami un camion nei prossimi $DAYS2$ in modo da poter iniziare a lavorare altrimenti non avrò altra scelta che rassegnare le mie dimissioni.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_quit {
+		from: "Camionista $NAME$" #+ Message sender
+		subject: "Addio" #+ Message subject
+		body: "Buongiorno,<br><br>Non posso più permettermi di sprecare il mio tempo. Sono un autotrasportatore, non posso lavorare senza un camion e non voglio più aspettare. Ho già perso una buona opportunità quindi me ne vado dalla tua azienda per cercare fortuna altrove. Puoi ritrovare tutte le attrezzature assegnatemi, le ho lasciate nel mio ex garage a $CITY$.<br><br>Addio,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_quit.female {
+		from: "Camionista $NAME$" #+ Message sender - written by female
+		subject: "Addio" #+ Message subject - written by female
+		body: "Buongiorno,<br><br>Non posso più permettermi di sprecare il mio tempo. Sono un' autotrasportatrice, non posso lavorare senza un camion e non voglio più aspettare. Ho già perso una buona opportunità quindi me ne vado dalla tua azienda per cercare fortuna altrove. Puoi ritrovare tutte le attrezzature assegnatemi, le ho lasciate nel mio ex garage a $CITY$.<br><br>Addio,<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear {
+		from: "Autista $NAME$" #+ Message sender
+		subject: "Il mio camion necessita di un restauro completo" #+ Message subject
+		body: "Salve boss,<br><br>So che è impegnato, ma il mio mezzo ha bisogno di un restauro totale. È troppo vecchio e malconcio per guidare ancora in sicurezza. Non ho lavorato per $DAYS$ ormai, e francamente sono abbastanza frustrata perché devo pagare le bollette e non posso farlo senza un mezzo idoneo a circolare. Per favore, le chiedo di fornirmi un nuovo camion o far riparare questo qui in modo che possa tornare a lavorare, altrimenti sarò costretta ad andarmene.<br><br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear.female {
+		from: "Autista $NAME$" #+ Message sender - written by female
+		subject: "Il mio camion necessita di un restauro completo" #+ Message subject - written by female
+		body: "Salve boss,<br><br>So che è impegnato, ma il mio mezzo ha bisogno di un restauro totale. È troppo vecchio e malconcio per guidare ancora in sicurezza. Non ho lavorato per $DAYS$ ormai, e francamente sono abbastanza frustrata perché devo pagare le bollette e non posso farlo senza un mezzo idoneo a circolare. Per favore, le chiedo di fornirmi un nuovo camion o far riparare questo qui in modo che possa tornare a lavorare, altrimenti sarò costretta ad andarmene.<br><br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_wear_qui {
+		from: "Autista $NAME$" #+ Message sender
+		subject: "Addio" #+ Message subject
+		body: "Ciao,<br><br>Mi spiace dirlo ma il mio camion sta cadendo a pezzi a causa dell'usura e dei danni subiti e non ho tempo. Non ho alcun lavoro e le mie spese si stanno accumulando, per cui devo muovermi. Consiglio un restauro totale del convoglio per il prossimo autista. Puoi trovare tutte le attrezzature a disposizione nel mio vecchio garage a $CITY$.<br><br>Saluti.<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_wear_qui.female {
+		from: "Autista $NAME$" #+ Message sender - written by female
+		subject: "Addio" #+ Message subject - written by female
+		body: "Ciao,<br><br>Mi spiace dirlo ma il mio camion sta cadendo a pezzi a causa dell'usura e dei danni subiti e non ho tempo. Non ho alcun lavoro e le mie spese si stanno accumulando, per cui devo muovermi. Consiglio un restauro totale del convoglio per il prossimo autista. Puoi trovare tutte le attrezzature a disposizione nel mio vecchio garage a $CITY$.<br><br>Saluti.<br>$NAME$" #+ Message body - written by female
+	}
+
+	mail_text: mailtext.drv_sold {
+		from: "Camionista $NAME$" #+ Message sender
+		subject: "Me ne vado!" #+ Message subject
+		body: "Buongiorno capo,<br><br>Il garage a $CITY$, dove sono assegnato, è stato pignorato. Oggi, alcuni dipendenti della banca sono venuti qui e hanno detto che devo andarmene. Sembra che questa azienda non abbia molto successo ultimamente. Così, ho deciso di dimettermi. Non potrei fare molto qui in ogni caso - senza camion e attrezzature. Ci riproverò da qualche altra parte.<br><br>La saluto, senza rancori,<br>$NAME$" #+ Message body
+	}
+
+	mail_text: mailtext.drv_sold.female {
+		from: "Camionista $NAME$" #+ Message sender - written by female
+		subject: "Me ne vado!" #+ Message subject - written by female
+		body: "Buongiorno capo,<br><br>Il garage a $CITY$, dove sono assegnata, è stato pignorato. Oggi, alcuni dipendenti della banca sono venuti qui e hanno detto che devo andarmene. Sembra che questa azienda non abbia molto successo ultimamente. Così, ho deciso di dimettermi. Non potrei fare molto qui in ogni caso - senza camion e attrezzature. Ci riproverò da qualche altra parte.<br><br>La saluto, senza rancori,<br>$NAME$" #+ Message body - written by female
+	}
+
+/**
+ * Oversize
+ */
+
+	mail_text: mailtext.ovs.new_routes {
+		from: "Mittente" #+ Message sender
+		subject: "Trasporti Eccezionali" #+ Message subject
+		body: "Ciao capo.<br><br>Ho qualcosa di speciale per te. Grazie alle nostre conoscenze, ora siamo in grado di affrontare una vera sfida. Alcuni carichi speciali, extra grandi e pesanti, devono essere trasportati da un vero professionista. Non sarà facile e richiederà abilità, pazienza, collaborazione con veicoli di scorta e molta attenzione, ma immagino tu abbia tutto questo, vero? Inoltre, un rischio maggiore porta a un profitto maggiore.<br><br>Se sei interessato, puoi visitare queste città:<br><br>$CITIES$" #+ Message body
+	}
+	
+	mail_text: mailtext.ovs.upd_routes {
+		from: "Mittente" #+ Message sender
+		subject: "Nuovi Trasporti Speciali" #+ Message subject
+		body: "Ciao capo.<br><br>Altre aziende vorrebbero assumere le tue abilità professionali al volante per alcune consegne speciali. Proprio come l'ultima volta, non sarà facile e richiederà abilità, pazienza, collaborazione con veicoli di scorta e molta attenzione, ma immagino tu abbia ancora tutto questo, giusto? E non dimenticare - c'è ancora un profitto maggiore per questi carichi.<br><br>Oltre ai lavori di Trasporto Speciale attualmente disponibili a:<br><br>$OLD_CITIES$<br><br>Ora puoi prendere anche <color value=@@clr_sel@@>nuovi lavori<color value=@@clr_txt@@> a:<br><br>$CITIES$" #+ Message body
+	}
+
+/**
+ * Real Estate mail
+ */
+ 	mail_text: mailtext.real_estate {
+		from: "Agenzia immobiliare" #+ Message sender
+		subject: "Stai valutando di espandere la tua azienda?" #+ Message subject
+		body: "Gentile Signore/a,<br><br>Vorremmo congratularci con Voi per la crescita della Vostra azienda. Siamo impressionati dal successo della Vostra attività e vorremmo offrirvi un nuovo metodo per espandervi. Da questo momento potete utilizzare i nostri servizi per acquistare nuove proprietà velocemente! Per maggior informazioni la invitiamo a $SHORTCUT1$<link url=screen.real_estate color=@@clr_link@@>visitare l'interfaccia Acquisto garage</link>.<br><br>Cordiali saluti,<br>Relations Manager<br>Agenzia immobiliare" #+ Message body
+	}
+	
+#@}
+}
