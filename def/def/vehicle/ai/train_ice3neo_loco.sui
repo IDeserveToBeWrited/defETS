@@ -78,7 +78,7 @@ traffic_vehicle : traffic.ice3_r_loco
 	lod_dist[]: 100
 	lod_dist[]: 150
 
-
+	spawn_condition[]: .traffic.ice3_r_loco.condition.city
 }
 
 vehicle_accessory: .ice3_r_loco.chassis
@@ -94,3 +94,12 @@ vehicle_wheel_accessory: .ice3_r_loco.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_empty_50cm.sii"
 }
 
+traffic_spawn_condition: .traffic.ice3_r_loco.condition.city
+{
+	# spawn only near city with specified name
+	type: country
+	str_param[]: "germany"
+	str_param[]: "netherlands"
+	str_param[]: "belgium"
+
+}

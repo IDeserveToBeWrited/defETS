@@ -209,6 +209,17 @@ road_edge : road_edge.un_bus_15
 	attach_to_override: true
 }
 
+road_edge : road_edge.un_bus_cb
+{
+	name: "bus lane curb"
+	model: "/road_template/un/road_edges/un_bus_curb_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+	shoulder_space: 3
+
+	attach_to_override: true
+}
+
 road_edge : road_edge.un_crb_spec
 {
 	name: "curb"
@@ -216,6 +227,7 @@ road_edge : road_edge.un_crb_spec
 	variant_5: curb_5m
 	variant_15: curb_15m
 
+	use_road_look: false
 }
 
 road_edge : road_edge.un_drn_01_n
@@ -262,6 +274,55 @@ road_edge : road_edge.un_hwdrn01_o
 
 }
 
+road_edge : road_edge.un_d4_01_n
+{
+	name: "drain 4m 01 new"
+	model: "/road_template/un/road_edges/un_drain_4m_01_new_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+
+	shoulder_space: 0.2
+}
+
+road_edge : road_edge.un_hd4_01_n
+{
+	name: "hw drain 4m 01 new"
+	model: "/road_template/un/road_edges/un_hwlane_drain_4m_01_new_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+
+	shoulder_space: 3
+}
+
+road_edge : road_edge.un_d4_02_n
+{
+	name: "drain 4m 02 new"
+	model: "/road_template/un/road_edges/un_drain_4m_02_new_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+
+	shoulder_space: 0.2
+}
+
+road_edge : road_edge.un_hd4_02_n
+{
+	name: "hw drain 4m 02 new"
+	model: "/road_template/un/road_edges/un_hwlane_drain_4m_02_new_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+
+	shoulder_space: 3
+}
+
+road_edge : road_edge.un_d4i_01_n
+{
+	name: "drain 4m 01 inner new"
+	model: "/road_template/un/road_edges/un_drain_4m_01_new_inner_15.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+
+}
+
 ############################################# RESKIN ##################################################
 
 road_edge : road_edge.un_sww_15
@@ -292,16 +353,8 @@ road_edge : road_edge.un_sww_dwn
 
 ############################################# OVERRIDES ###############################################
 
-road_edge : road_edge.un_bus_e_15
-{
-	name: "bus_lane_end"
-	model: "/road_template/un/road_edges/un_bus_15_end.pmd"
-	variant_5: sh_15_5m
-	variant_15: sh_15_15m
-	
-	attach_to_override: true
 
-}
+###  BUS LANE (CURB) START/END
 
 road_edge : road_edge.un_bus_s_15
 {
@@ -311,8 +364,39 @@ road_edge : road_edge.un_bus_s_15
 	variant_15: sh_15_15m
 	
 	attach_to_override: true
-
 }
+
+road_edge : road_edge.un_bus_e_15
+{
+	name: "bus_lane_end"
+	model: "/road_template/un/road_edges/un_bus_15_end.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+	
+	attach_to_override: true
+}
+
+road_edge : road_edge.un_bus_cb_s
+{
+	name: "bus lane curb start"
+	model: "/road_template/un/road_edges/un_bus_curb_15_start.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+	
+	attach_to_override: true
+}
+
+road_edge : road_edge.un_bus_cb_e
+{
+	name: "bus lane curb end"
+	model: "/road_template/un/road_edges/un_bus_curb_15_end.pmd"
+	variant_5: sh_15_5m
+	variant_15: sh_15_15m
+	
+	attach_to_override: true
+}
+
+###  MINIM INTERSECTION
 
 road_edge : road_edge.un_in_sh
 {

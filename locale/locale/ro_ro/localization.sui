@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Liber ca vântul"
 
+	key[]: "loading_location_country"
+	val[]: "Undeva în $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Transferare" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Sarcină curentă"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "ANALIZĂ VEHICUL" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "ANALIZĂ VEHICUL" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "ANALIZĂ VEHICUL" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Configuraţie Vehicul" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Configuraţie Vehicul" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Configuraţie Vehicul" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Configuraţie Vehicul" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Marfă Obişnuită" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Urmează să preluaţi un transport greu. Este indicat să revizuiţi parametrii vehiculului, pentru a vă asigura că poate face faţă sarcinii." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Ţinând cont de tipul dvs. obişnuit de transport şi de alte indicaţii, reglaţi-vă vehiculul pentru a-l optimiza în funcţie de o combinaţie de economie la condus, limitări tehnice şi legale." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Ţinând cont de tipul dvs. obişnuit de transport şi de alte indicaţii, reglaţi-vă vehiculul pentru a-l optimiza în funcţie de o combinaţie de elemente ce include economia la condus, limitările tehnice şi legale." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Optimizat pentru sarcini de transportare mărfuri uşoare şi de greutate medie" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Optimizat pentru transport greu şi agabaritic" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Capacitatea vehiculului de a fi manevrat în spaţii restrânse" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Capacitatea vehiculului de a fi manevrat în spaţii restrânse" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Sistem de propulsie al vehiculului optimizat pentru abordarea mai facilă a rampelor şi pantelor" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Sistem de propulsie al vehiculului optimizat pentru abordarea mai facilă a rampelor şi pantelor" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Îmbunătăţirea capacităţilor off-road" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -248,7 +254,7 @@
 	val[]: "Vedeţi ce îmbunătăţiri sunt disponibile." #+ Help message associated with new upgrades icon.
 
 	key[]: "upgrades_new_items"
-	val[]: "NOI ELEMENTE DISPONIBILE" #+ Header line of the list of new upgrades.
+	val[]: "NOI ARTICOLE DISPONIBILE" #+ Header line of the list of new upgrades.
 
 	key[]: "upgrades_gps"
 	val[]: "Configurare GPS spre Cel Mai Apropiat Service" #+ Button which sets GPS target to the nearest shop.
@@ -275,7 +281,7 @@
 	key[]: "truck_service"
 	val[]: "Service" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
+	key[]: "vehicle_service_about"
 	val[]: "Întreţinere vehicul şi reparaţii. Un şofer extraordinar îşi menţine întotdeauna vehiculul într-o stare excelentă." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Înlocuire toate" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "RAPORT AVARII VEHICUL" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "RAPORT AVARII VEHICUL" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "RAPORT AVARII REMORCĂ" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Confirmare" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Avarii vehicul" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Avarii vehicul" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,13 +311,13 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
+	key[]: "vehicle_config_t"
 	val[]: "CONFIGURATOR VEHICUL" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Configurator Vehicul" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Configurator Vehicul" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
+	key[]: "vehicle_config_about"
 	val[]: "Ştiţi, întotdeauna va exista ceva ce puteţi regla sau vopsi pentru ca vehiculul dvs. să vă ofere o stare de satisfacţie îmbunătăţită." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
@@ -342,7 +348,7 @@
 	val[]: "RAMBURSARE" #+ Title of dialog box with missing parts refundation
 
 	key[]: "refund_spare_parts_msg"
-	val[]: "S-a detectat un MOD lipsă. Componentele afectate ale vehiculului sunt eligibile pentru rambursare.<br offset=35>Puteţi selecta „Confirmare Comandă” pentru a aplica rambursarea.<br><color value=@@clr_sel@@>SAU<color value=@@clr_txt@@><br>Ieşiţi fără nicio modificare, dacă intenţionaţi să reinstalaţi mod-ul lipsă mai târziu."
+	val[]: "A fost detectat un MOD lipsă. Componentele vehiculului afectate sunt eligibile pentru o rambursare.<br offset=35>Puteţi selecta „Confirmare Comandă” pentru a aplica rambursarea.<br><color value=@@clr_sel@@>SAU<color value=@@clr_txt@@><br>Ieşiţi fără nicio modificare, dacă intenţionaţi să reinstalaţi mod-ul lipsă mai târziu."
 
 	key[]: "part_type_aftermarket"
 	val[]: "Componentă aftermarket"
@@ -410,7 +416,7 @@
 	key[]: "truck_diag"
 	val[]: "Diagnostic Vehicul" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
+	key[]: "vehicle_diag_about"
 	val[]: "Vedeţi informaţii despre vehiculul dvs. şi condiţia sa curentă."
 
 	key[]: "truck_diag_warning"
@@ -496,13 +502,13 @@
 	val[]: "Anulaţi toate noile modificări?" #+ Shown as message box when basket clearing icon is pressed.
 
 	key[]: "cart_not_empty"
-	val[]: "Aveţi elemente plasate în comandă!<br><br>Doriţi anularea tuturor modificărilor?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
+	val[]: "Aţi adăugat câteva articole în coşul de cumpărături!<br><br>Doriţi să anulaţi toate modificările noi?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Angajatorului dvs. nu-i va plăcea dacă efectuaţi modificări asupra vehiculului său." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Angajatorului dvs. nu-i va plăcea dacă efectuaţi modificări asupra vehiculului său." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
-	val[]: "Nu puteţi schimba tipul de remorcă, corpul acesteia sau şasiul în timpul unei livrări. Finalizaţi livrarea şi încercaţi din nou." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
+	val[]: "Nu puteţi schimba tipul de remorcă, corpul sau şasiul acesteia în timpul unei livrări. Finalizaţi livrarea şi încercaţi din nou." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
 
 	key[]: "trailer_configurator_invalid_country"
 	val[]: "$ACC$ selectat nu poate fi instalat în afara perimetrului ţării <color value=@@clr_sel@@>$COUNTRIES$." #+ A warning shown when player tries to change trailer chain type or chassis configuration to one that's not valid for configurator country.
@@ -695,7 +701,7 @@
 	val[]: "Ramă Parbriz" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Filtru Aer" #+ Air filter accessoty.
+	val[]: "Filtru Aer" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Steag Fereastră Dreapta" #+ Right window flag
@@ -937,7 +943,7 @@
 	val[]: "Faceţi o Fotografie" #+ Tooltip for icon which makes screenshots.
 
 	key[]: "switch_walking_cam"
-	val[]: "Schimbă Modul Camerei" #+ Tooltip for icon which turns walking camera mode on and off.
+	val[]: "Schimbare Mod Cameră" #+ Tooltip for icon which turns walking camera mode on and off.
 
 	key[]: "tooltip_walk_look_around"
 	val[]: "Priveşte împrejur" #+ Tooltip for control icon: look around (by walking camera).
@@ -993,7 +999,7 @@
 	val[]: "Ieşire" #+ Icon allowing player to quit the game. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "wanna_quit"
-	val[]: "Progresele vor fi înregistrate automat. <br><br> Confirmaţi părăsirea jocului?"
+	val[]: "Progresul dvs. va fi salvat în mod automat. <br><br> Doriţi să părăsiţi jocul?"
 
 	key[]: "mp_wanna_quit"
 	val[]: "Încă sunteţi într-o sesiune Convoi. Sesiunea va fi închisă.<br><br>Doriţi să părăsiţi jocul?"
@@ -1008,7 +1014,7 @@
 	val[]: "PĂRĂSIRE CARIERĂ" #+ Title of message box shown before really leaving profile to profile selection. Please keep in upper case where possible.
 
 	key[]: "wanna_change_profile"
-	val[]: "Doriţi să reveniţi la Ecranul de Lansare?<br><br>Progresul realizat va fi automat salvat."
+	val[]: "Doriţi să reveniţi la Ecranul de Lansare?<br><br>Progresul dvs. va fi automat salvat."
 
 	key[]: "mp_wanna_change_profile"
 	val[]: "Încă sunteţi într-o sesiune Convoi. Sesiunea va fi închisă.<br><br>Doriţi să reveniţi la Ecranul de Lansare?"
@@ -1097,15 +1103,18 @@
 
 	key[]: "load_game"
 	val[]: "Încarcă Joc" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Eroare la încărcarea unui joc salvat."
 
 	key[]: "load_game_desc"
-	val[]: "Încarcă un joc salvat anterior. Progresul curent va fi pierdut!" #+ Help message associated with load game icon.
+	val[]: "Încărcaţi un joc salvat anterior. Progresul realizat va fi pierdut!" #+ Help message associated with load game icon.
 
 	key[]: "load_progress_lost"
-	val[]: "Doriţi cu siguranţă încărcarea unui alt joc?<br><br>Progresul realizat va fi pierdut, dacă nu a fost salvat anterior."
+	val[]: "Doriţi încărcarea unui alt joc?<br><br>Progresul realizat va fi pierdut, dacă nu a fost salvat anterior."
 
 	key[]: "load_progress_lost_mp"
-	val[]: "Doriţi cu siguranţă încărcarea unui alt joc?<br>În modul multiplayer acest lucru poate duce la anularea ori suspendarea cursei, teleportare către cel mai apropiat service sau indisponibilitatea ofertei selectate.<br><br>Progresul curent va fi pierdut dacă nu a fost salvat anterior."
+	val[]: "Doriţi încărcarea unui alt joc?<br>În modul multiplayer acest lucru poate duce la anularea ori suspendarea cursei, teleportare către cel mai apropiat service sau indisponibilitatea ofertei selectate.<br><br>Progresul realizat va fi pierdut dacă nu a fost salvat anterior."
 
 	key[]: "load_game_mp_suspended_job"
 	val[]: "Salvarea a fost încărcată cu succes, dar livrarea curentă din World of Trucks a fost suspendată şi este indisponibilă pe durata acestei sesiuni."
@@ -1137,25 +1146,25 @@
 	val[]: "ATENŢIE" #+ Panel title. Please keep in upper case where possible.
 
 	key[]: "load_msg_load_error"
-	val[]: "<color value=@@clr_red@@>Eroare la încărcarea salvării.<color value=@@clr_txt@@><br><br>Încărcare eşuată.Puteţi încerca identificarea problemei utilizând informaţiile de mai jos. Ca alternativă, puteţi încerca încărcarea unei alte salvări.<br><br>Următoarele aspecte pot conduce la o eroare fatală:<br><br>1. Unul sau mai multe dintre MOD-urile instalate este/sunt corupt/e sau incompatibil/e cu versiunea curentă a jocului.<br><br>2.Unul sau mai multe dintre MOD-urile de care depinde această salvare lipseşte/lipsesc sau este/sunt deactivat/e.<br><br>3. Salvarea a fost coruptă de un MOD defectuos.<br><br>4. Blocarea în timpul sau la scurt timp după procesul de salvare poate duce la coruperea fişierelor de salvare."
+	val[]: "<color value=@@clr_red@@>Eroare la încărcarea salvării.<color value=@@clr_txt@@><br><br>Salvarea nu a putut fi încărcată. Aţi putea încerca să identificaţi şi, eventual, să rezolvaţi eroarea folosind informaţiile de mai jos. Ca alternativă, aţi putea încerca să încărcaţi o altă salvare.<br><br>Următoarele cauze provoacă adesea această eroare:<br><br>1. Salvarea este incompatibilă cu unele dintre MOD-urile curent instalate.<br><br>2. Salvarea conţine informaţii de la unele MOD-uri ce lipsesc sau sunt dezactivate.<br><br>3. Salvarea a fost coruptă de utilizarea unui MOD realizat necorespunzător.<br><br>4. Blocarea PC-ului în timpul procesului de salvare sau imediat după acesta ar putea corupe salvarea."
 
 	key[]: "load_msg_missing_mod"
-	val[]: "<color value=@@clr_sel@@>Lipsă MOD detectată.<color value=@@clr_txt@@><br><br>Ultima salvare conţine legături către unul sau mai multe MOD-uri lipsă.<br><br>Dacă nu este o situaţie prevăzută, vă rugăm, verificaţi prezenţa MOD-urilor.<br><br>În caz contrar, puteţi încerca rularea jocului, în lipsa acestora. Totuşi, în funcţie de impactul acestor MOD-uri, este posibil ca încărcarea salvării să eşueze sau să genereze alte probleme.<br><br>Ca alternativă, puteţi încerca încărcarea unei alte stări salvate, care nu depinde de acest / aceste MOD-uri."
+	val[]: "<color value=@@clr_sel@@>Lipsă MOD detectată.<color value=@@clr_txt@@><br><br>Cea mai recentă salvare conţine dependenţe de un MOD lipsă sau dezactivat.<br><br>Dacă nu v-aţi aşteptat la acest lucru, vă rugăm să verificaţi statutul MOD-ului.<br><br>În celălalt caz, aţi putea încerca să încărcaţi salvarea oricum. Totuşi, în funcţie de specificitatea MOD-urilor, este posibil ca salvarea să nu poată fi încărcată sau să poată cauza alte erori.<br><br>Ca alternativă, aţi putea încerca să încărcaţi o altă salvare, una ce nu este dependentă de MOD-urile lipsă."
 
 	key[]: "load_msg_missing_rem_dlc"
-	val[]: "<color value=@@clr_sel@@>Lipsă pachet DLC opţional.<color value=@@clr_txt@@><br><br>Ultima salvare conţine elemente legate de un pachet DLC (extensie oficială a jocului) lipsă.<br><br>Dacă această situaţie este neaşteptată, vă rugăm verificarea stării pachetelor DLC.<br><br>În caz contrar, puteţi continua încărcarea, dar unele funcţionalităţi legate de pachetul DLC ar putea fi pierdute.<br><br>Alternativ, puteţi încerca înărcarea altei salvări, care nu depinde de pachetul DLC lipsă."
+	val[]: "<color value=@@clr_sel@@>Lipsă DLC opţional detectată.<color value=@@clr_txt@@><br><br>Cea mai recentă salvare conţine dependenţe de un DLC ce lipseşte (extensie oficială a jocului).<br><br>Dacă nu v-aţi aşteptat la acest lucru, vă rugăm să verificaţi statutul DLC-urilor.<br><br>În celălalt caz, aţi putea încărca salvarea oricum, însă anumite funcţionalităţi oferite de DLC-uri pot fi pierdute.<br><br>Ca alternativă, aţi putea încerca să încărcaţi o altă salvare, una ce nu este dependentă de DLC-urile lipsă."
 
 	key[]: "load_msg_missing_dlc"
-	val[]: "<color value=@@clr_red@@>DLC lipsă.<color value=@@clr_txt@@><br><br>Ultima salvare conţine legături către un DLC lipsă (extindere oficială a jocului).<br><br>Pentru a asigura o funcţionare corectă, acel DLC trebuie să fie prezent şi activat pe acest computer.<br><br>Ca alternativă, puteţi încărca o salvare diferită, ce nu depinde de respectivul DLC."
+	val[]: "<color value=@@clr_red@@>Lipsă DLC detectată.<color value=@@clr_txt@@><br><br>Cea mai recentă salvare conţine dependenţe de un DLC ce lipseşte (extensie oficială a jocului).<br><br>Pentru ca această salvare să funcţioneze corect, acel DLC trebuie să fie prezent şi activat pe acest computer.<br><br>Ca alternativă, aţi putea încerca să încărcaţi o altă salvare, una ce nu este dependentă de DLC-ul lipsă."
 
 	key[]: "load_msg_mod_dlc_dep"
-	val[]: "<color value=@@clr_red@@>Acest MOD depinde de conţinutul DLC.<color value=@@clr_txt@@><br><br>Cel puţin un MOD depinde de conţinutul DLC (extensie oficială a jocului) ce nu este, momentan, instalat.<br><br>Va trebui să renunţaţi la acest MOD (sau MOD-uri) sau să instalaţi extensia (extensiile) DLC de care depind(e)."
+	val[]: "<color value=@@clr_red@@>MOD dependent de conţinutul unui DLC.<color value=@@clr_txt@@><br><br>Cel puţin un MOD este dependent de un DLC (extensie oficială a jocului) ce nu este, în prezent, instalat.<br><br>Va trebui să dezactivaţi MOD-urile sau să instalaţi DLC-urile de care acestea depind."
 
 	key[]: "load_msg_crash"
-	val[]: "<color value=@@clr_red@@>S-a detectat o eroare fatală<color value=@@clr_txt@@><br><br>Se pare că jocul a eşuat în timpul unei încărcări precedente.<br><br>Puteţi încerca identificarea problemei utilizând informaţiile de mai jos. Ca alternativă, puteţi încerca încărcarea unei alte salvări.<br><br>Următoarele aspecte pot conduce la o eroare fatală:<br><br>1. Unul sau mai multe dintre MOD-urile instalate este/sunt corupt/e sau incompatibil/e cu versiunea curentă a jocului.<br><br>2.Unul sau mai multe dintre MOD-urile de care depinde această salvare lipseşte/lipsesc sau este/sunt deactivat/e.<br><br>3. Salvarea a fost coruptă de un MOD defectuos.<br><br>4. Uneori, o eroare de hardware sau un driver problematic poate duce la blocarea jocului."
+	val[]: "<color value=@@clr_red@@>Eroare fatală detectată.<color value=@@clr_txt@@><br><br>Se pare că jocul a întâmpinat o eroare fatală în timpul încărcării anterioare.<br><br>Aţi putea încerca să identificaţi şi, eventual, să rezolvaţi eroarea folosind informaţiile de mai jos. Ca alternativă, aţi putea încerca să încărcaţi o altă salvare.<br><br>Următoarele cauze provoacă adesea această eroare:<br><br>1. Unul sau mai multe dintre MOD-urile instalate sunt defecte sau incompatibile cu versiunea actuală a jocului.<br><br>2. Salvarea conţine informaţii de la unele MOD-uri ce lipsesc sau sunt dezactivate.<br><br>3. Salvarea a fost coruptă de utilizarea unui MOD realizat necorespunzător.<br><br>4. În anumite situaţii, o defecţiune a hardware-ului sau a driver-ului ar putea provoca blocarea jocului."
 
 	key[]: "mods_detected_warning"
-	val[]: "Mod-uri detectate. Prezenţa unor astfel de mod-uri defecte, depăşite sau incompatibile poate fi o sursă de instabilitate. Nu uitaţi să revizuiţi lista de mod-uri activă, în Mod Manager." #+ The warning showed in case game crashed and user has some mods installed - right above the button that opens mod manager.
+	val[]: "Prezenţa MOD-urilor pentru joc detectată. Vă rugăm ţineţi cont de faptul că MOD-urile de joc defecte, obsolescenţe sau incompatibile pot fi o sursă de instabilitate. Vă rugăm să verificaţi MOD-urile active în Manager MOD-uri." #+ The warning showed in case game crashed and user has some mods installed - right above the button that opens mod manager.
 #@}
 #@}
 
@@ -1180,10 +1189,10 @@
 	val[]: "Salvare nedenumită" #+ Name used instead as the name of the save file if no name was provided by player. For example "Unamed save 1"
 
 	key[]: "overwrite_save"
-	val[]: "Doriţi cu siguranţă suprascrierea celei mai vechi salvări?"
+	val[]: "Confirmaţi suprascrierea celei mai vechi salvări?"
 
 	key[]: "save_delete"
-	val[]: "Doriţi cu siguranţă ştergerea salvării selectate?"
+	val[]: "Confirmaţi ştergerea salvării selectate?"
 
 	key[]: "save_input_hint"
 	val[]: "- Introduceţi un nume -" #+ Text shown in the save name edit box until any content is entered.
@@ -1242,7 +1251,7 @@
 	val[]: "ŞABLOANE" #+ Header of section containing all blueprints of the paintings. Please keep in upper case where possible.
 
 	key[]: "paint_channel"
-	val[]: "Ancoră Culoare" #+ Tooltip shown when mouse hovers over one from color slots available in the selected paint.
+	val[]: "Slot Culoare" #+ Tooltip shown when mouse hovers over one from color slots available in the selected paint.
 
 	key[]: "tooltip_save_ucolor"
 	val[]: "Salvează culoarea ca predefinită" #+ Tooltip for a button which stores currently selected color in selected preset slot.
@@ -1258,10 +1267,10 @@
 #@{
 
 	key[]: "job_market_t"
-	val[]: "SELECŢIE TIP OFERTĂ" #+ Title of window containing selection between quick job and freight market screens. Please keep in upper case where possible.
+	val[]: "SELECTARE TIPURI CONTRACTE" #+ Title of window containing selection between quick job and freight market screens. Please keep in upper case where possible.
 
 	key[]: "job_market"
-	val[]: "Ofertă Curse" #+ Icon allowing player to take a job. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "Ofertă Livrări" #+ Icon allowing player to take a job. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "take_job"
 	val[]: "Acceptaţi Cursa" #+ Button which will take the selected job. Shown for quick jobs or when the player is at pickup point of freght market job.
@@ -1310,7 +1319,7 @@
 	val[]: "Oferta expiră în" #+ Shown in cargo selector before indication after how long will the offer will cease to be available. For example "Offer expires in 1 h 07 min".
 
 	key[]: "expected_on"
-	val[]: "Aşteptat între " #+ For example "Expected Sat 12:53 - Sat 19:33"
+	val[]: "Aşteptat" #+ For example "Expected Sat 12:53 - Sat 19:33"
 #@}
 
 #+ Quick job selection screen
@@ -1325,7 +1334,7 @@
 	val[]: "Cursă Rapidă" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "quick_job_desc"
-	val[]: "Angajaţi-vă ca şofer profesionist. Fără probleme. Totul este asigurat. Doar alegeţi o cursă şi demaraţi."
+	val[]: "Angajaţi-vă ca şofer profesionist. Fără bătăi de cap. Totul vă este pus la dispoziţie. Doar alegeţi o cursă şi demaraţi."
 #@}
 
 #+ Freight market job selection screen
@@ -1445,7 +1454,7 @@
 	val[]: "Alegeţi o ofertă de transport"
 
 	key[]: "jobf_hint_4a"
-	val[]: "Şi demaraţi!"
+	val[]: "Şi începeţi să conduceţi!"
 
 	key[]: "jobf_hint_4b"
 	val[]: "Configuraţi sistemul de navigaţie pentru a vă ghida spre locaţia de pornire în cursă"
@@ -1550,7 +1559,7 @@
 	val[]: "Alegeţi o carieră deja existentă sau începeţi una nouă."
 
 	key[]: "wanna_remove_profile"
-	val[]: "Doriţi cu siguranţă să ştergeţi acest profil?"
+	val[]: "Confirmaţi ştergerea acestui profil?"
 
 	key[]: "profile_level"
 	val[]: "Nivel" #+ Suffixed with number to indicate experience level of the profile. For example "Level 1".
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Proprietar" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Preţ" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Filtru" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Scheme de vopsire" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Vehicule" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Toate" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2078,7 +2093,7 @@
 	val[]: "Nu s-au găsit DLC-uri ce corespund filtrelor"
 
 	key[]: "dlc_browser_desc"
-	val[]: "Răsfoiţi şi descoperiţi conţinut descărcabil (DLC)."
+	val[]: "Răsfoiţi şi descoperiţi conţinut adiţional."
 
 	key[]: "dlc_search_no_results"
 	val[]: "Rezultate căutare în: " #+ Text shown when searching DLC and only other category screen contain some matches. Followed by list of category screen titles.
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Descărcare informaţii despre DLC. Vă rugăm, aşteptaţi."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Doriţi deschiderea unui browser de internet şi navigarea către pagina de internet selectată?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "Niciun DLC disponibil în acest moment."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "Operaţiune catalog anulată." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "Eroare catalog necunoscută." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "Catalog neiniţializat." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "Operaţiunea nu a putut fi începută deoarece în prezent este în curs de desfăşurare o operaţiune ce o blochează." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "O parte din datele furnizate sunt incorecte sau incomplete." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Se încearcă efectuarea unei operaţiuni cu un produs care fie lipseşte din catalogul nostru local, fie din catalogul back end al furnizorului principal." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "Solicitare catalog eşuată." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "Răspunsul primit a fost incorect format." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "Eroare catalog internă." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Această funcţionalitate nu este prezentă pe platforma curentă." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "Serviciul catalog nu este disponibil în acest moment, solicitantul ar trebui să încerce mai târziu." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "Eroare catalog internă." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2159,10 +2216,10 @@
 	val[]: "Este necesară verificarea Cheii de Activare a Produsului. Acest proces va utiliza conexiunea dumneavoastră de internet. <br><br> Dacă aceasta nu este funcţională, puteţi utiliza metoda offline descrisă la adresa <LINK URL=@@offline_activation_url@@ COLOR=@@clr_link@@>@@offline_activation_url@@</LINK>."
 
 	key[]: "unable_to_verify"
-	val[]: "Nu s-a reuşit verificarea Cheii de Activare a Produsului. Pentru moment, puteţi continua.<br><br>Se va reîncerca verificarea, la viitoarea pornire a jocului. Dacă problema persistă, vă rugăm să verificaţi disponibilitatea conexiunii la internet sau utilizaţi metoda offline descrisă la adresa <LINK URL=@@offline_activation_url@@ COLOR=@@clr_link@@>@@offline_activation_url@@</LINK>."
+	val[]: "Jocul nu a putut verifica Cheia de Produs. Pentru moment, puteţi continua.<br><br>Verificarea va fi reîncercată în timpul următoarei porniri a jocului. Dacă problema persistă, vă rugăm să verificaţi dacă aveţi conexiune la internet sau să utilizaţi activarea offline descrisă la <LINK URL=@@offline_activation_url@@ COLOR=@@clr_link@@>@@offline_activation_url@@</LINK>"
 
 	key[]: "unable_to_verify_version"
-	val[]: "Nu s-a reuşit verificarea Cheii de Activare a Produsului; vă recomandăm actualizarea jocului. Pentru moment, puteţi continua.<br><br>Dacă problema persistă, vă rugăm să verificaţi disponibilitatea conexiunii la internet sau utilizaţi metoda offline descrisă la adresa <LINK URL=@@offline_activation_url@@ COLOR=@@clr_link@@>@@offline_activation_url@@</LINK>"
+	val[]: "Jocul nu a putut verifica Cheia de Produs; actualizarea jocului este recomandată. Pentru moment, puteţi continua.<br><br>Verificarea va fi reîncercată în timpul următoarei porniri a jocului. Dacă problema persistă, vă rugăm să verificaţi dacă aveţi conexiune la internet sau să utilizaţi activarea offline descrisă la <LINK URL=@@offline_activation_url@@ COLOR=@@clr_link@@>@@offline_activation_url@@</LINK>"
 
 # Currently only used with otherwise Steam-only DLCs provided to testers as part of
 # special retail builds so no translation nor offline activation support is necessary.
@@ -2190,7 +2247,7 @@
 #+ DLC activation screen
 #@{
 	key[]: "dlc_activation"
-	val[]: "ACTIVARE CONŢINUT ADIŢIONAL (DLC)" #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "ACTIVARE CONŢINUT ADIŢIONAL" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "dlc_activation_text"
 	val[]: "Vă rugăm să introduceţi cheia de activare pentru '@@dlc_name@@':" #+ Informational text shown in the dialog
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "INTERFAŢĂ" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "SUNETE VEHICUL" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "SUNETE VEHICUL" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "SUNETE INTERIOR" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Volum principal" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Volum motor vehicul" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Volum motor vehicul" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Volum evacuare vehicul" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Volum evacuare vehicul" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Volum turbină vehicul" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Volum turbină vehicul" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Volum efecte vehicul" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Volum efecte vehicul" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Volum zgomote vehicul" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Volum zgomote vehicul" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Volum zgomote remorcă" #+ Slider controlling volume of the trailer noises.
@@ -2395,7 +2452,7 @@
 	val[]: "Volum radio" #+ Slider controlling volume of the radio in game.
 
 	key[]: "voice_navigation_volume"
-	val[]: "Volumul navigaţiei vocale" #+ Slider controlling volume of the voice navigation.
+	val[]: "Volum sistem de navigaţie vocală" #+ Slider controlling volume of the voice navigation.
 
 	key[]: "cb_voice_volume"
 	val[]: "Volum staţie radio CB" #+ Slider controlling volume of the cb radio.
@@ -2419,10 +2476,10 @@
 	val[]: "Volum logo-uri start" #+ Slider controlling volume of the intro logos.
 
 	key[]: "voice_navigation_t"
-	val[]: "NAVIGAŢIE VOCALĂ" #+ Title of the 'Voice Navigation' section. Please keep in upper case where possible.
+	val[]: "SISTEM DE NAVIGAŢIE VOCALĂ" #+ Title of the 'Voice Navigation' section. Please keep in upper case where possible.
 
 	key[]: "voice_navigation_enable"
-	val[]: "Activaţi navigaţia vocală" #+ Checkbox enabling the voice navigation functionality.
+	val[]: "Activare sistem de navigaţie vocală" #+ Checkbox enabling the voice navigation functionality.
 
 	key[]: "voice_navigation_pack"
 	val[]: "Limbă şi voce" #+ Droplist for selection of the voice navigation pack.
@@ -2516,19 +2573,19 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul general al jocului."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul motorului vehiculului."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul eşapamentului vehiculului."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul turbinei vehiculului."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul altor efecte sonore ale vehiculului, precum şuieratul frânelor pneumatice."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul zgomotului produs de anvelopele vehiculului."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
@@ -2550,7 +2607,7 @@
 	val[]: "Ajustează volumul radioului."
 
 	key[]: "voice_navigation_volume_op_tooltip" # - Audio, Simple
-	val[]: "Ajustează volumul navigaţiei vocale."
+	val[]: "Ajustează volumul sistemului de navigaţie vocală."
 
 	key[]: "cb_voice_volume_op_tooltip" # - Audio, Simple
 	val[]: "Ajustează volumul staţiei CB al celorlalţi jucători din timpul sesiunilor Convoi."
@@ -2571,10 +2628,10 @@
 	val[]: "Ajustează volumul intro-urilor de lansare."
 
 	key[]: "voice_navigation_enable_op_tooltip" # - Audio, Simple
-	val[]: "Activează navigaţia vocală."
+	val[]: "Activează sistemul de navigaţie vocală."
 
 	key[]: "voice_navigation_pack_op_tooltip" # - Audio, Simple
-	val[]: "Selectarea limbilor şi vocilor pentru navigaţia vocală."
+	val[]: "Selectarea limbilor şi vocilor sistemului de navigaţie vocală."
 
 	key[]: "voice_navigation_preview_op_tooltip" # - Audio, Simple
 	val[]: "Previzualizarea limbii şi vocii selectate."
@@ -2598,7 +2655,7 @@
 	val[]: "Previzualizarea bipului de răspuns selectat."
 
 	key[]: "sound_of_reverse_op_tooltip" # - Audio, Simple
-	val[]: "Activează sunetul de atenţionare atunci când camionul merge cu spatele. Volumul poate fi ajustat folosind glisiera „Efecte camion”.<br><br>După activare, veţi putea auzi şi bipul de marşarier al altor jucători în timpul unei sesiuni convoi."
+	val[]: "Activează sunetul de atenţionare atunci când vehiculul merge cu spatele. Volumul poate fi ajustat folosind glisiera „Efecte vehicul”.<br><br>După activare, veţi putea auzi şi bipul de marşarier al altor jucători în timpul unei sesiuni convoi."
 
 	key[]: "rumble_stripe_sound_op_tooltip" # - Audio, Advanced
 	val[]: "Activează sunetul liniilor de avertizare la trecerea peste acestea."
@@ -2656,8 +2713,8 @@
 	key[]: "transmission_settings"
 	val[]: "TRANSMISIE" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "FIZICA VEHICULULUI" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "FIZICA VEHICULULUI" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "ASISTARE" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
@@ -2791,7 +2848,7 @@
 #@{
 
 	key[]: "consumption_units"
-	val[]: "Unităţi consum combustibil" #+ Selector for consumption unit display (l/100km, mpg).
+	val[]: "Unităţi consum carburant" #+ Selector for consumption unit display (l/100km, mpg).
 
 	key[]: "default_setting"
 	val[]: "implicit (volumul selectat/unităţile de distanţă)"
@@ -2845,7 +2902,7 @@
 	key[]: "hide"
 	val[]: "Ascunde" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
+	key[]: "automatic_limit"
 	val[]: "Afişare limita pentru modul vehiculului curent" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
@@ -2979,7 +3036,7 @@
 	key[]: "brake_intensity"
 	val[]: "Intensitate frână" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
+	key[]: "vehicle_stability"
 	val[]: "Stabilitate vehicul" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
@@ -3045,8 +3102,8 @@
 	key[]: "throttle_double_tap"
 	val[]: "Control inteligent acceleraţie" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
-	val[]: "Limitator viteză" #+ Checkbox for enabling of speed limiter.
+	key[]: "vehicle_speed_limiter"
+	val[]: "Limitator viteză vehicul" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
 	val[]: "Senzor de ploaie" #+ Checkbox for enabling rain sensor usage (automatic wipers).
@@ -3162,6 +3219,9 @@
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Coeficient de menţinere orizont pentru camera de interior" #+ Slider for interior camera horizon locking.
 
+	key[]: "cam_fov_speed_factor"
+	val[]: "Modificarea FOV-ului camerei de interior în raport cu viteza" #+ Slider for interior camera speed-based FOV changes.
+
 	key[]: "cam_auto_center_delay"
 	val[]: "Întârziere centrare automată cameră" #+ Dropdown for camera auto centering delay.
 
@@ -3237,7 +3297,7 @@
 	val[]: "Alegeţi modul în care Harta este explorată:<br>- „Explorare proximă” marchează o zonă mai extinsă ca fiind explorată.<br>- „Explorare precisă” marchează doar zonele din imediata apropiere a jucătorului."
 
 	key[]: "show_navigation_op_tooltip" # - Gameplay, Advanced
-	val[]: "Selectaţi cum va fi afişată navigaţia"
+	val[]: "Selectaţi cum ar trebui afişată navigaţia."
 
 	key[]: "navigation_mode_op_tooltip" # - Gameplay, Advanced
 	val[]: "Modifică modul în care este calculată navigaţia:<br>- modul „Optim” alege cel mai eficient raport dintre lungimea şi durata traseului, încearcă să evite intersecţiile semaforizate, etc.<br>- modul „Cel mai scurt” alege întotdeauna cea mai scurtă rută posibilă.<br>- modul „Drumuri secundare” alege evitarea autostrăzilor oriunde este posibil."
@@ -3281,7 +3341,7 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Modifică intensitatea frânelor."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Modifică stabilitatea vehiculului prin coborârea centrului de greutate al acestuia."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Selectează dacă, şi ce cabluri ale remorcii vor fi animate.<br><br><color value=@@clr_txt_d@@>Animarea cablurilor mai multor vehicule poate afecta performanţa PC-urilor mai vechi."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Activează limitatorul electronic de viteză al camionului de 90 km/h (56 mph).<br><br><color value=@@clr_txt_d@@>Contractele World of Trucks au această opţiune mereu activată."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Activează limitatorul electronic de viteză al vehiculului la o valoare ce depinde de modelul de vehicul.<br><br><color value=@@clr_txt_d@@>Contractele World of Trucks au această opţiune mereu activată."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "După activare şi dacă ştergătoarele de parbriz sunt setate pe prima poziţie, acestea vor porni automat şi îşi vor ajusta viteza în funcţie de condiţiile meteo."
@@ -3381,7 +3441,7 @@
 	val[]: "Activează giraţia camerei interioare în funcţie de comanda direcţiei."
 
 	key[]: "steer_cam_rotation_factor_op_tooltip" # - Gameplay, Advanced
-	val[]: "Modifică sensibilitatea funcţiei „Rotire cameră la virare” faţă de comanda direcţiei. "
+	val[]: "Modifică sensibilitatea funcţiei „Rotire cameră la virare” faţă de comanda direcţiei."
 
 	key[]: "steer_cam_rotation_reverse_op_tooltip" # - Gameplay, Advanced
 	val[]: "Schimbă comportamentul funcţiei „Rotire cameră la virare” la mersul cu spatele."
@@ -3396,7 +3456,10 @@
 	val[]: "Modifică dinamica mişcării camerei interioare în raport cu mişcarea vehiculului."
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
-	val[]: "Modifică cât de mult se permite camerei interioare să se rotească raportat la mişcările vehiculului."
+	val[]: "Modifică valoarea maximă până la care se permite camerei interioare să se rotească raportat la mişcările vehiculului."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Modifică gradul în care FOV-ul camerei interioare variază în funcţie de viteza de deplasare a vehiculului."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Setează întârzierea cu care camera se va recentra automat.<br><br>Vehiculul trebuie să se deplaseze cu o viteză non-neglijabilă pentru activarea acestei funcţii. Se aplică numai la camera de urmărire şi la cea de interior în timpul deplasării înainte şi la camera geamului şoferului în timpul mersului cu spatele."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Legătura cu funcţia pierdută" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ nu poate fi utilizată." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "VEHICUL"
 
 	key[]: "assistant_controls"
@@ -3717,6 +3783,9 @@
 
 	key[]: "o_im_parkingbrake"
 	val[]: "Frână de Staţionare"
+
+	key[]: "o_im_handbrake"
+	val[]: "Frână de Mână"
 
 	key[]: "o_im_motorbrake"
 	val[]: "Frână Motor"
@@ -3877,8 +3946,11 @@
 	key[]: "o_im_infotainment"
 	val[]: "Mod Afişare Infotainment" #+ Action for cycling between infotainement display pages/modes.
 
+	key[]: "o_im_parking_cameras"
+	val[]: "Mod Cameră de Parcare" #+ Action for toggling parking camera display pages/modes (if available).
+
 	key[]: "o_im_dashboard_map"
-	val[]: "Nivel Mărire Navigaţie" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
+	val[]: "Nivel Mărire Sistem de Navigaţie" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
 
 	key[]: "o_im_activate"
 	val[]: "Activare" #+ Context action for activation. For example sleep, refuel....
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "Atribuie un buton pentru frâna de staţionare."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "Atribuie un buton pentru frâna de mână."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "Atribuie un buton pentru frâna de motor.<br><br>Frâna de motor va fi activă atâta timp cât butonul este apăsat."
 
@@ -4254,8 +4329,11 @@
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Atribuie un buton pentru comutarea afişajelor de infotainment."
 
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Atribuie un buton pentru comutarea ecranelor camerei de parcare."
+
 	key[]: "o_im_dashboard_map_op_tooltip"
-	val[]: "Atribuie un buton pentru schimbarea nivelului de zoom al ecranului de navigaţie de pe panoul de bord sau de pe afişajul de infotainment."
+	val[]: "Atribuie un buton pentru schimbarea nivelului de zoom al ecranului sistemului de navigaţie de pe panoul de bord sau de pe afişajul de infotainment."
 
 	key[]: "o_im_trip_reset_op_tooltip"
 	val[]: "Atribuie un buton pentru resetarea informaţiilor cursei (distanţă, timp, consum de carburant) de pe bord."
@@ -4288,10 +4366,10 @@
 	val[]: "Atribuie un buton pentru afişarea de informaţii rapide despre stadiul livrării, starea vehiculului şi reglementări locale ce va pune pauză jocului atunci când nu vă aflaţi într-un convoi."
 
 	key[]: "o_im_adviser_zoom_in_op_tooltip"
-	val[]: "Atribuie un buton pentru mărirea Sistemului de Navigaţie."
+	val[]: "Atribuie un buton pentru mărire Sistem de Navigaţie."
 
 	key[]: "o_im_adviser_zoom_out_op_tooltip"
-	val[]: "Atribuie un buton pentru micşorarea Sistemului de Navigaţie."
+	val[]: "Atribuie un buton pentru micşorare Sistem de Navigaţie."
 
 	key[]: "o_im_adviser_options_op_tooltip"
 	val[]: "Atribuie un buton pentru afişarea meniului Opţiuni Widget."
@@ -5065,7 +5143,7 @@
 	val[]: "Introduceţi numele setării" #+ Hint shown within empty text input box used to enter name of new extended view preset
 
 	key[]: "eye_preset_delete_confirmation"
-	val[]: "Doriţi cu siguranţă ştergerea presetării selectate?" #+ Confirmation dialog shown when user requests deletion of extended view preset
+	val[]: "Confirmaţi ştergerea presetării selectate?" #+ Confirmation dialog shown when user requests deletion of extended view preset
 
 	key[]: "eye_preset_overwrite_confirmation"
 	val[]: "Setarea existentă cu acelaşi nume va fi suprascrisă. Doriţi să continuaţi?" #+ Confirmation dialog shown when user tries to create preset with already existing names
@@ -5266,7 +5344,7 @@
 #+ XMAS event
 #@{
 	key[]: "portal_transport"
-	val[]: "Apăsaţi tasta indicată pentru a călători prin portal:"
+	val[]: "Apăsaţi următoarea tastă pentru a călători prin portal:"
 
 	key[]: "trip_land_len_estimate"
 	val[]: "Distanţă terestră estimată:"
@@ -5547,13 +5625,13 @@
 	val[]: "Adaugă umbre blânde crăpăturilor şi obiectelor apropiate una faţă de cealaltă, îmbunătăţind calitatea grafică percepută a întregii lumi din joc.<br><br><color value=@@clr_txt_d@@>Această setare are de obicei un impact moderat asupra performanţei."
 
 	key[]: "taa_tuning_op_tooltip" # - Graphics, Advanced
-	val[]: "Selectarea presetărilor TAA:<br>- „Mereu delicat” va duce la mai puţin tremur/mai multă blurare - este adecvat pentru utilizatorii de PC ce activează supersampling-ul sau au monitoare cu un DPI mare, dar şi pentru utilizatorii de TV-uri 1080p ce stau mai departe de ecran.<br>- „Mereu amplificat” duce la mai mult tremur/mai puţină blurare - probabil, cea mai bună opţiune pentru utilizarea la sub 1080p, ca în cazul laptopurilor sau a unui Steam Deck.<br>- „Claritate adaptivă” dezactivează dinamic distorsiunea TAA atunci când camera este statică.<br><br><color value=@@clr_txt_d@@>Această setare poate fi utilizată doar atunci când TAA este selectată ca metodă de anti-aliasing."
+	val[]: "Selectarea presetărilor TAA:<br>- „Mereu delicat” va duce la mai puţin tremur/mai multă estompare - este adecvat pentru utilizatorii de PC ce activează supersampling-ul sau au monitoare cu un DPI mare, dar şi pentru utilizatorii de TV-uri 1080p ce stau mai departe de ecran.<br>- „Mereu amplificat” duce la mai mult tremur/mai puţină estompare - probabil, cea mai bună opţiune pentru utilizarea la sub 1080p, ca în cazul laptopurilor sau a unui Steam Deck.<br>- „Claritate adaptivă” dezactivează dinamic distorsiunea TAA atunci când camera este statică.<br><br><color value=@@clr_txt_d@@>Această setare poate fi utilizată doar atunci când TAA este selectată ca metodă de anti-aliasing."
 
 	key[]: "taa_luma_sharpening_op_tooltip" # - Graphics, Advanced
 	val[]: "Ajustează intensitatea dată de accentuarea luma TAA.<br><br><color value=@@clr_txt_d@@>Această setare poate fi utilizată doar atunci când TAA este selectată ca metodă de anti-aliasing."
 
 	key[]: "dof_op_tooltip" # - Graphics, Advanced
-	val[]: "După activare, anumite zone din depărtare vor fi blurate artificial pentru a crea o diminuare realistă a focalizării imaginii."
+	val[]: "După activare, anumite zone din depărtare vor fi estompate artificial pentru a crea o diminuare realistă a focalizării imaginii."
 
 	key[]: "sunshaft_op_tooltip" # - Graphics, Advanced
 	val[]: "După activare, anumite raze de lumină devin vizibile la privirea soarelui sau la privirea soarelui printre lucruri precum copaci, clădiri sau vehicule."
@@ -6243,13 +6321,13 @@
 	val[]: "Serviciul de Asistenţă vă poate transporta vehiculul şi pe dumneavoastră în $CITY$. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br offset=30>Livrarea curentă va fi anulată.<br offset=30>Sunteţi de acord?"
 
 	key[]: "wanna_recover"
-	val[]: "Serviciul de Asistenţă vă poate transfera camionul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br offset=30>Sunteţi de acord?"
+	val[]: "Serviciul de Asistenţă vă poate transfera vehiculul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br offset=30>Sunteţi de acord?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "Serviciul de Asistenţă vă poate transfera camionul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br>(Tariful va fi suportat de către angajatorul dumneavoastră.)<br offset=30>Sunteţi de acord?"
+	val[]: "Serviciul de Asistenţă vă poate transfera vehiculul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br>(Tariful va fi suportat de către angajatorul dumneavoastră.)<br offset=30>Sunteţi de acord?"
 
 	key[]: "wanna_recover_online"
-	val[]: "Serviciul de Asistenţă vă poate transfera camionul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br offset=30>Livrarea curentă vă va fi anulată.<br offset=30>Sunteţi de acord?"
+	val[]: "Serviciul de Asistenţă vă poate transfera vehiculul şi pe dumneavoastră pe cel mai apropiat drum. Acesta va costa $MONEY$ şi călătoria va dura $TIME$.<br offset=30>Livrarea curentă vă va fi anulată.<br offset=30>Sunteţi de acord?"
 
 	key[]: "wanna_refuel"
 	val[]: "Serviciul de Realimentare de Urgenţă vă va pune la dispoziţie $VOLUME$ de motorină. Vă va costa $MONEY$ şi va dura $TIME$.<br offset=30>Sunteţi de acord?"
@@ -6312,13 +6390,13 @@
 	val[]: "Aşteptaţi serviciul de Reîncărcare de Urgenţă pentru a vă reîncărca vehiculul."
 
 	key[]: "cancel_job_fademsg"
-	val[]: "Sunteţi în aşteptarea unui alt şofer ce vă va prelua marfa."
+	val[]: "Sunteţi în aşteptarea unui alt şofer ce vă va prelua livrarea curentă."
 
 	key[]: "no_job"
 	val[]: "Nu aveţi nicio sarcină curentă."
 
 	key[]: "cancel_cur_job"
-	val[]: "Confirmaţi renunţareala sarcina curentă?<br offset=10>Va trebui să plătiţi o penalizare în valoare de $MONEY$"
+	val[]: "Doriţi să anulaţi livrarea dvs. curentă?<br offset=10>Vă va fi percepută o penalitate în valoare de $MONEY$"
 
 	key[]: "no_cancel_first_job"
 	val[]: "Nu puteţi anula prima dumneavoastră cursă. Nimeni nu v-ar mai acorda încrederea, după aceasta."
@@ -6351,13 +6429,13 @@
 # Adviser info
 
 	key[]: "fuel_warn"
-	val[]: "Rămâneţi fără combustibil!<br>Grăbiţi-vă spre cea mai apropiată staţie de carburanţi."
+	val[]: "Rămâneţi fără carburant!<br>Ar trebui să căutaţi o benzinărie."
 
 	key[]: "energy_warn"
 	val[]: "Nivelul acumulatorilor este jos. Ar trebui să vă terminaţi livrarea."
 
 	key[]: "out_of_fuel"
-	val[]: "Aţi rămas fără combustibil!"
+	val[]: "Aţi rămas fără carburant!"
 
 	key[]: "out_of_energy"
 	val[]: "Aţi rămas fără energie în acumulatori!"
@@ -6376,16 +6454,16 @@
 
 
 	key[]: "truck_dealer"
-	val[]: "Distribuitor Autorizat"
+	val[]: "Dealer Camioane"
 
 	key[]: "dealer_found"
-	val[]: "Distribuitor $BRAND$ descoperit!"
+	val[]: "Dealer de camioane $BRAND$ descoperit!"
 
 	key[]: "service"
 	val[]: "Pentru a vă repara, îmbunătăţi sau vopsi<br>vehiculul sau remorca dvs. apăsaţi:"
 
 	key[]: "job_offer"
-	val[]: "Apăsaţi următoarea tastă pentru a vedea detaliile sarcinii:"
+	val[]: "Apăsaţi următoarea tastă pentru a vedea detaliile livrării:"
 
 	key[]: "garage"
 	val[]: "Apăsaţi următoarea tastă pentru administrarea garajului:"
@@ -6403,22 +6481,22 @@
 	val[]: "Acest garaj poate fi achiziţionat contra sumei de $MONEY$<br offset=10>Din păcate, nu vă puteţi permite, pentru moment."
 
 	key[]: "enter_dealer"
-	val[]: "Pentru a vizita distribuitorul, apăsaţi următoarea tastă:"
+	val[]: "Apăsaţi următoarea tastă pentru a vizita dealerul de camioane:"
 
 	key[]: "closed_dealer"
-	val[]: "Magazinul Distribuitorului Auto este închis.<br offset=20>Orar funcţionare:<br>Luni - Sâmbătă $START$ - $END$"
+	val[]: "Dealerul de camioane este închis.<br offset=20>Program de lucru:<br>Luni - Sâmbătă  $START$ - $END$"
 
 	key[]: "closed_dealer_tooltip"
-	val[]: "Nu poţi vizita dealerul de camioane în orele în care este închis."
+	val[]: "Nu se poate vizita dealerul de camioane în afara programului de lucru."
 
 	key[]: "enter_recruit"
-	val[]: "Apăsaţi următoarea tastă pentru a vizita biroul Resurse Umane:"
+	val[]: "Apăsaţi următoarea tastă pentru a vizita agenţia de recrutare:"
 
 	key[]: "closed_recruit"
-	val[]: "Birou Resurse Umane închis.<br offset=20>Orar funcţionare:<br>Luni - Sâmbătă  $START$ - $END$"
+	val[]: "Agenţia de recrutare este închisă.<br offset=20>Program de lucru:<br>Luni - Sâmbătă  $START$ - $END$"
 
 	key[]: "found_recruit"
-	val[]: "Aţi descoperit un birou de resurse umane!<br><br>Aici, veţi putea angaja şoferi pentru a lucra în compania Dvs."
+	val[]: "Aţi descoperit o agenţie de recrutare!<br><br>Aici puteţi angaja şoferi ce vor lucra pentru compania dvs."
 
 	key[]: "attach_load"
 	val[]: "Apăsaţi următoarea tastă pentru a ataşa remorca:"
@@ -6433,7 +6511,7 @@
 	val[]: "Deconectare remorcă"
 
 	key[]: "buy_garage_conf"
-	val[]: "Confirmaţi achiziţionarea acestui garaj?"
+	val[]: "Doriţi să achiziţionaţi acest garaj?"
 
 	key[]: "dozing"
 	val[]: "... adormire ..."
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Opriţi motorul!"
 
-	key[]: "stop_truck_short"
-	val[]: "Opriţi vehiculul!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Opriţi vehiculul!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Apăsaţi următoarea tastă pentru a opri motorul:"
@@ -6490,7 +6568,7 @@
 	val[]: "Apăsaţi următoarea tastă pentru a cupla frâna de mână:"
 
 	key[]: "gas_station_hint"
-	val[]: "Ţineţi apăsată următoare tastă pentru alimentare:"
+	val[]: "Apăsaţi şi menţineţi apăsată următoarea tastă pentru umplerea rezervorului de carburant:"
 
 	key[]: "diesel_price"
 	val[]: "Preţ Carburant"
@@ -6511,7 +6589,7 @@
 	val[]: "Vă rugăm, finalizaţi cursa curentă, înainte de a deveni transportator independent."
 
 	key[]: "fuel_paid_by_employer"
-	val[]: "Costurile combustibilului sunt preluate de angajator"
+	val[]: "Cheltuielile cu carburantul sunt acoperite de angajatorul dvs."
 
 
 	key[]: "hurry_up"
@@ -6668,7 +6746,7 @@
 	val[]: "Vehicul cu defecţiuni!<br>Verificaţi condiţia vehiculului sau consideraţi vizitarea unui service."
 
 	key[]: "job_delivery"
-	val[]: "Apăsaţi următoarea tastă pentru mai multe opţiuni ale sarcinii."
+	val[]: "Apăsaţi următoarea tastă pentru a gestiona detaliile livrării:"
 
 #+ Adviser Options
 #@{
@@ -6791,7 +6869,7 @@
 	val[]: "Control de Croazieră"
 
 	key[]: "adv_hud_lgd_fuel"
-	val[]: "Rezervor Combustibil"
+	val[]: "Rezervor Carburant"
 
 	key[]: "adv_hud_lgd_energy"
 	val[]: "Nivel Baterie"
@@ -6956,7 +7034,7 @@
 	val[]: "Venit: $PRICE$ ($DNAME$)"
 
 	key[]: "drv_return_empty_msg"
-	val[]: "$DNAME$ nu a găsit o ofertă şi a trebuit să revină fără încărcătură. Costurile pentru combustibil şi întreţinere se ridică la suma de $PRICE$"
+	val[]: "Şoferul $DNAME$ nu a putut găsi nicio cursă şi a trebuit să revină fără încărcătură. Costurile carburantului şi ale întreţinerii sunt în sumă de $PRICE$"
 
 	key[]: "drv_levelup_msg"
 	val[]: "$DNAME$ a promovat un nivel!"
@@ -7090,7 +7168,7 @@
 	val[]: "ADR"
 
 	key[]: "long_dist"
-	val[]: "Distanţă Mare"
+	val[]: "Distanţă Lungă"
 
 	key[]: "heavy"
 	val[]: "Mărfuri cu Valoare Ridicată"
@@ -7460,7 +7538,7 @@
 #@{
 
 	key[]: "job_completed_t"
-	val[]: "SARCINĂ FINALIZATĂ" #+ Title of the screen. Please keep in upper case where possible."
+	val[]: "CURSĂ FINALIZATĂ" #+ Title of the screen. Please keep in upper case where possible."
 
 #+ Job completion quality rating. Please keep in upper case where possible."
 #@{
@@ -7524,7 +7602,7 @@
 	val[]: "Timp scurs:"
 
 	key[]: "fuel_consumed"
-	val[]: "Combustibil utilizat:"
+	val[]: "Carburant utilizat:"
 
 	key[]: "energy_consumed"
 	val[]: "Energie consumată:"
@@ -7557,13 +7635,13 @@
 	val[]: "Bonificaţie de competenţă"
 
 	key[]: "long_dist_bonus"
-	val[]: "Bonificaţie Distanţă Mare"
+	val[]: "Bonificaţie livrare distanţă lungă"
 
 	key[]: "heavy_bonus"
-	val[]: "Bonificaţie mărfuri de valoare"
+	val[]: "Bonificaţie mărfuri cu valoare ridicată"
 
 	key[]: "fragile_bonus"
-	val[]: "Bonificaţie marfă fragilă"
+	val[]: "Bonificaţie mărfuri fragile"
 
 	key[]: "urgent_bonus"
 	val[]: "Bonificaţie livrare urgentă"
@@ -7578,7 +7656,7 @@
 	val[]: "Penalizare pentru întârziere"
 
 	key[]: "park_bonus"
-	val[]: "Bonus manevrare remorcă"
+	val[]: "Bonificaţie manevrare remorcă"
 
 	key[]: "adr_class"
 	val[]: "Clasa ADR"
@@ -8252,7 +8330,7 @@
 	val[]: "Scutere"
 
 	key[]: "cn_scrap_metals"
-	val[]: "Deşeuri metalice"
+	val[]: "Deşeuri Metalice"
 
 	key[]: "cn_sealed_bearings"
 	val[]: "Rulmenţi Capsulaţi"
@@ -8321,7 +8399,7 @@
 	val[]: "Tankpool 24 Racing - N.Kiss"
 
 	key[]: "cn_tanker"
-	val[]: "Combustibil"
+	val[]: "Cisternă Combustibil"
 
 	key[]: "cn_team_hahn_racing"
 	val[]: "Team Hahn Racing - J.Hahn"
@@ -8582,7 +8660,7 @@
 	val[]: "Sticle goale de vin"
 
 	key[]: "cn_fuel_oil"
-	val[]: "Combustibil"
+	val[]: "Păcură"
 
 	key[]: "cn_granite_cubes"
 	val[]: "Blocuri granit"
@@ -9129,10 +9207,10 @@
 #@{
 
 	key[]: "tt_ico_valuable"
-	val[]: "Bunuri de valoare"
+	val[]: "Mărfuri cu valoare ridicată"
 
 	key[]: "tt_ico_fragile"
-	val[]: "Marfă fragilă"
+	val[]: "Mărfuri fragile"
 
 	key[]: "tt_ico_easy"
 	val[]: "Livrare standard"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Bilanţ cont: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Avansaţi-vă cariera în Modul Camion pentru a accesa împrumutul."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Avansaţi-vă cariera în $MODE$ pentru a accesa împrumutul."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Datoria dumneavoastră este prea mare ca să puteţi contracta acest împrumut."
+
 #+ New loan confirmation window
 #@{
 
@@ -9294,7 +9381,7 @@
 	val[]: "ACHITARE ÎMPRUMUT" #+ Title of the window. Please keep in upper case where possible.
 
 	key[]: "bank_rl_confirm_msg"
-	val[]: "Confirmaţi plătirea sumei de $MONEY$ pentru achitarea împrumutului?" #+ The $MONEY$ is replaced with the real amount the player will be paying.
+	val[]: "Doriţi într-adevăr să achitaţi $MONEY$ pentru a rambursa împrumutul?" #+ The $MONEY$ is replaced with the real amount the player will be paying.
 #@}
 
 #@}
@@ -9331,10 +9418,10 @@
 	val[]: "Camionul şi remorca vă sunt confiscate..."
 
 	key[]: "bank_sell_report_truck"
-	val[]: "Camionul $NAME$ de la sediul din $CITY$, valoare estimată: $MONEY$"
+	val[]: "Camion $NAME$ din garajul din $CITY$, valoare estimată: $MONEY$"
 
 	key[]: "bank_sell_report_trailer"
-	val[]: "Remorca $NAME$, valoare estimată: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
+	val[]: "Remorcă $NAME$, valoare estimată: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
 
 	key[]: "bank_sell_report_garage"
 	val[]: "Garaj în $CITY$, valoare estimată: $MONEY$"
@@ -9398,7 +9485,7 @@
 	val[]: "Şoferi angajaţi:"
 
 	key[]: "compman_summary_agancies_count"
-	val[]: "Agenţii de recrutare descoperite:"
+	val[]: "Agenţii recrutare descoperite:"
 
 	key[]: "compman_summary_truck_count"
 	val[]: "Camioane deţinute:"
@@ -9444,6 +9531,12 @@
 
 	key[]: "compman_qt_notruck"
 	val[]: "Nu puteţi efectua o călătorie rapidă, deoarece nu deţineţi un camion, un autocar sau un autovehicul!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Nu puteţi efectua o călătorie rapidă, deoarece nu deţineţi un autoturism!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Nu puteţi efectua o călătorie rapidă, deoarece nu deţineţi un autocar!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Doriţi să efectuaţi o călătorie rapidă la garajul selectat?"
@@ -9564,7 +9657,7 @@
 
 
 	key[]: "garageman_h_prod_info"
-	val[]: "Un garaj complet echipat ar trebui să aducă venituri săptămânale pe măsură. Grafica vă indică în ce măsură acest garaj funcţionează profitabil."
+	val[]: "Un garaj complet echipat de această dimensiune este aşteptat să genereze o sumă atât de mare pe săptămână. Graficul arată cât de profitabil este acest garaj."
 
 	key[]: "garageman_summary_hint"
 	val[]: "Selectaţi din partea dreaptă un garaj pentru a vedea detaliile acestuia"
@@ -9658,7 +9751,7 @@
 	val[]: "Selectaţi unul dintre garaje pentru mai multe detalii"
 
 	key[]: "garageman_hint_2"
-	val[]: "Alegeţi un spaţiu disponibil în garaj"
+	val[]: "Selectaţi un spaţiu disponibil în garaj"
 
 	key[]: "garageman_hint_3"
 	val[]: "Selectaţi simbolul unui camion sau şofer pentru a afişa informaţii."
@@ -9812,13 +9905,13 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "VÂNZARE VEHICUL"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
-	val[]: "Confirmaţi vânzarea vehiculului $TRUCK$ contra sumei de<br>$MONEY$?"
+	key[]: "vehicleman_msg_reallysell"
+	val[]: "Doriţi într-adevăr vânzarea $VEHICLE$ contra sumei de $MONEY$?"
 
-	key[]: "truckman_msg_nosell"
+	key[]: "vehicleman_msg_nosell"
 	val[]: "Nu puteţi vinde vehiculul pe care îl conduceţi în timpul unei curse! Finalizaţi-vă cursa şi apoi încercaţi din nou."
 
 	key[]: "truckman_total_restoration_t"
@@ -9844,20 +9937,20 @@
 	val[]: "Nu puteţi realoca vehiculul propriu, în timpul unei sarcini. Va trebui să o finalizaţi, mai întâi."
 
 	key[]: "truckman_conf_relocate"
-	val[]: "Doriţi cu siguranţă schimbarea $TRUCK_SRC$ din $CITY_SRC$ cu $TRUCK_DST$ din $CITY_DST$?<br>(Schimbul va avea loc după ce ambele camioane şi-au terminat operaţiunile.)"
+	val[]: "Confirmaţi schimbarea $TRUCK_SRC$ din $CITY_SRC$ cu $TRUCK_DST$ din $CITY_DST$?<br>(Schimbul va avea loc după ce ambele camioane şi-au terminat operaţiunile.)"
 #@}
 
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "SCHIMBARE VEHICUL" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
+	key[]: "vehicleman_msg_nochange"
 	val[]: "Nu vă puteţi schimba vehiculul în timpul unei curse! Finalizaţi-vă cursa mai întâi."
 
 	key[]: "truckman_conf_drive"
-	val[]: "Doriţi cu siguranţă mutarea camionului $TRUCK_SRC$ în $CITY_DST$ şi să conduceţi $TRUCK_DST$?"
+	val[]: "Confirmaţi mutarea camionului $TRUCK_SRC$ în $CITY_DST$ şi să conduceţi $TRUCK_DST$?"
 
 	key[]: "truckman_conf_drive2"
 	val[]: "<br>(Schimbarea va dura $TIME$, deoarece vehiculul este, momentan, angajat într-o cursă.)"
@@ -9890,7 +9983,7 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "COPIAZĂ CONFIGURAŢIA" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
+	key[]: "vehicleman_msg_nouse"
 	val[]: "Acest vehicul nu poate fi folosit ca sursă pentru copierea configurării din cauza lipsei datelor, provocată cel mai probabil de eliminarea unui MOD sau a unui DLC.<br><br>Reinstalaţi MOD-ul/DLC-ul."
 #@}
 
@@ -10106,7 +10199,7 @@
 	val[]: "Din păcate, nu vă puteţi transfera în timpul unei sarcini. Vă rugăm să finalizaţi cursa, mai întâi."
 
 	key[]: "driverman_conf_relocate"
-	val[]: "Doriţi cu siguranţă schimbarea cu şoferul $DRIVER_DST$?"
+	val[]: "Confirmaţi schimbul cu şoferul $DRIVER_DST$?"
 
 	key[]: "driverman_conf_relocate2"
 	val[]: "<br>(Schimbarea va dura $TIME$, deoarece şoferul este, momentan, angajat într-o cursă.)"
@@ -10119,7 +10212,7 @@
 	val[]: "CONCEDIERE ŞOFER" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "driverman_msg_dismiss"
-	val[]: "Confirmaţi concedierea şoferului $NAME$?"
+	val[]: "Doriţi într-adevăr disponibilizarea şoferului $NAME$?"
 #@}
 
 #@}
@@ -10186,7 +10279,7 @@
 	val[]: "Vizualizare" #+ Label of button that preview selected truck from Truck dealer current stock offer
 
 	key[]: "no_fleet_configs"
-	val[]: "Nu s-a putut descoperi configuraţiile flotei dumneavoastre aferente acestei mărci." #+ Text shown when the player does not have a fleet configuration for that brand.
+	val[]: "Nu au putut fi găsite configuraţiile flotei dvs. pentru această marcă" #+ Text shown when the player does not have a fleet configuration for that brand.
 
 	key[]: "no_available_brands"
 	val[]: "Nu s-a putut găsi nicio marcă validă.<br>Asiguraţi-vă că mărcile dumneavoastră, de tip Mod, includ oferte valide pentru camioane." #+ Text shown when there are no available brands on the mod truck dealer.
@@ -10234,13 +10327,13 @@
 	val[]: "Cuplu motor:" #+ Torque of the engine. For example "Engine torque:&nbsp;&nbsp;&nbsp;&nbsp; 1,800Nm/950-1,400rpm"
 
 	key[]: "td_info_trans"
-	val[]: "Cutie viteze:" #+ Type of the gearbox. "For example "Gearbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 speed gearbox"
+	val[]: "Cutie de viteze:" #+ Type of the gearbox. "For example "Gearbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 speed gearbox"
 
 	key[]: "td_info_tank"
 	val[]: "Rezervor:" #+ Capacity of the fuel tank. For example "Fueltank:&nbsp;&nbsp;&nbsp;&nbsp; 600+400l"
 
 	key[]: "td_info_edition"
-	val[]: "Ediţia:" #+ Name of a special edition if any, for example "Edition: Route 66"
+	val[]: "Ediţie:" #+ Name of a special edition if any, for example "Edition: Route 66"
 
 	key[]: "td_info_paint"
 	val[]: "Culoare:" #+ Vehicle paint specification, for example "Paint: Navy Blue"
@@ -10271,6 +10364,9 @@
 	key[]: "td_msg_first_and_busy"
 	val[]: "V[ mulţumim pentru achiziţionarea primului camion de la noi!<br><br>Acesta va fi livrat la sediul companiei de unde îl puteţi prelua după încheierea sarcinii curente."
 
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Vă mulţumim pentru achiziţia primului dvs. camion de la noi!<br><br>Doriţi să conduceţi noul dvs. camion din <color value=@@clr_sel@@>$CITY$</color>?"
+
 	key[]: "td_msg_bought_assigned"
 	val[]: "Vă mulţumim pentru achiziţie. Utilizare plăcută a noului camion!<br><br>Pe cel vechi îl vom trimite la garajul din $CITY$, imediat."
 
@@ -10287,16 +10383,16 @@
 	val[]: "Doriţi să CONDUCEŢI noul camion?"
 
 	key[]: "td_msg_reallysell"
-	val[]: "Confirmaţi vânzarea camionului contra sumei de<br>$MONEY$?"
+	val[]: "Doriţi să vă vindeţi camionul curent pentru suma de<br>$MONEY$?"
 
 	key[]: "td_msg_notradein"
 	val[]: "Cu regret vă informăm că toate noile comenzi necesită o perioadă de timp pentru procesare. Pentru că nu vrem să vă reţinem din activitate, vă rugăm să reveniţi ulterior, dacă doriţi să schimbaţi vehiculul."
 
 	key[]: "td_msg_tradein_success"
-	val[]: "Felicitări! Aţi finalizat cu succes vânzarea vechiului camion la schimb cu noul $TRUCK$. A fost o onoare să putem încheia o afacere cu dumneavoastră!"
+	val[]: "Felicitări! Aţi tranzacţionat cu succes vechiul camion pentru un $TRUCK$ nou-nouţ. A fost o plăcere să efectuăm afaceri cu dumneavoastră!"
 
 	key[]: "truckdealer_exit_confirm"
-	val[]: "Confirmaţi părăsirea reprezentanţei de camioane?"
+	val[]: "Doriţi să părăsiţi reprezentanţa de camioane?"
 
 	key[]: "truckdealer_cust_lost"
 	val[]: "Această acţiune va returna toate modificările personalizate la starea implicită, continuaţi?"
@@ -10318,19 +10414,19 @@
 #@{
 
 	key[]: "tdsel_t"
-	val[]: "DISTRIBUITORI AUTO CUNOSCUŢI" #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "DEALERI DE CAMIOANE DESCOPERIŢI" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "tdsel_link"
-	val[]: "Distribuitori Autorizaţi" #+ Icon opening the map of truck dealers.
+	val[]: "Dealeri Camioane" #+ Icon opening the map of truck dealers.
 
 	key[]: "tdsel_help"
-	val[]: "Vizitaţi Distribuitorii Auto cunoscuţi." #+ Help message associated the dealer map icon.
+	val[]: "Vizitaţi dealerii de camioane pe care deja i-aţi descoperit." #+ Help message associated the dealer map icon.
 
 	key[]: "tdsel_title_all"
-	val[]: "Toţi distribuitorii auto" #+ Show if no truck brand is filter enabled on the map.
+	val[]: "Toţi dealerii de camioane" #+ Show if no truck brand is filter enabled on the map.
 
 	key[]: "tdsel_title_brand"
-	val[]: "Distribuitori autorizaţi $BRAND$" #+ Shown if only dealers corresponding to specified brand are visible.
+	val[]: "Dealeri de camioane $BRAND$" #+ Shown if only dealers corresponding to specified brand are visible.
 
 	key[]: "tdsel_buy_online"
 	val[]: "Achiziţie online" #+ Button to trigger online purchase screen for selected dealer.
@@ -10354,23 +10450,23 @@
 	val[]: "Showroom Mare" #+ Dealer has large showroom.
 
 	key[]: "tdsel_dealer_unknown"
-	val[]: "Distribuitor Auto necunoscut" #+ No dealer was discovered in that city yet.
+	val[]: "Dealer de camioane nedescoperit" #+ No dealer was discovered in that city yet.
 #@}
 
 #+ Message boxes
 #@{
 
 	key[]: "tdsel_visit_msg_t"
-	val[]: "VIZITARE DISTRIBUITOR AUTORIZAT"  #+ Title of the message box. Please keep in upper case where possible.
+	val[]: "VIZITAŢI DEALERUL DE CAMIOANE"  #+ Title of the message box. Please keep in upper case where possible.
 
 	key[]: "tdsel_visit_msg"
-	val[]: "Doriţi să vă deplasaţi la $CITY$ pentru a vizita distribuitorul autorizat $BRAND$?"
+	val[]: "Doriţi să vă deplasaţi la $CITY$ şi vizita dealerul de camioane $BRAND$?"
 
 	key[]: "tdsel_novisit_msg"
 	val[]: "Din păcate, în timpul livrării nu puteţi efectua o călătorie rapidă! Vă rugăm să finalizaţi livrarea mai întâi."
 
 	key[]: "tdsel_locked"
-	val[]: "Nu aţi descoperit, încă, niciun distribuitor auto!"
+	val[]: "Nu aţi descoperit încă niciun dealer de camioane!"
 
 	key[]: "tdsel_online_locked"
 	val[]: "Acest element este disponibil doar clienţilor fideli. Trebuie să deţineţi cel puţin $COUNT$ camioane, înainte de a vă fi accesibil online."
@@ -10388,13 +10484,13 @@
 	val[]: "Vă rugăm, alegeţi un garaj pentru a continua."
 
 	key[]: "td_garsel_noslot"
-	val[]: "Vă rugăm, alegeţi un spaţiu liber pentru a continua."
+	val[]: "Vă rugăm, selectaţi un spaţiu disponibil pentru a continua."
 
 	key[]: "td_garsel_pickgarage"
 	val[]: "Mai întâi, alegeţi garajul destinaţie:"
 
 	key[]: "td_garsel_pickslot"
-	val[]: "Şi alegeţi un spaţiu în garaj:"
+	val[]: "Şi apoi alegeţi spaţiul necesar:"
 
 	key[]: "td_garsel_new_truck"
 	val[]: "Unde doriţi să vă livrăm noul camion?"
@@ -10490,41 +10586,41 @@
 #@{
 
 	key[]: "recruit_title"
-	val[]: "AGENŢIE RESURSE UMANE"  #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "AGENŢIE RECRUTARE"  #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "recruit"
 	val[]: "Agenţie Recrutare" #+ Icon opening the recruitment agency.
 
 	key[]: "recruit_help"
-	val[]: "Aveţi nevoie de şoferi? Aici e cel mai bun loc pentru a-i găsi." #+ Help message associated the recruitment agency icon.
+	val[]: "Aveţi nevoie de şoferi? Acesta este locul potrivit unde să îi căutaţi." #+ Help message associated the recruitment agency icon.
 
 	key[]: "recruit_info"
-	val[]: "Bine aţi venit la Biroul de Resurse Umane!<br>Vă punem la dispoziţie o listă de şoferi, de o înaltă calificare, actualizată zilnic.<br>Toate acestea contra modestei sume de $MONEY$ pentru fiecare şofer angajat."
+	val[]: "Bine aţi venit la Agenţia de Recrutare!<br>Vă oferim o selecţie excelentă de şoferi profesionişti disponibili pentru angajare, ce este actualizată zilnic.<br>Pentru serviciile noastre percepem doar un comision modest de $MONEY$ pentru fiecare şofer pe care îl angajaţi."
 
 	key[]: "hire"
 	val[]: "Angajare Şofer" #+ Button which will hire selected driver.
 
 	key[]: "recruit_empty"
-	val[]: "Nu există şoferi disponibili, pentru moment. Reveniţi mâine!"
+	val[]: "Momentan, niciun şofer este disponibil. Vă rugăm să reveniţi mâine!"
 
 	key[]: "driver_wage"
-	val[]: "Salariu cerut:"
+	val[]: "Salariu solicitat:"
 
 
 	key[]: "recruit_map_t"
-	val[]: "AGENŢII RESURSE UMANE CUNOSCUTE"
+	val[]: "AGENŢII RECRUTARE DESCOPERITE"
 
 	key[]: "recruit_map_info"
-	val[]: "Reţea birouri resurse umane - descoperiţi cât mai multe agenţii, pentru lărgirea listei de şoferi disponibili."
+	val[]: "Reţeaua dvs. de recrutare – descoperiţi mai multe agenţii pentru a avea o selecţie mai largă de şoferi disponibili pentru angajare"
 
 	key[]: "recruit_map_unlocked"
-	val[]: "Agenţie Resurse Umane descoperită"
+	val[]: "Agenţie recrutare descoperită"
 
 	key[]: "recruit_map_unknown"
-	val[]: "Agenţie Resurse Umane necunoscută"
+	val[]: "Agenţie recrutare nedescoperită"
 
 	key[]: "recruit_map_hire"
-	val[]: "Angajare şofer"
+	val[]: "Angajaţi un şofer"
 
 #+ Message boxes
 #@{
@@ -10533,13 +10629,13 @@
 	val[]: "ANGAJARE ŞOFER"
 
 	key[]: "hire_msg_locked"
-	val[]: "Identificaţi un birou de resurse umane, pentru a putea angaja online alţi şoferi."
+	val[]: "Va trebui să descoperiţi o agenţie de recrutare înainte de a putea angaja şoferi online."
 
 	key[]: "ra_confirm"
-	val[]: "Confirmaţi plata a $MONEY$ şi angajarea şoferului $NAME$?"
+	val[]: "Doriţi să plătiţi $MONEY$ şi să angajaţi şoferul $NAME$?"
 
 	key[]: "driver_autoworks"
-	val[]: "Şoferul dumneavoastră va ajunge în curând şi se va apuca de treabă automat, dacă are un camion alocat."
+	val[]: "Şoferul dvs. va sosi în scurt timp şi va începe să lucreze imediat după ce se va acomoda, cu condiţia să aibă un camion pe care să îl poată conduce."
 
 	key[]: "recruit_no_space"
 	val[]: "Nu aveţi locuri disponibile pentru un nou şofer!<br><br>Vă rugăm să modernizaţi unul dintre garaje dvs. sau să achiziţionaţi unul nou."
@@ -10559,7 +10655,7 @@
 	val[]: "Explorat:" #+ Label shown before value indicating how many percents of the world are explored.
 
 	key[]: "reset_gps_pins"
-	val[]: "Resetare navigaţie" #+ Text on a button that deletes all custom navigation pins. The button is shown only when there are any custom pins to delete.
+	val[]: "Resetare sistem de navigaţie" #+ Text on a button that deletes all custom navigation pins. The button is shown only when there are any custom pins to delete.
 
 	key[]: "append_new_pins"
 	val[]: "Adaugă întotdeauna noile puncte de pe traseu la sfârşit" #+ Text for a checkbox that prevents adding custom navigation pins in the middle of the route. Hidden when not applicable.
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Membru convoi"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Vehicul într-o cursă rapidă"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Locaţia altui vehicul"
+
 	key[]: "mapl_quarry"
 	val[]: "Exploatare Minieră"
 
@@ -10612,7 +10714,7 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Punct nedescoperit"
 
-	key[]: "mapl_viewpoint"
+	key[]: "mapl_viewpoint_visited"
 	val[]: "Punct de observaţie (vizitat)"
 
 	key[]: "mapl_viewpoint_unvisited"
@@ -10640,7 +10742,7 @@
 	val[]: "Service"
 
 	key[]: "mapl_dealer"
-	val[]: "Distribuitor Auto"
+	val[]: "Dealer camioane"
 
 	key[]: "mapl_garage"
 	val[]: "Garaj de vânzare"
@@ -10652,7 +10754,7 @@
 	val[]: "Staţie Cântar"
 
 	key[]: "mapl_recruit"
-	val[]: "Agenţie Recrutare"
+	val[]: "Agenţie recrutare"
 
 	key[]: "mapl_city_names"
 	val[]: "Nume oraşe"
@@ -10720,13 +10822,13 @@
 	val[]: "Xiph.org Foundation"
 
 	key[]: "credits_fmod"
-	val[]: "Realizat cu FMOD Studio by Firelight Technologies Pty Ltd."
+	val[]: "Made with FMOD Studio by Firelight Technologies Pty Ltd."
 
 	key[]: "credits_speedtree"
-	val[]: "Porţiuni ale acestui produs software utilizează tehnologia SpeedTree® (©2024 oferită de Unity Technologies SF). Toate drepturile rezervate."
+	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "Acest program este parţial bazat pe activitatea Independent JPEG Group."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -10738,7 +10840,7 @@
 	val[]: "Explorare Camioane"  #+ Icon title.
 
 	key[]: "truck_browser_help"
-	val[]: "Experimentaţi diverse configuraţii ale vehiculului."  #+ Description for the Truck Browser icon.
+	val[]: "Experimentaţi cu diverse configuraţii ale camionului."  #+ Description for the Truck Browser icon.
 
 #@}
 
@@ -11029,7 +11131,7 @@
 	val[]: "Poziţie Scaun" #+ Checkbox selecting seat position.
 
 	key[]: "seat_fov"
-	val[]: "FOV" #+ Checkbox selecting fov.
+	val[]: "FOV - Câmp Vizual" #+ Checkbox selecting fov.
 
 	key[]: "steering_tilt"
 	val[]: "Înclinare Volan" #+ Checkbox selecting steering wheel tilt.
@@ -11085,7 +11187,7 @@
 	val[]: "Rating:" #+ Driver rating. For example "Rating: 10.0"
 
 	key[]: "fuel_km"
-	val[]: "Combustibil disponibil:" #+ For example "Fuel remaining for: 3,270 mi"
+	val[]: "Carburant disponibil pentru:" #+ For example "Fuel remaining for: 3,270 mi"
 
 	key[]: "damage_colon"
 	val[]: "Avarii:" #+ For example "Damage: 0%"
@@ -12647,7 +12749,7 @@
 	val[]: "Nicio cursă în desfăşurare"
 
 	key[]: "searching_for_navigation"
-	val[]: "Căutând sistemul de navigaţie..."
+	val[]: "Căutarea navigaţiei..."
 #@}
 
 #+ Texts shown on the dashboard.
@@ -12666,7 +12768,7 @@
 	val[]: "VITEZĂ"
 
 	key[]: "db_fuel_tank"
-	val[]: "COMBUSTIBIL"
+	val[]: "CARBURANT"
 
 	key[]: "db_c_control"
 	val[]: "PILOT AUTOMAT"
@@ -12675,7 +12777,7 @@
 	val[]: "INFO VITEZĂ"
 
 	key[]: "db_fuel_info"
-	val[]: "COMBUSTIBIL"
+	val[]: "DETALII CARBURANT"
 
 	key[]: "db_temp_info"
 	val[]: "TEMPERATURĂ"
@@ -12696,7 +12798,7 @@
 	val[]: "VITEZĂ CURENTĂ"
 
 	key[]: "db_actros_info2"
-	val[]: "COMBUSTIBIL"
+	val[]: "CARBURANT"
 #@}
 
 #+ Messages shown as part of the tutorial.
@@ -12744,7 +12846,7 @@
 	val[]: "Alegeţi sarcina următoare"
 
 	key[]: "desktop_tut_cargo_market"
-	val[]: "Utilizaţi noua dumneavoastă remorcă pentru a livra o gamă largă de mărfuri către destinaţiile lor." #+ The text of the bubble shown for the player when he has his own trailer attached first time letting him know that cargo market has been unlocked now.
+	val[]: "Folosiţi remorca dvs. nou-nouţă pentru a accesa Piaţa de Mărfuri şi a livra o gamă variată de mărfuri către destinaţiile lor." #+ The text of the bubble shown for the player when he has his own trailer attached first time letting him know that cargo market has been unlocked now.
 
 	key[]: "desktop_tut_personal"
 	val[]: "Aici puteţi studia progresele făcute."
@@ -12757,6 +12859,9 @@
 
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Vizitaţi $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
+
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Utilizaţi butonul „Mode” pentru a schimba între diferite moduri desktop şi diferite tipuri de vehicule."
 
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "BINE AŢI VENIT"
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Vă mulţumim pentru revizuirea noului Ecran Principal."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "ACTIVARE SUGESTII"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "Veţi accesa un nou modul al jocului şi sugestiile contextuale sunt în curent dezactivate. Sugestiile vă pot ajuta să învăţaţi cum să interacţionaţi cu elementele jocului. Doriţi reactivarea acestora?"
 #@}
 
 
@@ -12824,7 +12936,7 @@
 	val[]: "TikTok SCS Software"
 
 	key[]: "weblink_confirm"
-	val[]: "Doriţi deschiderea adresei de internet în browser-ul web?"
+	val[]: "Doriţi deschiderea unui browser de internet şi navigarea către pagina de internet selectată?"
 
 #+ Networking errors
 #@{
@@ -12837,7 +12949,7 @@
 #+ Unable to establish connection with the service.
 
 	key[]: "generic_unable_to_connect"
-	val[]: "Nu se poate stabili o conexiune online. Verificaţi funcţionarea conexiunii internet."
+	val[]: "Nu se poate stabili conexiunea la serviciul online. Vă rugăm să verificaţi funcţionarea conexiunii de internet."
 
 #+ Error during socket read/write.
 
@@ -12877,12 +12989,12 @@
 #+ The account was locked down because of too many failed login attempts.
 
 	key[]: "generic_failure_lockdown"
-	val[]: "Contul online este curent restricţionat din cauza multiplelor tentative de conectare eşuate. Vă rugăm reîncercaţi peste o jumătate de oră."
+	val[]: "Contul online este restricţionat în prezent din cauza multiplelor tentative de autentificare eşuate. Vă rugăm reîncercaţi peste o jumătate de oră."
 
 #+ The account was locked down because of too many suspicious accesses.
 
 	key[]: "generic_suspicious_lockdown"
-	val[]: "Contul online este momentan restricţionat în urma unor activităţi suspecte. Reveniţi în 24 ore."
+	val[]: "Contul online este restricţionat în prezent din cauza accesărilor suspicioase. Vă rugăm reîncercaţi peste 24 de ore."
 
 # The account does not have this game registered to itself.
 
@@ -12916,7 +13028,7 @@
 #+ Generic SSL (Secure Sockets Layer) protocol error (e.g. expired certificate, untrusted certificate authority, hostname mismatch...)
 
 	key[]: "generic_ssl_error"
-	val[]: "Eroare SSL. Nu s-a putut stabili o conexiune securizată."
+	val[]: "Eroare SSL. Nu se poate stabili o conexiune securizată."
 
 #+ The game was suspended during the online communication and the connection was closed before it was finished.
 
@@ -13258,7 +13370,7 @@
 	val[]: "SETARE CUTIE DE VITEZĂ AUTOMATĂ" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "automatic_gb_setup_desc"
-	val[]: "Cu cutia de viteze automată va trebui să comutaţi doar între poziţiile înainte, neutru şi înapoi. Veţi putea face acest lucru prin utilizarea următoarelor taste şi butoane ale controlerului. Pentru a modifica setările, click pe un buton şi apăsaţi tasta sau butonul controlerului pe care doriţi să le utilizaţi pentru funcţia respectivă."
+	val[]: "Cu o cutie de viteze automată va trebui să comutaţi doar între poziţiile înainte, neutru şi înapoi. Veţi putea face acest lucru prin utilizarea următoarelor taste şi butoane ale controlerului. Pentru a modifica setările, click pe un buton şi apăsaţi tasta sau butonul controlerului pe care doriţi să le utilizaţi pentru funcţia respectivă."
 
 	key[]: "automatic_gb_setup_desc2"
 	val[]: "Dacă aveţi un dispozitiv H-Shifter conectat, îl puteţi utiliza pentru simularea unui schimbător de viteze automat real. Activaţi această opţiune şi puteţi atribui poziţii H-Shifter pentru modurile înainte şi marşarier. Orice alte poziţii ale H-Shifter sunt considerate drept neutre. Această setare este creată special pentru controlerul H-shifter, astfel încât nu va funcţiona nici cu tastele obişnuite, nici cu butoanele controlerului. Pentru a schimba alocarea, click pe un buton şi apoi mutaţi schimbătorul în poziţia dorită şi apoi înapoi în poziţia neutră."
@@ -15016,7 +15128,7 @@
 	val[]: "Utilizaţi Modul Foto sau tasta @@imv_nrm_screenshot@@ pentru a face capturi de ecran. Le puteţi încărca pe portalul World of Trucks.<br>Selectaţi o captură de ecran, apoi un spaţiu de mai jos, şi apăsaţi pe butonul <color value=@@clr_sel@@> Încărcare în spaţiul selectat<color value=@@clr_txt@@>." #+ description
 
 	key[]: "screenshotman_slot"
-	val[]: "Poziţii capturi în galeria World of Trucks." #+ Slots title
+	val[]: "Spaţii galerie capturi de ecran din World of Trucks." #+ Slots title
 
 	key[]: "screenshotman_empty"
 	val[]: "Realizaţi capturi de ecran pentru a le vedea aici." #+ Empty screenshot position
@@ -15069,10 +15181,10 @@
 	val[]: "Serviciul a respins captura de ecran." #+ Error message shown when the service rejects the upload for some non-technical reason.
 
 	key[]: "imgup_no_rights"
-	val[]: "Nu este permisă încărcarea capturilor de pe acest cont." #+ Error message shown if the account does not have rights to upload to the service.
+	val[]: "Contul nu are permisiunea să încarce capturi de ecran." #+ Error message shown if the account does not have rights to upload to the service.
 
 	key[]: "imgup_conflicting_upload"
-	val[]: "S-a detectat încărcarea simultană a mai multor fişiere, în acelaşi slot." #+ Error message shown if another client using the same account attempted to upload to the same slot.
+	val[]: "A avut loc o încărcare simultană în acelaşi spaţiu." #+ Error message shown if another client using the same account attempted to upload to the same slot.
 
 	key[]: "imgup_disabled"
 	val[]: "Funcţia de încărcare este, momentan, dezactivată. Vă rugăm, reveniţi." #+ Error message shown if the service currently can not accept new screenshots.
@@ -15092,7 +15204,7 @@
 	val[]: "MOD-URI ACTIVE" #+ Mod selection title
 
 	key[]: "missing_deps"
-	val[]: "Fişierul salvat pe care încercaţi să îl încărcaţi utilizează elemente adiţionale, ce nu sunt momentan disponibile. Conţinutul lipsă constă în:"
+	val[]: "Salvarea pe care încercaţi să o încărcaţi utilizează funcţii suplimentare, ce nu sunt disponibile în prezent. Pachetele de conţinut lipsă sunt:"
 
 	key[]: "missing_deps_cont"
 	val[]: "Doriţi să continuaţi?<br>Există riscul ca jocul să devină inutilizabil!" #+ missing mods warning
@@ -15112,14 +15224,14 @@
 	val[]: "DLC INCOMPATIBIL" #+ Window title
 
 	key[]: "incompatible_dlc"
-	val[]: "Porţiuni din conţinutul adiţional instalat nu sunt compatibile cu versiunea jocului şi vor fi dezactivate. Este necesară actualizarea la <LINK URL=http://www.eurotrucksimulator2.com/update.php$VERSION_INFO$ COLOR=@@clr_link@@>ultima versiune</LINK> pentru rezolvarea compatibilităţii.<br><br>Următoarele elemente sunt incompatibile:"
+	val[]: "Anumite părţi din conţinutul adiţional instalat nu sunt compatibile cu versiunea curentă a jocului şi vor fi dezactivate. Va trebui să aplicaţi ultima <LINK URL=http://www.eurotrucksimulator2.com/update.php$VERSION_INFO$ COLOR=@@clr_link@@>actualizare</LINK> pentru a restabili compatibilitatea.<br><br>Următorul conţinut este incompatibil:"
 
 #@}
 
 #+ Message shown when the save depends on DLC which is currently unavailable.
 #@{
 	key[]: "missing_dlcs"
-	val[]: "Salvarea utilizează DLC indisponibil. Conţinutul lipsă este:"
+	val[]: "Salvarea pe care încercaţi să o încărcaţi utilizează DLC (Conţinut Adiţional) ce nu este disponibil în prezent. Conţinutul lipsă este:"
 
 	key[]: "missing_dlcs_cont"
 	val[]: "Este imposibilă finalizarea procesului de salvare, în lipsa unui DLC corespunzător."
@@ -15362,10 +15474,10 @@
 	val[]: "Incompatibil" #+ State value indicating that the mod is not compatible with the current version of the game.
 
 	key[]: "mod_multi_move_left_confirm"
-	val[]: "Dezactivaţi toate mod-urile?" #+ Confirmation message shown when user selects button to deactivate all mods.
+	val[]: "Doriţi să dezactivaţi toate mod-urile?" #+ Confirmation message shown when user selects button to deactivate all mods.
 
 	key[]: "mod_multi_move_right_confirm"
-	val[]: "Doriţi activarea tuturor mod-urilor?<br><br>Toate mod-urile care nu sunt încă activate, vor fi adăugate la începutul listei.<br><br><br>(Mod-urile incompatibile nu vor fi adăugate)" #+ Confirmation message shown when user selects button to activate all mods.
+	val[]: "Doriţi să activaţi toate mod-urile?<br><br>Toate mod-urile care nu sunt încă activate, vor fi adăugate la începutul listei.<br><br><br>(Mod-urile incompatibile nu vor fi adăugate)" #+ Confirmation message shown when user selects button to activate all mods.
 
 	key[]: "no_mods_active"
 	val[]: "Nu există mod-uri active.<br><br>Pentru activare, selectaţi un mod în partea stângă şi apăsaţi butonul cu săgeată." #+ Text shown inside the active mods panel when no mod is currently active
@@ -15374,7 +15486,7 @@
 	val[]: "Activat" #+ State value indicating that the mod is selected as active one
 
 	key[]: "force_mods_mm_error"
-	val[]: "Managerul de mod-uri nu poate fi folosit dacă parametrul -force_mods este prezent. Toate mod-urile sunt activate automat." #+ Error message shown if the user overrides the mods management using -force_mods command line parameter.
+	val[]: "Manager MOD-uri nu a putut fi deschis deoarece parametrul -force_mods este prezent. Toate mod-urile sunt activate automat, astfel că nu le puteţi gestiona." #+ Error message shown if the user overrides the mods management using -force_mods command line parameter.
 
 	key[]: "version"
 	val[]: "Versiune" #+ Label of field used to show the version of the mod
@@ -15398,7 +15510,7 @@
 	val[]: "Mod-ul este incompatibil cu versiunea curentă şi nu poate fi activat." #+ Text shown if mod is not compatible with currently game version, and user tries to activate it.
 
 	key[]: "mm_confirm_leave"
-	val[]: "Confirmaţi părăsirea Managerului de Mod-uri?" #+ Content of the dialog confirming leaving the mod manager.
+	val[]: "Doriţi să părăsiţi Manager MOD-uri?" #+ Content of the dialog confirming leaving the mod manager.
 
 	key[]: "mm_confirm_leave_changes"
 	val[]: "Toate modificările vor fi pierdute." #+ Shown in the leave confirmation dialog if user have made some changes.
@@ -15439,7 +15551,7 @@
 	val[]: "Mod-uri active"  #+ Label of section with legend about status icons shown in the active mods panel
 
 	key[]: "mod_manager_help_t"
-	val[]: "ASISTENT MANAGER MOD-URI" #+ Label of window with the help for the mod manager
+	val[]: "AJUTIR MANAGER MOD-URI" #+ Label of window with the help for the mod manager
 
 	key[]: "mod_sorting_desc"
 	val[]: "Ordinea mod-urilor este importantă. Acestea sunt prioritizate de sus în jos, in fereastra mod-urilor active - primul din listă şi fişierele conţinute vor avea prioritatea maximă. Dacă mai multe mod-uri conţin acelaşi fişier, doar cel cu prioritatea cea mai mare va fi folosit."
@@ -15451,7 +15563,7 @@
 	val[]: "Deschide acest dialog." #+ Description of help icon.
 
 	key[]: "welcome_mod_manager"
-	val[]: "BINE AŢI VENIT LA ADMINISTRAREA MODURILOR" #+ Label of window with the help for the mod manager which appears the first time the user launches the manager
+	val[]: "BINE AŢI VENIT LA MANAGER MOD-URI" #+ Label of window with the help for the mod manager which appears the first time the user launches the manager
 #@}
 
 	# We are currently using mm_confirm_leave and mm_confirm_leave_changes this one will be eventually removed in future.
@@ -15474,7 +15586,7 @@
 #+ Loading screens browser
 #@{
 	key[]: "lscr_browser_t"
-	val[]: "BROWSER IMAGE SPOTLIGHT" #+ Title of the loading screens browser window
+	val[]: "CATALOG IMAGE SPOTLIGHT" #+ Title of the loading screens browser window
 
 	key[]: "lscr_browser_no_data"
 	val[]: "Nu există imagini" #+ Showed when there are no loading screens to show in the browser
@@ -15516,7 +15628,7 @@
 	val[]: "DETALII LIVRARE"
 
 	key[]: "job_delivery_desc"
-	val[]: "Un şofer experimentat va face faţa oricăror provocări, chiar şi în spaţii restrânse. În orice caz, integritatea mărfii este cea mai importantă! Dacă credeţi că nu rezistaţi provocării, puteţi negocia cu dispeceratul pentru o locaţie alternativă de parcare."
+	val[]: "Un şofer de camion experimentat poate face faţă manevrelor în spaţii înguste atunci când detaşează o remorcă. Totuşi, siguranţa încărcăturii este o prioritate absolută! Dacă nu vă simţiţi în stare să faceţi faţă provocării, negociaţi cu dispeceratul pentru un loc de rezervă unde să parcaţii remorca."
 
 	key[]: "job_delivery_company"
 	val[]: "Sediu:"
@@ -15581,7 +15693,7 @@
 	val[]: "SINCRONIZARE" #+ Name of the window pop-up during WOTR synchronization
 
 	key[]: "synchronizing_wotr"
-	val[]: "Sincronizare progres<br>World of Trucks." #+ Message inside window pop-up during WOTR synchronization
+	val[]: "Sincronizarea progresului dvs. cu<br>World of Trucks." #+ Message inside window pop-up during WOTR synchronization
 
 	key[]: "confirm_random_job"
 	val[]: "World of Trucks va selecta aleatoriu un contract de livrare, disponibil în jurul locaţie curente.<br><br>Nu se ştie niciodată ce aduce soarta!<br><br>Continuaţi?" #+ pop-up message to accept taking random job from WOTR
@@ -15599,10 +15711,10 @@
 	val[]: "Abandonează" #+ Button to cancel WOTR job with
 
 	key[]: "cancel_online_job"
-	val[]: "Confirmaţi anularea contractului curent?" #+ A pop-up warning notification on attempt to Cancel WOTR job
+	val[]: "Doriţi să abandonaţi contractul dvs. curent?" #+ A pop-up warning notification on attempt to Cancel WOTR job
 
 	key[]: "online_job_resumed"
-	val[]: "Livrare World of Trucks în desfăşurare" #+ Icons with this text appears on the desktop when online job in progress
+	val[]: "Livrare World of Trucks în desfăşurare." #+ Icons with this text appears on the desktop when online job in progress
 
 	key[]: "suspend_job"
 	val[]: "Pauză livrare" #+ Button to suspend / pause WOTR job
@@ -15614,19 +15726,19 @@
 	val[]: "Livrarea World of Trucks este suspendată." #+ Icons with this text appears on the desktop when online job in suspended / paused
 
 	key[]: "economy_sync_failed"
-	val[]: "Conexiunea cu World of Trucks întreruptă.<br>Nu se poate salva progresul efectuat." #+ Advisor message when game unable establish server connection to save the progress
+	val[]: "Conexiunea cu World of Trucks pierdută.<br>Nu se poate salva progresul dvs." #+ Advisor message when game unable establish server connection to save the progress
 
 	key[]: "suspend_online_job"
-	val[]: "Livrările în desfăşurare pentru World of Trucks trebuie suspendate, pentru a putea porni într-o altă livrare.<br><br>Puteţi reveni la contractul World of Trucks, după finalizarea celei de-a doua sarcini.<br><br>Începeţi o altă livrare acum?" #+ Warning message to inform that player about to suspend online job in order to take offline one.
+	val[]: "Livrarea World of Trucks, aflată în desfăşurare, va trebui să fie suspendată pentru a putea prelua o a doua livrare.<br><br>Puteţi relua finalizarea contractului World of Trucks, după încheierea celei de-a doua livrări.<br><br>Începeţi o altă livrare acum?" #+ Warning message to inform that player about to suspend online job in order to take offline one.
 
 	key[]: "connection_error_message"
-	val[]: "Conexiune nereuşită la World of Trucks.<br><br>Verificaţi conexiunea, apoi apăsaţi Conectare, pentru obţinearea de informaţii legate de livrare." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found.
+	val[]: "Nu se poate realiza conexiunea cu World of Trucks.<br><br>Stabiliţi o conexiune, apoi apăsaţi Conectare pentru a prelua informaţiile contractului dvs." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found.
 
 	key[]: "error_resuming_online_job"
-	val[]: "Conexiune nereuşită la World of Trucks.<br><br>Verificaţi conexiunea, apoi apăsaţi Conectare, pentru a continua livrarea." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found after attempt to resume job.
+	val[]: "Nu se poate realiza conexiunea cu World of Trucks.<br><br>Stabiliţi o conexiune, apoi apăsaţi Conectare pentru a prelua informaţiile contractului dvs., în vederea continuării progresului dvs." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found after attempt to resume job.
 
 	key[]: "error_aborting_online_job"
-	val[]: "Conexiune nereuşită la World of Trucks.<br><br>Verificaţi conexiunea, apoi apăsaţi Conectare, pentru a confirma anularea livrării." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found after attempt to cancel the job.
+	val[]: "Nu se poate realiza conexiunea cu World of Trucks.<br><br>Stabiliţi o conexiune, apoi apăsaţi Conectare pentru a prelua informaţiile contractului dvs., în vederea continuării anulării contractului." #+ Message shows instead of the cargo in WOTR jobs screen if no internet connection found after attempt to cancel the job.
 
 	key[]: "wotr_not_connected"
 	val[]: "Conexiunea cu World of Trucks pierdută." #+ Icons with this text appears on the desktop when online job lost its connection with WOTR
@@ -15644,7 +15756,7 @@
 	val[]: "Revenire la ultima poziţie cunoscută pe World of Trucks..." #+ message during restoring player's position
 
 	key[]: "confirm_get_job_page"
-	val[]: "Doriţi accesarea listei de livrări World of Trucks, în browser-ul web?" #+ pop-up message to inform about opening WOTR jobs page in web browser
+	val[]: "Doriţi deschiderea unui browser de internet şi navigarea către pagina Ofertă Livrări World of Trucks?" #+ pop-up message to inform about opening WOTR jobs page in web browser
 
 	key[]: "offline_profile_message"
 	val[]: "Profilul nu este conectat la World of Trucks!<br><br>Pentru a primi contracte, editaţi-vă profilul conectând-ul la World of Trucks."#+ A message on WOTR job screen if profile isn't connected to WOTR
@@ -15653,7 +15765,7 @@
 	val[]: "Editare Profil" #+ Button in WOTR jobs screens to begin editing profile if WOTR isn't conneted
 
 	key[]: "online_jobs_completed_count"
-	val[]: "Livrări World of Trucks Finalizate" #+ number of completed WOTR jobs
+	val[]: "Contracte World of Trucks finalizate" #+ number of completed WOTR jobs
 
 	key[]: "error_report_progress_t"
 	val[]: "CONTRACT NEVALID"
@@ -15698,7 +15810,7 @@
 	val[]: "Contractul extern în desfăşurare necesită următoarele pachete DLC:<br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Imposibil de afişat detaliile sarcinii. Acestea vor fi disponibile după reluarea livrării curente." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Imposibil de afişat detaliile sarcinii. Acestea vor fi disponibile după reluarea livrării curente." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Această livrare necesită o remorcă proprie. În momentul de faţă nu aveţi o asemenea remorcă ataşată." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15755,7 +15867,10 @@
 	val[]: "Selectaţi destinaţia pentru călătoria rapidă"
 
 	key[]: "select_quick_travel_destination_economy_reset"
-	val[]: "Actualizare joc detectată. Selectaţi destinaţia pentru călătoria rapidă:" #+ Shown during economy reset quick travel.
+	val[]: "Actualizare joc detectată. Vă rugăm să selectaţi destinaţia pentru călătoria rapidă:" #+ Shown during economy reset quick travel.
+
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Actualizare joc detectată. Vă rugăm să selectaţi destinaţia camionului dvs. pentru călătoria rapidă:" #+ Shown during economy reset quick travel for truck.
 
 	key[]: "confirm_quick_travel"
 	val[]: "Confirmare Călătorie Rapidă"
@@ -15775,16 +15890,16 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Camionul nu este adecvat pentru o călătorie rapidă. Fixaţi cablurile remorcii."
 
-	key[]: "quick_travel_cond_repair_truck"
+	key[]: "quick_travel_cond_repair_vehicle"
 	val[]: "Vehiculul dvs. nu se află într-o stare adecvată pentru călătoria rapidă. Vizitaţi un service sau chemaţi asistenţa rutieră."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Remorca nu este adecvată pentru o călătorie rapidă. Vizitaţi un service sau chemaţi asistenţa rutieră."
 
-	key[]: "quick_travel_cond_truck_fuel"
+	key[]: "quick_travel_cond_vehicle_fuel"
 	val[]: "Vehiculul dvs. nu se află într-o stare adecvată pentru călătoria rapidă. Realimentaţi-vă vehiculul sau solicitaţi asistenţa rutieră."
 
-	key[]: "quick_travel_cond_truck_fallen"
+	key[]: "quick_travel_cond_vehicle_fallen"
 	val[]: "Vehiculul dvs. nu se află într-o stare adecvată pentru călătoria rapidă. Chemaţi asistenţa rutieră."
 
 	key[]: "quick_travel_cond_trailer_fallen"
@@ -15812,13 +15927,13 @@
 #+ Dependency missing dialog related texts.
 #@{
 	key[]: "missing_required_dlc"
-	val[]: "Pachetul obligatoriu DLC $DEPENDENCY_NAME$ lipseşte. Pentru a putea încărca această salvare, acest pachet trebuie încărcat şi activat pe acest computer. Va trebui să rezolvaţi această problemă înainte de a continua încărcarea." #+ Information showed when dependency of type required dlc is missing. Player is then unable to continue loading the game.
+	val[]: "DLC-ul necesar (extensie oficială a jocului) $DEPENDENCY_NAME$ lipseşte. Pentru ca această salvare să funcţioneze corect, acest DLC trebuie să fie prezent şi activat pe acest sistem. Va trebui să rezolvaţi problema înainte de a putea încărca această salvare." #+ Information showed when dependency of type required dlc is missing. Player is then unable to continue loading the game.
 
 	key[]: "missing_removable_dlc"
-	val[]: "Pachetul DLC opţional $DEPENDENCY_NAME$ lipseşte. Dacă aceaastă situaţie este în neregulă, vă rugăm să verificaţi starea acestuia.<br><br>În caz contrar, puteţi continua încărcarea acestei salvări, cu riscul de a nu beneficia de unele funcţionalităţi oferite de acest pachet." #+ Information showed when dependency of type optional DLC is missing.
+	val[]: "DLC-ul opţional (extensie oficială a jocului) $DEPENDENCY_NAME$ lipseşte. Dacă nu v-aţi aşteptat la acest lucru, vă rugăm să verificaţi statutul DLC-ului.<br><br>În celălalt caz, aţi putea încărca salvarea oricum, însă anumite funcţionalităţi oferite de DLC-uri pot fi pierdute." #+ Information showed when dependency of type optional DLC is missing.
 
 	key[]: "missing_mod"
-	val[]: "Următorul MOD $DEPENDENCY_NAME$ lipseşte sau este dezactivat. Dacă această situaţie este neaşteptată, vă rugăm să verificaţi starea acestuia. Puteţi totuşi continua încărcarea salvării, cu riscul ca procesul să eşueze sau să apară alte probleme." #+ Information displayed when dependency of type mod is missing.
+	val[]: "MOD-ul $DEPENDENCY_NAME$ lipseşte sau este dezactivat. Dacă nu v-aţi aşteptat la acest lucru, vă rugăm să verificaţi statutul MOD-ului. Aţi putea încerca să încărcaţi salvarea oricum. Totuşi, în funcţie de specificitatea MOD-urilor, este posibil ca salvarea să nu poată fi încărcată sau să poată cauza alte erori." #+ Information displayed when dependency of type mod is missing.
 
 	key[]: "incompatible_mod"
 	val[]: "Următorul MOD $DEPENDENCY_NAME$ este incompatibil cu versiunea curentă a jocului. Autorul acestuia a decis să limiteze numărul de versiuni cu care acesta este compatibil .<br><br>Soluţii:<br>- Încercaţi să găsiţi o versiune a mod-ului compatibilă cu versiunea jocului.<br>- Aduceţi jocul la versiunea compatibilă cu mod-ul, prin upgrade sau downgrade.<br><br>Puteţi, totuşi, încerca încărcarea salvării, dar acest mod nu va fi luat în considerare şi, în funcţie de funcţionalităţile acestuia, este posibil ca încprcarea să eşueze sau să genereze alte probleme." #+ Information displayed when dependency of type mod is incompatible with the version of the game currently used by player.
@@ -15894,16 +16009,16 @@
 	val[]: "Cursă Rapidă în desfăşurare."
 
 	key[]: "company_job_resumed"
-	val[]: "Livrare pentru Bursa Transporturi în desfăşurare"
+	val[]: "Livrare Bursă Transporturi în desfăşurare."
 
 	key[]: "cargo_market_job_resumed"
-	val[]: "Livrare pentru piaţa de mărfuri în desfăşurare"
+	val[]: "Livrare Piaţa de Mărfuri în desfăşurare."
 #@}
 
 #+ Job cancellation
 #@{
 	key[]: "drive_active_job_t"
-	val[]: "CURSĂ ÎN PROGRES"
+	val[]: "CURSĂ ÎN DESFĂŞURARE"
 
 	key[]: "drive_active_job"
 	val[]: "Aveţi o cursă activă într-un alt mod.<br offset=10>Puteţi să o abandonaţi sau să afişaţi detalii în $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
@@ -15915,7 +16030,7 @@
 	val[]: "Comutare Mod"
 
 	key[]: "cancel_cur_job_warning"
-	val[]: "În cazul abandonării cursei va trebuie să plătiţi un comision de penalizare în valoare de $MONEY$."
+	val[]: "Abandonare cursei va necesita plata unei penalităţi în valoare de $MONEY$."
 #@}
 
 #+ Trailer coupling phases info messages, shown in route advisor during coupling/decoupling.
@@ -15950,7 +16065,7 @@
 	val[]: "Versiunea jocului a fost modificată la un nivel anterior" #+ The message showed when downgrade of the game to the older version has been detected.
 
 	key[]: "version_change_detected_common"
-	val[]: "<br><br>Schimbările de versiune ale jocului pot defecta modurile, rezultând în blocări ale jocului sau instabilităţi; autorii modurilor sunt responsabili pentru menţinerea compatibilităţii acestora. Asiguraţi-vă că modurile activate sunt compatibile. <br><br>Sfat pentru depanare: Dacă versiunea actuală a modului este incompatibilă, încercaţi să-l dezactivaţi în Administrarea Modurilor. <br><br> Versiunea jocului: $GAME_VERSION$" #+ Common message (showed for both downgrade and upgrade) in the version change dialog.
+	val[]: "<br><br>Schimbările de versiune ale jocului pot afecta funcţionalitatea mod-urilor, rezultând în blocări ale jocului sau instabilităţi; autorii mod-urilor sunt responsabili pentru menţinerea compatibilităţii acestora. Asiguraţi-vă că mod-urile dvs. activate sunt compatibile.<br><br>Sfat pentru remediere: Dacă versiunea actuală a mod-ului este incompatibilă, încercaţi să-l dezactivaţi în Manager MOD-uri.<br><br>Versiunea jocului: $GAME_VERSION$" #+ Common message (showed for both downgrade and upgrade) in the version change dialog.
 #@}
 
 #+ Strings related to accessory filtering feature.
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Nu s-au găsit elemente ce corespund filtrelor" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Nu s-au găsit vehicule ce corespund filtrelor" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Nu s-au găsit vehicule ce corespund filtrelor" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16004,7 +16119,7 @@
 	val[]: "PREFERINŢE GENERALE" #+ The separator text for the general online settings.
 
 	key[]: "connect_content_t"
-	val[]: "CONECTARE" #+ The title of the connect content window.
+	val[]: "CONECTARE CONŢINUT" #+ The title of the connect content window.
 
 	key[]: "connect_selected_content"
 	val[]: "Conectare" #+ The button which triggers connection of the selected content.
@@ -16019,7 +16134,7 @@
 	val[]: "Preferinţe online. Ajustaţi parametrii World of Trucks." #+ The help text shown next to the button which opens the online options screen, describing what the user can find inside.
 
 	key[]: "connect_content_leave_confirmation"
-	val[]: "Confirmaţi amânarea înregistrării conţinutului?<br><br>Puteţi reveni ulterior la conţinutul online, din secţiunea Preferinţe Online, de pe Desktop." #+ The text displayed in the connect content screen exit confirmation. This is only available when the connect content was displayed automatically when new DLC was detected and has to contain information where to find the screen again later.
+	val[]: "Doriţi să amânaţi înregistrarea?<br><br>Ulterior, veţi putea accesa dialogul Conectare Conţinut Online din Opţiuni Online, situat pe desktop." #+ The text displayed in the connect content screen exit confirmation. This is only available when the connect content was displayed automatically when new DLC was detected and has to contain information where to find the screen again later.
 
 	key[]: "connecting_content_t"
 	val[]: "CONECTARE" #+ The title of the online wait dialog shown while connecting content is in progress.
@@ -16031,7 +16146,7 @@
 	val[]: "Eroare în plasarea la coadă a operaţiunii de conectare pentru: $CONTENT_NAME$" #+ The text displayed when the queue of the content connection fails.
 
 	key[]: "registration_result_steamid_mismatch"
-	val[]: "Contul Steam utilizat pentru înregistrarea acestui pachet DLC nu corespunde contului folosit pentru crearea contului World of Trucks curent sau pentru activarea jocului. Vă rugăm să vă autentificaţi cu acel cont Steam şi sp încercaţi din nou." #+ The error displayed when the connect content operation fails because of a SteamID mismatch.
+	val[]: "Contul Steam pe care l-aţi utilizat pentru a înregistra acest DLC diferă faţă de cel ce a fost utilizat pentru crearea contului dvs. World of Trucks sau la înregistrarea acestui joc. Vă rugăm să schimbaţi contul Steam şi să încercaţi din nou." #+ The error displayed when the connect content operation fails because of a SteamID mismatch.
 
 	key[]: "registration_result_steamid_in_use"
 	val[]: "Contul Steam utilizat pentru înregistrarea acestui pachet DLC nu corespunde contului World of Trucks curent. Pentru înregistrarea acestui pachet pentru contul current, este nevoie să utilizaţi un cont Steam diferit." #+ The error shown to the user when the connect content operation fails because the current Steam account is connected to a different WoTr account.
@@ -16061,7 +16176,7 @@
 	val[]: "Felicitări! Pachetele DLC au fost conectate la contul World Of Trucks." #+ The content of the message box shown when selected content was successfully connected.
 
 	key[]: "registration_not_possible_steamid_mismatch"
-	val[]: "Nu se poate realiza conectarea - contul Steam curent este asociat unui cont World of Trucks diferit." #+ The message displayed when the current Steam account is connected to any world of trucks account that is not a currently used World of Trucks account.
+	val[]: "Nu se poate conecta conţinutul, deoarece contul Steam curent este asociat cu un alt cont World of Trucks." #+ The message displayed when the current Steam account is connected to any world of trucks account that is not a currently used World of Trucks account.
 
 	key[]: "registration_result_some_failed"
 	val[]: "Unele pachete DLC nu s-au conectat.<br>Treceţi cu mouse-ul peste semnele de exclamare ale fiecărui pachet DLC pentru mai multe detalii." #+ The content of the message box shown when not all selected content was successfully connected.
@@ -16082,7 +16197,7 @@
 	val[]: "<color value=@@clr_sel@@>Felicitări! <color value=@@clr_txt@@>Tot conţinutul deţinut este conectat la World of Trucks! Acum puteţi utiliza toate funcţiile acesteia." #+ The text displayed in online options which confirms that every DLC the user owns is connected.
 
 	key[]: "online_connect_content_account_mismatch"
-	val[]: "Imposibil de realizat conectarea conţinutului la World of Trucks - contul de Steam nu este cel asociat profilului World of Trucks." #+ A text displayed in online options when the currently used Steam account does not match a Steam account connected to the WoTr profile.
+	val[]: "Nu se poate conecta conţinutul nou la World of Trucks, deoarece contul Steam utilizat în prezent nu corespunde cu contul Steam folosit de profilul World of Trucks." #+ A text displayed in online options when the currently used Steam account does not match a Steam account connected to the WoTr profile.
 
 	key[]: "connected"
 	val[]: "Conectat" #+ The state of the content that is connected.
@@ -16094,10 +16209,10 @@
 	val[]: "Descărcarea listei de conţinut eşuată." #+ Error displayed when owned DLCs fetch fails.
 
 	key[]: "registered_game_list_fetch_failed"
-	val[]: "Descărcarea informaţiilor despre acest conţinut a eşuat." #+ Error displayed when connected DLCs fetch fails.
+	val[]: "Nu se pot prelua informaţii despre conţinutul conectat." #+ Error displayed when connected DLCs fetch fails.
 
 	key[]: "steam_info_fetch_failed"
-	val[]: "Descărcarea informaţiilor contului eşuată." #+ Error displayed when fetching of the currently used account fails.
+	val[]: "Nu se pot prelua informaţii despre contul utilizat în prezent." #+ Error displayed when fetching of the currently used account fails.
 
 	key[]: "later_button"
 	val[]: "Mai târziu" #+ The button postponing DLC registration for the later time.
@@ -16218,11 +16333,11 @@
 
 	#+ Text on gps advisor that is showed when player drive on the trigger for special mission pickup.
 	key[]: "special_job_offer"
-	val[]: "Apăsaţi următoarea tastă pentru a vedea detaliile livrării speciale:"
+	val[]: "Vă rugăm să apăsaţi următoarea tastă pentru a vedea detaliile ofertei de Transport Special:"
 
 	#+ Text on gps advisor that is showed when player drive on the trigger for special mission pickup, this is the name of the trigger, the name of the menu.
 	key[]: "special_job_offer_title"
-	val[]: "Ofertă Livrare Specială"
+	val[]: "Ofertă Transport Special:"
 
 	#+ Oversize tutorial intro text.
 	key[]: "oversize_tutorial_intro"
@@ -16307,10 +16422,10 @@
 	val[]: "Se încarcă Inventarul Steam" #+ Message describing why player has to wait for inventory items to be loaded.
 
 	key[]: "new_inventory_items_t"
-	val[]: "ELEMENTE NOI INVENTAR" #+ Title of the window displaying list of the new inventory items.
+	val[]: "ARTICOLE NOI ÎN STOC" #+ Title of the window displaying list of the new inventory items.
 
 	key[]: "new_inventory_items_help"
-	val[]: "S-au detectat elemente noi în inventarul Steam." #+ The help text for new inventory items dialog.
+	val[]: "Au fost detectate noi articole în Inventarul Steam." #+ The help text for new inventory items dialog.
 
 	key[]: "vehicle_accessory"
 	val[]: "Accesorii Vehicul" #+ Name of the inventory items category.
@@ -16347,7 +16462,7 @@
 	val[]: "Succes" #+ Success result message.
 
 	key[]: "steam_result_serviceunavailable"
-	val[]: "Conectare la Steam eşuată. Verificaţi conexiunea internet,şi,  dacă nu există probleme, reveniţi ulterior." #+ The message showed when game fails to connect to Steam servers.
+	val[]: "Nu se poate stabili conexiunea cu Steam. Verificaţi-vă conexiunea la internet, iar dacă aceasta este în regulă vă rugăm să încercaţi din nou mai târziu." #+ The message showed when game fails to connect to Steam servers.
 
 	key[]: "steam_result_timeout"
 	val[]: "Conexiunea Steam expirată. Vă rugăm, reveniţi." #+ The message showed when connection between game and Steam services times out.
@@ -16404,7 +16519,7 @@
 	val[]: "EVENIMENTE ÎN DESFĂŞURARE" #+ Title of the event popup.
 
 	key[]: "event_completed"
-	val[]: "Obiectiv Personal Îndeplinit!" #+ Text showed when player completes event.
+	val[]: "Obiectiv Personal Finalizat!" #+ Text showed when player completes event.
 
 	key[]: "open_event_page"
 	val[]: "Deschidere Pagină Evenimente" #+ Button opening event page on WoTr.
@@ -16452,7 +16567,7 @@
 	val[]: "Încărcare Remorcă"
 
 	key[]: "job_load"
-	val[]: "Apăsaţi următoarea tastă pentru încărcarea mărfii în remorca dumneavoastră."
+	val[]: "Apăsaţi următoarea tastă pentru a încărca mărfurile în remorca dvs.:"
 
 	key[]: "job_autoload_title"
 	val[]: "Auto-încărcare remorcă"
@@ -16464,7 +16579,7 @@
 	val[]: "Remorca este descărcată"
 
 	key[]: "job_unload"
-	val[]: "Apăsaţi următoarea tastă <br> pentru descărcarea remorcii:"
+	val[]: "Apăsaţi următoarea tastă pentru a descărca remorca:"
 
 	key[]: "dynamic_cargo_job_load_title"
 	val[]: "Încărcare mărfuri în remorcă"
@@ -16512,7 +16627,7 @@
 	val[]: "Selectaţi din partea dreaptă o remorcă pentru a vedea detaliile acesteia"
 
 	key[]: "trailerman_tut_utilization"
-	val[]: "Procentul de utilizare zilnică a remorcii în condiţiile actuale ale economiei. Calculul este bazat pe numărul de ore pe zi în care remorca este utilizată de către şoferii dvs. Actualizările graficului se realizează la începutul fiecărei zi. Procentajele mari indică o cerere mai mare pentru anumite tipuri remorci din garajul respectiv." #+ The utilization graph hint text.
+	val[]: "Procentul de utilizare zilnică a remorcilor în stadiul economiei actuale. Este bazat pe numărul de ore dintr-o zi în care remorcile sunt utilizate de şoferii dvs. Graficul se actualizează la începutul fiecărei zile. Valorile % mai ridicate indică o cerere mai mare pentru un anumit tip de remorcă din cadrul garajului său de origine." #+ The utilization graph hint text.
 
 	key[]: "trailerman_tut_overview"
 	val[]: "Toate remorcile deţinute de dvs pot fi vizualizate şi controlate de aici - interfaţa Manager Remorci.<br><br> Şoferilor dumneavoastră le sunt atribuite automat remorci stocate în garajele lor şi aceştia vor utiliza remorcile disponibile pentru livrări.<br><br>Setează o remorcă ca şi PRIVATĂ pentru a o putea utiliza numai dumneavoastră, iar PUBLICĂ pentru a o face accesibilă şoferilor dumneavoastră." #+ The text shown in trailer manager overview tutorial box.
@@ -16572,7 +16687,7 @@
 	val[]: "Remorca selectată a fost relocată în garajul din $CITY$." #+ Message shown after trailer relocation.
 
 	key[]: "trailerman_confirm_relocate"
-	val[]: "Confirmaţi relocarea $TRAILER$ la garajul dvs din $CITY$? ?" #+ Message shown after trailer relocation.
+	val[]: "Doriţi să relocaţi $TRAILER$ în garajul dvs. din $CITY$?" #+ Message shown after trailer relocation.
 
 	key[]: "trailerman_swap_blocked"
 	val[]: "Pentru a schimba, vizitaţi garajul de origine a remorcii" #+ Tooltip message shown when player is not able to swap his currently attached trailer with the currently previewed trailer in trailer manager because he is not in the garage where previewed trailer is stored at.
@@ -16590,19 +16705,19 @@
 	val[]: "Nu există mărfuri potrivite remorcii respective.<br><br>Asiguraţi-vă că aveţi toate calificările pentru a transporta marfă cu această remorcă şi că accesul vă este permis în aria respectivă." #+ Message showed when there are no available cargoes compatible with current trailer.
 
 	key[]: "hint_open_global_cargo_market"
-	val[]: "Momentan vizualizezi un număr limitat de oferte de transport marfă. Poţi vizualiza oferta globală apăsând butonul de mai jos." #+ Hint shown when user is seeing cargo market offer while visiting company in person or checking offer right after delivering cargo.
+	val[]: "În prezent, vedeţi un număr limitat de oferte de pe piaţa de mărfuri. Veţi putea vedea ofertele la nivel global prin apăsarea butonului de mai jos." #+ Hint shown when user is seeing cargo market offer while visiting company in person or checking offer right after delivering cargo.
 
 	key[]: "view_global_cargo_market"
 	val[]: "Vizualizare Piaţă Mărfuri Globală" #+ Button opening global cargo market.
 
 	key[]: "trailerdealer_exit_confirm"
-	val[]: "Doriţi cu adevărat să părăsiţi ecranul Achiziţionări Remorci?"
+	val[]: "Doriţi să părăsiţi ecranul Achiziţionări Remorci?"
 
 	key[]: "trailerdealer_buy_confirm"
-	val[]: "Confirmaţi achiziţionarea vehiculului $TRAILER$ pentru suma de $PRICE$ şi plasarea în oraşul $CITY$?" #+ Confirmation shown when player want's to buy new trailer.
+	val[]: "Doriţi să achiziţionaţi $TRAILER$ pentru suma de $PRICE$ şi să o stocaţi în garajul dvs. din $CITY$?" #+ Confirmation shown when player want's to buy new trailer.
 
 	key[]: "trailerdealer_buy_confirm_no_truck"
-	val[]: "Nu deţineţi un cap tractor, deci nu veţi putea utiliza remorca. Sunteţi sigur că doriţi să o achiziţionaţi?" #+ Confirmation shown when player tries to buy trailer but he has no truck.
+	val[]: "În prezent nu deţineţi niciun camion, aşa că nu veţi putea utiliza remorca dvs. Doriţi să achiziţionaţi remorca selectată?" #+ Confirmation shown when player tries to buy trailer but he has no truck.
 
 	key[]: "garageman_current_productivity"
 	val[]: "Productivitate:"
@@ -16701,7 +16816,7 @@
 	val[]: "JURNAL FINANCIAR" #+ Garage statistics popup title.
 
 	key[]: "garageman_select_slot_hint"
-	val[]: "Selectaţi un slot pentru a vedea detalii" #+ Hint shown in garage management screen.
+	val[]: "Selectaţi un spaţiu pentru a-i vedea detaliile." #+ Hint shown in garage management screen.
 
 	key[]: "garage_quicktravel_locked_tooltip"
 	val[]: "Nu puteţi efectua o călătorie rapidă la garajul în care vă aflaţi." #+ Tooltip shown when player hovers over disabled quick travel button.
@@ -16714,6 +16829,9 @@
 
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Acest garaj a fost complet modernizat." #+ Tooltip shown when player hovers over upgrade button.
+
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "Nu puteţi moderniza garajul, deoarece un vehicul deţinut este prea aproape de garaj." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
 
 	key[]: "driverman_stats_trailer"
 	val[]: "Remorcă actuală:" #+ Title of the current trailer statistics.
@@ -16760,11 +16878,11 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "Nu există noi îmbunătăţiri disponibile, pentru moment."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "Pentru a accesa Diagnosticul, trebuie să aveţi mai întâi alocat un vehicul."
 
 	key[]: "link_locked_msg_truck_dealer_map"
-	val[]: "Nu aţi descoperit, încă, niciun distribuitor auto!"
+	val[]: "Mai aveţi încă să descoperiţi vreun dealer de camioane."
 
 	key[]: "link_locked_msg_trailer_dealer"
 	val[]: "Avansaţi mai departe în carieră pentru a putea achiziţiona propriile remorci."
@@ -16791,7 +16909,7 @@
 	val[]: "Pentru a accesa Managerul de Şoferi va trebui să finalizaţi prima dumneavoastră cursă."
 
 	key[]: "link_locked_msg_recruit_map"
-	val[]: "Pentru a accesa agenţiile de recrutare, trebuie să deţineţi cel puţin un autovehicul."
+	val[]: "Pentru a accesa Agenţiile de Recrutare trebuie să cumpăraţi primul dumneavoastră camion."
 
 	key[]: "link_locked_msg_real_estate"
 	val[]: "Achiziţionaţi mai multe garaje de pe hartă pentru a accesa interfaţa rapidă Achiziţionare Garaj."
@@ -16818,7 +16936,7 @@
 	val[]: "Vinde remorca" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "trailerman_msg_reallysell"
-	val[]: "Confirmaţi vânzarea vehiculului $TRAILER$ contra sumei de<br>$MONEY$?"
+	val[]: "Doriţi într-adevăr vânzarea $TRAILER$ contra sumei de $MONEY$?"
 
 	key[]: "trailerman_msg_nosell"
 	val[]: "Nu puteţi vinde remorca în timpul unei livrări! Finalizaţi sarcina şi încercaţi din nou."
@@ -16827,10 +16945,10 @@
 #+ Message box shown to confirm take of selected trailer.
 #@{
 	key[]: "trailerman_confirm_take"
-	val[]: "Doriţi utilizarea remorcii $TRAILER$ trailer?<br><br>O veţi putea regăsi în garajul din $CITY$."
+	val[]: "Doriţi să utilizaţi remorca $TRAILER$?<br><br>Aceasta va apărea în garajul dvs. din $CITY$."
 
 	key[]: "trailerman_confirm_take_from_garage"
-	val[]: "Doriţi să luaţi remorca $TRAILER$ ?"
+	val[]: "Doriţi să preluaţi remorca $TRAILER$?"
 #@}
 
 #+ Message box shown to confirm store of selected trailer.
@@ -16842,7 +16960,7 @@
 #+ Message box shown to confirm swap of selected trailer with the currently attached owned trailer.
 #@{
 	key[]: "trailerman_confirm_swap"
-	val[]: "Doriţi schimbarea remorcii ataşate curent cu remorca $TRAILER$?"
+	val[]: "Doriţi să înlocuiţi remorca ataşată în prezent cu remorca $TRAILER$?"
 #@}
 
 #+ Message box shown when user requests to use a broken source trailer in copy configuration.
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Termoizolată, Uşă Laterală"
 
-	key[]: "bs_livestock"
-	val[]: "Transport Animale"
+	key[]: "bs_livestock_painted"
+	val[]: "Transport Animale, Vopsită"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Cală Transport Animale"
+	key[]: "bs_livestock_steel"
+	val[]: "Transport Animale, Oţel"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Cală Transport Animale, Vopsită"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Cală Transport Animale, Oţel"
 
 	key[]: "bs_log_steel"
 	val[]: "Podea Oţel - Buşteni"
@@ -17820,7 +17944,7 @@
 	val[]: "Selectează tot"
 
 	key[]: "total_price_confirmation_msg"
-	val[]: "Doriţi cu siguranţă să plătiţi $TOTAL_PRICE$ pentru aceste schimbări?"
+	val[]: "Confirmaţi plata sumei de $TOTAL_PRICE$ pentru aceste schimbări?"
 
 	key[]: "country_validity_trailer_warning_msg"
 	val[]: "<color value=@@clr_txt@@>Această configuraţie poate fi aplicată doar remorcilor compatibile în <color value=@@clr_sel@@>"
@@ -17913,10 +18037,10 @@
 	val[]: "Mare"
 
 	key[]: "re_buy_garage"
-	val[]: "Doriţi cu siguranţă achiziţionarea acestui garaj pentru $TOTAL_PRICE$?"
+	val[]: "Confirmaţi achiziţionarea acestui garaj pentru suma de $TOTAL_PRICE$?"
 
 	key[]: "re_upgrade_garage"
-	val[]: "Doriţi cu siguranţă achiziţionarea şi modernizarea acestui garaj pentru $TOTAL_PRICE$?"
+	val[]: "Confirmaţi achiziţionarea şi modernizarea acestui garaj pentru suma de $TOTAL_PRICE$?"
 
 	key[]: "re_after_purchase_msg"
 	val[]: "Mulţumim pentru achiziţia dumneavoastră. Puteţi administra noul dumneavoastră garaj din Managerul de Garaje."
@@ -17966,7 +18090,7 @@
 #+ X-mas event
 #@{
 	key[]: "xmas19_fetching"
-	val[]: "Se preia evoluţia oraşului..."
+	val[]: "Se preia progresul oraşului..."
 
 	key[]: "xmas19_star"
 	val[]: "★"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Părăsire mod cursor liber" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "Fără vehicul"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Camion"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18081,7 +18211,7 @@
 	val[]: "A apărut e eroare neprevăzută şi operaţiunea nu a fost finalizată."
 
 	key[]: "mp_job_has_some_job"
-	val[]: "Aveţi deja o livrare în curs, astfel că nu puteţi accepta încă una." #+ internal error message
+	val[]: "Aveţi deja o livrare în desfăşurare, astfel că nu puteţi accepta încă una." #+ internal error message
 
 	key[]: "mp_job_wrong_source_company"
 	val[]: "Nu este posibilă găsirea companiei sursă pe baza combinaţiei dintre oraş şi companie." #+ internal error message
@@ -18090,15 +18220,15 @@
 	val[]: "Nu este posibilă găsirea companiei de destinaţie pe baza combinaţiei dintre oraş şi companie." #+ internal error message
 
 	key[]: "mp_job_missing_target_navigation"
-	val[]: "Companiile furnizate nu au nicio cale de navigaţie între ele." #+ internal error message
+	val[]: "Companiile oferite nu au nicio cale de navigaţie între ele." #+ internal error message
 
 	key[]: "mp_job_missing_cargo"
-	val[]: "Nu s-a putut găsi nicio încărcătură pentru livrare. Companiile nu au niciun transport pentru a fi realizat între ele."
+	val[]: "Nu s-a putut găsi nicio încărcătură pentru livrare. Companiile nu au nicio încărcătură de transportat între ele."
 
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Nu aveţi o remorcă compatibilă cu livrarea curentă."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Poate fi efectuată doar cu propriul vehicul."
 
 	key[]: "mp_job_missing_trailer"
@@ -18225,7 +18355,7 @@
 	val[]: "A apărut o eroare neprevăzută.<br><br>Aţi fost deconectat de la sesiune."
 
 	key[]: "reason_server_authentication_failed"
-	val[]: "Nu s-a putut autentifica conexiunea cu gazda."
+	val[]: "Autentificare conexiunii cu gazda nu a putut fi realizată."
 
 	key[]: "reason_accepted_invite"
 	val[]: "Aţi acceptat o nouă invitaţie la o sesiune Convoi.<br>Conectarea se va face după ecranul Convoi Încheiat."
@@ -18649,7 +18779,7 @@
 	val[]: "ÎNLĂTURARE JUCĂTOR"
 
 	key[]: "mp_kick_player_msg"
-	val[]: "Doriţi cu siguranţă înlăturarea $PLAYER_NAME$ din Convoi?"
+	val[]: "Confirmaţi înlăturarea $PLAYER_NAME$ din Convoi?"
 
 	key[]: "mp_invalid_admin_kick_rights"
 	val[]: "Nu mai aveţi dreptul de a înlătura jucători."
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "O companie din apropierea camionului sau a remorcii va trebui activată pentru a vă putea alătura acestei sesiuni.<br>Pentru a evita orice probleme, vă rugăm mutaţi camionul şi remorca mai departe de companie sau cursa curentă va fi anulată şi veţi fi teleportat la cel mai apropiat service.<br><br>Doriţi să continuaţi?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "O companie aflată aproape de locul în care v-aţi lăsat camionul sau remorca înainte de a accepta cursa rapidă va trebui activată pentru a vă putea alătura acestei sesiuni.<br>Pentru a evita orice probleme atunci când vă veţi întoarce la camionul deţinut, cursa rapidă trebuie anulată şi veţi fi teleportat la cel mai apropiat service.<br><br>Doriţi să continuaţi?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18775,13 +18905,13 @@
 	val[]: "Nu s-a putut conecta la server pentru sincronizarea datelor."
 
 	key[]: "mp_error_wotr_resume_job"
-	val[]: "Nu s-a putut conecta la World of Trucks."
+	val[]: "Nu se poate realiza conexiunea cu World of Trucks."
 
 	key[]: "mp_error_wotr_invalid_position"
 	val[]: "Vehiculul modificat este prea lung pentru poziţia de start."
 
 	key[]: "mp_error_wotr_cancel_job"
-	val[]: "Nu s-a putut conecta la World of Trucks pentru a anula contractul."
+	val[]: "Nu se poate realiza conexiunea cu World of Trucks pentru a anula contractul."
 
 	key[]: "all_job_types"
 	val[]: "Toate contractele"
@@ -18919,14 +19049,14 @@
 	key[]: "job_equipment"
 	val[]: "Echipament de lucru:"
 
-	key[]: "equipment_provided_truck_and_trailer"
-	val[]: "Camion şi remorcă furnizate"
+	key[]: "equipment_provided_vehicle_and_trailer"
+	val[]: "Totul pus la dispoziţie"
 
-	key[]: "equipment_owned_truck_provided_trailer"
-	val[]: "Camion deţinut"
+	key[]: "equipment_owned_vehicle_provided_trailer"
+	val[]: "Vehicul deţinut"
 
-	key[]: "equipment_owned_truck_and_trailer"
-	val[]: "Camion şi remorcă deţinute"
+	key[]: "equipment_owned_vehicle_and_trailer"
+	val[]: "Vehicul şi remorcă deţinute"
 
 	key[]: "mp_job_quick_travel_message"
 	val[]: "Sunteţi prea departe faţă de locaţia companiei sursă. Doriţi să efectuaţi o călătorie rapidă mai aproape?<br><br>destinaţie Călătorie Rapidă: <color value=@@clr_sel@@>$DESTINATION$<br><color value=@@clr_txt@@>Cost: <color value=@@clr_sel@@>$COST$"
@@ -19042,10 +19172,10 @@
 	val[]: "Oraşe descoperite"
 
 	key[]: "convoy_concluded_recruitment_discovered"
-	val[]: "Agenţii de recrutare descoperite"
+	val[]: "Agenţii recrutare descoperite"
 
 	key[]: "convoy_concluded_dealers_discovered"
-	val[]: "Distribuitori de camioane descoperiţi"
+	val[]: "Dealeri de camioane descoperiţi"
 
 	key[]: "convoy_concluded_explored_ratio"
 	val[]: "Drumuri explorate"
@@ -19157,13 +19287,13 @@
 	val[]: "Voi face o modificare."
 
 	key[]: "qr_serv_004"
-	val[]: "Fără combustibil."
+	val[]: "Rămas fără carburant."
 
 	key[]: "qr_serv_005"
 	val[]: "Accident!"
 
 	key[]: "qr_serv_006"
-	val[]: "Să ne oprim pentru combustibil."
+	val[]: "Să ne oprim pentru carburant."
 
 	key[]: "qr_serv_007"
 	val[]: "Să ne oprim la service."
@@ -19273,7 +19403,7 @@
 	val[]: "Închidere intrare chat după trimiterea mesajului"
 
 	key[]: "chat_on_navigation"
-	val[]: "Prezenţă chat pe pagina de Navigaţie"
+	val[]: "Prezenţă chat pe pagina Sistemului de Navigaţie"
 
 	key[]: "chat_full_fade_out"
 	val[]: "Estompare completă chat"
@@ -19333,10 +19463,10 @@
 	val[]: "Resetare la valori Implicite"
 
 	key[]: "reset_default_quick_replies"
-	val[]: "Resetaţi răspunsurile la valorile implicite?"
+	val[]: "Doriţi să resetaţi răspunsurile dvs. la valorile implicite?"
 
 	key[]: "leave_without_saving_quick_replies"
-	val[]: "Părăsire Editare Răspunsuri Rapide?<br>Toate modificările vor fi pierdute."
+	val[]: "Doriţi să părăsiţi Editare Răspunsuri Rapide?<br>Toate modificările vor fi pierdute."
 #@}
 
 #+ Multiplayer quick replies.
@@ -20020,17 +20150,17 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Ţări vizitate"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Puncte de lucru contractate"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Companii contractate"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
-	val[]: "Distribuitori autorizaţi"
+	val[]: "Dealeri camioane"
 
 	key[]: "career_progress_stats_recruitment_agencies_discovered_count"
-	val[]: "Agenţii de recrutare"
+	val[]: "Agenţii recrutare"
 
 	key[]: "career_progress_stats_discovered_viewpoint_count"
 	val[]: "Puncte de observaţie vizitate"
@@ -20237,6 +20367,36 @@
 	val[]: "Ieşire"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Modul"
+
+	key[]: "truck_mode"
+	val[]: "Modul Camion"
+
+	key[]: "truck_mode_help"
+	val[]: "Realizaţi livrări diverse cu un camion"
+
+	key[]: "bus_mode"
+	val[]: "Modul Autocar"
+
+	key[]: "bus_mode_help"
+	val[]: "Experimentaţi un alt mod ca şi şofer de autocar"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "Pentru a accesa Modul Autocar va trebui să finalizaţi prima dumneavoastră cursă"
+
+	key[]: "car_mode"
+	val[]: "Modul Autoturism"
+
+	key[]: "car_mode_help"
+	val[]: "Efectuaţi curse diverse şi exploraţi lumea cu autoturismul"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "Pentru a accesa Modul Autoturism va trebui să finalizaţi prima dumneavoastră cursă"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20309,7 +20469,7 @@
 	val[]: "Navigare şi revizuire camioane rulate disponibile pentru achiziţionare."
 
 	key[]: "link_locked_msg_used_trucks" # - tooltip for when the used trucks are not yet unlocked
-	val[]: "Încă nu aţi descoperit niciun distribuitor autorizat de camioane."
+	val[]: "Mai aveţi încă să descoperiţi vreun dealer de camioane."
 
 	key[]: "trailer_dealer_desc" # - tooltip for explaining what the trailer dealer is - feature is active
 	val[]: "Navigare, revizuire şi reconfigurare remorci disponibile pentru achiziţionare."
@@ -20333,13 +20493,13 @@
 #+ Intro Scene. Only translate into officially supported languages.
 #@{
 	key[]: "health_warning"
-	val[]: "Avertizare medicală"
+	val[]: "Health warning"
 
 	key[]: "health_warning_description"
-	val[]: "Un număr redus de persoane pot fi susceptibile la crize epileptice sau pierderea stării de conştienţă atunci când sunt expuse anumitor lumini intermitente sau tipare de lumină. Aceste persoane pot experimenta o criză în timp ce privesc anumite imagini sau jucându-se un joc video. Dacă dvs. sau oricine din familia dvs. aţi prezentat simptome asociate epilepsiei (convulsii sau pierderea stării de conştienţă) sub expunerea la lumini intermitente, consultaţi un medic specialist şi luaţi toate precauţiile necesare înainte de a începe jocul.<br offset=20>Dacă dvs. sau copilul dvs. prezentaţi oricare dintre următoarele simptome în timp ce vă jucaţi orice joc video: ameţeli, tulburări de vedere, spasme musculare sau ale ochilor, pierderea stării de conştienţă, dezorientare, convulsii, mişcări involuntare, întrerupeţi imediat sesiunea de joc şi consultaţi un medic specialist."
+	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
 
 	key[]: "trademark"
-	val[]: "Toate numele de brand, mărcile comerciale, mărcile înregistrate, logourile şi simbolurile de pe vehiculele din joc sunt proprietăţi aparţinând proprietarilor de drept ale acestora. Folosite cu amabilul acord al proprietarilor de drept. Mărcile comerciale şi designul MAN® sunt drepturi înregistrate ale MAN Truck & Bus AG şi sunt utilizate sub licenţă către SCS Software s.r.o. „Mercedes-Benz” şi „Three pointed star in a ring” sunt mărci comerciale ale Daimler AG şi sunt utilizate sub licenţă de către SCS Software s.r.o. Mărcile comerciale şi designul RENAULT sunt drepturi înregistrate ale sau licenţiate către AB Volvo Group şi sunt utilizate în baza unei licenţe. Mărcile comerciale şi designul VOLVO sunt drepturi înregistrate ale sau licenţiate către AB Volvo Group şi sunt utilizate în baza unei licenţe."
+	val[]: "All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN® trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license."
 #@}
 
 #+ Save manager errors
@@ -20385,7 +20545,7 @@
 	key[]: "time_skip_hours"
 	val[]: "Numărul de ore de trecut peste"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Ora curentă"
 
@@ -20436,7 +20596,7 @@
 	key[]: "time_skip_rest_full"
 	val[]: "Complet odihniţi"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
 	val[]: "Această odihnire nu va îndeplini condiţiile privind pauza obligatorie. Veţi avea $LEFT_TIME$ rămase până la următoarea pauză obligatorie."
 
@@ -20445,18 +20605,18 @@
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
 	val[]: "Pentru fiecare <color value=@@clr_sel@@>$DRIVE_TIME$</color> ore de condus, trebuie să luaţi o pauză obligatorie pentru cel puţin <color value=@@clr_sel@@>$BREAK_TIME$</color> ore pentru evita primirea amenzilor."
-	
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "După odihnire şi după timpul estimat de condus până la destinaţie, veţi avea <color value=@@clr_sel@@>$LEFT_TIME$</color> rămase pentru livrare."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "După odihnire şi după timpul estimat de condus până la destinaţie, livrarea va fi întârziată cu <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>Veţi fi complet odihniţi</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Sosire Estimată"
 
@@ -20490,7 +20650,7 @@
 
 	key[]: "rest_state_simulation"
 	val[]: "Simulare Stare Odihnire"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "După activare, veţi resimţi efectele stării de oboseală în timp.<br><br>Va trebui să vă odihniţi pentru a vă reveni."
 #@}

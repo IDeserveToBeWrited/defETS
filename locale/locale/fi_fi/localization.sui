@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Vapaa kuin tuuli"
 
+	key[]: "loading_location_country"
+	val[]: "Matkalla alueella: $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Transferring" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Nykyinen työ"
 
@@ -108,10 +114,10 @@
 	val[]: "Vakioväri" #+ Header of list containing stock colors.
 
 	key[]: "every_paint_job_t"
-	val[]: "MAALAUSTYÖT" #+ Header of list containing all paint jobs.
+	val[]: "ERIKOISMAALAUS" #+ Header of list containing all paint jobs.
 
 	key[]: "every_paint_job"
-	val[]: "Maalaustyöt" #+ Header of list containing all paint jobs.
+	val[]: "Erikoismaalaus" #+ Header of list containing all paint jobs.
 
 	key[]: "brand_t"
 	val[]: "VEHICLE DESIGN"
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "VEHICLE ANALYSIS" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "AJONEUVON YHTEENVETO" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
-	val[]: "VEHICLE ANALYSIS" #+ Header of the pop-up when taking heavy cargo
+	key[]: "vehicle_analysis_popup_t"
+	val[]: "AJONEUVON YHTEENVETO" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Ajoneuvon Ominaisuudet" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Ajoneuvon Ominaisuudet" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Normaali kuorma" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Olet aikeissa lähteä viemään raskasta kuljetusta. Käy vielä läpi nykyinen rekkasi, jotta siitä on varmasti suorittamaan valitsemasi keikka." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Given your expected typical type of transportation, tune your vehicle to optimize it according to a combination of economy of driving, technical and legal limitations." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Given the standard expected type of transportation, tune your vehicle to optimise it according to a combination of fuel economy, technical and legal limitations." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Käytettävyys kevyiden ja keskiraskaiden kuormien kuljetuksiin" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Käytettävyys raskaiden kuormien kuljetuksiin sekä erikoiskuljetuksiin" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Ability of your vehicle to maneuver in tight space areas" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Ability of your vehicle to manoeuvre in tight space areas" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimized vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optimisation of vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Soveltuvuus epätasaisella maalla kulkemiseen" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -262,7 +268,7 @@
 
 
 	key[]: "truck_action_t"
-	val[]: "VEHICLE SERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
+	val[]: "AJONEUVOHUOLTO" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
 
 #+ Truck service screen.
 #+
@@ -275,8 +281,8 @@
 	key[]: "truck_service"
 	val[]: "Huolto" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
-	val[]: "Vehicle maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
+	key[]: "vehicle_service_about"
+	val[]: "Ajoneuvon huolto ja korjaukset. Hyvä kuljettaja pitää aina ajoneuvonsa viimeisen päälle kunnossa." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
 	val[]: "VAURIORAPORTTI" #+ Header of section displaying status of individual components of the vehicle (engine, transmission, ....).  Please keep in upper case where possible. Please keep in upper case where possible.
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Vaihda kaikki" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "AJONEUVON VAURIORAPORTTI" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "PERÄVAUNUN VAURIORAPORTTI" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Vahvista" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Vehicle damage" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Ajoneuvon vaurio" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,14 +311,14 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
-	val[]: "VEHICLE CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
+	key[]: "vehicle_config_t"
+	val[]: "KUSTOMOINTI" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Vehicle Configurator" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Ajoneuvon Kustomointi" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
-	val[]: "You know, there's always something you can tune or paint to make you feel better about your vehicle." #+ Help message associated with upgrade icon.
+	key[]: "vehicle_config_about"
+	val[]: "Tiedäthän, että aina voit maalata tai tuunata ajoneuvoasi, jotta se tuntuisi mieleisemmältä." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
 	val[]: "Hinta" #+ Label of line with combined price of all new parts in basket.
@@ -321,10 +327,10 @@
 	val[]: "Hyvitykset" #+ Label of line with combine price of all parts sold as part of the upgrade.
 
 	key[]: "select_cat"
-	val[]: "Valitse parannuksen kategoria yllä olevasta valikosta." #+ Text shown if user did not select any component category.
+	val[]: "Valitse kategoria yllä olevasta valikosta." #+ Text shown if user did not select any component category.
 
 	key[]: "select_pin"
-	val[]: "Choose a pin on the vehicle to view applicable accessories."
+	val[]: "Valitse pallo nähdäksesi siihen kohtaan sopivat lisävarusteet."
 
 	key[]: "tc_orig_price"
 	val[]: "Alkuperäinen hinta:" #+ Followed by the price of the original configuration of the new truck.
@@ -354,7 +360,7 @@
 	val[]: "Lisenssiosa"
 
 	key[]: "overlay_reset_cam"
-	val[]: "Camera reset"
+	val[]: "Palauta kamera"
 
 	key[]: "overlay_lights"
 	val[]: "Valot"
@@ -381,7 +387,7 @@
 	val[]: "Irroita perävaunu"
 
 	key[]: "overlay_scroll"
-	val[]: "Scroll"
+	val[]: "Vieritä"
 
 	key[]: "overlay_pick_color_slot"
 	val[]: "Vaihda väriä"
@@ -410,8 +416,8 @@
 	key[]: "truck_diag"
 	val[]: "Rekan Diagnostiikka" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
-	val[]: "View information about your vehicle and its current condition."
+	key[]: "vehicle_diag_about"
+	val[]: "Katso tietoja ajoneuvostasi ja sen nykyisestä kunnosta."
 
 	key[]: "truck_diag_warning"
 	val[]: "Ajoneuvosi on huonossa kunnossa. Huolla se mahdollisimman pian"
@@ -426,13 +432,13 @@
 	val[]: "Kuvaa ajoneuvon osien ikääntymistä ja kulumista. Voidaan korjata täydellisellä kunnostuksella." #+ Explanation of integrity wear in tooltip.
 
 	key[]: "truck_diag_tooltip_wear_unfixable"
-	val[]: "Keskimääräiset vauriot:" #+ Label of unfixable wear in tooltip.
+	val[]: "Kuluman keskiarvo:" #+ Label of unfixable wear in tooltip.
 
 	key[]: "truck_diag_tooltip_wear_unfixable_note"
 	val[]: "Osaa ei voi korjata, vaan se tulee vaihtaa." #+ Explanation of unfixable wear in tooltip.
 
 	key[]: "truck_diag_tooltip_wear"
-	val[]: "Keskivahinko:" #+ Label of damage in tooltip.
+	val[]: "Vaurioiden keskiarvo:" #+ Label of damage in tooltip.
 
 	key[]: "truck_diag_tooltip_wear_note"
 	val[]: "Osa voidaan korjata tai vaihtaa." #+ Explanation of damage in tooltip.
@@ -468,7 +474,7 @@
 	val[]: "Omavastuu:" #+ Followed by to limits of current insurance.
 
 	key[]: "total"
-	val[]: "Lopullinen maksettava:" #+ Followed by to total price for the currently selected upgrades or repairs.
+	val[]: "Kokonaiskustannus:" #+ Followed by to total price for the currently selected upgrades or repairs.
 
 
 	key[]: "basket"
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "Olet asettanut tuotteita tilaukseen!<br><br>Haluatko peruuttaa kaikki tehdyt muutokset?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Työnantajasi ei pidä siitä, jos näpertelet heidän ajoneuvoaan." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "Et voi muuttaa perävaunun tyyppiä, koria tai alustaa kesken kuljetustyön. Hoida kuljetuksesi loppuun ja kokeile sitten uudestaan." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -638,7 +644,7 @@
 	val[]: "Etulokasuoja" #+ Fender (chassis part-based) of the truck above/around front wheel
 
 	key[]: "f_fendr_chs"
-	val[]: "Front Fender Bottom" #+ Fender (chassis part-based) of the truck above/around front wheel
+	val[]: "Lokasuojan alapuoli" #+ Fender (chassis part-based) of the truck above/around front wheel
 
 	key[]: "f_grill"
 	val[]: "Karjapuskuri"
@@ -695,7 +701,7 @@
 	val[]: "Tuulilasin kehys" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Ilmansuodatin" #+ Air filter accessoty.
+	val[]: "Ilmansuodatin" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Lippu (oikea ikkuna)" #+ Right window flag
@@ -779,7 +785,7 @@
 	val[]: "Takarenkaat"
 
 	key[]: "rear_window"
-	val[]: "Rear Window"
+	val[]: "Takaikkuna"
 
 	key[]: "rim"
 	val[]: "Vanne" #+ Wheel rim (older part name)
@@ -1081,7 +1087,7 @@
 #@{
 
 	key[]: "no_drive_t"
-	val[]: "NO VEHICLE" #+ Message box title. Please keep in upper case where possible.
+	val[]: "EI AJONEUVOA" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "no_drive"
 	val[]: "You cannot move freely about the world because you don't have a vehicle to drive! You could purchase one or take one from your fleet.<br><br>Would you like to take a quick job now?"
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "Lataa peli" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Tallennuksen lataaminen epäonnistui."
 
 	key[]: "load_game_desc"
 	val[]: "Lataa aiemmin tallennettu peli. Nykyinen edistymisesi jää tallentamatta!" #+ Help message associated with load game icon.
@@ -1384,11 +1393,11 @@
 
 	#+ Char Limit: 25
 	key[]: "checkpoint_len"
-	val[]: "Seuraavan reittipisteen etäisyys" #+ Shown in the route info box in the line indicating the distance to the closest checkpoint."
+	val[]: "Etäisyys seuraavaan etappiin" #+ Shown in the route info box in the line indicating the distance to the closest checkpoint."
 
 	#+ Char Limit: 25
 	key[]: "checkpoint_time"
-	val[]: "Seuraavan reittipisteen aika" #+ Shown in the route info box in the time of arrival to the closest checkpoint.
+	val[]: "Aika seuraavaan etappiin" #+ Shown in the route info box in the time of arrival to the closest checkpoint.
 #@}
 
 
@@ -1502,7 +1511,7 @@
 	val[]: "Erikoiskuljetukset"
 
 	key[]: "cargo_type_highvalue"
-	val[]: "Arvokuljetukset"
+	val[]: "Arvotavara"
 
 	key[]: "cargo_type_heavy"
 	val[]: "Raskas"
@@ -1655,7 +1664,7 @@
 	val[]: "Uusi blogikirjoitus on luettavissa!" #+ Fallback news text content in case of fetch errors
 
 	key[]: "no_truck_dlc"
-	val[]: "No vehicles found! Please re-enable at least one vehicle DLC and restart the game." #+ Text shown when there is no truck available.
+	val[]: "Ajoneuvoja ei löytynyt! Aktivoi vähintään yksi ajoneuvo DLC ja käynnistä peli uudelleen." #+ Text shown when there is no truck available.
 
 	key[]: "extras"
 	val[]: "Lisämateriaali"
@@ -1843,7 +1852,7 @@
 	val[]: "Kuljettajan Tiedot"
 
 	key[]: "profile_edit_desc"
-	val[]: "Muokkaa ura-asetuksia."
+	val[]: "Muokkaa uran asetuksia."
 
 	key[]: "change_avatar"
 	val[]: "Muokkaa kuljettajaa"
@@ -1852,7 +1861,7 @@
 	val[]: "VERKKOPROFIILIIN KIRJAUTUMINEN" #+ Title of the login screen. Please keep in upper case where possible.
 
 	key[]: "online_info"
-	val[]: "CONNECTIVITY" #+ Keep capitalized
+	val[]: "YHTEYDET" #+ Keep capitalized
 
 	key[]: "wotr_account_label"
 	val[]: "World of Trucks tili"
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Ostettu" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Hinta" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Suodatin" #+ Combo box with job sorting options."
 
@@ -2012,7 +2024,7 @@
 	val[]: "Perävaunupaketit" #+ Button in filter droplist. Please keep it as short as possible.
 
 	key[]: "filter_paint"
-	val[]: "Maalaustyöt" #+ Button in filter droplist. Please keep it as short as possible.
+	val[]: "Erikoismaalaukset" #+ Button in filter droplist. Please keep it as short as possible.
 
 	key[]: "filter_cargo"
 	val[]: "Rahtipaketit" #+ Button in filter droplist. Please keep it as short as possible.
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Maalaukset" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Ajoneuvot" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Kaikki" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2087,13 +2102,55 @@
 	val[]: "Avaa" #+ Label for an input icon in DLC widget. Please keep it as short as possible.
 
 	key[]: "dlc_widget_close"
-	val[]: "Dismiss" #+ Label for an input icon in DLC widget. Please keep it as short as possible.
+	val[]: "Sulje" #+ Label for an input icon in DLC widget. Please keep it as short as possible.
 
 	key[]: "dlc_browser_online_wait_title"
 	val[]: "LADATAAN" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Odota, ladataan DLC tietoja."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Haluatko avata selaimen ja mennä valitulle verkkosivulle?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "Yhtään DLC:tä ei löytynyt."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "The catalogue operation was cancelled." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "The catalogue has encountered an unknown error." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "The catalogue is not initialized." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "The operation could not start because a blocking operation is currently in progress." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "Some of the data provided is incorrect or incomplete." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Trying to request operation with a product that is either missing from our local catalogue or the platform back end catalogue." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "The catalogue request has failed." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "Saatu vastaus oli väärin muodostunut." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "The catalogue has encountered an internal error." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Toiminnallisuus ei ole saatavilla nykyisellä alustalla." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "The catalogue service is currently unavailable. Try again later." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "The catalogue has encountered an internal error." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2246,7 +2303,7 @@
 	val[]: "Käytössä erillinen ohjain? Ehkäpä peliohjain, joystick tai ratti? Varmista, että asennat sen oikein."
 
 	key[]: "help_bcg_theme"
-	val[]: "Highlight your vehicle with a personalized desktop background. Pick one that suits your style!"
+	val[]: "Korosta ajoneuvosi personoiduilla taustakuvilla. Valitse tyyliisi sopivin!"
 
 #@}
 
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "KÄYTTÖLIITTYMÄ" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "VEHICLE SOUNDS" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "AJONEUVON ÄÄNET" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "SISÄTILAN ÄÄNET" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Äänenvoimakkuus" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Vehicle engine volume" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Ajoneuvon moottorin äänenvoimakkuus" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Vehicle exhaust volume" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Ajoneuvon pakoäänien äänenvoimakkuus" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Vehicle turbo volume" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Ajoneuvon turbon äänenvoimakkuus" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Vehicle effects volume" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Ajoneuvon tehosteiden äänenvoimakkuus" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Vehicle noise volume" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Ajoneuvon äänien äänenvoimakkuus" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Perävaunun äänenvoimakkuus" #+ Slider controlling volume of the trailer noises.
@@ -2516,20 +2573,20 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Säätää pelin äänenvoimakkuutta."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's engine."
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
+	val[]: "Säätää ajoneuvon moottorin äänenvoimakkuutta."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's exhaust."
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
+	val[]: "Säätää ajoneuvon pakoäänien äänenvoimakkuutta."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's turbo."
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
+	val[]: "Säätää ajoneuvon turbon äänenvoimakkuutta."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of other vehicle sound effects, such as hissing of the air brakes."
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
+	val[]: "Säätää ajoneuvon äänitehosteiden, esimerkiksi ilmajarrujen sihaus, äänenvoimakkutta."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of noise coming from the vehicle's tyres."
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
+	val[]: "Säätää ajoneuvon rengasmelun äänenvoimakkuutta."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Säätää perävaunun rengasmelun äänenvoimakkuutta."
@@ -2544,7 +2601,7 @@
 	val[]: "Säätää ympäristön äänien, kuten luonto, kaupungin hälinä jne., äänenvoimakkuutta."
 
 	key[]: "interior_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's interior sounds."
+	val[]: "Säätää ajoneuvon sisätilan äänien äänenvoimakkuutta."
 
 	key[]: "radio_volume_op_tooltip" # - Audio, Simple
 	val[]: "Säätää radion äänenvoimakkuutta."
@@ -2604,13 +2661,13 @@
 	val[]: "Kytkee päälle äänet tärisevien tiemerkintöjen yliajamisesta."
 
 	key[]: "noise_window_op_tooltip" # - Audio, Advanced
-	val[]: "Enables additional noise of the air flowing through the windows when the vehicle's windows are open.<br><br><color value=@@clr_txt_d@@>Requires \"Noise of the flowing air\" enabled to function."
+	val[]: "Lisää ylimääräisen äänen ikkunoista sisään virtaavasta ilmasta kun ajoneuvon ikkunat ovat auki.<br><br><color value=@@clr_txt_d@@>Vaatii että \"Ilmavirtauksen ääni\" on käytössä."
 
 	key[]: "noise_aero_op_tooltip" # - Audio, Advanced
-	val[]: "Enables noise of the air flowing around your vehicle's cabin."
+	val[]: "Ottaa käyttöön ilmavirran äänet ajoneuvon ohjaamossa."
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
-	val[]: "Enables reverb effect of your vehicle's cabin."
+	val[]: "Ottaa käyttöön ajoneuvon ohjaamon kaikutehosteen."
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "Ottaa käyttöön ympäristön äänten kaikutehosteen."
@@ -2656,14 +2713,14 @@
 	key[]: "transmission_settings"
 	val[]: "VAIHTEISTO" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "VEHICLE PHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "AJONEUVON FYSIIKKA" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "ASSISTANTS" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
 
 	key[]: "trailer_settings"
-	val[]: "TRAILER" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
+	val[]: "PERÄVAUNU" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
 
  	key[]: "camera_settings"
 	val[]: "KAMERA" #+ Title of 'Camera' settings section. Please keep in upper case where possible.
@@ -2794,7 +2851,7 @@
 	val[]: "Polttoaineenkulutuksen yksikkö" #+ Selector for consumption unit display (l/100km, mpg).
 
 	key[]: "default_setting"
-	val[]: "oletus (valitut tilavuuden/etäisyyden yksiköt)"
+	val[]: "oletus (valittu tilavuus/etäisyys)"
 
 	key[]: "mpg_us_setting"
 	val[]: "mpg (USA:n gallona)"
@@ -2840,19 +2897,19 @@
 #+ Adviser speed limit visualization
 #@{
 	key[]: "adviser_speed_limit"
-	val[]: "Navigation speed limit" #+ Droplist for selection mode of speed limit visualization.
+	val[]: "Navigaattorin nopeusrajoitus" #+ Droplist for selection mode of speed limit visualization.
 
 	key[]: "hide"
 	val[]: "Piilota" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
-	val[]: "Show limit for current vehicle mode" #+ Show speed limits for vehicles on the advisor.
+	key[]: "automatic_limit"
+	val[]: "Näytä nykyisen ajoneuvotilan rajoitus" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
 	val[]: "Näytä auton rajoitus" #+ Show speed limits for ordinary cars on the advisor.
 
 	key[]: "adviser_speed_warning"
-	val[]: "Navigation speeding warning" #+ Checkbox enabling speeding warning
+	val[]: "Navigaattorin ylinopeusvaroitus" #+ Checkbox enabling speeding warning
 #@}
 
 #+ Map alignment modes
@@ -2959,7 +3016,7 @@
 	val[]: "Pidä pienoisohjelmat piilotettuna" #+ Checkbox forcing hidden RA to stay hidden (no popups).
 
 	key[]: "mirrors_keep_hidden"
-	val[]: "Pidä peilit piilotettuina" #+ Checkbox forcing HUD mirrors to stay hidden (no popups).
+	val[]: "Älä näytä peilejä" #+ Checkbox forcing HUD mirrors to stay hidden (no popups).
 
 	key[]: "notifications_keep_hidden"
 	val[]: "Pidä tiedotteet piilotettuna" #+ Checkbox forcing HUD notifications to stay hidden (no popups).
@@ -2979,8 +3036,8 @@
 	key[]: "brake_intensity"
 	val[]: "Jarrun herkkyys" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
-	val[]: "Vehicle stability" #+ Slider for player modification of truckstability (COG position).
+	key[]: "vehicle_stability"
+	val[]: "Ajoneuvon tasapaino" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
 	val[]: "Perävaunun tasapaino" #+ Slider for player modification of trailer stability (COG position).
@@ -3043,9 +3100,9 @@
 	val[]: "Nostettavien akseleiden automaattinen lasku" #+ Checkbox for automatic axle dropping of liftable axles.
 
 	key[]: "throttle_double_tap"
-	val[]: "Smart throttle control" #+ Checkbox for double tap mode of the digital throttle.
+	val[]: "Älykäs kaasun hallinta" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "Nopeudenrajoitin" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3162,6 +3219,9 @@
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Sisäkameran horisonttiin lukitsemisen muuttuja" #+ Slider for interior camera horizon locking.
 
+	key[]: "cam_fov_speed_factor"
+	val[]: "Interior camera speed-based FOV change" #+ Slider for interior camera speed-based FOV changes.
+
 	key[]: "cam_auto_center_delay"
 	val[]: "Automaattisen kamerankeskityksen viive" #+ Dropdown for camera auto centering delay.
 
@@ -3222,7 +3282,7 @@
 	val[]: "Pitää kaikki pienoisohjelmat piilotettuna."
 
 	key[]: "mirrors_keep_hidden_op_tooltip" # - Gameplay, Advanced
-	val[]: "Keeps both HUD mirrors hidden."
+	val[]: "Piilottaa molemmat virtuaalipeilit."
 
 	key[]: "notifications_keep_hidden_op_tooltip" # - Gameplay, Advanced
 	val[]: "Pitää kaikki tiedotteet piilotettuna myös silloin kun ne vastaanotetaan."
@@ -3258,7 +3318,7 @@
 	val[]: "Määrittelee näytetäänkö kellonajan lisäksi myös aikavyöhyketieto."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Enables in-game cutscenes typically displayed after truck purchases or garage upgrades or during passenger loading."
+	val[]: "Enables in-game cutscenes typically displayed after vehicle purchases, garage upgrades or during passenger loading."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "Valitsee näytetäänkö puoliläpinäkyvät esteet teillä, joita ei voi käyttää."
@@ -3281,8 +3341,8 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Muuttaa jarrujen tehokkuutta."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
-	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
+	val[]: "Säätää ajoneuvon vakautta madaltamalla sen painopistettä."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Säätää perävaunun vakautta madaltamalla sen painopistettä."
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Valitsee mitkä perävaunujen kaapelit animoidaan.<br><br><color value=@@clr_txt_d@@>Kaapeleiden näyttäminen useammassa ajoneuvossa saattaa vaikuttaa suorituskykyyn vanhemmilla järjestelmillä."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Kytkee päälle kuorma-auton elektronisen 90 km/h (56 mph) nopeudenrajoittimen.<br><br><color value=@@clr_txt_d@@>World of Trucks -töissä rajoitin on aina lukittu käyttöön."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Enables the vehicle's electronic speed limiter at a value depending on its model.<br><br><color value=@@clr_txt_d@@>World of Trucks jobs have this feature permanently turned on."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "Kun tämä on valittuna ja lasinpyyhkijät on kytketty ensimmäiseen asentoon, kytkeytyvät pyyhkijät automaattisesti päälle ja niiden nopeus säätyy automaattisesti olosuhteiden mukaan."
@@ -3315,7 +3375,7 @@
 	val[]: "Automaattinen hidastimen käyttö jarrutettaessa."
 
 	key[]: "hill_brake_assist_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle assists take-off on an incline by holding the brakes, ensuring a smooth start."
+	val[]: "Kun tämä on valittuna, ajoneuvo avustaa mäkilähdöissä painamalla jarrua varmistaen tasaisen liikkeellelähdön."
 
 	key[]: "auto_motor_brake_op_tooltip" # - Gameplay, Advanced
 	val[]: "Automaattinen moottorijarrun käyttö jarrutettaessa."
@@ -3324,7 +3384,7 @@
 	val[]: "Kun tämä on valittuna, moottori käynnistyy heti kun kaasua painetaan."
 
 	key[]: "auto_park_brake_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle's parking brake is applied by default (after using a ferry, towing to service, quick travelling, etc.)."
+	val[]: "Kun tämä on valittuna, ajoneuvon seisontajarru kytketään automaattisesti (lauttamatkan, huoltoon hinauksen, pikamatkustuksen, jne. jälkeen)."
 
 	key[]: "auto_drop_axles_op_tooltip" # - Gameplay, Advanced
 	val[]: "Laskee telin tarpeen mukaan automaattisesti riippuen yhdistelmän painosta."
@@ -3342,7 +3402,7 @@
 	val[]: "Kun tämä on valittuna, ABS estää pyöriä lukkiutumasta hallinnan säilyttämiseksi ja jarrutuksen tehostamiseksi."
 
 	key[]: "traction_control_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle will apply per-wheel braking to prevent wheelspin, understeer or oversteer to help maintain control."
+	val[]: "Kun tämä on valittuna, käytetään jarruttaessa pyöräkohtaista jarrua, jolla estetään sutimista ja yli- tai aliohjausta ja pidetään ajoneuvo hallinnassa."
 
 	key[]: "auto_diff_lock_op_tooltip" # - Gameplay, Advanced
 	val[]: "When enabled, the vehicle will lock the differential if wheels begin to slip to improve traction."
@@ -3398,6 +3458,9 @@
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "Säätää kuinka paljon sisäkamera saa kiertää perustuen ajoneuvon liikkeeseen."
 
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Changes how much the interior camera FOV is changed with vehicle movement speed."
+
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Määrittelee viiveen, jonka jälkeen kamera keskittää automaattisesti.<br><br>Ajoneuvon tulee liikkua riittävällä nopeudella, jotta tämä aktivoituu. Vaikuttaa ainoastaan sisätila- ja seurantakamerassa eteenpäin ajettaessa, sekä ulos nojaavassa kamerassa peruutettaessa."
 
@@ -3450,7 +3513,7 @@
 	val[]: "Kun tämä on valittuna, viestinkirjoitusruutu suljetaan viestin lähettämisen jälkeen."
 
 	key[]: "chat_full_fade_out_op_tooltip" # - Gameplay, Simple
-	val[]: "Kun tämä on valittuna, keskusteluviestit katoavat saapumisen jälkeen."
+	val[]: "Kun tämä on valittuna, keskusteluviestit katoavat sekuntien kuluttua saapumisesta."
 
 	key[]: "chat_fade_out_timer_op_tooltip" # - Gameplay, Simple
 	val[]: "Säätää aikaa miten kauan keskusteluviestit näkyvät ruudulla."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Päällekkäinen määritys poistettu:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ ei ole käytettävissä." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,8 +3672,8 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
-	val[]: "VEHICLE"
+	key[]: "vehicle_controls"
+	val[]: "AJONEUVO"
 
 	key[]: "assistant_controls"
 	val[]: "AJOAVUSTIMET"
@@ -3646,7 +3712,7 @@
 	val[]: "PIKATOIMINNOT"
 
 	key[]: "radio_controls"
-	val[]: "AUDIO PLAYER"
+	val[]: "MEDIASOITIN"
 
 	key[]: "convoy_controls"
 	val[]: "SAATTUE"
@@ -3716,6 +3782,9 @@
 	val[]: "Kytke / sammuta virrat"
 
 	key[]: "o_im_parkingbrake"
+	val[]: "Käsijarru"
+
+	key[]: "o_im_handbrake"
 	val[]: "Käsijarru"
 
 	key[]: "o_im_motorbrake"
@@ -3848,7 +3917,7 @@
 	val[]: "Kuljettaja-Akatemian Pikauusinta"
 
 	key[]: "o_im_radio"
-	val[]: "Musiikkisoitin"
+	val[]: "Mediasoitin"
 
 	key[]: "o_im_radio_next"
 	val[]: "Audio Player Next"
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "Infotainment näytön tila" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "Parking Camera Mode" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "Navigoinnin tarkennustila" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -3918,10 +3990,10 @@
 	val[]: "Tallien hallinta" #+ Opens the garage manager from game.
 
 	key[]: "o_im_adviser_cursor"
-	val[]: "Quick Info"
+	val[]: "Pikaohje"
 
 	key[]: "o_im_adjuster"
-	val[]: "Vehicle Adjustment"
+	val[]: "Ajoneuvon säädöt"
 
 	key[]: "o_im_services"
 	val[]: "Palvelut & Säädöt"
@@ -4129,6 +4201,9 @@
 	val[]: "Määrittelee näppäimen virtojen kytkemiselle/sammuttamiselle.<br><br>Jos tämä on määritelty, sinun tulee kytkeä virrat ennen moottorin käynnistämistä. Moottori tulee sammuttaa kytkemällä virrat pois, sen sijaan, että käyttäisit Käynnistä/Sammut moottori -näppäintä."
 
 	key[]: "o_im_parkingbrake_op_tooltip"
+	val[]: "Määrittelee näppäimen seisontajarrulle."
+
+	key[]: "o_im_handbrake_op_tooltip"
 	val[]: "Määrittelee näppäimen käsijarrulle."
 
 	key[]: "o_im_motorbrake_op_tooltip"
@@ -4207,13 +4282,13 @@
 	val[]: "Määrittelee näppäimen pitkien valojen kytkemiselle päälle/pois."
 
 	key[]: "o_im_beacon_op_tooltip"
-	val[]: "Assigns button for turning on/off the beacon, if your vehicle or trailer is equipped with it."
+	val[]: "Määrittelee näppäimen varoitusvalon kytkemiselle päälle/pois, mikäli ajoneuvosi tai perävaunusi on varustettu sellaisella."
 
 	key[]: "o_im_horn_op_tooltip"
 	val[]: "Määrittelee näppäimen torven käyttämiselle."
 
 	key[]: "o_im_air_horn_op_tooltip"
-	val[]: "Assigns button for using the air horn, if your vehicle is equipped with it."
+	val[]: "Määrittelee näppäimen paineilmatorven käyttämiselle, mikäli ajoneuvossasi on sellainen."
 
 	key[]: "o_im_light_horn_op_tooltip"
 	val[]: "Määrittelee näppäimen pitkien valojen väläyttämiselle."
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Määrittelee näppäimen tietoviihdenäytön ruutujen vaihtamiselle."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Assigns button for toggling the parking camera display screens."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "Määrittelee näppäimen kojelaudan tai tietoviihdenäytön navigaattorin zoomauksen vaihtamiselle."
@@ -4297,7 +4375,7 @@
 	val[]: "Määrittelee näppäimen Pienoisohjelmien asetusvalikon näyttämiselle."
 
 	key[]: "o_im_adviser_eta_op_tooltip"
-	val[]: "Assigns button for changing the displayed destination data within the Navigation.<br>You can change whether the distance and ETA will be displayed for for the next checkpoint or the final destination."
+	val[]: "Assigns button for changing the displayed destination data within the Navigation.<br>You can change whether the distance and ETA will be displayed for the next checkpoint or the final destination."
 
 	key[]: "o_im_assistent_action1_op_tooltip"
 	val[]: "Määrittelee näppäimen vastaavalle toiminnolle \"Palvelut ja säädöt\" valikossa."
@@ -4462,7 +4540,7 @@
 	val[]: "Määrittelee näppäimen pikauusinnalle.<br><br>Tämä helpottaa tehtävän uusimista Kuljettaja-Akatemiassa. Kun näppäintä painetaan, Kuljettaja-Akatemian tehtävä aloitetaan alusta niin, että alustus ja ohjeet ohitetaan ja moottori käynnistetään. Käsijarru jätetään edelleen päälle.<br><br><color value=@@clr_txt_d@@>Tämä ominaisuus on käytettävissä Kuorma-auton Ajotaidot -moduulissa."
 
 	key[]: "o_im_radio_op_tooltip"
-	val[]: "Määrittelee näppäimen musiikkisoittimen avaamiselle."
+	val[]: "Määrittelee näppäimen mediasoittimen avaamiselle."
 
 	key[]: "o_im_radio_next_op_tooltip"
 	val[]: "Assigns button for playing the next item on the audio player's list while driving."
@@ -4517,13 +4595,13 @@
 	val[]: "OHJAIMET" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "controller_bindings_t"
-	val[]: "BINDINGS" #+ Subtitle of the screen with controller bindings. Please keep in upper case where possible.
+	val[]: "MÄÄRITYKSET" #+ Subtitle of the screen with controller bindings. Please keep in upper case where possible.
 
 	key[]: "controller_advanced_t"
 	val[]: "LISÄASETUKSET" #+ Subtitle of the screen with controller advanced setup. Please keep in upper case where possible.
 
 	key[]: "controller"
-	val[]: "Ohjaimet" #+ Icon opening the controls options window. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "Kontrollit" #+ Icon opening the controls options window. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "input_type_settings_t"
 	val[]: "OHJAINTYYPPI" #+ Title of the 'Input type' settings section. Please keep in upper case where possible.
@@ -4532,7 +4610,7 @@
 	val[]: "OHJAIN" #+ Title of the 'Controller' settings section. Please keep in upper case where possible.
 
 	key[]: "controller_feedback_settings_t"
-	val[]: "TÄRINÄPALAUTE" #+ Title of the 'Controller feedback' settings section. Please keep in upper case where possible.
+	val[]: "FORCE FEEDBACK" #+ Title of the 'Controller feedback' settings section. Please keep in upper case where possible.
 
 	key[]: "controller_axes_settings_t"
 	val[]: "OHJAIMEN AKSELIT" #+ Title of the 'Controller axes' settings section. Please keep in upper case where possible.
@@ -4585,7 +4663,7 @@
 #@{
 
 	key[]: "force_feedback"
-	val[]: "Tärinäpalaute" #+ Checkbox enabling force feedback.
+	val[]: "Force feedback" #+ Checkbox enabling force feedback.
 
 	key[]: "force_feedback_reset"
 	val[]: "Palauta oletusasetukset" #+ Button for resetting force feedback settings to defaults.
@@ -5275,10 +5353,10 @@
 	val[]: "Aseta reittipiste haluttuun portaaliin"
 
 	key[]: "wanna_assistance_portal"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Do you agree?"
+	val[]: "Huoltopalvelu voi viedä sinut ja kuorma-autosi satunnaiseen portaaliin ilmaiseksi.<br offset=30>Hyväksytkö?"
 
 	key[]: "wanna_assistance_portal_online"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Huoltopalvelu voi viedä sinut ja kuorma-autosi satunnaiseen portaaliin ilmaiseksi.<br offset=30>Nykyinen kuljetuksesi keskeytetään.<br offset=30>Hyväksytkö?"
 
 	key[]: "mp_job_quick_travel_other_land"
 	val[]: "Olet liian kaukana lähettävän yrityksen sijainnista, joka on toisessa maailmassa.<br><br>Haluatko silti vastaanottaa kuljetustehtävän?"
@@ -5580,7 +5658,7 @@
 	val[]: "Määrittelee renderöidäänkö myös hyvin kaukaisten kappaleiden varjot.<br><br><color value=@@clr_txt_d@@>Tällä asetuksella on tavallisesti kohtalainen vaikutus suorituskykyyn."
 
 	key[]: "interior_shadow_op_tooltip" # - Graphics, Advanced
-	val[]: "Enables night-time dynamic shadows in the vehicle interior.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "Kytkee päälle yöajan dynaamiset varjot ohjaamossa.<br><br><color value=@@clr_txt_d@@>Tällä asetuksella on tavallisesti kohtalainen vaikutus suorituskykyyn."
 
 	key[]: "weather_quality_op_tooltip" # - Graphics, Advanced
 	val[]: "Säätää sääefektien, kuten heijastusten laatua."
@@ -6105,7 +6183,7 @@
 	val[]: "RADIOSOITIN" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "radio"
-	val[]: "Audio Player" #+ Icon opening the radio window. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "Mediasoitin" #+ Icon opening the radio window. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "music_player"
 	val[]: "Musiikkisoitin" #+ Button for selecting music player.
@@ -6114,19 +6192,19 @@
 	val[]: "Radiostriimi" #+ Button for selecting online radio.
 
 	key[]: "game_radio"
-	val[]: "Game radio" #+ Button for selecting game radio (offline radio).
+	val[]: "Pelin radio" #+ Button for selecting game radio (offline radio).
 
 	key[]: "radio_changed"
 	val[]: "Nyt soi <color value=@@clr_sel@@>$NAME$" #+ Notification that playing track/stream have changed.
 
 	key[]: "stream_safe"
-	val[]: "Stream-safe" #+ Text for enabling stream-safe mode (offline game radios that are designed to avoid content claims)
+	val[]: "Striimausystävällisyys" #+ Text for enabling stream-safe mode (offline game radios that are designed to avoid content claims)
 
 	key[]: "volume_up"
-	val[]: "Volume Up" #+ Controller hint text for increasing volume
+	val[]: "Kovemmalle" #+ Controller hint text for increasing volume
 
 	key[]: "volume_down"
-	val[]: "Volume Down" #+ Controller hint text for decreasing volume
+	val[]: "Hiljaisemmalle" #+ Controller hint text for decreasing volume
 
 #+ Hint shown if no music files are found. Also shown as tooltip when hovering over music_player button.
 
@@ -6147,10 +6225,10 @@
 	val[]: "Switch between cycling all or favourites only.<br><br>\"Cycle favourites only\" is available when there is at least one favourite item on your list."
 
 	key[]: "radio_cycling_all"
-	val[]: "Cycling all" #+ Text shown if currently we are cycling between all tracks
+	val[]: "Selaa kaikkia" #+ Text shown if currently we are cycling between all tracks
 
 	key[]: "radio_cycling_favorites"
-	val[]: "Cycling only favourites" #+ Text shown if currently we are cycling between only favorite
+	val[]: "Selaa suosikkeja" #+ Text shown if currently we are cycling between only favorite
 
 	key[]: "radio_hint_online_update"
 	val[]: "Clicking this button refreshes your list of radio streams available for listening online."
@@ -6234,13 +6312,13 @@
 	val[]: "Työn tulo" #+ For example "Job income: E6,526"
 
 	key[]: "wanna_assistance"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
+	val[]: "Tiepalvelu voi viedä sinut ja ajoneuvosi kaupunkiin $CITY$. Se tulee maksamaan $MONEY$ ja matka kestää $TIME$.<br offset=30>Hyväksytkö?"
 
 	key[]: "wanna_assistance_quick"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Tiepalvelu voi viedä sinut ja ajoneuvosi kaupunkiin $CITY$. Se tulee maksamaan $MONEY$ ja matka kestää $TIME$.<br>(Työnantajasi maksaa kulut.)<br offset=30>Hyväksytkö?"
 
 	key[]: "wanna_assistance_online"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Tiepalvelu voi viedä sinut ja ajoneuvosi kaupunkiin $CITY$. Se tulee maksamaan $MONEY$ ja matka kestää $TIME$.<br offset=30>Käynnissä oleva kuljetustehtävä perutaan.<br offset=30>Hyväksytkö?"
 
 	key[]: "wanna_recover"
 	val[]: "Tiepalvelu voi viedä sinut ja rekkasi lähimmälle tielle. Se tulee maksamaan $MONEY$ ja matka kestää $TIME$.<br offset=30>Hyväksytkö?"
@@ -6312,7 +6390,7 @@
 	val[]: "Odotat että Latauspalvelu lataa ajoneuvosi."
 
 	key[]: "cancel_job_fademsg"
-	val[]: "Odotat toista kuskia hoitamaan kuljetuksesi eteenpäin."
+	val[]: "Odotat toista kuljettajaa jatkamaan kuormasi kuljetusta."
 
 	key[]: "no_job"
 	val[]: "Tällä hetkellä sinulla ei ole kuljetustyötä."
@@ -6382,7 +6460,7 @@
 	val[]: "$BRAND$-rekkakauppias löydetty!"
 
 	key[]: "service"
-	val[]: "To repair, upgrade, or paint<br>your vehicle or trailer press:"
+	val[]: "Korjataksesi, päivittääksesi tai maalataksesi<br>ajoneuvoasi tai perävaunuasi, paina:"
 
 	key[]: "job_offer"
 	val[]: "Paina seuraavaa näppäintä tarkastellaksesi työtarjousta:"
@@ -6466,7 +6544,7 @@
 	val[]: "Olet löytänyt uuden näköalapaikan!"
 
 	key[]: "secret_found"
-	val[]: "Uusi kulkupaikka.<br>Kartta päivitetty."
+	val[]: "Uusi reitti.<br>Kartta päivitetty."
 
 	key[]: "gas_station"
 	val[]: "Huoltoasema"
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Sammuta moottori!"
 
-	key[]: "stop_truck_short"
-	val[]: "Stop the vehicle!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Pysäytä ajoneuvo!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Sammuta moottori painamalla:"
@@ -6528,7 +6606,7 @@
 	val[]: "Maksullinen tie alkaa. Säilytä lippu.<br>Paina:"
 
 	key[]: "toll_start_automatic"
-	val[]: "Maksullisen tien alku. Maksu peritään tieosuuden päättyessä."
+	val[]: "Maksullinen tie alkaa. Maksu peritään tieosuuden päättyessä."
 
 	key[]: "toll_end"
 	val[]: "Maksullinen tie päättyy. Sinun tulee maksaa $MONEY$.<br>Paina:"
@@ -6537,7 +6615,7 @@
 	val[]: "Maksullinen tie päättyy. Työnantajasi maksaa $MONEY$.<br>Paina:"
 
 	key[]: "toll_end_calc"
-	val[]: "Maksullisen tien päättyminen.<br>(Lasketaan maksua, ole hyvä ja odota...)"
+	val[]: "Maksullinen tie päättyy.<br>(Lasketaan maksua, ole hyvä ja odota...)"
 
 	key[]: "paid_toll"
 	val[]: "Tulli maksettu: $MONEY$."
@@ -6630,7 +6708,7 @@
 	val[]: "Akselin nosto epäonnistui.<br>Perävaunu on liian painava."
 
 	key[]: "diff_lock_fail"
-	val[]: "Differential(s) cannot be locked. Slow down the vehicle and try again."
+	val[]: "Tasauspyörästöä ei voi lukita. Hidasta nopeutta ja yritä uudelleen."
 
 	key[]: "diff_lock_hint"
 	val[]: "Tasauspyörästön lukon kytkeminen saattaa auttaa, mikäli et pääse liikkeelle..<br>Kytke tasauspyörästön lukko painamalla:"
@@ -6700,19 +6778,19 @@
 	val[]: "Seuraa dynaamisesti yrityksesi tuottoa ja toimintakustannuksia."
 
 	key[]: "adv_hud_notifications"
-	val[]: "Notifications"
+	val[]: "Tiedotteet"
 
 	key[]: "adv_hud_transparency"
 	val[]: "Taustan peittävyys"
 
 	key[]: "adv_hud_infotainment"
-	val[]: "Interior infotainment"
+	val[]: "Sisätilan viihdejärjestelmä"
 
 	key[]: "adv_hud_infotainment_op_tooltip"
-	val[]: "Interior infotainment display for navigation."
+	val[]: "Sisätilan viihdejärjestelmä navigaattorille."
 
 	key[]: "adv_hud_radio"
-	val[]: "Audio Player"
+	val[]: "Mediasoitin"
 
 	key[]: "adv_hud_radio_op_tooltip"
 	val[]: "On manual change — the widget appears when you take an action, such as switching stations, or adding a station to your favourites.<br><br>On all changes — the widget appears for every update, including manual actions and automatic track transitions."
@@ -6757,7 +6835,7 @@
 	val[]: "On all changes" #+ HUD audio player widget visibility setting for showing the widget only when there is any change (e.g. next song automatically plays)
 
 	key[]: "hud_mirrors_none"
-	val[]: "None"
+	val[]: "Ei käytössä"
 
 	key[]: "hud_mirrors_left"
 	val[]: "Vasen puoli"
@@ -6839,7 +6917,7 @@
 #+ Tutorial Hints
 #@{
 	key[]: "reset_progress"
-	val[]: "Reset" #+ Button for resetting progress
+	val[]: "Nollaa" #+ Button for resetting progress
 
 #!{
 	key[]: "na_icon"
@@ -6880,7 +6958,7 @@
 
 
 	key[]: "photo_mode_word"
-	val[]: "Photo Mode" #+ Photo mode name, with each word capitalized
+	val[]: "Kuvaustila" #+ Photo mode name, with each word capitalized
 
 	key[]: "landmark_word"
 	val[]: "Photo Trophy" #+ How we call landmarks/photo sights/photo trophies
@@ -7118,7 +7196,7 @@
 	val[]: "Vaarallinen lasti"
 
 	key[]: "skill_adr_info"
-	val[]: "Use your skill points to unlock ADR certificates and transport more types of dangerous goods."
+	val[]: "Käytä taitopisteitäsi avataksesi ADR serifikaatteja ja kuljettaaksesi erilaisia vaarallisia aineita."
 
 	key[]: "skill_adr_classt1"
 	val[]: "Räjähteet"
@@ -7236,16 +7314,16 @@
 	val[]: "Uusia <color value=@@clr_skill_desc_highlight@@>kiireisiä</color> toimituksia <color value=@@clr_skill_desc_highlight@@>saatavilla</color>"
 
 	key[]: "urgent_desc_revenue_bonus_important"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS_IMPORTANT$% higher revenue</color> for important deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS_IMPORTANT$% suurempi tuotto</color>tärkeistä toimituksista"
 
 	key[]: "urgent_desc_revenue_bonus_urgent"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for urgent deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% suurempi tuotto</color>kiireisistä toimituksista"
 
 	key[]: "urgent_desc_xp_bonus_important"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS_IMPORTANT$% XP bonus</color> for important deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS_IMPORTANT$% XP bonux</color> tärkeistä toimituksista"
 
 	key[]: "urgent_desc_xp_bonus_urgent"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for urgent deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> kiireisistä toimituksista"
 
 #@}
 
@@ -7262,10 +7340,10 @@
 	val[]: "Uusia <color value=@@clr_skill_desc_highlight@@>särkyvän tavaran</color> kuljetuksia <color value=@@clr_skill_desc_highlight@@>saatavilla</color>"
 
 	key[]: "fragile_desc_revenue_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for fragile cargo deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% suurempi tuotto</color> särkyvistä toimituksista"
 
 	key[]: "fragile_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for fragile cargo deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> särkyvistä toimituksista"
 
 #@}
 
@@ -7279,7 +7357,7 @@
 	val[]: "Sinun @@skill_mechanical_title@@ taitosi pienentää polttoaineen kulutusta."
 
 	key[]: "ecodriving_desc_saved"
-	val[]: "Up to <color value=@@clr_skill_desc_highlight@@>$CONSUMPTION_DROP$% of fuel saved</color> when driving"
+	val[]: "Jopa <color value=@@clr_skill_desc_highlight@@>$CONSUMPTION_DROP$% säästettyä polttoainetta</color>"
 
 #@}
 #@}
@@ -7584,7 +7662,7 @@
 	val[]: "ADR-luokka"
 
 	key[]: "skill_level"
-	val[]: "Skill rank" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
+	val[]: "Taitotaso" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
 #@}
 
 
@@ -7709,7 +7787,7 @@
 	val[]: "Juustoa"
 
 	key[]: "cn_chemical_granules"
-	val[]: "Chemical Granules"
+	val[]: "Kemikaalirakeita"
 
 	key[]: "cn_chemical_sorbent"
 	val[]: "Kemikaalisorbenttia"
@@ -8000,7 +8078,7 @@
 	val[]: "Tukkeja"
 
 	key[]: "cn_low_bed_trailers"
-	val[]: "Low Bed Semi-trailers"
+	val[]: "Matala lavettiset puoliperävaunut"
 
 	key[]: "cn_lpg"
 	val[]: "Nestekaasua"
@@ -8159,7 +8237,7 @@
 	val[]: "Rautaputkia"
 
 	key[]: "cn_phosphor"
-	val[]: "Valkoinen fosfori"
+	val[]: "Valkoista fosforia"
 
 	key[]: "cn_plastic"
 	val[]: "Muovirakeita"
@@ -8659,7 +8737,7 @@
 	val[]: "Helikopteri - Ring-429"
 
 	key[]: "cn_roller"
-	val[]: "Roller"
+	val[]: "Katujyrä"
 
 	key[]: "cn_rstractor"
 	val[]: "Telatraktori"
@@ -8795,7 +8873,7 @@
 #+ Names of cargo for DLC Forest Harvesting
 #@{
 	key[]: "cn_forestry_crawler_excavator"
-	val[]: "Forestry Crawler Excavator"
+	val[]: "Tela-alustainen Kaivinkone"
 
 	key[]: "cn_forwarder"
 	val[]: "Kuormatraktori"
@@ -9023,10 +9101,10 @@
 	val[]: "Joulupukin lahjasäkki -design"
 
 	key[]: "tcn_xmas_night"
-	val[]: "Ihmeiden yö -design"
+	val[]: "Ihmeiden Yö -design"
 
 	key[]: "tcn_xmas_decor"
-	val[]: "Joulunhenki-design"
+	val[]: "Joulun Henki-design"
 
 #virtual logistic company trailer looks (for trailer listing screen)
 
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Tilin saldo: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Etene urallasi saadaksesi lainan käyttöön."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Edistä uraasi $MODE$ pelitilassa saadaksesi lainan käyttöösi."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Kokonaisvelkasi on liian suuri tähän lainaan."
+
 #+ New loan confirmation window
 #@{
 
@@ -9443,7 +9530,13 @@
 	val[]: "Et voi pikamatkustaa kesken kuljetuksen!"
 
 	key[]: "compman_qt_notruck"
-	val[]: "You cannot quick travel since you don't have a truck, coach or car!"
+	val[]: "Et voi pikamatkustaa, koska sinulla ei ole kuorma-autoa!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Et voi pikamatkustaa, koska sinulla ei ole autoa!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Et voi pikamatkustaa, koska sinulla ei ole linja-autoa!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Haluatko pikamatkustaa valitulle tallille?"
@@ -9812,14 +9905,14 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
-	val[]: "SELL VEHICLE"  #+ Message box title. Please keep in upper case where possible.
+	key[]: "vehicleman_sell_t"
+	val[]: "MYY AJONEUVO"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
+	key[]: "vehicleman_msg_reallysell"
 	val[]: "Oletko varma, että haluat myydä $TRUCK$ rekkasi hintaan $MONEY$?"
 
-	key[]: "truckman_msg_nosell"
-	val[]: "You cannot sell the vehicle you're driving while on a job! Finish your job and then try again."
+	key[]: "vehicleman_msg_nosell"
+	val[]: "Et voi myydä ajoneuvoasi kesken työn! Hoida työsi loppuun ja yritä sitten uudelleen."
 
 	key[]: "truckman_total_restoration_t"
 	val[]: "TÄYDELLINEN KUNNOSTUS"  #+ Message box title. Please keep in upper case where possible.
@@ -9850,11 +9943,11 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
-	val[]: "CHANGE VEHICLE" #+ Message box title. Please keep in upper case where possible.
+	key[]: "vehicleman_change_t"
+	val[]: "VAIHDA AJONEUVOA" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
-	val[]: "You cannot change your vehicle while on a job! Finish your job first."
+	key[]: "vehicleman_msg_nochange"
+	val[]: "Et voi vaihtaa ajoneuvoasi kesken työn! Hoida työ ensin loppuun."
 
 	key[]: "truckman_conf_drive"
 	val[]: "Oletko varma, että haluat uudelleenasettaa rekkasi $TRUCK_SRC$ kaupunkiin $CITY_DST$ ja ajaa rekalla $TRUCK_DST$?"
@@ -9890,8 +9983,8 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "KOPIOI KOKOONPANO" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
-	val[]: "This vehicle cannot be used as copy configuration source due to missing data which is most likely caused by either MOD or DLC removal.<br><br>Reinstall MOD/DLC."
+	key[]: "vehicleman_msg_nouse"
+	val[]: "Tätä ajoneuvoa ei voi käyttää kokoonpanokopiona koska tietoja puuttuu. Tämä johtuu todennäköisesti modin tai DLC:n poistamisesta.<br><br>Asenna modi tai DLC uudelleen."
 #@}
 
 # End of: "Truck management screen"
@@ -9917,7 +10010,7 @@
 	val[]: "Valitse oikealta kuljettaja tarkastellaksesi hänen tietoja"
 
 	key[]: "driverman_assignment"
-	val[]: "Driver assignment"
+	val[]: "Kuljettajien tehtävänjako"
 
 	key[]: "driverman_current_job"
 	val[]: "Nykyinen työ"
@@ -9926,19 +10019,19 @@
 	val[]: "Ei käynnissä olevia kuljetuksia"
 
 	key[]: "driverman_op_skill_training"
-	val[]: "Skill Training"
+	val[]: "Taitojen kehitys"
 
 	key[]: "driverman_op_player_skills"
 	val[]: "Taidot"
 
 	key[]: "driverman_skill_training_t"
-	val[]: "SKILL TRAINING"
+	val[]: "TAITOJEN KEHITYS"
 
 	key[]: "driverman_selected_training_policy"
-	val[]: "Selected priority for learning new skills for"
+	val[]: "Valittu kehityksen priorisointi kuljettajalle"
 
 	key[]: "driverman_default_training_policy"
-	val[]: "Preferred skill training priority when hiring a new driver:"
+	val[]: "Uusien kuljettajien kehityksen priorisointi:"
 
 	key[]: "driverman_op_edit_driver"
 	val[]: "Muokkaa kuljettajaa"
@@ -10051,7 +10144,7 @@
 	val[]: "Tila:"
 
 	key[]: "driverman_stats_cargo"
-	val[]: "Current cargo:"
+	val[]: "Nykyinen lasti:"
 
 	key[]: "driverman_stats_from"
 	val[]: "Kohteesta:"
@@ -10081,7 +10174,7 @@
 	val[]: "Lasti" #+ Table column header, cargo name. Please keep as short as possible.
 
 	key[]: "driverman_log_from"
-	val[]: "Kohteesta:" #+ Table column header, source city. Please keep as short as possible.
+	val[]: "Kohteesta" #+ Table column header, source city. Please keep as short as possible.
 
 	key[]: "driverman_log_to"
 	val[]: "Kohteeseen" #+ Table column header, destination city. Please keep as short as possible.
@@ -10177,7 +10270,7 @@
 	val[]: "Tehdasvarustelu" #+ Drop down option.
 
 	key[]: "td_fleet_configs_t"
-	val[]: "Kuljetuskaluston kokoonpanot" #+ Drop down option.
+	val[]: "Omat kokoonpanot" #+ Drop down option.
 
 	key[]: "td_truck_offers_t"
 	val[]: "KUORMA-AUTOTARJOUKSET" #+ Truck offers UI header.
@@ -10213,7 +10306,7 @@
 	val[]: "Nouseva takateli" #+ Type of lifted axle - rear"
 
 	key[]: "steer"
-	val[]: "Steerable" #+ Steerable type of chassis/axle"
+	val[]: "Kääntyvät akselit" #+ Steerable type of chassis/axle"
 
 	key[]: "td_info_cab"
 	val[]: "Hytti:" #+ Type of cabin. For example "Cabin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privilege"
@@ -10228,10 +10321,10 @@
 	val[]: "Vasemmalla" #+ Steering wheel is on the left side.
 
 	key[]: "td_info_engine"
-	val[]: "Moottorin teho:" #+ Power of the engine. For example "Engine power:&nbsp;&nbsp;&nbsp;&nbsp; 380hp (280kW)"
+	val[]: "Teho:" #+ Power of the engine. For example "Engine power:&nbsp;&nbsp;&nbsp;&nbsp; 380hp (280kW)"
 
 	key[]: "td_info_torque"
-	val[]: "Moottorin vääntö:" #+ Torque of the engine. For example "Engine torque:&nbsp;&nbsp;&nbsp;&nbsp; 1,800Nm/950-1,400rpm"
+	val[]: "Vääntö:" #+ Torque of the engine. For example "Engine torque:&nbsp;&nbsp;&nbsp;&nbsp; 1,800Nm/950-1,400rpm"
 
 	key[]: "td_info_trans"
 	val[]: "Vaihdelaatikko:" #+ Type of the gearbox. "For example "Gearbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 speed gearbox"
@@ -10270,6 +10363,9 @@
 
 	key[]: "td_msg_first_and_busy"
 	val[]: "Kiitos, että ostit ensimmäisen rekkasi meiltä!<br><br>Toimitamme sen päämajallesi, josta voit hakea sen heti kun olet hoitanut nykyisen tehtäväsi."
+
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Kiitos, että ostit ensimmäisen kuorma-autosi meiltä!<br><br>Haluatko heti vaihtaa uuteen kuorma-autoosi kaupungissa <color value=@@clr_sel@@>$CITY$</color>?"
 
 	key[]: "td_msg_bought_assigned"
 	val[]: "Kiitos ostoksestasi. Nauti uudesta kuorma-autostasi!<br><br>Viemme vanhasi kaupungin $CITY$ talliisi heti."
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Ihmiskuljettaja"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Vehicle on quick job"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Other vehicle location"
+
 	key[]: "mapl_quarry"
 	val[]: "Louhos"
 
@@ -10612,7 +10714,7 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Vierailematon paikka"
 
-	key[]: "mapl_viewpoint"
+	key[]: "mapl_viewpoint_visited"
 	val[]: "Näköalapaikka (vierailtu)"
 
 	key[]: "mapl_viewpoint_unvisited"
@@ -10717,7 +10819,7 @@
 	val[]: "Bullet (c)  2003-2011 Erwin Coumans"
 
 	key[]: "credits_ogg"
-	val[]: "Xiph.org-säätiö"
+	val[]: "Xiph.org Foundation"
 
 	key[]: "credits_fmod"
 	val[]: "Made with FMOD Studio by Firelight Technologies Pty Ltd."
@@ -10726,7 +10828,7 @@
 	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "Tämä ohjelmisto perustuu osittain Independent JPEG Groupin työhön."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -11017,7 +11119,7 @@
 	val[]: "ISTUIMEN SÄÄTÖ" #+ Title of the window. Please keep in upper case where possible.
 
 	key[]: "seat_tilt"
-	val[]: "Tilt" #+ Checkbox selecting head tilt.
+	val[]: "Kallista" #+ Checkbox selecting head tilt.
 
 	key[]: "seat_pan"
 	val[]: "Panoroi" #+ Checkbox selecting head pan.
@@ -11035,7 +11137,7 @@
 	val[]: "Ratin kallistus" #+ Checkbox selecting steering wheel tilt.
 
 	key[]: "steering_telescope"
-	val[]: "Steering Telescope" #+ Checkbox selecting steering wheel telescoping.
+	val[]: "Ratin etäisyys" #+ Checkbox selecting steering wheel telescoping.
 #@}
 
 #+ Adjuster common
@@ -11303,7 +11405,7 @@
 	val[]: "Slovakia"
 
 	key[]: "slovenia"
-	val[]: "Slovénie"
+	val[]: "Slovenia"
 
 	key[]: "spain"
 	val[]: "Espanja"
@@ -12626,16 +12728,16 @@
 	val[]: "TYÖN TIEDOT"
 
 	key[]: "mapping_options_word"
-	val[]: "Mapping Options"
+	val[]: "Näppäinmäärittelyt"
 
 	key[]: "quick_info_word"
-	val[]: "Quick Info"
+	val[]: "Pikaohje"
 
 	key[]: "quick_info_word_t"
 	val[]: "PIKAINFO"
 
 	key[]: "damage_word_t"
-	val[]: "VAURIO"
+	val[]: "VAURIOT"
 
 	key[]: "widget_options_word"
 	val[]: "Pienoisohjelmien asetukset"
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Avaa $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Use the Mode button to switch between different desktop modes and different vehicle types."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "TERVETULOA"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Kiitos että katsoit esittelyn uudesta Työpöydästä."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "VIHJEET PÄÄLLE"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "You are entering a new game mode and contextual hints are currently disabled. Hints can help you learn how to play. Do you want to turn them back on?"
 #@}
 
 
@@ -13094,7 +13206,7 @@
 #@{
 
 	key[]: "wiz_gb_simple"
-	val[]: "Press FORWARD to move ahead, and press BACK to brake or reverse. The gearbox automatically manages everything else, handling transitions between driving, braking, and reversing, as well as selecting the appropriate gears."
+	val[]: "Paina ETEENPÄIN liikkuaksesi eteenpäin ja TAAKSEPÄIN jarruttaaksesi tai peruuttaaksesi. Vaihdelaatikko hoitaa kaiken muun automaattisesti; vaihtaa ajamisen, jarruttamisen ja peruuttamisen välillä, sekä valitsee sopivan vaihteen."
 
 	key[]: "wiz_gb_automatic"
 	val[]: "Use the buttons to switch between driving forward, neutral, or reversing. Then press the accelerator and let the automatic transmission handle gear changes."
@@ -14691,7 +14803,7 @@
 	val[]: "Palauta valokuvausasetukset" #+ Reset camera and settings
 
 	key[]: "o_im_photomode_album"
-	val[]: "Open Gallery" #+ opens Gallery
+	val[]: "Avaa galleria" #+ opens Gallery
 
 	key[]: "o_im_photomode_take"
 	val[]: "Ota valokuva" #+ Take snapshot
@@ -14808,10 +14920,10 @@
 	val[]: "Katso World of Trucksissa"
 
 	key[]: "photo_album_no_screenshot_warning"
-	val[]: "Your Gallery is empty. Use Photo Mode to capture images."
+	val[]: "Galleriasi on tyhjä. Käytä Kuvaustilaa ottaaksesi kuvia."
 
 	key[]: "link_locked_msg_photo_mode"
-	val[]: "To access the Photo Mode you must have a vehicle assigned first."
+	val[]: "Käyttääksesi Kuvaustilaa sinulla tulee olla ajoneuvo käytössä."
 
 	key[]: "photo_album_delete_failed"
 	val[]: "Odottamaton virhe kuvaa poistettaessa."
@@ -14992,10 +15104,10 @@
 #@{
 
 	key[]: "photo_no_drive_t"
-	val[]: "NO VEHICLE" #+ Message box title. Please keep in upper case where possible.
+	val[]: "EI AJONEUVOA" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "photo_no_drive"
-	val[]: "You cannot take pictures of a vehicle because you don't have one! You must purchase one or take one from your fleet."
+	val[]: "Et voi ottaa kuvia ajoneuvostasi, koska sinulla ei ole sellaista! Sinun tulee joko ostaa sellainen tai valita yksi kuljetuskalustostasi."
 #@}
 
 #+ Screenshot manager
@@ -15698,7 +15810,7 @@
 	val[]: "Tämänhetkinen ulkoinen sopimus vaatii seuraavat lisäsisällöt (DLC):<br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Työhön liittyviä tietoja ei voi esikatsella. Ne näytetään, kun jatkat nykyisen sopimuksen parissa." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Työhön liittyviä tietoja ei voi esikatsella. Ne näytetään, kun jatkat nykyisen sopimuksen parissa." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Tämän kuljetuksen suorittaminen vaatii oman perävaunun." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15749,13 +15861,16 @@
 	val[]: "Pikamatka"
 
 	key[]: "link_locked_msg_quick_travel"
-	val[]: "To access the Quick Travel you must have a vehicle assigned first."
+	val[]: "Käyttääksesi Pikamatkustusta, sinulla tulee olla ajoneuvo käytössä."
 
 	key[]: "select_quick_travel_destination"
 	val[]: "Valitse pikamatkustamisen kohde"
 
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "Muutos pelissä havaittu. Valitse pikamatkustuskohde:" #+ Shown during economy reset quick travel.
+
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Game change detected. Please select quick travel destination for your truck:" #+ Shown during economy reset quick travel for truck.
 
 	key[]: "confirm_quick_travel"
 	val[]: "Vahvista pikamatkustaminen"
@@ -15775,17 +15890,17 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Kuorma-autosi ei ole pikamatkustukseen soveltuvassa kunnossa. Korjaa perävaunun kaapelit."
 
-	key[]: "quick_travel_cond_repair_truck"
-	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for an assistance."
+	key[]: "quick_travel_cond_repair_vehicle"
+	val[]: "Ajoneuvosi ei ole pikamatkustukseen soveltuvassa kunnossa. Käy huollossa tai kutsu tiepalvelu."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Perävaunusi ei ole pikamatkustukseen soveltuvassa kunnossa. Käy huollossa tai kutsu tiepalvelu."
 
-	key[]: "quick_travel_cond_truck_fuel"
-	val[]: "Your vehicle is not in a condition for quick travel. Refuel your vehicle or call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fuel"
+	val[]: "Ajoneuvosi ei ole pikamatkustukseen soveltuvassa kunnossa. Tankkaa ajoneuvo tai kutsu tiepalvelu."
 
-	key[]: "quick_travel_cond_truck_fallen"
-	val[]: "Your vehicle is not in a condition for quick travel. Call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fallen"
+	val[]: "Ajoneuvosi ei ole pikamatkustukseen soveltuvassa kunnossa. Kutsu tiepalvelu."
 
 	key[]: "quick_travel_cond_trailer_fallen"
 	val[]: "Perävaunusi ei ole pikamatkustukseen soveltuvassa kunnossa. Kutsu tiepalvelu."
@@ -15906,16 +16021,16 @@
 	val[]: "JOB IN PROGRESS"
 
 	key[]: "drive_active_job"
-	val[]: "You have an active job in another mode.<br offset=10>You can abandon it or show detail in $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
+	val[]: "You have an active job in another mode.<br offset=10>Switch to $VEHICLE$ to view its details, or abandon the job.<br><br><br>$ADDITIONAL_INFO$"
 
 	key[]: "drive_active_job_yes"
 	val[]: "@@abort_job@@"
 
 	key[]: "drive_active_job_no"
-	val[]: "Switch Mode"
+	val[]: "Vaihda pelitilaa"
 
 	key[]: "cancel_cur_job_warning"
-	val[]: "You will have to pay a penalty fee of $MONEY$ in the case of abandoning the job."
+	val[]: "Työn keskeyttämisestä seuraa $MONEY$ sakko."
 #@}
 
 #+ Trailer coupling phases info messages, shown in route advisor during coupling/decoupling.
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Suodatinasetuksia vastaavaa sisältöä ei löytynyt" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Suodatinasetuksia vastaavia ajoneuvoja ei löytynyt" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16322,7 +16437,7 @@
 	val[]: "Työpöydän taustakuva" #+ Name of the inventory items category.
 
 	key[]: "item_paint_job"
-	val[]: "Maalaustyöt" #+ Name of the inventory items category.
+	val[]: "Erikoismaalaus" #+ Name of the inventory items category.
 
 	key[]: "disable_broken_inventory"
 	val[]: "Poista Tavaraluettelo käytöstä" #+ The button disabling inventory due to an error.
@@ -16530,13 +16645,13 @@
 	val[]: "Talli:"
 
 	key[]: "no_truck_assigned"
-	val[]: "Perävaunulle ei ole osoitettu kuorma-autoa."
+	val[]: "Kuljettajalla ei ole ajoneuvoa."
 
 	key[]: "no_trailer_assigned"
 	val[]: "Ei käyttöön osoitettua perävaunua."
 
 	key[]: "no_driver_assigned"
-	val[]: "Perävaunulle ei ole osoitettu kuljettajaa."
+	val[]: "Ajoneuvolla ei ole kuljettajaa."
 
 	key[]: "garageman_op_log"
 	val[]: "Talous- yhteenveto" #+ Garage manager operation opening economy log of the garage.
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Tämä talli on kokonaan päivitetty." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "Et voi päivittää tallia, koska omistamasi ajoneuvo on liian lähellä sitä." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "Tämänhetkinen perävaunu:" #+ Title of the current trailer statistics.
 
@@ -16760,7 +16878,7 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "Uusia perävaunupäivityksiä ei ole saatavilla juuri nyt."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "To access the Diagnostics you must have a vehicle assigned first."
 
 	key[]: "link_locked_msg_truck_dealer_map"
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Eristetty, sivuovella"
 
-	key[]: "bs_livestock"
-	val[]: "Karja"
+	key[]: "bs_livestock_painted"
+	val[]: "Karjankuljetusvaunu, Maalattu"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Karjankuljetusperävaunu"
+	key[]: "bs_livestock_steel"
+	val[]: "Karjankuljetusvaunu, Teräs"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Matala Karjankuljetusvaunu, Maalattu"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Matala Karjankuljetusvaunu, Teräs"
 
 	key[]: "bs_log_steel"
 	val[]: "Teräslattialla"
@@ -17465,14 +17589,14 @@
 	val[]: "Lämpötilasäädelty, sivuovi"
 
 	key[]: "bs_silo"
-	val[]: "Silo"
+	val[]: "Siilo"
 
 #@}
 
 #+ Series names for translation
 #@{
 	key[]: "series_schwarzmuller_food_cistern"
-	val[]: "Food Tank"
+	val[]: "Elintarvikesäiliö"
 
 	key[]: "series_schwarzmuller_lowloader"
 	val[]: "Matala lavetti"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Poistu vapaan käytön tilasta" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "No vehicle"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Kuorma-auto"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,8 +18228,8 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Sinulla ei ole sopivaa perävaunua tälle kuljetukselle."
 
-	key[]: "mp_job_missing_truck"
-	val[]: "Can be only taken with your own vehicle."
+	key[]: "mp_job_missing_vehicle"
+	val[]: "Voidaan kuljettaa vain omalla ajoneuvolla."
 
 	key[]: "mp_job_missing_trailer"
 	val[]: "Et ole valinnut yhteensopivaa perävaunua."
@@ -18448,7 +18578,7 @@
 	val[]: "ONLINE PELIKOKEMUS"
 
 	key[]: "mp_experience"
-	val[]: "Please note that the game experience may change during online play. Parental guidance is advised. The <nowrap><link url=@@privacy_url@@ color=@@clr_link@@>Privacy Policy</link>$SHORTCUT1$</nowrap> applies.<br><br>When online, follow the <nowrap><link url=@@conduct_url@@ color=@@clr_link@@>Code of Conduct</link>$SHORTCUT2$</nowrap> and be kind and respectful to your fellow drivers so the experience is pleasant and optimal for everyone."
+	val[]: "Huomioithan, että pelikokemus saattaa vaihdella online-pelin aikana. Vanhempien apu on suositeltavaa. <nowrap><link url=@@privacy_url@@ color=@@clr_link@@>Tietosuojakäytäntöjä</link>$SHORTCUT1$</nowrap> sovelletaan.<br><br>Noudata verkkopelissä <nowrap><link url=@@conduct_url@@ color=@@clr_link@@>Ohjesääntöjä</link>$SHORTCUT2$</nowrap> ja kunnioita sekä ole kohtelias kanssapelaajia kohtaan, jotta pelikokemus olisi kaikille miellyttävä."
 
 	key[]: "session_friends"
 	val[]: "Kaverit"
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "Yritys, joka on lähellä kuorma-autoasi tai perävaunuasi tulee aktivoida, jos haluat liittyä tähän istuntoon.<br>Ongelmien välttämiseksi, siirrä kuorma-autosi ja perävaunusi kauemmas yrityksestä tai nykyinen työsi perutaan ja sinut siirretään lähimpään huoltoon.<br><br>Haluatko jatkaa?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "Yritys, jonka lähelle jätit kuorma-autosi tai perävaunusi hyväksyessäsi pikakeikan tulee aktivoida, jotta voit liittyä tähän istuntoon.<br>Ongelmien välttämiseksi palatessasi kuorma-autollesi, perutaan pikakeikkasi ja sinut siirretään lähimpään huoltoon.<br><br>Haluatko jatkaa?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18919,13 +19049,13 @@
 	key[]: "job_equipment"
 	val[]: "Kuljetuskalusto:"
 
-	key[]: "equipment_provided_truck_and_trailer"
+	key[]: "equipment_provided_vehicle_and_trailer"
 	val[]: "Valmis kuorma-auto ja perävaunu"
 
-	key[]: "equipment_owned_truck_provided_trailer"
+	key[]: "equipment_owned_vehicle_provided_trailer"
 	val[]: "Oma kuorma-auto"
 
-	key[]: "equipment_owned_truck_and_trailer"
+	key[]: "equipment_owned_vehicle_and_trailer"
 	val[]: "Oma kuorma-auto ja perävaunu"
 
 	key[]: "mp_job_quick_travel_message"
@@ -19007,7 +19137,7 @@
 	val[]: "SAATTUE PÄÄTTYI"
 
 	key[]: "convoy_concluded_info"
-	val[]: "Your Convoy session is concluded. Your progress includes your bank state, job history, skills, advancements, acquired vehicles configurations as well as your company driver’s equipment and progress."
+	val[]: "Saattue-pelisi päättyi. Edistymiseen sisältyy kerryttämäsi tuotot, toimitetut kuljetukset, taidot, kokemus sekä hankitut ajoneuvojen konfiguraatiot ja lisäksi yrityksen kuljettajien kalusto ja kehittyminen."
 
 	key[]: "convoy_concluded_warning"
 	val[]: "Valitse hyväksy edistyminen jatkaaksesi moninpelin aikana saavutetulla kokemuksella. Voit myös palauttaa moninpeliä edeltäneen edistymisen tai ladata haluamasi pelitallennuksen."
@@ -19264,7 +19394,7 @@
 #+ Multiplayer gameplay options.
 #@{
 	key[]: "convoy_settings"
-	val[]: "CONVOY" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
+	val[]: "SAATTUE" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
 
 	key[]: "chat_with_activate"
 	val[]: "Avaa keskustelu aktivointipainikkeella"
@@ -19276,10 +19406,10 @@
 	val[]: "Näytä keskustelu Navigointisivulla"
 
 	key[]: "chat_full_fade_out"
-	val[]: "Fade chat completely"
+	val[]: "Tyhjennä keskusteluviestit kokonaan"
 
 	key[]: "chat_fade_out_timer"
-	val[]: "Keskustelun häivytysviive"
+	val[]: "Viestien katoaminen"
 
 	key[]: "chat_fade_out_timer_never"
 	val[]: "Ei koskaan"
@@ -19661,16 +19791,16 @@
 	val[]: "Hyväksy"
 
 	key[]: "overlay_select_pin"
-	val[]: "Move pin"
+	val[]: "Siirrä etappi"
 
 	key[]: "overlay_cancel_pin"
 	val[]: "Peruuta"
 
 	key[]: "overlay_delete_pin"
-	val[]: "Remove pin"
+	val[]: "Poista etappi"
 
 	key[]: "overlay_delete_last"
-	val[]: "Remove last placed pin"
+	val[]: "Poista viimeisin etappi"
 
 	key[]: "overlay_reset_route"
 	val[]: "Peruuta navigointi"
@@ -19682,7 +19812,7 @@
 	val[]: "Työlista"
 
 	key[]: "overlay_camera_rotate"
-	val[]: "Rotate"
+	val[]: "Kierrä"
 
 	key[]: "overlay_camera_pan"
 	val[]: "Liikuta"
@@ -19694,7 +19824,7 @@
 	val[]: "Kävele"
 
 	key[]: "overlay_camera_zoom"
-	val[]: "Zoom"
+	val[]: "Zoomaus"
 
 	key[]: "overlay_camera_switch"
 	val[]: "Vaihda kameraa"
@@ -19709,7 +19839,7 @@
 	val[]: "Poista lisävaruste"
 
 	key[]: "overlay_camera_crouch"
-	val[]: "Crouch"
+	val[]: "Kyykisty"
 #@}
 
 #+ Supported controller names.
@@ -20006,7 +20136,7 @@
 	val[]: "Löydettyjä"
 
 	key[]: "career_progress_stats_explore_gallery"
-	val[]: "Gallery"
+	val[]: "Galleria"
 
 	key[]: "career_progress_stats_explored_map"
 	val[]: "Karttaa tutkittu"
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Vierailtuja maita"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Toimituspaikkoja"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Yrityksiä palveltu"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20057,7 +20187,7 @@
 	val[]: "Omistettuja"
 
 	key[]: "career_progress_stats_used_truck_count"
-	val[]: "Tyyppejä käytettyjä toimituksissa"
+	val[]: "Rekkatyyppejä käytetty toimituksissa"
 
 	key[]: "career_progress_stats_most_used_truck"
 	val[]: "Eniten käytetty"
@@ -20117,7 +20247,7 @@
 	val[]: "Kolareita"
 
 	key[]: "career_progress_stats_avoid_sleeping_count"
-	val[]: "Lepotauon pitämättä jättäminen"
+	val[]: "Lepotauko pitämättä"
 
 	key[]: "career_progress_stats_penalty_disabled"
 	val[]: "Liikennerikkomukset poistettu käytöstä"
@@ -20237,6 +20367,36 @@
 	val[]: "Poistu"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Mode"
+
+	key[]: "truck_mode"
+	val[]: "Kuorma-auto pelitila"
+
+	key[]: "truck_mode_help"
+	val[]: "Suorita erilaisia kuljetustehtäviä kuorma-autolla"
+
+	key[]: "bus_mode"
+	val[]: "Linja-auto pelitila"
+
+	key[]: "bus_mode_help"
+	val[]: "Koe erilainen pelitila linja-auton kuljettajana"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "Siirtyäksesi Linja-auto pelitilaan, sinun tulee suorittaa tehtävä loppuun"
+
+	key[]: "car_mode"
+	val[]: "Auto pelitila"
+
+	key[]: "car_mode_help"
+	val[]: "Suorita erilaisia tehtäviä ja tutki maailmaa auton ratissa"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "Siirtyäksesi Auto pelitilaan, sinun tulee suorittaa tehtävä loppuun"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20315,7 +20475,7 @@
 	val[]: "Selaile, tarkastele ja uudelleenvarustele myynnissä olevia perävaunuja."
 
 	key[]: "radio_desc" # - tooltip for explaining what the radio is - feature is active
-	val[]: "Enhance your driving experience with some music."
+	val[]: "Paranna ajokokemustasi kuuntelemalla samalla musiikkia."
 
 	key[]: "link_locked_msg_radio" # - tooltip for when the radio is not yet unlocked
 	val[]: "Radio ei ole käytettävissä."
@@ -20336,7 +20496,7 @@
 	val[]: "Health warning"
 
 	key[]: "health_warning_description"
-	val[]: "Pieni osa käyttäjistä saattaa olla alttiita epileptisille kohtauksille tai tajunnan menetyksille altistuessaa tietyille vilkkuville valoille tai valokuvioille. Tällaiset henkilöt saattavat saada kohtauksen katsellessaan tietynlaisia kuvia tai pelatessaan videopelejä. Jos sinulla tai jollakulla perheenjäsenelläsi on ollut epilepsiaan liittyviä oireita (kohtauksia tai tajunnan menetyksiä) altistuessaan vilkkuville valoille, kääntykää lääkärin puoleen ja tehkää kaikki tarvittavat varotoimenpiteet ennen pelin pelaamista.<br offset=20>Lopettakaa pelin pelaaminen välittömästi ja hakeutukaa lääkäriin, mikäli te tai lapsenne koette seuraavia oireita: huimaus, näkökyvyn muutos, silmien tai lihasten nykiminen, tajunnan menetys, sekavuus, kouristus tai tahattomat liikkeet."
+	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
 
 	key[]: "trademark"
 	val[]: "All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN® trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license."
@@ -20380,117 +20540,117 @@
 #+ Time skip feature
 #@{
 	key[]: "time_skip_t"
-	val[]: "RESTING"
+	val[]: "LEPOTAUKO"
 
 	key[]: "time_skip_hours"
 	val[]: "Number of hours to skip"
 
-	
+
 	key[]: "time_skip_current_time"
-	val[]: "Current time"
+	val[]: "Kellonaika"
 
 	key[]: "time_skip_wake_up_time"
-	val[]: "Rest ends"
+	val[]: "Lepo päättyy"
 
 
 	key[]: "time_skip_resting_title"
-	val[]: "Rest State"
+	val[]: "Vireystila"
 
 	key[]: "time_skip_mandatory_break_title"
-	val[]: "Mandatory Break"
+	val[]: "Pakollinen Tauko"
 
 	key[]: "time_skip_job_delivery_title"
-	val[]: "Delivery Status"
+	val[]: "Kuljetuksen tila"
 
 	key[]: "time_skip_charging_title"
 	val[]: "Battery Charge"
 
 
 	key[]: "time_skip_to_next_mandatory_break_ok"
-	val[]: "in $TIME$"
+	val[]: "$TIME$ kuluttua"
 
 	key[]: "time_skip_to_next_mandatory_break_not_ok"
 	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>in $TIME$</font>"
 
 
 	key[]: "time_skip_mandatory_break_complied"
-	val[]: "Complied"
+	val[]: "Täyttynyt"
 
 	key[]: "time_skip_mandatory_break_not_complied"
-	val[]: "Not complied"
+	val[]: "Ei täyttynyt"
 
 
 	key[]: "time_skip_delivery_on_time"
-	val[]: "On time"
+	val[]: "Aikataulussa"
 
 	key[]: "time_skip_delivery_late"
-	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>Risk of late delivery</font>"
+	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>Toimitus saattaa myöhästyä</font>"
 
 
 	key[]: "time_skip_rest_tired"
-	val[]: "Tired"
+	val[]: "Väsynyt"
 
 	key[]: "time_skip_rest_ok"
-	val[]: "Rested"
+	val[]: "Levännyt"
 
 	key[]: "time_skip_rest_full"
-	val[]: "Fully rested"
+	val[]: "Täysin levännyt"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
-	val[]: "This rest won’t meet the mandatory break requirements. You will have $LEFT_TIME$ left until the next mandatory break."
+	val[]: "Tämä tauko ei täytä pakollisen lepotauon vaatimuksia. Tauon jälkeen sinulla on $LEFT_TIME$ aikaa jäljellä seuraavaan pakolliseen lepotaukoon."
 
 	key[]: "time_skip_tooltip_mandatory_break_complied"
-	val[]: "This rest will meet the mandatory break requirements. The next one will be in <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours."
+	val[]: "Tämä tauko täyttää pakollisen lepotauon vaatimukset. Seuraava tauko on pidettävä <color value=@@clr_sel@@>$DRIVE_TIME$</color> tunnin kuluttua."
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
-	val[]: "For every <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours of driving, you must take a mandatory break for at least <color value=@@clr_sel@@>$BREAK_TIME$</color> hours to avoid getting fined."
-	
+	val[]: "Jokaista <color value=@@clr_sel@@>$DRIVE_TIME$</color> ajotuntia kohti, sinun tulee pitää pakollinen lepotauko ja levätä ainakin <color value=@@clr_sel@@>$BREAK_TIME$</color> tuntia välttääksesi sakon."
+
 
 	key[]: "time_skip_tooltip_job_on_time"
-	val[]: "After the rest and the estimated drive time to the destination, you will have <color value=@@clr_sel@@>$LEFT_TIME$</color> remaining on the job."
-	
+	val[]: "Lepotauon ja arvioidun matka-ajan jälkeen sinulla on <color value=@@clr_sel@@>$LEFT_TIME$</color> aikaa jäljellä työn suorittamiseksi."
+
 	key[]: "time_skip_tooltip_job_late"
-	val[]: "After the rest and the estimated drive time to the destination, the delivery will be late by <color value=@@clr_red@@>$LEFT_TIME$</color>."
+	val[]: "Lepotauon ja arvioidun matka-ajan jälkeen toimitus myöhästyy <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
-	val[]: "<color value=@@clr_red@@>You will be fully rested</color>"
+	val[]: "<color value=@@clr_red@@>Olet täysin levännyt</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
-	val[]: "Estimated Arrival"
+	val[]: "Arvioitu saapuminen"
 
 	key[]: "job_delay"
 	val[]: "Delay"
 
 # mandatory break needed window shown when changing vehicle mode
 	key[]: "time_skip_mandatory_break_t"
-	val[]: "MANDATORY REST NEEDED"
+	val[]: "PAKOLLINEN LEPOTAUKO TARPEEN"
 
 	key[]: "time_skip_mandatory_break_needed"
 	val[]: "The vehicle hasn’t been parked long enough to complete your mandatory rest.<br><br><color value=@@clr_sel@@>$TIME$ of mandatory break left<br><br><color value=@@clr_txt@@>Do you want to rest?"
 
 # mandatory break notifications
 	key[]: "mandatory_break_soon"
-	val[]: "It’s time to take your mandatory break.<br>You should find a parking spot and rest!"
+	val[]: "On aika pitää pakollinen lepotaukosi.<br>Etsi taukopaikka jossa voit levätä!"
 
 	key[]: "mandatory_break_overdue"
-	val[]: "Exceeded driving time without mandatory break.<br>You should find a parking spot and rest!"
+	val[]: "Ajoaika ylitetty ilman pakollista lepotaukoa.<br>Etsi taukopaikka ja lepää!"
 
 	key[]: "offence_mandatory_break"
-	val[]: "Violation of mandatory break."
+	val[]: "Pakollinen lepotauko pitämättä."
 
 # shown in options
 
 	key[]: "mandatory_break_simulation"
-	val[]: "Mandatory Break simulation"
+	val[]: "Pakollisen tauon simulointi"
 
 	key[]: "mandatory_break_simulation_op_tooltip"
-	val[]: "When enabled, you must take regular breaks from driving.<br><br>Avoiding mandatory breaks will result in traffic offences."
+	val[]: "Kun tämä on valittuna, sinun tulee pitää taukoja säännöllisesti.<br><br>Pakollisen lepotauon välttäminen jotaa liikennerikkomukseen."
 
 	key[]: "rest_state_simulation"
-	val[]: "Rest State simulation"
-	
+	val[]: "Vireystilan simulointi"
+
 	key[]: "rest_state_simulation_op_tooltip"
-	val[]: "When enabled, you will experience the effects of fatigue over time.<br><br>You will need to rest to recover."
+	val[]: "Kun tämä on valittuna, koet ajan myötä väsymyksen oireita.<br><br>Sinun tulee levätä palautuaksesi tästä."
 #@}

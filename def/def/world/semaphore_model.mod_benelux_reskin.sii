@@ -56,6 +56,26 @@ tr_semaphore_model : tr_sem_mdl.col_r.belgium
 	model_coll: "/model/traffic_light/collumn_bel.pmc"
 }
 
+tr_semaphore_model : tr_sem_mdl.col_l.belgium.lie
+{
+	name: "collumn_left_be"
+
+	model_desc: "/model/traffic_light/collumn_left_red_bel.pmd"
+	model_coll: "/model/traffic_light/collumn_left_red_bel.pmc"
+
+	locations[]: liege
+}
+
+tr_semaphore_model : tr_sem_mdl.col_r.belgium.lie
+{
+	name: "collumn_right_red_be"
+
+	model_desc: "/model/traffic_light/collumn_red_bel.pmd"
+	model_coll: "/model/traffic_light/collumn_red_bel.pmc"
+
+	locations[]: liege
+}
+
 ########################################################### TRAM #########################################################
 
 tr_semaphore_model : tr_sem_mdl.coltram_r.belgium
@@ -108,6 +128,16 @@ tr_semaphore_model : tr_sem_mdl.sng_r.belgium
 	model_coll: "/model/traffic_light/single_bel.pmc"
 }
 
+tr_semaphore_model : tr_sem_mdl.sng_r.belgium.lie
+{
+	name: "single_red_right_bel"
+
+	model_desc: "/model/traffic_light/single_red_bel.pmd"
+	model_coll: "/model/traffic_light/single_red_bel.pmc"
+
+	locations[]: liege
+}
+
 ########################################################### CITY ###########################################################
 
 tr_semaphore_model : tr_sem_mdl.cty_r.luxembourg
@@ -133,6 +163,16 @@ tr_semaphore_model : tr_sem_mdl.cty_r.belgium
 
 	model_desc: "/model/traffic_light/city_bel.pmd"
 	model_coll: "/model/traffic_light/city_bel.pmc"
+}
+
+tr_semaphore_model : tr_sem_mdl.cty_r.belgium.lie
+{
+	name: "city_red_right_be"
+
+	model_desc: "/model/traffic_light/city_red_bel.pmd"
+	model_coll: "/model/traffic_light/city_red_bel.pmc"
+
+	locations[]: liege
 }
 
 ########################################################### GANTRY ###########################################################

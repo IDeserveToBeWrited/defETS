@@ -244,6 +244,17 @@ curve_model : curve.un_14001
 		start_part[3]: "brks02"
 		end_part[3]: "brke02"
 
+	}
+
+	curve_model : curve.un_14004
+	{
+		model_desc: "/model2/props/road/un_drain_4m_01.pmd"
+		name: "! testing ! Do NOT USE! un drain 4m 01"
+
+		variation[0]: "inner | cntin_01 : 1.0 | cntin_02 : 1.0 | cntin_03 : 1.0"
+		start_part[0]: "inner_s01 | inner_s02"
+		end_part[0]: "inner_e01 | inner_e02"
+			
 	}	
 
 	curve_model : curve.un_42002
@@ -284,38 +295,46 @@ curve_model : curve.un_14001
 
 	}
 
-	curve_model : curve.un_sw37000
-	{
-		model_desc: "/model2/props/road/un_sidewalk.pmd"
-		name: "un sidewalk"
+curve_model : curve.un_sw37000
+{
+	model_desc: "/model2/props/road/un_sidewalk.pmd"
+	name: "un sidewalk"
 
-		variation[]: "_5m | center501, center502, center503 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		variation[]: "_3m | center301, center302, center303, center304, center305 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		variation[]: "_1m | center101, center102, center103, center104, center105, center106, center107, center108, center109, center110, center111, center112, center113, center114, center115 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		variation[]: "_dw2m | center201, center501, center502, center503, center501, center502, center503 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		variation[]: "_dw4m | center401, center501, center502, center503, center501, center502, center503 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		variation[]: "_dw6m | center601, center501, center502, center503, center501, center502, center503 : 1.0"
-		start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
-		no_stretch_start: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
-		no_stretch_end: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end3"
+	color_variant[]: "default: 255,255,255"
+	color_variant[]: "medium: 222,222,222"
+	color_variant[]: "dark: 190,190,190"
 
-		color_variant[]: "default: 255,255,255"
-		color_variant[]: "medium: 222,222,222"
-		color_variant[]: "dark: 190,190,190"
-		
-		drop_sun_shadows: 2
-	}
+	variation[]: "_5m | center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_3m | center301, center302, center303, center304, center305 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_1m | center101, center102, center103, center104, center105, center106, center107, center108, center109, center110, center111, center112, center113, center114, center115 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw2m | center201, center501, center502, center503, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw4m | center401, center501, center502, center503, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw6m | center601, center501, center502, center503, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw2m8m | center281, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw4m8m | center481, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	variation[]: "_dw6m8m | center681, center501, center502, center503 : 1.0"
+	start_part[]: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	end_part[]: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+	drop_sun_shadows: 2
+	no_stretch_start: "start1 | start2 | start3 | start4 | start5 | start6 | start7 | start8 | start9"
+	no_stretch_end: "end1 | end2 | end3 | end4 | end5 | end6 | end7 | end8 | end9"
+}
 
 	curve_model : curve.un_cr_1m
 	{

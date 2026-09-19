@@ -25,8 +25,7 @@ tutorial_hint : hint.engine.b
     start_conditions[]: cond.job_trans.on_quick15
     start_state_transition: true
     start_conditions[]: cond.engine_ele.without
-    start_conditions[]: cond.part.engine_off
-    start_conditions[]: cond.job_fuel0.quick10
+    start_conditions[]: cond.part.engine_off10
 
     cancel_conditions[]: cond.always.false
     cancel_timeout: 20
@@ -81,8 +80,7 @@ tutorial_hint : hint.engine.e
 {
     start_conditions[]: cond.engine_ele.with
     start_conditions[]: cond.part.elec_on
-    start_conditions[]: cond.part.engine_off
-    start_conditions[]: cond.job_fuel0.quick10
+    start_conditions[]: cond.part.engine_off10
     start_conditions[]: cond.notif_block.persistent
 
     cancel_conditions[]: cond.always.false
@@ -136,9 +134,10 @@ tutorial_hint : hint.ignition.a
 # 15B
 tutorial_hint : hint.ignition.b
 {
+    start_conditions[]: cond.job_trans.on_quick15
+    start_state_transition: true
     start_conditions[]: cond.engine_ele.with
-    start_conditions[]: cond.part.elec_off
-    start_conditions[]: cond.job_fuel0.quick10
+    start_conditions[]: cond.part.elec_off10
 
     cancel_conditions[]: cond.always.false
     cancel_timeout: 20
@@ -477,7 +476,7 @@ tutorial_hint : hint.depot_deliv.a
 
     cancel_conditions[]: cond.min_dist.delivery100
 
-    complete_conditions[]: cond.deliv_diff.any
+    complete_conditions[]: cond.deliv_diff.selected
     complete_fadeout_delay: 5
 
     max_complete_count: 1
@@ -566,6 +565,21 @@ tutorial_hint : hint.fin_deliv2.b
 
     for_bus: false
     for_car: false
+}
+
+# 51A
+tutorial_hint : hint.sm_throttle.51a
+{
+    start_conditions[]: cond.sm_throttle.off
+    start_conditions[]: cond.deliveries.min7
+    start_conditions[]: cond.impulse.d_forward
+
+    cancel_conditions[]: cond.always.false
+    cancel_timeout: 25
+
+    complete_conditions[]: cond.sm_throttle.on
+
+    max_show_count: 1
 }
 
 # 3A

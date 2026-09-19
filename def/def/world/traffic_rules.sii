@@ -136,7 +136,7 @@ traffic_rule_data : traffic_rule.impl_reset
 
 traffic_rule_data : traffic_rule.cross_end
 {
-	name: "[prefab] Crossroad end (reset speed limit and priority)"
+	# name: "[prefab] Crossroad end (reset speed limit and priority)"
 
 	additional_rules[]: traffic_rule.impl_reset
 	additional_rules[]: traffic_rule.no_priority
@@ -398,7 +398,7 @@ traffic_rule_data : traffic_rule.no_trailer
 
 traffic_rule_data : traffic_rule.no_trailers
 {
-	name: "[access] No trailers"
+	# name: "[access] No trailers"
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
@@ -440,7 +440,7 @@ traffic_rule_data : traffic_rule.no_cars
 traffic_rule_data : traffic_rule.no_trucks
 {
 	# kept for backward compatibility
-	name: "[special] No trucks (backward compatibility only)"
+	# name: "[special] No trucks (backward compatibility only)"
 	rule: "actor_access"
 	num_params[]: 0 	# 0 - disallow, 1 - allow
 	num_params[]: 0 	# 0 - inclusive, 1 - exclusive
@@ -549,7 +549,7 @@ traffic_rule_data : traffic_rule.c_train_only
 
 traffic_rule_data : traffic_rule.bus_transit
 {
-	name: "[access] Allow bus transit only"
+	# name: "[access] Allow bus transit only"
 	rule: "actor_access"
 	num_params[]: 1 	# 0 - disallow, 1 - allow
 	num_params[]: 1 	# 0 - inclusive, 1 - exclusive
@@ -1558,7 +1558,7 @@ traffic_rule_data : traffic_rule.narrow_road
 
 traffic_rule_data : traffic_rule.toll_small
 {
-	name: "[prefab] Toll gate for small vehicles (cars)"
+	# name: "[prefab] Toll gate for small vehicles (cars)"
 
 	rule: "actor_access"
 	num_params[]: 0 # 0 - disallow, 1 - allow
@@ -1571,7 +1571,7 @@ traffic_rule_data : traffic_rule.toll_small
 
 traffic_rule_data : traffic_rule.border_truck
 {
-	name: "[prefab] Border gate for trucks"
+	# name: "[prefab] Border gate for trucks"
 
 	additional_rules[]: traffic_rule.trucks_only
 	additional_rules[]: traffic_rule.excl_nav

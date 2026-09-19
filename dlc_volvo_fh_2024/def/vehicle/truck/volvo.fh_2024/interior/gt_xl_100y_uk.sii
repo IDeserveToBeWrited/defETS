@@ -1,0 +1,52 @@
+SiiNunit
+{
+accessory_interior_data: gtxl_100y_u.volvo.fh_2024.interior
+{
+	name: "@@interior_100th_year_edition_uk@@"
+	price: 34080
+	unlock: 16
+	icon: "truck/volvo_fh_2024/interior/uk/uk_specialedition100_int"
+	part_type: factory
+
+	model: "/vehicle/truck/volvo_fh_2024/interior/uk/gt_xl_100y.pmd"
+	collision: "/vehicle/truck/volvo_fh_2024/interior/uk/gt_xl_100y.pmc"
+	animated_model: "/vehicle/truck/volvo_fh_2021/interior/uk/anim/anim_2021.pmd"
+
+	#active_mirrors_part: a_mirrors
+	#passive_mirrors_part: p_mirrors
+	look: Default
+	variant: fh16
+	left_hand_traffic: true
+
+@include "animations_2024_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/volvo_fh_2024.sii"
+	gps_path: "/ui/dashboard/volvo_fh_2024_gps"
+@include "computers_uk.sui"
+
+	glass_panes[]: .volvo.fh_2024.pane.front
+	glass_panes[]: .volvo.fh_2024.pane.left
+	glass_panes[]: .volvo.fh_2024.pane.right
+	glass_panes[]: .volvo.fh_2024.pane.top
+
+	suitable_for[]: "l2h3.volvo.fh_2024.cabin"
+	suitable_for[]: "l2h3_aero.volvo.fh_2024.cabin"
+	suitable_for[]: "l2h3_8x4.volvo.fh_2024.cabin"
+	suitable_for[]: "l2h3_8x4_a.volvo.fh_2024.cabin"
+
+	defaults[]: "/def/vehicle/truck/volvo.fh_2024/accessory/intlight_bgr/100y_white.sii"
+
+	ext_model: "/vehicle/truck/volvo_fh_2024/interior/external/gt_xl_100y_ext_uk.pmd"
+	ext_variant: Default
+	ext_look: Default
+
+@include "dashboard_color_2024.sui"
+#@include "seat.sui"
+
+@include "int_shadow_gt_xl_uk.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

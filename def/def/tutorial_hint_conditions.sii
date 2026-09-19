@@ -14,15 +14,6 @@ hcd::on_job : cond.job_trans.on_quick15
     duration: 15
 }
 
-hcd::on_job : cond.job_fuel0.quick10
-{
-    type: quick
-    value_type: fuel_consumed
-    comparison_type: at_most
-    value: 0
-    duration: 10
-}
-
 hcd::on_job : cond.job_trans.to_quick15
 {
     type: quick
@@ -48,10 +39,23 @@ hcd::completed_delivery_count : cond.deliveries.min3
     comparison_type: at_least
 }
 
+hcd::completed_delivery_count : cond.deliveries.min7
+{
+    count: 7
+    comparison_type: at_least
+}
+
 hcd::vehicle_component : cond.part.engine_off
 {
     component: engine
     negate: true
+}
+
+hcd::vehicle_component : cond.part.engine_off10
+{
+    component: engine
+    negate: true
+    duration: 10
 }
 
 hcd::vehicle_component : cond.part.engine_on
@@ -63,6 +67,13 @@ hcd::vehicle_component : cond.part.elec_off
 {
     component: engine_electricity
     negate: true
+}
+
+hcd::vehicle_component : cond.part.elec_off10
+{
+    component: engine_electricity
+    negate: true
+    duration: 10
 }
 
 hcd::vehicle_component : cond.part.elec_on
@@ -535,6 +546,13 @@ hcd::impulse : cond.impulse.activate1
     duration: 1
 }
 
+hcd::impulse : cond.impulse.d_forward
+{
+    mixes[]: dforward
+    mix_thresholds[]: 0.5
+    duration: 1
+}
+
 hcd::transmission : cond.transmission.arcade
 {
     type: arcade
@@ -698,6 +716,19 @@ hcd::cvar_value : cond.fatigue.on
     name: g_fatigue
     value: 0
     negate: true
+}
+
+hcd::cvar_value : cond.sm_throttle.on
+{
+    name: g_throttle_double_tap
+    value: 0
+    negate: true
+}
+
+hcd::cvar_value : cond.sm_throttle.off
+{
+    name: g_throttle_double_tap
+    value: 0
 }
 
 hcd::game_paused : cond.paused.was
@@ -979,6 +1010,12 @@ hcd::condition_or : cond.elec_off_or.eng_ele_wo
 hcd::condition_or : cond.can_deliv_or.deliv_done
 {
     conditions[]: cond.cargo.can_deliver
+    conditions[]: cond.job.done
+}
+
+hcd::condition_or : cond.deliv_diff.selected
+{
+    conditions[]: cond.deliv_diff.any
     conditions[]: cond.job.done
 }
 

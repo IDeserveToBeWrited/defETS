@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Fri som en fågel"
 
+	key[]: "loading_location_country"
+	val[]: "Någonstans i $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Överför" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Nuvarande jobb"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "VEHICLE ANALYSIS" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "VEHICLE ANALYSIS" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "VEHICLE ANALYSIS" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Vehicle Configuration" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Vehicle Configuration" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Normal last" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Du kommer att göra justeringar för tung last.  Se över din aktuella lastbilskonfiguration för att försäkra dig om den klarar av jobbet." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Given your expected typical type of transportation, tune your vehicle to optimize it according to a combination of economy of driving, technical and legal limitations." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Given the standard expected type of transportation, tune your vehicle to optimise it according to a combination of fuel economy, technical and legal limitations." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Optimerad för transport av lätt och medeltung last" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Optimerad för tung och särskild last" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Ability of your vehicle to maneuver in tight space areas" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Ability of your vehicle to manoeuvre in tight space areas" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimized vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optimisation of vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Förbättrad förmåga att färdas över gropiga och ojämna ytor" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -262,7 +268,7 @@
 
 
 	key[]: "truck_action_t"
-	val[]: "VEHICLE SERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
+	val[]: "FORDONSSERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
 
 #+ Truck service screen.
 #+
@@ -275,8 +281,8 @@
 	key[]: "truck_service"
 	val[]: "Verkstad" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
-	val[]: "Vehicle maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
+	key[]: "vehicle_service_about"
+	val[]: "Truck maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
 	val[]: "SKADERAPPORT" #+ Header of section displaying status of individual components of the vehicle (engine, transmission, ....).  Please keep in upper case where possible. Please keep in upper case where possible.
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Byt ut allt" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "SKADERAPPORT SLÄP" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Bekräfta" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Vehicle damage" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Vehicle damage" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,13 +311,13 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
-	val[]: "VEHICLE CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
+	key[]: "vehicle_config_t"
+	val[]: "CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Vehicle Configurator" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Vehicle Configurator" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
+	key[]: "vehicle_config_about"
 	val[]: "You know, there's always something you can tune or paint to make you feel better about your vehicle." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
@@ -410,7 +416,7 @@
 	key[]: "truck_diag"
 	val[]: "Fordonsdiagnostik" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
+	key[]: "vehicle_diag_about"
 	val[]: "View information about your vehicle and its current condition."
 
 	key[]: "truck_diag_warning"
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "Du har fortfarande några artiklar i din varukorg!<br><br>Vill du ångra alla nya ändringar?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "Du kan inte ändra typ av släp, stomme eller chassi under pågående jobb. Avsluta först leveransen och försök igen." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -695,7 +701,7 @@
 	val[]: "Vindruteram" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Luftfilter" #+ Air filter accessoty.
+	val[]: "Luftfilter" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Höger fönsterflagga" #+ Right window flag
@@ -779,7 +785,7 @@
 	val[]: "Bakhjul"
 
 	key[]: "rear_window"
-	val[]: "Rear Window"
+	val[]: "Bakruta"
 
 	key[]: "rim"
 	val[]: "Fälg" #+ Wheel rim (older part name)
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "Ladda Spel" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Failed to load the saved game."
 
 	key[]: "load_game_desc"
 	val[]: "Ladda ett tidigare sparat spel. Nuvarande framsteg kommer försvinna!" #+ Help message associated with load game icon.
@@ -1655,7 +1664,7 @@
 	val[]: "En ny bloggpost finns tillgänglig online!" #+ Fallback news text content in case of fetch errors
 
 	key[]: "no_truck_dlc"
-	val[]: "No vehicles found! Please re-enable at least one vehicle DLC and restart the game." #+ Text shown when there is no truck available.
+	val[]: "No trucks found! Please re-enable at least one truck DLC and restart the game." #+ Text shown when there is no truck available.
 
 	key[]: "extras"
 	val[]: "Extra"
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Ägarskap" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Price" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Filter" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Lackering" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Vehicles" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Alla" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Laddar ned information om DLC, var god vänta."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Do you want to open an Internet browser and go to the selected web page?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "No DLC available at this time."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "The catalogue operation was cancelled." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "The catalogue has encountered an unknown error." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "The catalogue is not initialized." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "The operation could not start because a blocking operation is currently in progress." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "Some of the data provided is incorrect or incomplete." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Trying to request operation with a product that is either missing from our local catalogue or the platform back end catalogue." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "The catalogue request has failed." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "The response received was malformed." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "The catalogue has encountered an internal error." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Functionality is unavailable on the current platform." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "The catalogue service is currently unavailable. Try again later." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "The catalogue has encountered an internal error." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "GRÄNSSNITT" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "VEHICLE SOUNDS" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "VEHICLE SOUNDS" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "INTERIOR SOUNDS" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Huvudvolym" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Vehicle engine volume" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Engine volume" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Vehicle exhaust volume" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Exhaust volume" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Vehicle turbo volume" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Turbo volume" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Vehicle effects volume" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Vehicle effects volume" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Vehicle noise volume" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Vehicle noise volume" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Ljudnivå för släp" #+ Slider controlling volume of the trailer noises.
@@ -2516,19 +2573,19 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Justerar allmän volym för spelet."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
 	val[]: "Adjusts volume of the vehicle's engine."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
 	val[]: "Adjusts volume of the vehicle's exhaust."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
 	val[]: "Adjusts volume of the vehicle's turbo."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
 	val[]: "Adjusts volume of other vehicle sound effects, such as hissing of the air brakes."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Adjusts volume of noise coming from the vehicle's tyres."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
@@ -2607,10 +2664,10 @@
 	val[]: "Enables additional noise of the air flowing through the windows when the vehicle's windows are open.<br><br><color value=@@clr_txt_d@@>Requires \"Noise of the flowing air\" enabled to function."
 
 	key[]: "noise_aero_op_tooltip" # - Audio, Advanced
-	val[]: "Enables noise of the air flowing around your vehicle's cabin."
+	val[]: "Enables noise of the air flowing around your vehicle."
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
-	val[]: "Enables reverb effect of your vehicle's cabin."
+	val[]: "Enables the reverb effect of your vehicle's interior."
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "Aktiverar efterklangseffekt från omgivningens ljud."
@@ -2656,8 +2713,8 @@
 	key[]: "transmission_settings"
 	val[]: "VÄXELLÅDA" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "VEHICLE PHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "VEHICLE PHYSICS" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "ASSISTANS" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
@@ -2845,7 +2902,7 @@
 	key[]: "hide"
 	val[]: "Dölj" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
+	key[]: "automatic_limit"
 	val[]: "Show limit for current vehicle mode" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
@@ -2979,7 +3036,7 @@
 	key[]: "brake_intensity"
 	val[]: "Bromsstyrka" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
+	key[]: "vehicle_stability"
 	val[]: "Vehicle stability" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
@@ -3045,7 +3102,7 @@
 	key[]: "throttle_double_tap"
 	val[]: "Smart gasreglage" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "Fartspärr" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3162,6 +3219,9 @@
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Horizontell låsningsfaktor Hyttkamera" #+ Slider for interior camera horizon locking.
 
+	key[]: "cam_fov_speed_factor"
+	val[]: "Interior camera speed-based FOV change" #+ Slider for interior camera speed-based FOV changes.
+
 	key[]: "cam_auto_center_delay"
 	val[]: "Fördröjning för autocentrering av kameran" #+ Dropdown for camera auto centering delay.
 
@@ -3258,7 +3318,7 @@
 	val[]: "Välj huruvida tidszoninformation ska visas utöver nuvarande tid."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Enables in-game cutscenes typically displayed after truck purchases or garage upgrades or during passenger loading."
+	val[]: "Enables in-game cutscenes typically displayed after vehicle purchases, garage upgrades or during passenger loading."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "Choose whether semi-transluscent blockers are displayed on roads that cannot be accessed."
@@ -3281,7 +3341,7 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Ändrar bromsstyrkan."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Väljer om, och vilka, släpvagnskablar som animeras.<br><br><color value=@@clr_txt_d@@>Att aktivera kablar på fler fordon kan påverka prestandan på äldre system."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Aktiverar lastbilens elektroniska hastighetsbegränsare till 90 km/h (56 mph).<br><br><color value=@@clr_txt_d@@>World of Trucks-leveranser har alltid denna funktion aktiverad."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Aktiverar fordonets elektroniska hastighetsbegränsare till ett värde beroende på fordonstyp.<br><br><color value=@@clr_txt_d@@>World of Trucks-leveranser har alltid denna funktion aktiverad."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "När detta är aktiverat och vindrutetorkarna står i första läget, slås de på automatiskt och anpassar sin hastighet efter förhållandena."
@@ -3397,6 +3457,9 @@
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "Changes how much the interior camera is allowed to roll based on vehicle movement."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Changes how much the interior camera FOV is changed with vehicle movement speed."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Anger fördröjningen innan kameran automatiskt återcentreras.<br><br>Fordonet måste röra sig i en märkbar hastighet för att detta ska aktiveras. Gäller endast interiör- och jaktkameran när du kör framåt samt utkikar-kameran när du backar."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Förlorad tilldelning:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ cannot be used." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "VEHICLE"
 
 	key[]: "assistant_controls"
@@ -3717,6 +3783,9 @@
 
 	key[]: "o_im_parkingbrake"
 	val[]: "Handbroms"
+
+	key[]: "o_im_handbrake"
+	val[]: "Hand Brake"
 
 	key[]: "o_im_motorbrake"
 	val[]: "Motorbroms"
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "Infotainment display-läge" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "Parking Camera Mode" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "In-zoomning för Navigatorn" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "Assigns button for the parking brake."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "Assigns button for the hand brake."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "Ange knapp för motorbroms.<br><br>Motorbromsen blir aktiv så länge du håller inne knappen."
 
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Assigns button for changing the infotainment display screens."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Assigns button for toggling the parking camera display screens."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "Assigns button for changing the zoom level of the navigation screen within the dashboard or infotainment display."
@@ -4378,7 +4456,7 @@
 	val[]: "Assigns button for turning on/off the steering based camera rotation."
 
 	key[]: "o_im_look_blink_mode_op_tooltip"
-	val[]: "Assigns button for turning on/off the indicator based camera rotation."
+	val[]: "Assigns button for turning on/off the indicator-based camera rotation."
 
 	key[]: "o_im_walk_forward_op_tooltip"
 	val[]: "Assigns button for going forward within the walk mode."
@@ -5275,10 +5353,10 @@
 	val[]: "Sätt vägpunkt till önskad portal"
 
 	key[]: "wanna_assistance_portal"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till en slumpmässigt vald portal helt gratis.<br offset=30>Godkänner du?"
 
 	key[]: "wanna_assistance_portal_online"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till en slumpmässigt vald portal helt gratis.<br offset=30>Din nuvarande leverans kommer bli avbruten.<br offset=30>Godkänner du?"
 
 	key[]: "mp_job_quick_travel_other_land"
 	val[]: "Du är för långt bort från avgående företagsadress som är i ett annat land.<br><br>Vill du fortfarande ta jobbet?"
@@ -6240,16 +6318,16 @@
 	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_online"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till $CITY$. Det kommer kosta $MONEY$ och resan kommer ta $TIME$.<br offset=30>Din aktuella leverans kommer att avbrytas.<br offset=30>Godkänner du?"
 
 	key[]: "wanna_recover"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till närmaste väg. Det kommer kosta $MONEY$ och resan kommer ta $TIME$.<br offset=30>Godkänner du?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till närmaste väg. Det kommer kosta $MONEY$ och resan kommer ta $TIME$.<br>(Avgiften kommer att betalas av din arbetsgivare.)<br offset=30>Godkänner du?"
 
 	key[]: "wanna_recover_online"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Vägassistans kan ta dig och ditt fordon till närmaste väg. Det kommer kosta $MONEY$ och resan kommer ta $TIME$.<br offset=30>Din aktuella leverans kommer att avbrytas.<br offset=30>Godkänner du?"
 
 	key[]: "wanna_refuel"
 	val[]: "Vägservice kan ge dig $VOLUME$ diesel. Det kommer att kosta $MONEY$ och tar $TIME$<br offset=30>Vill du göra detta?"
@@ -6270,22 +6348,22 @@
 	val[]: "Nödladdningen kommer att ladda ditt batteri med $ENERGY$. Det kommer att kosta $MONEY$ och tar $TIME$.<br offset=30>Accepterar du?"
 
 	key[]: "wanna_assistance_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$.<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_quick_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_online_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
 
 	key[]: "wanna_recover_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to the nearest road. It will cost $MONEY$.<br offset=30>Do you agree?"
 
 	key[]: "wanna_recover_quick_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to the nearest road. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
 
 	key[]: "wanna_recover_online_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Assistance Service can take you and your vehicle to the nearest road. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
 
 	key[]: "wanna_refuel_mp"
 	val[]: "Emergency Refueling service will provide you with $VOLUME$ of diesel. It will cost $MONEY$.<br offset=30>Do you agree?"
@@ -6312,7 +6390,7 @@
 	val[]: "Du väntar på att Nödladdar-assistans ska komma och ladda ditt fordon."
 
 	key[]: "cancel_job_fademsg"
-	val[]: "Du väntar på att en annan chaufför ska ta över din last."
+	val[]: "Du väntar på att en annan förare ska ta över ditt nuvarande uppdrag."
 
 	key[]: "no_job"
 	val[]: "Just nu har du inga leveranser."
@@ -6382,7 +6460,7 @@
 	val[]: "Lastbilsåterförsäljare för $BRAND$ upptäckt!"
 
 	key[]: "service"
-	val[]: "To repair, upgrade, or paint<br>your vehicle or trailer press:"
+	val[]: "För att reparera, uppgradera eller lackera<br>ditt fordon eller ditt släp, tryck:"
 
 	key[]: "job_offer"
 	val[]: "Tryck på följande tangent för att visa jobberbjudandet:"
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Stäng av motorn!"
 
-	key[]: "stop_truck_short"
-	val[]: "Stop the vehicle!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Stop the vehicle!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Använd följande tangent för att stänga av motorn:"
@@ -6579,7 +6657,7 @@
 	val[]: "Om du vill väga ditt fordon för $MONEY$, tryck:" #+ Adviser text: Text on weighing station for volunteer weighing.
 
 	key[]: "weigh_gross"
-	val[]: "Lastbilens bruttovikt:" #+ Adviser text
+	val[]: "Fordonets bruttovikt:" #+ Adviser text
 
 	key[]: "weigh_confirm"
 	val[]: "Tack för ditt samarbete.  Ha en säker färd!" #+ Adviser text
@@ -8834,7 +8912,7 @@
 	val[]: "Rotary Rakes Krone Swadro TC 1370"
 
 	key[]: "cn_round_baler_krone_vpv190xc"
-	val[]: "Round Baler Krone Vari Pack V 190 XC"
+	val[]: "Round Baler Krone VariPack V 190 XC"
 
 	key[]: "cn_square_baler_krone_bigp1290"
 	val[]: "Square Baler Krone BiG Pack 1290 HDP VC"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Saldo: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Gå framåt i din karriär i lastbilsläget för att låsa upp lånet."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Gå framåt i din karriär i $MODE$ för att låsa upp lånet."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Du har för stora skulder för att ta detta lån."
+
 #+ New loan confirmation window
 #@{
 
@@ -9443,7 +9530,13 @@
 	val[]: "Du kan inte snabbresa under en leverans!"
 
 	key[]: "compman_qt_notruck"
-	val[]: "You cannot quick travel since you don't have a truck, coach or car!"
+	val[]: "Du kan inte göra en snabbresa eftersom du inte har någon egen lastbil, buss eller bil!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Du kan inte göra en snabbresa eftersom du inte har någon bil!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Du kan inte göra en snabbresa eftersom du inte har någon långfärdsbuss!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Vill du snabbresa till det valda garaget?"
@@ -9812,13 +9905,13 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "SELL VEHICLE"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
+	key[]: "vehicleman_msg_reallysell"
 	val[]: "Vill du verkligen sälja din $TRUCK$ för $MONEY$"
 
-	key[]: "truckman_msg_nosell"
+	key[]: "vehicleman_msg_nosell"
 	val[]: "You cannot sell the vehicle you're driving while on a job! Finish your job and then try again."
 
 	key[]: "truckman_total_restoration_t"
@@ -9850,10 +9943,10 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "CHANGE VEHICLE" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
+	key[]: "vehicleman_msg_nochange"
 	val[]: "You cannot change your vehicle while on a job! Finish your job first."
 
 	key[]: "truckman_conf_drive"
@@ -9890,7 +9983,7 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "KOPIERA KONFIGURATION" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
+	key[]: "vehicleman_msg_nouse"
 	val[]: "This vehicle cannot be used as copy configuration source due to missing data which is most likely caused by either MOD or DLC removal.<br><br>Reinstall MOD/DLC."
 #@}
 
@@ -10271,6 +10364,9 @@
 	key[]: "td_msg_first_and_busy"
 	val[]: "Tack för att du köpte din första lastbil av oss!<br><br>Vi levererar den till ditt huvudkontor där du kan hämta upp den när du avslutat din nuvarande leverans."
 
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Thank you for buying your first truck from us!<br><br>Do you want to switch to your new truck in <color value=@@clr_sel@@>$CITY$</color>?"
+
 	key[]: "td_msg_bought_assigned"
 	val[]: "Tack för ditt köp. Njut av din nya lastbil!<br><br>Vi skickar genast den gamla till ditt garage i $CITY$."
 
@@ -10457,7 +10553,7 @@
 	val[]: "Condition" #+ Caption of state section.
 
 	key[]: "used_truck_dealer_explanation_state_1"
-	val[]: "Vehicle has significant mechanical issues affecting performace and reliability. You may need to consider a total restoration or replacement of multiple parts." #+ Explanation of 1-star state.
+	val[]: "Vehicle has significant mechanical issues affecting performance and reliability. You may need to consider a total restoration or replacement of multiple parts." #+ Explanation of 1-star state.
 
 	key[]: "used_truck_dealer_explanation_state_2"
 	val[]: "Vehicle exhibits mechanical issues that could compromise its performance or reliability. Service is required." #+ Explanation of 2-star state.
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Konvojmedlem"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Fordon på snabbjobb"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Annan fordonsplats"
+
 	key[]: "mapl_quarry"
 	val[]: "Stenbrott"
 
@@ -10612,8 +10714,8 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Ej upptäckt plats"
 
-	key[]: "mapl_viewpoint"
-	val[]: "Utsiktsplats (besökt)"
+	key[]: "mapl_viewpoint_visited"
+	val[]: "Viewpoint (visited)"
 
 	key[]: "mapl_viewpoint_unvisited"
 	val[]: "Utsiktsplats (ej besökt)"
@@ -10726,7 +10828,7 @@
 	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "Denna programvara är delvis baserad på arbete av Independent JPEG Group."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Visit $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Använd läges-knappen för att byta mellan olika skrivbordslägen och olika fordonstyper."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "WELCOME"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Thanks for reviewing our Desktop update."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "ENABLE HINTS"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "You are entering a new game mode and contextual hints are currently disabled. Hints can help you learn how to play. Do you want to turn them back on?"
 #@}
 
 
@@ -15698,7 +15810,7 @@
 	val[]: "För närvarande kräver externa kontrakt följande DLC:<br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Kan inte förhandsvisa jobbdetaljer. De kommer att visas när du återgår till ditt nuvarande kontrakt." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Kan inte förhandsvisa jobbdetaljer. De kommer att visas när du återgår till ditt nuvarande kontrakt." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Jobbet kräver att du äger ett släp. Du har dock inget sådant släp kopplat." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15757,6 +15869,9 @@
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "Ändringar av spelet detekterades. Vänligen välj destination för snabbresa:" #+ Shown during economy reset quick travel.
 
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Game change detected. Please select quick travel destination for your truck:" #+ Shown during economy reset quick travel for truck.
+
 	key[]: "confirm_quick_travel"
 	val[]: "Bekräfta snabbresa"
 
@@ -15775,17 +15890,17 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Din lastbil är inte i skick för snabbresa. Fixa dina släpkablar."
 
-	key[]: "quick_travel_cond_repair_truck"
-	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for an assistance."
+	key[]: "quick_travel_cond_repair_vehicle"
+	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for assistance."
 
 	key[]: "quick_travel_cond_repair_trailer"
-	val[]: "Your trailer is not in a condition for quick travel. Visit service or call for an assistance."
+	val[]: "Your trailer is not in a condition for quick travel. Visit service or call for assistance."
 
-	key[]: "quick_travel_cond_truck_fuel"
-	val[]: "Your vehicle is not in a condition for quick travel. Refuel your vehicle or call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fuel"
+	val[]: "Ditt fordon är inte i skick för snabbresa. Tanka ditt fordon eller kalla på assistans."
 
-	key[]: "quick_travel_cond_truck_fallen"
-	val[]: "Your vehicle is not in a condition for quick travel. Call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fallen"
+	val[]: "Your vehicle is not in a condition for quick travel. Call for assistance."
 
 	key[]: "quick_travel_cond_trailer_fallen"
 	val[]: "Ditt lastbilssläp är inte i skick för snabbresa. Kalla på assistans."
@@ -15903,19 +16018,19 @@
 #+ Job cancellation
 #@{
 	key[]: "drive_active_job_t"
-	val[]: "JOB IN PROGRESS"
+	val[]: "PÅGÅENDE JOBB"
 
 	key[]: "drive_active_job"
-	val[]: "You have an active job in another mode.<br offset=10>You can abandon it or show detail in $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
+	val[]: "Du har ett aktivt jobb för ett annat läge.<br offset=10>Du kan avbryta det eller visa detaljer i $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
 
 	key[]: "drive_active_job_yes"
 	val[]: "@@abort_job@@"
 
 	key[]: "drive_active_job_no"
-	val[]: "Switch Mode"
+	val[]: "Växla läge"
 
 	key[]: "cancel_cur_job_warning"
-	val[]: "You will have to pay a penalty fee of $MONEY$ in the case of abandoning the job."
+	val[]: "Avbryter du jobbet behöver du betala en straffavgift på $MONEY$."
 #@}
 
 #+ Trailer coupling phases info messages, shown in route advisor during coupling/decoupling.
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Kunde inte hitta objekt som matchar ditt filter" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Detta garage har uppgraderats till fullo." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "You cannot upgrade the garage, because your owned vehicle is too close to the garage." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "Aktuellt släp:" #+ Title of the current trailer statistics.
 
@@ -16760,7 +16878,7 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "För tillfället finns inga nya släpuppgraderingar."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "To access the Diagnostics you must have a vehicle assigned first."
 
 	key[]: "link_locked_msg_truck_dealer_map"
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Isolerad, sidodörr"
 
-	key[]: "bs_livestock"
-	val[]: "Boskap"
+	key[]: "bs_livestock_painted"
+	val[]: "Djurtransport, målad"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Bottenlastat boskap"
+	key[]: "bs_livestock_steel"
+	val[]: "Djurtransport, stål"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Låg djurtransport, målad"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Låg djurtransport, stål"
 
 	key[]: "bs_log_steel"
 	val[]: "Timmersläp med stålgolv"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Lämna läget för fri pekare" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "No vehicle"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Truck"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,7 +18228,7 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Du har inte en lämplig trailer för det här godset."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Can be only taken with your own vehicle."
 
 	key[]: "mp_job_missing_trailer"
@@ -18702,8 +18832,8 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "A company near your truck or trailer will need to be activated in order for you to join this session.<br>To avoid any problems, please move your truck and trailer further away from the company or your current job will be canceled and you will be teleported to the nearest service.<br><br>Do you wish to continue?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
-	val[]: "A company near where you left your truck or trailer before accepting your quick job will need to be activated in order for you to join this session.<br>To avoid any problems once you return to your truck, your quick job needs to be canceled and you will be teleported to the nearest service.<br><br>Do you wish to continue?"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
+	val[]: "A company near where you left your vehicle or trailer will need to be activated in order for you to join this session.<br>To avoid any problems once you return to your vehicle you will be teleported to the nearest service.<br><br>Do you wish to continue?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
 	val[]: "Your selected job is delivering from or to a company that is inactive in this session and will not be available once you connect.<br><br>Do you wish to continue?"
@@ -18919,13 +19049,13 @@
 	key[]: "job_equipment"
 	val[]: "Jobbverktyg:"
 
-	key[]: "equipment_provided_truck_and_trailer"
+	key[]: "equipment_provided_vehicle_and_trailer"
 	val[]: "Tilldelad lastbil och släpvagn"
 
-	key[]: "equipment_owned_truck_provided_trailer"
+	key[]: "equipment_owned_vehicle_provided_trailer"
 	val[]: "Ägda lastbilar"
 
-	key[]: "equipment_owned_truck_and_trailer"
+	key[]: "equipment_owned_vehicle_and_trailer"
 	val[]: "Ägda lastbil och släpvagn"
 
 	key[]: "mp_job_quick_travel_message"
@@ -19424,7 +19554,7 @@
 #+ Session mod sync info.
 #@{
 	key[]: "session_mod_sync_info"
-	val[]: "Your currenly active mods will be updated to match the selected host's mods.<br>You can subscribe to the missing mods on Steam. Click on them and choose 'Subscribe'."
+	val[]: "Your currently active mods will be updated to match the selected host's mods.<br>You can subscribe to the missing mods on Steam. Click on them and choose 'Subscribe'."
 #@}
 
 #+ Session mod sync warning.
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Länder besökta"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Depåer som servats"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Företag som servats"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20237,6 +20367,36 @@
 	val[]: "Lämna"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Läge"
+
+	key[]: "truck_mode"
+	val[]: "Lastbilsläge"
+
+	key[]: "truck_mode_help"
+	val[]: "Ta på dig olika jobb med en lastbil"
+
+	key[]: "bus_mode"
+	val[]: "Bussläge"
+
+	key[]: "bus_mode_help"
+	val[]: "Upplev ett annat läge som chaufför av långfärdsbussar"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "För att komma åt bussläget så behöver du avsluta ditt första jobb"
+
+	key[]: "car_mode"
+	val[]: "Bil-läge"
+
+	key[]: "car_mode_help"
+	val[]: "Ta på dig andra typer av jobb och upplev världen med en bil"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "För att komma åt bil-läget så behöver du ansluta ditt första jobb"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20385,7 +20545,7 @@
 	key[]: "time_skip_hours"
 	val[]: "Number of hours to skip"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Current time"
 
@@ -20436,7 +20596,7 @@
 	key[]: "time_skip_rest_full"
 	val[]: "Fully rested"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
 	val[]: "This rest won’t meet the mandatory break requirements. You will have $LEFT_TIME$ left until the next mandatory break."
 
@@ -20445,18 +20605,18 @@
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
 	val[]: "For every <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours of driving, you must take a mandatory break for at least <color value=@@clr_sel@@>$BREAK_TIME$</color> hours to avoid getting fined."
-	
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "After the rest and the estimated drive time to the destination, you will have <color value=@@clr_sel@@>$LEFT_TIME$</color> remaining on the job."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "After the rest and the estimated drive time to the destination, the delivery will be late by <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>You will be fully rested</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Estimated Arrival"
 
@@ -20490,7 +20650,7 @@
 
 	key[]: "rest_state_simulation"
 	val[]: "Rest State simulation"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "When enabled, you will experience the effects of fatigue over time.<br><br>You will need to rest to recover."
 #@}

@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Svoboden kot veter"
 
+	key[]: "loading_location_country"
+	val[]: "Nekje v državi $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Preklapljanje" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Trenutno delo"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "ANALIZA VOZILA" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "ANALIZA VOZILA" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "ANALIZA VOZILA" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Konfiguracija vozila" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Konfiguracija vozila" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Konfiguracija vozila" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Konfiguracija vozila" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Običajen tovor" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Pripravljaš se na prevzem dela s težkim tovorom. Preglej konfiguracijo svojega tovornjak in se prepričaj, da bo kos nalogi." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Skrbno načrtuj in optimiziraj svoje vozilo glede na: pričakovan tip transporta, gospodarnost vožnje in tehničnih ter legalnih omejitev." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Skrbno načrtuj in optimiziraj svoje vozilo glede na: pričakovan tip transporta, gospodarnost vožnje in tehničnih ter legalnih omejitev." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Optimiziran za naloge z lahkim in srednje težkim tovorom" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Optimiziran za težek tovor in specialni transport" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Sposobnost manevriranja tvojega vozila v tesnih prostorih" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Sposobnost manevriranja tvojega vozila v tesnih prostorih" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimiziran pogonski sestav vozila za nemoteno vzpenjanje in spuščanje po prelazih" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optimiziran pogonski sestav vozila za nemoteno vzpenjanje in spuščanje po prelazih" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Povečana sposobnost za premagovanje neravnih in grobih površin" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -275,7 +281,7 @@
 	key[]: "truck_service"
 	val[]: "Servis" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
+	key[]: "vehicle_service_about"
 	val[]: "Vzdrževanje in popravila vozila. Dober voznik zmeraj ohranja svoje vozilo v najboljši kondiciji." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Zamenjaj vse" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "POROČILO O POŠKODBAH VOZILA" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "POROČILO O POŠKODBAH VOZILA" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "POTRDILO O ŠKODI NA PRIKOLICI" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Potrdi" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Poškodbe vozila" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Poškodbe vozila" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,13 +311,13 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
+	key[]: "vehicle_config_t"
 	val[]: "KONFIGURATOR VOZILA" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Konfigurator vozila" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Konfigurator vozila" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
+	key[]: "vehicle_config_about"
 	val[]: "Saj veš, zmeraj je nekaj kar lahko spremeniš ali nadgradiš, da se bolje počutiš v svojem vozilu." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
@@ -410,7 +416,7 @@
 	key[]: "truck_diag"
 	val[]: "Diagnoza vozila" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
+	key[]: "vehicle_diag_about"
 	val[]: "Poglej informacije o svojem vozilu in njegovem trenutnem stanju."
 
 	key[]: "truck_diag_warning"
@@ -438,7 +444,7 @@
 	val[]: "Popravljeno z popravilom ali zamenjavo dela." #+ Explanation of damage in tooltip.
 
 	key[]: "truck_diag_recommend_repairs"
-	val[]: "Servisna priporočila" #+ Label of button that offers actions (no action, repair or replace) recommended by service.
+	val[]: "Priporočila servisa" #+ Label of button that offers actions (no action, repair or replace) recommended by service.
 
 	key[]: "truck_diag_request_restoration"
 	val[]: "Zahtevaj popolno obnovo" #+ Label of button that performs vehicle total restoration.
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "Tvoje naročilo vsebuje nekaj predmetov!<br><br>Želiš preklicati vse nove spremembe?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Tvoj delodajalec ne bo navdušen, če boš spreminjal njegovo vozilo." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Tvoj delodajalec ne bo navdušen, če boš spreminjal njegovo vozilo." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "Ne moreš spreminjati vrste prikolice, nadgradnje ali šasije med opravljanjem dela. Najprej zaključi delo in potem poskusi znova." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -695,7 +701,7 @@
 	val[]: "Okvir vetrobranskega stekla" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Zračni filter" #+ Air filter accessoty.
+	val[]: "Zračni filter" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Zastava desnega okna" #+ Right window flag
@@ -779,7 +785,7 @@
 	val[]: "Zadnja kolesa"
 
 	key[]: "rear_window"
-	val[]: "Rear Window"
+	val[]: "Zadnje okno"
 
 	key[]: "rim"
 	val[]: "Platišče" #+ Wheel rim (older part name)
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "Naloži igro" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Nalaganje shranjene igre je spodletelo."
 
 	key[]: "load_game_desc"
 	val[]: "Naloži prej shranjeno igro. Trenutni napredek se bo izgubil!" #+ Help message associated with load game icon.
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Lastništvo" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Cena" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Filter" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Poslikave" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Vozila" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Vse" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Prenašanje informacij DLC dodatka. Prosimo, počakaj."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Želi odpreti internetni brskalnik in navigirati na izbrano spletno stran?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "Trenutno ni na voljo nobenega DLC dodatka."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "Operacija s katalogom je bila preklicana." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "Neznana napaka v katalogu." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "Katalog ni naložen." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "Operacija se ni mogla zagnati, ker je trenutno že v teku operacija, ki blokira." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "Nekateri od navedenih podatkov so napačni ali nepopolni." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Poskus izvajanja operacije nad manjkajočim produktom v lokalen oz. glavnem katalogu." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "Zahteva za katalog ni uspela." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "Prejet odgovor je nepravilen." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "Notranja napaka v katalogu." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Funkcionalnost na trenutni platformi ni prisotna." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "Servis kataloga trenutno ni na voljo, klicoči naj poskusi kasneje." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "Notranja napaka v katalogu." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "VMESNIK" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "ZVOKI VOZILA" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "ZVOKI VOZILA" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "ZVOKI NOTRANJOSTI" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Glavna glasnost" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Glasnost motorja vozila" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Glasnost motorja vozila" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Glasnost izpušnega sistema vozila" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Glasnost izpušnega sistema vozila" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Glasnost turbine vozila" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Glasnost turbine vozila" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Glasnosts efektov vozila" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Glasnosts efektov vozila" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Glasnost šuma vozila" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Glasnost šuma vozila" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Glasnost šuma prikolice" #+ Slider controlling volume of the trailer noises.
@@ -2516,19 +2573,19 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glavno glasnost igre."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glasnost motorja v vozilu."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glasnost izpuha vozila."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glasnost turbine vozila."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glasnost ostalih efektov vozila, kot je npr. piskanje zračnih zavor."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Prilagodi glasnost šuma, ki ga povzročajo pnevmatike vozila."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
@@ -2656,14 +2713,14 @@
 	key[]: "transmission_settings"
 	val[]: "MENJALNIK" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "FIZIKA VOZILA" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "FIZIKA VOZILA" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
-	val[]: "ASSISTANTS" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
+	val[]: "ASISTENTI" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
 
 	key[]: "trailer_settings"
-	val[]: "TRAILER" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
+	val[]: "PRIKOLICA" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
 
  	key[]: "camera_settings"
 	val[]: "KAMERA" #+ Title of 'Camera' settings section. Please keep in upper case where possible.
@@ -2845,7 +2902,7 @@
 	key[]: "hide"
 	val[]: "Skrij" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
+	key[]: "automatic_limit"
 	val[]: "Prikaži omejitev za trenutni tip vozila" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
@@ -2979,7 +3036,7 @@
 	key[]: "brake_intensity"
 	val[]: "Intenzivnost zaviranja" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
+	key[]: "vehicle_stability"
 	val[]: "Stabilnost vozila" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
@@ -3018,7 +3075,7 @@
 	val[]: "Igralčeve prikolice" #+ Name of the mode with physical cables between player truck and all connected trailers.
 
 	key[]: "trailer_cables_mode_player_all_first_ai"
-	val[]: "Igralčeve prikolice in prve prikolice v prometu" #+ Name of the mode with physical cables between player truck and all connected trailers, including cables for first traffic trailers.
+	val[]: "Igralčeve in prve prikolice v prometu" #+ Name of the mode with physical cables between player truck and all connected trailers, including cables for first traffic trailers.
 
 	key[]: "trailer_cables_mode_all"
 	val[]: "Igralčeve in vse prikolice v prometu" #+ Name of the mode with physical cables between player truck and all connected trailers, including cables on traffic trailers.
@@ -3045,7 +3102,7 @@
 	key[]: "throttle_double_tap"
 	val[]: "Pametna kontrola pedala za plin" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "Omejevalnik hitrosti za tovornjak" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3161,6 +3218,9 @@
 
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Faktor zaklepanja notranje kamere na točko horizonta" #+ Slider for interior camera horizon locking.
+
+	key[]: "cam_fov_speed_factor"
+	val[]: "Sprememba vidnega kota (FOV) glede na hitrsot" #+ Slider for interior camera speed-based FOV changes.
 
 	key[]: "cam_auto_center_delay"
 	val[]: "Zamik samodejnega centriranja kamere" #+ Dropdown for camera auto centering delay.
@@ -3281,7 +3341,7 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Spremeni moč zavor."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Spremeni stabilnost vozila z znižanjem težišča."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Izbere če in katere prikolice imajo animirane kable.<br><br><color value=@@clr_txt_d@@>Omogočanje kablov na več vozilih lahko vpliva na delovanje igre, predvsem na starejših sistemih."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Omogoči tovornjakov elektronski omejevalnik hitrosti nastavljen na 90 km/h (56 mph).<br><br><color value=@@clr_txt_d@@>Dostave s portala World of Trucks imajo to funkcijo zmeraj vključeno."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Omogoči elektronski omejevalnik vozila, ki je odvisen od modela vozila.<br><br><color value=@@clr_txt_d@@>Delo s portala World of Trucks imajo to funkcijo zmeraj vključeno."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "Ko je funkcija vključena in vključeni brisalci na prvi poziciji, bodo brisalci delovali avtomatsko, njihova hitrost pa se bo prilagajala glede na razmere."
@@ -3397,6 +3457,9 @@
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "Spremeni količino premika notranje kamere pri sledenju horizonta glede na premike vozila."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Spremeni za koliko se lahko spremeni kot vidnega polja (FOV) s hitrostjo."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Nastavi zamik po katerem se kamera avtomatično centrira.<br><br>Za aktivacijo se mora vozilo premikati z dovolj veliko hitrostjo. Ta nastavitev velja samo za pogled kamere v notranjosti, pogled kamere v zunaj in med vzvratno vožnjo pogleda kamere skozi okno."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Izgubljene funkcije:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ ne more biti uporabljen." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "VOZILO"
 
 	key[]: "assistant_controls"
@@ -3716,6 +3782,9 @@
 	val[]: "Vključi/izključi elektriko motorja"
 
 	key[]: "o_im_parkingbrake"
+	val[]: "Ročna zavora"
+
+	key[]: "o_im_handbrake"
 	val[]: "Ročna zavora"
 
 	key[]: "o_im_motorbrake"
@@ -3851,7 +3920,7 @@
 	val[]: "Predvajalnik glasbe"
 
 	key[]: "o_im_radio_next"
-	val[]: "Predvajalnik zvoka naslednji"
+	val[]: "Avdio predvajalnik naslednji"
 
 	key[]: "o_im_radio_prev"
 	val[]: "Avdio predvajalnik prejšnji"
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "Način prikaza sistema za informacije in zabavo" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "Način kamer za parkiranje" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "Način povečave navigacije" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -3924,7 +3996,7 @@
 	val[]: "Nastavitve vozila"
 
 	key[]: "o_im_services"
-	val[]: "Servis & nastavitve"
+	val[]: "Servis in nastavitve"
 
 	key[]: "o_im_adviser_eta"
 	val[]: "Načini destinacije v navigaciji"
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "Določi gumb za parkirno zavoro."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "Določi gumb za ročno zavoro."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "Določi gumg za motorno zavoro.<br><br>Motorna zavora bo aktivna tako dolgo, dokler bo pritisnjen gumb."
 
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Določi gumb za spreminjanje zaslona sistema za informacije in zabavo."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Določi gumb za spreminjanje zaslona sistema kamer za parkiranje."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "Določi gumb za spreminjanje povečave navigacije na zaslonu armaturne plošče oz. sistemu za informacije in zabavo."
@@ -4459,7 +4537,7 @@
 	val[]: "Določi gumb za odpiranje menija nalaganje igre."
 
 	key[]: "o_im_aca_quick_restart_op_tooltip"
-	val[]: "Assigns button for quick restart.<br><br>Make restarting scenarios in the Academy Module easier. When the button is pressed, the scenario in the Driving Academy will restart, skipping the intro and briefing screens, and the engine will be turned on. The parking brake will remain activated.<br><br><color value=@@clr_txt_d@@>This feature is not available in Truck Driving Basics module."
+	val[]: "Nastavi gumb za hiter ponovni zagon.<br><br>Naredi lažji ponovni zagon scenarijev iz modula akademije. Ko je gumb pritisnjen, se bo scenarij iz akademije ponovno naložil. Brifing in uvodni zaslon bodo preskočeni, prav tako pa bo vklopljen motor. Parkirna zavora bo ostala aktivirana.<br><br><color value=@@clr_txt_d@@> Ta funkcionalnost ni omogočena v modulu osnov pri vožnji s tovornjakom."
 
 	key[]: "o_im_radio_op_tooltip"
 	val[]: "Določi gumb za odpiranje avdio predvajalnika."
@@ -5871,10 +5949,10 @@
 	val[]: "CMD"
 
 	key[]: "no_cstm_mod"
-	val[]: "No modifier"
+	val[]: "Brez modifikatorja"
 
 	key[]: "cstm_mod_prefix"
-	val[]: "Modifier"
+	val[]: "Modifikator"
 
 	key[]: "cstm_mod_1"
 	val[]: "Modifikator 1"
@@ -5967,22 +6045,22 @@
 	val[]: "Pritisk na plin" #+ Throttle pedal axis of a steering wheel.
 
 	key[]: "axis_brake"
-	val[]: "Brake" #+ Brake pedal axis of a steering wheel.
+	val[]: "Zavora" #+ Brake pedal axis of a steering wheel.
 
 	key[]: "axis_clutch"
 	val[]: "Sklopka" #+ Clutch pedal axis of a steering wheel.
 
 	key[]: "axis_handbrake"
-	val[]: "Handbrake" #+ Handbrake axis of a steering wheel.
+	val[]: "Ročna zavora" #+ Handbrake axis of a steering wheel.
 
 	key[]: "axis_gear"
-	val[]: "Gear Axis" #+ Gear axis of a steering wheel, usually from a h-shifter.
+	val[]: "Os prestav" #+ Gear axis of a steering wheel, usually from a h-shifter.
 
 	key[]: "button_reverse_gear"
-	val[]: "Reverse Gear" #+ Reverse gear button of a steering wheel, usually from a h-shifter.
+	val[]: "Vzvratna prestava" #+ Reverse gear button of a steering wheel, usually from a h-shifter.
 
 	key[]: "button_gear"
-	val[]: "Gear" #+ N-th gear button of a steering wheel, usually from a h-shifter. For example "Gear 1".
+	val[]: "Prestava" #+ N-th gear button of a steering wheel, usually from a h-shifter. For example "Gear 1".
 #@}
 
 #+ XInput button names
@@ -6243,13 +6321,13 @@
 	val[]: "Asistenca lahko tebe in tvoje vozilo prepelje do mesta: $CITY$. Stalo te bo $MONEY$, potovanje pa bo trajalo $TIME$.<br offset=30>Tvoja trenutna dostava bo preklicana.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$, potovanje pa bo trajalo $TIME$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$, potovanje pa bo trajalo $TIME$<br>(Stroške bo kril tvoj delodajalec.)<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover_online"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Asistenca lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$, potovanje pa bo trajalo $TIME$.<br offset=30>Tvoja trenutna dostava bo preklicana.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_refuel"
 	val[]: "Asistenca za dopolnjevanje goriva ti bo pripeljala $VOLUME$ nafte. Stalo te bo $MONEY$, do prihoda asistence pa bo trajalo $TIME$.<br offset=30>Se strinjaš?"
@@ -6270,40 +6348,40 @@
 	val[]: "Asistenca za polnjenje bo napolnila baterijo z $ENERGY$. Stalo te bo $MONEY$, do prihoda asistence pa bo trajalo $TIME$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_assistance_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odpelje v $CITY$. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_assistance_quick_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odpelje v $CITY$. Stalo te bo $MONEY$<br>(Stroške bo kril tvoj delodajalec.)<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_assistance_online_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Asistenca lahko tebe in tvoje vozilo prepelje do mesta: $CITY$. Stalo te bo $MONEY$.<br offset=30>Tvoja trenutna dostava bo preklicana.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover_quick_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Servis lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$.<br>(Stroške bo kril tvoj delodajalec.)<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recover_online_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Asistenca lahko tebe in tvoje vozilo odvleče do najbližje ceste. Stalo te bo $MONEY$.<br offset=30>Tvoja trenutna dostava bo preklicana.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_refuel_mp"
-	val[]: "Emergency Refueling service will provide you with $VOLUME$ of diesel. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Asistenca za dopolnjevanje goriva ti bo pripeljala $VOLUME$ nafte. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_refuel_quick_mp"
-	val[]: "Emergency Refueling service will provide you with $VOLUME$ of diesel. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Asistenca za dopolnjevanje goriva ti bo pripeljala $VOLUME$ nafte. Stalo te bo $MONEY$.<br>(Stroške bo kril tvoj delodajalec.)<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_refuel_online_mp"
-	val[]: "Emergency Refueling service will provide you with $VOLUME$ of diesel. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Asistenca za dopolnjevanje goriva ti bo pripeljala $VOLUME$ nafte. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recharge_mp"
-	val[]: "Emergency Recharge service will charge your battery with $ENERGY$. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Asistenca za polnjenje bo napolnila baterijo z $ENERGY$. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recharge_quick_mp"
-	val[]: "Emergency Recharge service will charge your battery with $ENERGY$. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Asistenca za polnjenje bo napolnila baterijo z $ENERGY$. Stalo te bo $MONEY$.<br>(Stroške bo kril tvoj delodajalec.)<br offset=30>Se strinjaš?"
 
 	key[]: "wanna_recharge_online_mp"
-	val[]: "Emergency Recharge service will charge your battery with $ENERGY$. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Asistenca za polnjenje bo napolnila baterijo z $ENERGY$. Stalo te bo $MONEY$.<br offset=30>Se strinjaš?"
 
 	key[]: "wait_refuel_fade_message"
 	val[]: "Čakaš na asistenco, da pripelje gorivo."
@@ -6312,7 +6390,7 @@
 	val[]: "Čakaš na assistencno polnjenja, da napolni tvoje vozilo."
 
 	key[]: "cancel_job_fademsg"
-	val[]: "Čakaš na drugega voznika za prevzem tvojega tovora."
+	val[]: "Čakaš na drugega voznika za prevzem tvojega dela."
 
 	key[]: "no_job"
 	val[]: "Trenutno ne opravljaš nobene dostave."
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Ugasni motor!"
 
-	key[]: "stop_truck_short"
-	val[]: "Ustavi vozilo!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Ustavi vozilo!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Uporabi naslednjo tipko za ustavitev motorja:"
@@ -6493,7 +6571,7 @@
 	val[]: "Pritisni in drži naslednjo tipko, da napolniš rezervoar za gorivo:"
 
 	key[]: "diesel_price"
-	val[]: "Cena Goriva (Diesel)"
+	val[]: "Cena nafte"
 
 	key[]: "total_price"
 	val[]: "Skupna cena"
@@ -6697,7 +6775,7 @@
 	val[]: "Sporočila podjetja"
 
 	key[]: "adv_hud_running_line_op_tooltip"
-	val[]: "Dynamically tracks your organization’s incoming revenue and operational costs."
+	val[]: "Dinamično sledi prihodke in operativne stroške tvojega organizacije."
 
 	key[]: "adv_hud_notifications"
 	val[]: "Obvestila"
@@ -6718,10 +6796,10 @@
 	val[]: "Ob ročni spremembi - pripomoček se prikaže ob tvoji spremembi, kot so: preklapljanje med postajami, dodajanje postaj med priljubljene.<br><br>Ob vseh spremembah - pripomoček se prikaže ob vsaki spremembi, vključno z ročnimi akcijami in avtomatičnimi prehodi med avdio posnetki."
 
 	key[]: "adv_hud_finances_line"
-	val[]: "Finances" #+ Widget name for the current bank account balance and the last 7 days profit.
+	val[]: "Finance" #+ Widget name for the current bank account balance and the last 7 days profit.
 
 	key[]: "adv_hud_finances_line_op_tooltip"
-	val[]: "Shows the total bank balance and 7-day profit flow, including dynamic earnings and penalties."
+	val[]: "Prikazuje skupno stanje na bančnem računi in 7-dnevni tok dobička, vključno z dinamičnimi zaslužki in kaznimi."
 
 	key[]: "adv_hud_damage_line"
 	val[]: "Poškodbe" #+ Widget name for displaying vehicle damage.
@@ -6880,7 +6958,7 @@
 
 
 	key[]: "photo_mode_word"
-	val[]: "Photo Mode" #+ Photo mode name, with each word capitalized
+	val[]: "Foto način" #+ Photo mode name, with each word capitalized
 
 	key[]: "landmark_word"
 	val[]: "Foto trofeja" #+ How we call landmarks/photo sights/photo trophies
@@ -7047,40 +7125,40 @@
 
 
 	key[]: "skills_t"
-	val[]: "SPOSOBNOSTI" #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "VEŠČINE" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "skills_screen_subtitle"
-	val[]: "Each level you gain a skill point. Use your hard-earned skill points to unlock better jobs and useful improvements!"
+	val[]: "Z vsako stopnjo pridobiš točko veščine. Uporabi svoje težko prislužene točke veščin za odklepanje boljših del in uporabnih izboljšav!"
 
 	key[]: "skills_screen_subtitle_max"
-	val[]: "All skills unlocked. You can still review your skill bonuses anytime." #+ Screen subtitle alternative shown when all skills are unlocked
+	val[]: "Vse veščine so odklenjene. Svoje veščine lahko kadarkoli pregledaš." #+ Screen subtitle alternative shown when all skills are unlocked
 
 
 	key[]: "skill_points"
-	val[]: "Skill points" #+ Title followed by the number of available skill points.
+	val[]: "Stopnje veščine" #+ Title followed by the number of available skill points.
 
 	key[]: "skill_points_assigned"
-	val[]: "Assigned" #+ Title followed by the number of assigned skill points.
+	val[]: "Dodeljen" #+ Title followed by the number of assigned skill points.
 
 	key[]: "skill_points_max"
-	val[]: "All skill points collected" #+ Text shown instead of the xp bar when no more skill points can be gained.
+	val[]: "Vse točke veščin so zbrane" #+ Text shown instead of the xp bar when no more skill points can be gained.
 
 
 	key[]: "skills_apply_all"
-	val[]: "Apply All" #+ Button that applies/confirms all assigned skill points.
+	val[]: "Uporabi vse" #+ Button that applies/confirms all assigned skill points.
 
 	key[]: "skills_undo_all"
-	val[]: "Undo All" #+ Button that resets all assigned skill points.
+	val[]: "Razveljavi vse" #+ Button that resets all assigned skill points.
 
 	key[]: "skills_apply_single_ask"
-	val[]: "Do you want to apply this skill point to your profile?" #+ Message in a pop up message box shown after clicking Apply All with one point assigned.
+	val[]: "Želiš dodeliti to točko veščine svojem profilu?" #+ Message in a pop up message box shown after clicking Apply All with one point assigned.
 
 	key[]: "skills_apply_all_ask"
-	val[]: "Do you want to apply all $POINTS$ skill points to your profile?" #+ Message in a pop up message box shown after clicking Apply All with multiple points assigned.
+	val[]: "Želiš dodeliti vseh $POINTS$ točk veščine svojem profilu?" #+ Message in a pop up message box shown after clicking Apply All with multiple points assigned.
 
 
 	key[]: "unlimited_distance"
-	val[]: "unlimited" #+ Fallback text shown when skill data contains reference to max rank distance (which is unlimited) of the Long Distance skill
+	val[]: "neomejeno" #+ Fallback text shown when skill data contains reference to max rank distance (which is unlimited) of the Long Distance skill
 
 
 #+ Names of individual skills which can be improved.
@@ -7115,7 +7193,7 @@
 #@{
 
 	key[]: "skill_adr_title"
-	val[]: "Hazardous Cargo"
+	val[]: "Nevarni tovor"
 
 	key[]: "skill_adr_info"
 	val[]: "Uporabi pridobljene točke spretnosti za odklepanje ADR certifikatov in si s tem omogoči prevoz več tipov nevarnega tovora."
@@ -7124,52 +7202,52 @@
 	val[]: "Eksploziva"
 
 	key[]: "skill_adr_1"
-	val[]: "Explosives (e.g. dynamite, fireworks, ammunition)"
+	val[]: "Eksplozivi (npr. dinamit, ognjemeti in strelivo)"
 
 	key[]: "skill_adr_classt2"
 	val[]: "Plini"
 
 	key[]: "skill_adr_21"
-	val[]: "Flammable gases (e.g. acetylene, hydrogen)"
+	val[]: "Vnetljivi plini (npr. acetilen, vodik)"
 
 	key[]: "skill_adr_22"
-	val[]: "Non-flammable gases (e.g. nitrogen, neon)"
+	val[]: "Nevnetljivi plini (npr. dušik in neon)"
 
 	key[]: "skill_adr_23"
-	val[]: "Poisonous gases (e.g. fluorine, hydrogen cyanide)"
+	val[]: "Strupeni plini (npr. flour, vodikov cianid)"
 
 	key[]: "skill_adr_classt3"
 	val[]: "Vnetljive tekočine"
 
 	key[]: "skill_adr_3"
-	val[]: "Flammable liquids (e.g. petrol, diesel, kerosene)"
+	val[]: "Vnetljive tekočine (npr. bencin, nafta in kerozin)"
 
 	key[]: "skill_adr_classt4"
 	val[]: "Vnetljive trdne snovi"
 
 	key[]: "skill_adr_41"
-	val[]: "Flammable solids (e.g. nitrocellulose, magnesium)"
+	val[]: "Vnetljive trdne snovi (npr. nitroceluloza, magnezij)"
 
 	key[]: "skill_adr_42"
-	val[]: "Spontaneously combustible (e.g. white phosphorus)"
+	val[]: "Samovnetljiv (npr. beli fosfor)"
 
 	key[]: "skill_adr_43"
-	val[]: "Water-reactive solids (e.g. sodium, potassium)"
+	val[]: "Trdne snovi, ki reagirajo z vodo (npr. natrij, kalij)"
 
 	key[]: "skill_adr_classt6"
 	val[]: "Toksične in nalezljive substance"
 
 	key[]: "skill_adr_61"
-	val[]: "Poisons (e.g. potassium cyanide, pesticides)"
+	val[]: "Strupi (npr. kalijev cianid, pesticidi)"
 
 	key[]: "skill_adr_62"
-	val[]: "Biohazard (e.g. infectious materials, virus cultures)"
+	val[]: "Biološka nevarnost (npr. kužni materiali, virusne kulture)"
 
 	key[]: "skill_adr_classt8"
 	val[]: "Jedke snovi"
 
 	key[]: "skill_adr_8"
-	val[]: "Corrosive substances (e.g. sulphuric acid, sodium hydroxide)"
+	val[]: "Jedke snovi (npr. žveplova kislina, natrijev hidroksid)"
 #@}
 
 #+ Informations about individual ranks of Long distance skill.
@@ -7179,25 +7257,25 @@
 	val[]: "Dolga razdalja"
 
 	key[]: "skill_distance_info"
-	val[]: "Your @@skill_distance_title@@ skill determines the maximum distance you can travel on duty."
+	val[]: "Tvoja veščina @@skill_distance_title@@ določi maksimalno razdaljo, ki jo lahko prepotuješ pri delu."
 
 	key[]: "long_dist_desc_distance"
-	val[]: "Take jobs up to <color value=@@clr_skill_desc_highlight@@>$NEW_DIST$</color>"
+	val[]: "Vzami dela do <color value=@@clr_skill_desc_highlight@@>$NEW_DIST$</color>"
 
 	key[]: "long_dist_desc_distance_max"
-	val[]: "Unlimited delivery distance"
+	val[]: "Neomejena dolžina dostave"
 
 	key[]: "long_dist_desc_revenue_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for deliveries<br>between $OLD_DIST$ and $NEW_DIST$"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% višji prihodek</color> za dostave<br>med $OLD_DIST$ in $NEW_DIST$"
 
 	key[]: "long_dist_desc_revenue_bonus_max"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for deliveries over $OLD_DIST$"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% višji prihodek</color> za dostave preko $OLD_DIST$"
 
 	key[]: "long_dist_desc_revenue_bonus_total"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% higher revenue</color> based on delivery distance"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% višji prihodek</color> glede na dolžino dostave"
 
 	key[]: "long_dist_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for deliveries over $FIRST_DIST$"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% bunusa za T.I.</color> od dostav preko $FIRST_DIST$"
 #@}
 
 #+ Informations about individual ranks of High Value Cargo skill.
@@ -7207,16 +7285,16 @@
 	val[]: "Tovor z veliko vrednostjo"
 
 	key[]: "skill_heavy_info"
-	val[]: "Your @@skill_heavy_title@@ skill determines how much companies trust you with high-value deliveries."
+	val[]: "Tvoja veščina @@skill_heavy_title@@ določi koliko podjetij ti zaupa z dostavami z veliko vrednostjo."
 
 	key[]: "valuable_desc_initial"
-	val[]: "New <color value=@@clr_skill_desc_highlight@@>high value</color> deliveries <color value=@@clr_skill_desc_highlight@@>available</color>"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>Na voljo</color> so nove dostave z <color value=@@clr_skill_desc_highlight@@>visoko vrednostjo</color>"
 
 	key[]: "valuable_desc_revenue_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for high value deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% višji prihodek</color> za dostave z veliko vrednostjo"
 
 	key[]: "valuable_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for high value deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% več T.I.</color> za dostave z veliko vrednostjo"
 
 #@}
 
@@ -7227,25 +7305,25 @@
 	val[]: "Pravočasna dostava"
 
 	key[]: "skill_jit_info"
-	val[]: "Your @@skill_jit_title@@ skill determines your compensation for tight-deadline jobs."
+	val[]: "Tvoja veščina @@skill_jit_title@@ določi kompenzacijo za delo s kratkimi roki."
 
 	key[]: "urgent_desc_initial_important"
-	val[]: "New <color value=@@clr_skill_desc_highlight@@>important</color> deliveries <color value=@@clr_skill_desc_highlight@@>available</color>"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>Na voljo</color> so nove <color value=@@clr_skill_desc_highlight@@>pomembne</color> dostave"
 
 	key[]: "urgent_desc_initial_urgent"
-	val[]: "New <color value=@@clr_skill_desc_highlight@@>urgent</color> deliveries <color value=@@clr_skill_desc_highlight@@>available</color>"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>Na voljo</color> so nove <color value=@@clr_skill_desc_highlight@@>urgentne</color> dostave"
 
 	key[]: "urgent_desc_revenue_bonus_important"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS_IMPORTANT$% higher revenue</color> for important deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS_IMPORTANT$% višji prihodek</color> za pomembne dostave"
 
 	key[]: "urgent_desc_revenue_bonus_urgent"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for urgent deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% višji prihodek</color> za urgentne dostave"
 
 	key[]: "urgent_desc_xp_bonus_important"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS_IMPORTANT$% XP bonus</color> for important deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS_IMPORTANT$% več T.I.</color> za pomembne dostave"
 
 	key[]: "urgent_desc_xp_bonus_urgent"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for urgent deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% več T.I.</color> za urgentne dostave"
 
 #@}
 
@@ -7256,16 +7334,16 @@
 	val[]: "Krhek tovor"
 
 	key[]: "skill_fragile_info"
-	val[]: "Your @@skill_fragile_title@@ skill determines your ability to transport delicate goods."
+	val[]: "Tvoja veščina @@skill_fragile_title@@ določi zmožnost prevažanja občutljivega blaga."
 
 	key[]: "fragile_desc_initial"
-	val[]: "New <color value=@@clr_skill_desc_highlight@@>fragile goods</color> deliveries <color value=@@clr_skill_desc_highlight@@>available</color>"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>Na voljo</color> so nove dostave <color value=@@clr_skill_desc_highlight@@>krhkega blaga</color>"
 
 	key[]: "fragile_desc_revenue_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% higher revenue</color> for fragile cargo deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% višji prihodek</color> za dostave krhkega tovora"
 
 	key[]: "fragile_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% XP bonus</color> for fragile cargo deliveries"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% več T.I.</color> za dostave krhkega tovora"
 
 #@}
 
@@ -7276,10 +7354,10 @@
 	val[]: "Ekovožnja"
 
 	key[]: "skill_mechanical_info"
-	val[]: "Your @@skill_mechanical_title@@ skill reduces your fuel consumption."
+	val[]: "Tvoja veščina @@skill_mechanical_title@@ zmanjša porabo goriva."
 
 	key[]: "ecodriving_desc_saved"
-	val[]: "Up to <color value=@@clr_skill_desc_highlight@@>$CONSUMPTION_DROP$% of fuel saved</color> when driving"
+	val[]: "Prihranki goriva med vožnjo do <color value=@@clr_skill_desc_highlight@@>$CONSUMPTION_DROP$%</color>"
 
 #@}
 #@}
@@ -7584,7 +7662,7 @@
 	val[]: "ADR razred"
 
 	key[]: "skill_level"
-	val[]: "Skill rank" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
+	val[]: "Stopnja veščine" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
 #@}
 
 
@@ -8054,7 +8132,7 @@
 	val[]: "Mleko"
 
 	key[]: "cn_mobile_air_compressor"
-	val[]: "Mobile Air Compressor"
+	val[]: "Mobilni kompresor za zrak"
 
 	key[]: "cn_mobile_crusher"
 	val[]: "Mobilni drobilnik"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Denar na računu: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Za odklepanje posojil, najprej napreduj v svoji karieri v načinu tovornjaka."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Za odklepanje posojil, najprej napreduj v svoji karieri v načinu $MODE$."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Imaš preveč dolga za pridobitev tega posojila."
+
 #+ New loan confirmation window
 #@{
 
@@ -9444,6 +9531,12 @@
 
 	key[]: "compman_qt_notruck"
 	val[]: "Ne moreš uporabiti hitrega potovanja, ker nimaš niti tovornjaka, niti avtobusa ali avtomobila!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Ne moreš potovati hitro, ker nimaš avtomobila!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Ne moreš potovati hitro, ker nimaš avtobusa!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Želiš 'hitro' potovati v izbrano garažo?"
@@ -9812,13 +9905,13 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "PRODAJ VOZILO"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
+	key[]: "vehicleman_msg_reallysell"
 	val[]: "Res želiš prodati svoj tovornjak $TRUCK$  za $MONEY$?"
 
-	key[]: "truckman_msg_nosell"
+	key[]: "vehicleman_msg_nosell"
 	val[]: "Ne moreš prodati vozila, dokler opravljaš delo! Najprej zaključi trenutno delo in potem poskusi znova."
 
 	key[]: "truckman_total_restoration_t"
@@ -9850,10 +9943,10 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "ZAMENJAJ VOZILO" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
+	key[]: "vehicleman_msg_nochange"
 	val[]: "Ne moreš spremeniti svojega vozila, dokler opravljaš delo! Najprej zaključi trenutno delo."
 
 	key[]: "truckman_conf_drive"
@@ -9890,7 +9983,7 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "KOPIRANJE KONFIGURACIJE" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
+	key[]: "vehicleman_msg_nouse"
 	val[]: "Ta vozilo ne more biti uporabljeno kot vir za kopiranje konfiguracije, zaradi manjkajočih podatkov. Najverjetneje je do tega prišlo, zaradi odstranjene modifikacije ali DLC dodatka.<br><br>Ponovno namesti modifikacijo oz. DLC dodatek."
 #@}
 
@@ -10051,7 +10144,7 @@
 	val[]: "Stanje:"
 
 	key[]: "driverman_stats_cargo"
-	val[]: "Current cargo:"
+	val[]: "Trenutni tovor:"
 
 	key[]: "driverman_stats_from"
 	val[]: "Iz:"
@@ -10270,6 +10363,9 @@
 
 	key[]: "td_msg_first_and_busy"
 	val[]: "Hvala za nakup svojega prvega tovornjaka pri nas!<br><br>Dostavili ga bomo na Vaš sedež podjetja, kjer ga lahko prevzamete, ko končate trenutno delo."
+
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Hvala ker ste kupili svoj prvi tovornjak pri nas!<br><br>Ali želiš voziti svoj nov tovornjak, ki se nahaja v kraju <color value=@@clr_sel@@>$CITY$</color>?"
 
 	key[]: "td_msg_bought_assigned"
 	val[]: "Hvala za nakup. Uživajte v svojem novem tovornjaku!<br><br>Mi bomo nemudama dostavili Vaš star tovornjak v mesto $CITY$."
@@ -10562,10 +10658,10 @@
 	val[]: "Ponastavi navigacijo" #+ Text on a button that deletes all custom navigation pins. The button is shown only when there are any custom pins to delete.
 
 	key[]: "append_new_pins"
-	val[]: "Always add new checkpoints to the end" #+ Text for a checkbox that prevents adding custom navigation pins in the middle of the route. Hidden when not applicable.
+	val[]: "Vedno dodaj nove navigacijske točke na konec" #+ Text for a checkbox that prevents adding custom navigation pins in the middle of the route. Hidden when not applicable.
 
 	key[]: "append_new_avoid_pins"
-	val[]: "Place avoid pins" #+ Text for a checkbox that starts adding pins in avoid mode. Hidden when not applicable.
+	val[]: "Dodaj točko za izogibanje" #+ Text for a checkbox that starts adding pins in avoid mode. Hidden when not applicable.
 
 
 #+ Texts shown near individual icons on the map legend.
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Član konvoja"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Vozilo opravlja hitro delo"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Lokacija drugega vozila"
+
 	key[]: "mapl_quarry"
 	val[]: "Kamnolom"
 
@@ -10612,7 +10714,7 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Neodkrita razgledna točka"
 
-	key[]: "mapl_viewpoint"
+	key[]: "mapl_viewpoint_visited"
 	val[]: "Razgleda točka (obiskana)"
 
 	key[]: "mapl_viewpoint_unvisited"
@@ -10723,10 +10825,10 @@
 	val[]: "Made with FMOD Studio by Firelight Technologies Pty Ltd."
 
 	key[]: "credits_speedtree"
-	val[]: "Deli te programske opreme uporabljajo tehnologijo SpeedTree® (©2024 zagotovljena s strani Unit Technologies SF). Vse pravice pridržane."
+	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "Ta program je izdelan s pomočjo dela skupine Independent JPEG Group."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -10863,7 +10965,7 @@
 	val[]: "mrd"  #+ Money unit for giga (10^9).
 
 	key[]: "money_unit_tera"
-	val[]: "T" #+ Money unit for tera (10^12).
+	val[]: "bil" #+ Money unit for tera (10^12).
 
 #@}
 
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Pojdi na $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Uporabi gumb Način za preklapljanje med različnimi načini namizja in različnimi tipi vozil."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "DOBRODOŠLI"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Zahvaljujemo se ti za pregled naše posodobitve začetnega zaslona."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "OMOGOČI NAMIGE"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "Vstopaš v nov način igre, kontekstualni namigi pa so trenutno onemogočeni. Namigi ti lahko pomagajo pri učenju igre. Ali jih želiš ponovno vklopiti?"
 #@}
 
 
@@ -14691,7 +14803,7 @@
 	val[]: "Ponastavi foto nastavitve" #+ Reset camera and settings
 
 	key[]: "o_im_photomode_album"
-	val[]: "Open Gallery" #+ opens Gallery
+	val[]: "Odpri galerijo" #+ opens Gallery
 
 	key[]: "o_im_photomode_take"
 	val[]: "Posnami fotografijo" #+ Take snapshot
@@ -14742,7 +14854,7 @@
 	val[]: "Razgledne točke" #+ 'Viewpoints' tab button
 
 	key[]: "photo_album_pointsoi_tab"
-	val[]: "Interesna točka" #+ 'Points of Interest' tab button
+	val[]: "Interesne točke" #+ 'Points of Interest' tab button
 
 	key[]: "photo_album_history_tab"
 	val[]: "Zgodovinski kraji" #+ 'Historical Places' tab button
@@ -14784,7 +14896,7 @@
 	val[]: "IZBIRA DRŽAVE"  #+ window title
 
 	key[]: "photo_album_city_intro_unknown"
-	val[]: "Uvodna sekvenca mesta se ne more predvajati. Prepričaj se, da imaš aktivirane ustrezne DLC dodateke."
+	val[]: "Uvodna sekvenca mesta se ne more predvajati. Prepričaj se, da imaš aktivirane ustrezne DLC dodatke."
 
 	key[]: "photo_album_tooltip_dlc_required"
 	val[]: "Obvezen DLC"
@@ -14808,16 +14920,16 @@
 	val[]: "Prikaži na portalu World of Trucks"
 
 	key[]: "photo_album_no_screenshot_warning"
-	val[]: "Your Gallery is empty. Use Photo Mode to capture images."
+	val[]: "Tvoja galerija je prazna. Uporabni foto način za zajem slik."
 
 	key[]: "link_locked_msg_photo_mode"
 	val[]: "Za dostop do Foto načina je najprej potrebno imeti dodeljeno vozilo."
 
 	key[]: "photo_album_delete_failed"
-	val[]: "Failed to delete the image due to an unexpected error."
+	val[]: "Brisanje slike je zaradi nepričakovane napake spodletelo."
 
 	key[]: "screenshot_failed_general_error"
-	val[]: "Screenshot capture failed due to an unexpected error."
+	val[]: "Zajemanje zaslona je spodletele zaradi nepričakovane napake."
 #@}
 
 #+ Photo album actions.
@@ -14832,7 +14944,7 @@
 	val[]: "Foto album"
 
 	key[]: "photo_album_viewpoint_unknown"
-	val[]: "Razgledne točke si ne moreš ogledati. Prepričaj se, da imaš aktivirane ustrezne DLC dodateke."
+	val[]: "Razgledne točke si ne moreš ogledati. Prepričaj se, da imaš aktivirane ustrezne DLC dodatke."
 
 	key[]: "photo_album_wotr_profile_slot"
 	val[]: "Profilni tovornjak"
@@ -14853,7 +14965,7 @@
 	val[]: "$LANDMARK$ Fotografija s trofeje bo zamenjana. Nadaljuj?"
 
 	key[]: "no_original_landmark_screenshot"
-	val[]: "The original screenshot is not available!"
+	val[]: "Izvornega zaslonskega posnetka ni na voljo!"
 #@}
 
 #+ Photo mode window and settings.
@@ -15037,7 +15149,7 @@
 	val[]: "Uporabi sliko za profil tovornjaka" #+ Upload button
 
 	key[]: "delete_screenshot"
-	val[]: "Do you want to permanently delete the following screenshot?"
+	val[]: "Želiš dokončno izbrisati naslednji zaslonski posnetek?"
 
 	key[]: "upload_screenshot"
 	val[]: "Želiš prenesti zaslonski posnetek v izbrano okno?<br><br>Prejšnja vsebina zaslonskega posnetka v tem oknu bo prepisana!"
@@ -15698,7 +15810,7 @@
 	val[]: "Trenutna zunanja pogodba zahteva naslednje DLC dodatke:<br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Podrobnosti dela niso na voljo. Ponovno bodo prikazane, ko boš nadaljeval z izvajanjem trenutne pogodbe." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Podrobnosti dela niso na voljo. Ponovno bodo prikazane, ko boš nadaljeval z izvajanjem trenutne pogodbe." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Delo zahteva lastno prikolico, vendar trenutno nimaš priklopljene nobene svoje prikolice." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15757,6 +15869,9 @@
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "Zaznana sprememba v igri. Prosimo izberi cilj za hitro potovanje:" #+ Shown during economy reset quick travel.
 
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Zaznana sprememba v igri. Prosimo izberi cilj za hitro potovanje tvojega tovornjaka:" #+ Shown during economy reset quick travel for truck.
+
 	key[]: "confirm_quick_travel"
 	val[]: "Potrdi hitro potovanje"
 
@@ -15775,16 +15890,16 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Tvoj tovornjak ni v primernem stanju za hitro potovanje. Popravi kable prikolice."
 
-	key[]: "quick_travel_cond_repair_truck"
+	key[]: "quick_travel_cond_repair_vehicle"
 	val[]: "Tvoje vozilo ni v primernem stanju za hitro potovanje. Obišči servis ali pa pokliči asistenco."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Tvoja prikolica ni v primernem stanju za hitro potovanje. Popravi svojo prikolico ali pa pokliči asistenco."
 
-	key[]: "quick_travel_cond_truck_fuel"
+	key[]: "quick_travel_cond_vehicle_fuel"
 	val[]: "Tvoje vozilo ni v primernem stanju za hitro potovanje. Dotoči gorivo ali pa pokliči asistenco."
 
-	key[]: "quick_travel_cond_truck_fallen"
+	key[]: "quick_travel_cond_vehicle_fallen"
 	val[]: "Tvoje vozilo ni v primernem stanju za hitro potovanje. Pokliči asistenco."
 
 	key[]: "quick_travel_cond_trailer_fallen"
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Ni najdenih rezultatov za izbrane filtre" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Ni najdenih vozil za izbrane filtre" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Ni najdenih vozil za izbrane filtre" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Ta garaža je bila popolnoma nadgrajena." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "Garaže ne moreš nadgraditi, ker je tvoje lastniško vozilo preblizu." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "Trenutna prikolica:" #+ Title of the current trailer statistics.
 
@@ -16760,7 +16878,7 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "Trenutno niso na voljo nobene nove nadgradnje."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "Za dostop do Diagnostike je najprej potrebno imeti dodeljeno vozilo."
 
 	key[]: "link_locked_msg_truck_dealer_map"
@@ -16926,7 +17044,7 @@
 	val[]: "Vleka Do Servisa"
 
 	key[]: "call_assistance_recovery"
-	val[]: "Tow To Road"
+	val[]: "Vleka na cesto"
 
 	key[]: "call_refuel_service"
 	val[]: "Zasilna oskrba z gorivom"
@@ -17357,7 +17475,7 @@
 	val[]: "B-dvojček, 3 osi, vodljivo"	#+ Component chassis name (upgrade screen only)
 
 	key[]: "tn_dolly"
-	val[]: "Dolly"	#+ Component chassis name (upgrade screen only)
+	val[]: "'Dolly'"	#+ Component chassis name (upgrade screen only)
 
 	key[]: "tn_dolly_2axle"
 	val[]: "'Dolly', 2 osi"	#+ Component chassis name (upgrade screen only)
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Izolirano, stranska vrata"
 
-	key[]: "bs_livestock"
-	val[]: "Živina"
+	key[]: "bs_livestock_painted"
+	val[]: "Živina, barvano"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Živina, spuščeni"
+	key[]: "bs_livestock_steel"
+	val[]: "Živina, železno"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Živina, spuščeno, barvano"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Živina, spuščeno, železno"
 
 	key[]: "bs_log_steel"
 	val[]: "Za hlodovino z jeklenim dnom"
@@ -17465,14 +17589,14 @@
 	val[]: "Hladilnik, stranska vrata"
 
 	key[]: "bs_silo"
-	val[]: "Silo"
+	val[]: "Cisterna za sipki tovor"
 
 #@}
 
 #+ Series names for translation
 #@{
 	key[]: "series_schwarzmuller_food_cistern"
-	val[]: "Food Tank"
+	val[]: "Tanker za živila"
 
 	key[]: "series_schwarzmuller_lowloader"
 	val[]: "Nizki priklopnik"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Zapusti način prostega kazalca" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "Ni vozila"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Tovornjak"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,7 +18228,7 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Nimaš primerne prikolice za trenutni tovor."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Možno jo je prevzeti samo z lastnim vozilom."
 
 	key[]: "mp_job_missing_trailer"
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "Podjetje blizu tvojega tovornjaka ali prikolice bo moralo biti ponovno aktivirano, da se boš lahko pridružil seji.<br>Da se izogneš problemom lahko premakneš tovornjak in prikolico stran od tega podjetja ali pa bo tvoje trenutno delo preklicano. Hkrati boš teleportiran na najbližji servis.<br><br>Želiš nadaljevati?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "Podjetje, blizu katerga si pustil svoj tovornjak ali prikolico preden si prevzel hitro dostavo, bo moralo biti ponovno aktivirano, da se boš lahko pridružil seji.<br>Da se izogneš problemom pri vrnitvi v svoj tovornjak, se mora hitra dostava preklicati in izvesti teleportiranje na najbližji servis.<br><br>Želiš nadaljevati?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18715,7 +18845,7 @@
 	val[]: "Tvoje delo je bilo preklicano, ker je vsebovalo dostavo do podjetja, ki ni aktivno v tej seji."
 
 	key[]: "mp_warning_load_job_canceled_special"
-	val[]: "Your job was canceled as spacial jobs are not supported in convoy."
+	val[]: "Tvoje delo je bilo preklicano, ker izredne dostave niso na voljo v konvojih."
 
 	key[]: "mp_warning_load_job_unavailable"
 	val[]: "Tvoje izbrano delo ni več na voljo, saj je izviralo s podjetja, ki ni aktivno v tej seji."
@@ -18919,13 +19049,13 @@
 	key[]: "job_equipment"
 	val[]: "Oprema pri dostavi:"
 
-	key[]: "equipment_provided_truck_and_trailer"
+	key[]: "equipment_provided_vehicle_and_trailer"
 	val[]: "Priskrbljen tovornjak in prikolica"
 
-	key[]: "equipment_owned_truck_provided_trailer"
+	key[]: "equipment_owned_vehicle_provided_trailer"
 	val[]: "Lasten tovornjak"
 
-	key[]: "equipment_owned_truck_and_trailer"
+	key[]: "equipment_owned_vehicle_and_trailer"
 	val[]: "Lasten tovornjak in prikolica"
 
 	key[]: "mp_job_quick_travel_message"
@@ -19264,7 +19394,7 @@
 #+ Multiplayer gameplay options.
 #@{
 	key[]: "convoy_settings"
-	val[]: "CONVOY" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
+	val[]: "KONVOJ" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
 
 	key[]: "chat_with_activate"
 	val[]: "Odpri klepet z Aktiviraj"
@@ -19655,22 +19785,22 @@
 	val[]: "Dodaj točko"
 
 	key[]: "overlay_add_avoid_pin"
-	val[]: "Avoid area"
+	val[]: "Izogib področju"
 
 	key[]: "overlay_comfirm_pin"
 	val[]: "Potrdi"
 
 	key[]: "overlay_select_pin"
-	val[]: "Move pin"
+	val[]: "Premakni točko"
 
 	key[]: "overlay_cancel_pin"
 	val[]: "Prekliči"
 
 	key[]: "overlay_delete_pin"
-	val[]: "Remove pin"
+	val[]: "Odstrani točko"
 
 	key[]: "overlay_delete_last"
-	val[]: "Remove last placed pin"
+	val[]: "Odstrani zadnjo postavljeno točko"
 
 	key[]: "overlay_reset_route"
 	val[]: "Ponastavi navigacijo"
@@ -19682,7 +19812,7 @@
 	val[]: "Seznam dostav"
 
 	key[]: "overlay_camera_rotate"
-	val[]: "Rotate"
+	val[]: "Zasuči"
 
 	key[]: "overlay_camera_pan"
 	val[]: "Premakni"
@@ -19694,7 +19824,7 @@
 	val[]: "Hodi"
 
 	key[]: "overlay_camera_zoom"
-	val[]: "Zoom"
+	val[]: "Povečaj"
 
 	key[]: "overlay_camera_switch"
 	val[]: "Preklopi kamero"
@@ -19709,7 +19839,7 @@
 	val[]: "Odstrani dodatek"
 
 	key[]: "overlay_camera_crouch"
-	val[]: "Crouch"
+	val[]: "Počep"
 #@}
 
 #+ Supported controller names.
@@ -19724,10 +19854,10 @@
 	val[]: "Xbox One/Series"
 
 	key[]: "controller_ps4"
-	val[]: "DUALSHOCK®4 wireless controller"
+	val[]: "DUALSHOCK®4 brezžični kontroler"
 
 	key[]: "controller_ps5"
-	val[]: "DualSense® wireless controller"
+	val[]: "DualSense® brezžični kontroler"
 
 	key[]: "controller_switch_pro"
 	val[]: "Switch Pro"
@@ -20006,7 +20136,7 @@
 	val[]: "Raziskano"
 
 	key[]: "career_progress_stats_explore_gallery"
-	val[]: "Gallery"
+	val[]: "Galerija"
 
 	key[]: "career_progress_stats_explored_map"
 	val[]: "Raziskanost sveta"
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Obiskane države"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Dostavljena skladišča"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Dostavljena podjetja"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20126,49 +20256,49 @@
 #+ Controller overview and Compatible controllers Options screens.
 #@{
 	key[]: "show_compatible_controllers"
-	val[]: "Compatible Controllers" #+ Button showing compatible controllers screen.
+	val[]: "Kompatibilni kontrolerji" #+ Button showing compatible controllers screen.
 
 	key[]: "current_controller"
-	val[]: "Current Controller" #+ Title for the current controller row in Options.
+	val[]: "Trenutni kontroler" #+ Title for the current controller row in Options.
 
 	key[]: "current_controller_t"
-	val[]: "CURRENT CONTROLLER" #+ Title for the current controller row in Options (all uppercase).
+	val[]: "TRENUTNI KONTROLER" #+ Title for the current controller row in Options (all uppercase).
 
 	key[]: "edit_controller_bindings"
-	val[]: "Edit Bindings" #+ Button showing Controller bindings screen.
+	val[]: "Uredi tipke" #+ Button showing Controller bindings screen.
 
 	key[]: "edit_controller_setup"
-	val[]: "Advanced Setup" #+ Button showing Advanced Setup screen.
+	val[]: "Napredne nastavitve" #+ Button showing Advanced Setup screen.
 
 	key[]: "compatible_controllers_t"
-	val[]: "COMPATIBLE CONTROLLERS" #+ Compatible controllers screen title.
+	val[]: "KOMPATIBILNI KONTROLERJI" #+ Compatible controllers screen title.
 
 	key[]: "compatible_controllers_text"
-	val[]: "List of currently supported controllers and steering wheels." #+ Text explaining Compatible controller screen.
+	val[]: "Seznam trenutno podprtih kontrolerjev in volanov." #+ Text explaining Compatible controller screen.
 
 	key[]: "compatible_controller_name"
-	val[]: "Controller name" #+ Compatible controller name header.
+	val[]: "Ime kontrolerja" #+ Compatible controller name header.
 
 	key[]: "compatible_controller_type"
 	val[]: "Tip" #+ Compatible controller type header.
 
 	key[]: "controller_binding_label"
-	val[]: "Binding" #+ Controller Bindings options screen column header for the currently bound button.
+	val[]: "Vezava" #+ Controller Bindings options screen column header for the currently bound button.
 #@}
 
 #+ Controller changed, connected and disconnected popups.
 #@{
 	key[]: "hint_controller_changed_gamepad"
-	val[]: "Controller connected" #+ Hint when game controls was switched to a controller.
+	val[]: "Priključen kontroler" #+ Hint when game controls was switched to a controller.
 
 	key[]: "hint_controller_changed_wheel"
-	val[]: "Steering wheel connected" #+ Hint when game controls was switched to a steering wheel.
+	val[]: "Priključen volan" #+ Hint when game controls was switched to a steering wheel.
 
 	key[]: "controller_disconnected_message"
-	val[]: "Controller connection lost!<br>Please reconnect the controller to continue." #+ Popup message when a controller was disconnected.
+	val[]: "Izgubljena povezava s kontrolerjem!<br>Prosim ponovno priključi kontroler za nadaljevanje." #+ Popup message when a controller was disconnected.
 
 	key[]: "controller_connected_message"
-	val[]: "Your controller is now connected." #+ Popup message when a controller was connected.
+	val[]: "Tvoj kontroler je sedaj priključen." #+ Popup message when a controller was connected.
 #@}
 
 #+ What's new window
@@ -20235,6 +20365,36 @@
 
 	key[]: "desktop_menu_category_leave"
 	val[]: "Zapusti"
+#@}
+
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Način"
+
+	key[]: "truck_mode"
+	val[]: "Tovornjak"
+
+	key[]: "truck_mode_help"
+	val[]: "Opravi različna dela s tovornjakom"
+
+	key[]: "bus_mode"
+	val[]: "Avtobus"
+
+	key[]: "bus_mode_help"
+	val[]: "Izkusi drug način kot voznik avtobusa"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "Za dostop do načina avtobusa moraš najprej končati svoje prvo delo"
+
+	key[]: "car_mode"
+	val[]: "Način avtomobilov"
+
+	key[]: "car_mode_help"
+	val[]: "Opravi različna dela in raziskuj svet z avtomobilom"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "Za dostop do načina avtomobila moraš najprej končati svoje prvo delo"
 #@}
 
 #+ Menu upper bar
@@ -20333,13 +20493,13 @@
 #+ Intro Scene. Only translate into officially supported languages.
 #@{
 	key[]: "health_warning"
-	val[]: "Zdravstveno opozorilo"
+	val[]: "Health warning"
 
 	key[]: "health_warning_description"
-	val[]: "Majhno število uporabnikov je lahko dovzetnih za epileptične napade ali izgubo zavesti, če so izpostavljeni določenim utripajočim lučem ali svetlobnim vzorcem. Takšni posamezniki lahko med gledanjem določenih slik ali igranjem video igre doživijo napad. V primeru, da ste vi ali kdo iz vaše družine v preteklosti že imeli simptome povezane z epilepsijo (napadi ali izguba zavesti), ko ste bili izpostavljeni utripajočim lučem, se pred igranjem posvetujte z zdravnikom in izvedite vse potrebne previdnostne ukrepe.<br offset=20>Če vi ali vaš otrok doživite katerega od naslednjih simptomov med igranjem katerekoli igre: omotica, spremenjen vid, trzanje oči ali mišic, izguba zavesti, zmedenost, krče ali kakršni koli nehoteni gibi, takoj prenehajte z igranjem igre in se posvetujte z medicinskim strokovnjakom."
+	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
 
 	key[]: "trademark"
-	val[]: "Vsa imena blagovnih znamk, logotipi in simboli na vozilih v igri so last njihovih zakonitih lastnikov. Uporabljene so z dovoljenjem. MAN® blagovna znamka in dizajni so del registrirane pravice podjetja MAN Trucks & Bus AG in se uporabljajo po licenci podjetja SCS Software s.r.o. \"Mercedes-Benz\" in \"Three pointed star in a ring\" sta blagovni znamki podjetja Daimler AG in se uporabljata po licenci podjetja SCS Software s.r.o. Blagovne znamke in dizajni RENAULT so registrirane pravice podjetja AB Volvo Group in se uporabljajo v skladu z licenco. Blagovne znamke in dizajni VOLVO so registrirane pravice podjetja AB Volvo Group in se uporabljajo v skladu z licenco."
+	val[]: "All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN® trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license."
 #@}
 
 #+ Save manager errors
@@ -20365,16 +20525,16 @@
 #+ Messages for situations occurring due to management of DLCs.
 #@{
 	key[]: "dlc_acquire_timeout" #+ Message shown during initial sequence, if DLCs licensing takes too long.
-	val[]: "Acquiring DLCs takes longer than expected. It will now continue in the background."
+	val[]: "Pridobivanje DLC dodatkov traja dlje kot pričakovano. Pridobivanje se bo nadaljevalo v ozadju."
 
 	key[]: "dlc_acquire_timeout_wait_or_continue" #+ Message shown during initial sequence, if DLCs licensing takes too long.
-	val[]: "Acquiring DLCs takes longer than expected. Would you like to keep waiting?<br><br>If you proceed further, the acquiring will continue in the background."
+	val[]: "Pridobivanje DLC dodatkov traja dlje kot pričakovano. Želiš še naprej čakati?<br><br>Če boš nadaljeval, se bo pridobivanje nadaljevalo v ozadju."
 
 	key[]: "dlc_acquired_return_optional" #+ Message shown in game, when a DLC has been added.
-	val[]: "Access to some DLCs has been acquired. Would you like to leave to Title Screen now to get access to the new content?<br><br>Your progress will be saved automatically."
+	val[]: "Dostop do nekaterih DLC dodatkov je pridobljen. Ali bi sedaj želel oditi na začetni zaslon, da pridobiš dostop do novih vsebin?<br><br>Napredek bo samodejno shranjen."
 
 	key[]: "dlc_lost_return_forced" #+ Message shown in game, when a DLC has been removed.
-	val[]: "Access to some DLCs has been lost. You will now leave to Title Screen to reflect the changes in the content.<br><br>Your progress will be saved automatically."
+	val[]: "Dostop do nekaterih DLC dodatkov je bil izgubljen. Sedaj boš preusmerjen na začetni zaslon, da se bodo uveljavile spremembe vsebin.<br><br>Tvoj napredek bo shranjen samodejno."
 #@}
 
 #+ Time skip feature
@@ -20385,7 +20545,7 @@
 	key[]: "time_skip_hours"
 	val[]: "Preskočeno število ur"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Trenutni čas"
 
@@ -20436,27 +20596,27 @@
 	key[]: "time_skip_rest_full"
 	val[]: "Popolnoma spočit"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
-	val[]: "Ta počitek ne bo izpolnil zahtev obveznega postanka. Imel boš še $LEFT_TIME$ do naslednjega obveznega postanka."
+	val[]: "Ta počitek ne bo izpolnil zahtev obveznega odmora. Imel boš še $LEFT_TIME$ do naslednjega obveznega odmora."
 
 	key[]: "time_skip_tooltip_mandatory_break_complied"
 	val[]: "Ta počitek bo izpolnil zahteve obveznega odmora. Naslednji te čaka čez <color value=@@clr_sel@@>$DRIVE_TIME$</color> ur."
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
 	val[]: "Za vsakih <color value=@@clr_sel@@>$DRIVE_TIME$</color> ur vožnje moraš v izogib kazni narediti obvezni odmor, ki mora trajati vsaj <color value=@@clr_sel@@>$BREAK_TIME$</color> ur."
-	
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "Po počitku in ocenjenemu preostanku vožnje do cilja boš imel še <color value=@@clr_sel@@>$LEFT_TIME$</color> preostalega časa za dostavo."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "Po počitku in ocenjenemu preostanku vožnje do cilja boš zamujal z dostavo za: <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>Zbudil se boš popolnoma spočit</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Predviden prihod"
 
@@ -20490,7 +20650,7 @@
 
 	key[]: "rest_state_simulation"
 	val[]: "Simulacija spočitosti"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "Ko je funkcija vključena, boš sčasoma občutil učinke utrujenosti.<br><br>Za okrevanje bo potreben počitek."
 #@}

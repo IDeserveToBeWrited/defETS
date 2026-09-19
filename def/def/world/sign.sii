@@ -4938,18 +4938,17 @@ sign_model : sign.406
 
 sign_model : sign.407
 {
-
 	sign_name: "lamp t-shaped luxembourg"
-
 	model_desc: "/model/lamp/t_shaped_lamp_lux.pmd"
 	model_coll: "/model/lamp/t_shaped_lamp_lux.pmc"
 	look_name: default
-	category: "lamps"
-	dynamic: false
-	mass: 100
-	road_model: true
+	category: lamps
 
+	dynamic: false
+	road_model: true
+	instanced: true
 	drop_sun_shadows: 1
+	mass: 100
 }
 
 sign_model : sign.408
@@ -68244,16 +68243,14 @@ sign_model : sign.ibe_0m001
 	look_name: "default"
 	category: ""
 
-	dynamic_lod_desc: 2
-	dynamic_lod_dist: 2
-	dynamic_lod_desc[0]: "/model2/lamp/lamp_07_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 50
-	dynamic_lod_desc[1]: "/model2/lamp/lamp_07_ibe_lod2.pmd"
-	dynamic_lod_dist[1]: 80
+	dynamic_lod_desc[]: "/model2/lamp/lamp_07_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 50
+	dynamic_lod_desc[]: "/model2/lamp/lamp_07_ibe_lod2.pmd"
+	dynamic_lod_dist[]: 80
 
 	dynamic: false
 	road_model: true
-	instanced: false
+	instanced: true
 	drop_sun_shadows: 1
 }
 
@@ -76028,12 +76025,11 @@ sign_model : sign.ibe_07003
 	look_name: "default"
 	category: ""
 
-	dynamic_lod_desc: 1
-	dynamic_lod_dist: 1
-	dynamic_lod_desc[0]: "/model2/lamp/lamp_10_ibe_lod1.pmd"
-	dynamic_lod_dist[0]: 60
+	dynamic_lod_desc[]: "/model2/lamp/lamp_10_ibe_lod1.pmd"
+	dynamic_lod_dist[]: 60
 
 	dynamic: false
+	instanced: true
 	drop_sun_shadows: 1
 }
 
@@ -79661,15 +79657,14 @@ sign_model : sign.at_0v004
 	sign_name: "lamp 04 at"
 	model_desc: "/model2/lamp/lamp_04_at.pmd"
 	model_coll: "/model2/lamp/lamp_04_at.pmc"
-	look_name: "default"
+	look_name: default
 	category: ""
 
 	dynamic: false
-	mass: 200
 	road_model: true
 	instanced: true
-
 	drop_sun_shadows: 1
+	mass: 200
 }
 
 sign_model : sign.at_0v005
@@ -79725,15 +79720,14 @@ sign_model : sign.at_0v008
 	sign_name: "lamp t shape 04 at"
 	model_desc: "/model2/lamp/lamp_t_shape_04_at.pmd"
 	model_coll: "/model2/lamp/lamp_t_shape_04_at.pmc"
-	look_name: "default"
+	look_name: default
 	category: ""
 
 	dynamic: false
-	mass: 200
 	road_model: true
 	instanced: true
-
 	drop_sun_shadows: 1
+	mass: 200
 }
 
 sign_model : sign.at_0v009
@@ -92205,9 +92199,10 @@ sign_model : sign.blkw_3n001
 	sign_name: "lamp modern t shape 01 blkw"
 	model_desc: "/model2/lamp/lamp_modern_t_shape_01_blkw.pmd"
 	model_coll: "/model2/lamp/lamp_modern_t_shape_01_blkw.pmc"
-	look_name: "default"
+	look_name: default
 	category: ""
 
+	dynamic: false
 	road_model: true
 	instanced: true
 	drop_sun_shadows: 1
@@ -93513,6 +93508,7 @@ sign_model : sign.48004
 	dynamic: false
 	editable: false
 }
+
 sign_model : sign.poc_2m00p
 {
 	sign_name: "lamp 07 poc"
@@ -93524,6 +93520,7 @@ sign_model : sign.poc_2m00p
 
 	dynamic: false
 	road_model: true
+	instanced: true
 	mass: &43480000
 }
 
@@ -96594,12 +96591,6 @@ sign_model : sign.5r004
 	mass: &42c80000
 }
 
-sign_model : sign.2t009
-{
-	sign_name: "nuremberg fort 01 bus"
-	model_desc: "/model2/landmark/de/nuremberg/nuremberg_fort_01_bus.pmd"
-}
-
 sign_model : sign.catwhite
 {
 	sign_name: "cat eye white"
@@ -96682,9 +96673,15 @@ sign_model : sign.0u002
 	sign_name: "gas price opetrol 01 ie bi"
 	model_desc: "/model2/gas_station/gas_price_opetrol_01_ie_bi.pmd"
 	model_coll: "/model2/gas_station/gas_price_opetrol_01_ie_bi.pmc"
+	look_name: "Default"
+	variant_name: Default
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_opetrol_01_ie_bi_lod1.pmd"
 	dynamic_lod_dist[]: 100
+
+	dynamic: false
+	editable: true
+	mass: 100.0
 }
 
 sign_model : sign.0s000
@@ -96692,9 +96689,15 @@ sign_model : sign.0s000
 	sign_name: "gas price cloveroil 01 ie bi"
 	model_desc: "/model2/gas_station/gas_price_cloveroil_01_ie_bi.pmd"
 	model_coll: "/model2/gas_station/gas_price_cloveroil_01_ie_bi.pmc"
+	look_name: "Default"
+	variant_name: Default
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_cloveroil_01_ie_bi_lod1.pmd"
 	dynamic_lod_dist[]: 100
+
+	dynamic: false
+	editable: true
+	mass: 100.0
 }
 
 sign_model : sign.12006
@@ -96702,9 +96705,15 @@ sign_model : sign.12006
 	sign_name: "gas price beldon 01 bi"
 	model_desc: "/model2/gas_station/gas_price_beldon_01_bi.pmd"
 	model_coll: "/model2/gas_station/gas_price_beldon_01_bi.pmc"
+	look_name: "Default"
+	variant_name: Default
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_beldon_01_bi_lod1.pmd"
-	dynamic_lod_dist[]: 100
+	dynamic_lod_dist[]: 80
+
+	dynamic: false
+	editable: true
+	mass: 100.0
 }
 
 sign_model : sign.24000
@@ -96712,9 +96721,15 @@ sign_model : sign.24000
 	sign_name: "gas price victory 01 bi"
 	model_desc: "/model2/gas_station/gas_price_victory_01_bi.pmd"
 	model_coll: "/model2/gas_station/gas_price_victory_01_bi.pmc"
+	look_name: "Default"
+	variant_name: Default
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_victory_01_bi_lod1.pmd"
 	dynamic_lod_dist[]: 100
+
+	dynamic: false
+	editable: true
+	mass: 100.0
 }
 
 sign_model : sign.0u007
@@ -96731,9 +96746,15 @@ sign_model : sign.0m007
 	sign_name: "gas price sheltie 01 bi"
 	model_desc: "/model2/gas_station/gas_price_sheltie_01_bi.pmd"
 	model_coll: "/model2/gas_station/gas_price_sheltie_01_bi.pmc"
+	look_name: default
+	variant_name: four_pan
 
 	dynamic_lod_desc[]: "/model2/gas_station/gas_price_sheltie_01_bi_lod1.pmd"
 	dynamic_lod_dist[]: 100
+
+	dynamic: false
+	editable: true
+	mass: 100.0
 }
 
 sign_model : sign.rus_0u007
@@ -96757,6 +96778,60 @@ sign_model : sign.7n000
 
 	dynamic: true
 	drop_sun_shadows: 2
+	mass: &42c80000
+}
+
+sign_model : sign.7n001
+{
+	sign_name: "sign dyn weather v01 is"
+	model_desc: "/model/sign/navigation/sign_dyn_weather_v01_is.pmd"
+	model_coll: "/model/sign/navigation/sign_dyn_weather_v01_is.pmc"
+	look_name: default
+	category: "signs/poc(is)"
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+	mass: &42c80000
+}
+
+sign_model : sign.7n002
+{
+	sign_name: "sign dyn weather v02 is"
+	model_desc: "/model/sign/navigation/sign_dyn_weather_v02_is.pmd"
+	model_coll: "/model/sign/navigation/sign_dyn_weather_v02_is.pmc"
+	look_name: default
+	category: "signs/poc(is)"
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+	mass: &42c80000
+}
+
+sign_model : sign.7n003
+{
+	sign_name: "sign dyn weather v03 is"
+	model_desc: "/model/sign/navigation/sign_dyn_weather_v03_is.pmd"
+	model_coll: "/model/sign/navigation/sign_dyn_weather_v03_is.pmc"
+	look_name: default
+	category: "signs/poc(is)"
+
+	dynamic: false
+	editable: true
+	drop_sun_shadows: 1
+	mass: &42c80000
+}
+
+sign_model : sign.7n004
+{
+	sign_name: "bus sign fr"
+	model_desc: "/model/sign/traffic/fr/bus_sign_fr.pmd"
+	model_coll: "/model/sign/traffic/fr/bus_sign_fr.pmc"
+	look_name: default
+
+	dynamic: true
+	drop_sun_shadows: 1
 	mass: &42c80000
 }
 }

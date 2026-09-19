@@ -974,5 +974,77 @@ gate_model : gate_model.bar.bar_lr_09
 }
 
 
+gate_model : gate_model.slide.sld_04d
+{
+	# one animation, collision animated
 
+	name: "slide 04 long shr"
+
+	category: "slide"
+
+	model_desc: "/asset/props/gate/slide_04_double_shr.pmd"
+	model_coll: "/asset/props/gate/slide_04_double_shr.pmc"
+
+	state_anim: 4
+
+	# orange_to_red
+	state_anim[0]: "/asset/props/gate/slide_04_double_shr_open.pma"
+
+	# red
+	state_anim[1]: ""
+
+	# orange_to_green
+	state_anim[2]: "/asset/props/gate/slide_04_double_shr_open.pma"
+
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "OY|/sound/world/gate_iron.soundref"
+
+	# approximate length of animation is 10.4, so we use interval overrides
+
+	interval_overrides: 4
+	interval_overrides[0]: 0.5 # green
+	interval_overrides[1]: 5.0 # orange_to_red 
+	interval_overrides[2]: 5.0 # red 
+	interval_overrides[3]: 5.0 # orange_to_green
+}
+
+gate_model : gate_model.slide.sld_04h
+{
+	# one animation, collision animated
+
+	name: "slide_04_half_shr"
+
+	category: "slide"
+
+	model_desc: "/asset/props/gate/slide_04_half_shr.pmd"
+	model_coll: "/asset/props/gate/slide_04_half_shr.pmc"
+
+	state_anim: 4
+
+	# orange_to_red
+	state_anim[0]: "/asset/props/gate/slide_04_half_shr_open.pma"
+
+	# red
+	state_anim[1]: ""
+
+	# orange_to_green
+	state_anim[2]: "/asset/props/gate/slide_04_half_shr_open.pma"
+
+	# green
+	state_anim[3]: ""
+
+	#sound
+	sounds[]: "OY|/sound/world/gate_iron.soundref"
+
+	# approximate length of animation is 10.4, so we use interval overrides
+
+	interval_overrides: 4
+	interval_overrides[0]: 0.5 # green
+	interval_overrides[1]: 5.0 # orange_to_red 
+	interval_overrides[2]: 5.0 # red 
+	interval_overrides[3]: 5.0 # orange_to_green
+}
 }

@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Laisvas kaip vėjas"
 
+	key[]: "loading_location_country"
+	val[]: "Kažkur čia: $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Perkeliama" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Dabartinis darbas"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "TRANSPORTO ANALIZĖ" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "TRANSPORTO ANALIZĖ" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "TRANSPORTO ANALIZĖ" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Transporto konfigūracija" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Transporto konfigūracija" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Transporto konfigūracija" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Transporto konfigūracija" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Įprastas krovinys" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Ketinate imtis sunkaus krovinio. Peržiūrėkite sunkvežimio konfigūraciją kad jis įveiktų užduotį." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Įvertinęs numatomą krovinių tipą paruoškite transportą pagal vairavimo ekonomiškumą ir techninius bei teisinius apribojimus." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Įvertinęs numatomą krovinių tipą paruoškite transportą pagal vairavimo ekonomiškumą ir techninius bei teisinius apribojimus." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Optimizuota mažo ir vidutinio svorio darbams" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Optimizuota sunkiems ir ypatingiems kroviniams" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Transporto manevringumas siaurose vietose" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Transporto manevringumas siaurose vietose" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimizuota transporto transmisija kilimams ir nusileidimams iš kalnų" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optimizuota transporto transmisija kilimams ir nusileidimams iš kalnų" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Pagerintas nelygių paviršių įveikimas" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -275,7 +281,7 @@
 	key[]: "truck_service"
 	val[]: "Remontas" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
+	key[]: "vehicle_service_about"
 	val[]: "Transporto priežiūra ir remontas. Geras vairuotojas visada prižiūri savo sunkvežimį." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Pakeisti viską" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "TRANSPORTO ŽALOS ATASKAITA" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "TRANSPORTO ŽALOS ATASKAITA" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "PRIEKABOS ŽALOS ATASKAITA" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Patvirtinti" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Transporto žala" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Transporto žala" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,13 +311,13 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
+	key[]: "vehicle_config_t"
 	val[]: "SUNKVEŽIMIO KOMPLEKTAVIMAS" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Transporto komplektavimas" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Transporto komplektavimas" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
+	key[]: "vehicle_config_about"
 	val[]: "Žinote, visada galima ką nors pakeisti arba perdažyti Jūsų transporte, kad jis atrodytų gražiau." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
@@ -410,7 +416,7 @@
 	key[]: "truck_diag"
 	val[]: "Sunkvežimio diagnostika" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
+	key[]: "vehicle_diag_about"
 	val[]: "Pažiūrėkite informaciją apie transportą ir jo būklę."
 
 	key[]: "truck_diag_warning"
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "Jūs užsisakėte kelis daiktus!<br><br>Norite atsisakyti visų naujų patobulinimų?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Jūsų darbdaviui nepatiks, kad keičiate jo transportą." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Jūsų darbdaviui nepatiks, kad keičiate jo transportą." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "Darbo metu negalima pakeisti priekabos tipo, kėbulo ar važiuoklės. Pristatyk krovinį ir bandyk dar kartą." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -695,7 +701,7 @@
 	val[]: "Priekinio lango rėmelis" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Oro filtras" #+ Air filter accessoty.
+	val[]: "Oro filtras" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Vėliavėlė dešiniame lange" #+ Right window flag
@@ -779,7 +785,7 @@
 	val[]: "Galiniai ratai"
 
 	key[]: "rear_window"
-	val[]: "Rear Window"
+	val[]: "Galinis langas"
 
 	key[]: "rim"
 	val[]: "Ratlankis" #+ Wheel rim (older part name)
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "Užkrauti žaidimą" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Nepavyko užkrauti žaidimo išsaugojimo."
 
 	key[]: "load_game_desc"
 	val[]: "Užkrauti anksčiau išsaugotą žaidimą. Dabartinis progresas bus prarastas!" #+ Help message associated with load game icon.
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Turimas" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Kaina" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Filtras" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Nudažymai" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Transportas" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Visi" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Siunčiuosi DLC informaciją. Prašau palaukti."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Ar nori atidaryti Interneto naršyklę ir eiti į pasirinktą tinklapį?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "Šiuo metu nėra galimo DLC."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "Katalogo veiksmas atšauktas." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "Nežinoma katalogo klaida." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "Katalogas neveikia." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "Operacija negalėjo prasidėti nes šiuo metu vyksta blokavimo veiksmas." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "Dalis pateiktų duomenų neteisingi ar nepilni." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Bandau užsakyti veiksmą su produktu, kurio nėra arba mūsų vietiniame kataloge, arba pirmo tiekėjo kataloge." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "Katalogo prašymas nepavyko." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "Gautas nesuprantamas atsakymas." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "Vidinė katalogo klaida." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Šių funkcijų nėra dabartinėje platformoje." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "Katalogo paslauga šiuo metu negalima, bandyk vėliau." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "Vidinė katalogo klaida." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "MENIU" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "TRANSPORTO GARSAI" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "TRANSPORTO GARSAI" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "VIDAUS GARSAI" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Bendras garsumas" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Transporto variklio garsumas" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Transporto variklio garsumas" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Transporto duslintuvo garsumas" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Transporto duslintuvo garsumas" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Transporto turbinos garsumas" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Transporto turbinos garsumas" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Transporto garso efektų garsumas" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Transporto garso efektų garsumas" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Transporto triukšmo garsumas" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Transporto triukšmo garsumas" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Priekabos triukšmo garsumas" #+ Slider controlling volume of the trailer noises.
@@ -2516,19 +2573,19 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja bendrą žaidimo garsumą."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja transporto variklio garsumą."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja transporto duslintuvo garsumą."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja transporto turbinos garsumą."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja kitų transporto garso efektų, pavyzdžiui stabdžių šnypštimo, garsumą."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Reguliuoja transporto padangų triukšmo garsumą."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
@@ -2656,8 +2713,8 @@
 	key[]: "transmission_settings"
 	val[]: "TRANSMISIJA" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "TRANSPORTO FIZIKA" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "TRANSPORTO FIZIKA" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "PADĖJĖJAI" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
@@ -2845,7 +2902,7 @@
 	key[]: "hide"
 	val[]: "Slėpti" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
+	key[]: "automatic_limit"
 	val[]: "Rodyti dabartinio transporto režimo ribą" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
@@ -2979,7 +3036,7 @@
 	key[]: "brake_intensity"
 	val[]: "Stabdymo jėga" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
+	key[]: "vehicle_stability"
 	val[]: "Transporto stabilumas" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
@@ -3045,7 +3102,7 @@
 	key[]: "throttle_double_tap"
 	val[]: "Išmanus greičio valdymas" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "Sunkvežimio greičio ribotuvas" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3161,6 +3218,9 @@
 
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Vidaus kameros horizonto fiksavimo daugiklis" #+ Slider for interior camera horizon locking.
+
+	key[]: "cam_fov_speed_factor"
+	val[]: "Vidaus kameros vaizdo kampo pasikeitimas pagal greitį" #+ Slider for interior camera speed-based FOV changes.
 
 	key[]: "cam_auto_center_delay"
 	val[]: "Auto kameros centravimo vėlaviams" #+ Dropdown for camera auto centering delay.
@@ -3281,7 +3341,7 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Keičia stabdžių intensyvumą."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Keičia transporto stabilumą žeminant masės centrą."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Pasirenkama ar animuoti priekabos kabelius ir kuriuos.<br><br><color value=@@clr_txt_d@@>Įjungus kabelius daugiau automobilių gali sulėtėti senesnių kompiuterių vaizdas."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Įjungia sunkvežimio elektroninį greičio ribotuvą - 90 kmh (56 mph).<br><br><color value=@@clr_txt_d@@>World of Trucks užduotyse ribotuvas įjungtas visada."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Įjungia transporto priemonės elektroninį greičio ribotuvą priklausomai nuo jos modelio.<br><br><color value=@@clr_txt_d@@>World of Trucks užduotyse ribotuvas įjungtas visada."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "Įjungus tai ir valytuvų svirtį įjungus į pirmą padėtį, valytuvai automatiškai įsijungs ir reguliuos savo greitį pagal sąlygas."
@@ -3397,6 +3457,9 @@
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "Pakeičia kiek vidaus kamera pasivers pagal sunkvežimio judėjimą."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Keičia, kiek vidaus kameros vaizdo kampas pasikeičia priklausomai nuo transporto judėjimo greičio."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Nustato laiką, po kurio kamera automatiškai grįžta į centrą.<br><br>Sunkvežimis turi judėti reikšmingu greičiu, kad tai suveiktų. Taikoma tik vidaus kamerai ir kamerai, sekančiai iš paskos judant į priekį, taip pat judant atbulai taikoma žiūrint pro vairuotojo langą."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Prarastas funkcijos paskyrimas:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "Negalima naudoti $INPUT$." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "TRANSPORTAS"
 
 	key[]: "assistant_controls"
@@ -3717,6 +3783,9 @@
 
 	key[]: "o_im_parkingbrake"
 	val[]: "Rankinis stabdys"
+
+	key[]: "o_im_handbrake"
+	val[]: "Rankinis stabdis"
 
 	key[]: "o_im_motorbrake"
 	val[]: "Stabdymas varikliu"
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "Informacinio ekrano režimas" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "Parkavimo kameros režimas" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "Navigacijos artinimo režimas" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "Priskiria klavišą rankiniam stabdžiui."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "Priskiria klavišą rankiniam stabdžiui."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "Priskiria klavišą stabdymui varikliu.<br><br>Variklio stabdis veiks tol, kol laikysi paspaustą klavišą."
 
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Priskiria klavišą perjungti papildomą sunkvežimio ekraną."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Priskiria klavišą perjungti parkavimo kameros ekraną."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "Priskiria klavišą keisti priartinimo lygį navigacijos ekrane sunkvežimio prietaisų skydelyje arba papildomame ekrane."
@@ -6243,13 +6321,13 @@
 	val[]: "Pagalbos tarnyba gali nugabenti Jus ir Jūsų transportą į miestą $CITY$. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br offset=30>Dabartinis pristatymas bus atšauktas<br offset=30>Sutinkate?"
 
 	key[]: "wanna_recover"
-	val[]: "Pagalbos tarnyba gali nugabenti Jus ir Jūsų sunkvežimį į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br offset=30>Sutinkate?"
+	val[]: "Pagalbos tarnyba gali nutempti tave ir tavo transportą į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br offset=30>Tinka?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "Pagalbos tarnyba gali nugabenti Jus ir Jūsų sunkvežimį į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br>(Mokestį padengs Jūsų darbdavys.)<br offset=30>Sutinkate?"
+	val[]: "Pagalbos tarnyba gali nugabenti tave ir tavo transportą į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br>(Mokestį padengs tavo darbdavys.)<br offset=30>Tinka?"
 
 	key[]: "wanna_recover_online"
-	val[]: "Pagalbos tarnyba gali nugabenti Jus ir Jūsų sunkvežimį į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br offset=30>Dabartinis pristatymas bus atšauktas<br offset=30>Sutinkate?"
+	val[]: "Pagalbos tarnyba gali nugabenti tave ir tavo transportą į artimiausią kelią. Tai kainuos $MONEY$, o kelionė užtruks $TIME$.<br offset=30>Dabartinis pristatymas bus atšauktas<br offset=30>Tinka?"
 
 	key[]: "wanna_refuel"
 	val[]: "Avarinė kuro papildymo paslauga atveš jums $VOLUME$ dyzelio. Tai kainuos $MONEY$ ir užtruks $TIME$.<br offset=30>Ar sutinkate?"
@@ -6312,7 +6390,7 @@
 	val[]: "Lauki, kol Avarinis pakrovimas pakraus tavo sunkvežimį."
 
 	key[]: "cancel_job_fademsg"
-	val[]: "Jūs laukiate, kol kitas vairuotojas perims Jūsų krovinį."
+	val[]: "Tu lauki, kol kitas vairuotojas perims tavo užduotį."
 
 	key[]: "no_job"
 	val[]: "Šiuo metu neturite pristatymo darbo."
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Išjunkite variklį!"
 
-	key[]: "stop_truck_short"
-	val[]: "Sustok!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Sustok!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Išjungti variklį gali su:"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Sąskaitos likutis: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Paskolas atrakinsi labiau pažengus Sunkvežimio režimo karjeroje."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Paskolas atrakinsi labiau pažengus $MODE$ režimo karjeroje."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Jau turi per daug paskolų."
+
 #+ New loan confirmation window
 #@{
 
@@ -9444,6 +9531,12 @@
 
 	key[]: "compman_qt_notruck"
 	val[]: "Negali greitai keliauti, nes neturi transporto!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Negali greitai keliauti, nes neturi automobilio!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Negali greitai keliauti, nes neturi autobuso!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Ar norite greitai nukeliauti į pasirinktą garažą?"
@@ -9812,13 +9905,13 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "TRANSPORTO PARDAVIMAS"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
+	key[]: "vehicleman_msg_reallysell"
 	val[]: "Ar tikrai norite parduoti savo $TRUCK$ už $MONEY$?"
 
-	key[]: "truckman_msg_nosell"
+	key[]: "vehicleman_msg_nosell"
 	val[]: "Negali parduoti transporto neužbaigus užduoties! Pirma pristatyk krovinį."
 
 	key[]: "truckman_total_restoration_t"
@@ -9850,10 +9943,10 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "TRANSPORTO KEITIMAS" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
+	key[]: "vehicleman_msg_nochange"
 	val[]: "Negali pakeisti transporto nebaigus darbo! Pirma pristatyk krovinį."
 
 	key[]: "truckman_conf_drive"
@@ -9890,7 +9983,7 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "KOPIJUOTI KONFIGŪRACIJĄ" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
+	key[]: "vehicleman_msg_nouse"
 	val[]: "Šio transporto negalima naudoti kaip kopijavimo šablono dėl trūkstamų duomenų, kurių trūksta greičiausiai dėl modo ar DLC pašalinimo.<br><br>Iš naujo įdiek modą ar DLC."
 #@}
 
@@ -10271,6 +10364,9 @@
 	key[]: "td_msg_first_and_busy"
 	val[]: "Dėkojame, kad sunkvežimį pirkote pas mus!<br><br>Mes pristatysime jį į jūsų štabą. Jis lauks jūsų iš karto pristačius dabartinį krovinį."
 
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Ačiū, kad nupirkote savo pirmą sunkvežimį pas mus!<br><br>Ar nori persijungti į savo naują sunkvežimį mieste <color value=@@clr_sel@@>$CITY$</color>?"
+
 	key[]: "td_msg_bought_assigned"
 	val[]: "Dėkojame už pirkinį. Mėgaukitės nauju sunkvežimiu!<br><br>Mes tuoj pat pristatysime seną sunkvežimį į garažą mieste$CITY$."
 
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Konvojaus narys"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Sunkvežimis greitame darbe"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Kito transporto vieta"
+
 	key[]: "mapl_quarry"
 	val[]: "Karjeras"
 
@@ -10612,8 +10714,8 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Neatrastas taškas"
 
-	key[]: "mapl_viewpoint"
-	val[]: "Stebėjimo taškas (aplankytas)"
+	key[]: "mapl_viewpoint_visited"
+	val[]: "Įžymi vieta (aplankyta)"
 
 	key[]: "mapl_viewpoint_unvisited"
 	val[]: "Stebėjimo taškas (neaplankytas)"
@@ -10720,13 +10822,13 @@
 	val[]: "Xiph.org Foundation"
 
 	key[]: "credits_fmod"
-	val[]: "Sukurta su FMOD Studio by Firelight Technologies Pty Ltd."
+	val[]: "Made with FMOD Studio by Firelight Technologies Pty Ltd."
 
 	key[]: "credits_speedtree"
-	val[]: "Dalyse šios programos naudojama SpeedTree® technologija (©2024 provided by Unity Technologies SF). All rights reserved."
+	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "Ši įranga yra paremta Independent JPEG Group darbu."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Aplankyk $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Spausk Režimo mygtuką kad perjungtum tarp įvairių darbastalio režimų ir transporto tipų."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "SVEIKI ATVYKĘ"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Dėkojame, kad peržiūrėjai mūsų Namų ekrano atnaujinimą."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "ĮJUNGTI PATARIMUS"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "Pradedi naują žaidimo režimą, o patarimai šiuo metu išjungti. Jie gali padėti tau išmokti, kaip žaisti. Ar nori juos vėl įjungti?"
 #@}
 
 
@@ -15698,7 +15810,7 @@
 	val[]: "Dabartiniam išoriniam konktraktui reikia šių DLC:<br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Negaliu peržiūrėti darbo duomenų. Jie bus parodyti pratęsus dabartinę sutartį." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Negaliu peržiūrėti darbo duomenų. Jie bus parodyti pratęsus dabartinę sutartį." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Šiam darbui reikia nuosavos priekabos. Tačiau tokia priekaba šiuo metu neprikabinta." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15757,6 +15869,9 @@
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "Aptiktas žaidimo pasikeitimas. Prašau pasirinkti greitos kelionės tikslą:" #+ Shown during economy reset quick travel.
 
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Aptiktas žaidimo pasikeitimas. Prašau pasirinkti greitos kelionės tikslą:" #+ Shown during economy reset quick travel for truck.
+
 	key[]: "confirm_quick_travel"
 	val[]: "Patvirtinti greitąją kelionę"
 
@@ -15775,16 +15890,16 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Tavo sunkvežimis netinkamos kelionei būklės. Sutvarkykite priekabos kabelius."
 
-	key[]: "quick_travel_cond_repair_truck"
+	key[]: "quick_travel_cond_repair_vehicle"
 	val[]: "Tavo transporto būklė netinkama greitai kelionei. Apsilankyk servise arba iškviesk pagalbą."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Tavo priekabos būklė netinkama greitai kelionei. Apsilankyk servise arba iškviesk pagalbą."
 
-	key[]: "quick_travel_cond_truck_fuel"
+	key[]: "quick_travel_cond_vehicle_fuel"
 	val[]: "Tavo transportas netinkamos kelionei būklės. Pripilk kuro arba iškviesk pagalbą."
 
-	key[]: "quick_travel_cond_truck_fallen"
+	key[]: "quick_travel_cond_vehicle_fallen"
 	val[]: "Tavo transportas netinkamos būklės greitai kelionei. Iškviesk pagalbą."
 
 	key[]: "quick_travel_cond_trailer_fallen"
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Nepavyko rasti elementų pagal filtrą" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Nepavyko rasti transporto pagal filtrą" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Nepavyko rasti transporto pagal filtrą" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Garažas pilnai išplėstas." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "Negali patobulinti garažo, nes tavo turima transporto priemonė stovi per arti garažo." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "Dabartinė priekaba:" #+ Title of the current trailer statistics.
 
@@ -16760,7 +16878,7 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "Šiuo metu nėra galimų naujų priekabos aksesuarų."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "Norint pamatyti Diagnostiką pirma reikia turėti priskirtą transportą."
 
 	key[]: "link_locked_msg_truck_dealer_map"
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Izoliuota, šoninės durys"
 
-	key[]: "bs_livestock"
-	val[]: "Gyvi gyvūnai"
+	key[]: "bs_livestock_painted"
+	val[]: "Gyvūnai, dažai"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Gyvi gyvūnai"
+	key[]: "bs_livestock_steel"
+	val[]: "Gyvūnai, plienas"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Gyvūnai, dažai"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Gyvūnai, plienas"
 
 	key[]: "bs_log_steel"
 	val[]: "Plieninių grindų rąstams"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Išjungti laisvo kursoriaus režimą" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "Automobilio nėra"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Sunkvežimis"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,7 +18228,7 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Neturi šiam kroviniui tinkamos priekabos."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Galima atlikti tik su savo transportu."
 
 	key[]: "mp_job_missing_trailer"
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "Kompanija netoli tavo sunkvežimio ar priekabos turi būti aktyvuota, kad galėtum prisijungti prie šios sesijos.<br>Norint išvengti problemų reikia patraukti sunkvežimį ir peikabą toliau nuo šios kompanijos, arba tavo dabartinis darbas bus nutrauktas, o tu būsi perkeltas į artimiausias dirbtuves.<br><br>Nori tęsti?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "Kompanija netoli vietos, kur palikai sunkvežimį ar priekabą prieš priimdamas greitą darbą, turi būti aktyvuota, kad galėtum prisijungti prie šios sesijos.<br>Norint išvengti problemų kai grįši į savo sunkvežimį, reikia nutraukti greitą darbą, o tave perkelti į artimiausias dirbtuves.<br><br>Nori tęsti?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18919,13 +19049,13 @@
 	key[]: "job_equipment"
 	val[]: "Užduoties įranga:"
 
-	key[]: "equipment_provided_truck_and_trailer"
+	key[]: "equipment_provided_vehicle_and_trailer"
 	val[]: "Suteikiamas sunkvežimis ir priekaba"
 
-	key[]: "equipment_owned_truck_provided_trailer"
+	key[]: "equipment_owned_vehicle_provided_trailer"
 	val[]: "Savo sunkvežimis"
 
-	key[]: "equipment_owned_truck_and_trailer"
+	key[]: "equipment_owned_vehicle_and_trailer"
 	val[]: "Savo sunkvežimis ir priekaba"
 
 	key[]: "mp_job_quick_travel_message"
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Aplankyta šalių"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Aptarnauta bazių"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Aptarnauta kompanijų"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20237,6 +20367,36 @@
 	val[]: "Išeiti"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Režimas"
+
+	key[]: "truck_mode"
+	val[]: "Sunkvežimio režimas"
+
+	key[]: "truck_mode_help"
+	val[]: "Imkis įvairių darbų su sunkvežimiu"
+
+	key[]: "bus_mode"
+	val[]: "Autobuso režimas"
+
+	key[]: "bus_mode_help"
+	val[]: "Patirk kitokį režimą kaip autobuso vairuotojas"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "Norėdamas įjungti Autobuso režimą, pirma turi užbaigti savo pirmą darbą"
+
+	key[]: "car_mode"
+	val[]: "Automobilio režimas"
+
+	key[]: "car_mode_help"
+	val[]: "Imkis įvairių darbų ir tyrinėk pasaulį automobiliu"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "Norėdamas įjungti Automobilio režimą, pirma turi užbaigti savo pirmą darbą"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20333,13 +20493,13 @@
 #+ Intro Scene. Only translate into officially supported languages.
 #@{
 	key[]: "health_warning"
-	val[]: "Sveikatos perspėjimas"
+	val[]: "Health warning"
 
 	key[]: "health_warning_description"
-	val[]: "Nedidelis kiekis vartotojų gali būti jautrūs epilepsijos traukuliams arba sąmonės praradimui pamatę tam tikras mirksinčias šviesas ar raštus. Tokie asmenys gali patirti traukulius stebėdami tam tikrus vaizdus ar žaisdami žaidimą. Jei jūs ar kitas šeimos narys kada nors turėjo su epilepsija susijusių simptomų (traukuliai ar sąmonės praradimas) pamatę mirksinčias šviesas, prašome susisiekti su gydytoju ir imtis visų reikalingų atsargumo priemonių prieš žaidžiant žaidimą.<br offset=20>Jei jūs ar jūsų vaikas patiria bet kurį iš žemiau išvardintų simptomų žaidžiant bet kokį video žaidimą, tuoj pat nutraukite žaidimą ir pasikonsultuokite su gydytoju: galvos svaigimas, pakitęs matymas, akių ar raumenų trūkčiojimas, sąmonės praradimas, dezorientacija, konvulsijos, nevalingi judesiai."
+	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
 
 	key[]: "trademark"
-	val[]: "Visi kompanijų pavadinimai, prekiniai ženklai, registruoti logotipai ir simboliai ant sunkvežimių žaidime yra jų teisėtų savininkų nuosavybė. Naudojama su leidimu. MAN® prekiniai ženklai ir dizainai registruotai priklauso MAN Truck & Bus AG ir naudojami pagal licenciją SCS Software s.r.o. \"Mercedes-Benz\" ir \"Trikampė žvaigždė apskritime\" yra Daimler AG prekinis ženklas ir naudojamas pagal licenciją SCS Software s.r.o. RENAULT prekiniai ženklai ir dizainai registruotai priklauso arba yra licencijuoti AB Volvo Group ir naudojami pagal licenciją. VOLVO prekiniai ženklai ir dizainai registruotai priklauso arba yra licencijuoti AB Volvo Group ir naudojami pagal licenciją."
+	val[]: "All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN® trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license."
 #@}
 
 #+ Save manager errors
@@ -20385,7 +20545,7 @@
 	key[]: "time_skip_hours"
 	val[]: "Kiek valandų praleisti"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Dabartinis laikas"
 
@@ -20436,7 +20596,7 @@
 	key[]: "time_skip_rest_full"
 	val[]: "Pilnai pailsėjęs"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
 	val[]: "Šis poilsis neatitiks privalomos pertraukos reikalavimų. Liks $LEFT_TIME$ iki kitos privalomos pertraukos."
 
@@ -20445,18 +20605,18 @@
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
 	val[]: "Kas <color value=@@clr_sel@@>$DRIVE_TIME$</color> vairavimo valandų turėsi padaryti privalomą bent <color value=@@clr_sel@@>$BREAK_TIME$</color> valandų pertrauką, kad negautum baudos."
-	
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "Po poilsio ir numatomo kelionės laiko darbui atlikti liks <color value=@@clr_sel@@>$LEFT_TIME$</color> valandų."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "Po poilsio ir numatomo kelionės laiko pristatymas vėluos <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>Bus visiškai pailsėta</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Numatomas atvykimas"
 
@@ -20490,7 +20650,7 @@
 
 	key[]: "rest_state_simulation"
 	val[]: "Poilsio būsenos naudojimas"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "Įjungus patirsi nuovargio poveikį.<br><br>Turėsi stoti pailsėti."
 #@}

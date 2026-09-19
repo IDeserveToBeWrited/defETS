@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "Wolny jak ptak"
 
+	key[]: "loading_location_country"
+	val[]: "Somewhere in $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Transferring" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "Aktualne zlecenie"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "ANALIZA POJAZDU" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "ANALIZA POJAZDU" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "ANALIZA POJAZDU" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Konfiguracja pojazdu" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Konfiguracja pojazdu" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Konfiguracja pojazdu" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Konfiguracja pojazdu" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "Ładunek normalny" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "Masz zamiar podjąć się ciężkiego wyzwania. Sprawdź obecną konfigurację ciężarówki, aby upewnić się, że jest gotowa na to zadanie." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Given your expected typical type of transportation, tune your vehicle to optimize it according to a combination of economy of driving, technical and legal limitations." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Dostosuj pojazd do typowego rodzaju przewozów, uwzględniając zużycie paliwa oraz ograniczenia techniczne i prawne." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Przeznaczony do transportów lekkich i średnich" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "Przeznaczony do transportów ciężkich i specjalnych" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Ability of your vehicle to maneuver in tight space areas" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Zdolność Twojego pojazdu do manewrowania w ciasnych przestrzeniach" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimized vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optymalizacja układu napędowego pojazdu pod kątem płynniejszego pokonywania podjazdów i zjazdów" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "Ulepszona możliwość do pokonywania wyboistych i chropowatych powierzchni" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -275,8 +281,8 @@
 	key[]: "truck_service"
 	val[]: "Serwis" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
-	val[]: "Vehicle maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
+	key[]: "vehicle_service_about"
+	val[]: "Konserwacja i naprawy pojazdu. Dobry kierowca zawsze utrzymuje swój pojazd w doskonałym stanie." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
 	val[]: "RAPORT USZKODZEŃ" #+ Header of section displaying status of individual components of the vehicle (engine, transmission, ....).  Please keep in upper case where possible. Please keep in upper case where possible.
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "Wymień wszystko" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "RAPORT USZKODZEŃ POJAZDU" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "RAPORT USZKODZEŃ NACZEPY" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "Potwierdź" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Uszkodzenia pojazdu" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Uszkodzenia pojazdu" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,14 +311,14 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
-	val[]: "VEHICLE CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
+	key[]: "vehicle_config_t"
+	val[]: "KONFIGURATOR POJAZDU" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Konfigurator pojazdu" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Konfiguracja pojazdu" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
-	val[]: "You know, there's always something you can tune or paint to make you feel better about your vehicle." #+ Help message associated with upgrade icon.
+	key[]: "vehicle_config_about"
+	val[]: "Zawsze znajdzie się coś, co można ulepszyć lub przemalować, aby jeszcze bardziej polubić swój pojazd." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
 	val[]: "Cena" #+ Label of line with combined price of all new parts in basket.
@@ -410,8 +416,8 @@
 	key[]: "truck_diag"
 	val[]: "Diagnostyka pojazdów" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
-	val[]: "View information about your vehicle and its current condition."
+	key[]: "vehicle_diag_about"
+	val[]: "Wyświetl informacje o pojeździe i jego aktualnym stanie."
 
 	key[]: "truck_diag_warning"
 	val[]: "Twój pojazd jest w złym stanie. Odwiedź serwis jak najszybciej."
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "Twoje zamówienie powiększyło się o kolejne przedmioty!<br><br>Czy chcesz anulować wszystkie nowe modyfikacje?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Twój pracodawca nie będzie zadowolony, jeśli zaczniesz majstrować przy jego pojeździe." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "Nie można zmienić typu, nadwozia lub podwozia naczepy podczas pracy. Zakończ dostawę, a następnie spróbuj ponownie." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -695,7 +701,7 @@
 	val[]: "Rama przedniej szyby" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "Filtr powietrza" #+ Air filter accessoty.
+	val[]: "Filtr powietrza" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "Okienna prawa flaga" #+ Right window flag
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "Wczytaj grę" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Nie udało się wczytać zapisanej gry."
 
 	key[]: "load_game_desc"
 	val[]: "Wczytaj poprzednio zapisaną grę. Twoje obecne postępy zostaną utracone!" #+ Help message associated with load game icon.
@@ -1655,7 +1664,7 @@
 	val[]: "Dostępny jest nowy wpis na blogu!" #+ Fallback news text content in case of fetch errors
 
 	key[]: "no_truck_dlc"
-	val[]: "No vehicles found! Please re-enable at least one vehicle DLC and restart the game." #+ Text shown when there is no truck available.
+	val[]: "Nie znaleziono żadnych ciężarówek! Włącz ponownie co najmniej jeden dodatek DLC z pojazdem i uruchom grę ponownie." #+ Text shown when there is no truck available.
 
 	key[]: "extras"
 	val[]: "Dodatki"
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "Własność" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "Cena" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "Filtr" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "Malowania" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "Pojazdy" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "Wszystkie" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "Pobieranie informacji o DLC. Proszę czekać."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "Czy chcesz otworzyć przeglądarkę internetową, żeby odwiedzić wybraną witrynę?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "Brak dostępnego dodatku DLC na ten moment."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "Operacja katalogu anulowana." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "Nieznany błąd katalogu." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "Katalog nie został zainicjowany." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "Nie można rozpocząć operacji, ponieważ trwa obecnie inna operacja, która ją blokuje." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "Niektóre wprowadzone dane są niepoprawne lub niepełne." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "Próba zażądania operacji dla produktu, którego nie ma ani w naszym lokalnym katalogu, ani w katalogu zaplecza operatora platformy." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "Żądanie katalogu nieudane." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "Otrzymana odpowiedź miała nieprawidłowy format." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "Wewnętrzny błąd katalogu." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "Funkcjonalność nie jest dostępna na aktualnej platformie." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "Usługa katalogu obecnie niedostępna, spróbuj ponownie później." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "Wewnętrzny błąd katalogu." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "INTERFEJS" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "DŹWIĘKI POJAZDU" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "DŹWIĘKI POJAZDU" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "DŹWIĘKI WNĘTRZA" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "Głośność ogólna" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Vehicle engine volume" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Głośność silnika pojazdu" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Vehicle exhaust volume" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Głośność wydechu pojazdu" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Vehicle turbo volume" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Głośność turbosprężarki pojazdu" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Vehicle effects volume" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Głośność efektów" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Vehicle noise volume" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Głośność hałasu" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Głośność hałasu naczepy" #+ Slider controlling volume of the trailer noises.
@@ -2516,20 +2573,20 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "Dostosowuje ogólną głośność gry."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's engine."
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
+	val[]: "Dostosowuje głośność silnika pojazdu."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's exhaust."
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
+	val[]: "Dostosowuje głośność wydechu pojazdu."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's turbo."
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
+	val[]: "Dostosowuje głośność turbosprężarki pojazdu."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of other vehicle sound effects, such as hissing of the air brakes."
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
+	val[]: "Reguluje głośność pozostałych efektów dźwiękowych pojazdu, takich jak syk hamulców pneumatycznych."
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of noise coming from the vehicle's tyres."
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
+	val[]: "Reguluje głośność odgłosów opon pojazdu."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Dostosowuje głośność hałasu wydobywającego się spod opon naczepy."
@@ -2544,7 +2601,7 @@
 	val[]: "Dostosowuje głośność innych dźwięków otoczenia w grze, takich jak ogólne dźwięki miejskie, dźwięki natury itp."
 
 	key[]: "interior_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's interior sounds."
+	val[]: "Dostosowuje głośność dźwięków wnętrza pojazdu."
 
 	key[]: "radio_volume_op_tooltip" # - Audio, Simple
 	val[]: "Dostosowuje głośność radia."
@@ -2598,7 +2655,7 @@
 	val[]: "Podgląd wybranego sygnału dźwiękowego „Roger”."
 
 	key[]: "sound_of_reverse_op_tooltip" # - Audio, Simple
-	val[]: "Włącza dźwięk sygnału dźwiękowego podczas cofania ciężarówką. Głośność można regulować za pomocą suwaka „Efekty ciężarówki”.<br><br>Po włączeniu tej opcji usłyszysz również sygnał dźwiękowy innych graczy w sesji konwoju."
+	val[]: "Włącza dźwięk sygnału dźwiękowego podczas cofania pojazdu. Głośność można regulować za pomocą suwaka „Efekty pojazdu”.<br><br>Po włączeniu tej opcji usłyszysz również sygnał dźwiękowy innych graczy w sesji konwoju."
 
 	key[]: "rumble_stripe_sound_op_tooltip" # - Audio, Advanced
 	val[]: "Włącza dźwięk podczas przejeżdżania po pasach rozdzielających kierunki ruchu."
@@ -2607,10 +2664,10 @@
 	val[]: "Enables additional noise of the air flowing through the windows when the vehicle's windows are open.<br><br><color value=@@clr_txt_d@@>Requires \"Noise of the flowing air\" enabled to function."
 
 	key[]: "noise_aero_op_tooltip" # - Audio, Advanced
-	val[]: "Enables noise of the air flowing around your vehicle's cabin."
+	val[]: "Włącza odgłos powietrza opływającego pojazd."
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
-	val[]: "Enables reverb effect of your vehicle's cabin."
+	val[]: "Włącza efekt pogłosu kabiny pojazdu."
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "Włącza efekt pogłosu dźwięków otoczenia."
@@ -2656,8 +2713,8 @@
 	key[]: "transmission_settings"
 	val[]: "SKRZYNIA BIEGÓW" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "VEHICLE PHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "FIZYKA POJAZDU" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "ASYSTENCI" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
@@ -2845,8 +2902,8 @@
 	key[]: "hide"
 	val[]: "Ukryj" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
-	val[]: "Show limit for current vehicle mode" #+ Show speed limits for vehicles on the advisor.
+	key[]: "automatic_limit"
+	val[]: "Pokaż ograniczenia dla aktualnego pojazdu" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
 	val[]: "Dla aut osobowych" #+ Show speed limits for ordinary cars on the advisor.
@@ -2979,8 +3036,8 @@
 	key[]: "brake_intensity"
 	val[]: "Siła hamowania" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
-	val[]: "Vehicle stability" #+ Slider for player modification of truckstability (COG position).
+	key[]: "vehicle_stability"
+	val[]: "Stabilność pojazdu" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
 	val[]: "Stabilność naczepy" #+ Slider for player modification of trailer stability (COG position).
@@ -3045,7 +3102,7 @@
 	key[]: "throttle_double_tap"
 	val[]: "Inteligentne sterowanie gazem" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "Ogranicznik prędkości" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3162,6 +3219,9 @@
 	key[]: "cam_horizon_lock_factor"
 	val[]: "Współczynnik blokowania horyzontu kamery wewnętrznej" #+ Slider for interior camera horizon locking.
 
+	key[]: "cam_fov_speed_factor"
+	val[]: "Zmiana pola widzenia kamery wewnętrznej zależna od prędkości" #+ Slider for interior camera speed-based FOV changes.
+
 	key[]: "cam_auto_center_delay"
 	val[]: "Opóźnienie automatycznego centrowania kamery" #+ Dropdown for camera auto centering delay.
 
@@ -3258,7 +3318,7 @@
 	val[]: "Wybierz, czy oprócz aktualnej godziny mają być wyświetlane informacje o strefie czasowej."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Enables in-game cutscenes typically displayed after truck purchases or garage upgrades or during passenger loading."
+	val[]: "Włącza przerywniki filmowe, wyświetlane zwykle po zakupie ciężarówki, ulepszeniu garażu lub w trakcie ładowania pasażerów."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "Wybierz, czy na drogach, do których nie można dojechać, mają być wyświetlane blokady półprzezroczyste."
@@ -3281,8 +3341,8 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "Zmienia intensywność hamowania."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
-	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
+	val[]: "Zwiększa stabilność pojazdu poprzez obniżenie jego środka ciężkości."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Zmienia stabilność naczepy poprzez obniżenie jej środka ciężkości."
@@ -3305,8 +3365,8 @@
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
 	val[]: "Wybiera, czy i które kable naczepy mają być animowane.<br><br><color value=@@clr_txt_d@@>Włączenie okablowania w większej liczbie pojazdów może mieć wpływ na wydajność starszych systemów."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Włącza elektroniczny ogranicznik prędkości ciężarówki do 90 km/h (56 mph).<br><br><color value=@@clr_txt_d@@>W przypadku zleceń World of Trucks ta funkcja jest włączona na stałe."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "Włącza elektroniczny ogranicznik prędkości pojazdu, ustawiając limit na wartość zależną od jego modelu.<br><br><color value=@@clr_txt_d@@>W zleceniach World of Trucks ta funkcja jest zawsze włączona."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "Po włączeniu tej funkcji i ustawieniu wycieraczek przedniej szyby w pierwszym położeniu, wycieraczki włączą się automatycznie i dostosują prędkość do panujących warunków."
@@ -3397,6 +3457,9 @@
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "Zmienia zakres, w jakim kamera wewnętrzna może się obracać w zależności od ruchu pojazdu."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "Określa, w jakim stopniu pole widzenia kamery wewnętrznej zmienia się wraz z prędkością pojazdu."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "Ustawia opóźnienie przed automatycznym ponownym ustawieniem kamery.<br><br>Aby ta funkcja została aktywowana, pojazd musi poruszać się z niewielką prędkością. Dotyczy tylko kamery wewnętrznej i kamery śledzącej podczas jazdy do przodu oraz kamery zza okna podczas jazdy do tyłu."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "Stracono przypisanie funkcji:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ nie może zostać użyty." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "POJAZD"
 
 	key[]: "assistant_controls"
@@ -3716,6 +3782,9 @@
 	val[]: "Włączanie/Wyłączanie zapłonu"
 
 	key[]: "o_im_parkingbrake"
+	val[]: "Hamulec ręczny"
+
+	key[]: "o_im_handbrake"
 	val[]: "Hamulec ręczny"
 
 	key[]: "o_im_motorbrake"
@@ -3851,10 +3920,10 @@
 	val[]: "Odtwarzacz audio"
 
 	key[]: "o_im_radio_next"
-	val[]: "Odtwarzacz - następna"
+	val[]: "Odtwarzacz – następna"
 
 	key[]: "o_im_radio_prev"
-	val[]: "Odtwarzacz - poprzednia"
+	val[]: "Odtwarzacz – poprzednia"
 
 	key[]: "o_im_radio_vol_up"
 	val[]: "Odtwarzacz audio – Zwiększ głośność"
@@ -3863,10 +3932,10 @@
 	val[]: "Odtwarzacz audio – Zmniejsz głośność"
 
 	key[]: "o_im_radio_toggle"
-	val[]: "Odtwarzacz - pauza / graj"
+	val[]: "Odtwarzacz – pauza / graj"
 
 	key[]: "o_im_radio_favorite"
-	val[]: "Odtwarzacz - dodaj do / usuń z ulubionych"
+	val[]: "Odtwarzacz – dodaj do / usuń z ulubionych"
 
 	key[]: "o_im_display"
 	val[]: "Tryb wyświetlania tablicy rozdzielczej" #+ Action for cycling between dashboard display pages/modes.
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "Tryb wyświetlania informacji i rozrywki" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "Tryb kamery parkingowej" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "Tryb powiększania nawigacji" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -3921,7 +3993,7 @@
 	val[]: "Szybkie info"
 
 	key[]: "o_im_adjuster"
-	val[]: "Vehicle Adjustment"
+	val[]: "Regulacja pojazdu"
 
 	key[]: "o_im_services"
 	val[]: "Usługi i regulacje"
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "Przypisuje przycisk hamulca ręcznego."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "Przypisuje przycisk do hamulca ręcznego."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "Przypisuje przycisk do hamulca silnikowego.<br><br>Hamulec silnikowy będzie aktywny tak długo, jak długo przytrzymasz przycisk."
 
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "Przypisuje przycisk umożliwiający zmianę ekranów wyświetlacza informacyjno-rozrywkowego."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "Przypisuje przycisk do włączania i wyłączania ekranów kamer parkingowych."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "Przypisuje przycisk do zmiany poziomu powiększenia ekranu nawigacji na desce rozdzielczej lub wyświetlaczu systemu informacyjno-rozrywkowego."
@@ -5275,10 +5353,10 @@
 	val[]: "Ustaw punkt orientacyjny na wybrany portal"
 
 	key[]: "wanna_assistance_portal"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Do you agree?"
+	val[]: "Usługa pomocy drogowej może bezpłatnie przenieść Ciebie i Twój pojazd do dowolnego portalu.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_portal_online"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Usługa pomocy drogowej może bezpłatnie przenieść Ciebie i Twój pojazd do dowolnego portalu.<br offset=30>Twoje aktualne zlecenie zostanie anulowane.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "mp_job_quick_travel_other_land"
 	val[]: "Jesteś aktualnie za daleko od firmy początkowej, która znajduje się w innej krainie.<br><br>Nadal chcesz rozpocząć zlecenie?"
@@ -6234,22 +6312,22 @@
 	val[]: "Dochód ze zlecenia" #+ For example "Job income: E6,526"
 
 	key[]: "wanna_assistance"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd do $CITY$. Koszt wyniesie $MONEY$, a podróż potrwa $TIME$.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_quick"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd do $CITY$. Koszt wyniesie $MONEY$, a podróż potrwa $TIME$.<br>(Koszt pokryje Twój pracodawca.)<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_online"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może cię zabrać razem z twoim pojazdem do miasta $CITY$. Koszt tej usługi wyniesie $MONEY$, a podróż potrwa $TIME$<br offset=30>Twoje aktualne zlecenie zostanie anulowane.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$, a podróż potrwa $TIME$.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$, a podróż potrwa $TIME$.<br>(Koszt pokryje Twój pracodawca.)<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover_online"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$, a podróż potrwa $TIME$.<br offset=30>Twoja bieżąca dostawa zostanie anulowana.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_refuel"
 	val[]: "Usługa tankowania awaryjnego zapewni Ci $VOLUME$ oleju napędowego. To będzie kosztować $MONEY$ i zajmie $TIME$.<br offset=30>Wyrażasz zgodę?"
@@ -6270,22 +6348,22 @@
 	val[]: "Usługa awaryjnego ładowania naładuje akumulatory w Twojej ciężarówce do poziomu $ENERGY$. To działanie będzie kosztować $MONEY$ i zajmie $TIME$<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd do $CITY$. Koszt wyniesie $MONEY$.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_quick_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd do $CITY$. Koszt wyniesie $MONEY$.<br>(Koszt pokryje Twój pracodawca.)<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_assistance_online_mp"
-	val[]: "Assistance Service can take you and your truck to $CITY$. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd do $CITY$. Koszt wyniesie $MONEY$.<br offset=30>Twoja bieżąca dostawa zostanie anulowana.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover_quick_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$.<br>(Koszt pokryje Twój pracodawca.)<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_recover_online_mp"
-	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "Pomoc drogowa może przetransportować Ciebie i Twój pojazd na najbliższą drogę. Koszt wyniesie $MONEY$.<br offset=30>Twoja bieżąca dostawa zostanie anulowana.<br offset=30>Wyrażasz zgodę?"
 
 	key[]: "wanna_refuel_mp"
 	val[]: "Emergency Refueling service will provide you with $VOLUME$ of diesel. It will cost $MONEY$.<br offset=30>Do you agree?"
@@ -6382,7 +6460,7 @@
 	val[]: "Odkryto dealera ciężarówek marki $BRAND$!"
 
 	key[]: "service"
-	val[]: "To repair, upgrade, or paint<br>your vehicle or trailer press:"
+	val[]: "Aby naprawić, ulepszyć lub pomalować<br>swoją ciężarówkę wciśnij:"
 
 	key[]: "job_offer"
 	val[]: "Naciśnij następujący klawisz, aby przejrzeć dostępne oferty zleceń:"
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "Wyłącz silnik!"
 
-	key[]: "stop_truck_short"
-	val[]: "Zatrzymaj pojazd!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "Zatrzymaj pojazd!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "Użyj następującego klawisza, aby wyłączyć silnik:"
@@ -6630,7 +6708,7 @@
 	val[]: "Podniesienie osi nieudane.<br>Podczepiona naczepa jest zbyt ciężka."
 
 	key[]: "diff_lock_fail"
-	val[]: "Differential(s) cannot be locked. Slow down the vehicle and try again."
+	val[]: "Dyferencjał nie może zostać zablokowany. Zwolnij i spróbuj ponownie."
 
 	key[]: "diff_lock_hint"
 	val[]: "Jeżeli nie możesz ruszyć, może blokada dyferencjału pomoże.<br> Naciśnij następujący przycisk, aby aktywować:"
@@ -7053,7 +7131,7 @@
 	val[]: "Co każdy poziom zdobywasz punkt umiejętności. Użyj ciężko zarobionych punktów, by odblokować lepsze zlecenia i użyteczne ulepszenia!"
 
 	key[]: "skills_screen_subtitle_max"
-	val[]: "Wszystkie umiejętności odblokowane. Możesz przejrzeć swoje bonusy umiejętności w każdej chwili." #+ Screen subtitle alternative shown when all skills are unlocked
+	val[]: "Wszystkie umiejętności odblokowane. Możesz przejrzeć swoje premie do umiejętności w każdej chwili." #+ Screen subtitle alternative shown when all skills are unlocked
 
 
 	key[]: "skill_points"
@@ -7080,7 +7158,7 @@
 
 
 	key[]: "unlimited_distance"
-	val[]: "nielimitowane" #+ Fallback text shown when skill data contains reference to max rank distance (which is unlimited) of the Long Distance skill
+	val[]: "bez limitu" #+ Fallback text shown when skill data contains reference to max rank distance (which is unlimited) of the Long Distance skill
 
 
 #+ Names of individual skills which can be improved.
@@ -7197,7 +7275,7 @@
 	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% higher revenue</color> based on delivery distance"
 
 	key[]: "long_dist_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% bonusowego doświadczenia</color> za dostawy powyżej $FIRST_DIST$"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% dodatkowego doświadczenia</color> za dostawy powyżej $FIRST_DIST$"
 #@}
 
 #+ Informations about individual ranks of High Value Cargo skill.
@@ -7216,7 +7294,7 @@
 	val[]: "<color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% wyższego zysku</color> za dostawy o wysokiej wartości"
 
 	key[]: "valuable_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% bonusowego doświadczenia</color> za dostawy o wysokiej wartości"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% dodatkowego doświadczenia</color> za dostawy o wysokiej wartości"
 
 #@}
 
@@ -7584,7 +7662,7 @@
 	val[]: "Klasa ADR"
 
 	key[]: "skill_level"
-	val[]: "Poziom umiejętności" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
+	val[]: "Poziom zdolności" #+ Bonus for skill rank with specific cargo. For example "skill rank 5"
 #@}
 
 
@@ -8054,7 +8132,7 @@
 	val[]: "Mleko"
 
 	key[]: "cn_mobile_air_compressor"
-	val[]: "Mobile Air Compressor"
+	val[]: "Mobilny kompresor"
 
 	key[]: "cn_mobile_crusher"
 	val[]: "Mobilna kruszarka"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "Bilans konta: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Advance your career to unlock the loan."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Rozwiń swoją karierę w trybie $MODE$, by odblokować kredyt."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "Masz za dużo długu, by wziąć ten kredyt."
+
 #+ New loan confirmation window
 #@{
 
@@ -9443,7 +9530,13 @@
 	val[]: "Nie możesz skorzystać z szybkiej podróży podczas wykonywania zlecenia!"
 
 	key[]: "compman_qt_notruck"
-	val[]: "You cannot quick travel since you don't have a truck, coach or car!"
+	val[]: "You cannot quick travel since you don't have a truck!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "Nie możesz skorzystać z szybkiej podróży, ponieważ nie masz pojazdu!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "Nie możesz skorzystać z szybkiej podróży, ponieważ nie masz autokaru!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Czy chcesz odwiedzić wybrany garaż?"
@@ -9812,14 +9905,14 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "SPRZEDAJ POJAZD"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
-	val[]: "Jesteś pewien, że chcesz sprzedać tę ciężarówkę ($TRUCK$) za $MONEY$?"
+	key[]: "vehicleman_msg_reallysell"
+	val[]: "Jesteś pewien, że chcesz sprzedać ten pojazd ($VEHICLE$) za $MONEY$?"
 
-	key[]: "truckman_msg_nosell"
-	val[]: "You cannot sell the vehicle you're driving while on a job! Finish your job and then try again."
+	key[]: "vehicleman_msg_nosell"
+	val[]: "Nie możesz sprzedać pojazdu, którym wykonujesz zlecenie! Najpierw ukończ zlecenie, a następnie spróbuj ponownie."
 
 	key[]: "truckman_total_restoration_t"
 	val[]: "CAŁKOWITA RENOWACJA"  #+ Message box title. Please keep in upper case where possible.
@@ -9850,11 +9943,11 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "ZMIEŃ POJAZD" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
-	val[]: "You cannot change your vehicle while on a job! Finish your job first."
+	key[]: "vehicleman_msg_nochange"
+	val[]: "Nie możesz zmienić pojazdu podczas wykonywania zlecenia! Najpierw ukończ zlecenie."
 
 	key[]: "truckman_conf_drive"
 	val[]: "Czy na pewno chcesz przekazać $TRUCK_SRC$ dla miasta $CITY_DST$ na rzecz $TRUCK_DST$?"
@@ -9890,8 +9983,8 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "KOPIUJ KONFIGURACJĘ" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
-	val[]: "This vehicle cannot be used as copy configuration source due to missing data which is most likely caused by either MOD or DLC removal.<br><br>Reinstall MOD/DLC."
+	key[]: "vehicleman_msg_nouse"
+	val[]: "Ten pojazd nie może zostać użyty jako źródło kopiowanej konfiguracji z powodu brakujących danych, co najprawdopodobniej jest skutkiem usunięcia modyfikacji lub DLC.<br><br>Zainstaluj ponownie MOD/DLC."
 #@}
 
 # End of: "Truck management screen"
@@ -10271,6 +10364,9 @@
 	key[]: "td_msg_first_and_busy"
 	val[]: "Dziękujemy za kupno pierwszej ciężarówki właśnie u nas!<br><br>Dostarczymy Ci ją do siedziby firmy, skąd będzie można ją odebrać, gdy już zakończysz swoje aktualne zlecenie."
 
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Thank you for buying your first truck from us!<br><br>Do you want to switch to your new truck in <color value=@@clr_sel@@>$CITY$</color>?"
+
 	key[]: "td_msg_bought_assigned"
 	val[]: "Dziękujemy za zakup. Życzymy wielu chwil radości z nowej ciężarówki!<br><br>Starą ciężarówkę przetransportujemy do garażu w mieście $CITY$."
 
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "Członek konwoju"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Vehicle on quick job"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Other vehicle location"
+
 	key[]: "mapl_quarry"
 	val[]: "Kamieniołom"
 
@@ -10612,8 +10714,8 @@
 	key[]: "mapl_undiscovered"
 	val[]: "Nieodkryty punkt"
 
-	key[]: "mapl_viewpoint"
-	val[]: "Odwiedzony punkt widokowy"
+	key[]: "mapl_viewpoint_visited"
+	val[]: "Viewpoint (visited)"
 
 	key[]: "mapl_viewpoint_unvisited"
 	val[]: "Nieodwiedzony punkt widokowy"
@@ -10720,7 +10822,7 @@
 	val[]: "Fundacja Xiph.org"
 
 	key[]: "credits_fmod"
-	val[]: "Stworzone z FMOD Studio od Firelight Technologies Pty Ltd."
+	val[]: "Opracowano przy pomocy FMOD Studio od Firelight Technologies Pty Ltd."
 
 	key[]: "credits_speedtree"
 	val[]: "Część tego oprogramowania korzysta z technologii SpeedTree® (©2024, dostarczona przez Unity Technologies SF). Wszystkie prawa zastrzeżone."
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "Odwiedź $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "Użyj przycisku Tryb, aby przełączać się między różnymi trybami pulpitu i typami pojazdów."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "WITAJ"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "Dziękujemy za zapoznanie się z naszą aktualizacją ekranu głównego."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "WŁĄCZ WSKAZÓWKI"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "Wchodzisz w nowy tryb gry, a wskazówki kontekstowe są obecnie wyłączone. Wskazówki mogą pomóc Ci nauczyć się grać. Czy chcesz włączyć je ponownie?"
 #@}
 
 
@@ -15698,7 +15810,7 @@
 	val[]: "Obecne zlecenie zewnętrzne wymaga następujących dodatków DLC: <br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "Nie można wyświetlić szczegółów zlecenia. Pokażą się po tym, jak wznowisz aktualny kontrakt." #+ Message is shown if an error occured during server synchronization.
+	val[]: "Nie można wyświetlić szczegółów zlecenia. Pokażą się po tym, jak wznowisz aktualny kontrakt." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "Zlecenie wymaga posiadania własnej naczepy. Obecnie nie masz dołączonej takiej naczepy." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15757,6 +15869,9 @@
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "Wykryto zmianę w grze. Wybierz cel szybkiej podróży:" #+ Shown during economy reset quick travel.
 
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Wykryto zmianę w grze. Wybierz miejsce docelowe szybkiej podróży dla swojej ciężarówki:" #+ Shown during economy reset quick travel for truck.
+
 	key[]: "confirm_quick_travel"
 	val[]: "Potwierdź szybką podróż"
 
@@ -15775,17 +15890,17 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "Twoja ciężarówka nie jest gotowa do szybkiej podróży. Podłącz przewody do naczepy."
 
-	key[]: "quick_travel_cond_repair_truck"
-	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for an assistance."
+	key[]: "quick_travel_cond_repair_vehicle"
+	val[]: "Stan Twojego pojazdu nie pozwala na szybką podróż. Odwiedź serwis lub wezwij pomoc drogową."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Twoja naczepa nie jest w stanie umożliwiającym szybką podróż. Odwiedź serwis lub zadzwoń po pomoc."
 
-	key[]: "quick_travel_cond_truck_fuel"
-	val[]: "Your vehicle is not in a condition for quick travel. Refuel your vehicle or call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fuel"
+	val[]: "Stan Twojego pojazdu nie pozwala na szybką podróż. Zatankuj pojazd lub wezwij pomoc drogową."
 
-	key[]: "quick_travel_cond_truck_fallen"
-	val[]: "Your vehicle is not in a condition for quick travel. Call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fallen"
+	val[]: "Stan Twojego pojazdu nie pozwala na szybką podróż. Wezwij pomoc drogową."
 
 	key[]: "quick_travel_cond_trailer_fallen"
 	val[]: "Twoja naczepa nie jest przystosowana do szybkiej podróży. Wezwij pomoc."
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "Nie można znaleźć przedmiotów pasujących do filtrów wyszukiwań" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Nie udało się znaleźć pojazdów pasujących do filtrów" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Nie udało się znaleźć pojazdów pasujących do filtrów" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "Ten garaż został już w pełni zmodernizowany." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "Nie możesz ulepszyć garażu, ponieważ twój pojazd znajduje się zbyt blisko garażu." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "Obecna naczepa:" #+ Title of the current trailer statistics.
 
@@ -16760,8 +16878,8 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "W tej chwili nie ma dostępnych nowych ulepszeń naczep."
 
-	key[]: "link_locked_msg_truck_diag"
-	val[]: "To access the Diagnostics you must have a vehicle assigned first."
+	key[]: "link_locked_msg_vehicle_diag"
+	val[]: "Aby uzyskać dostęp do diagnostyki, musisz najpierw mieć przypisany pojazd."
 
 	key[]: "link_locked_msg_truck_dealer_map"
 	val[]: "Nie odkryłeś jeszcze żadnych dealerów samochodów ciężarowych."
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "Izoterma, boczne drzwi"
 
-	key[]: "bs_livestock"
-	val[]: "Naczepa do transportu zwierząt"
+	key[]: "bs_livestock_painted"
+	val[]: "Livestock, Painted"
 
-	key[]: "bs_livestock_belly"
-	val[]: "Niskopod. do transportu zwierząt"
+	key[]: "bs_livestock_steel"
+	val[]: "Livestock, Steel"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "Belly Livestock, Painted"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "Belly Livestock, Steel"
 
 	key[]: "bs_log_steel"
 	val[]: "Kłonica ze stalową podłogą"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "Opuść tryb swobodnego kursora" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "Brak pojazdu"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Ciężarówka"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,7 +18228,7 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Nie masz kompatybilnej naczepy dla obecnego ładunku."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Może zostać podjęte jedynie z użyciem własnego pojazdu."
 
 	key[]: "mp_job_missing_trailer"
@@ -18231,7 +18361,7 @@
 	val[]: "Zaakceptowano nowe zaproszenie do sesji konwoju.<br>Połączenie nastąpi po ekran zakończenia konwoju."
 
 	key[]: "reason_in_game_max_player_exceeded"
-	val[]: "Nie można się połączyć, serwer jest pełny."
+	val[]: "Nie udało się nawiązać połączenia. Serwer jest pełny."
 
 #@}
 
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "Aby móc dołączyć do tej sesji, musisz aktywować firmę znajdującą się w pobliżu Twojej ciężarówki lub naczepy.<br>Aby uniknąć problemów, przesuń ciężarówkę i naczepę dalej od firmy. W przeciwnym razie Twoje bieżące zlecenie zostanie anulowane, a Ty zostaniesz przeniesiony do najbliższego serwisu.<br><br>Czy chcesz kontynuować?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "Aby móc dołączyć do tej sesji, musisz aktywować firmę znajdującą się w pobliżu miejsca, w którym zostawiłeś ciężarówkę lub naczepę przed zaakceptowaniem szybkiego zlecenia.<br>Aby uniknąć jakichkolwiek problemów po powrocie do ciężarówki, szybkie zlecenie musi zostać anulowane, a Ty zostaniesz przeniesiony do najbliższego serwisu.<br><br>Czy chcesz kontynuować?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18919,14 +19049,14 @@
 	key[]: "job_equipment"
 	val[]: "Sprzęt do zlecenia:"
 
-	key[]: "equipment_provided_truck_and_trailer"
-	val[]: "Ciężarówka i naczepa pracodawcy"
+	key[]: "equipment_provided_vehicle_and_trailer"
+	val[]: "Wszystko zapewnia pracodawca"
 
-	key[]: "equipment_owned_truck_provided_trailer"
-	val[]: "Posiadana ciężarówka"
+	key[]: "equipment_owned_vehicle_provided_trailer"
+	val[]: "Posiadany pojazd"
 
-	key[]: "equipment_owned_truck_and_trailer"
-	val[]: "Własna ciężarówka i naczepa"
+	key[]: "equipment_owned_vehicle_and_trailer"
+	val[]: "Własny pojazd i naczepa"
 
 	key[]: "mp_job_quick_travel_message"
 	val[]: "Jesteś aktualnie za daleko od firmy początkowej. Chcesz użyć szybkiej podróży i przenieść się bliżej?<br><br>Cel szybkiej podróży: <color value=@@clr_sel@@>$DESTINATION$<br><color value=@@clr_txt@@>Koszt: <color value=@@clr_sel@@>$COST$"
@@ -19574,7 +19704,7 @@
 #+ Mod session browser - warning - missing local"
 #@{
 	key[]: "mp_mod_warning_missing_local"
-	val[]: "Serwer używa niekompatybilnych modyfikacji lokalnych. By dołączyć do sesji, zainstaluj identyczne modyfikacje lokalne ręcznie."
+	val[]: "Serwer używa niekompatybilnych modyfikacji lokalnych. Zainstaluj identyczne modyfikacje lokalne ręcznie, aby dołączyć do sesji."
 #@}
 
 #+ Mod session browser - warning"
@@ -19913,7 +20043,7 @@
 #+ Photo album wotr slots.
 #@{
 	key[]: "wotr_profile_truck_slot"
-	val[]: "Slot zdjęcia profilowego ciężarówki"
+	val[]: "Miejsce zdjęcia profilowego ciężarówki"
 
 	key[]: "wotr_gallery_slot_1"
 	val[]: "Miejsce w galerii 1"
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "Odwiedzone kraje"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "Obsługiwane magazyny"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "Obsługiwane firmy"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20237,6 +20367,36 @@
 	val[]: "Wyjdź"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Mode"
+
+	key[]: "truck_mode"
+	val[]: "Truck Mode"
+
+	key[]: "truck_mode_help"
+	val[]: "Take on different jobs with a truck"
+
+	key[]: "bus_mode"
+	val[]: "Coach Mode"
+
+	key[]: "bus_mode_help"
+	val[]: "Experience another mode as a coach driver"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "To access Coach Mode you must finish your first job"
+
+	key[]: "car_mode"
+	val[]: "Car Mode"
+
+	key[]: "car_mode_help"
+	val[]: "Take on different jobs and explore the world with a car"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "To access Car Mode you must finish your first job"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20315,7 +20475,7 @@
 	val[]: "Przeglądaj, oceniaj i rekonfiguruj dostępne naczepy do zakupu."
 
 	key[]: "radio_desc" # - tooltip for explaining what the radio is - feature is active
-	val[]: "Podrasuj swoje doświadczenie z jazdy puszczając muzykę."
+	val[]: "Popraw swoje wrażenia z jazdy dzięki muzyce."
 
 	key[]: "link_locked_msg_radio" # - tooltip for when the radio is not yet unlocked
 	val[]: "Radio jest niedostępne."
@@ -20383,9 +20543,9 @@
 	val[]: "ODPOCZYNEK"
 
 	key[]: "time_skip_hours"
-	val[]: "Ilość godzin do pominięcia"
+	val[]: "Liczba godzin do pominięcia"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Aktualny czas"
 
@@ -20410,14 +20570,14 @@
 	val[]: "za $TIME$"
 
 	key[]: "time_skip_to_next_mandatory_break_not_ok"
-	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>in $TIME$</font>"
+	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>za $TIME$</font>"
 
 
 	key[]: "time_skip_mandatory_break_complied"
-	val[]: "Spełniona"
+	val[]: "Spełniono warunki"
 
 	key[]: "time_skip_mandatory_break_not_complied"
-	val[]: "Niespełniona"
+	val[]: "Nie spełniono warunków"
 
 
 	key[]: "time_skip_delivery_on_time"
@@ -20436,27 +20596,27 @@
 	key[]: "time_skip_rest_full"
 	val[]: "W pełni sił"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
-	val[]: "This rest won’t meet the mandatory break requirements. You will have $LEFT_TIME$ left until the next mandatory break."
+	val[]: "Ten odpoczynek nie spełni wymagań obowiązkowej przerwy. Pozostanie $LEFT_TIME$ do następnej obowiązkowej przerwy."
 
 	key[]: "time_skip_tooltip_mandatory_break_complied"
-	val[]: "This rest will meet the mandatory break requirements. The next one will be in <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours."
+	val[]: "Odpoczynek spełni wymagania obowiązkowej przerwy. Następna za <color value=@@clr_sel@@>$DRIVE_TIME$</color> godzin."
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
-	val[]: "For every <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours of driving, you must take a mandatory break for at least <color value=@@clr_sel@@>$BREAK_TIME$</color> hours to avoid getting fined."
-	
+	val[]: "Na każde <color value=@@clr_sel@@>$DRIVE_TIME$</color> godzin jazdy musisz zrobić co najmniej <color value=@@clr_sel@@>$BREAK_TIME$</color> obowiązkowej przerwy, by uniknąć mandatu."
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "Po odpoczynku i szacowanym czasie dojazdu do celu pozostanie <color value=@@clr_sel@@>$LEFT_TIME$</color> aktualnego zlecenia."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "Po odpoczynku i szacowanym czasie dojazdu do celu dostawa będzie spóźniona o <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>Będziesz w pełni sił</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Szacowany przyjazd"
 
@@ -20468,14 +20628,14 @@
 	val[]: "WYMAGANA OBOWIĄZKOWA PRZERWA"
 
 	key[]: "time_skip_mandatory_break_needed"
-	val[]: "The vehicle hasn’t been parked long enough to complete your mandatory rest.<br><br><color value=@@clr_sel@@>$TIME$ of mandatory break left<br><br><color value=@@clr_txt@@>Do you want to rest?"
+	val[]: "Pojazd nie był zaparkowany dość długo, by wypełnić obowiązkową przerwę.<br><br><color value=@@clr_sel@@>$TIME$ pozostałej obowiązkowej przerwy<br><br><color value=@@clr_txt@@>Chcesz odpocząć?"
 
 # mandatory break notifications
 	key[]: "mandatory_break_soon"
 	val[]: "Czas na obowiązkową przerwę.<br>Powinieneś znaleźć miejsce parkingowe i odpocząć!"
 
 	key[]: "mandatory_break_overdue"
-	val[]: "Exceeded driving time without mandatory break.<br>You should find a parking spot and rest!"
+	val[]: "Przekroczono czas jazdy bez obowiązkowej przerwy.<br>Należy znaleźć miejsce parkingowe i odpocząć!"
 
 	key[]: "offence_mandatory_break"
 	val[]: "Naruszenie obowiązkowej przerwy."
@@ -20486,11 +20646,11 @@
 	val[]: "Symulacja obowiązkowej przerwy"
 
 	key[]: "mandatory_break_simulation_op_tooltip"
-	val[]: "When enabled, you must take regular breaks from driving.<br><br>Avoiding mandatory breaks will result in traffic offences."
+	val[]: "Po włączeniu musisz robić regularne przerwy od jazdy.<br><br>Unikanie obowiązkowych przerw będzie skutkowało mandatami."
 
 	key[]: "rest_state_simulation"
 	val[]: "Symulacja stanu wypoczęcia"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
-	val[]: "Po włączeniu doświadczysz efektów zmęczenia po czasie.<br><br>Będziesz musiał odpocząć, by się zregenerować."
+	val[]: "Po włączeniu doświadczysz efektów zmęczenia po czasie.<br><br>Będziesz musiał odpocząć, aby się zregenerować."
 #@}

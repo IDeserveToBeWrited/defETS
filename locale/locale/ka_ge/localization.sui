@@ -41,6 +41,12 @@
 	key[]: "loading_no_job"
 	val[]: "ჩიტივით თავისუფალი"
 
+	key[]: "loading_location_country"
+	val[]: "Somewhere in $COUNTRY$" #+ Message shown on loading screen when player location is inside specific country.
+
+	key[]: "loading_changing_mode"
+	val[]: "Transferring" #+ Message shown on loading screen when player is switching between vehicle modes.
+
 	key[]: "current_job_title"
 	val[]: "სამუშაო"
 
@@ -124,17 +130,17 @@
 
 #+ Truck analysis feature - truck konfigurator and pop-up
 
-	key[]: "truck_analysis_t"
-	val[]: "VEHICLE ANALYSIS" #+ Header of the widget in truck configurator
+	key[]: "vehicle_analysis_t"
+	val[]: "VEHICLE ANALYSIS" #+ Header of the widget in vehicle configurator
 
-	key[]: "truck_analysis_popup_t"
+	key[]: "vehicle_analysis_popup_t"
 	val[]: "VEHICLE ANALYSIS" #+ Header of the pop-up when taking heavy cargo
 
-	key[]: "current_truck_params"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis widget for truck parameters
+	key[]: "current_vehicle_params"
+	val[]: "Vehicle Configuration" #+ Header inside the vehicle analysis widget for vehicle parameters
 
-	key[]: "current_truck_parameters"
-	val[]: "Vehicle Configuration" #+ Header inside the truck analysis pop-up for truck parameters
+	key[]: "current_vehicle_parameters"
+	val[]: "Vehicle Configuration" #+ Header inside the vehicle analysis pop-up for vehicle parameters
 
 	key[]: "normal_cargo"
 	val[]: "საშუალო ტვირთი" #+ name of the bar for normal cargo suitability
@@ -190,8 +196,8 @@
 	key[]: "truck_analysis_heavy_introduction"
 	val[]: "აპირებთ მძიმე სამუშაოს შესრულებას. დარწმუნდით, რომ თქვენს სატვირთოს შეუძლია დაძლიოს ტვირთი." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
-	key[]: "truck_analysis_info_tooltip"
-	val[]: "Given your expected typical type of transportation, tune your vehicle to optimize it according to a combination of economy of driving, technical and legal limitations." #+  General tooltip description of Truck Analysis feature
+	key[]: "vehicle_analysis_info_tooltip"
+	val[]: "Given the standard expected type of transportation, tune your vehicle to optimise it according to a combination of fuel economy, technical and legal limitations." #+  General tooltip description of Vehicle Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "მსუბუქი და საშუალო სიმძიმის ტვირთის გადაზიდვის უნარი" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -200,10 +206,10 @@
 	val[]: "მძიმე და საგანგებო ტვირთის გადაზიდვის უნარი" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "Ability of your vehicle to maneuver in tight space areas" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "Ability of your vehicle to manoeuvre in tight space areas" #+  Tooltip description for the Maneuverability bar in Vehicle Analysis
 
 	key[]: "hill_climbing_tooltip"
-	val[]: "Optimized vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
+	val[]: "Optimisation of vehicle's power-train for smoother hill climbing and descent" #+  Tooltip description for the Hill Traversal bar in Vehicle Analysis
 
 	key[]: "uneven_terrain_tooltip"
 	val[]: "უსწორმასწორო ზედაპირების გადალახვის უნარი" #+  Tooltip description for the Uneven Terrain bar in Truck Analysis
@@ -262,7 +268,7 @@
 
 
 	key[]: "truck_action_t"
-	val[]: "VEHICLE SERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
+	val[]: "მანქანის მომსახურება" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
 
 #+ Truck service screen.
 #+
@@ -275,8 +281,8 @@
 	key[]: "truck_service"
 	val[]: "სახელოსნო" #+ Icon allowing player to repair the truck. There is limited space allowing for two lines of 7 'W' characters each.
 
-	key[]: "truck_service_about"
-	val[]: "Vehicle maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
+	key[]: "vehicle_service_about"
+	val[]: "Truck maintenance and repairs. A great driver always keeps their vehicle in top condition." #+ Help message associated with service icon.
 
 	key[]: "damage_t"
 	val[]: "დაზიანებული ნაწილები" #+ Header of section displaying status of individual components of the vehicle (engine, transmission, ....).  Please keep in upper case where possible. Please keep in upper case where possible.
@@ -287,8 +293,8 @@
 	key[]: "truck_service_replace_all"
 	val[]: "ყველას გამოცვლა" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
-	key[]: "truck_service_truck_t"
-	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	key[]: "vehicle_service_vehicle_t"
+	val[]: "VEHICLE DAMAGE REPORT" #+ Header of section displaying status of individual components of the vehicle. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "მისაბმელის დაზიანება" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -296,8 +302,8 @@
 	key[]: "repair"
 	val[]: "შეკეთების დამოწმება" #+ Button which confirms selected actions.
 
-	key[]: "truck_damage"
-	val[]: "Vehicle damage" #+ Price for the truck damage
+	key[]: "vehicle_damage"
+	val[]: "Vehicle damage" #+ Price for the vehicle damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -305,13 +311,13 @@
 #+ Allows to add or remove various accessories.
 #@{
 
-	key[]: "truck_config_t"
-	val[]: "VEHICLE CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
+	key[]: "vehicle_config_t"
+	val[]: "CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
 
-	key[]: "truck_config"
-	val[]: "Vehicle Configurator" #+ Icon allowing player to upgrade the truck.
+	key[]: "vehicle_config"
+	val[]: "Vehicle Configurator" #+ Icon allowing player to upgrade the vehicle.
 
-	key[]: "truck_config_about"
+	key[]: "vehicle_config_about"
 	val[]: "You know, there's always something you can tune or paint to make you feel better about your vehicle." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
@@ -410,7 +416,7 @@
 	key[]: "truck_diag"
 	val[]: "მანქანის შემოწმება" #+ Icon allowing player to show damage on the truck.
 
-	key[]: "truck_diag_about"
+	key[]: "vehicle_diag_about"
 	val[]: "View information about your vehicle and its current condition."
 
 	key[]: "truck_diag_warning"
@@ -498,8 +504,8 @@
 	key[]: "cart_not_empty"
 	val[]: "შეკვეთილი გაქვთ ნაწილები!<br><br>ნამდვილად გსურთ შეკვეთის გაუქმება?" #+ Shown as message box when the screen is about to be closed and there is still something in the basket.
 
-	key[]: "borrowed_truck_refusal"
-	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job truck.
+	key[]: "borrowed_vehicle_refusal"
+	val[]: "Your employer won't like it if you tinker with their vehicle." #+ Shown if user attempts to upgrade a quick job vehicle.
 
 	key[]: "trailer_job_major_change"
 	val[]: "ვერ შეცვლით თქვენი მისაბმელის სახეობას, ძარას ან ღერძებს სამუშაოს მიმდინარეობისას. დაასრულეთ მიწოდება და შემდეგ სცადეთ." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
@@ -695,7 +701,7 @@
 	val[]: "საქარე მინის ჩარჩო" #+ The plate under truck windshield (where wipers are installed).
 
 	key[]: "filter"
-	val[]: "ჰაერის ფილტრი" #+ Air filter accessoty.
+	val[]: "ჰაერის ფილტრი" #+ Air filter accessory.
 
 	key[]: "flag_r"
 	val[]: "ფანჯრის მარჯვენა დროშა" #+ Right window flag
@@ -779,7 +785,7 @@
 	val[]: "უკანა თვლები"
 
 	key[]: "rear_window"
-	val[]: "Rear Window"
+	val[]: "უკანა ფანჯარა"
 
 	key[]: "rim"
 	val[]: "ფერსო" #+ Wheel rim (older part name)
@@ -1097,6 +1103,9 @@
 
 	key[]: "load_game"
 	val[]: "ჩატვირთვა" #+ Icon allowing player to load previously saved game. There is limited space allowing for two lines of 7 'W' characters each.
+	
+	key[]: "load_game_failed"
+	val[]: "Failed to load the saved game."
 
 	key[]: "load_game_desc"
 	val[]: "წინა შენახულიდან გაგრძელება. ბოლო ცვლილებები დაიკარგება!" #+ Help message associated with load game icon.
@@ -1655,7 +1664,7 @@
 	val[]: "ახალი წერილი გამოქვეყნდა სვეტზე!" #+ Fallback news text content in case of fetch errors
 
 	key[]: "no_truck_dlc"
-	val[]: "No vehicles found! Please re-enable at least one vehicle DLC and restart the game." #+ Text shown when there is no truck available.
+	val[]: "No trucks found! Please re-enable at least one truck DLC and restart the game." #+ Text shown when there is no truck available.
 
 	key[]: "extras"
 	val[]: "სხვა"
@@ -1996,6 +2005,9 @@
 	key[]: "sort_by_ownership"
 	val[]: "საკუთრება" #+ Button in sort by droplist. Please keep it as short as possible.
 
+	key[]: "sort_by_price"
+	val[]: "ფასი" #+ Button in sort by droplist. Please keep it as short as possible.
+
 	key[]: "filter_dlc"
 	val[]: "გამორჩევა" #+ Combo box with job sorting options."
 
@@ -2071,6 +2083,9 @@
 	key[]: "dlc_category_paint_jobs"
 	val[]: "მოხატულობა" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
+	key[]: "dlc_category_vehicles"
+	val[]: "მანქანები" #+ Button/tab in DLC browser. Please keep it as short as possible.
+
 	key[]: "dlc_category_all"
 	val[]: "ყველა" #+ Button/tab in DLC browser. Please keep it as short as possible.
 
@@ -2094,6 +2109,48 @@
 
 	key[]: "dlc_browser_online_wait_message"
 	val[]: "იწერება კრებულის მონაცემები. მოითმინეთ."
+
+	key[]: "dlc_browser_open_store"
+	val[]: "გსურთ ბრაუზერის გახსნა და მითითებულ ვებგვერდზე გადასვლა?"
+
+	key[]: "dlc_browser_no_valid_data"
+	val[]: "ჩამოსატვირთი კრებული მიუწვდომელია ამჟამად."
+
+	key[]: "dlc_browser_catalogue_canceled"
+	val[]: "ცნობარის მოქმედება გაუქმდა." #+ The operation was cancelled by the player, and finished correctly.
+
+	key[]: "dlc_browser_catalogue_unknown_error"
+	val[]: "ცნობარის დაუდგენელი შეცდომა." #+ Catalogue unknown error.
+
+	key[]: "dlc_browser_catalogue_not_initialized"
+	val[]: "ცნობარი ვერ გაეშვა." #+ Error caused by either module or library not being properly initialized (yet).
+
+	key[]: "dlc_browser_catalogue_incompatible_state"
+	val[]: "მოქმედება ვერ დაიწყო, რადგან სხვა ხელის შემშლელი მოქმედება ჯერ არ დასრულებულა." #+ Error caused attempting to start an operation when another, blocking is in progress
+
+	key[]: "dlc_browser_catalogue_bad_data"
+	val[]: "მოწოდებული მონაცემების ნაწილი არაზუსტი ან არასრულია." #+ Bad data were supplied either by caller or by first party.
+
+	key[]: "dlc_browser_catalogue_product_misssing"
+	val[]: "მოქმედების მცდელობა ისეთი ჩანაწერზე, რომელიც ან ამოკლებულია ადგილობრივი ცნობარიდან ან არ მოიპოვება მონაცემთა მთავარ კრებულში." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+
+	key[]: "dlc_browser_catalogue_sending_failed"
+	val[]: "ცნობარის მოთხოვნა ვერ შესრულდა." #+ The request failed, accompanied error message/ other logs should explain why.
+
+	key[]: "dlc_browser_catalogue_parse_failed"
+	val[]: "მიღებული პასუხი გაუმართავია." #+ The respone received was malformed.
+
+	key[]: "dlc_browser_catalogue_first_party_fail"
+	val[]: "ცნობარის შიდა შეცდომა." #+ First party api call failed for reason beyond our capabilities to fix.
+
+	key[]: "dlc_browser_catalogue_bad_platform"
+	val[]: "ეს შესაძლებლობა არაა წარმოდგენილი ამ სისტემაზე." #+ The functionality is not present on current platform.
+
+	key[]: "dlc_browser_catalogue_try_later"
+	val[]: "ცნობარის მომსახურება ამჟამად მიუწვდომელია, მოგვიანებით სცადეთ." #+ The service is currently unavailable, the caller should try later.
+
+	key[]: "dlc_browser_commerce_module_internal_error"
+	val[]: "ცნობარის შიდა შეცდომა." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -2349,8 +2406,8 @@
 	key[]: "interface_sound_settings_t"
 	val[]: "გარსი" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
-	key[]: "truck_sound_settings_t"
-	val[]: "VEHICLE SOUNDS" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	key[]: "vehicle_sound_settings_t"
+	val[]: "VEHICLE SOUNDS" #+ Title of the 'Vehicle Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "შიდა ხმები" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2361,20 +2418,20 @@
 	key[]: "master_volume"
 	val[]: "საერთო ხმოვანება" #+ Slider controlling master volume.
 
-	key[]: "truck_engine_volume"
-	val[]: "Vehicle engine volume" #+ Slider controlling volume of the truck engine.
+	key[]: "vehicle_engine_volume"
+	val[]: "Engine volume" #+ Slider controlling volume of the vehicle engine.
 
-	key[]: "truck_exhaust_volume"
-	val[]: "Vehicle exhaust volume" #+ Slider controlling volume of the truck exhaust.
+	key[]: "vehicle_exhaust_volume"
+	val[]: "Exhaust volume" #+ Slider controlling volume of the vehicle exhaust.
 
-	key[]: "truck_turbo_volume"
-	val[]: "Vehicle turbo volume" #+ Slider controlling volume of the truck turbo.
+	key[]: "vehicle_turbo_volume"
+	val[]: "Turbo volume" #+ Slider controlling volume of the vehicle turbo.
 
-	key[]: "truck_effects_volume"
-	val[]: "Vehicle effects volume" #+ Slider controlling volume of the truck effects.
+	key[]: "vehicle_effects_volume"
+	val[]: "Vehicle effects volume" #+ Slider controlling volume of the vehicle effects.
 
-	key[]: "truck_noise_volume"
-	val[]: "Vehicle noise volume" #+ Slider controlling volume of the truck noises.
+	key[]: "vehicle_noise_volume"
+	val[]: "Vehicle noise volume" #+ Slider controlling volume of the vehicle noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "მისაბმელის ხმაურის დონე" #+ Slider controlling volume of the trailer noises.
@@ -2516,20 +2573,20 @@
 	key[]: "master_volume_op_tooltip" # - Audio, Simple
 	val[]: "მთლიანი თამაშის ხმის გამართვა."
 
-	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's engine."
+	key[]: "vehicle_engine_volume_op_tooltip" # - Audio, Simple
+	val[]: "მანქანის ძრავის ხმის გამართვა."
 
-	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's exhaust."
+	key[]: "vehicle_exhaust_volume_op_tooltip" # - Audio, Simple
+	val[]: "მანქანის გამოსაბოლქვის ხმის გამართვა."
 
-	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's turbo."
+	key[]: "vehicle_turbo_volume_op_tooltip" # - Audio, Simple
+	val[]: "მანქანის ტურბინის ხმის გამართვა."
 
-	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of other vehicle sound effects, such as hissing of the air brakes."
+	key[]: "vehicle_effects_volume_op_tooltip" # - Audio, Simple
+	val[]: "მანქანის ხმის გამართვა, მათ შორის შიშინისა და საჰარო მუხრუჭების. "
 
-	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of noise coming from the vehicle's tyres."
+	key[]: "vehicle_noise_volume_op_tooltip" # - Audio, Simple
+	val[]: "მანქანის საბურავებიდან გამოწვეული ხმაურის დონის გამართვა."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "მისაბმელის საბურავებიდან გამოწვეული ხმაურის დონის გამართვა."
@@ -2544,7 +2601,7 @@
 	val[]: "გარესამყაროდან მომავალი სხვა ხმების გამართვა, მათ შორის ქუჩებში, ბუნებაში და სხვ."
 
 	key[]: "interior_volume_op_tooltip" # - Audio, Simple
-	val[]: "Adjusts volume of the vehicle's interior sounds."
+	val[]: "მანქანის შიდა ხმების გამართვა."
 
 	key[]: "radio_volume_op_tooltip" # - Audio, Simple
 	val[]: "რადიოს ხმების გამართვა."
@@ -2607,10 +2664,10 @@
 	val[]: "Enables additional noise of the air flowing through the windows when the vehicle's windows are open.<br><br><color value=@@clr_txt_d@@>Requires \"Noise of the flowing air\" enabled to function."
 
 	key[]: "noise_aero_op_tooltip" # - Audio, Advanced
-	val[]: "Enables noise of the air flowing around your vehicle's cabin."
+	val[]: "Enables noise of the air flowing around your vehicle."
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
-	val[]: "Enables reverb effect of your vehicle's cabin."
+	val[]: "Enables the reverb effect of your vehicle's interior."
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "გარემომცველ ხმებს ექო ექნება."
@@ -2656,14 +2713,14 @@
 	key[]: "transmission_settings"
 	val[]: "სიჩქარეთა გადაცემა" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
-	key[]: "truck_physics_settings"
-	val[]: "VEHICLE PHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	key[]: "vehicle_physics_settings"
+	val[]: "VEHICLE PHYSICS" #+ Title of 'Vehicle physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
 	val[]: "დამხმარე საშუალებები" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
 
 	key[]: "trailer_settings"
-	val[]: "TRAILER" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
+	val[]: "მისაბმელი" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
 
  	key[]: "camera_settings"
 	val[]: "ხედვა" #+ Title of 'Camera' settings section. Please keep in upper case where possible.
@@ -2845,7 +2902,7 @@
 	key[]: "hide"
 	val[]: "დამალვა" #+ Hide speed limit display on the advisor.
 
-	key[]: "truck_limit"
+	key[]: "automatic_limit"
 	val[]: "Show limit for current vehicle mode" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
@@ -2979,7 +3036,7 @@
 	key[]: "brake_intensity"
 	val[]: "დამუხრუჭების სიმკვეთრე" #+ Slider for player modification of braking force.
 
-	key[]: "truck_stability"
+	key[]: "vehicle_stability"
 	val[]: "Vehicle stability" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
@@ -3045,7 +3102,7 @@
 	key[]: "throttle_double_tap"
 	val[]: "აჩქარების ჭკვიანი მართვა" #+ Checkbox for double tap mode of the digital throttle.
 
-	key[]: "truck_speed_limiter"
+	key[]: "vehicle_speed_limiter"
 	val[]: "სიჩქარის შემზღუდავი" #+ Checkbox for enabling of speed limiter.
 
 	key[]: "rain_sensor"
@@ -3162,6 +3219,9 @@
 	key[]: "cam_horizon_lock_factor"
 	val[]: "შიდა კამერის ხედის თარაზულად შენარჩუნება" #+ Slider for interior camera horizon locking.
 
+	key[]: "cam_fov_speed_factor"
+	val[]: "შიდა კამერის ხედვის სიჩქარისდა მიხედვით ცვლილება" #+ Slider for interior camera speed-based FOV changes.
+
 	key[]: "cam_auto_center_delay"
 	val[]: "კამერის შუაში გასწორებისას დაყოვნება" #+ Dropdown for camera auto centering delay.
 
@@ -3258,7 +3318,7 @@
 	val[]: "გამოჩნდეს თუ არა დროის სარტყელი მიმდინარე დროსთან ერთად."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Enables in-game cutscenes typically displayed after truck purchases or garage upgrades or during passenger loading."
+	val[]: "თამაშში ვიდეოჭრების ჩვენება სატვირთოს შეძენისას ან სახელოსნოს განახლებისას, ანდაც მგზავრების ჩასხდომისას."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "გამოჩნდეს თუ არა ნახევრად გამჭვირვალე ზღუდეები იქ, სადაც გზა აღარაა."
@@ -3281,7 +3341,7 @@
 	key[]: "brake_intensity_op_tooltip" # - Gameplay, Advanced
 	val[]: "ცვლის დამუხრუჭების სიმკვეთრეს."
 
-	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
+	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
@@ -3297,16 +3357,16 @@
 	val[]: "ცვლის შიდა/საწოლი სივრცის დაკიდების სიხისტეს."
 
 	key[]: "road_bumps_factor_op_tooltip" # - Gameplay, Advanced
-	val[]: "Adjusts the intensity of procedurally generated surface bumps to give roads and other terrains an imperfect feel.<br><br>Depending on other suspension and camera settings the perceived effect may be more or less prominent."
+	val[]: "განსაზღვრავს გზის ამობურცული ზედაპირით წარმოქმნილ რყევის სიმძაფრეს და უსწორმასწორობის შეგრძნებას.<br><br>დაკიდებისა და კამერის ქანაობის სიდიდესთან ერთიანობაში იქნება მეტად ან ნაკლებად შესამჩნევი."
 
 	key[]: "trailer_advanced_coupling_op_tooltip" # - Gameplay, Advanced
 	val[]: "მისაბმელის ჩაბმა გამოცდილთათვის როცა ჩართულია, ზედმიწევნით ზუსტად უნდა გაუსწორდეს ერთმანეთს სატვირთოს უნაგირი და მისაბმელის დასაერთებელი ღერო.<br><br>როცა გამორთულია, ადვილდება ჩაბმა, ვინაიდან უნაგირი ღეროს აღარ მოედება."
 
 	key[]: "trailer_cables_mode_op_tooltip" # - Gameplay, Simple
-	val[]: "Selects if, and which trailer cables are animated.<br><br><color value=@@clr_txt_d@@>Enabling cables on more vehicles may affect performance on older systems."
+	val[]: "მიუთითებს, მისაბმელის სადენები გამოჩნდეს და იმოძრაოს თუ არა.<br><br><color value=@@clr_txt_d@@>მეტ მანქანაზე სადენების ჩვენება მეტად დატვირთავს მოძველებულ სისტემებს."
 
-	key[]: "truck_speed_limiter_op_tooltip" # - Gameplay, Simple
-	val[]: "Enables the truck's electronic speed limiter of 90 km/h (56 mph).<br><br><color value=@@clr_txt_d@@>World of Trucks jobs have this feature permanently turned on."
+	key[]: "vehicle_speed_limiter_op_tooltip" # - Gameplay, Simple
+	val[]: "ჩართავს მანქანის სიჩქარის ელექტრონულ შემზღუდველს მოდელის შესაბამისი მნიშვნელობით.<br><br><color value=@@clr_txt_d@@>World of Trucks სამუშაოებისას მუდმივად ჩართულად ტოვებს."
 
 	key[]: "rain_sensor_op_tooltip" # - Gameplay, Simple
 	val[]: "როცა ჩართულია და საქარე მინის საწმენდები პირველ საფეხურზეა გადაყვანილი, თავისით ჩაირთვება და შეარჩევს სიჩქარეს უამინდობისას."
@@ -3330,13 +3390,13 @@
 	val[]: "თავისით განსაზღვრავს ღერძების აწევა/დაწევას, როცა საჭიროა მანქანის წონის შესაბამისად."
 
 	key[]: "throttle_double_tap_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle will hold lower throttle by default. After quickly pressing the throttle button twice, the vehicle will hold full throttle until the throttle button is released.<br><br>Affects keyboard input only."
+	val[]: "როცა ჩართულია, მანქანა აჩქარდება ნელი სვლით ნაგულისხმევად. წინსვლის ღილაკზე ორჯერ სწარფი დაჭერით კი მანქანა აჩქარდება სრული სვლით  წინსვლის ღილაკის აშვებამდე.<br><br>იმუშავებს კლავიატურით სარგებლობისას მხოლოდ."
 
 	key[]: "air_brake_simulation_op_tooltip" # - Gameplay, Advanced
-	val[]: "Simulates real life air loss from excessive brake applications.<br><br>When enabled, you will have to manage your air pressures when descending hills or making slow manoeuvres with multiple brake applications."
+	val[]: "სინამდვილის მსგავსად ჰაერი დაიცლება მუხრუჭის ზედმეტი გამოყენებისას.<br><br>როცა ჩართულია, მოგიწევთ გაითვალისწინოთ ჰაერის წნევა დაღმართზე დაშვებისას ან ნელა მოძრაობისას მუხჭურით სარგებლობისთვის."
 
 	key[]: "fuel_consumption_simulation_op_tooltip" # - Gameplay, Advanced
-	val[]: "When disabled, fuel consumption is not affected by driving style or road conditions.<br><br>When enabled, fuel consumption is affected by several factors including driving style, cargo weight, rolling resistance, and terrain profiles. It is no longer affected by the @@skill_mechanical_title@@ skill."
+	val[]: "როცა გამორთულია, საწვავის მოხმარება არ იქნება დამოკიდებული მართვის თავისებურებებზე ან გზის მდგომარეობაზე.<br><br>როცა ჩართულია, წვაზე იმოქმედებას არაერთი გარემოება, მათ შორის თავისებური მართვა, ტვირთის წონა, გორვის წინაღობა და გზის ზედაპირი. აღარ ექნება გავლენა უნარს @@skill_mechanical_title@@."
 
 	key[]: "abs_op_tooltip" # - Gameplay, Advanced
 	val[]: "როცა ჩართულია, ABS აირიდებს დამუხრუჭებისას ბორბლების სრულ გაჩერებას მართვის შესანარჩუნებლად შენელებისას."
@@ -3397,6 +3457,9 @@
 
 	key[]: "cam_horizon_lock_factor_op_tooltip" # - Gameplay, Advanced
 	val[]: "განსაზღვრავს, რამდენად იქანაოს კამერამ მანქანის გამოძრავებისას."
+
+	key[]: "cam_fov_speed_factor_op_tooltip" # - Gameplay, Advanced
+	val[]: "განსაზღვრავს სალონში კამერის ხედვის ცვლილებას მანქანის სიჩქარის შედეგად მოძრაობისას."
 
 	key[]: "cam_auto_center_delay_op_tooltip" # - Gameplay, Advanced
 	val[]: "უთითებს დაყოვნებას კამერის თვითგასწორებამდე.<br><br>ასამოქმედებლად მანქანა უნდა მოძრაობდეს საკმარისი სიჩქარით. იმოქმედებს მხოლოდ შიდა და მიმყოლ კამერაზე წინსვლისას, აგრეთვე ფანჯრიდან გასახედ კამერაზე უკუსვლისას."
@@ -3598,6 +3661,9 @@
 	key[]: "lost_function_binding"
 	val[]: "დაეკარგა დანიშნულება:" #+ Shown when key was rebound to a different function.
 
+	key[]: "unavailable_assignment"
+	val[]: "$INPUT$ ვერ გამოიყენება." #+ Shown when the player presses a key that cannot in input binding.
+
 #!{
 	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
 	val[]: "@@keyboard_ico@@"
@@ -3606,7 +3672,7 @@
 #+ Headers of individual sections
 #@{
 
-	key[]: "truck_controls"
+	key[]: "vehicle_controls"
 	val[]: "VEHICLE"
 
 	key[]: "assistant_controls"
@@ -3716,6 +3782,9 @@
 	val[]: "ძრავას ელექტრობის ჩართვა/გამორთვა"
 
 	key[]: "o_im_parkingbrake"
+	val[]: "ხელის მუხრუჭი"
+
+	key[]: "o_im_handbrake"
 	val[]: "ხელის მუხრუჭი"
 
 	key[]: "o_im_motorbrake"
@@ -3876,6 +3945,9 @@
 
 	key[]: "o_im_infotainment"
 	val[]: "მულტიმედიის რეჟიმები" #+ Action for cycling between infotainement display pages/modes.
+
+	key[]: "o_im_parking_cameras"
+	val[]: "სადგომის კამერის რეჟიმი" #+ Action for toggling parking camera display pages/modes (if available).
 
 	key[]: "o_im_dashboard_map"
 	val[]: "გზამკვლევის მოახლოების რეჟიმები" #+ Action for cycling trough zoom levels in all vehicle navigational devices.
@@ -4131,6 +4203,9 @@
 	key[]: "o_im_parkingbrake_op_tooltip"
 	val[]: "ღილაკი ხელის მუხრუჭისთვის."
 
+	key[]: "o_im_handbrake_op_tooltip"
+	val[]: "ღილაკი ხელის მუხრუჭისთვის."
+
 	key[]: "o_im_motorbrake_op_tooltip"
 	val[]: "ღილაკი ძრავას მუხრუჭისთვის.<br><br>ძრავას მუხრუჭი იმოქმედებს, სანამ გეჭირებათ ღილაკზე."
 
@@ -4253,6 +4328,9 @@
 
 	key[]: "o_im_infotainment_op_tooltip"
 	val[]: "ღილაკი მულტიმედიის ეკრანების ცვლისთვის."
+
+	key[]: "o_im_parking_cameras_op_tooltip"
+	val[]: "ღილაკი სადგომის კამერის გადასართავად ეკრანზე."
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "ღილაკი რუკის მოახლოების ცვლილებისთვის მაჩვენებლების დაფასა თუ მულტიმედიის ეკრანზე."
@@ -4906,22 +4984,22 @@
 	val[]: "შიდა ხახუნის სიდიდე გამოწვეული საჭის მექანიკური ნაწილების მოძრაობით."
 
 	key[]: "force_feedback_engine_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the strength of artificial engine resonance through the steering column.<br><br><color value=@@clr_txt_d@@>Be aware that setting this value over 15% may cause excessive shaking and vibration in some wheels."
+	val[]: "განსაზღვრავს ძრავის ხელოვნურ რხევაზე აყოლის შეგრძნების სიდიდეს საჭის ღერძიდან.<br><br><color value=@@clr_txt_d@@>გაითვალისწინეთ, როცა მნიშვნელობა აჭარბებს 15%-ს, იწვევს მეტისმეტ რყევასა და რხევას ზოგიერთ საჭეზე."
 
 	key[]: "force_feedback_surface_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the strength of road surface effects though the steering column.<br><br><color value=@@clr_txt_d@@>Be aware that setting this value over 20% may cause excessive shaking and vibration in some wheels when driving on uneven terrain at speed."
+	val[]: "განსაზღვრავს გზის ზედაპირის შეგრძნების ძალას საჭის ღერძიდან.<br><br><color value=@@clr_txt_d@@>გაითვალისწინეთ, როცა მნიშვნელობა აჭარბებს 20%-ს, იწვევს მეტისმეტ რყევასა და რხევას ზოგიერთ საჭეზე უწსორწმასწორო გზაზე ჩქარი სიარულისას."
 
 	key[]: "force_feedback_bumps_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the strength of road bump effects through the steering column."
+	val[]: "განსაზღვრავს გზის უსწორმასწორობის შეგრძნების ძალას საჭის ღერძიდან."
 
 	key[]: "force_feedback_collisions_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the strength of collision effects through the steering column."
+	val[]: "განსაზღვრავს შეჯახების შეგრძნების ძალას საჭის ღერძიდან."
 
 	key[]: "force_feedback_gearbox_grind_op_tooltip" # - Controls, Advanced
 	val[]: "ცვლის სიჩქარეთა კოლოფიდან გამოცემული ხრჭიალის დონეს."
 
 	key[]: "force_feedback_understeer_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the intensity of understeer slip effects."
+	val[]: "ცვლის მდორედ მოხვევისას მოცურების შეგრძნების დონეს."
 
 	key[]: "force_feedback_assisted_steering_op_tooltip" # - Controls, Advanced
 	val[]: "Adjusts intensity of assisted steering (when using the lane assistant feature etc.)."
@@ -5275,10 +5353,10 @@
 	val[]: "მონიშეთ გზა გადასასვლელ კარიბჭემდე"
 
 	key[]: "wanna_assistance_portal"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Do you agree?"
+	val[]: "სამაშველო სამსახური გადაგიყვანთ რომელიმე გახსნილ კარიბჭესთან უფასოდ.<br offset=30>თანახმა ხართ?"
 
 	key[]: "wanna_assistance_portal_online"
-	val[]: "Assistance Service can take you and your vehicle to a random portal for free.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "სამაშველო სამსახური გადაგიყვანთ რომელიმე გახსნილ კარიბჭესთან უფასოდ.<br offset=30>მიმდინარე სამუშაო გაუქმდება.<br offset=30>თანახმა ხართ?"
 
 	key[]: "mp_job_quick_travel_other_land"
 	val[]: "ზედმეტად შორს იმყოფებით ტვირთის მომწოდებლისგან, რომელიც სხვა ზღაპრულ მიწაზეა.<br><br>მაინც გსურთ ამ სამუშაოს აღება?"
@@ -5568,31 +5646,31 @@
 	val[]: "Adjusts the detail of reflections seen on vehicle surfaces, windows and other reflective surfaces such as puddles, wet roads and open bodies of water.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance.<br><br>Changes to this setting will take effect only after a manual restart of the game."
 
 	key[]: "veget_detail_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the detail and complexity of plants and trees.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "ხეებისა და მცენარეთა გამოსახულების სიზუსტე და სირთულე.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "grass_detail_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the density of grass seen on the sides of the road.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "გზის გვერდზე ბალახის სიმჭიდროვე.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "shadow_quality_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the quality of shadows cast by the sun or moon.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "ჩრდილის ხარისხი მზისა და მთვარის შუქზე.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "far_shadow_op_tooltip" # - Graphics, Advanced
 	val[]: "Enables shadows to be rendered even from very far objects.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
 
 	key[]: "interior_shadow_op_tooltip" # - Graphics, Advanced
-	val[]: "Enables night-time dynamic shadows in the vehicle interior.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "ცვალებადი ჩრდილები მანქანის სალონში ღამის საათებში.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "weather_quality_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the quality of weather effects, such as reflections."
+	val[]: "ამინდის ხარისხის მითითება, მათ შორის ანარეკლისას."
 
 	key[]: "mirror_quality_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the quality of reflections seen in vehicle mirrors (independent of reflection settings).<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "ანარეკლების ხარისხის მითითება მანქანის სარკეებისთვის (დამოუკიდებლად არეკვლის პარამეტრებისგან).<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "mirror_resolution_op_tooltip" # - Graphics, Advanced
 	val[]: "მანქანის სარკეებში გამოსახულების გარჩევადობის მორგება."
 
 	key[]: "mirror_distance_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the distance at which objects start to render in the mirror.<br><br><color value=@@clr_txt_d@@>This setting often has a large impact on performance."
+	val[]: "დაშორება, რომლიდანაც გამოსახულება ჩნდება სარკეში.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "texture_quality_op_tooltip" # - Graphics, Advanced
 	val[]: "განსაზღვრავს გარკვეული ზედაპირების გამოსახვის ხარისხს საგნებზე თამაშში."
@@ -5610,7 +5688,7 @@
 	val[]: "გზაზე მოძრავი სხვა მანქანებიდან გამოჩნდება დამატებითი მაშუქების ნათება, მათ შორის გაბარიტის, მუხრუჭის და სხვ."
 
 	key[]: "light_ranges_op_tooltip" # - Graphics, Advanced
-	val[]: "Adjusts the distance from which artificial light sources can be seen.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "დაშორება, რომლიდანაც ხილულია სინათლის ხელოვნური წყაროები.<br><br><color value=@@clr_txt_d@@>ჩვეულებრივ, საშუალო გავლენა აქვს წარმადობაზე."
 
 	key[]: "pedestrians_op_tooltip" # - Graphics, Advanced
 	val[]: "დაემატება ფეხით მოსიარულეებს თამაშის სამყაროში"
@@ -6162,7 +6240,7 @@
 	val[]: "Radio station designated to avoid content claims."
 
 	key[]: "stream_safe_hint_modded"
-	val[]: "Community-created radio content marked as stream safe. Not reviewed or guaranteed and may still trigger content claims."
+	val[]: "ერთობის მიერ შექმნილი რადიოსადგურები მონიშნულია უსაფრთხოდ ეთერში გასაშვებად. არაა შემოწმებული და არ არსებობს საწინდარი იმისა,  რომ არ გამოიწვევს საჩივრებს მასალის უფლებებზე."
 
 	key[]: "radio_update"
 	val[]: "სიის განახლება" #+ Button used to update the list of live streams from the web.
@@ -6240,16 +6318,16 @@
 	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_online"
-	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Your current delivery will be cancelled.<br offset=30>Do you agree?"
+	val[]: "სამაშველო სამსახური გთავაზობთ გადაყვანას სახელოსნოში, ქალაქი $CITY$. ეღირება $MONEY$ და დასჭირდება $TIME$.<br offset=30>მიმდინარე სამუშაო გაუქმდება.<br offset=30>თანახმა ხართ?"
 
 	key[]: "wanna_recover"
-	val[]: "სამაშველო სამსახური გთავაზობთ სატვირთოს მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br offset=30>თანახმა ხართ?"
+	val[]: "სამაშველო სამსახური გთავაზობთ მანქანის მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br offset=30>თანახმა ხართ?"
 
 	key[]: "wanna_recover_quick"
-	val[]: "სამაშველო სამსახური გთავაზობთ სატვირთოს მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br>(ხარჯებს დაფარავს დამქირავებელი).<br offset=30>თანახმა ხართ?"
+	val[]: "სამაშველო სამსახური გთავაზობთ მანქანის მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br>(ხარჯებს დაფარავს დამქირავებელი).<br offset=30>თანახმა ხართ?"
 
 	key[]: "wanna_recover_online"
-	val[]: "სამაშველო სამსახური გთავაზობთ სატვირთოს მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br offset=30>მიმდინარე სამუშაო გაუქმდება.<br offset=30>თანახმა ხართ?"
+	val[]: "სამაშველო სამსახური გთავაზობთ მანქანის მიყვანას უახლოეს გზამდე. ეღირება $MONEY$ და დასჭირდება $TIME$.<br offset=30>მიმდინარე სამუშაო გაუქმდება.<br offset=30>თანახმა ხართ?"
 
 	key[]: "wanna_refuel"
 	val[]: "საწვავის საგანგებო მიწოდების მეშვეობით მიიღებთ $VOLUME$ დიზელს. დაგიჯდებათ $MONEY$ და დასჭირდება $TIME$.<br offset=30>თანახმა ხართ?"
@@ -6312,7 +6390,7 @@
 	val[]: "თქვენ ელოდებით საგანგებო დამუხტვის მომსახურებას მანქანისთვის."
 
 	key[]: "cancel_job_fademsg"
-	val[]: " ელოდებით. მალე მოვა მანქანა ტვირთის წასაღებად."
+	val[]: "ელოდებით სხვა მძღოლს, რომელიც გადაიბარებს თქვენს სამუშაოს."
 
 	key[]: "no_job"
 	val[]: "გადაზიდვის სამუშაო არ გაქვთ."
@@ -6382,7 +6460,7 @@
 	val[]: "აღმოჩენილია ავტოსალონი $BRAND$!"
 
 	key[]: "service"
-	val[]: "To repair, upgrade, or paint<br>your vehicle or trailer press:"
+	val[]: "თქვენი მანქანის ან მისაბმელის<br>გასაახლებლად, შესაკეთებლად და მოსახატად დააჭირეთ:"
 
 	key[]: "job_offer"
 	val[]: "სამუშაოს სანახავად დააჭირეთ ღილაკს:"
@@ -6477,8 +6555,8 @@
 	key[]: "stop_engine_short"
 	val[]: "გამორთეთ ძრავა!"
 
-	key[]: "stop_truck_short"
-	val[]: "გააჩერეთ მანქანა!"   #+ Quick message shown when sleep was prevented by truck movement.
+	key[]: "stop_vehicle_short"
+	val[]: "გააჩერეთ მანქანა!"   #+ Quick message shown when sleep was prevented by vehicle movement.
 
 	key[]: "stop_engine"
 	val[]: "ძრავას გასათიშად გამოიყენეთ ღილაკი:"
@@ -6854,33 +6932,33 @@
 
 
 	key[]: "tutorial_hints_settings"
-	val[]: "CONTEXTUAL HINTS" #+ Title of 'Contextual hints' settings section. Please keep in upper case where possible.
+	val[]: "სათანადო მინიშნებები" #+ Title of 'Contextual hints' settings section. Please keep in upper case where possible.
 
 	key[]: "show_tutorial_hints"
-	val[]: "Show contextual hints" #+ Checkbox for enabling/disabling tutorial hints
+	val[]: "სათანადო მინიშნებების ჩვენება" #+ Checkbox for enabling/disabling tutorial hints
 
 	key[]: "reset_tutorial_hints"
 	val[]: "ამომხტომი მინიშნებების ჩამოყრა" #+ Button for resetting tutorial hint progress
 
 	key[]: "show_tutorial_hints_op_tooltip"
-	val[]: "When enabled, helpful tips based on your playstyle will appear." # - Gameplay, Simple
+	val[]: "როცა ჩართულია, გამოჩნდება გამოსადეგი რჩევები თამაშის თავისებურებებიდან გამომდინარე." # - Gameplay, Simple
 
 	key[]: "reset_tutorial_hints_op_tooltip"
-	val[]: "Resetting your contextual hints progress will cause all hints to reappear as they would for a new player." # - Gameplay, Simple
+	val[]: "სათანადო მინიშნებების წინსვლის განულება მინიშნებებს დააბრუნებს დამწყები მოთამაშის შესაფერისზე." # - Gameplay, Simple
 
 
 	key[]: "reset_tutorial_hints_confirm_text"
-	val[]: "Do you want to reset your contextual hints progress?"
+	val[]: "ნამდვილად გსურთ სათანადო მინიშნებების წინსვლის განულება?"
 
 	key[]: "returning_player_prompt_title"
 	val[]: "დაბრუნებული მოთამაშე" #+ Title of the prompt shown to the player when continuing the game after not playing for a long time, asking them if they want tutorial hint progress reset
 
 	key[]: "returning_player_prompt_text"
-	val[]: "It seems you haven't played in a while. Do you want to reset your contextual hints progress, making them appear as they would for a new player?" #+ Text of the prompt shown to the player when continuing the game after not playing for a long time, asking them if they want tutorial hint progress reset
+	val[]: "როგორ ჩანს, საკმაო ხანია, არ გითამაშიათ. გსურთ მინიშნებების განულება, რომ დამწყებთათვის შესაფერისი მინიშნებები გამოჩნდეს?" #+ Text of the prompt shown to the player when continuing the game after not playing for a long time, asking them if they want tutorial hint progress reset
 
 
 	key[]: "photo_mode_word"
-	val[]: "Photo Mode" #+ Photo mode name, with each word capitalized
+	val[]: "ფოტოს რეჟიმი" #+ Photo mode name, with each word capitalized
 
 	key[]: "landmark_word"
 	val[]: "ფოტონადავლი" #+ How we call landmarks/photo sights/photo trophies
@@ -7118,7 +7196,7 @@
 	val[]: "სახიფათო ტვირთი"
 
 	key[]: "skill_adr_info"
-	val[]: "Use your skill points to unlock ADR certificates and transport more types of dangerous goods."
+	val[]: "გამოიყენეთ გამოცდილების ქულები საფრთხილო გადაზიდვების ნებართვების ასაღებად, რომ მეტი სახეობის სახიფათო ტვირთის მიწოდება შეძლოთ."
 
 	key[]: "skill_adr_classt1"
 	val[]: "ფეთქებადი"
@@ -8000,7 +8078,7 @@
 	val[]: "ხეტყე"
 
 	key[]: "cn_low_bed_trailers"
-	val[]: "Low Bed Semi-trailers"
+	val[]: "დაბალი გამავლობის ნახევარმისაბმელი"
 
 	key[]: "cn_lpg"
 	val[]: "თხევადი აირი"
@@ -9265,6 +9343,15 @@
 	key[]: "bank_money"
 	val[]: "თანხა ანგარიშზე: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
+	key[]: "bank_loan_unlock_requirement"
+	val[]: "Advance your career to unlock the loan."
+
+	key[]: "bank_loan_locked_wrong_mode"
+	val[]: "Advance your career in $MODE$ to unlock the loan."
+
+    key[]: "bank_loan_in_debt"
+	val[]: "You have too much debt to take this loan."
+
 #+ New loan confirmation window
 #@{
 
@@ -9444,6 +9531,12 @@
 
 	key[]: "compman_qt_notruck"
 	val[]: "ვერ იმოგზაურებთ, სანამ არ გეყოლებათ სატვირთო, სამგზავრო ან კერძო მანქანა!"
+
+	key[]: "compman_qt_nocar"
+	val[]: "ვერ იმოგზაურებთ, სანამ არ გეყოლებათ მანქანა!"
+
+	key[]: "compman_qt_nobus"
+	val[]: "ვერ იმოგზაურებთ, სანამ არ გეყოლებათ ავტობუსი!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "გსურთ სწრაფი გადასვლა ამ ფარეხში?"
@@ -9812,13 +9905,13 @@
 #+ Message box shown when user requests to sell selected truck.
 #@{
 
-	key[]: "truckman_sell_t"
+	key[]: "vehicleman_sell_t"
 	val[]: "მანქანის გაყიდვა"  #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_reallysell"
+	key[]: "vehicleman_msg_reallysell"
 	val[]: "ნამდვილად გსურთ გაყიდოთ $TRUCK$ $MONEY$-ად?"
 
-	key[]: "truckman_msg_nosell"
+	key[]: "vehicleman_msg_nosell"
 	val[]: "მანქანას ვერ გაყიდით სანამ მუშაობთ! დაასრულეთ სამუშაო და სცადეთ თავიდან."
 
 	key[]: "truckman_total_restoration_t"
@@ -9850,10 +9943,10 @@
 #+ Message box shown when user requests to become driver of selected truck.
 #@{
 
-	key[]: "truckman_change_t"
+	key[]: "vehicleman_change_t"
 	val[]: "მანქანის შეცვლა" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nochange"
+	key[]: "vehicleman_msg_nochange"
 	val[]: "ვიდრე მუშაობთ, მანქანას ვერ შეცვლით! დაასრულეთ სამუშაო და სცადეთ ხელახლა."
 
 	key[]: "truckman_conf_drive"
@@ -9890,7 +9983,7 @@
 	key[]: "truckman_copy_configuration_t"
 	val[]: "წყობის ზუსტი გადატანა" #+ Message box title. Please keep in upper case where possible.
 
-	key[]: "truckman_msg_nouse"
+	key[]: "vehicleman_msg_nouse"
 	val[]: "ამ მანქანიდან წყობის გადმოტანა ვერ მოხერხდება ნაკლული მონაცემების გამო, რასაც ჩვეულებრივ იწვევს დანამატების ან გადმოსაწერი კრებულების მოცილება.<br><br>ხელახლა სცადეთ დანამატის/კრებულის დაყენება."
 #@}
 
@@ -10271,6 +10364,9 @@
 	key[]: "td_msg_first_and_busy"
 	val[]: "მადლობას გიხდით თქვენი პირველი სატვირთოს ჩვენთან შეძენისთვის! <br><br>განათავსებენ თქვენს სამმართველოში, მიმდინარე სამუშაოს დასრულებისთანავე კი შეგეძლებათ მისი წაყვანა."
 
+	key[]: "td_first_truck_switch_mode_city"
+	val[]: "Thank you for buying your first truck from us!<br><br>Do you want to switch to your new truck in <color value=@@clr_sel@@>$CITY$</color>?"
+
 	key[]: "td_msg_bought_assigned"
 	val[]: "მადლობას გიხდით შენაძენისთვის. ისიამოვნეთ ახალი სატვირთოთი!<br><br>ძველს კი გადავიყვანთ თქვენს ფარეხში, ქალაქი $CITY$."
 
@@ -10600,6 +10696,12 @@
 	key[]: "mapl_convoy_member"
 	val[]: "შეკრების მონაწილე"
 
+	key[]: "mapl_company_vehicle"
+	val[]: "Vehicle on quick job"
+
+	key[]: "mapl_my_vehicle"
+	val[]: "Other vehicle location"
+
 	key[]: "mapl_quarry"
 	val[]: "კარიერი"
 
@@ -10612,8 +10714,8 @@
 	key[]: "mapl_undiscovered"
 	val[]: "უცნობი წერტილი"
 
-	key[]: "mapl_viewpoint"
-	val[]: "გადასახედი (მონახულებული)"
+	key[]: "mapl_viewpoint_visited"
+	val[]: "Viewpoint (visited)"
 
 	key[]: "mapl_viewpoint_unvisited"
 	val[]: "გადასახედი (მოუნახულებელი)"
@@ -10723,10 +10825,10 @@
 	val[]: "Made with FMOD Studio by Firelight Technologies Pty Ltd."
 
 	key[]: "credits_speedtree"
-	val[]: "პროგრამა ნაწილობრივ იყენებს ტექნოლოგიას SpeedTree® (©2024, უზრუნველმყოფია Unity Technologies SF). ყველა უფლება დაცულია."
+	val[]: "Portions of this software utilize SpeedTree® technology (©2024 provided by Unity Technologies SF). All rights reserved."
 
 	key[]: "jpeg_credits"
-	val[]: "პროგრამა ეფუძნება იმ საშუალებების ნაწილს, რომლის შემმუშავებელიცაა Independent JPEG Group."
+	val[]: "This software is based in part on the work of the Independent JPEG Group."
 #@}
 
 #+ Truck browser
@@ -12620,10 +12722,10 @@
     val[]: "მანქანის მორგება" #+ Shown bellow keys which will toggle adjuster mode selection.
 
     key[]: "job_detail_word"
-	val[]: "Job Details"
+	val[]: "სამუშაოს შესახებ"
 
 	key[]: "job_detail_word_t"
-	val[]: "JOB DETAILS"
+	val[]: "სამუშაოს შესახებ"
 
 	key[]: "mapping_options_word"
 	val[]: "განლაგების გამართვა"
@@ -12758,6 +12860,9 @@
 	key[]: "desktop_tut_visit_directive"
 	val[]: "იხილეთ $SCREEN_NAME$" #+ The $SCREEN_NAME$ text is a placeholder for different screen names in game and should be left intact
 
+	key[]: "desktop_tut_vehicle_mode"
+	val[]: "რეჟიმების ღილაკი სამუშაო ეკრანის რეჟიმებისა და მანქანის სახეობებს შორის გადასართავად."
+
 	key[]: "desktop_tut_tour_welcome_t"
 	val[]: "მოგესალმებით"
 
@@ -12784,6 +12889,13 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "გმადლობთ, რომ გაეცანით მთავარი ეკრანის განახლებას."
+
+
+	key[]: "desktop_vehicle_mode_reenable_hints_t"
+    val[]: "მინიშნებების ჩართვა"
+
+    key[]: "desktop_vehicle_mode_reenable_hints"
+    val[]: "იწყებთ ახალ თამაშს და მინიშნებები გათიშული გაქვთ. მინიშნებები დაგეხმარებთ შეისწავლოთ თამაში. ხომ არ გსურთ მათი კვლავ ჩართვა?"
 #@}
 
 
@@ -15698,7 +15810,7 @@
 	val[]: "გარე ხელშეკრულება საჭიროებს დამატებით კრებულს: <br><br>" #+ messages shown when resuming online job that requires some unmounted DLCs, it is followed by new line separated names of DLCs
 
 	key[]: "error_unknown_trailer"
-	val[]: "სამუშაოს მონაცემები არ ჩანს. გამოჩნდება, როცა განაგრძობთ მიმდინარე ხელშეკრულებას." #+ Message is shown if an error occured during server synchronization.
+	val[]: "სამუშაოს მონაცემები არ ჩანს. გამოჩნდება, როცა განაგრძობთ მიმდინარე ხელშეკრულებას." #+ Message is shown if an error occurred during server synchronization.
 
 	key[]: "error_no_own_trailer_attached"
 	val[]: "სამუშაო საჭიროებს საკუთარ მისაბმელს. ამჟამად, თქვენ არ გაგაჩნიათ ასეთი მისაბმელი." #+ Message shown when player tries to continue external market job however they have no compatible trailer attached.
@@ -15757,6 +15869,9 @@
 	key[]: "select_quick_travel_destination_economy_reset"
 	val[]: "გამოვლენილია ცვლილება თამაშში. გთხოვთ, მიუთითოთ სწრაფი გადასვლის წერტილი:" #+ Shown during economy reset quick travel.
 
+	key[]: "select_quick_travel_destination_economy_reset_truck"
+	val[]: "Game change detected. Please select quick travel destination for your truck:" #+ Shown during economy reset quick travel for truck.
+
 	key[]: "confirm_quick_travel"
 	val[]: "სწრაფი გადასვლის დამოწმება"
 
@@ -15775,17 +15890,17 @@
 	key[]: "quick_travel_cond_fix_cables"
 	val[]: "თქვენი სატვირთო გაუმართავია სწრაფი მგზავრობისთვის. შეაკეთეთ მისაბმელის სადენები."
 
-	key[]: "quick_travel_cond_repair_truck"
-	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for an assistance."
+	key[]: "quick_travel_cond_repair_vehicle"
+	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for assistance."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "თქვენი მისაბმელი გაუმართავია სწრაფი მგზავრობისთვის. ეწვიეთ სახელოსნოს ან გამოიძახეთ სამაშველო."
 
-	key[]: "quick_travel_cond_truck_fuel"
-	val[]: "Your vehicle is not in a condition for quick travel. Refuel your vehicle or call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fuel"
+	val[]: "თქვენი მანქანა გაუმართავია სწრაფი მგზავრობისთვის. შეავსეთ საწვავი ან გამოიძახეთ სამაშველო."
 
-	key[]: "quick_travel_cond_truck_fallen"
-	val[]: "Your vehicle is not in a condition for quick travel. Call for an assistance."
+	key[]: "quick_travel_cond_vehicle_fallen"
+	val[]: "Your vehicle is not in a condition for quick travel. Call for assistance."
 
 	key[]: "quick_travel_cond_trailer_fallen"
 	val[]: "თქვენი მისაბმელი გაუმართავია სწრაფი მგზავრობისთვის. გამოიძახეთ სამაშველო."
@@ -15903,19 +16018,19 @@
 #+ Job cancellation
 #@{
 	key[]: "drive_active_job_t"
-	val[]: "JOB IN PROGRESS"
+	val[]: "სამუშაო აღებულია"
 
 	key[]: "drive_active_job"
-	val[]: "You have an active job in another mode.<br offset=10>You can abandon it or show detail in $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
+	val[]: "სამუშაო გაქვთ აღებული სხვა რეჟიმში.<br offset=10>შეგიძლიათ მიატოვოთ ან იხილოთ ვრცლად $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
 
 	key[]: "drive_active_job_yes"
 	val[]: "@@abort_job@@"
 
 	key[]: "drive_active_job_no"
-	val[]: "Switch Mode"
+	val[]: "რეჟიმების გადართვა"
 
 	key[]: "cancel_cur_job_warning"
-	val[]: "You will have to pay a penalty fee of $MONEY$ in the case of abandoning the job."
+	val[]: "მოგიწევთ ჯარიმის სახით გადაიხადოთ $MONEY$ სამუშაოს მიტოვების შემთხვევაში."
 #@}
 
 #+ Trailer coupling phases info messages, shown in route advisor during coupling/decoupling.
@@ -15973,8 +16088,8 @@
 	key[]: "no_accessory_found"
 	val[]: "მითითებული მონაცემებით არაფერი მოიძებნა" #+ Text shown when there are no accessories found by filters.
 
-	key[]: "no_truck_found"
-	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no trucks found by filters.
+	key[]: "no_vehicle_found"
+	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no vehicles found by filters.
 #@}
 
 #+ Strings related to job filtering feature
@@ -16715,6 +16830,9 @@
 	key[]: "garage_upgrade_locked_tooltip"
 	val[]: "ფარეხი სრულად გაუმჯობესდა." #+ Tooltip shown when player hovers over upgrade button.
 
+	key[]: "garage_upgrade_locked_vehicle_tooltip"
+	val[]: "You cannot upgrade the garage, because your owned vehicle is too close to the garage." #+ Tooltip shown when garage cannot be upgraded due to player's vehicles being too close to upgraded garage.
+
 	key[]: "driverman_stats_trailer"
 	val[]: "მიმდინარე მისაბმელი:" #+ Title of the current trailer statistics.
 
@@ -16760,7 +16878,7 @@
 	key[]: "link_locked_msg_trailer_upgrades"
 	val[]: "მისაბმელის გაუმჯობესების შესაძლებლობები, ამჟამად არაა."
 
-	key[]: "link_locked_msg_truck_diag"
+	key[]: "link_locked_msg_vehicle_diag"
 	val[]: "To access the Diagnostics you must have a vehicle assigned first."
 
 	key[]: "link_locked_msg_truck_dealer_map"
@@ -17357,7 +17475,7 @@
 	val[]: "დაერთ. ორმაგი, 3 ღერძი, მართვადი"	#+ Component chassis name (upgrade screen only)
 
 	key[]: "tn_dolly"
-	val[]: "Dolly"	#+ Component chassis name (upgrade screen only)
+	val[]: "შუალედური ურიკა"	#+ Component chassis name (upgrade screen only)
 
 	key[]: "tn_dolly_2axle"
 	val[]: "შუალედური ურიკა, 2 ღერძი"	#+ Component chassis name (upgrade screen only)
@@ -17434,11 +17552,17 @@
 	key[]: "bs_insulated_side"
 	val[]: "თბოგაუმტარი, გვერდითი კარებით"
 
-	key[]: "bs_livestock"
-	val[]: "პირუტყვის საზიდი"
+	key[]: "bs_livestock_painted"
+	val[]: "პირუტყვის საზიდი, შეღებილი"
 
-	key[]: "bs_livestock_belly"
-	val[]: "პირუტყვის საზიდი დაბალძირიანი"
+	key[]: "bs_livestock_steel"
+	val[]: "პირუტყვის საზიდი, ფოლადის"
+
+	key[]: "bs_livestock_belly_painted"
+	val[]: "პირუტყვის საზიდი, დაბალი, შეღებილი"
+
+	key[]: "bs_livestock_belly_steel"
+	val[]: "პირუტყვის საზიდი, დაბალი, ფოლადის"
 
 	key[]: "bs_log_steel"
 	val[]: "ხეტყის მზიდი ფოლადის იატაკით"
@@ -17465,14 +17589,14 @@
 	val[]: "სამაცივრე, გვერდითი კარებით"
 
 	key[]: "bs_silo"
-	val[]: "Silo"
+	val[]: "ფხვიერი ტვირთის"
 
 #@}
 
 #+ Series names for translation
 #@{
 	key[]: "series_schwarzmuller_food_cistern"
-	val[]: "Food Tank"
+	val[]: "საკვების ავზი"
 
 	key[]: "series_schwarzmuller_lowloader"
 	val[]: "დაბალძირიანი"
@@ -18020,6 +18144,12 @@
 
 	key[]: "mp_pause_game_hint"
 	val[]: "ისრით მართვიდან გამოსვლა" #+ Shown bellow keys which (un)pause the game.
+
+	key[]: "mp_no_vehicle"
+	val[]: "No vehicle"
+
+	key[]: "mp_job_status_truck"
+	val[]: "Truck"
 #@}
 
 #+ Multiplayer System chat messages.
@@ -18098,7 +18228,7 @@
 	key[]: "mp_job_wrong_cargo"
 	val[]: "არ გაქვთ შესაბამისი მისაბმელი აღებული მოცემული ტვირთისთვის."
 
-	key[]: "mp_job_missing_truck"
+	key[]: "mp_job_missing_vehicle"
 	val[]: "Can be only taken with your own vehicle."
 
 	key[]: "mp_job_missing_trailer"
@@ -18702,7 +18832,7 @@
 	key[]: "mp_warning_close_to_conflicted_company_teleport"
 	val[]: "საწყობი თქვენი სატვირთოსა თუ მისაბმელის გვერდით უნდა ამოქმედდეს ამ შეკრებაზე მიერთებისას.<br>ხარვეზების ასარიდებლად გთხოვთ, საწყობისგან მოშორებით გადაიტანოთ თქვენი სატვირთო და მისაბმელი, თორემ მიმდინარე სამუშაო გაუქმდება და მანქანა გადავა უახლოეს სახელოსნოში.<br><br>გსურთ, განაგრძოთ?"
 
-	key[]: "mp_warning_truck_before_quick_job_close_cancel_teleport"
+	key[]: "mp_warning_vehicle_close_cancel_teleport"
 	val[]: "საწყობი თქვენ მიერ სწრაფი სამუშაოს მიღებამდე დატოვებული სატვირთოსა თუ მისაბმელის გვერდით უნდა ამოქმედდეს ამ შეკრებაზე მიერთებისას.<br>სატვირთოში დაბრუნებისას ხარვეზების ასარიდებლად საჭიროა სწრაფი სამუშაოს გაუქმება და მანქანის გადაყვანა უახლოეს სახელოსნოში.<br><br>გსურთ, განაგრძოთ?"
 
 	key[]: "mp_warning_company_with_selected_job_sleeping"
@@ -18919,13 +19049,13 @@
 	key[]: "job_equipment"
 	val[]: "სამუშაოს აღჭურვილობა:"
 
-	key[]: "equipment_provided_truck_and_trailer"
+	key[]: "equipment_provided_vehicle_and_trailer"
 	val[]: "მოწოდებული სატვირთო და მისაბმელი"
 
-	key[]: "equipment_owned_truck_provided_trailer"
+	key[]: "equipment_owned_vehicle_provided_trailer"
 	val[]: "საკუთარი სატვირთო"
 
-	key[]: "equipment_owned_truck_and_trailer"
+	key[]: "equipment_owned_vehicle_and_trailer"
 	val[]: "საკუთარი სატვირთო და მისაბმელი"
 
 	key[]: "mp_job_quick_travel_message"
@@ -19264,7 +19394,7 @@
 #+ Multiplayer gameplay options.
 #@{
 	key[]: "convoy_settings"
-	val[]: "CONVOY" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
+	val[]: "შეკრებები" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
 
 	key[]: "chat_with_activate"
 	val[]: "სასაუბროს გახსნა მოქმედების ღილაკით"
@@ -19682,7 +19812,7 @@
 	val[]: "სამუშაოები"
 
 	key[]: "overlay_camera_rotate"
-	val[]: "Rotate"
+	val[]: "მობრუნება"
 
 	key[]: "overlay_camera_pan"
 	val[]: "გადაადგილება"
@@ -19694,7 +19824,7 @@
 	val[]: "სიარული"
 
 	key[]: "overlay_camera_zoom"
-	val[]: "Zoom"
+	val[]: "მიახლოება"
 
 	key[]: "overlay_camera_switch"
 	val[]: "კამერის გადართვა"
@@ -19709,7 +19839,7 @@
 	val[]: "მორთულობის მოცილება"
 
 	key[]: "overlay_camera_crouch"
-	val[]: "Crouch"
+	val[]: "ჩაკუზვა"
 #@}
 
 #+ Supported controller names.
@@ -20006,7 +20136,7 @@
 	val[]: "მონახულებული"
 
 	key[]: "career_progress_stats_explore_gallery"
-	val[]: "Gallery"
+	val[]: "გალერეა"
 
 	key[]: "career_progress_stats_explored_map"
 	val[]: "დათვალიერებული გზა"
@@ -20020,10 +20150,10 @@
 	key[]: "career_progress_stats_discovered_countries_count"
 	val[]: "მონახულებული ქვეყანა"
 
-	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots a cargo was delivered from or to and number of all depots.
+	key[]: "career_progress_stats_company_instances_used_count" #+ Number of depots cargo was delivered from or to and number of all depots.
 	val[]: "გამოყენებული საწყობი"
 
-	key[]: "career_progress_stats_companies_used_count" #+ Number of companies a cargo was delivered from or to and number of all companies.
+	key[]: "career_progress_stats_companies_used_count" #+ Number of companies cargo was delivered from or to and number of all companies.
 	val[]: "მომსახურებული კომპანია"
 
 	key[]: "career_progress_stats_truck_dealer_discovered_count"
@@ -20237,6 +20367,36 @@
 	val[]: "დატოვება"
 #@}
 
+#+ Vehicle mode switch
+#@{
+	key[]: "vehicle_mode"
+	val[]: "Mode"
+
+	key[]: "truck_mode"
+	val[]: "Truck Mode"
+
+	key[]: "truck_mode_help"
+	val[]: "Take on different jobs with a truck"
+
+	key[]: "bus_mode"
+	val[]: "Coach Mode"
+
+	key[]: "bus_mode_help"
+	val[]: "Experience another mode as a coach driver"
+
+	key[]: "bus_mode_locked_tooltip"
+	val[]: "To access Coach Mode you must finish your first job"
+
+	key[]: "car_mode"
+	val[]: "Car Mode"
+
+	key[]: "car_mode_help"
+	val[]: "Take on different jobs and explore the world with a car"
+
+	key[]: "car_mode_locked_tooltip"
+	val[]: "To access Car Mode you must finish your first job"
+#@}
+
 #+ Menu upper bar
 #@{
 	key[]: "burger_menu_header"
@@ -20333,10 +20493,10 @@
 #+ Intro Scene. Only translate into officially supported languages.
 #@{
 	key[]: "health_warning"
-	val[]: "გაფრთხილება ჯანმრთელობისთვის"
+	val[]: "Health warning"
 
 	key[]: "health_warning_description"
-	val[]: "ზოგიერთ მომხმარებელს შეიძლება აწუხებდეს გულყრა ან გონების დაკარგვა შუქის ციმციმისას თუ სხვა სახის ნათებისას. აღნიშნულ პირებს შესაძლოა, შეტევა დაეწყოთ გარკვეული კადრის ხილვისას ან თამაშის დროს. თუ თქვენს ოჯახში ვინმეს ოდესმე მაინც ჰქონია მსგავსი ჩვენება გულყრასთან დაკავშირებით (კრუნჩხვითი შეტევით ან გულის წასვლით) მოციმციმე შუქისას, გთხოვთ რჩევისთვის მიმართოთ შესაბამის ექიმს და მიიღოთ ყველა საჭირო სიფრთხილის ზომა თამაშის დაწყებამდე.<br offset=20>თუ თქვენ ან თქვენს შვილს თამაშისას აღმოაჩნდა ამგვარი ნიშნებიდან რომელიმე: თავბრუსხვევა, მხედველობის დაბინდვა, თვალის ან კუნთების თრთოლვა,  გონების დაკარგვა, დაბნეულობა, უნებლიე მოძრაობები, დაუყოვნებლივ შეწყვიტეთ ვიდეოთამაშის გამოყენება და მიმართეთ სათანადო გამოცდილების მქონე ექიმს."
+	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
 
 	key[]: "trademark"
 	val[]: "All brand names, trademarks, registered marks, logos, and symbols on vehicles in the game are property of their rightful owners. Used with kind permission. The MAN® trademarks and designs are registered rights of MAN Truck & Bus AG and are used under license to SCS Software s.r.o. \"Mercedes-Benz\" and \"Three pointed star in a ring\" are trademarks of Daimler AG and used under license by SCS Software s.r.o. The RENAULT trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license. The VOLVO trademarks and designs are registered rights of or licensed to the AB Volvo Group and are used pursuant to a license."
@@ -20385,7 +20545,7 @@
 	key[]: "time_skip_hours"
 	val[]: "Number of hours to skip"
 
-	
+
 	key[]: "time_skip_current_time"
 	val[]: "Current time"
 
@@ -20436,7 +20596,7 @@
 	key[]: "time_skip_rest_full"
 	val[]: "Fully rested"
 
-	
+
 	key[]: "time_skip_tooltip_mandatory_break_not_met"
 	val[]: "This rest won’t meet the mandatory break requirements. You will have $LEFT_TIME$ left until the next mandatory break."
 
@@ -20445,18 +20605,18 @@
 
 	key[]: "time_skip_tooltip_mandatory_break_cont"
 	val[]: "For every <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours of driving, you must take a mandatory break for at least <color value=@@clr_sel@@>$BREAK_TIME$</color> hours to avoid getting fined."
-	
+
 
 	key[]: "time_skip_tooltip_job_on_time"
 	val[]: "After the rest and the estimated drive time to the destination, you will have <color value=@@clr_sel@@>$LEFT_TIME$</color> remaining on the job."
-	
+
 	key[]: "time_skip_tooltip_job_late"
 	val[]: "After the rest and the estimated drive time to the destination, the delivery will be late by <color value=@@clr_red@@>$LEFT_TIME$</color>."
 
 	key[]: "time_skip_max_sleep_reached"
 	val[]: "<color value=@@clr_red@@>You will be fully rested</color>"
 
-# shown in job detail widget and pause screen	
+# shown in job detail widget and pause screen
 	key[]: "job_eta"
 	val[]: "Estimated Arrival"
 
@@ -20490,7 +20650,7 @@
 
 	key[]: "rest_state_simulation"
 	val[]: "Rest State simulation"
-	
+
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "When enabled, you will experience the effects of fatigue over time.<br><br>You will need to rest to recover."
 #@}

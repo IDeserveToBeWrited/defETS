@@ -2,10 +2,10 @@ SiiNunit
 {
 accessory_trailer_body_data : lowloader.schwmuller.lowloader.body
 {
-	name: "@@body_low_loader@@"
+	name: "@@series_schwarzmuller_lowloader@@"
 	price: 20000
 	unlock: 0
-	icon: "body/schwmuller/lowloader"
+	icon: "trailer_owned/schwmuller_lowloader/body/body"
 	part_type: factory
 
 	size: (2.55, 3.07, 9.23)	# width, height, length (internal size of the body)
@@ -28,15 +28,15 @@ accessory_trailer_body_data : lowloader.schwmuller.lowloader.body
 	cargo_loading_methods[]: area
 	cargo_loading_methods[]: custom
 
-	cargo_areas[]: (2.5, 8.26)
-	cargo_areas[]: (2.5, 2.77)
+	cargo_areas[]: (2.5, 8.0)
+	cargo_areas[]: (2.5, 2.65)
 
 	cargo_custom_loads_path: "/def/vehicle/cargo_custom_loads/schwmuller_lowloader/short"
 
 	cargo_regular_width: 2.5
 
 	cargo_warning_signs: true
-
+	
 	cargo_lashing_mounts[]: .lashm0
 	cargo_lashing_mounts[]: .lashm1
 	cargo_lashing_mounts[]: .lashm2
@@ -45,20 +45,31 @@ accessory_trailer_body_data : lowloader.schwmuller.lowloader.body
 	cargo_lashing_mounts[]: .lashm5
 	cargo_lashing_mounts[]: .lashm6
 	cargo_lashing_mounts[]: .lashm7
+	cargo_lashing_mounts[]: .lashm8
+	cargo_lashing_mounts[]: .lashm9
+	cargo_lashing_mounts[]: .lashm10
+	cargo_lashing_mounts[]: .lashm11
+	cargo_lashing_mounts[]: .lashm12
+	cargo_lashing_mounts[]: .lashm13
+	cargo_lashing_mounts[]: .lashm14
+	cargo_lashing_mounts[]: .lashm15
+	cargo_lashing_mounts[]: .lashm16
+	cargo_lashing_mounts[]: .lashm17
 
 @include "/def/vehicle/lashing_gear.sui"
 }
 
 #xxxxxxxxxx left side
-
 cargo_lashing_mount : .lashm0
 {
-	spacing: 2.2
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_6.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_6.pmd"
 }
 cargo_lashing_mount : .lashm1
 {
 
-	spacing: 1.2
+	spacing: 0.82
 	hook_angle_constraints: (25, 90, 10)
 	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
 	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
@@ -66,7 +77,7 @@ cargo_lashing_mount : .lashm1
 cargo_lashing_mount : .lashm2
 {
 
-	spacing: 1.2
+	spacing: 1.069
 	hook_angle_constraints: (25, 90, 10)
 	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
 	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
@@ -74,41 +85,113 @@ cargo_lashing_mount : .lashm2
 cargo_lashing_mount : .lashm3
 {
 
-	spacing: 0.6
+	spacing: 1.31
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
+}
+cargo_lashing_mount : .lashm4
+{
+	spacing: 1.0
 	hook_angle_constraints: (25, 90, 10)
 	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
 	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
 }
 
-#xxxxxxxxxx right side
+#xxxxxxxxxxxxxxxx right side
 
-cargo_lashing_mount : .lashm4
-{
-	spacing: 2.2
-}
 cargo_lashing_mount : .lashm5
 {
-
-	spacing: 1.2
+	spacing: 0.82
 	hook_angle_constraints: (25, 90, 10)
-	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_2.pmd"
-	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_2.pmd"
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
 }
 cargo_lashing_mount : .lashm6
 {
-
-	spacing: 1.2
+	spacing: 1.069
 	hook_angle_constraints: (25, 90, 10)
-	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_2.pmd"
-	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_2.pmd"
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
 }
 cargo_lashing_mount : .lashm7
 {
-
-	spacing: 0.6
+	spacing: 1.31
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_1.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_1.pmd"
+}
+cargo_lashing_mount : .lashm8
+{
+	spacing: 1.0
 	hook_angle_constraints: (25, 90, 10)
 	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_2.pmd"
 	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_2.pmd"
 }
+
+#xxxxxxxxxxxxxxxx platform
+
+cargo_lashing_mount : .lashm9
+{
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_2.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_2.pmd"
+}
+cargo_lashing_mount : .lashm10
+{
+	spacing: 1
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_2.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_2.pmd"
+}
+cargo_lashing_mount : .lashm11
+{
+	spacing: 0.84
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_3.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_3.pmd"
+}
+cargo_lashing_mount : .lashm12
+{
+	spacing: 0.84
+	hook_angle_constraints: (25, 90, 10)
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_3.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_3.pmd"
+}
+
+#xxxxxxxxxxxxxxxx center
+
+cargo_lashing_mount : .lashm13
+{
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_4.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_4.pmd"
+}
+cargo_lashing_mount : .lashm14
+{
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_4.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_4.pmd"
+}
+cargo_lashing_mount : .lashm15
+{
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_5.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_5.pmd"
+}
+cargo_lashing_mount : .lashm16
+{
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_5.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_5.pmd"
+}
+cargo_lashing_mount : .lashm17
+{
+	spacing: 1.0
+	open_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_open_6.pmd"
+	closed_model: "/vehicle/trailer_owned/schwmuller_lowloader/body/ring_close_6.pmd"
+}
+
 @include "/def/vehicle/lashing_gear_data.sui"
 }
