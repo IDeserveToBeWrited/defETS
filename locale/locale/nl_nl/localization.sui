@@ -22,6 +22,9 @@
 
 	key[]: "tos_url"
 	val[]: "https://www.worldoftrucks.com/terms"
+
+	key[]: "privacy_readonly_url"
+	val[]: "https://eurotrucksimulator2.com/privacy_readonly.php"
 #!}
 
 #+ Map names
@@ -111,10 +114,10 @@
 	val[]: "Spuitwerk" #+ Header of list containing all paint jobs.
 
 	key[]: "brand_t"
-	val[]: "VRACHTWAGENONTWERP"
+	val[]: "VOERTUIG ONTWERP"
 
 	key[]: "brand"
-	val[]: "Vrachtwagenontwerp"
+	val[]: "Voertuig Ontwerp"
 
 	key[]: "basket_t"
 	val[]: "BESTELLING" #+ Content of the basket.
@@ -122,16 +125,16 @@
 #+ Truck analysis feature - truck konfigurator and pop-up
 
 	key[]: "truck_analysis_t"
-	val[]: "VRACHTWAGENANALYSE" #+ Header of the widget in truck configurator
+	val[]: "VOERTUIG ANALYSE" #+ Header of the widget in truck configurator
 
 	key[]: "truck_analysis_popup_t"
-	val[]: "Vrachtwagenanalyse" #+ Header of the pop-up when taking heavy cargo
+	val[]: "VOERTUIG ANALYSE" #+ Header of the pop-up when taking heavy cargo
 
 	key[]: "current_truck_params"
-	val[]: "Vrachtwagenconfiguratie" #+ Header inside the truck analysis widget for truck parameters
+	val[]: "Voertuigconfiguratie" #+ Header inside the truck analysis widget for truck parameters
 
 	key[]: "current_truck_parameters"
-	val[]: "Vrachtwagenconfiguratie" #+ Header inside the truck analysis pop-up for truck parameters
+	val[]: "Voertuigconfiguratie" #+ Header inside the truck analysis pop-up for truck parameters
 
 	key[]: "normal_cargo"
 	val[]: "Normale vracht" #+ name of the bar for normal cargo suitability
@@ -188,7 +191,7 @@
 	val[]: "Je staat op het punt om een zware transportlading te vervoeren. Controleer of je huidige vrachtwagenconfiguratie deze taak aankan." #+  Description in the truck analysis pop-up window when taking heavy cargo job
 
 	key[]: "truck_analysis_info_tooltip"
-	val[]: "Pas jouw truck aan voor de vrachten die je ermee wilt gaan afleveren. Kies dan uit de beste combinatie van economisch rijden, technische en wettelijk toegestane limieten." #+  General tooltip description of Truck Analysis feature
+	val[]: "Given your expected typical type of transportation, tune your vehicle to optimize it according to a combination of economy of driving, technical and legal limitations." #+  General tooltip description of Truck Analysis feature
 
 	key[]: "normal_cargo_tooltip"
 	val[]: "Geoptimaliseerd voor lichte en middelzware vrachten" #+  Tooltip description for the Normal Cargo bar in Truck Analysis
@@ -197,7 +200,7 @@
 	val[]: "Geoptimaliseerd voor zwaar en uitzonderlijk transport" #+  Tooltip description for the Heavy Cargo bar in Truck Analysis
 
 	key[]: "maneuverability_tooltip"
-	val[]: "De mogelijkheid om jouw truck te manoeuvreren in kleine ruimtes" #+  Tooltip description for the Maneuverability bar in Truck Analysis
+	val[]: "De mogelijkheid van jouw truck om te manoeuvreren in krappe ruimtes" #+  Tooltip description for the Maneuverability bar in Truck Analysis
 
 	key[]: "hill_climbing_tooltip"
 	val[]: "Optimalisatie van de aandrijflijn om soepeler over heuvels te gaan" #+  Tooltip description for the Hill Traversal bar in Truck Analysis
@@ -259,7 +262,7 @@
 
 
 	key[]: "truck_action_t"
-	val[]: "VRACHTWAGENSERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
+	val[]: "VEHICLE SERVICE" #+ Title of window providing selection between various kinds of truck services (repairs, upgrades, paint shop). Please keep in upper case where possible.
 
 #+ Truck service screen.
 #+
@@ -285,7 +288,7 @@
 	val[]: "Vervang alles" #+ Label of checkbox that sets all vehicle accessories to be replaced.
 
 	key[]: "truck_service_truck_t"
-	val[]: "TRUCKSCHADERAPPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
+	val[]: "VOERTUIG SCHADERAPPORT" #+ Header of section displaying status of individual components of the truck. Please keep in upper case where possible.
 
 	key[]: "truck_service_trailer_t"
 	val[]: "TRAILERSCHADERAPPORT" #+ Header of section displaying status of individual components of the trailer. Please keep in upper case where possible.
@@ -294,7 +297,7 @@
 	val[]: "Bevestigen" #+ Button which confirms selected actions.
 
 	key[]: "truck_damage"
-	val[]: "Vrachtwagenschade" #+ Price for the truck damage
+	val[]: "Voertuig schade" #+ Price for the truck damage
 #@}
 
 #+ Truck upgrade/configuration screen.
@@ -303,13 +306,13 @@
 #@{
 
 	key[]: "truck_config_t"
-	val[]: "VRACHTWAGENCONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "VOERTUIG CONFIGURATOR" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "truck_config"
-	val[]: "Vrachtwagen- configurator" #+ Icon allowing player to upgrade the truck.
+	val[]: "Voertuig Configurator" #+ Icon allowing player to upgrade the truck.
 
 	key[]: "truck_config_about"
-	val[]: "Er is altijd wel iets dat je kan aanpassen aan je truck om je er nog beter in te voelen." #+ Help message associated with upgrade icon.
+	val[]: "Er is wel altijd iets dat je kan aanpassen aan je truck om je er nog beter in te voelen." #+ Help message associated with upgrade icon.
 
 	key[]: "price"
 	val[]: "Prijs" #+ Label of line with combined price of all new parts in basket.
@@ -775,6 +778,9 @@
 	key[]: "r_wheel"
 	val[]: "Achterwielen"
 
+	key[]: "rear_window"
+	val[]: "Achterruit"
+
 	key[]: "rim"
 	val[]: "Velg" #+ Wheel rim (older part name)
 
@@ -1075,10 +1081,10 @@
 #@{
 
 	key[]: "no_drive_t"
-	val[]: "GEEN VRACHTWAGEN" #+ Message box title. Please keep in upper case where possible.
+	val[]: "GEEN VOERTUIG" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "no_drive"
-	val[]: "Je kan niet vrij door de wereld reizen omdat je geen vrachtwagen hebt om mee te rijden! Je zou er een kunnen kopen of er eentje uit je wagenpark kunnen nemen.<br><br>Wil je nu een snelle opdracht aannemen?"
+	val[]: "Je kunt niet vrij rijden in de wereld omdat je geen voertuig hebt! Je moet er één kopen of er eentje nemen uit je wagenpark<br><br>Wil je nu een snelle vracht doen?"
 #@}
 
 #+ Game load window
@@ -1649,7 +1655,7 @@
 	val[]: "Een nieuwe blog is beschikbaar online!" #+ Fallback news text content in case of fetch errors
 
 	key[]: "no_truck_dlc"
-	val[]: "Geen trucks gevonden! Gelieve op z'n minst één truck DLC te activeren, en het spel te herstarten." #+ Text shown when there is no truck available.
+	val[]: "Geen voertuigen gevonden! Gelieve op z'n minst één voertuig DLC te activeren, en het spel te herstarten." #+ Text shown when there is no truck available.
 
 	key[]: "extras"
 	val[]: "Extra's"
@@ -2240,7 +2246,7 @@
 	val[]: "Gebruik je een extra controller zoals een gamepad, joystick of stuur? In dit menu kun je deze controllers instellen."
 
 	key[]: "help_bcg_theme"
-	val[]: "Benadruk jouw truck met een gepersonaliseerde bureaublad achtergrond. Kies degene die bij jouw stijl past!"
+	val[]: "Benadruk jouw voertuig met een gepersonaliseerde bureaublad achtergrond. Kies degene die bij jouw stijl past!"
 
 #@}
 
@@ -2344,7 +2350,7 @@
 	val[]: "INTERFACE" #+ Title of the 'Interface' section. Please keep in upper case where possible.
 
 	key[]: "truck_sound_settings_t"
-	val[]: "TRUCK GELUIDEN" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
+	val[]: "VOERTUIG GELUIDEN" #+ Title of the 'Truck Sounds' section. Please keep in upper case where possible.
 
 	key[]: "interior_sound_settings_t"
 	val[]: "INTERIEUR GELUIDEN" #+ Title of the 'Interior Sounds' section. Please keep in upper case where possible.
@@ -2356,19 +2362,19 @@
 	val[]: "Hoofdvolume" #+ Slider controlling master volume.
 
 	key[]: "truck_engine_volume"
-	val[]: "Truck motorvolume" #+ Slider controlling volume of the truck engine.
+	val[]: "Voertuig motor geluid" #+ Slider controlling volume of the truck engine.
 
 	key[]: "truck_exhaust_volume"
-	val[]: "Truck uitlaatvolume" #+ Slider controlling volume of the truck exhaust.
+	val[]: "Voertuig uitlaat geluid" #+ Slider controlling volume of the truck exhaust.
 
 	key[]: "truck_turbo_volume"
-	val[]: "Truck turbovolume" #+ Slider controlling volume of the truck turbo.
+	val[]: "Voertuig turbo geluid" #+ Slider controlling volume of the truck turbo.
 
 	key[]: "truck_effects_volume"
-	val[]: "Truck effectvolume" #+ Slider controlling volume of the truck effects.
+	val[]: "Voertuig effects volume" #+ Slider controlling volume of the truck effects.
 
 	key[]: "truck_noise_volume"
-	val[]: "Truck ruisvolume" #+ Slider controlling volume of the truck noises.
+	val[]: "Voertuig geluidsvolume" #+ Slider controlling volume of the truck noises.
 
 	key[]: "trailer_noise_volume"
 	val[]: "Trailer ruisvolume" #+ Slider controlling volume of the trailer noises.
@@ -2511,19 +2517,19 @@
 	val[]: "Past het algehele volume van het spel aan."
 
 	key[]: "truck_engine_volume_op_tooltip" # - Audio, Simple
-	val[]: "Past het volume van de vrachtwagenmotor aan."
+	val[]: "Past het volume van de motor aan."
 
 	key[]: "truck_exhaust_volume_op_tooltip" # - Audio, Simple
-	val[]: "Past het volume van de vrachtwagenuitlaat aan."
+	val[]: "Past het volume van de uitlaat aan."
 
 	key[]: "truck_turbo_volume_op_tooltip" # - Audio, Simple
-	val[]: "Past het volume van de vrachtwagenturbo aan."
+	val[]: "Past het volume van de turbo aan."
 
 	key[]: "truck_effects_volume_op_tooltip" # - Audio, Simple
-	val[]: "Past het volume van andere geluidseffecten van de vrachtwagen aan, zoals het gesis van de luchtremmen."
+	val[]: "Past het volume van andere geluidseffecten aan, zoals het gesis van de luchtremmen."
 
 	key[]: "truck_noise_volume_op_tooltip" # - Audio, Simple
-	val[]: "Past het volume van het bandengeruis van de vrachtwagen aan."
+	val[]: "Past het volume van het bandengeruis aan."
 
 	key[]: "trailer_noise_volume_op_tooltip" # - Audio, Simple
 	val[]: "Past het volume van het bandengeruis van de oplegger aan."
@@ -2598,13 +2604,13 @@
 	val[]: "Schakelt het geluid in van de ribbelstroken."
 
 	key[]: "noise_window_op_tooltip" # - Audio, Advanced
-	val[]: "Enables additional noise of the air flowing through the windows when the truck's windows are open.<br><br><color value=@@clr_txt_d@@>Requires \"Noise of the flowing air\" enabled to function."
+	val[]: "Schakelt het extra geluid in van instromende lucht door de ramen wanneer deze geopend zijn. De optie <br><br><color value=@@clr_txt_d@@>\"Geruis bij geopende ramen\" moet ook geactiveerd zijn."
 
 	key[]: "noise_aero_op_tooltip" # - Audio, Advanced
 	val[]: "Schakelt het geluid in dat wordt veroorzaakt door turbulente windstromingen langs de cabine."
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
-	val[]: "Zorgt voor het nagalmeffect in de cabine."
+	val[]: "Enables reverb effect of your vehicle's cabin."
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "Schakelt het nagalmeffect van de buitenwereld in."
@@ -2651,13 +2657,13 @@
 	val[]: "TRANSMISSIE" #+ Title of 'Transmission' settings section. Please keep in upper case where possible.
 
 	key[]: "truck_physics_settings"
-	val[]: "TRUCKPHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
+	val[]: "VEHICLE PHYSICS" #+ Title of 'Truck physics' settings section. Please keep in upper case where possible.
 
 	key[]: "assistants_settings"
-	val[]: "ASSISTENTEN" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
+	val[]: "ASSISTANTS" #+ Title of 'Assistants' settings section. Please keep in upper case where possible.
 
 	key[]: "trailer_settings"
-	val[]: "OPLEGGER" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
+	val[]: "TRAILER" #+ Title of 'Trailer' settings section. Please keep in upper case where possible.
 
  	key[]: "camera_settings"
 	val[]: "CAMERA" #+ Title of 'Camera' settings section. Please keep in upper case where possible.
@@ -2840,7 +2846,7 @@
 	val[]: "Verbergen" #+ Hide speed limit display on the advisor.
 
 	key[]: "truck_limit"
-	val[]: "Toon snelheidslimiet vrachtwagens" #+ Show speed limits for trucks on the advisor.
+	val[]: "Show limit for current vehicle mode" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
 	val[]: "Toon snelheidslimiet auto's" #+ Show speed limits for ordinary cars on the advisor.
@@ -2862,6 +2868,18 @@
 
 	key[]: "align_always_north"
 	val[]: "Altijd noordelijk" #+ Map aligned to north always.
+#@}
+
+#+ Proximity exploration mode
+#@{
+	key[]: "map_exploration_mode"
+	val[]: "Map exploration mode" #+ Droplist for selection mode of map exploration mode.
+
+	key[]: "precision_exploration"
+	val[]: "Nauwkeurige verkenning" #+ Precision Exploration.
+
+	key[]: "proximity_exploration"
+	val[]: "Globale verkenning" #+ Proximity Exploration.
 #@}
 
 #+ Navigation display mode
@@ -2962,7 +2980,7 @@
 	val[]: "Remsterkte" #+ Slider for player modification of braking force.
 
 	key[]: "truck_stability"
-	val[]: "Vrachtwagenstabiliteit" #+ Slider for player modification of truckstability (COG position).
+	val[]: "Vehicle stability" #+ Slider for player modification of truckstability (COG position).
 
 	key[]: "trailer_stability"
 	val[]: "Opleggerstabiliteit" #+ Slider for player modification of trailer stability (COG position).
@@ -3215,6 +3233,9 @@
 	key[]: "map_alignment_op_tooltip" # - Gameplay, Advanced
 	val[]: "Kies hoe de wereldkaart is uitgelijnd."
 
+	key[]: "map_exploration_mode_op_tooltip" # - Gameplay, Advanced
+	val[]: "Kies hoe je de kaart wil ontdekken:<br>\"Globale verkenning\" markeert een groter gebied als verkend.<br>\"Nauwkeurige verkenning\" onthult alleen het gebied in de onmiddelijke omgeving van de speler."
+
 	key[]: "show_navigation_op_tooltip" # - Gameplay, Advanced
 	val[]: "Selecteer hoe de navigatie getoond moet worden."
 
@@ -3237,7 +3258,7 @@
 	val[]: "Toont extra tijdzone-informatie naast de actuele tijd."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Schakel de in-game cutscenes in. Deze worden meestal getoond na het kopen van een truck of wanneer je je garage uitbreidt."
+	val[]: "Schakel de in-game cutscenes in. Deze worden meestal getoond na het kopen van een truck, wanneer je je garage uitbreidt of het laden van passagiers."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "Kies of je half doorschijnende blokkades wilt zien op wegen waar je niet in kan rijden."
@@ -3261,13 +3282,13 @@
 	val[]: "Past de gevoeligheid van de remmen aan."
 
 	key[]: "truck_stability_op_tooltip" # - Gameplay, Advanced
-	val[]: "Verandert de stabiliteit van de vrachtwagen door het zwaartepunt te laten zakken."
+	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "Verandert de stabiliteit van de trailer door het zwaartepunt te laten zakken."
 
 	key[]: "driveshaft_torque_op_tooltip" # - Gameplay, Advanced
-	val[]: "Changes intensity of the torque generated from the driveline.<br><br>Raising this setting will increase the feeling of the truck \"twisting\" to the right."
+	val[]: "Changes intensity of the torque generated from the driveline.<br><br>Raising this setting will increase the feeling of the vehicle \"twisting\" to the right."
 
 	key[]: "suspension_stiffness_op_tooltip" # - Gameplay, Advanced
 	val[]: "Verandert de stijfheid van de chassisophanging."
@@ -3303,7 +3324,7 @@
 	val[]: "Wanneer ingeschakeld wordt de motor meteen gestart als je gas geeft."
 
 	key[]: "auto_park_brake_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the truck's parking brake is applied by default (after using a ferry, towing to service, quick travelling, etc.)."
+	val[]: "When enabled, the vehicle's parking brake is applied by default (after using a ferry, towing to service, quick travelling, etc.)."
 
 	key[]: "auto_drop_axles_op_tooltip" # - Gameplay, Advanced
 	val[]: "Hefbare assen zullen automatisch zakken afhankelijk van het voertuiggewicht."
@@ -3321,10 +3342,10 @@
 	val[]: "Wanneer ABS is ingeschakeld zorgt het ervoor dat de wielen niet blokkeren tijdens een stevige remingreep. Dit bevordert de stabiliteit, het remvermogen en de bestuurbaarheid van het voertuig."
 
 	key[]: "traction_control_op_tooltip" # - Gameplay, Advanced
-	val[]: "Tractiecontrole zorgt ervoor dat de wielen niet doordraaien tijdens hevige acceleratie bij weinig tractie en helpt ook tegen onder- en overstuur."
+	val[]: "When enabled, the vehicle will apply per-wheel braking to prevent wheelspin, understeer or oversteer to help maintain control."
 
 	key[]: "auto_diff_lock_op_tooltip" # - Gameplay, Advanced
-	val[]: "Wanneer ingeschakeld zal de truck het differentieel vergrendelen als de wielen beginnen te slippen. Hierdoor word de weerstand verhoogd."
+	val[]: "When enabled, the vehicle will lock the differential if wheels begin to slip to improve traction."
 
 	key[]: "cruise_control_grid_op_tooltip" # - Gameplay, Advanced
 	val[]: "Verandert de stappen waarmee de cruisecontrolsnelheid aangepast kan worden wanneer de desbetreffende toets wordt ingedrukt."
@@ -3339,10 +3360,10 @@
 	val[]: "Activates emergency braking if the system senses an imminent collision.<br>Choose if the system will only react to vehicles or all obstacles."
 
 	key[]: "lane_assistant_mode_op_tooltip" # - Gameplay, Advanced
-	val[]: "Selection of lane assistant modes:<br>- The \"Lane departure warning\" mode audibly warns you when you are about to leave the lane.<br>- In addition to the audible warning, the \"Lane keep support\" also automatically steers your truck to keep it from leaving the lane.<br><br>Both modes are only active at speeds above 55 km/h (~35 mph).<br>The Lane Assistant also considers your usage of the turn signals before engaging."
+	val[]: "Selection of lane assistant modes:<br>- The \"Lane departure warning\" mode audibly warns you when you are about to leave the lane.<br>- In addition to the audible warning, the \"Lane keep support\" also automatically steers your vehicle to keep it from leaving the lane.<br><br>Both modes are only active at speeds above 55 km/h (~35 mph).<br>The Lane Assistant also considers your usage of the turn signals before engaging."
 
 	key[]: "blind_spot_op_tooltip" # - Gameplay, Advanced
-	val[]: "Schakelt de dode hoek sensors in, als je truck daar van voorzien is."
+	val[]: "Enables the blind spot sensor functions, if your vehicle is equipped with it."
 
 	key[]: "automatic_headlights_op_tooltip" # - Gameplay, Simple
 	val[]: "Wanneer deze optie geactiveerd is en de lichtschakelaar staat op de eerste positie, worden de koplampen automatisch ingeschakeld in situaties met weinig licht."
@@ -3577,11 +3598,16 @@
 	key[]: "lost_function_binding"
 	val[]: "Functietoewijzing verloren:" #+ Shown when key was rebound to a different function.
 
+#!{
+	key[]: "options_bindings_screen" #+ Options screen name for changing bindings.
+	val[]: "@@keyboard_ico@@"
+#!}
+
 #+ Headers of individual sections
 #@{
 
 	key[]: "truck_controls"
-	val[]: "VRACHTWAGEN"
+	val[]: "VEHICLE"
 
 	key[]: "assistant_controls"
 	val[]: "Assistenten"
@@ -3620,7 +3646,7 @@
 	val[]: "SNELLE ACTIES"
 
 	key[]: "radio_controls"
-	val[]: "RADIO"
+	val[]: "AUDIO PLAYER"
 
 	key[]: "convoy_controls"
 	val[]: "KONVOOI"
@@ -3825,16 +3851,22 @@
 	val[]: "Audiospeler"
 
 	key[]: "o_im_radio_next"
-	val[]: "Audiospeler naar volgende favoriet"
+	val[]: "Audio Player Next"
 
 	key[]: "o_im_radio_prev"
-	val[]: "Audiospeler naar vorige favoriet"
+	val[]: "Audio Player Previous"
 
 	key[]: "o_im_radio_vol_up"
 	val[]: "Volume van audiospeler verhogen"
 
 	key[]: "o_im_radio_vol_down"
 	val[]: "Volume van audiospeler verlagen"
+
+	key[]: "o_im_radio_toggle"
+	val[]: "Audio Player Pause / Play"
+
+	key[]: "o_im_radio_favorite"
+	val[]: "Audio Player Add To / Remove From Favorites"
 
 	key[]: "o_im_display"
 	val[]: "Weergavemodus van Dashboard" #+ Action for cycling between dashboard display pages/modes.
@@ -3889,7 +3921,7 @@
 	val[]: "Quick Info"
 
 	key[]: "o_im_adjuster"
-	val[]: "Vrachtwagen Aanpassen"
+	val[]: "Vehicle Adjustment"
 
 	key[]: "o_im_services"
 	val[]: "Services & Adjustments"
@@ -4127,7 +4159,7 @@
 	val[]: "Wijst een knop toe om de automatische retarder in of uit te schakelen."
 
 	key[]: "o_im_lift_axle_op_tooltip"
-	val[]: "Assigns button for lifting/dropping the axle, if your truck has liftable axle."
+	val[]: "Assigns button for lifting/dropping the axle, if your vehicle has liftable axle."
 
 	key[]: "o_im_lift_axle_trailer_op_tooltip"
 	val[]: "Assigns button for lifting/dropping the axle, if your trailer has liftable axle."
@@ -4175,13 +4207,13 @@
 	val[]: "Wijst een knop toe om het grootlicht in of uit te schakelen."
 
 	key[]: "o_im_beacon_op_tooltip"
-	val[]: "Wijst een knop toe om het zwaailicht in of uit te schakelen, als je truck daarvan voorzien is."
+	val[]: "Assigns button for turning on/off the beacon, if your vehicle or trailer is equipped with it."
 
 	key[]: "o_im_horn_op_tooltip"
 	val[]: "Wijst een knop toe voor het gebruik van de claxon."
 
 	key[]: "o_im_air_horn_op_tooltip"
-	val[]: "Assigns button for using the air horn, if your truck is equipped with it."
+	val[]: "Assigns button for using the air horn, if your vehicle is equipped with it."
 
 	key[]: "o_im_light_horn_op_tooltip"
 	val[]: "Wijst een knop toe om te seinen met je grootlicht."
@@ -4253,7 +4285,7 @@
 	val[]: "Assigns button for displaying the Services & Adjustments menu."
 
 	key[]: "o_im_adviser_cursor_op_tooltip"
-	val[]: "Assigns button for showing quick info about the job status, truck condition, and local regulations which also pauses the game when not in a convoy."
+	val[]: "Assigns button for showing quick info about the job status, vehicle condition, and local regulations which also pauses the game when not in a convoy."
 
 	key[]: "o_im_adviser_zoom_in_op_tooltip"
 	val[]: "Assigns button for zooming in within the Navigation."
@@ -4433,16 +4465,22 @@
 	val[]: "Assigns button for opening the audio player."
 
 	key[]: "o_im_radio_next_op_tooltip"
-	val[]: "Assigns button for changing to the next favourite radio stream."
+	val[]: "Assigns button for playing the next item on the audio player's list while driving."
 
 	key[]: "o_im_radio_prev_op_tooltip"
-	val[]: "Assigns button for changing to the previous favourite radio stream."
+	val[]: "Assigns button for playing the previous item on the audio player's list while driving."
 
 	key[]: "o_im_radio_vol_up_op_tooltip"
-	val[]: "Assigns button for changing the volume of the audio player up."
+	val[]: "Assigns button for increasing the volume of the audio player while driving."
 
 	key[]: "o_im_radio_vol_down_op_tooltip"
-	val[]: "Assigns button for changing the volume of the audio player down."
+	val[]: "Assigns button for decreasing the volume of the audio player while driving."
+
+	key[]: "o_im_radio_toggle_op_tooltip"
+	val[]: "Assigns button for pausing and resuming the music while driving."
+
+	key[]: "o_im_radio_favorite_op_tooltip"
+	val[]: "Assigns button for adding or removing radio stations from the favourites while driving."
 
 	key[]: "o_im_nav_map_op_tooltip"
 	val[]: "Assigns button for opening the world map."
@@ -5237,10 +5275,10 @@
 	val[]: "Zet navigatiepunt naar het gewenste portaal"
 
 	key[]: "wanna_assistance_portal"
-	val[]: "Assistentie Service kan jouw en je truck gratis naar een willekeurig portaal brengen.<br offset=30> Ga je hiermee akkoord?"
+	val[]: "Assistentie Service kan jouw en je voertuig gratis naar een willekeurig portaal brengen.<br offset=30> Ga je hiermee akkoord?"
 
 	key[]: "wanna_assistance_portal_online"
-	val[]: "Assistentie Service kan jouw en je truck gratis naar een willekeurig portaal brengen.<br offset=30> Je huidige levering wordt geannuleerd.<br offset=30> Ga je hiermee akkoord?"
+	val[]: "Assistentie Service kan jouw en je voertuig gratis naar een willekeurig portaal brengen.<br offset=30> Je huidige levering wordt geannuleerd.<br offset=30> Ga je hiermee akkoord?"
 
 	key[]: "mp_job_quick_travel_other_land"
 	val[]: "Je bent momenteel te ver weg van het laadadres welke in een ander land is.<br><br> Wil je de lading nog steeds aannemen?"
@@ -5542,7 +5580,7 @@
 	val[]: "Enables shadows to be rendered even from very far objects.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
 
 	key[]: "interior_shadow_op_tooltip" # - Graphics, Advanced
-	val[]: "Enables night-time dynamic shadows in the truck interior.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
+	val[]: "Enables night-time dynamic shadows in the vehicle interior.<br><br><color value=@@clr_txt_d@@>This setting usually has a moderate impact on performance."
 
 	key[]: "weather_quality_op_tooltip" # - Graphics, Advanced
 	val[]: "Adjusts the quality of weather effects, such as reflections."
@@ -6067,7 +6105,7 @@
 	val[]: "RADIOSPELER" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "radio"
-	val[]: "Radio" #+ Icon opening the radio window. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "Audio Player" #+ Icon opening the radio window. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "music_player"
 	val[]: "Muziekspeler" #+ Button for selecting music player.
@@ -6075,8 +6113,20 @@
 	key[]: "radio_stream"
 	val[]: "Radiostream" #+ Button for selecting online radio.
 
+	key[]: "game_radio"
+	val[]: "Game radio" #+ Button for selecting game radio (offline radio).
+
 	key[]: "radio_changed"
 	val[]: "Speel <color value=@@clr_sel@@>$NAME$" #+ Notification that playing track/stream have changed.
+
+	key[]: "stream_safe"
+	val[]: "Stream-safe" #+ Text for enabling stream-safe mode (offline game radios that are designed to avoid content claims)
+
+	key[]: "volume_up"
+	val[]: "Volume Up" #+ Controller hint text for increasing volume
+
+	key[]: "volume_down"
+	val[]: "Volume Down" #+ Controller hint text for decreasing volume
 
 #+ Hint shown if no music files are found. Also shown as tooltip when hovering over music_player button.
 
@@ -6093,6 +6143,26 @@
 	key[]: "empty_radio_hint"
 	val[]: "Zie alsjeblieft <color value=@@clr_sel@@>leesmij.rtf <color value=@@clr_txt@@>in <color value=@@clr_sel@@>Euro Truck Simulator 2 <color value=@@clr_txt@@>map in <color value=@@clr_sel@@>Mijn Documenten <color value=@@clr_txt@@>over hoe je je eigen muziek en radiostreams kunt toevoegen."
 
+	key[]: "radio_hint_repeat_favorites"
+	val[]: "Switch between cycling all or favourites only.<br><br>\"Cycle favourites only\" is available when there is at least one favourite item on your list."
+
+	key[]: "radio_cycling_all"
+	val[]: "Cycling all" #+ Text shown if currently we are cycling between all tracks
+
+	key[]: "radio_cycling_favorites"
+	val[]: "Cycling only favourites" #+ Text shown if currently we are cycling between only favorite
+
+	key[]: "radio_hint_online_update"
+	val[]: "Clicking this button refreshes your list of radio streams available for listening online."
+
+	key[]: "music_player_hint_shuffle"
+	val[]: "Switch between normal and shuffled song order."
+
+	key[]: "stream_safe_hint_unmodded"
+	val[]: "Radio station designated to avoid content claims."
+
+	key[]: "stream_safe_hint_modded"
+	val[]: "Community-created radio content marked as stream safe. Not reviewed or guaranteed and may still trigger content claims."
 
 	key[]: "radio_update"
 	val[]: "Update van het internet" #+ Button used to update the list of live streams from the web.
@@ -6105,6 +6175,9 @@
 
 	key[]: "music_player_info_title"
 	val[]: "Muziekspelerinformatie"
+
+	key[]: "my_music"
+	val[]: "My Music"
 
 #+ Music player columns.
 
@@ -6161,13 +6234,13 @@
 	val[]: "Inkomen" #+ For example "Job income: E6,526"
 
 	key[]: "wanna_assistance"
-	val[]: "De wegenwacht kan jou en je vrachtwagen naar $CITY$ brengen. Dat kost $MONEY$ en de reis duurt $TIME$.<br offset=30>Ga je daarmee akkoord?"
+	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_quick"
-	val[]: "De wegenwacht kan jou en je vrachtwagen naar $CITY$ brengen. Dat kost $MONEY$ en de reis duurt $TIME$.<br>(De kosten zullen worden gedekt door je werkgever.)<br offset=30> Ben je het hiermee eens?"
+	val[]: "Assistance Service can take you and your vehicle to $CITY$. It will cost $MONEY$ and the trip will take $TIME$.<br>(The charge will be covered by your employer.)<br offset=30>Do you agree?"
 
 	key[]: "wanna_assistance_online"
-	val[]: "De wegenwacht kan jou en je vrachtwagen naar $CITY$ brengen. Dat kost $MONEY$ en de reis duurt $TIME$.<br offset=30>Je huidige opdracht zal geannuleerd worden.<br offset=30>Ga je daarmee akkoord?"
+	val[]: "De wegenwacht kan jou en je voertuig naar $CITY$ brengen. Dat kost $MONEY$ en de reis duurt $TIME$.<br offset=30>Je huidige opdracht zal geannuleerd worden.<br offset=30>Ga je daarmee akkoord?"
 
 	key[]: "wanna_recover"
 	val[]: "Assistance Service can take you and your truck to the nearest road. It will cost $MONEY$ and the trip will take $TIME$.<br offset=30>Do you agree?"
@@ -6309,7 +6382,7 @@
 	val[]: "$BRAND$ truckdealer ontdekt!"
 
 	key[]: "service"
-	val[]: "Om je vrachtwagen of trailer te repareren, <br>te upgraden of te spuiten, druk op:"
+	val[]: "Om je voertuig te repareren, <br>te upgraden of te spuiten, druk op:"
 
 	key[]: "job_offer"
 	val[]: "Druk op de volgende toets om de aangeboden opdracht te bekijken:"
@@ -6405,7 +6478,7 @@
 	val[]: "Schakel de motor uit!"
 
 	key[]: "stop_truck_short"
-	val[]: "Stop de vrachtwagen!"   #+ Quick message shown when sleep was prevented by truck movement.
+	val[]: "Stop the vehicle!"   #+ Quick message shown when sleep was prevented by truck movement.
 
 	key[]: "stop_engine"
 	val[]: "Gebruik de volgende toets om de motor te stoppen:"
@@ -6557,7 +6630,7 @@
 	val[]: "As liften mislukt.<br>Aangekoppelde trailer is te zwaar."
 
 	key[]: "diff_lock_fail"
-	val[]: "Differentieel kan niet worden vergrendeld. Rem af en probeer het opnieuw."
+	val[]: "Differential(s) cannot be locked. Slow down the vehicle and try again."
 
 	key[]: "diff_lock_hint"
 	val[]: "Als je niet meer wegkomt, probeer dan je differentieel vergrendeling. <br>Druk op de volgende toets om je differentieel te vergrendelen."
@@ -6638,6 +6711,12 @@
 	key[]: "adv_hud_infotainment_op_tooltip"
 	val[]: "Interior infotainment display for navigation."
 
+	key[]: "adv_hud_radio"
+	val[]: "Audio Player"
+
+	key[]: "adv_hud_radio_op_tooltip"
+	val[]: "On manual change — the widget appears when you take an action, such as switching stations, or adding a station to your favourites.<br><br>On all changes — the widget appears for every update, including manual actions and automatic track transitions."
+
 	key[]: "adv_hud_finances_line"
 	val[]: "Finances" #+ Widget name for the current bank account balance and the last 7 days profit.
 
@@ -6646,6 +6725,12 @@
 
 	key[]: "adv_hud_damage_line"
 	val[]: "Schade" #+ Widget name for displaying vehicle damage.
+
+	key[]: "adv_hud_job_info"
+	val[]: "Job details" #+ Widget name for displaying job info.
+
+	key[]: "adv_hud_chat"
+	val[]: "Chat" #+ Widget name for displaying the convoy chat.
 
 	key[]: "adv_hud_autopark"
 	val[]: "Autoparking"
@@ -6665,6 +6750,11 @@
 	key[]: "adv_hud_visible"
 	val[]: "Enabled"
 
+	key[]: "adv_hud_radio_interaction"
+	val[]: "On manual change" #+ HUD audio player widget visibility setting for showing the widget only when the user causes a change
+
+	key[]: "adv_hud_radio_change"
+	val[]: "On all changes" #+ HUD audio player widget visibility setting for showing the widget only when there is any change (e.g. next song automatically plays)
 
 	key[]: "hud_mirrors_none"
 	val[]: "None"
@@ -7909,6 +7999,9 @@
 	key[]: "cn_logs"
 	val[]: "Boomstammen"
 
+	key[]: "cn_low_bed_trailers"
+	val[]: "Dieplader opleggers"
+
 	key[]: "cn_lpg"
 	val[]: "LPG"
 
@@ -8254,9 +8347,6 @@
 	key[]: "cn_tractors"
 	val[]: "Tractoren"
 
-	key[]: "cn_trailers"
-	val[]: "Lage opleggers"
-
 	key[]: "cn_train_parts"
 	val[]: "Treinassen"
 
@@ -8417,7 +8507,7 @@
 	val[]: "Dakleer"
 
 	key[]: "cn_rooflights"
-	val[]: "Daklichten"
+	val[]: "Dakramen"
 
 	key[]: "cn_sandwich_panels"
 	val[]: "Sandwichpanelen"
@@ -9353,7 +9443,7 @@
 	val[]: "Je kunt niet snel reizen terwijl je bezig bent met een opdracht!"
 
 	key[]: "compman_qt_notruck"
-	val[]: "Je kunt niet snel reizen, omdat je geen vrachtwagen hebt!"
+	val[]: "You cannot quick travel since you don't have a truck, coach or car!"
 
 	key[]: "compman_qt_confirm"
 	val[]: "Wil je direct naar de geselecteerde garage gaan?"
@@ -9723,13 +9813,13 @@
 #@{
 
 	key[]: "truckman_sell_t"
-	val[]: "VERKOOP VRACHTWAGEN"  #+ Message box title. Please keep in upper case where possible.
+	val[]: "SELL VEHICLE"  #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "truckman_msg_reallysell"
 	val[]: "Wil je echt je $TRUCK$ verkopen voor $MONEY$?"
 
 	key[]: "truckman_msg_nosell"
-	val[]: "Je kunt je truck niet verkopen terwijl je bezig bent met een opdracht! Voltooi je levering eerst en probeer het daarna opnieuw."
+	val[]: "You cannot sell the vehicle you're driving while on a job! Finish your job and then try again."
 
 	key[]: "truckman_total_restoration_t"
 	val[]: "VOLLEDIGE RESTAURATIE"  #+ Message box title. Please keep in upper case where possible.
@@ -9761,10 +9851,10 @@
 #@{
 
 	key[]: "truckman_change_t"
-	val[]: "VERANDER TRUCK" #+ Message box title. Please keep in upper case where possible.
+	val[]: "CHANGE VEHICLE" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "truckman_msg_nochange"
-	val[]: "Je kunt je vrachtwagen niet wijzigen terwijl je bezig bent met een opdracht! Voltooi je levering eerst."
+	val[]: "You cannot change your vehicle while on a job! Finish your job first."
 
 	key[]: "truckman_conf_drive"
 	val[]: "Weet je zeker dat je je $TRUCK_SRC$ aan $CITY_DST$ wilt toewijzen en in $TRUCK_DST$ wilt gaan rijden?"
@@ -9801,7 +9891,7 @@
 	val[]: "KOPIEER CONFIGURATIE" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "truckman_msg_nouse"
-	val[]: "Deze vrachtwagen kan niet gebruikt worden als configuratiekopiebron vanwege ontbrekende onderdelen, wat waarschijnlijk wordt veroorzaakt door een verwijderde MOD of DLC.<br><br>Herinstalleer de MOD/DLC."
+	val[]: "This vehicle cannot be used as copy configuration source due to missing data which is most likely caused by either MOD or DLC removal.<br><br>Reinstall MOD/DLC."
 #@}
 
 # End of: "Truck management screen"
@@ -9961,7 +10051,7 @@
 	val[]: "Status:"
 
 	key[]: "driverman_stats_cargo"
-	val[]: "Huidige vracht:"
+	val[]: "Current cargo:"
 
 	key[]: "driverman_stats_from"
 	val[]: "Van:"
@@ -13004,16 +13094,16 @@
 #@{
 
 	key[]: "wiz_gb_simple"
-	val[]: "De eenvoudigste rijmethode, speciaal ontworpen (maar niet alleen) voor het toetsenbord. Druk op VOORUIT om vooruit te rijden en druk op ACHTERUIT om achteruit te gaan of te remmen. De versnellingsbak zal zich bezighouden met al het andere: schakelen tussen vooruit rijden, remmen of achteruit rijden, schakelen tussen versnelllingen enzovoort."
+	val[]: "Press FORWARD to move ahead, and press BACK to brake or reverse. The gearbox automatically manages everything else, handling transitions between driving, braking, and reversing, as well as selecting the appropriate gears."
 
 	key[]: "wiz_gb_automatic"
-	val[]: "Ideaal voor sturen met pedalen. Gebruik knoppen om te schakelen tussen vooruit rijden, neutraal of achteruit rijden. Druk vervolgens op het gaspedaal en laat de automaat de versnellingen regelen."
+	val[]: "Use the buttons to switch between driving forward, neutral, or reversing. Then press the accelerator and let the automatic transmission handle gear changes."
 
 	key[]: "wiz_gb_sequential"
-	val[]: "Schakel handmatig op en terug om te kiezen tussen de versnellingen vooruit, neutraal en achteruit. Dit is een beetje moeilijk te beheersen maar je kunt een beter rijgedrag bereiken en je hebt de volledige beheersing over het voertuig in allerlei situaties."
+	val[]: "Manually shift gears up and down to select each individual gear within the transmission. This configuration provides full control over the vehicle’s gearbox."
 
 	key[]: "wiz_gb_hshifter"
-	val[]: "Selecteer direct de gewenste versnelling. Vergelijkbaar in een moeilijke sequentiele versnellingsbak wat nog realistischer is. Fysieke H-shifter zoals G27 of G25 wordt aanbevolen. Koppeling vereist."
+	val[]: "Select the desired gear directly. This offers the most realistic configuration. A physical H-pattern shifter is recommended and requires clutch input."
 #@}
 
 #+ Shown when feature requires a gamming controller.
@@ -13066,7 +13156,7 @@
 #+ Configuration complete page
 #@{
 	key[]: "wiz_cfg_done"
-	val[]: "Het spel is nu geconfigureerd en je kunt verdergaan. Je kunt de configuratie later nog aanpassen in het optiescherm van de besturing."
+	val[]: "The game is now configured and you can continue. You can change the configuration later in Options."
 
 	key[]: "wiz_cfg_steam"
 	val[]: "Je kunt de knop- en astoewijzing voor deze controller controleren en aanpassen in de Steamclient. Steamcontrollerinstellingen zijn beschikbaar via Steam > Bibliotheek > Euro Truck Simulator 2 > Controller."
@@ -14601,7 +14691,7 @@
 	val[]: "Reset Foto-instellingen" #+ Reset camera and settings
 
 	key[]: "o_im_photomode_album"
-	val[]: "Open de Galerij" #+ opens Gallery
+	val[]: "Open Gallery" #+ opens Gallery
 
 	key[]: "o_im_photomode_take"
 	val[]: "Foto Nemen" #+ Take snapshot
@@ -14721,7 +14811,7 @@
 	val[]: "Your Gallery is empty. Use Photo Mode to capture images."
 
 	key[]: "link_locked_msg_photo_mode"
-	val[]: "Om toegang te krijgen tot de Fotomodus moet je eerst beschikking hebben over een vrachtwagen."
+	val[]: "To access the Photo Mode you must have a vehicle assigned first."
 
 	key[]: "photo_album_delete_failed"
 	val[]: "Failed to delete the image due to an unexpected error."
@@ -14902,10 +14992,10 @@
 #@{
 
 	key[]: "photo_no_drive_t"
-	val[]: "GEEN VRACHTWAGEN" #+ Message box title. Please keep in upper case where possible.
+	val[]: "NO VEHICLE" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "photo_no_drive"
-	val[]: "Je kunt geen foto's van een vrachtwagen maken omdat je er geen hebt! Je moet er eentje kopen of er eentje uit je floot nemen"
+	val[]: "You cannot take pictures of a vehicle because you don't have one! You must purchase one or take one from your fleet."
 #@}
 
 #+ Screenshot manager
@@ -15659,7 +15749,7 @@
 	val[]: "Snel reizen"
 
 	key[]: "link_locked_msg_quick_travel"
-	val[]: "Om snel te kunnen reizen moet je eerst een vrachtwagen kopen."
+	val[]: "To access the Quick Travel you must have a vehicle assigned first."
 
 	key[]: "select_quick_travel_destination"
 	val[]: "Selecteer bestemming voor snel reizen"
@@ -15686,16 +15776,16 @@
 	val[]: "Je truck is niet in staat om snel te reizen. Repareer je trailerkabels."
 
 	key[]: "quick_travel_cond_repair_truck"
-	val[]: "Je vrachtwagen is niet in staat om snel te reizen. Repareer je vrachtwagen of bel de assistentie."
+	val[]: "Your vehicle is not in a condition for quick travel. Visit service or call for an assistance."
 
 	key[]: "quick_travel_cond_repair_trailer"
 	val[]: "Je trailer is niet in staat om snel te reizen. Repareer je trailer of bel de assistentie."
 
 	key[]: "quick_travel_cond_truck_fuel"
-	val[]: "Je vrachtwagen is niet in staat om snel te reizen. Tank je vrachtwagen bij of bel de assistentie."
+	val[]: "Je voertuig is niet in staat om snel te reizen. Tank je voertuig bij of bel de assistentie."
 
 	key[]: "quick_travel_cond_truck_fallen"
-	val[]: "Je vrachtwagen is niet in staat om snel te reizen. Bel de assistentie."
+	val[]: "Your vehicle is not in a condition for quick travel. Call for an assistance."
 
 	key[]: "quick_travel_cond_trailer_fallen"
 	val[]: "Je trailer is niet in staat om snel te reizen. Bel de assistentie."
@@ -15810,6 +15900,24 @@
 	val[]: "Ladingmarkt opdracht is bezig."
 #@}
 
+#+ Job cancellation
+#@{
+	key[]: "drive_active_job_t"
+	val[]: "OPDRACHT IN UITVOERING"
+
+	key[]: "drive_active_job"
+	val[]: "Je hebt een opdracht in een andere modus actief.<br offset=10>Je kan die stoppen of de details bekijken in $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
+
+	key[]: "drive_active_job_yes"
+	val[]: "@@abort_job@@"
+
+	key[]: "drive_active_job_no"
+	val[]: "Wissel van modus"
+
+	key[]: "cancel_cur_job_warning"
+	val[]: "Je moet een boete betalen van $MONEY$ als je de opdracht stopt."
+#@}
+
 #+ Trailer coupling phases info messages, shown in route advisor during coupling/decoupling.
 #@{
 
@@ -15866,13 +15974,13 @@
 	val[]: "Kan geen items vinden die overeenkomen met je zoekopdracht" #+ Text shown when there are no accessories found by filters.
 
 	key[]: "no_truck_found"
-	val[]: "Kan geen trucks vinden die overeenkomen met je zoekopdracht" #+ Text shown when there are no trucks found by filters.
+	val[]: "Unable to find vehicles matching your filters" #+ Text shown when there are no trucks found by filters.
 #@}
 
 #+ Strings related to job filtering feature
 #@{
 	key[]: "no_job_found"
-	val[]: "Unable to find jobs matching your filters or current skills" #+ Text shown when there are no jobs found by filters.
+	val[]: "Het is niet mogelijk om vrachten te vinden die overeenkomen met jouw filters en vaardigheden" #+ Text shown when there are no jobs found by filters.
 #@}
 
 #+ Game demo related strings.
@@ -16653,7 +16761,7 @@
 	val[]: "Er zijn momenteel geen trailer-upgrades beschikbaar."
 
 	key[]: "link_locked_msg_truck_diag"
-	val[]: "Om toegang te krijgen tot de Diagnostiek moet je eerst een vrachtwagen toegewezen hebben."
+	val[]: "To access the Diagnostics you must have a vehicle assigned first."
 
 	key[]: "link_locked_msg_truck_dealer_map"
 	val[]: "Je moet nog truckdealers ontdekken."
@@ -17364,7 +17472,7 @@
 #+ Series names for translation
 #@{
 	key[]: "series_schwarzmuller_food_cistern"
-	val[]: "Voedingsmiddelentank"
+	val[]: "Food Tank"
 
 	key[]: "series_schwarzmuller_lowloader"
 	val[]: "Dieplader"
@@ -17991,7 +18099,7 @@
 	val[]: "Je hebt een ongeschikte trailer voor de huidige vracht."
 
 	key[]: "mp_job_missing_truck"
-	val[]: "Kan alleen worden aangenomen met je eigen vrachtwagen."
+	val[]: "Can be only taken with your own vehicle."
 
 	key[]: "mp_job_missing_trailer"
 	val[]: "Je hebt nog geen geschikte trailer toegewezen."
@@ -18340,7 +18448,7 @@
 	val[]: "ONLINE-ERVARING"
 
 	key[]: "mp_experience"
-	val[]: "Wees er op bedacht dat de spelervaring kan veranderen tijdens het spelen. Ouderlijk toezicht is geadviseerd. De <nowrap><link url=@@privacy_url@@ color=@@clr_link@@>Privacy Policy</link>$SHORTCUT1$</nowrap>is van toepassing.<br><br>Als je online speelt, volg de<nowrap><link url=@@conduct_url@@ color=@@clr_link@@>Code of Conduct</link>$SHORTCUT2$</nowrap> en wees aardig en beleefd naar je mede-truckers zodat de beleving voor iedereen leuk en optimaal is."
+	val[]: "Please note that the game experience may change during online play. Parental guidance is advised. The <nowrap><link url=@@privacy_url@@ color=@@clr_link@@>Privacy Policy</link>$SHORTCUT1$</nowrap> applies.<br><br>When online, follow the <nowrap><link url=@@conduct_url@@ color=@@clr_link@@>Code of Conduct</link>$SHORTCUT2$</nowrap> and be kind and respectful to your fellow drivers so the experience is pleasant and optimal for everyone."
 
 	key[]: "session_friends"
 	val[]: "Vrienden"
@@ -18899,7 +19007,7 @@
 	val[]: "KONVOOI BEËINDIGD"
 
 	key[]: "convoy_concluded_info"
-	val[]: "Je Konvooi-sessie is beëindigd. Je voortgang omvat je bankbalans, opdrachtgeschiedenis, vaardigheden, verkregen vrachtwagen- en trailerconfiguraties, en het materieel en de voortgang van je werknemers."
+	val[]: "Je Konvooi-sessie is beëindigd. Je voortgang omvat je bankbalans, opdrachtgeschiedenis, vaardigheden, verkregen voertuigconfiguraties, en het materieel en de voortgang van je werknemers."
 
 	key[]: "convoy_concluded_warning"
 	val[]: "Klik op accepteren om je voortgang voort te zetten. Of je kan je voortgang terugdraaien naar de autosave voor deze sessie of elk ander opslagpunt."
@@ -19156,7 +19264,7 @@
 #+ Multiplayer gameplay options.
 #@{
 	key[]: "convoy_settings"
-	val[]: "KONVOOI" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
+	val[]: "CONVOY" #+ Title of 'Convoy' settings section. Please keep in upper case where possible.
 
 	key[]: "chat_with_activate"
 	val[]: "Open de chat met Activeer"
@@ -19574,7 +19682,7 @@
 	val[]: "Opdrachtenlijst"
 
 	key[]: "overlay_camera_rotate"
-	val[]: "Draaien"
+	val[]: "Rotate"
 
 	key[]: "overlay_camera_pan"
 	val[]: "Bewegen"
@@ -19586,7 +19694,7 @@
 	val[]: "Lopen"
 
 	key[]: "overlay_camera_zoom"
-	val[]: "Zoomen"
+	val[]: "Zoom"
 
 	key[]: "overlay_camera_switch"
 	val[]: "Camera wisselen"
@@ -19601,7 +19709,7 @@
 	val[]: "Verwijder accessoire"
 
 	key[]: "overlay_camera_crouch"
-	val[]: "Kruipen"
+	val[]: "Crouch"
 #@}
 
 #+ Supported controller names.
@@ -19898,7 +20006,7 @@
 	val[]: "Ontdekt"
 
 	key[]: "career_progress_stats_explore_gallery"
-	val[]: "Galerij"
+	val[]: "Gallery"
 
 	key[]: "career_progress_stats_explored_map"
 	val[]: "Verkende kaart"
@@ -20207,7 +20315,7 @@
 	val[]: "Blader, bekijk en configureer beschikbare trailers."
 
 	key[]: "radio_desc" # - tooltip for explaining what the radio is - feature is active
-	val[]: "Geniet van je favoriete online radiozender of speel je eigen muziek af."
+	val[]: "Enhance your driving experience with some music."
 
 	key[]: "link_locked_msg_radio" # - tooltip for when the radio is not yet unlocked
 	val[]: "De radio is niet beschikbaar."
@@ -20225,7 +20333,7 @@
 #+ Intro Scene. Only translate into officially supported languages.
 #@{
 	key[]: "health_warning"
-	val[]: "Health warning"
+	val[]: "Gezondheidswaarschuwing"
 
 	key[]: "health_warning_description"
 	val[]: "A small number of users may be susceptible to epileptic seizures or loss of consciousness when exposed to certain flashing lights or light patterns. Such individuals may experience a seizure while watching certain images or playing a video game. If you or anyone in your family has ever had symptoms related to epilepsy (seizures or loss of consciousness) when exposed to flashing lights, please consult a medical professional and take all necessary precautions prior to playing the game.<br offset=20>If you or your child experience any of the following symptoms while playing any video game: dizziness, altered vision, eye or muscle twitches, loss of consciousness, disorientation, convulsions, involuntary movements, discontinue use of the video game immediately and consult a medical professional."
@@ -20267,4 +20375,122 @@
 
 	key[]: "dlc_lost_return_forced" #+ Message shown in game, when a DLC has been removed.
 	val[]: "Access to some DLCs has been lost. You will now leave to Title Screen to reflect the changes in the content.<br><br>Your progress will be saved automatically."
+#@}
+
+#+ Time skip feature
+#@{
+	key[]: "time_skip_t"
+	val[]: "RESTING"
+
+	key[]: "time_skip_hours"
+	val[]: "Number of hours to skip"
+
+	
+	key[]: "time_skip_current_time"
+	val[]: "Current time"
+
+	key[]: "time_skip_wake_up_time"
+	val[]: "Rest ends"
+
+
+	key[]: "time_skip_resting_title"
+	val[]: "Rest State"
+
+	key[]: "time_skip_mandatory_break_title"
+	val[]: "Mandatory Break"
+
+	key[]: "time_skip_job_delivery_title"
+	val[]: "Delivery Status"
+
+	key[]: "time_skip_charging_title"
+	val[]: "Battery Charge"
+
+
+	key[]: "time_skip_to_next_mandatory_break_ok"
+	val[]: "in $TIME$"
+
+	key[]: "time_skip_to_next_mandatory_break_not_ok"
+	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>in $TIME$</font>"
+
+
+	key[]: "time_skip_mandatory_break_complied"
+	val[]: "Complied"
+
+	key[]: "time_skip_mandatory_break_not_complied"
+	val[]: "Not complied"
+
+
+	key[]: "time_skip_delivery_on_time"
+	val[]: "On time"
+
+	key[]: "time_skip_delivery_late"
+	val[]: "<font face=/font/small_bold.font><color value=@@clr_red@@>Risk of late delivery</font>"
+
+
+	key[]: "time_skip_rest_tired"
+	val[]: "Tired"
+
+	key[]: "time_skip_rest_ok"
+	val[]: "Rested"
+
+	key[]: "time_skip_rest_full"
+	val[]: "Fully rested"
+
+	
+	key[]: "time_skip_tooltip_mandatory_break_not_met"
+	val[]: "This rest won’t meet the mandatory break requirements. You will have $LEFT_TIME$ left until the next mandatory break."
+
+	key[]: "time_skip_tooltip_mandatory_break_complied"
+	val[]: "This rest will meet the mandatory break requirements. The next one will be in <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours."
+
+	key[]: "time_skip_tooltip_mandatory_break_cont"
+	val[]: "For every <color value=@@clr_sel@@>$DRIVE_TIME$</color> hours of driving, you must take a mandatory break for at least <color value=@@clr_sel@@>$BREAK_TIME$</color> hours to avoid getting fined."
+	
+
+	key[]: "time_skip_tooltip_job_on_time"
+	val[]: "After the rest and the estimated drive time to the destination, you will have <color value=@@clr_sel@@>$LEFT_TIME$</color> remaining on the job."
+	
+	key[]: "time_skip_tooltip_job_late"
+	val[]: "After the rest and the estimated drive time to the destination, the delivery will be late by <color value=@@clr_red@@>$LEFT_TIME$</color>."
+
+	key[]: "time_skip_max_sleep_reached"
+	val[]: "<color value=@@clr_red@@>You will be fully rested</color>"
+
+# shown in job detail widget and pause screen	
+	key[]: "job_eta"
+	val[]: "Estimated Arrival"
+
+	key[]: "job_delay"
+	val[]: "Delay"
+
+# mandatory break needed window shown when changing vehicle mode
+	key[]: "time_skip_mandatory_break_t"
+	val[]: "MANDATORY REST NEEDED"
+
+	key[]: "time_skip_mandatory_break_needed"
+	val[]: "The vehicle hasn’t been parked long enough to complete your mandatory rest.<br><br><color value=@@clr_sel@@>$TIME$ of mandatory break left<br><br><color value=@@clr_txt@@>Do you want to rest?"
+
+# mandatory break notifications
+	key[]: "mandatory_break_soon"
+	val[]: "It’s time to take your mandatory break.<br>You should find a parking spot and rest!"
+
+	key[]: "mandatory_break_overdue"
+	val[]: "Exceeded driving time without mandatory break.<br>You should find a parking spot and rest!"
+
+	key[]: "offence_mandatory_break"
+	val[]: "Violation of mandatory break."
+
+# shown in options
+
+	key[]: "mandatory_break_simulation"
+	val[]: "Mandatory Break simulation"
+
+	key[]: "mandatory_break_simulation_op_tooltip"
+	val[]: "When enabled, you must take regular breaks from driving.<br><br>Avoiding mandatory breaks will result in traffic offences."
+
+	key[]: "rest_state_simulation"
+	val[]: "Rest State simulation"
+	
+	key[]: "rest_state_simulation_op_tooltip"
+	val[]: "When enabled, you will experience the effects of fatigue over time.<br><br>You will need to rest to recover."
 #@}

@@ -24,7 +24,7 @@ traffic_vehicle : traffic.opalin
 
 	spawn_ratio: 0.01
 	
-	variant[]: .traffic.opalin_p
+	variant[]: traffic.opalin_p
 
 	tags[]: mini
 
@@ -48,7 +48,7 @@ vehicle_wheel_accessory: .opalin.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
 
-traffic_vehicle : .traffic.opalin_p
+traffic_vehicle : traffic.opalin_p
 {
 	accessories[]: .opalin_p.chassis
 	accessories[]: .opalin_p.fwheel
@@ -96,11 +96,11 @@ vehicle_wheel_accessory: .opalin_p.rwheel
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
 
-traffic_vehicle : traffic.opalin_tr
+traffic_vehicle : traffic.opalin.tr
 {
-	accessories[]: .opalin_tr.chassis
-	accessories[]: .opalin_tr.fwheel
-	accessories[]: .opalin_tr.rwheel
+	accessories[]: .opalin.tr.chassis
+	accessories[]: .opalin.tr.fwheel
+	accessories[]: .opalin.tr.rwheel
 
 	max_speed: 100
 
@@ -114,8 +114,8 @@ traffic_vehicle : traffic.opalin_tr
 
 
 	prefer_variant: true
-	variant[]: .traffic.opalin_tr_ed
-	variant[]: .traffic.opalin_tr_td
+	variant[]: traffic.opalin.tr_ed
+	variant[]: traffic.opalin.tr_td
 
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
@@ -126,28 +126,28 @@ traffic_vehicle : traffic.opalin_tr
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .opalin_tr.chassis
+vehicle_accessory: .opalin.tr.chassis
 {
 	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr.fwheel
+vehicle_wheel_accessory: .opalin.tr.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr.rwheel
+vehicle_wheel_accessory: .opalin.tr.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
 
-traffic_vehicle : .traffic.opalin_tr_ed
+traffic_vehicle : traffic.opalin.tr_ed
 {
-	accessories[]: .opalin_tr_ed.chassis
-	accessories[]: .opalin_tr_ed.fwheel
-	accessories[]: .opalin_tr_ed.rwheel
+	accessories[]: .opalin.tr_ed.chassis
+	accessories[]: .opalin.tr_ed.fwheel
+	accessories[]: .opalin.tr_ed.rwheel
 
 	max_speed: 100
 
@@ -163,39 +163,39 @@ traffic_vehicle : .traffic.opalin_tr_ed
 	color[]: (0.8713, 0.8631, 0.8227) #white
 
 
-	spawn_condition[]: .traffic.opalin_tr_ed.edirne.condition.city
+	spawn_condition[]: .traffic.opalin.tr_ed.edirne.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .opalin_tr_ed.chassis
+vehicle_accessory: .opalin.tr_ed.chassis
 {
 	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr_ed.fwheel
+vehicle_wheel_accessory: .opalin.tr_ed.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr_ed.rwheel
+vehicle_wheel_accessory: .opalin.tr_ed.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
-traffic_spawn_condition: .traffic.opalin_tr_ed.edirne.condition.city
+traffic_spawn_condition: .traffic.opalin.tr_ed.edirne.condition.city
 {
 	# spawn only near city with specified name
 	type: city
 	str_param[]: "edirne"
 }
 
-traffic_vehicle : .traffic.opalin_tr_td
+traffic_vehicle : traffic.opalin.tr_td
 {
-	accessories[]: .opalin_tr_td.chassis
-	accessories[]: .opalin_tr_td.fwheel
-	accessories[]: .opalin_tr_td.rwheel
+	accessories[]: .opalin.tr_td.chassis
+	accessories[]: .opalin.tr_td.fwheel
+	accessories[]: .opalin.tr_td.rwheel
 
 	max_speed: 100
 
@@ -211,28 +211,28 @@ traffic_vehicle : .traffic.opalin_tr_td
 	color[]: (0.9535, 0.7785, 0.0000) #yellow
 
 
-	spawn_condition[]: .traffic.opalin_tr_td.tekirdag.condition.city
+	spawn_condition[]: .traffic.opalin.tr_td.tekirdag.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .opalin_tr_td.chassis
+vehicle_accessory: .opalin.tr_td.chassis
 {
 	data_path: "/def/vehicle/ai/opalin/chassis_p.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr_td.fwheel
+vehicle_wheel_accessory: .opalin.tr_td.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/front_bus.sii"
 }
 
-vehicle_wheel_accessory: .opalin_tr_td.rwheel
+vehicle_wheel_accessory: .opalin.tr_td.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_bus.sii"
 }
-traffic_spawn_condition: .traffic.opalin_tr_td.tekirdag.condition.city
+traffic_spawn_condition: .traffic.opalin.tr_td.tekirdag.condition.city
 {
 	# spawn only near city with specified name
 	type: city

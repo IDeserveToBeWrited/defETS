@@ -131,11 +131,11 @@ vehicle_wheel_accessory: .p_3204.pass2.rwheel
 }
 
 
-traffic_vehicle : traffic.p_3204_tr
+traffic_vehicle : traffic.p_3204.tr
 {
-	accessories[]: .p_3204_tr.chassis
-	accessories[]: .p_3204_tr.fwheel
-	accessories[]: .p_3204_tr.rwheel
+	accessories[]: .p_3204.tr.chassis
+	accessories[]: .p_3204.tr.fwheel
+	accessories[]: .p_3204.tr.rwheel
 
 	max_speed: 130
 
@@ -153,42 +153,42 @@ traffic_vehicle : traffic.p_3204_tr
 
 	prefer_variant: true
 
-	variant[]: .traffic.p_3204_t_e0
-	variant[]: .traffic.p_3204_t_e1
-	variant[]: .traffic.p_3204_t_e2
-	variant[]: .traffic.p_3204_t_i0
-	variant[]: .traffic.p_3204_t_i1
-	variant[]: .traffic.p_3204_t_i2
-	variant[]: .traffic.p_3204_t_t0
-	variant[]: .traffic.p_3204_t_t1
-	variant[]: .traffic.p_3204_t_t2
+	variant[]: traffic.p_3204.tr_ed0
+	variant[]: traffic.p_3204.tr_ed1
+	variant[]: traffic.p_3204.tr_ed2
+	variant[]: traffic.p_3204.tr_is0
+	variant[]: traffic.p_3204.tr_is1
+	variant[]: traffic.p_3204.tr_is2
+	variant[]: traffic.p_3204.tr_td0
+	variant[]: traffic.p_3204.tr_td1
+	variant[]: traffic.p_3204.tr_td2
 
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_tr.chassis
+vehicle_accessory: .p_3204.tr.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_tr.fwheel
+vehicle_wheel_accessory: .p_3204.tr.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_tr.rwheel
+vehicle_wheel_accessory: .p_3204.tr.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
 
-traffic_vehicle : .traffic.p_3204_t_e0
+traffic_vehicle : traffic.p_3204.tr_ed0
 {
-	accessories[]: .p_3204_t_e0.chassis
-	accessories[]: .p_3204_t_e0.fwheel
-	accessories[]: .p_3204_t_e0.rwheel
+	accessories[]: .p_3204.tr_ed0.chassis
+	accessories[]: .p_3204.tr_ed0.fwheel
+	accessories[]: .p_3204.tr_ed0.rwheel
 
 	max_speed: 130
 
@@ -205,39 +205,39 @@ traffic_vehicle : .traffic.p_3204_t_e0
 
 	spawn_ratio: 0.01
 
-	spawn_condition[]: .traffic.p_3204_t_e0.edirne.condition.city
+	spawn_condition[]: traffic.p_3204.tr_ed0.edirne.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_e0.chassis
+vehicle_accessory: .p_3204.tr_ed0.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e0.fwheel
+vehicle_wheel_accessory: .p_3204.tr_ed0.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e0.rwheel
+vehicle_wheel_accessory: .p_3204.tr_ed0.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_e0.edirne.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_ed0.edirne.condition.city
 {
 	# spawn only near city with specified name
 	type: city
 	str_param[]: "edirne"
 }
 
-traffic_vehicle : .traffic.p_3204_t_e1
+traffic_vehicle : traffic.p_3204.tr_ed1
 {
-	accessories[]: .p_3204_t_e1.chassis
-	accessories[]: .p_3204_t_e1.fwheel
-	accessories[]: .p_3204_t_e1.rwheel
+	accessories[]: .p_3204.tr_ed1.chassis
+	accessories[]: .p_3204.tr_ed1.fwheel
+	accessories[]: .p_3204.tr_ed1.rwheel
 
 	max_speed: 130
 
@@ -252,28 +252,28 @@ traffic_vehicle : .traffic.p_3204_t_e1
 
 	color[]: (0.9, 0.9, 0.9) 				#white
 
-	spawn_condition[]: .traffic.p_3204_t_e1.edirne.condition.city
+	spawn_condition[]: traffic.p_3204.tr_ed1.edirne.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_e1.chassis
+vehicle_accessory: .p_3204.tr_ed1.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e1.fwheel
+vehicle_wheel_accessory: .p_3204.tr_ed1.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e1.rwheel
+vehicle_wheel_accessory: .p_3204.tr_ed1.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_e1.edirne.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_ed1.edirne.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -281,11 +281,11 @@ traffic_spawn_condition: .traffic.p_3204_t_e1.edirne.condition.city
 }
 
 
-traffic_vehicle : .traffic.p_3204_t_e2
+traffic_vehicle : traffic.p_3204.tr_ed2
 {
-	accessories[]: .p_3204_t_e2.chassis
-	accessories[]: .p_3204_t_e2.fwheel
-	accessories[]: .p_3204_t_e2.rwheel
+	accessories[]: .p_3204.tr_ed2.chassis
+	accessories[]: .p_3204.tr_ed2.fwheel
+	accessories[]: .p_3204.tr_ed2.rwheel
 
 	max_speed: 130
 
@@ -300,39 +300,39 @@ traffic_vehicle : .traffic.p_3204_t_e2
 	
 	color[]: (0.9, 0.9, 0.9) 				#white
 
-	spawn_condition[]: .traffic.p_3204_t_e2.edirne.condition.city
+	spawn_condition[]: traffic.p_3204.tr_ed2.edirne.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_e2.chassis
+vehicle_accessory: .p_3204.tr_ed2.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers2.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e2.fwheel
+vehicle_wheel_accessory: .p_3204.tr_ed2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_e2.rwheel
+vehicle_wheel_accessory: .p_3204.tr_ed2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_e2.edirne.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_ed2.edirne.condition.city
 {
 	# spawn only near city with specified name
 	type: city
 	str_param[]: "edirne"
 }
 
-traffic_vehicle : .traffic.p_3204_t_i0
+traffic_vehicle : traffic.p_3204.tr_is0
 {
-	accessories[]: .p_3204_t_i0.chassis
-	accessories[]: .p_3204_t_i0.fwheel
-	accessories[]: .p_3204_t_i0.rwheel
+	accessories[]: .p_3204.tr_is0.chassis
+	accessories[]: .p_3204.tr_is0.fwheel
+	accessories[]: .p_3204.tr_is0.rwheel
 
 	max_speed: 130
 
@@ -349,28 +349,28 @@ traffic_vehicle : .traffic.p_3204_t_i0
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
 
-	spawn_condition[]: .traffic.p_3204_t_i0.istanbul.condition.city
+	spawn_condition[]: traffic.p_3204.tr_is0.istanbul.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_i0.chassis
+vehicle_accessory: .p_3204.tr_is0.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i0.fwheel
+vehicle_wheel_accessory: .p_3204.tr_is0.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i0.rwheel
+vehicle_wheel_accessory: .p_3204.tr_is0.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_i0.istanbul.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_is0.istanbul.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -380,11 +380,11 @@ traffic_spawn_condition: .traffic.p_3204_t_i0.istanbul.condition.city
 
 
 
-traffic_vehicle : .traffic.p_3204_t_i1
+traffic_vehicle : traffic.p_3204.tr_is1
 {
-	accessories[]: .p_3204_t_i1.chassis
-	accessories[]: .p_3204_t_i1.fwheel
-	accessories[]: .p_3204_t_i1.rwheel
+	accessories[]: .p_3204.tr_is1.chassis
+	accessories[]: .p_3204.tr_is1.fwheel
+	accessories[]: .p_3204.tr_is1.rwheel
 
 	max_speed: 130
 
@@ -400,28 +400,28 @@ traffic_vehicle : .traffic.p_3204_t_i1
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
 
-	spawn_condition[]: .traffic.p_3204_t_i1.istanbul.condition.city
+	spawn_condition[]: traffic.p_3204.tr_is1.istanbul.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_i1.chassis
+vehicle_accessory: .p_3204.tr_is1.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i1.fwheel
+vehicle_wheel_accessory: .p_3204.tr_is1.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i1.rwheel
+vehicle_wheel_accessory: .p_3204.tr_is1.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_i1.istanbul.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_is1.istanbul.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -429,11 +429,11 @@ traffic_spawn_condition: .traffic.p_3204_t_i1.istanbul.condition.city
 }
 
 
-traffic_vehicle : .traffic.p_3204_t_i2
+traffic_vehicle : traffic.p_3204.tr_is2
 {
-	accessories[]: .p_3204_t_i2.chassis
-	accessories[]: .p_3204_t_i2.fwheel
-	accessories[]: .p_3204_t_i2.rwheel
+	accessories[]: .p_3204.tr_is2.chassis
+	accessories[]: .p_3204.tr_is2.fwheel
+	accessories[]: .p_3204.tr_is2.rwheel
 
 	max_speed: 130
 
@@ -449,28 +449,28 @@ traffic_vehicle : .traffic.p_3204_t_i2
 	color[]: (0.8711, 0.8421, 0.5493) #yellow
 	color[]: (0.3743, 0.6977, 0.8349) #sky
 
-	spawn_condition[]: .traffic.p_3204_t_i2.istanbul.condition.city
+	spawn_condition[]: traffic.p_3204.tr_is2.istanbul.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_i2.chassis
+vehicle_accessory: .p_3204.tr_is2.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers2.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i2.fwheel
+vehicle_wheel_accessory: .p_3204.tr_is2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_i2.rwheel
+vehicle_wheel_accessory: .p_3204.tr_is2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_i2.istanbul.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_is2.istanbul.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -478,11 +478,11 @@ traffic_spawn_condition: .traffic.p_3204_t_i2.istanbul.condition.city
 }
 
 
-traffic_vehicle : .traffic.p_3204_t_t0
+traffic_vehicle : traffic.p_3204.tr_td0
 {
-	accessories[]: .p_3204_t_t0.chassis
-	accessories[]: .p_3204_t_t0.fwheel
-	accessories[]: .p_3204_t_t0.rwheel
+	accessories[]: .p_3204.tr_td0.chassis
+	accessories[]: .p_3204.tr_td0.fwheel
+	accessories[]: .p_3204.tr_td0.rwheel
 
 	max_speed: 130
 
@@ -501,28 +501,28 @@ traffic_vehicle : .traffic.p_3204_t_t0
 	color[]: (0.2761, 0.9156, 0.3323) #green
 	color[]: (1.0000, 0.3414, 0.0775) #orange
 
-	spawn_condition[]: .traffic.p_3204_t_t0.tekirdag.condition.city
+	spawn_condition[]: traffic.p_3204.tr_td0.tekirdag.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_t0.chassis
+vehicle_accessory: .p_3204.tr_td0.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/chassis.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t0.fwheel
+vehicle_wheel_accessory: .p_3204.tr_td0.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t0.rwheel
+vehicle_wheel_accessory: .p_3204.tr_td0.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_t0.tekirdag.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_td0.tekirdag.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -530,11 +530,11 @@ traffic_spawn_condition: .traffic.p_3204_t_t0.tekirdag.condition.city
 }
 
 
-traffic_vehicle : .traffic.p_3204_t_t1
+traffic_vehicle : traffic.p_3204.tr_td1
 {
-	accessories[]: .p_3204_t_t1.chassis
-	accessories[]: .p_3204_t_t1.fwheel
-	accessories[]: .p_3204_t_t1.rwheel
+	accessories[]: .p_3204.tr_td1.chassis
+	accessories[]: .p_3204.tr_td1.fwheel
+	accessories[]: .p_3204.tr_td1.rwheel
 
 	max_speed: 130
 
@@ -552,28 +552,28 @@ traffic_vehicle : .traffic.p_3204_t_t1
 	color[]: (0.2761, 0.9156, 0.3323) #green
 	color[]: (1.0000, 0.3414, 0.0775) #orange
 
-	spawn_condition[]: .traffic.p_3204_t_t1.tekirdag.condition.city
+	spawn_condition[]: traffic.p_3204.tr_td1.tekirdag.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_t1.chassis
+vehicle_accessory: .p_3204.tr_td1.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers1.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t1.fwheel
+vehicle_wheel_accessory: .p_3204.tr_td1.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t1.rwheel
+vehicle_wheel_accessory: .p_3204.tr_td1.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_t1.tekirdag.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_td1.tekirdag.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -581,11 +581,11 @@ traffic_spawn_condition: .traffic.p_3204_t_t1.tekirdag.condition.city
 }
 
 
-traffic_vehicle : .traffic.p_3204_t_t2
+traffic_vehicle : traffic.p_3204.tr_td2
 {
-	accessories[]: .p_3204_t_t2.chassis
-	accessories[]: .p_3204_t_t2.fwheel
-	accessories[]: .p_3204_t_t2.rwheel
+	accessories[]: .p_3204.tr_td2.chassis
+	accessories[]: .p_3204.tr_td2.fwheel
+	accessories[]: .p_3204.tr_td2.rwheel
 
 	max_speed: 130
 
@@ -603,28 +603,28 @@ traffic_vehicle : .traffic.p_3204_t_t2
 	color[]: (0.2761, 0.9156, 0.3323) #green
 	color[]: (1.0000, 0.3414, 0.0775) #orange
 
-	spawn_condition[]: .traffic.p_3204_t_t2.tekirdag.condition.city
+	spawn_condition[]: traffic.p_3204.tr_td2.tekirdag.condition.city
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_t_t2.chassis
+vehicle_accessory: .p_3204.tr_td2.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/passengers2.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t2.fwheel
+vehicle_wheel_accessory: .p_3204.tr_td2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_t_t2.rwheel
+vehicle_wheel_accessory: .p_3204.tr_td2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
 }
-traffic_spawn_condition: .traffic.p_3204_t_t2.tekirdag.condition.city
+traffic_spawn_condition: traffic.p_3204.tr_td2.tekirdag.condition.city
 {
 	# spawn only near city with specified name
 	type: city
@@ -632,11 +632,11 @@ traffic_spawn_condition: .traffic.p_3204_t_t2.tekirdag.condition.city
 }
 
 
-traffic_vehicle : traffic.p_3204_ru
+traffic_vehicle : traffic.p_3204.ru
 {
-	accessories[]: .p_3204_ru.chassis
-	accessories[]: .p_3204_ru.fwheel
-	accessories[]: .p_3204_ru.rwheel
+	accessories[]: .p_3204.ru.chassis
+	accessories[]: .p_3204.ru.fwheel
+	accessories[]: .p_3204.ru.rwheel
 
 	max_speed: 130
 
@@ -653,25 +653,25 @@ traffic_vehicle : traffic.p_3204_ru
 
 	spawn_ratio: 0.0
 	
-	variant[]: .traffic.p_3204_ru2
-	variant[]: .traffic.p_3204_ru3
+	variant[]: traffic.p_3204.ru2
+	variant[]: traffic.p_3204.ru3
 
 
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_ru.chassis
+vehicle_accessory: .p_3204.ru.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/ru1.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru.fwheel
+vehicle_wheel_accessory: .p_3204.ru.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru.rwheel
+vehicle_wheel_accessory: .p_3204.ru.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
@@ -680,11 +680,11 @@ vehicle_wheel_accessory: .p_3204_ru.rwheel
 
 
 
-traffic_vehicle : .traffic.p_3204_ru2
+traffic_vehicle : traffic.p_3204.ru2
 {
-	accessories[]: .p_3204_ru2.chassis
-	accessories[]: .p_3204_ru2.fwheel
-	accessories[]: .p_3204_ru2.rwheel
+	accessories[]: .p_3204.ru2.chassis
+	accessories[]: .p_3204.ru2.fwheel
+	accessories[]: .p_3204.ru2.rwheel
 
 	max_speed: 130
 
@@ -705,18 +705,18 @@ traffic_vehicle : .traffic.p_3204_ru2
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_ru2.chassis
+vehicle_accessory: .p_3204.ru2.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/ru2.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru2.fwheel
+vehicle_wheel_accessory: .p_3204.ru2.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru2.rwheel
+vehicle_wheel_accessory: .p_3204.ru2.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"
@@ -724,11 +724,11 @@ vehicle_wheel_accessory: .p_3204_ru2.rwheel
 
 
 
-traffic_vehicle : .traffic.p_3204_ru3
+traffic_vehicle : traffic.p_3204.ru3
 {
-	accessories[]: .p_3204_ru3.chassis
-	accessories[]: .p_3204_ru3.fwheel
-	accessories[]: .p_3204_ru3.rwheel
+	accessories[]: .p_3204.ru3.chassis
+	accessories[]: .p_3204.ru3.fwheel
+	accessories[]: .p_3204.ru3.rwheel
 
 	max_speed: 130
 
@@ -749,18 +749,18 @@ traffic_vehicle : .traffic.p_3204_ru3
 @include "drivers_generic.sui"
 }
 
-vehicle_accessory: .p_3204_ru3.chassis
+vehicle_accessory: .p_3204.ru3.chassis
 {
 	data_path: "/def/vehicle/ai/p_3204/ru3.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru3.fwheel
+vehicle_wheel_accessory: .p_3204.ru3.fwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_front.sii"
 }
 
-vehicle_wheel_accessory: .p_3204_ru3.rwheel
+vehicle_wheel_accessory: .p_3204.ru3.rwheel
 {
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/29_steel_double.sii"

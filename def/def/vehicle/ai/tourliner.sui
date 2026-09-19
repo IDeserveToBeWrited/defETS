@@ -531,3 +531,90 @@ vehicle_wheel_accessory: .tourliner.blk_p.rwheel
 	data_path: "/def/vehicle/r_wheel/steel.sii"
 }
 
+
+######## Nordic Horizons - Polar #########################################
+
+
+traffic_vehicle : traffic.tourliner.nor
+{
+	accessories[]: .tourliner.nor.chassis
+	accessories[]: .tourliner.nor.fwheel
+	accessories[]: .tourliner.nor.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 19700
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"	
+
+	tags[]: coach
+
+	spawn_ratio: 0.01
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tourliner.nor.chassis
+{
+	data_path: "/def/vehicle/ai/tourliner/chassis_nor.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.nor.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.nor.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
+
+######## Passenger #
+
+
+traffic_vehicle : traffic.tourliner.nor_p
+{
+	accessories[]: .tourliner.nor_p.chassis
+	accessories[]: .tourliner.nor_p.fwheel
+	accessories[]: .tourliner.nor_p.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 22900
+	engine_power: 324
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+	sound_horn[]: "/sound/traffic/bus_horn_1.soundref"
+
+
+	tags[]: coach
+	tags[]: passenger
+
+	spawn_ratio: 0.1	
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .tourliner.nor_p.chassis
+{
+	data_path: "/def/vehicle/ai/tourliner/chassis_nor_p.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.nor_p.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .tourliner.nor_p.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}
+
