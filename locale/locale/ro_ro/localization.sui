@@ -369,7 +369,7 @@
 	val[]: "Ecran complet"
 
 	key[]: "overlay_fullscreen_deactivate"
-	val[]: "Ieşire ecran complet"
+	val[]: "Ieşire Ecran complet"
 
 	key[]: "overlay_screenshot"
 	val[]: "Captură ecran"
@@ -509,6 +509,9 @@
 
 	key[]: "trailer_job_major_change"
 	val[]: "Nu puteţi schimba tipul de remorcă, corpul sau şasiul acesteia în timpul unei livrări. Finalizaţi livrarea şi încercaţi din nou." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
+
+	key[]: "bus_job_service_refusal"
+	val[]: "Service-ul este indisponibil pentru autocare în timpul unei curse." #+ Shown as message box if user activates a service while on a bus job.
 
 	key[]: "trailer_configurator_invalid_country"
 	val[]: "$ACC$ selectat nu poate fi instalat în afara perimetrului ţării <color value=@@clr_sel@@>$COUNTRIES$." #+ A warning shown when player tries to change trailer chain type or chassis configuration to one that's not valid for configurator country.
@@ -958,7 +961,7 @@
 #@{
 
 	key[]: "to_fullscreen"
-	val[]: "Mod vizualizare" #+ Tooltip for icon which hides ui.
+	val[]: "Previzualizare Ecran complet" #+ Tooltip for icon which hides ui.
 
 	key[]: "set_lights"
 	val[]: "Comutare Lumini" #+ Tooltip for icon which turns truck lights on and off.
@@ -1105,7 +1108,7 @@
 	val[]: "Actualizare joc detectată! Pentru a preveni erori ale compatibilităţii salvărilor datorate modificărilor asupra jocului, toate livrările nefinalizate au fost anulate fără nicio penalizare." #+ Game state reset info message
 
 	key[]: "save_game_reset_teleport"
-	val[]: "Actualizare joc detectată!<br><br>Pentru a preveni erori ale compatibilităţii salvărilor, toate livrările nefinalizate au fost anulate fără nicio penalizare. Parcarea camionului într-un loc sigur este necesară.<br><br>Selectaţi o destinaţie pentru călătoria rapidă pentru a continua." #+ Game state reset info message, plus free teleport
+	val[]: "Actualizare joc detectată!<br><br>Pentru a preveni erori ale compatibilităţii salvărilor, toate livrările nefinalizate au fost anulate fără nicio penalizare. Vehiculul dvs. va fi mutat într-o locaţie sigură.<br><br>Vă rugăm să selectaţi o destinaţie pentru călătoria rapidă pentru a continua." #+ Game state reset info message, plus free teleport
 
 	key[]: "save_in_progress"
 	val[]: "Se salvează..." #+ Game save indicator message.
@@ -1416,7 +1419,7 @@
 	val[]: "Distanţă parcursă pe uscat" #+ Shown in the route info box in the line indicating length of the land route. For example "Land distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 km"
 
 	key[]: "no_route"
-	val[]: "Selectaţi o cursă pentru detalii." #+ Text shown centred in the route info box when no job is selected.
+	val[]: "Selectaţi o ofertă pentru a vedea detaliile rutei" #+ Text shown centred in the route info box when no job is selected.
 
 	key[]: "incomplete_route"
 	val[]: "Incomplet" #+ Shown instead of distance or time on the world map if only partial route was found.
@@ -2024,7 +2027,7 @@
 	val[]: "Nume DLC" #+ Prefix on the button in format "Name of DLC - Going East!". Please keep it as short as possible.
 
 	key[]: "sort_by_release_date"
-	val[]: "Data publicare" #+ Button in sort by droplist. Please keep it as short as possible.
+	val[]: "Dată publicare" #+ Button in sort by droplist. Please keep it as short as possible.
 
 	key[]: "sort_by_name"
 	val[]: "Nume" #+ Button in sort by droplist. Please keep it as short as possible.
@@ -2147,13 +2150,13 @@
 	val[]: "Niciun DLC disponibil în acest moment."
 
 	key[]: "dlc_browser_catalogue_canceled"
-	val[]: "Operaţiune catalog anulată." #+ The operation was cancelled by the player, and finished correctly.
+	val[]: "Operarea catalogului a fost anulată." #+ The operation was cancelled by the player, and finished correctly.
 
 	key[]: "dlc_browser_catalogue_unknown_error"
-	val[]: "Eroare catalog necunoscută." #+ Catalogue unknown error.
+	val[]: "Catalogul a întâmpinat o eroare necunoscută." #+ Catalogue unknown error.
 
 	key[]: "dlc_browser_catalogue_not_initialized"
-	val[]: "Catalog neiniţializat." #+ Error caused by either module or library not being properly initialized (yet).
+	val[]: "Catalogul nu este iniţializat." #+ Error caused by either module or library not being properly initialized (yet).
 
 	key[]: "dlc_browser_catalogue_incompatible_state"
 	val[]: "Operaţiunea nu a putut fi începută deoarece în prezent este în curs de desfăşurare o operaţiune ce o blochează." #+ Error caused attempting to start an operation when another, blocking is in progress
@@ -2162,25 +2165,25 @@
 	val[]: "O parte din datele furnizate sunt incorecte sau incomplete." #+ Bad data were supplied either by caller or by first party.
 
 	key[]: "dlc_browser_catalogue_product_misssing"
-	val[]: "Se încearcă efectuarea unei operaţiuni cu un produs care fie lipseşte din catalogul nostru local, fie din catalogul back end al furnizorului principal." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
+	val[]: "Se încearcă efectuarea unei operaţiuni cu un produs care fie lipseşte din catalogul nostru local, fie din catalogul back end al platformei." #+ Trying to request operation with a product that is either missing from our local caltalogue or the first party back end catalogue.
 
 	key[]: "dlc_browser_catalogue_sending_failed"
-	val[]: "Solicitare catalog eşuată." #+ The request failed, accompanied error message/ other logs should explain why.
+	val[]: "Solicitarea catalogului a eşuat." #+ The request failed, accompanied error message/ other logs should explain why.
 
 	key[]: "dlc_browser_catalogue_parse_failed"
 	val[]: "Răspunsul primit a fost incorect format." #+ The respone received was malformed.
 
 	key[]: "dlc_browser_catalogue_first_party_fail"
-	val[]: "Eroare catalog internă." #+ First party api call failed for reason beyond our capabilities to fix.
+	val[]: "Catalogul a întâmpinat o eroare internă." #+ First party api call failed for reason beyond our capabilities to fix.
 
 	key[]: "dlc_browser_catalogue_bad_platform"
-	val[]: "Această funcţionalitate nu este prezentă pe platforma curentă." #+ The functionality is not present on current platform.
+	val[]: "Funcţionalitatea este indisponibilă pe platforma curentă." #+ The functionality is not present on current platform.
 
 	key[]: "dlc_browser_catalogue_try_later"
-	val[]: "Serviciul catalog nu este disponibil în acest moment, solicitantul ar trebui să încerce mai târziu." #+ The service is currently unavailable, the caller should try later.
+	val[]: "Serviciul catalog nu este disponibil în acest moment. Încercaţi mai târziu." #+ The service is currently unavailable, the caller should try later.
 
 	key[]: "dlc_browser_commerce_module_internal_error"
-	val[]: "Eroare catalog internă." #+ Catalogue internal error.
+	val[]: "Catalogul a întâmpinat o eroare internă." #+ Catalogue internal error.
 #@}
 
 #+ Activation screen
@@ -3354,7 +3357,7 @@
 	val[]: "Alegeţi dacă vor fi afişate informaţii despre fusul orar alături de ora curentă."
 
 	key[]: "show_cutscenes_op_tooltip" # - Gameplay, Simple
-	val[]: "Activează scene introductive redate de obicei după achiziţia unui camion sau modernizarea garajului sau în timpul îmbarcării pasagerilor."
+	val[]: "Activează scene introductive redate de obicei după achiziţia unui vehicul, modernizarea unui garaj sau în timpul îmbarcării pasagerilor."
 
 	key[]: "show_blockers_op_tooltip" # - Gameplay, Simple
 	val[]: "Alegeţi dacă semnele semi-transparente de blocare sunt afişate pe drumuri ce nu pot fi accesate."
@@ -3908,7 +3911,7 @@
 	val[]: "Lumini de Interior"
 
 	key[]: "o_im_light_horn"
-	val[]: "Flash faruri"
+	val[]: "Flash Faruri"
 
 	key[]: "o_im_horn"
 	val[]: "Claxon"
@@ -4447,7 +4450,7 @@
 	val[]: "Atribuie un buton pentru afişarea meniului Opţiuni Widget."
 
 	key[]: "o_im_adviser_eta_op_tooltip"
-	val[]: "Atribuie un buton pentru schimbarea afişării informaţiilor destinaţiei din Sistemul de Navigaţie.<br>Puteţi schimba daca distanţa sau ETA-ul vor fi afişate pentru următorul punct de pe traseu sau pentru destinaţia finală."
+	val[]: "Atribuie un buton pentru schimbarea afişării informaţiilor destinaţiei din Sistemul de Navigaţie.<br>Puteţi schimba daca distanţa sau TES-ul (timp estimativ de sosire) vor fi afişate pentru următorul punct de pe traseu sau pentru destinaţia finală."
 
 	key[]: "o_im_assistent_action1_op_tooltip"
 	val[]: "Atribuie un buton pentru acţiunea corespunzătoare din meniul „Servicii şi Reglaje”."
@@ -5503,7 +5506,7 @@
 	val[]: "MEDIU AMBIANT" #+ Title of the 'Environment' section. Please keep in upper case where possible.
 
 	key[]: "fullscreen_mode"
-	val[]: "Pe tot ecranul" #+ Checkbox to enable the full screen mode.
+	val[]: "Mod Ecran complet" #+ Checkbox to enable the full screen mode.
 
 	key[]: "brightness"
 	val[]: "Luminozitate / HDR" #+ Button opening brightness or HDR brightness setup.
@@ -5873,7 +5876,7 @@
 	val[]: "Alt Dreapta"
 
 	key[]: "i_numlck"
-	val[]: "NumLock"
+	val[]: "Num Lock"
 
 	key[]: "i_home"
 	val[]: "Home"
@@ -6378,7 +6381,7 @@
 	val[]: "Recalculare..." #+ Shown temporarily when navigation route is being recalculated.
 
 	key[]: "adviser_eta"
-	val[]: "ETA:" #+ For example "ETA: Sat 14:20 CEST"
+	val[]: "TES:" #+ For example "ETA: Sat 14:20 CEST"
 
 	key[]: "job_income"
 	val[]: "Venit net" #+ For example "Job income: E6,526"
@@ -9437,7 +9440,7 @@
 	val[]: "Bilanţ cont: $MONEY$" #+ The $MONEY$ is replaced with the real amount of money on the bank account.
 
 	key[]: "bank_loan_unlock_requirement"
-	val[]: "Avansaţi-vă cariera în Modul Camion pentru a accesa împrumutul."
+	val[]: "Avansaţi-vă cariera pentru a accesa împrumutul."
 
 	key[]: "bank_loan_locked_wrong_mode"
 	val[]: "Avansaţi-vă cariera în $MODE$ pentru a accesa împrumutul."
@@ -9515,6 +9518,9 @@
 
 	key[]: "bank_sell_report_trailer"
 	val[]: "Remorcă $NAME$, valoare estimată: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
+
+	key[]: "bank_sell_report_bus"
+	val[]: "Coach $NAME$, estimated value: $MONEY$" #+ Message used to show information about a bus to sell to cover debt.
 
 	key[]: "bank_sell_report_garage"
 	val[]: "Garaj în $CITY$, valoare estimată: $MONEY$"
@@ -11223,7 +11229,7 @@
 	val[]: "Iluminare Bord" #+ Label of slider controlling intensity of dashboard backlight.
 
 	key[]: "cabin_light"
-	val[]: "Lumini interioare"  #+ Checkbox enabling the interior lights in the passenger part of the coach.
+	val[]: "Lumini de interior"  #+ Checkbox enabling the interior lights in the passenger part of the coach.
 #@}
 
 
@@ -16137,7 +16143,7 @@
 	val[]: "Deschideţi pagina Workshop"  #+ Button text. Open Steam Workshop page of the missing Workshop mod.
 
 	key[]: "missing_dependencies_info"
-	val[]: "Această salvare depinde de pachete DLC sau mod-uri ce lipsesc, prezentate mai jos. Obţineţi mai multe informaţii selectând elementele din listă." #+ The info about the missing dependencies dialog.
+	val[]: "Această salvare depinde de DLC-uri sau MOD-uri ce lipsesc în prezent. Acestea sunt afişate mai jos. Prin selectarea unui element din listă, puteţi obţine mai multe informaţii despre fiecare în parte." #+ The info about the missing dependencies dialog.
 
 	key[]: "missing_dependencies_fatal_error"
 	val[]: "Această salvare depinde de un pachet obligatoriu DLC sau un mod. Este necesar să rezolvaţi această situaţie, înainte de a continua încărcarea." #+ Info shown if the continue operation is blocked because the save depends on some required dlc (e.g. map or vehicle)
@@ -16210,7 +16216,7 @@
 	val[]: "CURSĂ ÎN DESFĂŞURARE"
 
 	key[]: "drive_active_job"
-	val[]: "Aveţi o cursă activă într-un alt mod.<br offset=10>Puteţi să o abandonaţi sau să afişaţi detalii în $VEHICLE$ @@vehicle_mode@@.<br><br><br>$ADDITIONAL_INFO$"
+	val[]: "Aveţi o cursă activă într-un alt mod.<br offset=10>Treceţi la $VEHICLE$ pentru a vizualiza detaliile acesteia sau renunţaţi la cursă.<br><br><br>$ADDITIONAL_INFO$"
 
 	key[]: "drive_active_job_yes"
 	val[]: "@@abort_job@@"
@@ -16418,11 +16424,11 @@
 #@{
 	#+ The name of the pop-up window for oversize mission when it's succesfully delivered.
 	key[]: "oversize_job_done_desc"
-	val[]: "Transport Specializat livrat cu succes!"
+	val[]: "Misiunea Transport Special este finalizată!"
 
 	#+ The name of the pop-up window for oversize mission failing. Must be UPPER CASE.
 	key[]: "ovesize_failure_dialog_title"
-	val[]: "MISIUNE EŞUATĂ!"
+	val[]: "MISIUNE EŞUATĂ"
 
 	#+ Text on the button for giving up on the oversized cargo delivery.
 	key[]: "abandon_job"
@@ -16434,19 +16440,19 @@
 
 	#+ Text showed when player will hit the escort vehicle and oversized cargo delivery is over because of that.
 	key[]: "oversize_escort_crash_player_failure_dialog_text"
-	val[]: "Aţi avariat un vehicul escortă!<br>Puteţi încărca un punct de referinţă anterior sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
+	val[]: "Aţi avariat un vehicul escortă!<br>Vă puteţi reîncărca poziţia anterioară sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
 
 	#+ Text showed when player lead the escort vehicle to crash with another traffic ai.
 	key[]: "oversize_escort_crash_ai_failure_dialog_text"
-	val[]: "Vehiculul escortă a fost avariat de un alt participant la trafic.<br>Puteţi încărca un punct de referinţă anterior sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
+	val[]: "Vehiculul escortă a fost avariat de un alt participant la trafic.<br>Vă puteţi reîncărca poziţia anterioară sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
 
 	#+ Text showed when player will drive off the route and Special Transport is over because of that.
 	key[]: "oversize_off_route_failure_dialog_text"
-	val[]: "Nu aţi urmat ruta prestabilită.<br>Puteţi încărca un punct de referinţă anterior sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
+	val[]: "Nu aţi urmat ruta prestabilită.<br>Vă puteţi reîncărca poziţia anterioară sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
 
 	#+ Text showed when player will drive away from the escort vehicles and Special Transport is over because of that.
 	key[]: "oversize_not_following_failure_dialog_text"
-	val[]: "Nu aţi reuşit să rămâneţi între vehiculele escortă.<br>Puteţi încărca un punct de referinţă anterior sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
+	val[]: "Nu aţi reuşit să rămâneţi între vehiculele escortă.<br>Vă puteţi reîncărca poziţia anterioară sau puteţi anula livrarea achitând o penalizare în valoare de $MONEY$."
 
 	#+ Text showed when fading after player will drive away from escort vehicles and the Special Transport is over.
 	key[]: "oversize_not_following_failure_fade_text"
@@ -16454,7 +16460,7 @@
 
 	#+ Text showed when fading after player will crash the escort vehicles and the Special Transport is over.
 	key[]: "oversize_escort_crash_player_failure_fade_text"
-	val[]: "Aţi avariat vehiculul escortă!"
+	val[]: "Aţi avariat un vehicul escortă!"
 
 	#+ Text showed when fading after player will lead the escort vehicles into crash with another ai and hence the Special Transport job is over.
 	key[]: "oversize_escort_crash_ai_failure_fade_text"
@@ -16470,7 +16476,7 @@
 
 	#+ Text in the upper left corner while job is active, that small window/menu of active job.
 	key[]: "special_job_resumed"
-	val[]: "Livrare Specială"
+	val[]: "Livrare Transport Special"
 
 	#+ Text GPS Advisor when player will leave the space between escorting vehicles.
 	key[]: "wrong_lane_warning"
@@ -16530,7 +16536,7 @@
 
 	#+ Oversize tutorial intro text.
 	key[]: "oversize_tutorial_intro"
-	val[]: "Sunteţi pe cale să transportaţi o încărcătură de tip Transport Agabaritic! Sunt prezente două vehicule escortă ce vă vor ghida. Vă rugăm să fiţi atenţi şi urmaţi indicaţiile acestora şi notificările sugerate. Transporturile speciale ca acesta nu opresc la culoarea roşie a semaforului şi au prioritate de trecere în majoritatea situaţiilor. Pe parcursul acestor livrări, progresul realizat va fi salvat în mod frecvent în anumite puncte de referinţă."
+	val[]: "Sunteţi pe cale să transportaţi o încărcătură tip Transport Special! Sunt prezente două vehicule escortă ce vă vor ghida. Vă rugăm să fiţi atenţi şi urmaţi indicaţiile acestora şi notificările sugerate. Transporturile speciale ca acesta nu opresc la culoarea roşie a semaforului şi au prioritate de trecere în majoritatea situaţiilor. Pe parcursul acestor livrări, progresul realizat va fi salvat în mod frecvent în anumite puncte de referinţă."
 
 	#+ Oversize tutorial warnings sub-title.
 	key[]: "oversize_tutorial_warnings_subtitle"
@@ -16553,7 +16559,7 @@
 
 	#+ Oversize tutorial outro text.
 	key[]: "oversize_tutorial_outro"
-	val[]: "Dacă nu urmaţi aceste reguli, livrarea specială va eşua!"
+	val[]: "Dacă nu urmaţi aceste reguli, misiunea dvs. Transport Special poate eşua!"
 
 	#+ First changle lane maneuver popup text.
 	key[]: "oversize_tutorial_popup_1"
@@ -16573,11 +16579,11 @@
 
 	#+ Warning when player want to use assistance call during oversize mission.
 	key[]: "oversize_assistance_reason"
-	val[]: "Nu puteţi apela asistenţa rutieră, in timpul unei Livrări Speciale."
+	val[]: "Nu puteţi apela asistenţa rutieră în timpul unei misiuni Transport Special."
 
 	#+ Warning when player want to use ferry transport during oversize mission.
 	key[]: "oversize_ferry_reason"
-	val[]: "Nu puteţi folosi feribotul în timpul unui Transport Special"
+	val[]: "Nu puteţi utiliza un feribot în timpul unei misiuni Transport Special."
 
 	#+ Message when player is resting and refueling during the special transport job
 	key[]: "oversize_mission_sleep_fading"
@@ -16599,22 +16605,22 @@
 #+ Strings related to Steam inventory feature.
 #@{
 	key[]: "inventory_loading_failed_content"
-	val[]: "O eroare a apărut la încărcarea inventarului Steam.<br><br>$ERROR$<br><br>Selectaţi 'Continuă' pentru a menţine elementul activat. Jocul va reîncerca periodic încărcarea.<br><br>Pentru a evita apariţia acestui mesaj, din nou, puteţi dezactiva temporar elementul. La următoarea pornire a jocului acest conţinut va fi reactivat automat." #+ The error message showed in truck configurator screen when Steam inventory content is not present due to loading error. The $ERROR$ must be keeped untranslated.
+	val[]: "O eroare a apărut la încărcarea conţinutului din Inventar Steam.<br><br>$ERROR$<br><br>Selectaţi „Continuare” pentru a menţine conţinutul activat. Jocul va reîncerca periodic căutarea acestuia.<br><br>Puteţi dezactiva temporar conţinutul pentru a evita apariţia mesajelor de eroare, precum acesta. La următoarea lansare a jocului acest conţinut va fi reactivat automat." #+ The error message showed in truck configurator screen when Steam inventory content is not present due to loading error. The $ERROR$ must be keeped untranslated.
 
 	key[]: "inventory_loading_request_failed_content"
-	val[]: "Eroare descărcare inventar Steam" #+ The error message showed in truck configurator screen when game fails to send Steam inventory request.
+	val[]: "Nu s-au putut descărca articole din Inventar Steam." #+ The error message showed in truck configurator screen when game fails to send Steam inventory request.
 
 	key[]: "inventory_wait_t"
 	val[]: "INVENTAR STEAM" #+ Title of the inventory wait dialog.
 
 	key[]: "inventory_wait_msg"
-	val[]: "Se încarcă Inventarul Steam" #+ Message describing why player has to wait for inventory items to be loaded.
+	val[]: "Încărcare articole din Inventar Steam..." #+ Message describing why player has to wait for inventory items to be loaded.
 
 	key[]: "new_inventory_items_t"
 	val[]: "ARTICOLE NOI ÎN STOC" #+ Title of the window displaying list of the new inventory items.
 
 	key[]: "new_inventory_items_help"
-	val[]: "Au fost detectate noi articole în Inventarul Steam." #+ The help text for new inventory items dialog.
+	val[]: "Au fost detectate noi articole în Inventar Steam." #+ The help text for new inventory items dialog.
 
 	key[]: "vehicle_accessory"
 	val[]: "Accesorii Vehicul" #+ Name of the inventory items category.
@@ -16635,10 +16641,10 @@
 	val[]: "Reîncercaţi mai târziu" #+ The button continuing the flow of the game even if inventory failed to load - it will be loaded again when game will need it's data.
 
 	key[]: "inventory_items_sold_t"
-	val[]: "Inventar Steam" #+ The title of the dialog showed when user sells or trades some inventory item.
+	val[]: "INVENTAR STEAM" #+ The title of the dialog showed when user sells or trades some inventory item.
 
 	key[]: "inventory_items_sold_text"
-	val[]: "Unele elemente au fost eliminate din inventarul dvs. Steam. Nu veţi mai putea să le achiziţionaţi din Configuratorul de Camioane.<br><br>Acest lucru nu afectează elementele instalate în prezent." #+ The text showed in the dialog displayed when user sells or trades some inventory item.
+	val[]: "Anumite articole au fost eliminate din Inventarul Steam al dvs. Nu veţi mai putea să le achiziţionaţi din Configuratorul de Camioane.<br><br>Acest lucru nu afectează elementele instalate în prezent." #+ The text showed in the dialog displayed when user sells or trades some inventory item.
 #@}
 
 
@@ -16747,7 +16753,7 @@
 	val[]: "Urmaţi ruta spre compania de destinaţie"
 
 	key[]: "cargo_load_waiting1"
-	val[]: "Marfa este pregătită pentru încărcare. Avansaţi la <br> zona de încărcare."
+	val[]: "Mărfurile sunt pregătite pentru încărcare. Continuaţi spre zona de încărcare."
 
 	key[]: "cargo_load_waiting2"
 	val[]: "Deplasaţi-vă către steagul verde de pe hartă."
@@ -17080,7 +17086,7 @@
 	val[]: "Nu puteţi accesa ajustările cabinei întrucât nu conduceţi în prezent niciun camion."
 
 	key[]: "link_locked_msg_skills"
-	val[]: "În prezent nu sunt disponibile nicio aptitudine. Avansaţi la un nivel superior pentru a debloca acest ecran."
+	val[]: "În prezent nu este disponibilă nicio abilitate. Avansaţi la un nivel superior pentru a debloca acest ecran."
 
 	key[]: "link_locked_company_overview"
 	val[]: "Pentru a accesa managerul companiei, trebuie să deţineţi cel puţin un autovehicul."
@@ -18406,7 +18412,7 @@
 	val[]: "Eroarea, livrarea este neiniţializată."
 
 	key[]: "mp_job_unknown_error"
-	val[]: "A apărut e eroare neprevăzută şi operaţiunea nu a fost finalizată."
+	val[]: "A apărut o eroare necunoscută şi operaţiunea nu a fost finalizată."
 
 	key[]: "mp_job_has_some_job"
 	val[]: "Aveţi deja o livrare în desfăşurare, astfel că nu puteţi accepta încă una." #+ internal error message
@@ -18421,7 +18427,7 @@
 	val[]: "Companiile oferite nu au nicio cale de navigaţie între ele." #+ internal error message
 
 	key[]: "mp_job_missing_cargo"
-	val[]: "Nu s-a putut găsi nicio încărcătură pentru livrare. Companiile nu au nicio încărcătură de transportat între ele."
+	val[]: "Nu s-a putut găsi încărcătură pentru livrare. Companiile nu au nicio încărcătură de transportat între acestea."
 
 	key[]: "mp_job_wrong_cargo"
 	val[]: "Nu aveţi o remorcă compatibilă cu livrarea curentă."
@@ -18460,7 +18466,7 @@
 	val[]: "Aveţi nevoie de propriul echipament pentru a efectua un contract online."
 
 	key[]: "mp_locked_tooltip_special_transport"
-	val[]: "Nu vă puteţi alătura unui Convoi în timpul unui contract de Transporturi Speciale."
+	val[]: "Nu vă puteţi alătura unui Convoi în timpul unei livrări tip Transport Special."
 
 	key[]: "mp_locked_tooltip_dynamic_company"
 	val[]: "Nu vă puteţi alătura unui Convoi din zona unei companii dinamice dezactivate."
@@ -20511,7 +20517,7 @@
 	val[]: "LISTĂ SCHIMBĂRI" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "patch_notes_old_data_warning"
-	val[]: "Conexiunea la server a eşuat, informaţiile pot fi neactualizate."
+	val[]: "Conexiunea la serverul jocului a eşuat, informaţiile pot fi neactualizate."
 
 	key[]: "patch_notes_download_confirm"
 	val[]: "Doriţi să descărcaţi informaţii despre actualizare?<br><br>Activaţi noutăţile din meniul Opţiuni pentru actualizare automată."
@@ -20866,7 +20872,7 @@
 #@}
 
 key[]: "bus_passenger_satisfaction"
-val[]: "Satisfacţie: "
+val[]: "Satisfacţie:"
 
 #+ Bus job selection screen.
 #@{
@@ -20888,10 +20894,10 @@ val[]: "Satisfacţie: "
 #+ During a bus quick job the player drives a company provided bus from start to destination.
 #@{
 	key[]: "bus_job_t"
-	val[]: "CURSE RAPIDE" #+ Title of the screen. Please keep in upper case where possible.
+	val[]: "CURSĂ RAPIDĂ" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "bus_job"
-	val[]: "Curse Rapide" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "Cursă Rapidă" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "bus_job_desc"
 	val[]: "Angajaţi-vă ca şofer profesionist de autocar. Concentraţi-vă exclusiv pe pasagerii dvs. şi la drum. Toate celelalte sunt rezolvate. Alegeţi o linie de autocar şi începeţi să conduceţi." #+ Tooltip for the icon opening the quick job screen.
@@ -21059,7 +21065,7 @@ val[]: "Satisfacţie: "
 #+ Bus job stop cutscene screen.
 #@{
 	key[]: "bus_stop"
-	val[]: "Continuaţi cu deservirea pasagerilor apăsând:"
+	val[]: "Deserviţi această staţie prin apăsarea:"
 
 	key[]: "bus_stop_cutscene_t"
 	val[]: "STAŢIE AUTOBUZ" #+ Title of the screen. Please keep in upper case where possible.
@@ -21083,7 +21089,7 @@ val[]: "Satisfacţie: "
 	val[]: "Dispoziţie pasageri îmbarcaţi"
 
 	key[]: "bus_stop_cutscene_satisfaction_change_label"
-	val[]: "Impactul Deservirii"
+	val[]: "Factori de Satisfacţie"
 
 	key[]: "bus_satisfaction_on_time"
 	val[]: "Sosire la timp"
@@ -21458,7 +21464,7 @@ val[]: "Satisfacţie: "
 	val[]: "Stare tehnică"
 
 	key[]: "garage_currently_driving_t"
-	val[]: "MOMENTAN CONDUS" #+ Keep capitalized
+	val[]: "VEHICUL SELECTAT" #+ Keep capitalized
 #@}
 
 #+ Bus garage screen.
@@ -21524,10 +21530,10 @@ val[]: "Satisfacţie: "
 	val[]: "Cursă Standard"
 
 	key[]: "skill_long_duty_title"
-	val[]: "Sarcini Mai Lungi"
+	val[]: "Curse Mai Lungi"
 
 	key[]: "skill_long_duty_info"
-	val[]: "Abilitatea Sarcini Mai Lungi determină numărul maxim de staţii pe care îl puteţi parcurge într-o cursă."
+	val[]: "Abilitatea Curse Mai Lungi determină numărul maxim de staţii pe care îl puteţi parcurge într-o cursă."
 
 	key[]: "skill_tight_schedule_title"
 	val[]: "Respectare Orar Strâns"
@@ -21626,7 +21632,7 @@ val[]: "Satisfacţie: "
 	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% bonus puncte XP</color> pentru noi tipuri de curse"
 
 	key[]: "tight_schedule_desc_xp_bonus_total"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% mai multe puncte XP bonus</color> în funcţie de tipul cursei"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% bonus puncte XP</color> în funcţie de tipul cursei"
 
 	key[]: "satisfaction_decrease_desc_new"
 	val[]: "Sunt disponibile noi curse ai căror pasageri au o <color value=@@clr_skill_desc_highlight@@>satisfacţie ce scade mai repede</color>"
@@ -21665,10 +21671,10 @@ val[]: "Satisfacţie: "
 	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% venituri mai mari</color> în funcţie de tipul cursei"
 
 	key[]: "low_acceleration_desc_xp_bonus"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% mai multe puncte XP bonus</color> pentru noi tipuri de curse"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% bonus puncte XP</color> pentru noi tipuri de curse"
 
 	key[]: "low_acceleration_desc_xp_bonus_total"
-	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% mai multe puncte XP bonus</color> în funcţie de tipul cursei"
+	val[]: "<color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% bonus puncte XP</color> în funcţie de tipul cursei"
 
 	key[]: "satisfaction_increase_desc"
 	val[]: "Până la <color value=@@clr_skill_desc_highlight@@>$SATISFACTION_INCREASE$% satisfacţie crescută</color> pentru pasagerii din autocar"
@@ -21716,7 +21722,7 @@ val[]: "Satisfacţie: "
 #+ World map.
 #@{
     key[]: "no_gps_different_mode"
-    val[]: "Începeţi să conduceţi pentru a activa navigaţia"
+    val[]: "Conduceţi un vehicul în modul de joc curent pentru a schimba navigaţia"
 #@}
 
 #+ Bus related adviser notifications

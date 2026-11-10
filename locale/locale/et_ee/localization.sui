@@ -510,6 +510,9 @@
 	key[]: "trailer_job_major_change"
 	val[]: "Haagise tüüpi, kere või šassiid ei saa töö ajal muuta. Lõpeta tarne ja proovi siis uuesti." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
 
+	key[]: "bus_job_service_refusal"
+	val[]: "Service is unavailable for coaches during a job." #+ Shown as message box if user activates a service while on a bus job.
+
 	key[]: "trailer_configurator_invalid_country"
 	val[]: "Ei saa paigaldada valitud $ACC$ riigis väljapool <color value=@@clr_sel@@>$COUNTRIES$.\n" #+ A warning shown when player tries to change trailer chain type or chassis configuration to one that's not valid for configurator country.
 
@@ -575,7 +578,7 @@
 	val[]: "Kõrvalistuja nimesilt"
 
 	key[]: "codrv_seat"
-	val[]: "Seat"
+	val[]: "Iste"
 
 	key[]: "cor_def"
 	val[]: "Tuulesuunajad"
@@ -6895,7 +6898,7 @@
 	val[]: "Töö üksikasjad" #+ Widget name for displaying job info.
 
 	key[]: "adv_hud_bus_gmeter"
-	val[]: "G-force meter"
+	val[]: "Kiirendusmõõtur"
 
 	key[]: "adv_hud_bus_gmeter_op_tooltip"
 	val[]: "Displays g-forces acting on the vehicle while driving. Helps you maintain a smooth ride."
@@ -9515,6 +9518,9 @@
 
 	key[]: "bank_sell_report_trailer"
 	val[]: "Haagise $NAME$, eeldatav väärtus: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
+
+	key[]: "bank_sell_report_bus"
+	val[]: "Coach $NAME$, estimated value: $MONEY$" #+ Message used to show information about a bus to sell to cover debt.
 
 	key[]: "bank_sell_report_garage"
 	val[]: "Garaaž linnas $CITY$, arvestatav väärtus: $MONEY$"
@@ -20996,7 +21002,7 @@ val[]: "Rahulolu: "
 	val[]: "Disembarked passengers" #+ Label for number of passengers that left the bus.
 
 	key[]: "bus_job_interim_satisfaction"
-	val[]: "Interim satisfaction" #+ Label for average passenger satisfaction computed from completed stages.
+	val[]: "Vahepealne rahulolu" #+ Label for average passenger satisfaction computed from completed stages.
 
 	key[]: "bus_job_cancel"
 	val[]: "Tühista töö" #+ Label of button that cancels the current job.
@@ -21059,7 +21065,7 @@ val[]: "Rahulolu: "
 #+ Bus job stop cutscene screen.
 #@{
 	key[]: "bus_stop"
-	val[]: "Serve this stop by pressing:"
+	val[]: "Peatuse teenindamiseks vajuta:"
 
 	key[]: "bus_stop_cutscene_t"
 	val[]: "BUSSIPEATUS" #+ Title of the screen. Please keep in upper case where possible.
@@ -21068,10 +21074,10 @@ val[]: "Rahulolu: "
 	val[]: "Kogu rahulolu"
 
 	key[]: "bus_stop_cutscene_passenger_satisfaction"
-	val[]: "Individual Satisfaction"
+	val[]: "Individuaalne rahulolu"
 
 	key[]: "bus_stop_cutscene_next_stops"
-	val[]: "Järgmised peatused"
+	val[]: "Järgnevad peatused"
 
 	key[]: "bus_current_passengers"
 	val[]: "Kõik reisijad"
@@ -21083,7 +21089,7 @@ val[]: "Rahulolu: "
 	val[]: "Boarding passenger mood"
 
 	key[]: "bus_stop_cutscene_satisfaction_change_label"
-	val[]: "Satisfaction Factors"
+	val[]: "Rahulolu tegurid"
 
 	key[]: "bus_satisfaction_on_time"
 	val[]: "Õigeaegne saabumine"
@@ -21092,10 +21098,10 @@ val[]: "Rahulolu: "
 	val[]: "Hiline saabumine"
 
 	key[]: "bus_satisfaction_leaving_passengers"
-	val[]: "Leaving"
+	val[]: "Väljumine"
 
 	key[]: "bus_satisfaction_entering_passengers"
-	val[]: "Newcomers"
+	val[]: "Uustulijad"
 
 	key[]: "bus_continue"
 	val[]: "Jätka"
@@ -21242,7 +21248,7 @@ val[]: "Rahulolu: "
 #+ Individual possible components of the bus reward.
 #@{
 	key[]: "satisfaction_reward"
-	val[]: "Passenger satisfaction bonus"
+	val[]: "Reisijate rahulolu boonus"
 
 	key[]: "long_duty_bonus"
 	val[]: "Pika tööpäeva boonus"
@@ -21287,7 +21293,7 @@ val[]: "Rahulolu: "
 	val[]: "Perfectly on time" #+ Label stat for count of bus jobs when all stops were on time.
 
 	key[]: "career_progress_stats_bus_maximum_satisfaction"
-	val[]: "Maximum passenger satisfaction" #+ Label stat for maximum passenger satisfaction at the end of job.
+	val[]: "Maksimaalne reisijate rahulolu" #+ Label stat for maximum passenger satisfaction at the end of job.
 
 	key[]: "career_progress_stats_bus_experience"
 	val[]: "Coach Driver Experience" #+ Title experience section.
@@ -21722,10 +21728,10 @@ val[]: "Rahulolu: "
 #+ Bus related adviser notifications
 #@{
 	key[]: "bus_satisfaction_reward_no_penalty"
-	val[]: "Safe & Smooth Driving" #+ Satisfaction increase message shown after a period of no penalties
+	val[]: "Ohutu ja sujuv sõit" #+ Satisfaction increase message shown after a period of no penalties
 
 	key[]: "bus_satisfaction_penalty_acceleration"
-	val[]: "Excessive G-Force" #+ Satisfaction decrease message shown when the passengers experience excessive acceleration/deceleration
+	val[]: "Liigne kiirendamine" #+ Satisfaction decrease message shown when the passengers experience excessive acceleration/deceleration
 
 	key[]: "bus_satisfaction_penalty_offence"
 	val[]: "Liiklussüütegu" #+ Satisfaction decrease message shown when the player commits a traffic offence
@@ -21737,7 +21743,7 @@ val[]: "Rahulolu: "
 	val[]: "Kokkupõrge" #+ Satisfaction decrease message shown when the player crashes the coach into something
 
 	key[]: "bus_satisfaction_penalty_speed"
-	val[]: "Driving too fast" #+ Satisfacation decrease message shown when the player drives too fast
+	val[]: "Liiga kiiresti sõitmine" #+ Satisfacation decrease message shown when the player drives too fast
 #@}
 
 #!{

@@ -510,6 +510,9 @@
 	key[]: "trailer_job_major_change"
 	val[]: "ვერ შეცვლით თქვენი მისაბმელის სახეობას, ძარას ან ღერძებს სამუშაოს მიმდინარეობისას. დაასრულეთ მიწოდება და შემდეგ სცადეთ." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
 
+	key[]: "bus_job_service_refusal"
+	val[]: "სახელოსნო ავტობუსისთვის მიუწვდომელია მუშაობისას." #+ Shown as message box if user activates a service while on a bus job.
+
 	key[]: "trailer_configurator_invalid_country"
 	val[]: "$ACC$ ვერ დაყენდება მოცემული ქვეყნების გარეთ: <color value=@@clr_sel@@>$COUNTRIES$." #+ A warning shown when player tries to change trailer chain type or chassis configuration to one that's not valid for configurator country.
 
@@ -1306,7 +1309,7 @@
 	val[]: "სამუშაოს მიღება" #+ Button which will take the selected job. Shown for quick jobs or when the player is at pickup point of freght market job.
 
 	key[]: "customize_job_offer"
-	val[]: "შეურჩიეთ მისაბმელი" #+ Button which will customize the selected freight market job.
+	val[]: "მისაბმელის შერჩევა" #+ Button which will customize the selected freight market job.
 
 #+ On-screen message
 #+
@@ -1413,7 +1416,7 @@
 	val[]: "გადაზიდვის ფასი" #+ Shown in the route info box in the line indicating price of the ferry route. For example "Ferry price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;€100.-"
 
 	key[]: "trip_land_len"
-	val[]: "მანძილი ხმელეთზე" #+ Shown in the route info box in the line indicating length of the land route. For example "Land distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 km"
+	val[]: "გზა ხმელეთზე" #+ Shown in the route info box in the line indicating length of the land route. For example "Land distance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100 km"
 
 	key[]: "no_route"
 	val[]: "აირჩიეთ ტვირთი მიმართულების სანახავად" #+ Text shown centred in the route info box when no job is selected.
@@ -2003,7 +2006,7 @@
 	val[]: "თქვენ თამაშის ძველი ვერსია გაქვთ.<br><link url=$URL_LINK$ color=@@clr_link@@>განაახლეთ ბოლო ვერსიამდე</link> ახალი შესაძლებლობების მისაღებად."
 
 	key[]: "allow_news"
-	val[]: "გსურთ დაუშვათ თამაშის სიახლეებისა და განახლების ავტომატურად შემოწმება?" #+ Text shown in a message box.
+	val[]: "გსურთ დაუშვათ თამაშის სიახლეებისა და განახლების თვითშემოწმება?" #+ Text shown in a message box.
 
 	key[]: "allow"
 	val[]: "ნებართვა" #+ Button allowing news and update check.
@@ -2420,7 +2423,7 @@
 
 
 	key[]: "reset_defaults"
-	val[]: "საწყისზე დაბრუნება" #+ Button which applies the default configuration to the state controlled by screen.
+	val[]: "საწყისზე ჩამოყრა" #+ Button which applies the default configuration to the state controlled by screen.
 
 #+ Options/Audio
 #+
@@ -2939,7 +2942,7 @@
 	val[]: "დამალვა" #+ Hide speed limit display on the advisor.
 
 	key[]: "automatic_limit"
-	val[]: "ზღვრის ჩვენება მანქანის მოცემული რეჟიმისთვის" #+ Show speed limits for vehicles on the advisor.
+	val[]: "ზღვრის ჩვენება მანქანის სახეობისთვის" #+ Show speed limits for vehicles on the advisor.
 
 	key[]: "generic_limit"
 	val[]: "მანქანისთვის დაწესებული ზღვარი" #+ Show speed limits for ordinary cars on the advisor.
@@ -2987,7 +2990,7 @@
 	val[]: "მხოლოდ სამუშაოს რუკაზე" #+ Show navigation only on job selection map.
 
 	key[]: "navi_job_world"
-	val[]: "მსოფლიო და სამუშაოს რუკაზე" #+ Show navigation on world and job maps.
+	val[]: "მსოფლიოს და სამუშაოს რუკა" #+ Show navigation on world and job maps.
 
 	key[]: "navi_always"
 	val[]: "ყოველთვის" #+ Show navigation on all maps.
@@ -3079,7 +3082,7 @@
 	val[]: "მისაბმელის მდგრადობა" #+ Slider for player modification of trailer stability (COG position).
 
 	key[]: "driveshaft_torque"
-	val[]: "გადახრა ამძრავი ლილვის ბრუნვისას" #+ Checkbox for driveshaft torque simulation.
+	val[]: "ამძრავი ლილვის მაბრუნი ძალა" #+ Checkbox for driveshaft torque simulation.
 
 	key[]: "suspension_stiffness"
 	val[]: "დაკიდების სიხისტე" #+ Slider for player modification of suspension stiffness.
@@ -3127,7 +3130,7 @@
 	val[]: "ძრავას ავტომატური მუხრუჭი" #+ Checkbox for automatic exhaust/engine brake usage.
 
 	key[]: "auto_engine_start"
-	val[]: "ძრავასა და ელექტრობის ავტომატურად ჩართვა" #+ Checkbox for automatic engine/electricity start by throttle.
+	val[]: "ძრავასა და ელექტრობის თვითჩართვა" #+ Checkbox for automatic engine/electricity start by throttle.
 
 	key[]: "auto_park_brake"
 	val[]: "ავტომატური ხელის მუხრუჭი" #+ Checkbox for automatic parking brake.
@@ -3378,13 +3381,13 @@
 	val[]: "ცვლის დამუხრუჭების სიმკვეთრეს."
 
 	key[]: "vehicle_stability_op_tooltip" # - Gameplay, Advanced
-	val[]: "Changes stability of the vehicle by lowering its centre of gravity."
+	val[]: "ცვლის მანქანის მდგრადობას მისი სიმძიმის ცენტრის დაწევით."
 
 	key[]: "trailer_stability_op_tooltip" # - Gameplay, Advanced
 	val[]: "ცვლის მისაბმელის მდგრადობას მისი სიმძიმის ცენტრის დაწევით."
 
 	key[]: "driveshaft_torque_op_tooltip" # - Gameplay, Advanced
-	val[]: "Changes intensity of the torque generated from the driveline.<br><br>Raising this setting will increase the feeling of the vehicle \"twisting\" to the right."
+	val[]: "ცვლის მთავარ ღერძზე მოდებული მაბრუნი ძალის სიმძლავრეს.<br><br>მისი მომატებით უკეთ იგრძნობა, რომ ძრავა მანქანის მარჯვნივ „გადახრის“ ხოლმე დაძვრისას."
 
 	key[]: "suspension_stiffness_op_tooltip" # - Gameplay, Advanced
 	val[]: "ცვლის ჩარჩოს დაკიდების სიხისტეს."
@@ -3393,7 +3396,7 @@
 	val[]: "ცვლის შიდა/საწოლი სივრცის დაკიდების სიხისტეს."
 
 	key[]: "road_bumps_factor_op_tooltip" # - Gameplay, Advanced
-	val[]: "განსაზღვრავს გზის ამობურცული ზედაპირით წარმოქმნილ რყევის სიმძაფრეს და უსწორმასწორობის შეგრძნებას.<br><br>დაკიდებისა და კამერის ქანაობის სიდიდესთან ერთიანობაში იქნება მეტად ან ნაკლებად შესამჩნევი."
+	val[]: "ცვლის გზის ამობურცული ზედაპირით წარმოქმნილი რყევის სიმძაფრეს და უსწორმასწორობის შეგრძნებას.<br><br>დაკიდებისა და კამერის ქანაობის სიდიდესთან ერთიანობაში იქნება მეტად ან ნაკლებად შესამჩნევი."
 
 	key[]: "trailer_advanced_coupling_op_tooltip" # - Gameplay, Advanced
 	val[]: "მისაბმელის ჩაბმა გამოცდილთათვის როცა ჩართულია, ზედმიწევნით ზუსტად უნდა გაუსწორდეს ერთმანეთს სატვირთოს უნაგირი და მისაბმელის დასაერთებელი ღერო.<br><br>როცა გამორთულია, ადვილდება ჩაბმა, ვინაიდან უნაგირი ღეროს აღარ მოედება."
@@ -3411,7 +3414,7 @@
 	val[]: "უზრუნველყოფს შემნელებლის ავტომატურად ამოქმედებას დამუხრუჭებისას."
 
 	key[]: "hill_brake_assist_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle assists take-off on an incline by holding the brakes, ensuring a smooth start."
+	val[]: "როცა ჩართულია, მანქანის დახრილ ზედაპირზე დაძვრისას მუხრუჭს დაახმარს უფრო გლუვად ამოძრავებისთვის."
 
 	key[]: "auto_motor_brake_op_tooltip" # - Gameplay, Advanced
 	val[]: "უზრუნველყოფს ძრავას მუხრუჭის ავტომატურად ამოქმედებას დამუხრუჭებისას."
@@ -3420,7 +3423,7 @@
 	val[]: "როცა ჩართულია, ძრავა დაიქოქება დაძვრის მცდელობისთანავე."
 
 	key[]: "auto_park_brake_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle's parking brake is applied by default (after using a ferry, towing to service, quick travelling, etc.)."
+	val[]: "როცა ჩართულია, მანქანის ხელის მუხრუჭი ამოქმედდება ნაგულისხმევად (გემით გადასვლის, ჩაბმით გადაყვანის ან სწრაფი მგზავრობის შემდგომ)."
 
 	key[]: "auto_drop_axles_op_tooltip" # - Gameplay, Advanced
 	val[]: "თავისით განსაზღვრავს ღერძების აწევა/დაწევას, როცა საჭიროა მანქანის წონის შესაბამისად."
@@ -3438,10 +3441,10 @@
 	val[]: "როცა ჩართულია, ABS აირიდებს დამუხრუჭებისას ბორბლების სრულ გაჩერებას მართვის შესანარჩუნებლად შენელებისას."
 
 	key[]: "traction_control_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle will apply per-wheel braking to prevent wheelspin, understeer or oversteer to help maintain control."
+	val[]: "როცა ჩართულია, მანქანა თითოეულ ბორბალს ცალ-ცალკე მოსდებს მუხრუჭს, რომ უკეთ აირიდოს ადგილზე ტრიალი, მდოვრე ან მკვეთრი მოხვევა მართვის შენარჩუნებისთვის."
 
 	key[]: "auto_diff_lock_op_tooltip" # - Gameplay, Advanced
-	val[]: "When enabled, the vehicle will lock the differential if wheels begin to slip to improve traction."
+	val[]: "როცა ჩართულია, ბორბლების სრიალისას მანქანა ჩაკეტავს დიფერენციალს მოჭიდების გასაუმჯობესებლად."
 
 	key[]: "cruise_control_grid_op_tooltip" # - Gameplay, Advanced
 	val[]: "მიუთითებს სიქარის გაზრდის ბიჯს, რომლითაც ავტოპილოტის სიჩქარე შეიცვლება შესაბამის ღილაკზე დაჭერისას."
@@ -3453,10 +3456,10 @@
 	val[]: "როცა ჩართულია, ავტოპილოტი თავადვე შეარჩევს სიჩქარეს წინა მანქანასთან უსაფრთხო დაშორების შესანარჩუნებლად."
 
 	key[]: "emergency_brake_op_tooltip" # - Gameplay, Advanced
-	val[]: "Activates emergency braking if the system senses an imminent collision.<br>Choose if the system will only react to vehicles or all obstacles."
+	val[]: "აამოქმედებს საგანგებო დამუხრუჭებას, როცა შეჯახება გარდაუვალია.<br>ასარჩევია, სისტემამ აღიქვას მხოლოდ მანქანები, თუ ნებისმიერი დაბრკოლება."
 
 	key[]: "lane_assistant_mode_op_tooltip" # - Gameplay, Advanced
-	val[]: "Selection of lane assistant modes:<br>- The \"Lane departure warning\" mode audibly warns you when you are about to leave the lane.<br>- In addition to the audible warning, the \"Lane keep support\" also automatically steers your vehicle to keep it from leaving the lane.<br><br>Both modes are only active at speeds above 55 km/h (~35 mph).<br>The Lane Assistant also considers your usage of the turn signals before engaging."
+	val[]: "ზოლში მოძრაობის ხელშემწყობი რეჟიმები:<br>- „ზოლიდან გადასვლის გაფრთხილება“ ხმოვანი სიგნალით განიშნებთ, თუ სამოძრაო ზოლის დატოვებას დაიწყებთ.<br>- ამასთანავე, „ზოლში დარჩენის დამხმარე“ თავისით გაასწორებს მანქანას, რომ გზას არ ასცდეს.<br><br>ამ რეჟიმების მოქმედებისთვის საჭიროა არანაკლებ 55 კმ/სთ (~35 მილ/სთ) სიჩქარე.<br>ზოლში მოძრაობის ხელშემწყობი ამოქმედებამდე ითვალისწინებს მოხვევის მაშუქებს."
 
 	key[]: "blind_spot_op_tooltip" # - Gameplay, Advanced
 	val[]: "შეძლებს უხილავ არეში ხიფათის ამოცნობას, თუ მანქანას გააჩნია სათანადო აღჭურვილობა."
@@ -3800,13 +3803,13 @@
 	val[]: "გადართვა უკუსვლისთვის" #+ Shifts to reverse gear for automatic transmission
 
 	key[]: "o_im_gear_up_hint"
-	val[]: "ზედა სიჩქარე ავტომატურზე" #+ Shift hint for automatic transmission
+	val[]: "ზედა სიჩქარისკენ მინიშნება" #+ Shift hint for automatic transmission
 
 	key[]: "o_im_gear_down_hint"
-	val[]: "ქვედა სიჩქარე ავტომატურზე" #+ Shift hint for automatic transmission
+	val[]: "ქვედა სიჩქარისკენ მინიშნება" #+ Shift hint for automatic transmission
 
 	key[]: "o_im_trans_semi_switch"
-	val[]: "კოლოფის შეცვლა ავტომატური/თანმიმდევრული" #+ Switch between real automatic and sequential transmissions
+	val[]: "კოლოფის ცვლა ავტომატური/თანმიმდევრული" #+ Switch between real automatic and sequential transmissions
 
 	key[]: "o_im_auto_transmission_mode"
 	val[]: "მოქნილი ავტომატური გადაცემათა კოლოფი" #+ Switch between real automatic and sequential transmissions
@@ -3818,7 +3821,7 @@
 	val[]: "ძრავას ელექტრობის ჩართვა/გამორთვა"
 
 	key[]: "o_im_parkingbrake"
-	val[]: "ხელის მუხრუჭი"
+	val[]: "სადგომი მუხრუჭი"
 
 	key[]: "o_im_handbrake"
 	val[]: "ხელის მუხრუჭი"
@@ -3899,7 +3902,7 @@
 	val[]: "სინათლის რეჟიმი"
 
 	key[]: "o_im_hb_light"
-	val[]: "შორი ნათება"
+	val[]: "სახურავის შორს მაშუქები"
 
 	key[]: "o_im_beacon"
 	val[]: "შუქურა"
@@ -3914,7 +3917,7 @@
 	val[]: "საყვირი"
 
 	key[]: "o_im_air_horn"
-	val[]: "საყვირი ჰაერსაკრებით"
+	val[]: "საჰაერო საყვირი"
 
 	key[]: "o_im_wipers"
 	val[]: "მინასაწმენდი"
@@ -3956,25 +3959,25 @@
 	val[]: "მართვის სასწავლების სწრაფი კვლავგაშვება"
 
 	key[]: "o_im_radio"
-	val[]: "აუდიო დამკვრელი"
+	val[]: "ხმოვანი დამკვრელი"
 
 	key[]: "o_im_radio_next"
-	val[]: "დამკვრელზე შემდეგი ჩანაწერი"
+	val[]: "დამკვრელის შემდეგი ჩანაწერი"
 
 	key[]: "o_im_radio_prev"
-	val[]: "დამკვრელზე წინა ჩანაწერი"
+	val[]: "დამკვრელის წინა ჩანაწერი"
 
 	key[]: "o_im_radio_vol_up"
-	val[]: "დამკვრელზე ხმის აწევა"
+	val[]: "დამკვრელის ხმის აწევა"
 
 	key[]: "o_im_radio_vol_down"
-	val[]: "დამკვრელზე ხმის დაწევა"
+	val[]: "დამკვრელის ხმის დაწევა"
 
 	key[]: "o_im_radio_toggle"
-	val[]: "დამვკრელის შეჩერება / გაშვება"
+	val[]: "დამკვრელის შეჩერება / გაშვება"
 
 	key[]: "o_im_radio_favorite"
-	val[]: "დამკვრელზე დამატება / მოცილება რჩეულებიდან"
+	val[]: "დამკვრელის რჩეულებში დამატება / მოცილება"
 
 	key[]: "o_im_display"
 	val[]: "ხელსაწყოთა დაფის რეჟიმები" #+ Action for cycling between dashboard display pages/modes.
@@ -4255,7 +4258,7 @@
 	val[]: "ღილაკი ელექტრობის ჩართვა/გამორთვისთვის.<br><br>როცა დაყენებულია, შეგეძლებათ ელექტრობა ჩართოთ დაქოქვამდე. ძრავის ჩასაქრობადაც საჭირო იქნება ელექტრობის გათიშვა, ნაცვლად ჩვეული დაქოქვა/ჩაქრობის ღილაკის გამოყენებისა."
 
 	key[]: "o_im_parkingbrake_op_tooltip"
-	val[]: "ღილაკი ხელის მუხრუჭისთვის."
+	val[]: "ღილაკი სადგომი მუხრუჭისთვის."
 
 	key[]: "o_im_handbrake_op_tooltip"
 	val[]: "ღილაკი ხელის მუხრუჭისთვის."
@@ -4345,7 +4348,7 @@
 	val[]: "ღილაკი ელექტროსაყვირის გამოსაყენებლად."
 
 	key[]: "o_im_air_horn_op_tooltip"
-	val[]: "ღილაკი ჰაერმკრები საყვირის გამოსაყენებლად, თუ დამატებულია მანქანაზე."
+	val[]: "ღილაკი ჰაერმკრები საყვირის გამოსაყენებლად, თუ მიმაგრებულია მანქანაზე."
 
 	key[]: "o_im_light_horn_op_tooltip"
 	val[]: "ღილაკი შორი მაშუქით გაელვებისთვის."
@@ -4615,16 +4618,16 @@
 	val[]: "ღილაკი ხმოვანი დამკვრელის გასახსნელად."
 
 	key[]: "o_im_radio_next_op_tooltip"
-	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელზე მომდევნო ჩანაწერის გასაშვებად მომხმარებლის სიიდან."
+	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელში მომდევნო ჩანაწერის გასაშვებად მომხმარებლის სიიდან."
 
 	key[]: "o_im_radio_prev_op_tooltip"
-	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელზე წინა ჩანაწერის გასაშვებად მომხმარებლის სიიდან."
+	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელში წინა ჩანაწერის გასაშვებად მომხმარებლის სიიდან."
 
 	key[]: "o_im_radio_vol_up_op_tooltip"
-	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელზე ხმის ასაწევად."
+	val[]: "ღილაკი ტარების დროს ხმოვანი დამკვრელის ხმის ასაწევად."
 
 	key[]: "o_im_radio_vol_down_op_tooltip"
-	val[]: "ღილაკი ტარების დროს ხმოვან დამკვრელზე ხმის დასაწევად."
+	val[]: "ღილაკი ტარების დროს ხმოვანი დამკვრელის ხმის დასაწევად."
 
 	key[]: "o_im_radio_toggle_op_tooltip"
 	val[]: "ღილაკი ტარების დროს მუსიკის გასაშვებად და შესაჩერებლად."
@@ -4673,7 +4676,7 @@
 	val[]: "დამატებით გამართვა" #+ Subtitle of the screen with controller advanced setup. Please keep in upper case where possible.
 
 	key[]: "controller"
-	val[]: "ღილაკები" #+ Icon opening the controls options window. There is limited space allowing for two lines of 7 'W' characters each.
+	val[]: "სამართავები" #+ Icon opening the controls options window. There is limited space allowing for two lines of 7 'W' characters each.
 
 	key[]: "input_type_settings_t"
 	val[]: "შეტანის სახეობა" #+ Title of the 'Input type' settings section. Please keep in upper case where possible.
@@ -4793,7 +4796,7 @@
 	val[]: "საჭე"
 
 	key[]: "steer_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "მოხვევის მგრძნობელობის ზღვარი"
 
 	key[]: "steer_axis_mode"
 	val[]: "რეჟიმი"
@@ -4802,7 +4805,7 @@
 	val[]: "სვლა (სატერფული)"
 
 	key[]: "acc_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "აჩქარების მგრძნობელობის ზღვარი"
 
 	key[]: "acc_axis_mode"
 	val[]: "რეჟიმი"
@@ -4811,7 +4814,7 @@
 	val[]: "მუხრუჭი (სატერფული)"
 
 	key[]: "brake_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "მუხრუჭის მგრძნობელობის ზღვარი"
 
 	key[]: "brake_axis_mode"
 	val[]: "რეჟიმი"
@@ -4820,7 +4823,7 @@
 	val[]: "მოდება (სატერფული)"
 
 	key[]: "clutch_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "მოდების მგრძნობელობის ზღვარი"
 
 	key[]: "clutch_axis_mode"
 	val[]: "რეჟიმი"
@@ -4829,7 +4832,7 @@
 	val[]: "გახედვა ( ზევით / ქვევით)"
 
 	key[]: "look_updown_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "ზემოთ-ქვემოთ მგრძნობელობის ზღვარი"
 
 	key[]: "look_updown_axis_mode"
 	val[]: "რეჟიმი"
@@ -4838,7 +4841,7 @@
 	val[]: "გახედვა (მარჯვნივ / მარცხნივ)"
 
 	key[]: "look_leftright_axis_dz"
-	val[]: "მგრძნობელობის ზღვარი"
+	val[]: "მარცხნივ-მარჯვნივ მგრძნობელობის ზღვარი"
 
 	key[]: "look_leftright_axis_mode"
 	val[]: "რეჟიმი"
@@ -4894,7 +4897,7 @@
 
 
 	key[]: "hshift_layout"
-	val[]: "კოლოფის სახეობა" #+ Basic shifter input configuration.
+	val[]: "კოლოფის წყობა" #+ Basic shifter input configuration.
 
 #+ Combobox entries used to select layout of the h-shifter gearbox.
 #+ See http://scaniadrivergame.com/input_config.php#prepared_configurations
@@ -4912,7 +4915,7 @@
 #@}
 
 	key[]: "hshift_behavior"
-	val[]: "ქმედება ბერკეტის მდებარეობით" #+ H-shifter's shifting behavior combo.
+	val[]: "სიჩქარეში ჩაგდების მოქმედება" #+ H-shifter's shifting behavior combo.
 
 #+ Combobox entries used to select shifting behavior of h-shifter gearbox.
 #@{
@@ -4978,10 +4981,10 @@
 #@{
 
 	key[]: "hshift_toggle_1"
-	val[]: "კოლოფის გადამრთველი: 1"
+	val[]: "კოლოფის წყობის გადამრთველი: 1"
 
 	key[]: "hshift_toggle_2"
-	val[]: "კოლოფის გადამრთველი: 2"
+	val[]: "კოლოფის წყობის გადამრთველი: 2"
 
 	key[]: "hshift_toggle_mode"
 	val[]: "კოლოფის გადართვა სიჩქარის გადართვისას"
@@ -5047,10 +5050,10 @@
 	val[]: "უკუქმედების ძალის საერთოდ სიძლიერე 0N და 10N შუალედში.<br><br><color value=@@clr_txt_d@@>გაითვალისწინეთ, რომ ზედმეტად აწევისას მძლავრი საჭის შემთხვევაში შეიძლება დაიზიანოთ თითები ან ხელები."
 
 	key[]: "force_feedback_centering_high_speed_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the centring force when driving at high speed, which peaks at 90 km/h (56 mph) and above.<br><br>The minimum setting will result in no wheel centring force."
+	val[]: "შუაშია გასწორების სიძლიერის გამართვა მაღალ სიჩქარეზე, რაც სიმკვეთრეს მიაღწევს 90 კმ/სთ (56 მილ/სთ) ან უფრო სწრაფი სიარულისას.<br><br>უმცირესის მითითებისას საჭე აღარ დაიწყებს თავისით გასწორებას."
 
 	key[]: "force_feedback_centering_low_speed_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the centring force when driving at low speed.<br><br>The minimum setting will result in no wheel centring force."
+	val[]: "შუაშია გასწორების სიძლიერის გამართვა დაბალ სიჩქარეზე.<br><br>უმცირესის მითითებისას საჭე აღარ დაიწყებს თავისით გასწორებას."
 
 	key[]: "force_feedback_internal_friction_op_tooltip" # - Controls, Advanced
 	val[]: "შიდა ხახუნის სიდიდე გამოწვეული საჭის მექანიკური ნაწილების მოძრაობით."
@@ -5068,37 +5071,37 @@
 	val[]: "განსაზღვრავს შეჯახების შეგრძნების ძალას საჭის ღერძიდან."
 
 	key[]: "force_feedback_gearbox_grind_op_tooltip" # - Controls, Advanced
-	val[]: "ცვლის სიჩქარეთა კოლოფიდან გამოცემული ხრჭიალის დონეს."
+	val[]: "ცვლის სიჩქარეთა კოლოფიდან გამოცემული ხრჭიალის სიმძაფრეს."
 
 	key[]: "force_feedback_understeer_op_tooltip" # - Controls, Advanced
-	val[]: "ცვლის მდორედ მოხვევისას მოცურების შეგრძნების დონეს."
+	val[]: "ცვლის მდორედ მოხვევისას მოცურების შეგრძნების სიმძაფრეს."
 
 	key[]: "force_feedback_assisted_steering_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts intensity of assisted steering (when using the lane assistant feature etc.)."
+	val[]: "მოხვევის ხელშემწყობის სიმძაფრე (როცა გამოიყენება ზოლში მოძრაობის დამხმარე და ა. შ.)."
 
 	key[]: "force_feedback_vibration_surface_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the intensity of terrain surface vibrations, if the controller supports vibration feedback."
+	val[]: "ცვლის უსწორმასწორობისას რყევის სიმძაფრეს, თუ აქვს სამართავს რყევის გადმოცემის მხარდაჭერა."
 
 	key[]: "force_feedback_vibration_bumps_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the intensity of bump vibrations, if the controller supports vibration feedback."
+	val[]: "ცვლის დარტყმებისას რყევის სიმძაფრეს, თუ აქვს სამართავს რყევის გადმოცემის მხარდაჭერა."
 
 	key[]: "force_feedback_vibration_collisions_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the intensity of collision vibrations, if the controller supports vibration feedback."
+	val[]: "ცვლის შეჯახებისას რყევის სიმძაფრეს, თუ აქვს სამართავს რყევის გადმოცემის მხარდაჭერა."
 
 	key[]: "steer_axis_op_tooltip" # - Controls, Advanced
 	val[]: "მოწყობილობა მოხვევისთვის."
 
 	key[]: "steer_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the steering axis deadzone; the amount of rotation from the centre whereby input is ignored.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის საჭის ღერძის მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "steer_axis_mode_op_tooltip" # - Controls, Advanced
-	val[]: "Determines how the game handles the steering axis input:<br>- Centred is ideal for wheels or joysticks.<br>- Inverted is used to correct an axis that has been detected wrongly."
+	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში მოხვევისთვის საჭირო ღერძის გამოყენებას:<br>- „გაშუალებული“ განკუთვნილია საჭისთვის ან სახელურიანი ჯოისტიკებისთვის:<br>- „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა ღერძის მოძრაობა უმართებულოდ აღიქმება."
 
 	key[]: "acc_axis_op_tooltip" # - Controls, Advanced
 	val[]: "მოწყობილობა მანქანის აჩქარებისთვის."
 
 	key[]: "acc_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the acceleration axis deadzone; the amount of input travel whereby no input is registered.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის აჩქარების ღერძის მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "acc_axis_mode_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში სამართავის გამოყენებას:<br>– „გაშუალებული“ განკუთვნილია სახელურიანი ჯოისტიკებისთვის.<br>– „ჩვეულებრივი“ განკუთვნილია მოქმედებაში მომყვანი ან სატერფულიანი სამართავებისთვის.<br>– „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა უმართებულოდ აღიქმება."
@@ -5107,7 +5110,7 @@
 	val[]: "მოწყობილობა დასამუხრუჭებლად."
 
 	key[]: "brake_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the brake axis deadzone; the amount of input travel whereby no input is registered.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის მუხრუჭის ღერძის მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "brake_axis_mode_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში სამართავის გამოყენებას:<br>– „გაშუალებული“ განკუთვნილია სახელურიანი ჯოისტიკებისთვის.<br>– „ჩვეულებრივი“ განკუთვნილია მოქმედებაში მომყვანი ან სატერფულიანი სამართავებისთვის.<br>– „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა უმართებულოდ აღიქმება."
@@ -5116,7 +5119,7 @@
 	val[]: "მოწყობილობა გადაბმულობის გასათიშად."
 
 	key[]: "clutch_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the clutch axis deadzone; the amount of input travel whereby no input is registered.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის მოდების ღერძის მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "clutch_axis_mode_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში სამართავის გამოყენებას:<br>– „გაშუალებული“ განკუთვნილია სახელურიანი ჯოისტიკებისთვის.<br>– „ჩვეულებრივი“ განკუთვნილია მოქმედებაში მომყვანი ან სატერფულიანი სამართავებისთვის.<br>– „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა უმართებულოდ აღიქმება."
@@ -5128,7 +5131,7 @@
 	val[]: "მოწყობილობა კამერის ზემოთ და ქვემოთ დახრისთვის."
 
 	key[]: "look_updown_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the Look up-down axis deadzone; the amount of input travel whereby no input is registered.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის ზემოთ-ქვემოთ მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "look_updown_axis_mode_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში სამართავის გამოყენებას:<br>– „გაშუალებული“ განკუთვნილია სახელურიანი ჯოისტიკებისთვის.<br>– „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა ღერძის მოძრაობა უმართებულოდ აღიქმება."
@@ -5137,7 +5140,7 @@
 	val[]: "მოწყობილობა კამერის მარცხნივ ან მარჯვნივ მოახლოებისთვის."
 
 	key[]: "look_leftright_axis_dz_op_tooltip" # - Controls, Advanced
-	val[]: "Adjusts the Look left-right axis deadzone; the amount of input travel whereby no input is registered.<br><br>This can mitigate issues from older controllers such as inaccuracy or false input caused by wear and tear."
+	val[]: "ცვლის მარჯვნივ-მარცხნივ მგრძნობელობის ზღვარს; რამდენად უნდა გადაიწიოს, რომ აღიქვას თამაშმა.<br><br>შეუძლია აირიდოს მოძველებული სამართავების ცვეთით გამოწვეული შემთხვევითი ან არაზუსტი ამოძრავება თამაშში."
 
 	key[]: "look_leftright_axis_mode_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს, როგორ აღიქვამს თამაში სამართავის გამოყენებას:<br>– „გაშუალებული“ განკუთვნილია სახელურიანი ჯოისტიკებისთვის.<br>– „შებრუნებული“ კი იმ შემთხვევების გამოსასწორებლადაა, როცა ღერძის მოძრაობა უმართებულოდ აღიქმება."
@@ -5146,7 +5149,7 @@
 	val[]: "მიუთითებს გადაცემათა წყობას მექანიკურ კოლოფზე."
 
 	key[]: "hshift_behavior_op_tooltip" # - Controls, Advanced
-	val[]: "ცვლის სიჩქარეში ჩაგდების მოქმედებას:<br>- როცა მითითებულია „მარტივი“, არასდროს ახლავს ხრჭიალი სიჩქარეში ჩაგდებას.<br>- როცა მითითებულია „მარტივი + მაფრთხილებელი ხმები“, ისევ იოლად შეიძლება სიჩქარეში ჩაგდება, ოღონდ ხრჭიალის ხმას გამოსცემს უმართებულოდ ჩაგდებისას.<br>- „რთული“ კი იძლევა გადაცემის ცვლის შესაძლებლობას არასწორ სიჩქარეში ჩაგდებისას და მხოლოდ ხრჭიალის ხმა გაისმება. „რთული“ აგრეთვე საშუალებას მოგცემთ გამოიყენოთ „სიჩქარეთა წყობის სწრაფი ცვლა“."
+	val[]: "ცვლის სიჩქარეში ჩაგდების მოქმედებას:<br>- როცა მითითებულია „მარტივი“, არასდროს ახლავს ხრჭიალი სიჩქარეში ჩაგდებას.<br>- როცა მითითებულია „მარტივი + მაფრთხილებელი ხმები“, ისევ იოლად შეიძლება სიჩქარეში ჩაგდება, ოღონდ ხრჭიალის ხმას გამოსცემს უმართებულოდ ჩაგდებისას.<br>- „რთული“ კი არ იძლევა გადაცემის ცვლის შესაძლებლობას არასწორ სიჩქარეში ჩაგდებისას და მხოლოდ ხრჭიალის ხმა გაისმება. „რთული“ ამასთანავე საშუალებას მოგცემთ დაიხმაროთ „სიჩქარეთა წყობის სწრაფი ცვლა“."
 
 	key[]: "hshift_fast_split_op_tooltip" # - Controls, Advanced
 	val[]: "განსაზღვრავს თამაშში სიჩქარის წყობის სწრაფ ცვლას:<br>- „არასოდეს“ საჭიროებს სიჩქარის ბერკეტის უქმ სვლაში ჩაგდებას წყობის გადართვამდე.<br>- „გადაბმულობის დაჭერა“ მხოლოდ მოითხოვს გადაბმულობაზე უეცარ დაწოლას ბერკეტის აუმოძრავებლად.<br>- „აჩქარების აშვება“ მხოლოდ მოითხოვს, რომ მძღოლმა აუშვას აჩქარებას წყობის გადასართავად ბერკეტის აუმოძრავებლად, ხოლო „გადაბმულობა ან აჩქარება“ წარმოადგენს ამ ბოლო ორის ნაზავს."
@@ -5179,7 +5182,7 @@
 	val[]: "ღილაკი შეტანისთვის მაცალკევებლით დაყოფილ სიჩქარეთა შორის გადართვისთვის კოლოფზე."
 
 	key[]: "hshift_toggle_mode_op_tooltip" # - Controls, Advanced
-	val[]: "გამოსადეგია, როცა ღილაკების ნაცვლად გადამრთველები გამოიყენება მაჯგუფებელი ან მაცალკევებელი გადაცემების ცვლისთვის."
+	val[]: "გამოსადეგია, როცა ღილაკების ნაცვლად გადამრთველები გამოიყენება მაჯგუფებელი/მაცალკევებელი გადაცემების ცვლისთვის."
 
 	key[]: "hshift_auto_drive_op_tooltip" # - Controls, Advanced
 	val[]: "ღილაკი ავტომატური კოლოფის სვლის რეჟიმში გადასართავად."
@@ -5188,10 +5191,10 @@
 	val[]: "ღილაკი ავტომატური კოლოფის უკუსვლის რეჟიმში გადასართავად."
 
 	key[]: "color_feedback_op_tooltip" # - Controls, Advanced
-	val[]: "Enables dynamic RGB feedback on compatible devices."
+	val[]: "ცვალებადი RGB-ფერების გამოსახვა თავსებად მოწყობილობებზე."
 
 	key[]: "eye_tracking_enable_op_tooltip" # - Controls, Advanced
-	val[]: "Enables and configures eye tracking features for compatible devices."
+	val[]: "აამოქმედებს და გამართავს თვალის მიდევნებას თავსებად მოწყობილობებზე."
 #@}
 
 #@}
@@ -5317,7 +5320,7 @@
 	val[]: "გაფართოებული ხედვის მზა პარამეტრების შესარჩევი."
 
 	key[]: "eye_head_mode_op_tooltip"
-	val[]: "Selection of head tracking modes:<br>- In the \"Direct\" mode your head rotation directly corresponds to a camera rotation in-game. It is recommended in normal cockpit/cabin situations.<br>- In the \"Dynamic\" mode your gaze will only affect your in-game camera when you actually turn your head. It is recommended when it's important for your view to be absolutely centred."
+	val[]: "თავის მოძრაობის მიდევნების რეჟიმები:<br>- „პირდაპირი“ რეჟიმისას თქვენი თავის მოძრაობა პირდაპირ აისახება თამაშში კამერის მოძრაობით. სასურველია, ჩვეულებრივ, მძღოლის/სალონის ხედვის პირობებში:<br>- „ცვალებადი“ რეჟიმისას კი თქვენი მზერა აღიქმება თამაშის კამერაზე მხოლოდ მაშინ, როცა თავსაც იქითკენ მიაბრუნებთ. სასურველია, როცა მნიშვნელოვანია ხედის შენარჩუნება ზუსტად შუისკენ."
 
 	key[]: "eye_autocenter_op_tooltip"
 	val[]: "როცა ჩართულია, თამაშში კამერა ნელ-ნელა დაუბრუნდება შუა წერტილს თქვენი თავის ბუნებრივი მდგომარეობის ცვლილებისას."
@@ -6006,7 +6009,7 @@
 	val[]: "კომპლექსური" #+ The configuration of input is too complex so the name of the input could not be determined. This can happen if the player manually tweaks the input configuration.
 
 	key[]: "hold"
-	val[]: "დაჭერა" #+ Used as prefix to keys / icons to signalize that you have to hold the button for the action. If possible keep this as short one word to prevent it being shortened, it appears as part of in-game hint with limited width.
+	val[]: "დააყოვნეთ" #+ Used as prefix to keys / icons to signalize that you have to hold the button for the action. If possible keep this as short one word to prevent it being shortened, it appears as part of in-game hint with limited width.
 
 	key[]: "any_shift" #+ Any of the keyboard's Shift keys name
 	val[]: "Shift"
@@ -7241,7 +7244,7 @@
 	val[]: "ყველას ასახვა" #+ Button that applies/confirms all assigned skill points.
 
 	key[]: "skills_undo_all"
-	val[]: "ყველას გაუქმება" #+ Button that resets all assigned skill points.
+	val[]: "ყველას დაბრუნება" #+ Button that resets all assigned skill points.
 
 	key[]: "skills_apply_single_ask"
 	val[]: "გსურთ აისახოს უნარების ქულები თქვენს პროფილზე?" #+ Message in a pop up message box shown after clicking Apply All with one point assigned.
@@ -8225,7 +8228,7 @@
 	val[]: "რძე"
 
 	key[]: "cn_mobile_air_compressor"
-	val[]: "Mobile Air Compressor"
+	val[]: "მოძრავი ჰაერმკუმშავი"
 
 	key[]: "cn_mobile_crusher"
 	val[]: "მოძრავი ქვასამსხვრევი"
@@ -8288,7 +8291,7 @@
 	val[]: "მადნეული"
 
 	key[]: "cn_packed_lumber"
-	val[]: "დახერხილი ხეტყის შეკვრა"
+	val[]: "დახერხილი ხის შეკვრა"
 
 	key[]: "cn_paper"
 	val[]: "საოფისე ქაღალდი"
@@ -8336,7 +8339,7 @@
 	val[]: "პლასტიკური გრანულები"
 
 	key[]: "cn_plastic_film_rolls"
-	val[]: "პლასტიკური აფსკის რულონები"
+	val[]: "პლასტმასის აფსკის გორგალი"
 
 	key[]: "cn_plastic_pipes"
 	val[]: "პლასტმასის მილები"
@@ -8639,7 +8642,7 @@
 	val[]: "გრაფიტის საპოხი"
 
 	key[]: "cn_grass_rolls"
-	val[]: "ბალახი"
+	val[]: "ბალახის გორგალი"
 
 	key[]: "cn_honey"
 	val[]: "თაფლი"
@@ -9516,6 +9519,9 @@
 	key[]: "bank_sell_report_trailer"
 	val[]: "მისაბმელი $NAME$, სავარაუდო ღირებულება: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
 
+	key[]: "bank_sell_report_bus"
+	val[]: "Coach $NAME$, estimated value: $MONEY$" #+ Message used to show information about a bus to sell to cover debt.
+
 	key[]: "bank_sell_report_garage"
 	val[]: "ფარეხის მისამართი $CITY$, სავარაუდო ღირებულება: $MONEY$"
 
@@ -9964,7 +9970,7 @@
 #@{
 
 	key[]: "truckman_op_relocate"
-	val[]: "გადაყვანა" #+ Moves truck to another garage.
+	val[]: "ადგილის შეცვლა" #+ Moves truck to another garage.
 
 	key[]: "truckman_op_sell"
 	val[]: "გაყიდვა" #+ Sels the truck.
@@ -10229,7 +10235,7 @@
 	val[]: "დავთარი"
 
 	key[]: "driverman_op_relocate"
-	val[]: "გადაყვანა"
+	val[]: "ადგილის შეცვლა"
 
 	key[]: "driverman_op_dismiss"
 	val[]: "გაშვება"
@@ -10519,7 +10525,7 @@
 	val[]: "ავტოსალონები" #+ Title of the screen. Please keep in upper case where possible.
 
 	key[]: "tdsel_link"
-	val[]: "ავტოსალონი" #+ Icon opening the map of truck dealers.
+	val[]: "სატვირთოს შესყიდვა" #+ Icon opening the map of truck dealers.
 
 	key[]: "tdsel_help"
 	val[]: "ეწვიეთ აღმოჩენილ ავტოსალონს" #+ Help message associated the dealer map icon.
@@ -10757,10 +10763,10 @@
 	val[]: "ნანახი:" #+ Label shown before value indicating how many percents of the world are explored.
 
 	key[]: "reset_gps_pins"
-	val[]: "გზამკვლევის ჩამოყრა" #+ Text on a button that deletes all custom navigation pins. The button is shown only when there are any custom pins to delete.
+	val[]: "სანიშნების ჩამოყრა" #+ Text on a button that deletes all custom navigation pins. The button is shown only when there are any custom pins to delete.
 
 	key[]: "append_new_pins"
-	val[]: "Always add new checkpoints to the end" #+ Text for a checkbox that prevents adding custom navigation pins in the middle of the route. Hidden when not applicable.
+	val[]: "ახალი წერტილები მხოლოდ ბოლოში დაისვას" #+ Text for a checkbox that prevents adding custom navigation pins in the middle of the route. Hidden when not applicable.
 
 	key[]: "append_new_avoid_pins"
 	val[]: "გზის ასაქცევი სანიშნი" #+ Text for a checkbox that starts adding pins in avoid mode. Hidden when not applicable.
@@ -10775,7 +10781,7 @@
 	val[]: "ყველას მონიშვნა"
 
 	key[]: "reset_filtering"
-	val[]: "საწყისზე დაბრუნება"
+	val[]: "საწყისზე ჩამოყრა"
 
 	key[]: "unexpl_road"
 	val[]: "დასათვალიერებელი გზა"
@@ -10817,7 +10823,7 @@
 	val[]: "უცნობი წერტილი"
 
 	key[]: "mapl_viewpoint_visited"
-	val[]: "Viewpoint (visited)"
+	val[]: "გადასახედი (მონახულებული)"
 
 	key[]: "mapl_viewpoint_unvisited"
 	val[]: "გადასახედი (მოუნახულებელი)"
@@ -11202,10 +11208,10 @@
 	val[]: "საგაბარიტო მაშუქები" #+ Checkbox enabling the parking lights
 
 	key[]: "low_beam"
-	val[]: "ახლოს მაშუქი" #+ Checkbox enabling the low beam lights
+	val[]: "ახლო მაშუქი" #+ Checkbox enabling the low beam lights
 
 	key[]: "high_beam"
-	val[]: "შორს მაშუქი" #+ Checkbox enabling the high beam lights
+	val[]: "შორი მაშუქი" #+ Checkbox enabling the high beam lights
 
 	key[]: "beacon"
 	val[]: "შუქურა"  #+ Checkbox enabling the beacon
@@ -11245,7 +11251,7 @@
 	val[]: "მობრუნება" #+ Checkbox selecting head rotation.
 
 	key[]: "seat_position"
-	val[]: "ჯდომის მდგომარეობა" #+ Checkbox selecting seat position.
+	val[]: "სკამის განლაგება" #+ Checkbox selecting seat position.
 
 	key[]: "seat_fov"
 	val[]: "ხედვის არე" #+ Checkbox selecting fov.
@@ -13392,16 +13398,16 @@
 #@{
 
 	key[]: "wiz_gb_simple"
-	val[]: "Press FORWARD to move ahead, and press BACK to brake or reverse. The gearbox automatically manages everything else, handling transitions between driving, braking, and reversing, as well as selecting the appropriate gears."
+	val[]: "აჭერთ ᲬᲘᲜᲡᲕᲚᲐᲡ დასაძრავად, ᲣᲙᲣᲡᲕᲚᲐᲡ მუხრუჭისთვის ან უკან დასახევად. გადაცემათა კოლოფი კი დანარჩენს თავად მიხედავს, სიჩქარეში ჩააგდებს შესაბამისად წინსვლისთვის ან უკუსვლისთვის და სათანადოდ შეურჩევს გადაცემასაც."
 
 	key[]: "wiz_gb_automatic"
-	val[]: "Use the buttons to switch between driving forward, neutral, or reversing. Then press the accelerator and let the automatic transmission handle gear changes."
+	val[]: "იყენებთ ღილაკებს წინსვლის, უქმი სვლის ან უკუსვლის ასარჩევად. შემდეგ კი აჭერთ აჩქარებას და დანარჩენს უკვე გადაცემათა კოლოფი მიხედავს თავად."
 
 	key[]: "wiz_gb_sequential"
-	val[]: "Manually shift gears up and down to select each individual gear within the transmission. This configuration provides full control over the vehicle’s gearbox."
+	val[]: "ხელით გადაგყავთ მომდევნო ან წინა გადაცემაში თითოეულ სიჩქარეში ჩასაგდებად გადაცემათა კოლოფით. ამ გამართვით სრულად თქვენს განკარგულებაშია სიჩქარეთა კოლოფი."
 
 	key[]: "wiz_gb_hshifter"
-	val[]: "Select the desired gear directly. This offers the most realistic configuration. A physical H-pattern shifter is recommended and requires clutch input."
+	val[]: "ირჩევთ სასურველ გადაცემას პირდაპირ. სინამდვილესთან ყველაზე მეტად ახლოსაა. უმჯობესია ბერკეტისა და გადაბმულობის სატერფულის ქონა."
 #@}
 
 #+ Shown when feature requires a gamming controller.
@@ -13443,7 +13449,7 @@
 #+ Shown if the game identifies the HW and automatically applies reasonable configuration.
 #@{
 	key[]: "wiz_auto_cfg_done"
-	val[]: "თამაშის პარამეტრები დაყენებელია საწყისზე. შეგიძლიათ გამართოთ დამატებითი პარამეტრებიდან ან პირდაპირ განაგრძოთ თამაში."
+	val[]: "თამაში გამართულია ქვემოთ მოცემული საწყისი პარამეტრებით. შეგიძლიათ კიდევ ჩაასწოროთ დამატებითი პარამეტრები ან პირდაპირ განაგრძოთ თამაში."
 
 #+ Button which opens the advanced setup page.
 
@@ -13454,7 +13460,7 @@
 #+ Configuration complete page
 #@{
 	key[]: "wiz_cfg_done"
-	val[]: "The game is now configured and you can continue. You can change the configuration later in Options."
+	val[]: "თამაში გამართულია და შეგიძლიათ განაგრძოთ. განლაგების შეცვლას მომავალშიც შეძლებთ პარამეტრებიდან სამართავების არეში."
 
 	key[]: "wiz_cfg_steam"
 	val[]: "შეგიძლიათ გადაამოწმოთ და გამართოთ ღილაკების ან ღერძების განლაგება ამ ჯოისტიკისთვის Steam-პროგრამიდან. Steam-ის ჯოისტიკის პარამეტრების შესასწორებლად მოცემული თამაშისთვის იხილეთ Steam > Library > Euro Truck Simulator 2 > Controller Configuration."
@@ -13505,7 +13511,7 @@
 	val[]: "სიჩქარის გადასართველად გამოიყენეთ @@imv_wiz_gearup@@ და @@imv_wiz_geardown@@."
 
 	key[]: "wiz_cfg_gb_direct"
-	val[]: "სასურველი სიჩქარის ასარჩევად ბერკეტიან კოლოფთან ერთად გამოიყენეთ @@ima_wiz_j_clutch@@."
+	val[]: "გამოიყენეთ ბერკეტი და @@ima_wiz_j_clutch@@ სასურველ სიჩქარეში ჩასაგდებად."
 #@}
 
 #+ Axis setup page
@@ -13529,7 +13535,7 @@
 	val[]: "მგრძნობელობის ზღვარი"
 
 	key[]: "wiz_setup_axes_desc3"
-	val[]: "მგრძნობელობის ზღვარი ეწოდება არეს, რომელიც უნდა გადაილახოს სამართავის მოქმედების აღსაქმელად. თუ გსურთ შეცვლა, გადასწიეთ სრიალა. რაც მეტად გასწევთ მარჯვნივ, მით უფრო გაიზრდება გადასალახი ზღვარი. გამოსადეგია მოძველებული სამართავებისთვის, გაზრდილი ზღვარით აირიდებთ ცვეთის გამო შემთხვევით ან არაზუსტ ამოძრავებას თამაშში."
+	val[]: "მგრძნობელობის ზღვარი ეწოდება ღერძის სამოძრაო არეს, რომელიც უნდა გადაილახოს სამართავის მოქმედების აღსაქმელად. თუ გსურთ შეცვლა, გადასწიეთ სრიალა. რაც მეტად გასწევთ მარჯვნივ, მით უფრო გაიზრდება გადასალახი ზღვარი. გამოსადეგია მოძველებული სამართავებისთვის, რადგან გაზრდილი ზღვარით აირიდებთ ცვეთის გამო შემთხვევით ან არაზუსტ ამოძრავებას თამაშში."
 
 	key[]: "wiz_setup_axes_desc4_title"
 	val[]: "ღერძების რეჟიმი"
@@ -14995,10 +15001,10 @@
 	val[]: "გადაღება" #+ Take snapshot
 
 	key[]: "o_im_photomode_settings"
-	val[]: "პარამეტრების ჩამრთველი" #+ Toggle Settings
+	val[]: "ფოტოგადაღების პარამეტრების ცვლა" #+ Toggle Settings
 
 	key[]: "o_im_photomode_hctrl"
-	val[]: "სამართავის ჩამრთველი" #+ Toggle Controls
+	val[]: "სამართავების ცვლა" #+ Toggle Controls
 
 	key[]: "o_im_photomode_names"
 	val[]: "მოთამაშის სახელების ჩამრთველი" #+ Toggle Player Names
@@ -15293,7 +15299,7 @@
 	val[]: "მანქანა არაა" #+ Message box title. Please keep in upper case where possible.
 
 	key[]: "photo_no_drive"
-	val[]: "You cannot take pictures of a vehicle because you don't have one! You must purchase one or take one from your fleet."
+	val[]: "მანქანას სურათს ვერ გადაუღებთ, რადგან არ გყავთ საკუთარი! ჯერ უნდა შეიძინოთ ან გამოიყვანოთ ფარეხიდან."
 #@}
 
 #+ Screenshot manager
@@ -16915,7 +16921,7 @@
 	val[]: "მისაბმელის მონაცემები"  #+ Header of panel containing informations about trailer.
 
 	key[]: "trailerman_op_relocate"
-	val[]: "გადაყვანა" #+ The button opening relocating map of the trailer.
+	val[]: "ადგილის შეცვლა" #+ The button opening relocating map of the trailer.
 
 	key[]: "trailerman_op_sell"
 	val[]: "გაყიდვა" #+ The button selling selected trailer.
@@ -18854,7 +18860,7 @@
 	val[]: "სიჩქარის იძულებითი შეზღუდვა"
 
 	key[]: "session_mod_optioning"
-	val[]: "უმნიშვნელო დანამატების გარეშე შემოშვება"
+	val[]: "შემოშვება უმნიშვნელო დანამატების გარეშეც"
 
 	key[]: "session_name_hint"
 	val[]: "შეკრების დასახელება."
@@ -20655,7 +20661,7 @@
 	val[]: "გადახედეთ, მოიძიეთ და გამოარჩიეთ ქსელში შეკრების სესიები, რომ შეუერთდეთ ან შექმნათ საკუთარი და უმასპინძლოთ სხვებს."
 
 	key[]: "mail_desc" # - tooltip for explaining what mail is - feature is active
-	val[]: "საფოსტო ყუთი წერილებისთვის სამიანობასთან, ბანკებთან ან დაქირავებულებთან დაკავშირებით."
+	val[]: "საფოსტო ყუთი წერილებისთვის საქმესთან, ბანკებთან ან დაქირავებულებთან დაკავშირებით."
 
 	key[]: "link_locked_msg_mail" # - tooltip for when the mail is not yet unlocked
 	val[]: "ელფოსტაზე წერილების მიღება დაიწყება საქმიანობაში წინსვლისას."
@@ -20673,7 +20679,7 @@
 	val[]: "გადახედეთ და მოიძიეთ მეორადი მისაბმელები შესაძენად."
 
 	key[]: "radio_desc" # - tooltip for explaining what the radio is - feature is active
-	val[]: "Enhance your driving experience with some music."
+	val[]: "გაიხალისეთ ტარების დრო მუსიკის მოსმენით."
 
 	key[]: "link_locked_msg_radio" # - tooltip for when the radio is not yet unlocked
 	val[]: "რადიო მიუწვდომელია."

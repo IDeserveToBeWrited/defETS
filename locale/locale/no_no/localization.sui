@@ -510,6 +510,9 @@
 	key[]: "trailer_job_major_change"
 	val[]: "Du kan ikke endre din hengers type, kropp eller karosseri mens du er på oppdrag. Fullfør din leveranse og prøv deretter på nytt." #+ Shown if user attemps make major change on owned trailer that is currently carrying cargo.
 
+	key[]: "bus_job_service_refusal"
+	val[]: "Tjenesten er utilgjengelig for busser under et oppdrag." #+ Shown as message box if user activates a service while on a bus job.
+
 	key[]: "trailer_configurator_invalid_country"
 	val[]: "Kan ikke installere valgte $ACC$ i landet utenfor <color value=@@clr_sel@@>$COUNTRIES$." #+ A warning shown when player tries to change trailer chain type or chassis configuration to one that's not valid for configurator country.
 
@@ -1182,13 +1185,13 @@
 	val[]: "<color value=@@clr_sel@@>Manglende modifikasjon oppdaget.<color value=@@clr_txt@@><br><br>Det nyeste lagrede spillet krever en eller flere manglende eller deaktiverte modifikasjoner.<br><br>Vennligst sjekk dine installerte modifikasjoner.<br><br>Du kan forsøke å laste det lagrede spillet. Avhengig av hvilke modifikasjoner som mangler, er det mulig at lastingen vil mislykkes eller andre problemer vil oppstå.<br><br>Alternativt kan du forsøke å laste et tidligere lagret spill som ikke krever de manglende modifikasjonene."
 
 	key[]: "load_msg_missing_rem_dlc"
-	val[]: "<color value=@@clr_sel@@>Manglende DLC oppdaget.<color value=@@clr_txt@@><br><br>Den siste lagrede filen inneholder filer fra en manglende DLC (offisiell spillutvidelse).<br><br>Om du ikke er kjent med årsaken til dette, vennligst sjekk de(n) installerte DLC-en(e).<br><br>Du kan velge å laste inn spillet likevel, men noen av funksjonene som følger med DLC-en(e) kan mangle.<br><br>Alternativt kan du laste inn et tidligere lagret spill som ikke krever DLC-en."
+	val[]: "<color value=@@clr_sel@@>Manglende DLC oppdaget.<color value=@@clr_txt@@><br><br>Den siste lagrede filen inneholder filer fra en manglende DLC (offisiell spillutvidelse).<br><br>Om du ikke er kjent med årsaken til dette, vennligst sjekk de(n) installerte DLC(-er).<br><br>Du kan velge å laste inn spillet likevel, men noen av funksjonene som følger med DLC(-er) kan mangle.<br><br>Alternativt kan du laste inn et tidligere lagret spill som ikke krever DLC-en."
 
 	key[]: "load_msg_missing_dlc"
 	val[]: "<color value=@@clr_red@@>Manglende DLC oppdaget.<color value=@@clr_txt@@><br><br>Det nyeste lagrede spillet krever en manglende DLC (offisiell spillutvidelse).<br><br>For at dette lagrede spillet skal fungere, må denne DLC-en være installert og aktivert på denne datamaskinen.<br><br>Alternativt kan du forsøke å laste et tidligere lagret spill som ikke krever denne manglende DLC-en."
 
 	key[]: "load_msg_mod_dlc_dep"
-	val[]: "<color value=@@clr_red@@>Modifikasjon avhengig av innhold i DLC.<color value=@@clr_txt@@><br><br>Minst en modifikasjon er avhengig av DLC (offisiell spillutvidelse) som ikke er installert.<br><br>Du må deaktivere modifikasjonen(e), eller installere DLC-en(e) de er avhengige av."
+	val[]: "<color value=@@clr_red@@>Modifikasjon er avhengig av DLC-innhold.<color value=@@clr_txt@@><br><br>Minst en modifikasjon er avhengig av DLC (offisiell spillutvidelse) som ikke er installert.<br><br>Du må deaktivere modifikasjonen(e), eller installere DLC(-er) de er avhengige av."
 
 	key[]: "load_msg_crash"
 	val[]: "<color value=@@clr_red@@>Krasj oppdaget<color value=@@clr_txt@@><br><br>Det ser ut til at spillet har krasjet sist du lastet det inn.<br><br>Du kan bruke informasjonen nedenfor for å identifisere og muligens reparere problemet. Eventuelt kan du laste et annet lagret spill.<br><br>Følgende kan ofte skape slike problemer:<br><br>1. Ett eller flere installerte modifikasjoner er ødelagte eller inkompatibel med denne spillversjonen.<br><br>2. Det lagrede spillet inneholder modifikasjoner som mangler eller er deaktivert.<br><br>3. Det lagrede spillet er blitt ødelagt av en dårlig produsert modifikasjon.<br><br>4. I noen tilfeller kan feil ved PC eller drivere krasje spillet."
@@ -9516,6 +9519,9 @@
 	key[]: "bank_sell_report_trailer"
 	val[]: "Henger $NAME$, estimert verdi: $MONEY$" #+ Message used to show informations about trailer to sell to cover debt.
 
+	key[]: "bank_sell_report_bus"
+	val[]: "Coach $NAME$, estimated value: $MONEY$" #+ Message used to show information about a bus to sell to cover debt.
+
 	key[]: "bank_sell_report_garage"
 	val[]: "Garasje i $CITY$, estimert verdi: $MONEY$"
 
@@ -15082,7 +15088,7 @@
 	val[]: "LANDSVALG"  #+ window title
 
 	key[]: "photo_album_city_intro_unknown"
-	val[]: "Byintroduksjon kan ikke spilles av. Sørg for at du har tilsvarende DLC(ene) aktivert."
+	val[]: "Byintroduksjon kan ikke spilles av. Sørg for at du har tilsvarende DLC(-er) aktivert."
 
 	key[]: "photo_album_tooltip_dlc_required"
 	val[]: "Påkrevd DLC"
@@ -15130,7 +15136,7 @@
 	val[]: "Bildealbum"
 
 	key[]: "photo_album_viewpoint_unknown"
-	val[]: "Utsiktspunkt kan ikke ses. Sørg for at du har tilsvarende DLC(ene) aktivert."
+	val[]: "Utsiktspunkt kan ikke ses. Sørg for at du har tilsvarende DLC(-er) aktivert."
 
 	key[]: "photo_album_wotr_profile_slot"
 	val[]: "Lastebilprofil"
@@ -15420,7 +15426,7 @@
 	val[]: "Det lagrede spillet krever DLC (nedlastbart innhold) som ikke er installert. Det manglende innholdet er:"
 
 	key[]: "missing_dlcs_cont"
-	val[]: "Du kan ikke fortsette det lagrede spillet uten tilhørende DLC(er)."
+	val[]: "Du kan ikke fortsette det lagrede spillet uten tilhørende DLC(-er)."
 #@}
 
 #+ Messages shown in above the input line in Steam Daisy wheel (gamepad text input method in Steam Big Picture).
@@ -16338,13 +16344,13 @@
 	val[]: "Steam-kontoen du brukte for å registrere denne DLC-en, skiller seg fra den som ble brukt til å opprette din World of Trucks-konto eller for å registrere spillet. Vennligst bytt din Steam-konto og prøv igjen." #+ The error displayed when the connect content operation fails because of a SteamID mismatch.
 
 	key[]: "registration_result_steamid_in_use"
-	val[]: "Denne Steam-kontoen som du bruker til å registrere denne DLC-en er allerede tilknyttet en annen World of Trucks-konto. For å registrere denne DLC til den nåværende konto, så skal du bruke en Steam-konto som er ikke tilknyttet til en World of Trucks-konto." #+ The error shown to the user when the connect content operation fails because the current Steam account is connected to a different WoTr account.
+	val[]: "Denne Steam-kontoen som du bruker til å registrere denne DLC-en er allerede tilknyttet en annen World of Trucks-konto. For å registrere denne DLC-en til den nåværende konto, så skal du bruke en Steam-konto som er ikke tilknyttet til en World of Trucks-konto." #+ The error shown to the user when the connect content operation fails because the current Steam account is connected to a different WoTr account.
 
 	key[]: "registration_result_token_expired"
 	val[]: "Steam-gyldighet er utløpt. Vennligst prøv igjen senere." #+ The message displayed when the connect content operation fails because the Steam token has expired.
 
 	key[]: "registration_result_serial_invalid"
-	val[]: "Produktnøkkelen som du bruker for å aktivere denne DLC er ikke gyldig. Vennligst kontakt støtte for hjelp: support@scssoft.com" #+ The message displayed when the connect content operation failed because the serial key is invalid.
+	val[]: "Produktnøkkelen som du bruker for å aktivere denne DLC-en er ikke gyldig. Vennligst kontakt støtte for hjelp: support@scssoft.com" #+ The message displayed when the connect content operation failed because the serial key is invalid.
 
 	key[]: "registration_result_generic_error"
 	val[]: "Det har oppstått en intern feil under registrering av spillet. Vennligst prøv igjen senere." #+ The message displayed when the connect content operation fails and no specific error message was defined to cover it.

@@ -1,0 +1,50 @@
+SiiNunit
+{
+
+# Definition For Formatting Cruising Wotr Events
+#
+# Could be expanded in the future to be hold formatting information on different types of events and delivery goals
+#
+# In this case each goal is a city that needs to be delivered to or from (or as the Cruising event defines).
+# The progress is fetched via the wotr_event_manager and mapping the completion of each individual city on the lower 16 bits of the player progress,
+# in the order defined on each event_format_data unit.
+# This order is provided by Komat before the start of each event.
+# The upper 16 bits are a count of the cities, for the player progress all completed or deliveries up until this point of the event, 
+# and for the max progress the overall ammunt of goals to be completed for the personal reward.
+
+event_city_widget_format_data : iceland.26
+{
+	achievement_name: iceland26
+
+	cities[]: akureyri
+	cities[]: blonduos
+	cities[]: borgarnes
+	cities[]: egilsstadir
+	cities[]: hofn
+	cities[]: holmavik
+	cities[]: husavik
+	cities[]: isafjordur
+	cities[]: keflavik
+	cities[]: olafsvik
+	cities[]: patreksfjord
+	cities[]: reykjavik
+	cities[]: selfoss
+	cities[]: thorshofn
+
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+	include_countries[]: false
+}
+
+}
