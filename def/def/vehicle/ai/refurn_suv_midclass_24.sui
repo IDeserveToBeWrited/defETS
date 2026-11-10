@@ -1,0 +1,40 @@
+traffic_vehicle : traffic.refurn.suv.midclass_24
+{
+	accessories[]: .refurn.suv.midclass_24.chassis
+	accessories[]: .refurn.suv.midclass_24.fwheel
+	accessories[]: .refurn.suv.midclass_24.rwheel
+
+	max_speed: 160
+
+	tags[]: expensive
+	tags[]: common
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+	sound_move[]: "/sound/traffic/car_sport_1.soundref"
+
+	spawn_ratio: 1
+
+
+
+@include "drivers_generic.sui"	
+}
+
+vehicle_accessory: .refurn.suv.midclass_24.chassis
+{
+	data_path: "/def/vehicle/ai/refurn_suv_midclass_24/chassis.sii"
+}
+
+vehicle_wheel_accessory: .refurn.suv.midclass_24.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_1.sii"
+}
+
+vehicle_wheel_accessory: .refurn.suv.midclass_24.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
+}

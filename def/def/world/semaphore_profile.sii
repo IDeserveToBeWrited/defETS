@@ -5,6 +5,8 @@ SiiNunit
 # base file without the extension (e.g. "city" for "/def/city.sii") and <idofyourmod> is
 # some string which is unlikely to conflict with other mod.
 
+
+###################################################################### UNIVERSAL ###########################################################
 tr_semaphore_profile : tr_sem_prof.2ph		
 {
 	name: "two phases"
@@ -13,6 +15,20 @@ tr_semaphore_profile : tr_sem_prof.2ph
 	
 	cycle[]: 0.0							# phase 1
 	cycle[]: 21.0							# phase 2
+	
+}
+ 
+# Semaphore profile for the 'universal road' set (two-phase), with AI stopping 5m ahead prefab’s input.
+tr_semaphore_profile : tr_sem_prof.2ph5o		
+{
+	name: "two phases 5m offset"
+
+	interval[]: (15.0, 2.0, 23.0, 2.0)		# green > yellow > red > yellow
+	
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+
+	stop_distance[]: 5.0	
 	
 }
 
@@ -42,6 +58,23 @@ tr_semaphore_profile : tr_sem_prof.3ph
 	
 	
 }
+
+# Semaphore profile for the 'universal road' set (three-phase), with AI stopping 5m ahead prefab’s input.
+tr_semaphore_profile : tr_sem_prof.3ph5o		
+{
+	name: "three phases 5m offset"
+
+	interval[]: (15.0, 2.0, 44.0, 2.0)		# green > yellow > red > yellow
+
+	cycle[]: 0.0							# phase 1
+	cycle[]: 21.0							# phase 2
+	cycle[]: 42.0							# phase 3
+
+	stop_distance[]: 5.0	
+	
+}
+
+###################################################################### OLDER ###########################################################
 
 tr_semaphore_profile : tr_sem_prof.cr_1x1
 {

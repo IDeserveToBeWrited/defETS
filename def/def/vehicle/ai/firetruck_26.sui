@@ -1,0 +1,40 @@
+ # XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Iceland - Look  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.firetruck_26.is
+{
+	accessories[]: .firetruck_26.is.chassis
+	accessories[]: .firetruck_26.is.fwheel
+	accessories[]: .firetruck_26.is.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 15000
+	engine_power: 186
+	
+	sound_move[]: "/sound/traffic/truck_eu_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_1.soundref"
+	sound_horn[]: "/sound/traffic/truck_horn_3.soundref"
+    
+    	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .firetruck_26.is.chassis
+{
+	data_path: "/def/vehicle/ai/firetruck_26/is.sii"
+}
+
+vehicle_wheel_accessory: .firetruck_26.is.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/22_steel_firetruck_f.sii"
+}
+
+vehicle_wheel_accessory: .firetruck_26.is.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/22_steel_firetruck_r.sii"
+}  

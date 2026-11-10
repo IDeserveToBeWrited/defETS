@@ -1,0 +1,137 @@
+SiiNunit
+{
+
+# Bus variant of the vehicle analysis shown in the vehicle configurator.
+# Loaded instead of /def/truck_analysis_data.sii when the desktop is in bus mode.
+#
+# The ranges below are taken from the coaches in dlc_bus (MAN Lion's Coach, Scania Touring,
+# Volvo 9700). Revisit them when a coach outside those bounds is added, otherwise its bars
+# saturate at one end and stop telling the player anything.
+
+truck_analysis_data : .main {
+	
+	# Items the panel lists, in display order.
+	
+	items[]:				"torque"
+	items_names[]:			"@@engine_torque@@"
+	items_ranges[]:			(2200, 2700)
+	items_visibility[]:		true
+	
+	items[]:				"power"
+	items_names[]:			"@@power@@"
+	items_ranges[]:			(430, 530)
+	items_visibility[]:		true
+	
+	items[]:				"gear_count"
+	items_names[]:			"@@gear_count@@"
+	items_ranges[]:			(6, 12)
+	items_visibility[]:		true
+	
+	items[]:				"height"
+	items_names[]:			"@@height@@"
+	items_ranges[]:			(3, 4)
+	items_visibility[]:		true
+	
+	items[]:				"width"
+	items_names[]:			"@@width@@"
+	items_ranges[]:			(2.4, 2.6)
+	items_visibility[]:		true
+	
+	items[]:				"length"
+	items_names[]:			"@@length@@"
+	items_ranges[]:			(12, 14.5)
+	items_visibility[]:		true
+	
+	items[]:				"effective_wheel_base"
+	items_names[]:			"@@effective_wheel_base@@"
+	items_ranges[]:			(5.5, 8.5)
+	items_visibility[]:		true
+	
+	items[]:				"retarder"
+	items_names[]:			"@@retarder_analysis@@"
+	items_ranges[]:			(0, 1)
+	items_visibility[]:		true
+	
+	items[]:				"axles"
+	items_names[]:			"@@axles@@"
+	items_ranges[]:			(2, 3)
+	items_visibility[]:		true
+	
+	items[]:				"seats"
+	items_names[]:			"@@seats@@"
+	items_ranges[]:			(45, 80)
+	items_visibility[]:		true
+	
+	items[]:				"doors"
+	items_names[]:			"@@doors@@"
+	items_ranges[]:			(1, 3)
+	items_visibility[]:		true
+	
+	# Items the category bars are computed from but the panel does not list.
+	
+	items[]:				"economy_base"
+	items_names[]:			"economy_base"
+	items_ranges[]:			(0.09, 0.18)
+	items_visibility[]:		false
+	
+	items[]:				"maneuverability_base"
+	items_names[]:			"maneuverability_base"
+	items_ranges[]:			(0.06, 0.17)
+	items_visibility[]:		false
+	
+	items[]:				"heavy_cargo_base"
+	items_names[]:			"heavy_cargo_base"
+	items_ranges[]:			(40000, 115000)
+	items_visibility[]:		false
+	
+	categories[]:		.c1
+	categories[]:		.c2
+	categories[]:		.c3
+	categories[]:		.c4
+}
+
+# economy_base is passengers carried per hp - see truck_analysis_data_u::item_values.
+truck_analysis_category : .c1 {
+	name:				"@@economy@@"
+	tooltip:			"@@economy_tooltip@@"
+	
+	items[]:			"economy_base"
+	items_weight[]:		1.0
+	
+	additional_dependencies[]:	"seats"
+	additional_dependencies[]:	"power"
+}
+
+truck_analysis_category : .c2 {
+	name:				"@@passenger_capacity@@"
+	tooltip:			"@@passenger_capacity_tooltip@@"
+	
+	items[]:			"seats"
+	items_weight[]:		1.0
+}
+
+truck_analysis_category : .c3 {
+	name:				"@@maneuverability@@"
+	tooltip:			"@@maneuverability_tooltip@@"
+	
+	items[]:			"maneuverability_base"
+	items_weight[]:		5.0
+	items[]:			"gear_count"
+	items_weight[]:		1.0
+	
+	additional_dependencies[]:	"effective_wheel_base"
+}
+
+truck_analysis_category : .c4 {
+	name:				"@@hill_climbing@@"
+	tooltip:			"@@hill_climbing_tooltip@@"
+	
+	items[]:			"heavy_cargo_base"
+	items_weight[]:		9.0
+	items[]:			"retarder"
+	items_weight[]:		2.0
+	
+	additional_dependencies[]:	"torque"
+}
+
+}

@@ -9,6 +9,18 @@ skills_data : skills.data
     urgent_job_skill_data: .skills.urgent
     ecodriving_skill_data: .skills.ecodriving
     adr_skill_data: .skills.adr
+
+    long_duty_skill_data: .skills.long_duty
+    tight_schedule_skill_data: .skills.tight_sched
+    satisfaction_decrease_skill_data: .skills.sat_decrease
+    low_acceleration_skill_data: .skills.low_accel
+    satisfaction_increase_skill_data: .skills.sat_increase
+    bus_ecodriving_skill_data: .skills.bus_eco
+
+    bus_job_skill_count_weights[]: 2
+    bus_job_skill_count_weights[]: 1
+    bus_job_skill_count_weights[]: 1
+    bus_job_skill_count_weights[]: 1
 }
 
 skill_data : .skills.long_dist
@@ -597,6 +609,377 @@ adr_skill_data : .skills.adr.classes
     rank_classes[]: 4
     rank_classes[]: 6
     rank_classes[]: 8
+}
+
+
+######################################################
+#################### BUS SKILLS ######################
+######################################################
+
+skill_data : .skills.long_duty
+{
+    max_rank: 3
+
+    icon_mat: "long_duty"
+    name: "@@skill_long_duty_title@@"
+    description: "@@skill_long_duty_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count_max@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus_total@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@long_duty_desc_count_max@@<br><offset vshift=3>
+@@long_duty_desc_revenue_bonus_max@@<br><offset vshift=3>
+@@long_duty_desc_xp_bonus_max@@</color></font>"
+
+    xp_reward_bonus: .skills.long_duty.xp
+    revenue_reward_bonus: .skills.long_duty.revenue
+    additional_data: .skills.long_duty.distances
+}
+
+skill_percentage_increase : .skills.long_duty.xp
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+}
+
+skill_percentage_increase : .skills.long_duty.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+}
+
+long_duty_skill_data : .skills.long_duty.distances
+{
+    max_stops_per_rank[]:  4
+    max_stops_per_rank[]:  6
+    max_stops_per_rank[]:  8
+}
+
+
+skill_data : .skills.tight_sched
+{
+    max_rank: 3
+
+    icon_mat: "tight_sched"
+    name: "@@skill_tight_schedule_title@@"
+    description: "@@skill_tight_schedule_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_new@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_new@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_new@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus_total@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_rank_1@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_rank_2@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@tight_schedule_desc_rank_3@@<br><offset vshift=3>
+@@tight_schedule_desc_xp_bonus@@</color></font>"
+
+    xp_reward_bonus: .skills.tight_sched.xp
+    additional_data: .skills.tight_sched.less_time
+
+    rank_weights[]: 3
+    rank_weights[]: 2
+    rank_weights[]: 1
+}
+
+skill_percentage_increase : .skills.tight_sched.xp
+{
+    percentage_increase_per_rank[]: 0.1
+    percentage_increase_per_rank[]: 0.2
+    percentage_increase_per_rank[]: 0.4
+}
+
+skill_percentage_decrease : .skills.tight_sched.less_time
+{
+    percentage_decrease_per_rank[]: 0.05
+    percentage_decrease_per_rank[]: 0.1
+    percentage_decrease_per_rank[]: 0.2
+}
+
+
+skill_data : .skills.sat_decrease
+{
+    max_rank: 3
+
+    icon_mat: "sat_decrease"
+    name: "@@skill_satisfaction_decrease_title@@"
+    description: "@@skill_satisfaction_decrease_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_new@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_new@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_new@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus_total@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_rank_1@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_rank_2@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_decrease_desc_rank_3@@<br><offset vshift=3>
+@@satisfaction_decrease_desc_revenue_bonus@@</color></font>"
+
+    revenue_reward_bonus: .skills.sat_decrease.revenue
+    additional_data: .skills.sat_decrease.neg_satis
+
+    rank_weights[]: 1
+    rank_weights[]: 1
+    rank_weights[]: 1
+}
+
+skill_percentage_increase : .skills.sat_decrease.revenue
+{
+    percentage_increase_per_rank[]: 0.1
+    percentage_increase_per_rank[]: 0.2
+    percentage_increase_per_rank[]: 0.3
+}
+
+skill_percentage_increase : .skills.sat_decrease.neg_satis
+{
+    percentage_increase_per_rank[]: 0.2
+    percentage_increase_per_rank[]: 0.4
+    percentage_increase_per_rank[]: 0.6
+}
+
+
+skill_data : .skills.low_accel
+{
+    max_rank: 3
+
+    icon_mat: "low_accel"
+    name: "@@skill_low_acceleration_title@@"
+    description: "@@skill_low_acceleration_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_new@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_new@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus_total@@</color></font></align>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_new@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus_total@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus_total@@</color></font></align>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_rank_1@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_rank_2@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@low_acceleration_desc_rank_3@@<br><offset vshift=3>
+@@low_acceleration_desc_revenue_bonus@@<br><offset vshift=3>
+@@low_acceleration_desc_xp_bonus@@</color></font>"
+
+    xp_reward_bonus: .skills.low_accel.xp
+    revenue_reward_bonus: .skills.low_accel.revenue
+    additional_data: .skills.low_accel.sensitivity
+
+    rank_weights[]: 1
+    rank_weights[]: 1
+    rank_weights[]: 1
+}
+
+skill_percentage_increase : .skills.low_accel.xp
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+}
+
+skill_percentage_increase : .skills.low_accel.revenue
+{
+    percentage_increase_per_rank[]: 0.05
+    percentage_increase_per_rank[]: 0.10
+    percentage_increase_per_rank[]: 0.15
+}
+
+skill_percentage_decrease : .skills.low_accel.sensitivity
+{
+    percentage_decrease_per_rank[]: 0.1
+    percentage_decrease_per_rank[]: 0.2
+    percentage_decrease_per_rank[]: 0.3
+}
+
+
+skill_data : .skills.sat_increase
+{
+    max_rank: 3
+
+    icon_mat: "sat_increase"
+    name: "@@skill_satisfaction_increase_title@@"
+    description: "@@skill_satisfaction_increase_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br>
+<font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>
+@@satisfaction_increase_desc@@</color></font>"
+
+    additional_data: .skills.sat_increase.pos_satis
+}
+
+skill_percentage_increase : .skills.sat_increase.pos_satis
+{
+    percentage_increase_per_rank[]: 0.1
+    percentage_increase_per_rank[]: 0.2
+    percentage_increase_per_rank[]: 0.3
+}
+
+
+skill_data : .skills.bus_eco
+{
+    max_rank: 3
+
+    icon_mat: "mechanical"
+    name: "@@skill_mechanical_title@@"
+    description: "@@skill_mechanical_info@@"
+
+    rank_icons[]: "linear_rank_1"
+    rank_icons[]: "linear_rank_2"
+    rank_icons[]: "linear_rank_3"
+
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 1</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 2</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+    rank_descriptions[]: "<align hstyle=center vstyle=top><font face=/font/normal_bold.font><color value=$STATE_COLOR$>@@rank@@ 3</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font></align>"
+
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 1</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 2</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+    rank_tooltips[]: "<font face=/font/normal_bold.font><color value=@@clr_white@@>@@rank@@ 3</color></font><br><br><font face=/font/normal.font><color value=@@clr_skill_desc_unimportant@@>@@ecodriving_desc_saved@@</color></font>"
+
+    additional_data: .skills.bus_eco.saved
+}
+
+skill_percentage_decrease : .skills.bus_eco.saved
+{
+    percentage_decrease_per_rank[]: 0.10
+    percentage_decrease_per_rank[]: 0.20
+    percentage_decrease_per_rank[]: 0.30
 }
 
 }

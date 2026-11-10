@@ -1,7 +1,9 @@
 # Configuration of the sound effects for the interior reverb and the windows opening sound equalizations.
 #
 # .effect.reverb.window.closed / .opened = Reverb settings for fully closed / opened windows.
-# .effect.equalizer.windows.closed / .opened = 3-eq settings for fully closed / opened windows for central (interior) sound.
+# .effect.equalizer.windows.inside / .outside = 3-eq settings for fully closed / opened windows for central (interior) sound.
+# .effect.multiband.cabin.nodes = Multiband equalizer node settings for central (interior) sound.
+# .effect.multiband.cabin.inside / .outside = Multiband equalizer parameters settings for central (interior) sound.
 # .effect.add.window_eq.closed / .opened = 3-eq settings for additive sound of fully closed / opened window. (Applied for left/right windows independently.)
 #
 # Sfx reverb parameters:
@@ -29,6 +31,30 @@
 #
 #	Please be very careful when setting a large difference boundaries for the low_crossover, high_crossover parameters on the same equalizer.
 #	Large differences can generate unwanted sound patterns.
+#
+# Sfx multiband equalizer
+#	sound_multiband_eq_node_data: Node filter types:
+#		node_a		- Node filter type. Units: Int [0, 14] Default: 0
+#		node_b		- Node filter type. Units: Int [0, 14] Default: 0
+#		node_c		- Node filter type. Units: Int [0, 14] Default: 0
+#		node_d		- Node filter type. Units: Int [0, 14] Default: 0
+#		node_e		- Node filter type. Units: Int [0, 14] Default: 0
+#		0 = Disabled.
+#		1 = Lowpass 12dB, 2 = Lowpass 24dB, 3 = Lowpass 48dB.
+#		4 = Highpass 12dB, 5 = Highpass 24dB, 6 = Highpass 48dB.
+#		7 = Lowshelf, 8 = Highshelf, 9 = Peaking, 10 = Bandpass, 11 = Notch, 12 = Allpass
+#		13 = Lowpass 6dB, 14 = Highpass 6dB
+#
+#	sound_multiband_eq_param_data: Parameters of each node:
+#		Replace x with corresponding node letter [a, b, c, d, e]
+#		x_frequency:	- Significant frequency, cutoff [low/high pass, low/high shelf], center [notch, peaking, band-pass], phase transition point [all-pass].
+#							Units: Hertz Range: [20, 22000] Default: 400
+#		x_quality:		- Quality factor, resonance [low/high pass], bandwidth [notch, peaking, band-pass], phase transition sharpness [all-pass], unused [low/high shelf].
+#							Range: [0.1, 10] Default: 0.707
+#		x_gain:			- Boost or attenuation in dB [peaking, high/low shelf only]. -30 to 30. Default = 0.
+#							Units: Decibels Range: [-30, 30] Default: 0
+#
+#	When multiband equalized is set up, it bypasses the 3-eq equalizer for the central cabin bus.
 
 sound_reverb_data : .effect.reverb.window.closed	
 {
@@ -84,6 +110,64 @@ sound_three_eq_data : .effect.equalizer.cabin.outside
 	crossover_slope: 1
 }
 
+
+#		0 = Disabled.
+#		1 = Lowpass 12dB, 	2 = Lowpass 24dB, 	3 = Lowpass 48dB, 	13 = Lowpass 6dB
+#		4 = Highpass 12dB, 	5 = Highpass 24dB, 	6 = Highpass 48dB, 	14 = Highpass 6dB
+#		7 = Lowshelf, 		8 = Highshelf, 		9 = Peaking, 10 = Bandpass, 11 = Notch, 12 = Allpass
+#		
+
+sound_multiband_eq_node_data : .effect.multiband.cabin.nodes
+{
+	node_a: 7
+	node_b: 0
+	node_c: 9
+	node_d: 0
+	node_e: 8
+}
+
+sound_multiband_eq_param_data : .effect.multiband.cabin.inside
+{
+
+	a_frequency: 400.0
+	a_quality: 0.71
+	a_gain: -5.0
+	b_frequency: 400.0
+	b_quality: 0.707
+	b_gain: 0.0
+	c_frequency: 1500.0
+	c_quality: 0.1
+	c_gain: -11.0
+	d_frequency: 400.0
+	d_quality: 0.707
+	d_gain: 0.0
+	e_frequency: 5000.0
+	e_quality: 0.71
+	e_gain: -17.0
+
+
+}
+
+sound_multiband_eq_param_data : .effect.multiband.cabin.outside
+{
+	a_frequency: 50.0
+	a_quality: 0.70
+	a_gain: 0.0
+	b_frequency: 400.0
+	b_quality: 0.70
+	b_gain: -0.0
+	c_frequency: 1200.0
+	c_quality: 0.1
+	c_gain: 0.0
+	d_frequency: 400.0
+	d_quality: 0.70
+	d_gain: 0.0
+	e_frequency: 5000.0
+	e_quality: 0.10
+	e_gain: 0.0	
+
+}
+
 sound_three_eq_data : .effect.add.window_eq.closed
 {
 	low_gain: -1.0
@@ -102,6 +186,61 @@ sound_three_eq_data : .effect.add.window_eq.opened
 	low_crossover: 400.0
 	high_crossover: 4000.0
 	crossover_slope: 1
+}
+
+
+#		0 = Disabled.
+#		1 = Lowpass 12dB, 2 = Lowpass 24dB, 3 = Lowpass 48dB.
+#		4 = Highpass 12dB, 5 = Highpass 24dB, 6 = Highpass 48dB.
+#		7 = Lowshelf, 8 = Highshelf, 9 = Peaking, 10 = Bandpass, 11 = Notch, 12 = Allpass
+#		13 = Lowpass 6dB, 14 = Highpass 6dB
+
+sound_multiband_eq_node_data : .effect.add.window_eq.multiband.nodes
+{
+	node_a: 7
+	node_b: 0
+	node_c: 9
+	node_d: 0
+	node_e: 8
+}
+
+sound_multiband_eq_param_data : .effect.add.window_eq.multiband.closed
+{
+	
+	a_frequency: 400
+	a_quality: 0.53
+	a_gain: -3.0
+	b_frequency: 360.0
+	b_quality: 0.36
+	b_gain: 0.0
+	c_frequency: 2000.0
+	c_quality: 0.54
+	c_gain: -16.0
+	d_frequency: 400.0
+	d_quality: 0.707
+	d_gain: 0.0
+	e_frequency: 4500.0
+	e_quality: 0.34
+	e_gain: -21.0
+}
+
+sound_multiband_eq_param_data : .effect.add.window_eq.multiband.opened
+{
+	a_frequency: 72.0
+	a_quality: 0.707
+	a_gain: 0.0
+	b_frequency: 360.0
+	b_quality: 0.707
+	b_gain: 0.0
+	c_frequency: 1800.0
+	c_quality: 0.707
+	c_gain: 0.0
+	d_frequency: 400.0
+	d_quality: 0.707
+	d_gain: 0.0
+	e_frequency: 6500.0
+	e_quality: 0.707
+	e_gain: 0.0
 }
 
 

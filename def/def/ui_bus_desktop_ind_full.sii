@@ -1,0 +1,40 @@
+SiiNunit
+{
+ui_desktop_menu_bar_category : .vehicle_desk {
+	type: menu
+	alignment: left
+
+	icon: switch_bus
+	name: "@@bus_mode@@"
+
+	tooltip_location: right
+
+	column_count: 1
+
+@include "ui_desktop_vehicle_mode_links.sui"
+
+}
+
+ui_desktop_menu_bar_category : .drive {
+	type: no_menu
+
+	icon: drive
+	name: "@@drive@@"
+	action_ivalue: 100
+	tooltip: "@@drive_tooltip@@"
+}
+
+ui_desktop_menu_bar_category : .separator1
+{
+	type: separator
+}
+
+@include "ui_bus_index_full_config.sui"
+
+ui_desktop_menu_bar_category : .separator2
+{
+	type: separator
+}
+
+@include "ui_bus_quit_config.sui"
+}

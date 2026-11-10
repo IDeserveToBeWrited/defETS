@@ -1,0 +1,209 @@
+SiiNunit
+{
+# Available events:
+# job_done
+# use_rest
+# use_gas
+# road_disc
+# truck_bought
+# ferry_used
+# city_visited
+# service_disc
+# quick_travel
+# new_day
+# new_week
+# garag_change
+# trig_activat
+# aca_log_entr
+
+# -- DLC Iceland --
+
+# Discover at least 12 cities in Iceland.
+
+achievement_visit_city_data : .achievement.is_visit_cit
+{
+	event_name: city_visited
+	initial_check: true
+	country_name: iceland
+	target: 12
+
+	achievement_name: is_visit_cities
+
+	steam_progress_id: "is_visit_cities-progress"
+	steam_id: is_visit_cities
+}
+
+# View cutscenes from at least 8 viewpoints in Iceland.
+
+achievement_trigger_data : .achievement.is_cutscenes
+{
+	event_name: trig_activat
+	initial_check: true
+	trigger_param: is_cutscenes
+	target: 8
+
+	achievement_name: is_cutscenes
+
+	steam_progress_id: "is_cutscenes-progress"
+	steam_id: is_cutscenes
+}
+
+# Complete 3 excellent deliveries in this order: Reykjavík - Höfn - Akureyri - Reykjavík.
+
+achievement_delivery : .achievement.is_ringroad
+{
+	event_name: job_done
+	initial_check: true
+	condition: .is_ringroad.condition
+	target: 3
+
+	achievement_name: is_ringroad
+
+	steam_progress_id: "is_ringroad-progress"
+	steam_id: is_ringroad
+}
+
+achievement_delivery_sequence : .is_ringroad.condition
+{
+	in_order: true
+
+	list[]: .is_ringroad.reykjavik.hofn
+	list[]: .is_ringroad.hofn.akureyri
+	list[]: .is_ringroad.akureyri.reykjavik
+}
+
+achievement_delivery_each : .is_ringroad.reykjavik.hofn
+{
+	list[]: .is_ringroad.reykjavik.hofn.source
+	list[]: .is_ringroad.reykjavik.hofn.target
+	list[]: .is_ringroad.reykjavik.hofn.damage
+	list[]: .is_ringroad.reykjavik.hofn.late
+}
+
+achievement_delivery_point_city : .is_ringroad.reykjavik.hofn.source
+{
+	role: source
+	city_name: reykjavik
+}
+
+achievement_delivery_point_city : .is_ringroad.reykjavik.hofn.target
+{
+	role: target
+	city_name: hofn
+}
+
+achievement_delivery_cargo_damage : .is_ringroad.reykjavik.hofn.damage
+{
+	damage_max: 0.0
+}
+
+achievement_delivery_late : .is_ringroad.reykjavik.hofn.late
+{
+	late: false
+}
+
+achievement_delivery_each : .is_ringroad.hofn.akureyri
+{
+	list[]: .is_ringroad.hofn.akureyri.source
+	list[]: .is_ringroad.hofn.akureyri.target
+	list[]: .is_ringroad.hofn.akureyri.damage
+	list[]: .is_ringroad.hofn.akureyri.late
+}
+
+achievement_delivery_point_city : .is_ringroad.hofn.akureyri.source
+{
+	role: source
+	city_name: hofn
+}
+
+achievement_delivery_point_city : .is_ringroad.hofn.akureyri.target
+{
+	role: target
+	city_name: akureyri
+}
+
+achievement_delivery_cargo_damage : .is_ringroad.hofn.akureyri.damage
+{
+	damage_max: 0.0
+}
+
+achievement_delivery_late : .is_ringroad.hofn.akureyri.late
+{
+	late: false
+}
+
+achievement_delivery_each : .is_ringroad.akureyri.reykjavik
+{
+	list[]: .is_ringroad.akureyri.reykjavik.source
+	list[]: .is_ringroad.akureyri.reykjavik.target
+	list[]: .is_ringroad.akureyri.reykjavik.damage
+	list[]: .is_ringroad.akureyri.reykjavik.late
+}
+
+achievement_delivery_point_city : .is_ringroad.akureyri.reykjavik.source
+{
+	role: source
+	city_name: akureyri
+}
+
+achievement_delivery_point_city : .is_ringroad.akureyri.reykjavik.target
+{
+	role: target
+	city_name: reykjavik
+}
+
+achievement_delivery_cargo_damage : .is_ringroad.akureyri.reykjavik.damage
+{
+	damage_max: 0.0
+}
+
+achievement_delivery_late : .is_ringroad.akureyri.reykjavik.late
+{
+	late: false
+}
+
+# Complete 3 livestock deliveries of sheep to or from 3 different farms in Iceland.
+
+achievement_delivery : .achievement.is_sheep
+{
+	event_name: job_done
+	initial_check: true
+	condition: .is_sheep.condition
+	target: 3
+
+	achievement_name: is_sheep
+
+	steam_progress_id: "is_sheep-progress"
+	steam_id: is_sheep
+}
+
+achievement_unique_delivery_points : .is_sheep.condition
+{
+	condition: .is_sheep.cargo
+	source_collect_condition: .is_sheep.source
+	target_collect_condition: .is_sheep.target
+	role: any
+	unique: company_instance
+	count: 3
+}
+
+achievement_delivery_cargo : .is_sheep.cargo
+{
+	cargo_name: live_sheep
+}
+
+achievement_delivery_company : .is_sheep.source
+{
+	role: source
+	company_name: vikingabyli
+	country_name: iceland
+}
+
+achievement_delivery_company : .is_sheep.target
+{
+	role: target
+	company_name: vikingabyli
+	country_name: iceland
+}
+
+}

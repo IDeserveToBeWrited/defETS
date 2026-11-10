@@ -558,6 +558,33 @@ prefab_corner : corner.ungd3m
 	random_uv: false
 }
 
+prefab_corner : corner.ungd4m1m
+{
+	name: "drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_drain_4m_gen_1.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 15
+	random_uv: false
+}
+
+prefab_corner : corner.ungd4m1_5m
+{
+	name: "drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_drain_4m_gen_1_5.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 10
+	random_uv: false
+}
+
+prefab_corner : corner.ungd4m3m
+{
+	name: "drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_drain_4m_gen_3.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 5
+	random_uv: false
+}
+
 ###################################################################   universal hw lane drain   ######################################################
 
 prefab_corner : corner.unghd1m
@@ -587,6 +614,32 @@ prefab_corner : corner.unghd3m
 	random_uv: false
 }
 
+prefab_corner : corner.unghd4m1m
+{
+	name: "hw drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_hw_drain_4m_gen_1.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 15
+	random_uv: false
+}
+
+prefab_corner : corner.unghd4m1_5m
+{
+	name: "hw drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_hw_drain_4m_gen_1_5.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 10
+	random_uv: false
+}
+
+prefab_corner : corner.unghd4m3m
+{
+	name: "hw drain 4m"
+	model_desc: "/prefab2/corners/un/gen/un_hw_drain_4m_gen_3.pmd"
+	x_uv_slots: 1
+	y_uv_slots: 5
+	random_uv: false
+}
 
 ###################################################################   round edges   ######################################################
 
@@ -1395,6 +1448,15 @@ prefab_corner : corner.un1175cb
 	name: "curb"
 }
 
+#universal 1x1 (m) 75(angle) curb slope
+prefab_corner : corner.un1175cbs
+{
+	model_desc: "/prefab2/corners/un/un_corner_1-1_75_cbs.pmd"
+	prefab_desc: "/prefab2/corners/un/un_corner_1-1_75_cbs.ppd"
+
+	name: "curb slope"
+}
+
 #universal sw 1x1 (m) 90(angle) sh
 prefab_corner : corner.unsw90sh
 {
@@ -1617,6 +1679,15 @@ prefab_corner : corner.un1430sh
 	prefab_desc: "/prefab2/corners/un/un_corner_1-4_30_sh.ppd"
 
 	name: "shoulder"
+}
+
+#universal 1x4 (m) 30(angle) curb slope
+prefab_corner : corner.un1430cbs
+{
+	model_desc: "/prefab2/corners/un/un_corner_1-4_30_cbs.pmd"
+	prefab_desc: "/prefab2/corners/un/un_corner_1-4_30_cbs.ppd"
+
+	name: "curb slope"
 }
 
 #universal 1x4 (m) 45(angle) sh
@@ -1875,14 +1946,23 @@ prefab_corner : corner.un4m15cb
 	name: "curb"
 }
 
-#universal 4m offset 15m length drain
-# prefab_corner : corner.un4m15dn01
-# {
-# 	model_desc: "/prefab2/corners/un/un_corner_4m_offset_15m_drain_01_new.pmd"
-# 	prefab_desc: "/prefab2/corners/un/un_corner_4m_offset_15m_drain_01_new.ppd"
+#universal 4m offset 15m length drain 4m
+prefab_corner : corner.un4mdn4m01
+{
+	model_desc: "/prefab2/corners/un/un_drain_4m_01_new_inner_15.pmd"
+	prefab_desc: "/prefab2/corners/un/un_drain_4m_01_new_inner_15.ppd"
 
-# 	name: "drain new 01"
-# }
+	name: "drain 4m new 01"
+}
+
+#universal 4m offset 15m length drain
+prefab_corner : corner.un4m15dn01
+{
+	model_desc: "/prefab2/corners/un/un_corner_4m_offset_15m_drain_01_new.pmd"
+	prefab_desc: "/prefab2/corners/un/un_corner_4m_offset_15m_drain_01_new.ppd"
+
+	name: "drain new 01"
+}
 
 #universal 10m offset 15m length sh
 prefab_corner : corner.un10m15sh
@@ -3527,6 +3607,38 @@ prefab_corner : corner.1407oshw1
 {
 	model_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1-1_trans_0-2_0-2_50m_sh_to_hw_mirrored.pmd"
 	prefab_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1-1_trans_0-2_0-2_50m_sh_to_hw_mirrored.ppd"
+	name: "shoulder to hw lane"
+}
+
+#un_fork_1m-4m_4m-1m_0-3_0-2_split_0-2_50m NOD0
+prefab_corner : corner.1415fshw0
+{
+	model_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-3_0-2_split_0-2_50m_sh_to_hw.pmd"
+	prefab_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-3_0-2_split_0-2_50m_sh_to_hw.ppd"
+	name: "shoulder to hw lane"
+}
+
+#un_fork_1m-4m_4m-1m_0-2_0-3_join_0-2_50m NOD2
+prefab_corner : corner.1415gshw2
+{
+	model_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-2_0-3_join_0-2_50m_sh_to_hw.pmd"
+	prefab_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-2_0-3_join_0-2_50m_sh_to_hw.ppd"
+	name: "shoulder to hw lane"
+}
+
+#un_fork_1m-4m_4m-1m_0-4_0-3_split_0-2_50m NOD0
+prefab_corner : corner.1415hshw0
+{
+	model_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-4_0-3_split_0-2_50m_sh_to_hw.pmd"
+	prefab_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-4_0-3_split_0-2_50m_sh_to_hw.ppd"
+	name: "shoulder to hw lane"
+}
+
+#un_fork_1m-4m_4m-1m_0-3_0-4_join_0-2_50m NOD2
+prefab_corner : corner.1415ishw2
+{
+	model_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-3_0-4_join_0-2_50m_sh_to_hw.pmd"
+	prefab_desc: "/prefab2/corners/un/sh_to_hw/un_corner_1m-4m_4m-1m_0-3_0-4_join_0-2_50m_sh_to_hw.ppd"
 	name: "shoulder to hw lane"
 }
 

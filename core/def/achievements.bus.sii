@@ -1,0 +1,60 @@
+SiiNunit
+{
+
+# -- Bus vehicle mode --
+
+# Complete a coach job with 90% or higher passenger satisfaction.
+
+achievement_bus : .achievement.bus_satisfac
+{
+	event_name: bus_job_done
+	type: job_satisfaction
+	target: 90
+
+	achievement_name: bus_job_satisfaction
+
+	steam_id: bus_job_satisfaction
+}
+
+# Drive a total of 5,000 kilometers in your own vehicle during a coach job.
+
+achievement_bus : .achievement.bus_owned_di
+{
+	event_name: bus_job_done
+	type: jobs_owned_distance
+	target: 5000
+
+	achievement_name: bus_jobs_owned_distance
+
+	steam_id: bus_jobs_owned_distance
+}
+
+# Spend at least one skill point in each coach skill.
+
+achievement_bus : .achievement.bus_skills
+{
+	event_name: skill_pt_app
+	type: skills
+	target: 6
+
+	achievement_name: bus_skills
+
+	steam_progress_id: "bus_skills-progress"
+	steam_id: bus_skills
+}
+
+# Complete 3 consecutive jobs of at least 300 kilometers each with 100% satisfaction.
+
+achievement_bus : .achievement.bus_con_sati
+{
+	event_name: bus_job_done
+	type: jobs_consecutive
+	target: 3
+
+	achievement_name: bus_jobs_consecutive
+
+	steam_progress_id: "bus_jobs_consecutive-progress"
+	steam_id: bus_jobs_consecutive
+}
+
+}

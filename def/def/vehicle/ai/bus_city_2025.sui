@@ -137,3 +137,41 @@ traffic_spawn_condition: .traffic.bus_city25.be_aw.condition.city
 	type: city
 	str_param[]: "antwerp"
 }
+
+################################ 	 Iceland   	 ###################################
+############################################################################################
+
+traffic_vehicle : traffic.bus_city25.is_rj
+{
+	accessories[]: .bus_city25.is_rj.chassis
+	accessories[]: .bus_city25.is_rj.fwheel
+	accessories[]: .bus_city25.is_rj.rwheel
+
+	max_speed: 80
+
+	vehicle_mass: 18000
+
+	sound_move[]: "/sound/traffic/bus_1.soundref"
+
+	spawn_ratio: 0
+	tags[]: passenger
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .bus_city25.is_rj.chassis
+{
+	data_path: "/def/vehicle/ai/bus_city_2025/is_rj.sii"
+}
+
+vehicle_wheel_accessory: .bus_city25.is_rj.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/f_wheel/steel.sii"
+}
+
+vehicle_wheel_accessory: .bus_city25.is_rj.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/r_wheel/steel.sii"
+}

@@ -556,6 +556,9 @@
 	key[]: "bumper"
 	val[]: "保险杠"
 
+	key[]: "bus_panel"
+	val[]: "路线牌" #+ Bus Destination Panel Locator	
+
 	key[]: "c_grill"
 	val[]: "前格栅护栏" #+ Steeled tubular bars that attached on the front of the cabin, usually above bullbars
 
@@ -585,6 +588,9 @@
 
 	key[]: "curtain_f"
 	val[]: "窗帘" #+ Interior curtains for the front glass of the truck
+
+	key[]: "curtains"
+	val[]: "窗帘" #+ Coach Passenger Curtains
 
 	key[]: "decals"
 	val[]: "贴花"
@@ -655,6 +661,9 @@
 	key[]: "f_inlay_chs"
 	val[]: "前格栅底部" #+ Front grille net located in spaces on the front truck's mask (bottom part). Serves to cover truck's radiator
 
+	key[]: "f_intake"
+	val[]: "前面罩" #+ Coach Front Mask
+
 	key[]: "f_intake_bar"
 	val[]: "前徽标面板" #+ The plate under truck logo/badge on the front of the truck
 
@@ -678,6 +687,9 @@
 
 	key[]: "f_light_top"
 	val[]: "车顶灯"
+
+	key[]: "f_light"
+	val[]: "前大灯" #+ Coach Front Light
 
 	key[]: "f_logo"
 	val[]: "前车标" #+ Brand logo on front of the truck
@@ -751,6 +763,12 @@
 	key[]: "nuts"
 	val[]: "螺帽" #+ Wheel nuts
 
+	key[]: "p_seats"
+	val[]: "乘客座椅" #+ Passenger Seats
+
+	key[]: "r_badge"
+	val[]: "后徽标" #+ Rear badge
+
 	key[]: "r_banner"
 	val[]: "后条幅" #+ Banner on the rear
 
@@ -778,8 +796,14 @@
 	key[]: "r_light"
 	val[]: "尾灯" #+ Rear lights accessory
 
+	key[]: "r_logo"
+	val[]: "后 Logo" #+ Rear Logo
+
 	key[]: "r_mudflap"
 	val[]: "后挡泥帘" #+ A couple of rear mudflaps
+
+	key[]: "r_panel"
+	val[]: "后面板" #+ Rear Panel
 
 	key[]: "r_wheel"
 	val[]: "后轮"
@@ -792,6 +816,9 @@
 
 	key[]: "rn_mirror"
 	val[]: "右前视镜"
+
+	key[]: "rv_mirror"
+	val[]: "后视镜"
 
 	key[]: "rwheel"
 	val[]: "后轮"
@@ -876,6 +903,9 @@
 
 	key[]: "toystand"
 	val[]: "中控台物品" #+ Interior accessories placed on stands or centre console available in the truck
+
+	key[]: "warnsticker"
+	val[]: "警示贴纸" #+ Stickers area for buses
 
 	key[]: "windowtrim"
 	val[]: "车窗饰条" #+ Small variously shaped, decorative steel or chrome plates placed around truck's windows
@@ -2547,6 +2577,9 @@
 	key[]: "reverb_cabin"
 	val[]: "驾驶室的混响效果" #+ Checkbox enabling the reverb effect of the cabin.
 
+	key[]: "bus_passengers_sound"
+	val[]: "客车乘客" #+ Checkbox enabling the sounds of the passengers during bus jobs.
+
 	key[]: "reverb_world"
 	val[]: "环境的混响效果" #+ Checkbox enabling the reverb effect of the environment.
 
@@ -2668,6 +2701,9 @@
 
 	key[]: "reverb_cabin_op_tooltip" # - Audio, Advanced
 	val[]: "启用驾驶室混响效果。"
+
+	key[]: "bus_passengers_sound_op_tooltip" # - Audio, Advanced
+	val[]: "启用客车内乘客的声音。"
 
 	key[]: "reverb_world_op_tooltip" # - Audio, Advanced
 	val[]: "启用环境音的混响效果。"
@@ -3868,6 +3904,9 @@
 	key[]: "o_im_beacon"
 	val[]: "警示灯"
 
+	key[]: "o_im_cabinlight"
+	val[]: "车内照明灯"
+
 	key[]: "o_im_light_horn"
 	val[]: "灯光喇叭"
 
@@ -3966,6 +4005,21 @@
 
 	key[]: "o_im_left_window_close"
 	val[]: "关闭左侧车窗" #+ Action for closing left window.
+
+	key[]: "o_im_left_windscreen_shade_up"
+	val[]: "升起左遮阳帘"
+
+	key[]: "o_im_left_windscreen_shade_down"
+	val[]: "降下左遮阳帘"
+
+	key[]: "o_im_right_windscreen_shade_up"
+	val[]: "升起右遮阳帘"
+
+	key[]: "o_im_right_windscreen_shade_down"
+	val[]: "降下右遮阳帘"
+
+	key[]: "o_im_entrance_doors"
+	val[]: "开启与关闭乘客门"
 
 	key[]: "o_im_cycl_zoom"
 	val[]: "多人游戏地图缩放" #+ Action for cycling zoom on multiplayer map.
@@ -4284,6 +4338,9 @@
 	key[]: "o_im_beacon_op_tooltip"
 	val[]: "分配开/关警示灯的按钮（如果你的汽车或挂车配备了警示灯）。"
 
+	key[]: "o_im_cabinlight_op_tooltip"
+	val[]: "分配开/关车内照明灯的按钮。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
+
 	key[]: "o_im_horn_op_tooltip"
 	val[]: "分配使用电喇叭的按钮。"
 
@@ -4330,7 +4387,7 @@
 	val[]: "分配用于更改资讯娱乐显示屏的按钮。"
 
 	key[]: "o_im_parking_cameras_op_tooltip"
-	val[]: "分配用于按需切换停车摄像头的按钮。该按钮可在倒车时暂时隐藏摄像头画面，在前进时则显示画面。"
+	val[]: "分配用于按需切换停车摄像头的按钮。该按钮可在倒车时暂时隐藏摄像头画面，在前进时则显示画面。（客车模式）"
 
 	key[]: "o_im_dashboard_map_op_tooltip"
 	val[]: "分配按钮，用于更改仪表盘或资讯娱乐显示屏内导航屏幕的缩放级别。"
@@ -4349,6 +4406,21 @@
 
 	key[]: "o_im_left_window_close_op_tooltip"
 	val[]: "分配关闭左侧车窗的按钮。"
+
+	key[]: "o_im_left_windscreen_shade_up_op_tooltip"
+	val[]: "分配升起左遮阳帘的按钮。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
+
+	key[]: "o_im_left_windscreen_shade_down_op_tooltip"
+	val[]: "分配降下左遮阳帘的按钮。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
+
+	key[]: "o_im_right_windscreen_shade_up_op_tooltip"
+	val[]: "分配升起右遮阳帘的按钮。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
+
+	key[]: "o_im_right_windscreen_shade_down_op_tooltip"
+	val[]: "分配降下右遮阳帘的按钮。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
+
+	key[]: "o_im_entrance_doors_op_tooltip"
+	val[]: "分配开启与关闭乘客门的按钮。只有当车辆静止时，乘客门才能打开。<br><br><color value=@@clr_txt_d@@>仅适用于兼容载具。"
 
 	key[]: "o_im_show_mirrors_op_tooltip"
 	val[]: "分配用于显示/隐藏屏幕侧视镜的按钮。"
@@ -6595,6 +6667,9 @@
 	key[]: "hurry_up"
 	val[]: "我们的客户希望货物能尽快交付！请务必准时送达！"
 
+	key[]: "bus_hurry_up"
+	val[]: "你的行驶进度已晚于时刻表"
+
 
 	key[]: "toll_one_time"
 	val[]: "要通过收费站，你必须缴纳 $MONEY$。<br>按如下按键缴费："
@@ -6691,6 +6766,18 @@
 
 	key[]: "parking_brake_on2"
 	val[]: "使用如下按键解除制动："
+
+	key[]: "entrance_doors_open_fail"
+	val[]: "无法打开乘客门。请停车后重试。"
+
+	key[]: "entrance_doors_no_electrics"
+	val[]: "无法操作乘客门。请先打开电源。"
+
+	key[]: "door_brake_on1"
+	val[]: "乘客门开启！"
+
+	key[]: "door_brake_on2"	
+	val[]: "车辆已被车门制动器锁定。使用如下按键关门："
 
 	key[]: "retarder_on1"
 	val[]: "缓速器已启动！"
@@ -6806,6 +6893,12 @@
 
 	key[]: "adv_hud_job_info"
 	val[]: "任务详情" #+ Widget name for displaying job info.
+
+	key[]: "adv_hud_bus_gmeter"
+	val[]: "G力计"
+
+	key[]: "adv_hud_bus_gmeter_op_tooltip"
+	val[]: "显示载具行驶时受到的G力。有助于保持平稳的行车体验。"
 
 	key[]: "adv_hud_chat"
 	val[]: "聊天" #+ Widget name for displaying the convoy chat.
@@ -9454,6 +9547,9 @@
 
 	key[]: "mail_new_mail"
 	val[]: "你有 $COUNT$ 条未读消息" #+ Shown in message preview panel if there are unread messages. The $COUNT$ is replaced with number of messages. For example "You have 1 unread message(s)"
+
+	key[]: "mail_switch_vehicle_mode_confirmation"
+	val[]: "为了查看这些信息，你需要切换到$VEHICLE_MODE$<br><br>你要继续吗？" #+ Shown when clicking on link in message would cause vehicle mode switch.	
 #@}
 
 
@@ -10293,6 +10389,9 @@
 	key[]: "td_info_truck_title"
 	val[]: "卡车：" #+ The title of truck dealer info about the truck.
 
+	key[]: "td_info_bus_title"
+	val[]: "客车：" #+ The title of truck dealer info about the truck.
+
 	key[]: "td_info_series"
 	val[]: "系列：" #+ Series of the truck. For example "Series:&nbsp;&nbsp;&nbsp;&nbsp;Premium"
 
@@ -10310,6 +10409,9 @@
 
 	key[]: "td_info_cab"
 	val[]: "驾驶室：" #+ Type of cabin. For example "Cabin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privilege"
+
+	key[]: "td_info_body"
+	val[]: "车身：" #+ Type of body. (Used for buses instead of cabin.) For example "Body:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.1 m"
 
 	key[]: "td_info_steering"
 	val[]: "驾驶习惯：" #+ Steering side. For example "Steering:&nbsp;&nbsp;&nbsp;&nbsp; Left-hand"
@@ -10764,6 +10866,9 @@
 
 	key[]: "mapl_road_numbers"
 	val[]: "道路编号"
+
+	key[]: "mapl_bus_stop"
+	val[]: "公交站"
 #@}
 #@}
 
@@ -10986,6 +11091,9 @@
 	key[]: "tz_eest"
 	val[]: "东欧夏令时" #Estern European Summer Time
 
+	key[]: "tz_gmt"
+	val[]: "GMT" #Greenwich Mean Time
+
 	key[]: "tz_msk"
 	val[]: "莫斯科标准时间" #Moscow Standard Time
 
@@ -11074,6 +11182,12 @@
 
 	key[]: "mirror_camera_rotate"
 	val[]: "旋转视角"
+
+	key[]: "front_left"
+	val[]: "左前侧" #+ Checkbox selecting top mirror on the left side.
+
+	key[]: "front_right"
+	val[]: "右前侧" #+ Checkbox selecting top mirror on the right side.	
 #@}
 
 #+ Light Adjuster
@@ -11107,6 +11221,9 @@
 
 	key[]: "dash_backlight"
 	val[]: "仪表盘背光" #+ Label of slider controlling intensity of dashboard backlight.
+
+	key[]: "cabin_light"
+	val[]: "车内照明灯"  #+ Checkbox enabling the interior lights in the passenger part of the coach.
 #@}
 
 
@@ -11445,6 +11562,9 @@
 	key[]: "ajaccio"
 	val[]: "阿雅克肖"
 
+	key[]: "akureyri"
+	val[]: "阿克雷里"
+
 	key[]: "albacete"
 	val[]: "阿尔瓦塞特"
 
@@ -11550,6 +11670,9 @@
 	key[]: "bitola"
 	val[]: "比托拉"
 
+	key[]: "blonduos"
+	val[]: "布伦迪欧斯"
+
 	key[]: "bodo"
 	val[]: "博德"
 
@@ -11564,6 +11687,9 @@
 
 	key[]: "bordeaux"
 	val[]: "波尔多"
+
+	key[]: "borgarnes"
+	val[]: "博尔加内斯"
 
 	key[]: "borlange"
 	val[]: "博伦厄"
@@ -11585,6 +11711,9 @@
 
 	key[]: "brest"
 	val[]: "布雷斯特"
+
+	key[]: "brjanslaekur"
+	val[]: "布良斯莱克"
 
 	key[]: "brno"
 	val[]: "布尔诺"
@@ -11709,6 +11838,9 @@
 	key[]: "edirne"
 	val[]: "埃迪尔内"
 
+	key[]: "egilsstadir"
+	val[]: "埃伊尔斯塔济"
+
 	key[]: "eindhoven"
 	val[]: "埃因霍温"
 
@@ -11832,6 +11964,12 @@
 	key[]: "hirtshals"
 	val[]: "希茨海尔斯"
 
+	key[]: "hofn"
+	val[]: "赫本"
+
+	key[]: "holmavik"
+	val[]: "侯尔马维克"
+
 	key[]: "honningsvag"
 	val[]: "洪宁斯沃格"
 
@@ -11843,6 +11981,9 @@
 
 	key[]: "hunedoara"
 	val[]: "胡内多阿拉"
+
+	key[]: "husavik"
+	val[]: "胡萨维克"
 
 	key[]: "iasi"
 	val[]: "雅西"
@@ -11858,6 +11999,9 @@
 
 	key[]: "ioannina"
 	val[]: "约阿尼纳"
+
+	key[]: "isafjordur"
+	val[]: "伊萨菲厄泽"
 
 	key[]: "istanbul"
 	val[]: "伊斯坦布尔"
@@ -11918,6 +12062,9 @@
 
 	key[]: "kavala"
 	val[]: "卡瓦拉"
+
+	key[]: "keflavik"
+	val[]: "凯夫拉维克"
 
 	key[]: "kiel"
 	val[]: "基尔"
@@ -12198,6 +12345,9 @@
 	key[]: "odense"
 	val[]: "欧登塞"
 
+	key[]: "olafsvik"
+	val[]: "欧拉夫斯维克"
+
 	key[]: "olbia"
 	val[]: "奥尔比亚"
 
@@ -12263,6 +12413,9 @@
 
 	key[]: "patras"
 	val[]: "帕特雷"
+
+	key[]: "patreksfjord"
+	val[]: "帕特雷克斯菲厄泽"
 
 	key[]: "pecs"
 	val[]: "佩奇"
@@ -12339,6 +12492,9 @@
 	key[]: "resita"
 	val[]: "雷希察"
 
+	key[]: "reykjavik"
+	val[]: "雷克雅未克"
+
 	key[]: "rezekne"
 	val[]: "雷泽克内"
 
@@ -12408,11 +12564,17 @@
 	key[]: "sassari"
 	val[]: "萨萨里"
 
+	key[]: "selfoss"
+	val[]: "塞尔福斯"
+
 	key[]: "setubal"
 	val[]: "塞图巴尔"
 
 	key[]: "sevilla"
 	val[]: "塞维利亚"
+
+	key[]: "seydisfjodur"
+	val[]: "塞济斯菲厄泽"
 
 	key[]: "sheffield"
 	val[]: "谢菲尔德"
@@ -12461,6 +12623,9 @@
 
 	key[]: "strasbourg"
 	val[]: "斯特拉斯堡"
+
+	key[]: "stykkisholmur"
+	val[]: "斯蒂基斯霍尔米"
 
 	key[]: "stuttgart"
 	val[]: "斯图加特"
@@ -12512,6 +12677,12 @@
 
 	key[]: "thessaloniki"
 	val[]: "塞萨洛尼基"
+
+	key[]: "thorlakshofn"
+	val[]: "索劳克斯赫本"
+
+	key[]: "thorshofn"
+	val[]: "索尔斯港"
 
 	key[]: "timisoara"
 	val[]: "蒂米什瓦拉"
@@ -12605,6 +12776,9 @@
 
 	key[]: "vigo"
 	val[]: "维戈"
+
+	key[]: "vik"
+	val[]: "维克"
 
 	key[]: "villa_san_giovanni"
 	val[]: "圣乔瓦尼镇"
@@ -12889,6 +13063,18 @@
 
 	key[]: "desktop_tut_tour_finish"
 	val[]: "感谢您查看我们新更新的主页。"
+
+	key[]: "desktop_tut_first_bus_job_t"
+	val[]: "欢迎来到客车模式"
+
+	key[]: "desktop_tut_first_bus_job"
+	val[]: "在这个模式中，你可以体验客车司机的职业生涯。受雇驾驶客车，或购买并改装自己的客车，承接合约任务与旅游任务。掌握必要技能，应对更具挑战性的工作。<br><br>接受你的首个快速任务以开始。"
+
+	key[]: "desktop_tut_bus_eshop"
+	val[]: "客车经销商"
+
+	key[]: "desktop_tut_owned_bus_job"
+	val[]: "合约任务与旅游任务已解锁"	
 
 
 	key[]: "desktop_vehicle_mode_reenable_hints_t"
@@ -15872,6 +16058,9 @@
 	key[]: "select_quick_travel_destination_economy_reset_truck"
 	val[]: "检测到游戏更改，请选择卡车的快速前往目的地：" #+ Shown during economy reset quick travel for truck.
 
+	key[]: "select_quick_travel_destination_economy_reset_bus"
+	val[]: "检测到游戏更改，请选择客车的快速前往目的地：" #+ Shown during economy reset quick travel for bus.
+
 	key[]: "confirm_quick_travel"
 	val[]: "确认快速前往"
 
@@ -16212,7 +16401,7 @@
 	val[]: "无法获取已连接内容的信息。" #+ Error displayed when connected DLCs fetch fails.
 
 	key[]: "steam_info_fetch_failed"
-	val[]: "无法获取当前账号的信息。" #+ Error displayed when fetching of the currently used account fails.
+	val[]: "无法获取当前账号的信息。" #+ Error displayed when fetching of the currently used account fails.check
 
 	key[]: "later_button"
 	val[]: "以后再说" #+ The button postponing DLC registration for the later time.
@@ -16233,7 +16422,7 @@
 
 	#+ The name of the pop-up window for oversize mission failing. Must be UPPER CASE.
 	key[]: "ovesize_failure_dialog_title"
-	val[]: "任务失败！"
+	val[]: "任务失败"
 
 	#+ Text on the button for giving up on the oversized cargo delivery.
 	key[]: "abandon_job"
@@ -16245,19 +16434,19 @@
 
 	#+ Text showed when player will hit the escort vehicle and oversized cargo delivery is over because of that.
 	key[]: "oversize_escort_crash_player_failure_dialog_text"
-	val[]: "你毁坏了护送车辆！<br>你可以加载保存点，或支付违约金 $MONEY$ 取消运输任务。"
+	val[]: "你毁坏了护送车辆！<br>你可以载入之前的位置，或支付违约金 $MONEY$ 取消运输任务。"
 
 	#+ Text showed when player lead the escort vehicle to crash with another traffic ai.
 	key[]: "oversize_escort_crash_ai_failure_dialog_text"
-	val[]: "由于驾驶不当，护送车辆被其他车辆撞毁。<br>你可以加载保存点，或支付违约金 $MONEY$ 取消运输任务。"
+	val[]: "由于驾驶不当，护送车辆被其他车辆撞毁。<br>你可以载入之前的位置，或支付违约金 $MONEY$ 取消运输任务。"
 
 	#+ Text showed when player will drive off the route and Special Transport is over because of that.
 	key[]: "oversize_off_route_failure_dialog_text"
-	val[]: "你应该按照指定路线行驶。<br>你可以加载保存点，或支付违约金 $MONEY$ 取消运输任务。"
+	val[]: "你应该按照指定路线行驶。<br>你可以载入之前的位置，或支付违约金 $MONEY$ 取消运输任务。"
 
 	#+ Text showed when player will drive away from the escort vehicles and Special Transport is over because of that.
 	key[]: "oversize_not_following_failure_dialog_text"
-	val[]: "你应该与护送车辆一起行驶。<br>你可以加载保存点，或支付违约金 $MONEY$ 取消运输任务。"
+	val[]: "你应该与护送车辆一起行驶。<br>你可以载入之前的位置，或支付违约金 $MONEY$ 取消运输任务。"
 
 	#+ Text showed when fading after player will drive away from escort vehicles and the Special Transport is over.
 	key[]: "oversize_not_following_failure_fade_text"
@@ -17366,6 +17555,9 @@
 	key[]: "tn_single_3axle_long"
 	val[]: "三轴，长"
 
+	key[]: "tn_single_3axle_short"
+	val[]: "三轴, 短"
+
 	key[]: "tn_single_3axle_single_leg"
 	val[]: "三轴，单支腿"
 
@@ -17545,6 +17737,12 @@
 
 	key[]: "bs_gas_tank"
 	val[]: "储气罐车"
+
+	key[]: "bs_inloader_closed"
+	val[]: "内装式, 关闭"
+
+	key[]: "bs_inloader_open"
+	val[]: "内装式, 开启"
 
 	key[]: "bs_insulated"
 	val[]: "隔热挂车"
@@ -18806,10 +19004,10 @@
 	val[]: "闲置"
 
 	key[]: "mp_truck_on_job"
-	val[]: "工作中"
+	val[]: "任务不可用"
 
 	key[]: "mp_truck_on_convoy"
-	val[]: "联运中"
+	val[]: "任务可用"
 
 	key[]: "mp_fetching_from_server"
 	val[]: "正在从服务器获取……"
@@ -20451,7 +20649,7 @@
 	val[]: "查看世界地图、探索过的区域以及你当前导航检查点或设置新的导航检查点。 "
 
 	key[]: "quick_travel_desc" # - tooltip for explaining what the quick travel is - feature is active
-	val[]: "付费以快速前往先前发现的城市。"
+	val[]: "支付费用，快速前往先前发现的城市。"
 
 	key[]: "convoy_sessions_desc" # - tooltip for explaining what the Convoy Lobby (searching and creating sessions) is - feature is active
 	val[]: "浏览、搜索或筛选在线联运环节并加入，或者创建并主持联运环节供他人加入。"
@@ -20654,3 +20852,926 @@
 	key[]: "rest_state_simulation_op_tooltip"
 	val[]: "启用后，你会随着时间推移逐渐感到疲劳。<br><br>你需要休息才能恢复体力。"
 #@}
+
+#+ Bus specific desktop catagories.
+#@{
+	key[]: "desktop_menu_category_garage"
+	val[]: "车库" #+ Desktop category for garage related screens.
+#@}
+
+#+ Bus loading screen.
+#@{
+	key[]: "loading_bus_job"
+	val[]: "客车服务" #+ Text shown as type of job.
+#@}
+
+key[]: "bus_passenger_satisfaction"
+val[]: "满意度："
+
+#+ Bus job selection screen.
+#@{
+	key[]: "bus_departure_time"
+	val[]: "发车时间" #+ Label for sorting of jobs by departure time.
+
+	key[]: "bus_difficulty"
+	val[]: "难度" #+ Label for sorting of jobs by difficulty.
+
+	key[]: "bus_stop_count"
+	val[]: "停靠站数" #+ Label for sorting of jobs by bus stop count.
+
+	key[]: "bus_scheduled_time_total"
+	val[]: "预计时长" #+ Total amount of time a job takes according to the schedule
+#@}
+
+#+ Bus quick job selection screen.
+#+
+#+ During a bus quick job the player drives a company provided bus from start to destination.
+#@{
+	key[]: "bus_job_t"
+	val[]: "快速任务" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_job"
+	val[]: "快速任务" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_job_desc"
+	val[]: "受聘成为专业客车驾驶员。只需专注于乘客和道路，其他一切都有人安排妥当。选择一家客运公司，然后上路驾驶即可。" #+ Tooltip for the icon opening the quick job screen.
+#@}
+
+#+ Bus company job selection screen.
+#+
+#+ During a bus company job the player drives owned bus from start to destination.
+#@{
+	key[]: "bus_company_job_t"
+	val[]: "合约任务" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_company_job"
+	val[]: "合约任务" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_company_job_desc"
+	val[]: "用自己的客车盈利。搭载乘客，并将他们安全运送至目的地。" #+ Tooltip for the icon opening the company job screen.
+
+	key[]: "link_locked_msg_bus_company_jobs" # - tooltip for when the bus company jobs are not yet unlocked
+	val[]: "你需要购买你的第一辆客车才能访问合约任务界面。"
+#@}
+
+#+ Bus tourist job selection screen.
+#+
+#+ During a bus tourist job the player drives owned bus around tourist destinations.
+#@{
+	key[]: "bus_tourist_job_t"
+	val[]: "旅游任务" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_tourist_job"
+	val[]: "旅游任务" #+ Icon opening the quick job screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_tourist_job_desc"
+	val[]: "将游客安全运送至热门目的地与观光景点。行车时间安排更为宽松，致力于为乘客提供平稳舒适的乘车体验。" #+ Tooltip for the icon opening the tourist job screen.
+
+	key[]: "link_locked_msg_bus_tourist_jobs" # - tooltip for when the bus tourist jobs are not yet unlocked
+	val[]: "你需要购买你的第一辆客车才能访问旅游任务界面。"
+#@}
+
+#+ Bus quick job failure screen.
+#+
+#+ This screen is shown when player overturns bus during job.
+#@{
+	key[]: "bus_job_failed_overturned_fade_text"
+	val[]: "你把客车弄翻了" #+ Message shown during fade when player overturns the bus during job.
+
+	key[]: "bus_job_failed_extreme_acceleration_fade_text"
+	val[]: "你遭遇了严重车祸" #+ Message shown during fade when player severely crashes the bus during job.
+
+	key[]: "bus_job_failed_t"
+	val[]: "任务失败" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_job_bus_overturned_text"
+	val[]: "你的客车已经翻覆，无法继续行驶。<br>你可以载入之前的位置，或支付违约金 $MONEY$ 放弃本次任务。"
+
+	key[]: "bus_job_extreme_acceleration_text"
+	val[]: "你遭遇了严重车祸，无法继续行驶。<br>你可以载入之前的位置，或支付违约金 $MONEY$ 放弃本次任务。"
+#@}
+
+#+ Bus job status screen.
+#@{
+	key[]: "bus_job_status_t"
+	val[]: "任务详情" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_job_current"
+	val[]: "当前任务" #+ Header of current job section.
+
+	key[]: "bus_job_current_time"
+	val[]: "当前时间" #+ Current time label.
+
+	key[]: "bus_job_delay"
+	val[]: "延误" #+ Delay label.
+
+	key[]: "bus_job_current_source_stop"
+	val[]: "发车" #+ Source stop label.
+
+	key[]: "bus_job_current_target_stop"
+	val[]: "到达" #+ Target stop label.
+
+	key[]: "bus_job_on_time"
+	val[]: "准时" #+ Coach job arrived on time. Shown in current job detail and in coach stop table.
+
+	key[]: "bus_job_scheduled_arrival"
+	val[]: "预计到达时间" #+ Label for scheduled arrival to target stop.
+
+	key[]: "bus_job_income"
+	val[]: "任务收入" #+ Income label.
+
+	key[]: "bus_job_number_of_stops"
+	val[]: "停靠站数量" #+ Label for number of stops.
+
+	key[]: "bus_job_passengers"
+	val[]: "当前路线乘客状态" #+ Header of current job passenger section.
+
+	key[]: "bus_job_passengers_transported_so_far"
+	val[]: "截至当前的累计载客数" #+ Label for total number of passengers transported so far.
+
+	key[]: "bus_job_passengers_current"
+	val[]: "当前乘客数" #+ Label for current number of passengers.
+
+	key[]: "bus_job_passengers_left"
+	val[]: "下车乘客数" #+ Label for number of passengers that left the bus.
+
+	key[]: "bus_job_interim_satisfaction"
+	val[]: "阶段满意度" #+ Label for average passenger satisfaction computed from completed stages.
+
+	key[]: "bus_job_cancel"
+	val[]: "取消任务" #+ Label of button that cancels the current job.
+
+	key[]: "bus_job_resume"
+	val[]: "恢复任务" #+ Label of button that resume the current job.
+
+	key[]: "bus_job_header_stop"
+	val[]: "目的地" #+ Header of bus stop column.
+
+	key[]: "bus_job_header_planned_arrival"
+	val[]: "预计到达时间" #+ Header of planned arrival column.
+
+	key[]: "bus_job_header_arrival"
+	val[]: "已到达" #+ Header of actual arrival column.
+
+	key[]: "bus_job_header_planned_departure"
+	val[]: "预计发车" #+ Header of planned departure column.
+
+	key[]: "bus_job_header_departure"
+	val[]: "发车" #+ Header of actual departure column.
+
+	key[]: "bus_job_header_satisfaction"
+	val[]: "满意度" #+ Header of passenger satisfaction column.
+#@}
+
+#+ Bus job log screen.
+#@{
+	key[]: "bus_log_model"
+	val[]: "车型"
+
+	key[]: "bus_log_day"
+	val[]: "日期"
+
+	key[]: "bus_log_source_stop"
+	val[]: "发车"
+
+	key[]: "bus_log_target_stop"
+	val[]: "到达"
+
+	key[]: "bus_log_stop_count"
+	val[]: "停靠站"
+
+	key[]: "bus_log_duration"
+	val[]: "花费时长"
+
+	key[]: "bus_log_transported_passengers"
+	val[]: "乘客"
+
+	key[]: "bus_log_satisfaction"
+	val[]: "满意度"
+
+	key[]: "bus_log_reward"
+	val[]: "收入"
+
+	key[]: "bus_log_xp_delta"
+	val[]: "XP"
+#@}
+
+#+ Bus job stop cutscene screen.
+#@{
+	key[]: "bus_stop"
+	val[]: "按如下按键继续客运服务："
+
+	key[]: "bus_stop_cutscene_t"
+	val[]: "公交站" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_stop_cutscene_satisfaction"
+	val[]: "总体满意度"
+
+	key[]: "bus_stop_cutscene_passenger_satisfaction"
+	val[]: "个人满意度"
+
+	key[]: "bus_stop_cutscene_next_stops"
+	val[]: "下一站"
+
+	key[]: "bus_current_passengers"
+	val[]: "所有乘客"
+
+	key[]: "bus_leaving_passengers"
+	val[]: "下车乘客满意度"
+
+	key[]: "bus_entering_passengers"
+	val[]: "上车乘客情绪"
+
+	key[]: "bus_stop_cutscene_satisfaction_change_label"
+	val[]: "服务影响"
+
+	key[]: "bus_satisfaction_on_time"
+	val[]: "准时到达"
+
+	key[]: "bus_satisfaction_late"
+	val[]: "晚点到达"
+
+	key[]: "bus_satisfaction_leaving_passengers"
+	val[]: "下车"
+
+	key[]: "bus_satisfaction_entering_passengers"
+	val[]: "新乘客"
+
+	key[]: "bus_continue"
+	val[]: "继续"
+
+	key[]: "bus_drive"
+	val[]: "驾驶"
+
+	key[]: "bus_all_aboard"
+	val[]: "继续"
+
+	key[]: "bus_tourist_continue"
+	val[]: "探索地点"
+
+	key[]: "bus_leave_passengers"
+	val[]: "下车乘客"
+
+	key[]: "bus_enter_passengers"
+	val[]: "上车乘客"
+
+	key[]: "bus_satisfaction_core_vehicle_wear_reward"
+	val[]: "车况极佳"
+
+	key[]: "bus_satisfaction_core_vehicle_wear_penalty"
+	val[]: "客车受损"
+#@}
+
+#+ Bus job final stop screen.
+#@{
+	key[]: "bus_job_final_stop_t"
+	val[]: "任务完成" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_job_final_satisfaction"
+	val[]: "最终满意度"
+
+	key[]: "bus_job_done_desc"
+	val[]: "在从 $SOURCE$ 到 $TARGET$ 的线路上运送了 $PASSENGERS$ 名乘客。<br>已行驶 $DISTANCE$。" #+ Description of the finished job.
+
+	key[]: "bus_job_reward_level_0_t"
+	val[]: "完美无瑕" #+ Title of the level 0 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_1_t"
+	val[]: "服务上乘" #+ Title of the level 1 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_2_t"
+	val[]: "值得信赖" #+ Title of the level 2 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_3_t"
+	val[]: "平均水平" #+ Title of the level 3 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_4_t"
+	val[]: "低于标准" #+ Title of the level 4 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_5_t"
+	val[]: "不尽人意" #+ Title of the level 5 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_6_t"
+	val[]: "很不专业" #+ Title of the level 6 medal. Please keep in upper case where possible.
+
+	key[]: "bus_job_reward_level_0"
+	val[]: "完美无瑕" #+ Name of the level 0 medal.
+
+	key[]: "bus_job_reward_level_1"
+	val[]: "服务上乘" #+ Name of the level 1 medal.
+
+	key[]: "bus_job_reward_level_2"
+	val[]: "值得信赖" #+ Name of the level 2 medal.
+
+	key[]: "bus_job_reward_level_3"
+	val[]: "平均水平" #+ Name of the level 3 medal.
+
+	key[]: "bus_job_reward_level_4"
+	val[]: "低于标准" #+ Name of the level 4 medal.
+
+	key[]: "bus_job_reward_level_5"
+	val[]: "不尽人意" #+ Name of the level 5 medal.
+
+	key[]: "bus_job_reward_level_6"
+	val[]: "很不专业" #+ Name of the level 6 medal.
+
+	key[]: "bus_job_total_delay"
+	val[]: "总延误" #+ Label of total delay table entry.
+
+	key[]: "bus_job_transported_passengers"
+	val[]: "已运送乘客" #+ Label of transporeted passengers table entry.
+
+	key[]: "bus_job_next_job"
+	val[]: "可接任务" #+ Label of button that takes player to bus job offers.
+
+	key[]: "bus_job_show_schedule"
+	val[]: "详情" #+ Label of button that takes player to shedule of finished job.
+
+	key[]: "bus_job_show_summary"
+	val[]: "概况" #+ Label of button that takes player back to summary of finished job.
+#@}
+
+#+ Multiplayer.
+#@{
+	key[]: "mp_bus_quick_job"
+	val[]: "快速客车任务"
+
+	key[]: "mp_bus_company_job"
+	val[]: "合约任务"
+
+	key[]: "mp_bus_quick_tourist_job"
+	val[]: "快速旅游任务"
+
+	key[]: "mp_bus_tourist_job"
+	val[]: "旅游任务"
+
+	key[]: "mp_bus_regular_line"
+	val[]: "合约路线"
+
+	key[]: "mp_inline_stop_count"
+	val[]: "$COUNT$ 个站点" #+ $COUNT$ is usually between 2 and 5
+
+	key[]: "mp_stop_count"
+	val[]: "停靠站："
+
+	key[]: "mp_job_status_bus"
+	val[]: "客车"
+
+	key[]: "mp_bus_idle"
+	val[]: "闲置"
+
+	key[]: "mp_bus_on_job"
+	val[]: "任务不可用"
+
+	key[]: "mp_bus_on_convoy"
+	val[]: "任务可用"
+
+	key[]: "equipment_provided_bus"
+	val[]: "提供的客车"
+
+	key[]: "equipment_owned_bus"
+	val[]: "拥有的客车"
+
+	key[]: "mp_job_wrong_bus_stop"
+	val[]: "未能找到部分公交站点。"
+
+	key[]: "mp_job_wrong_bus"
+	val[]: "所分配的客车不兼容。"
+#@}
+
+#+ Individual possible components of the bus reward.
+#@{
+	key[]: "satisfaction_reward"
+	val[]: "乘客满意度奖励"
+
+	key[]: "long_duty_bonus"
+	val[]: "长途奖励"
+
+	key[]: "tight_schedule_bonus"
+	val[]: "高要求时刻表奖励"
+
+	key[]: "satisfaction_decrease_bonus"
+	val[]: "优质服务奖励"
+
+	key[]: "low_acceleration_bonus"
+	val[]: "行程平稳奖励"
+
+	key[]: "bus_damage_penalty"
+	val[]: "客车车损罚款"		
+#@}
+
+#+ Career stats screen for bus mode.
+#@{
+	key[]: "career_progress_stats_bus_job"
+	val[]: "客车服务" #+ Title bus job section.
+
+	key[]: "career_progress_stats_bus_job_highlights"
+	val[]: "运输亮点" #+ Title bus job highlights section.
+
+	key[]: "career_progress_stats_bus_transported_passengers"
+	val[]: "已运送乘客" #+ Label stat for count of transported passengers.
+
+	key[]: "career_progress_stats_bus_average_transported_passengers"
+	val[]: "平均乘客数" #+ Label stat for average count of transported passengers per job.
+
+	key[]: "career_progress_stats_bus_average_satisfaction"
+	val[]: "平均乘客满意度" #+ Label stat for average passenger satisfaction per job.
+
+	key[]: "career_progress_stats_bus_job_count"
+	val[]: "服务次数" #+ Label stat for total number of bus jobs.
+
+	key[]: "career_progress_stats_bus_job_qualities"
+	val[]: "服务评级" #+ Title bus job quality section.
+
+	key[]: "career_progress_stats_bus_all_stages_on_time_count"
+	val[]: "完美准点" #+ Label stat for count of bus jobs when all stops were on time.
+
+	key[]: "career_progress_stats_bus_maximum_satisfaction"
+	val[]: "最大乘客满意度" #+ Label stat for maximum passenger satisfaction at the end of job.
+
+	key[]: "career_progress_stats_bus_experience"
+	val[]: "客车驾驶员经验" #+ Title experience section.
+
+	key[]: "career_progress_stats_experience_buses"
+	val[]: "客车" #+ Title bus experience section.
+
+	key[]: "career_progress_stats_used_bus_count"
+	val[]: "服务所用车型" #+ Label stat for count of unique bus models used during jobs.
+
+	key[]: "career_progress_stats_most_used_bus"
+	val[]: "最常用车型" #+ Label stat for most used bus model during jobs.
+#@}
+
+#+ Online bus dealer screen.
+#@{
+	key[]: "bus_dealer_t"
+	val[]: "客车经销商" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_dealer"
+	val[]: "客车经销商" #+ Icon opening the online bus dealer screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_dealer_help"
+	val[]: "浏览、查看和配置可购买的客车。" #+ Tooltip for the icon opening the online bus dealer screen.
+
+	key[]: "bus_dealer_online_bus_bought_t"
+	val[]: "客车购买" #+ Title of bus bought message box. Please keep in upper case where possible.
+
+	key[]: "bus_dealer_online_bus_bought"
+	val[]: "感谢购买。<br><br>$BUS_NAME$ 现已加入你的车库。" #+ Message of bus bought message box.
+
+	key[]: "view_in_garage"
+	val[]: "在车库中查看" #+ Button that takes player to vehicle garage.
+#@}
+
+#+ Bus garage screen.
+#@{
+	key[]: "bus_garage_t"
+	val[]: "客车选择" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_garage"
+	val[]: "我的客车" #+ Icon opening the bus selection screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_garage_help"
+	val[]: "选择一辆客车投入运营，或者自由驾驶。" #+ Tooltip for the icon opening the bus garage screen.
+
+	key[]: "vehicle_garage_no_vehicles"
+	val[]: "车库内没有车辆。"
+
+	key[]: "vehicle_garage_sell"
+	val[]: "出售"
+
+	key[]: "vehicle_garage_configure"
+	val[]: "配置"
+
+	key[]: "vehicle_garage_use"
+	val[]: "使用"
+
+	key[]: "vehicle_garage_drive"
+	val[]: "驾驶"
+
+	key[]: "vehicle_garage_sell_t"
+	val[]: "出售车辆"
+
+	key[]: "vehicle_garage_sell_message"
+	val[]: "你要以 $MONEY$ 的价格出售你的 $VEHICLE$ 吗？"
+
+	key[]: "vehicle_garage_sell_message_on_job"
+	val[]: "你无法在任务中途出售自己正在驾驶的车辆！请在完成任务后重试。"
+
+	key[]: "vehicle_garage_use_t"
+	val[]: "使用车辆" #+ Message box title. Please keep in upper case where possible.
+
+	key[]: "vehicle_garage_use_message_on_job"
+	val[]: "你无法在任务中途换车！请先完成你的运输任务。"
+
+	key[]: "garage_configure_message_teleport"
+	val[]: "要配置当前正在使用的载具，你需要前往服务站。你要快速前往最近的一家吗？"
+
+	key[]: "garage_vehicle_name"
+	val[]: "车辆"
+
+	key[]: "garage_power"
+	val[]: "发动机功率"
+
+	key[]: "garage_fuel_tank"
+	val[]: "油箱："
+
+	key[]: "garage_distance"
+	val[]: "行驶里程："
+
+	key[]: "garage_condition"
+	val[]: "车况："
+
+	key[]: "vehicle_details_tab"
+	val[]: "车辆信息"
+
+	key[]: "all_vehicles_tab"
+	val[]: "所有车辆"
+
+	key[]: "garage_statistics"
+	val[]: "车辆统计"
+
+	key[]: "garage_value"
+	val[]: "价值"
+
+	key[]: "garage_current_value"
+	val[]: "当前价值："
+
+	key[]: "garage_value_of_new"
+	val[]: "展厅价格："
+
+	key[]: "garage_configure_t"
+	val[]: "配置车辆"
+
+	key[]: "garage_configure_message_on_job"
+	val[]: "你无法在任务中途对你的车辆进行配置！请先完成你的运输任务。"
+
+	key[]: "garage_info_model"
+	val[]: "车型："
+
+	key[]: "garage_info_drivetrain"
+	val[]: "传动系统："
+
+	key[]: "garage_info_bodywork"
+	val[]: "车身："
+
+	key[]: "garage_info_steering"
+	val[]: "驾驶习惯：" #+ Steering side. For example "Steering:&nbsp;&nbsp;&nbsp;&nbsp; Left-hand"
+
+	key[]: "garage_info_engine_name"
+	val[]: "发动机："
+
+	key[]: "garage_info_transmission"
+	val[]: "变速箱：" #+ Type of the gearbox. "For example "Gearbox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12 speed gearbox"
+
+	key[]: "garage_info_tank"
+	val[]: "油箱："
+
+	key[]: "garage_damage"
+	val[]: "车损报告："
+
+	key[]: "garage_ownership_time"
+	val[]: "拥有时间："
+
+	key[]: "garage_fuel_consumption"
+	val[]: "平均油耗："
+
+	key[]: "link_locked_msg_bus_garage"
+	val[]: "你需要购买你的第一辆客车才能访问@@bus_garage@@。"
+
+	key[]: "garage_vehicle_name_column"
+	val[]: "车辆"
+
+	key[]: "garage_ownership_time_column"
+	val[]: "拥有时间"
+
+	key[]: "garage_power_column"
+	val[]: "发动机功率"
+
+	key[]: "garage_avg_fuel_column"
+	val[]: "平均油耗"
+
+	key[]: "garage_distance_column"
+	val[]: "行驶里程"
+
+	key[]: "garage_condition_column"
+	val[]: "车况"
+
+	key[]: "garage_currently_driving_t"
+	val[]: "已选择的载具" #+ Keep capitalized
+#@}
+
+#+ Bus garage screen.
+#@{
+	key[]: "bus_browser_t"
+	val[]: "客车浏览器" #+ Title of the screen. Please keep in upper case where possible.
+
+	key[]: "bus_browser"
+	val[]: "客车浏览器" #+ Icon opening the bus selection screen. There is limited space allowing for two lines of 7 'W' characters each.
+
+	key[]: "bus_browser_help"
+	val[]: "尝试各种不同的客车配置。" #+ Tooltip for the icon opening the bus garage screen.
+#@}
+
+#+ Bus levels.
+#@{
+	key[]: "bus_lvl_name0"
+	val[]: "客车学员"
+
+	key[]: "bus_lvl_name1"
+	val[]: "车场实习生"
+
+	key[]: "bus_lvl_name2"
+	val[]: "线路司机"
+
+	key[]: "bus_lvl_name3"
+	val[]: "线路车长"
+
+	key[]: "bus_lvl_name4"
+	val[]: "资深司机"
+
+	key[]: "bus_lvl_name5"
+	val[]: "带教司机"
+
+	key[]: "bus_lvl_name6"
+	val[]: "车场精英"
+
+	key[]: "bus_lvl_name7"
+	val[]: "公路大师"
+
+	key[]: "bus_lvl_name8"
+	val[]: "传奇车长"
+
+	key[]: "bus_lvl_name9"
+	val[]: "神圣车长"
+#@}
+
+#+ Bus skills.
+#@{
+	key[]: "bus_job_skill_rank_1"
+	val[]: "中等"
+
+	key[]: "bus_job_skill_rank_2"
+	val[]: "高要求"
+
+	key[]: "bus_job_skill_rank_3"
+	val[]: "困难"
+
+	key[]: "unlimited_bus_stops"
+	val[]: "无限"
+
+	key[]: "tt_ico_bus_job_no_skills"
+	val[]: "标准任务"
+
+	key[]: "skill_long_duty_title"
+	val[]: "延长班次"
+
+	key[]: "skill_long_duty_info"
+	val[]: "延长班次技能决定了你值班驾驶途中能停靠的最大站点次数。"
+
+	key[]: "skill_tight_schedule_title"
+	val[]: "高要求时刻表"
+
+	key[]: "skill_tight_schedule_info"
+	val[]: "高要求时刻表技能体现了你处理更紧密班次的能力。该技能可解锁时限更紧迫的新型任务，并带来更丰厚的经验值奖励。"
+
+#!{
+	key[]: "tt_ico_tight_sch_1"
+	val[]: "@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_1@@"
+
+	key[]: "tt_ico_tight_sch_2"
+	val[]: "@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_2@@"
+
+	key[]: "tt_ico_tight_sch_3"
+	val[]: "@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_3@@"
+#!}
+
+	key[]: "skill_satisfaction_decrease_title"
+	val[]: "优质服务"
+
+	key[]: "skill_satisfaction_decrease_info"
+	val[]: "优质服务技能体现了你为乘客提供服务的水平，可吸引愿意为更优质的服务支付更高费用的乘客。该技能可解锁新型任务，其失误惩罚更为严厉，但经济回报也更为丰厚。"
+
+#!{
+	key[]: "tt_ico_sat_decr_1"
+	val[]: "@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_1@@"
+
+	key[]: "tt_ico_sat_decr_2"
+	val[]: "@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_2@@"
+
+	key[]: "tt_ico_sat_decr_3"
+	val[]: "@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_3@@"
+#!}
+
+	key[]: "skill_low_acceleration_title"
+	val[]: "行程平稳"
+
+	key[]: "skill_low_acceleration_info"
+	val[]: "行程平稳技能体现了你驾驶的平稳性与舒适度。乘客愿意为更舒适的乘坐体验支付更高的费用，作为驾驶员，你亦可从中获得更多经验。该技能可解锁对突发动作容忍度更低的任务，并带来更丰厚的金钱与经验奖励。"
+
+#!{
+	key[]: "tt_ico_low_accel_1"
+	val[]: "@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_1@@"
+
+	key[]: "tt_ico_low_accel_2"
+	val[]: "@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_2@@"
+
+	key[]: "tt_ico_low_accel_3"
+	val[]: "@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_3@@"
+#!}
+
+	key[]: "skill_satisfaction_increase_title"
+	val[]: "乘客之选"
+
+	key[]: "skill_satisfaction_increase_info"
+	val[]: "乘客之选技能决定了乘客与你同行的愉悦程度，当你完美驾驶时，乘客的满意度会提高。"
+
+	key[]: "long_duty_desc_count"
+	val[]: "可接取最多经停 <color value=@@clr_skill_desc_highlight@@>$NEW_STOPS$</color> 个公交站点的任务"
+
+	key[]: "long_duty_desc_count_max"
+	val[]: "公交站点数量无限制"
+
+	key[]: "long_duty_desc_revenue_bonus"
+	val[]: "公交站点数量介于 $OLD_STOPS$ 与 $NEW_STOPS$ 之间的线路<br>可获得 <color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "long_duty_desc_revenue_bonus_max"
+	val[]: "公交站点数量超过 $OLD_STOPS$ 的线路<br>可获得 <color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "long_duty_desc_revenue_bonus_total"
+	val[]: "基于公交站点数量，可获得 <color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "long_duty_desc_xp_bonus"
+	val[]: "公交站点数量介于 $OLD_STOPS$ 与 $NEW_STOPS$ 之间的线路<br>可获得 <color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% 的经验值奖励</color>"
+
+	key[]: "long_duty_desc_xp_bonus_total"
+	val[]: "基于公交站点数量，可获得 <color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% 的经验值奖励</color>"
+
+	key[]: "long_duty_desc_xp_bonus_max"
+	val[]: "公交站点数量超过 $OLD_STOPS$ 的线路<br>可获得 <color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% 的经验值奖励</color>"
+
+	key[]: "tight_schedule_desc_new"
+	val[]: "现可接取带有<color value=@@clr_skill_desc_highlight@@>高要求时刻表</color>的新任务"
+
+	key[]: "tight_schedule_desc_rank_1"
+	val[]: "解锁<color value=@@clr_skill_desc_highlight@@>站点之间时间更紧</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_1@@</color>任务"
+
+	key[]: "tight_schedule_desc_rank_2"
+	val[]: "解锁<color value=@@clr_skill_desc_highlight@@>站点之间限时</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_2@@</color>任务"
+
+	key[]: "tight_schedule_desc_rank_3"
+	val[]: "解锁<color value=@@clr_skill_desc_highlight@@>站点之间时间紧急</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_tight_schedule_title@@ - @@bus_job_skill_rank_3@@</color>任务"
+
+	key[]: "tight_schedule_desc_xp_bonus"
+	val[]: "新型任务可获得 <color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% 的经验值奖励</color>"
+
+	key[]: "tight_schedule_desc_xp_bonus_total"
+	val[]: "基于任务类型，可获得 <color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% 的额外经验值奖励</color>"
+
+	key[]: "satisfaction_decrease_desc_new"
+	val[]: "现可接取乘客<color value=@@clr_skill_desc_highlight@@>满意度下降更快</color>的新任务。"
+
+	key[]: "satisfaction_decrease_desc_rank_1"
+	val[]: "解锁乘客在驾驶失误后<color value=@@clr_skill_desc_highlight@@>满意度略微下降</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_1@@</color>任务"
+
+	key[]: "satisfaction_decrease_desc_rank_2"
+	val[]: "解锁乘客在驾驶失误后<color value=@@clr_skill_desc_highlight@@>满意度大幅下降</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_2@@</color>任务"
+
+	key[]: "satisfaction_decrease_desc_rank_3"
+	val[]: "解锁乘客在驾驶失误后<color value=@@clr_skill_desc_highlight@@>满意度显著下降</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_satisfaction_decrease_title@@ - @@bus_job_skill_rank_3@@</color>任务"
+
+	key[]: "satisfaction_decrease_desc_revenue_bonus"
+	val[]: "新型任务可获得 <color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "satisfaction_decrease_desc_revenue_bonus_total"
+	val[]: "基于任务类型，可获得 <color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "low_acceleration_desc_new"
+	val[]: "现可接取乘客对<color value=@@clr_skill_desc_highlight@@>乘坐平稳性要求更高</color>的新任务"
+
+	key[]: "low_acceleration_desc_rank_1"
+	val[]: "解锁乘客对<color value=@@clr_skill_desc_highlight@@>乘坐平稳性要求更高</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_1@@</color>任务"
+
+	key[]: "low_acceleration_desc_rank_2"
+	val[]: "解锁乘客对<color value=@@clr_skill_desc_highlight@@>乘坐平稳性要求极高</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_2@@</color>任务"
+
+	key[]: "low_acceleration_desc_rank_3"
+	val[]: "解锁乘客对<color value=@@clr_skill_desc_highlight@@>乘坐平稳性要求极其苛刻</color>的<color value=@@clr_skill_desc_highlight@@>@@skill_low_acceleration_title@@ - @@bus_job_skill_rank_3@@</color>任务"
+
+	key[]: "low_acceleration_desc_revenue_bonus"
+	val[]: "新型任务可获得 <color value=@@clr_skill_desc_highlight@@>$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "low_acceleration_desc_revenue_bonus_total"
+	val[]: "基于任务类型，可获得 <color value=@@clr_skill_desc_highlight@@>0-$REVENUE_BONUS$% 的额外报酬</color>"
+
+	key[]: "low_acceleration_desc_xp_bonus"
+	val[]: "新型任务可获得 <color value=@@clr_skill_desc_highlight@@>$XP_BONUS$% 的额外经验值奖励</color>"
+
+	key[]: "low_acceleration_desc_xp_bonus_total"
+	val[]: "基于任务类型，可获得 <color value=@@clr_skill_desc_highlight@@>0-$XP_BONUS$% 的额外经验值奖励</color>"
+
+	key[]: "satisfaction_increase_desc"
+	val[]: "客车上的乘客<color value=@@clr_skill_desc_highlight@@>满意度最高可提升 $SATISFACTION_INCREASE$%</color>"
+#@}
+
+#+ Coach analysis panel in the vehicle configurator.
+#@{
+	key[]: "economy"
+	val[]: "经济性"
+
+	key[]: "economy_tooltip"
+	val[]: "每单位发动机功率可运载多少名乘客。" 
+
+	key[]: "passenger_capacity"
+	val[]: "载客量"
+
+	key[]: "passenger_capacity_tooltip"
+	val[]: "这辆客车能运载多少名乘客。"
+
+	key[]: "height"
+	val[]: "高度" #+ Overall height of the coach, shown in meters.
+
+	key[]: "width"
+	val[]: "宽度" #+ Overall width of the coach, shown in meters.
+
+	key[]: "length"
+	val[]: "长度" #+ Overall length of the coach, shown in meters.
+
+	key[]: "seats"
+	val[]: "座位数" #+ Number of passenger seats in the coach.
+
+	key[]: "doors"
+	val[]: "车门数" #+ Number of passenger doors in the coach.
+#@}
+
+#+ Job widget.
+#@{
+	key[]: "truck_job_different_mode"
+	val[]: "卡车模式<br>任务进行中"
+	
+	key[]: "bus_job_different_mode"
+	val[]: "客车模式<br>任务进行中"
+#@}
+
+#+ World map.
+#@{
+    key[]: "no_gps_different_mode"
+    val[]: "在当前模式下驾驶载具以更改导航"
+#@}
+
+#+ Bus related adviser notifications
+#@{
+	key[]: "bus_satisfaction_reward_no_penalty"
+	val[]: "行车安全平稳" #+ Satisfaction increase message shown after a period of no penalties
+
+	key[]: "bus_satisfaction_penalty_acceleration"
+	val[]: "G力过大" #+ Satisfaction decrease message shown when the passengers experience excessive acceleration/deceleration
+
+	key[]: "bus_satisfaction_penalty_offence"
+	val[]: "交通违法" #+ Satisfaction decrease message shown when the player commits a traffic offence
+
+	key[]: "bus_satisfaction_penalty_core_wear"
+	val[]: "客车车损" #+ Satisfacation decrease message shown when the player damages the coach
+
+	key[]: "bus_satisfaction_penalty_crash"
+	val[]: "碰撞" #+ Satisfaction decrease message shown when the player crashes the coach into something
+
+	key[]: "bus_satisfaction_penalty_speed"
+	val[]: "车速过快" #+ Satisfacation decrease message shown when the player drives too fast
+#@}
+
+#!{
+	key[]: "bus_satisfaction_color_0"
+	val[]: "FF4E4EFF"
+
+	key[]: "bus_satisfaction_color_1"
+	val[]: "FF3187FF"
+
+	key[]: "bus_satisfaction_color_2"
+	val[]: "FF00F2FF"
+
+	key[]: "bus_satisfaction_color_3"
+	val[]: "FF00FFBB"
+
+	key[]: "bus_satisfaction_color_4"
+	val[]: "FF44FD00"
+#!}
+
+#+ Adviser info - notification
+#@{
+	key[]: "bus_damage"
+	val[]: "客车车损"	
+#@}
+
+#+ Garage bus descriptions
+#@{
+	key[]: "description_man_lions_2024"
+	val[]: "这款客车采用了空气动力学外形设计，车身棱角分明，专为城际及高速公路线路打造。它操控响应灵敏，乘坐体验舒适，且悬架调校精良。"
+
+	key[]: "description_scania_touring_2023"
+	val[]: "这款旅游客车操控稳定、可预测，专为城际及旅游线路打造。具有燃油效率高、噪音水平低、安全性能出色的特点。"
+
+	key[]: "description_volvo_9700_2023"
+	val[]: "这款双层客车载客量大，专为长途线路设计。因其行驶平稳、车内安静而广受好评。"
+#@}
+

@@ -1,0 +1,44 @@
+# XXXXXXXXXXXXXXXXXXX taxi XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.voltison.s_23.taxi
+{
+	accessories[]: .voltison.s_23.taxi.chassis
+	accessories[]: .voltison.s_23.taxi.fwheel
+	accessories[]: .voltison.s_23.taxi.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 1600
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	tags[]: taxi
+	tags[]: context
+
+
+@include "drivers_generic.sui"
+}
+vehicle_accessory: .voltison.s_23.taxi.chassis
+{
+	data_path: "/def/vehicle/ai/voltison_model_s_23/chassis_taxi.sii"
+}
+
+vehicle_wheel_accessory: .voltison.s_23.taxi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_front.sii"
+}
+
+vehicle_wheel_accessory: .voltison.s_23.taxi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/voltison_rear.sii"
+}
+traffic_spawn_condition: .voltison.s_23.taxi.condition.city
+{
+	# spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+	str_param[]: "reykjavik"
+}
+
+

@@ -1,0 +1,50 @@
+SiiNunit
+{
+accessory_interior_data: xgp_30y_26uk.daf.2021.interior
+{
+	name: "@@interior_30th_anniversary_edition_uk@@"
+	price: 38520
+	unlock: 16
+	icon: "truck/daf_2021/interior/uk/xg_plus_30y_anniversary_uk_edition_30y"
+	part_type: factory
+
+	model: "/vehicle/truck/daf_2021/interior/uk/xg_plus_30y_anniversary_uk.pmd"
+	collision: "/vehicle/truck/daf_2021/interior/uk/xg_plus_30y_anniversary_uk.pmc"
+
+	animated_model: "/vehicle/truck/daf_2021/interior/uk/anim.pmd"
+
+	look: edition_30y
+	variant: edition_30y
+
+@include "animations_25_uk.sui"
+@include "sound.sui"
+@include "sound_effects.sui"
+
+	dashboard_path: "/ui/dashboard/daf_2021.sii"
+	dashboard_drawable_size: (1024, 512)
+	gps_path: "/ui/dashboard/daf_2021_gps.sii"
+	gps_drawable_size: (1024, 512)
+	left_hand_traffic: true
+	glass_panes[]: .daf.2021.r.pane.front
+	glass_panes[]: .daf.2021.r.pane.left
+	glass_panes[]: .daf.2021.r.pane.right
+	glass_panes[]: .daf.2021.r.pane.door
+
+	ext_model: "/vehicle/truck/daf_2021/interior/external/xg_plus_edition_30y.pmd"
+	ext_look: edition_30y
+	ext_variant: cabin_uk
+
+	suitable_for[]: "xg_plus.daf.2021.cabin"
+
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/cab_door/std_30y_xg.sii"
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/codrv_seat/std_30y_xg.sii"
+	defaults[]: "/def/vehicle/truck/daf.2021/accessory/steering_w/black.sii"
+
+@include "int_shadow_xg_uk.sui"
+
+@include "dashboard_color.sui"
+@include "seat.sui"
+}
+@include "glass.sui"
+@include "sound_effects_units.sui"
+}

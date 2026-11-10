@@ -927,3 +927,42 @@ vehicle_wheel_accessory: .crafter.nl.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
 }
+
+###################################### Iceland ######################################
+
+traffic_vehicle : traffic.crafter.is
+{
+	accessories[]: .crafter.is.chassis
+	accessories[]: .crafter.is.fwheel
+	accessories[]: .crafter.is.rwheel
+
+	max_speed: 100
+
+	vehicle_mass: 3500
+
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+
+	color[]: (1, 1, 1) #white
+
+	spawn_ratio: 0
+
+@include "drivers_generic_police.sui"
+}
+
+vehicle_accessory: .crafter.is.chassis
+{
+	data_path: "/def/vehicle/ai/crafter/is.sii"
+}
+
+vehicle_wheel_accessory: .crafter.is.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_front.sii"
+}
+
+vehicle_wheel_accessory: .crafter.is.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/crafter_rear.sii"
+}

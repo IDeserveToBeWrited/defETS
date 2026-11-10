@@ -45,6 +45,12 @@ hcd::completed_delivery_count : cond.deliveries.min7
     comparison_type: at_least
 }
 
+hcd::completed_delivery_count : cond.deliveries.max4
+{
+    count: 4
+    comparison_type: at_most
+}
+
 hcd::vehicle_component : cond.part.engine_off
 {
     component: engine
@@ -805,6 +811,12 @@ hcd::on_trigger : cond.trigger.gas
     types[]: filling_station
 }
 
+hcd::on_trigger : cond.trigger.job_delivery
+{
+    types[]: job_delivery
+    types[]: bus_stop_job
+}
+
 hcd::notification_block : cond.notif_block.persistent
 {
     persistent: true
@@ -827,6 +839,52 @@ hcd::on_event : cond.job.done
 hcd::in_convoy : cond.multiplayer.off
 {
     negate: true
+}
+
+hcd::on_event : cond.satisfaction.decreased
+{
+    event_type: satisfaction_decreased
+}
+
+hcd::on_event : cond.satisfaction.increased
+{
+    event_type: satisfaction_increased
+}
+
+hcd::passenger_satisfaction : cond.satisfaction.low
+{
+    percentage: 50
+    comparison_type: at_most
+}
+
+hcd::on_job : cond.bus_job.late10
+{
+	type: any
+	value_type: bus_displayed_schedule_difference
+	value: 10
+	comparison_type: at_least
+    duration: 15
+}
+
+hcd::on_job : cond.bus_job.n_late8
+{
+	type: any
+	value_type: bus_displayed_schedule_difference
+	value: 8
+	comparison_type: at_most
+    duration: 15
+}
+
+hcd::bus_job_stage : cond.stage.not_last
+{
+    target_stage_idx: -2
+    comparison_type: at_most
+}
+
+hcd::bus_job_stage : cond.stage.last
+{
+    target_stage_idx: -1
+    comparison_type: equal
 }
 
 hcd::hint_ref : cond.hint_ref.4Acancel

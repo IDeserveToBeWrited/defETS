@@ -46,3 +46,46 @@ vehicle_wheel_accessory: .duster.rwheel
 	offset: 0
 	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
 }
+
+traffic_vehicle: traffic.duster.rental
+{
+	accessories[]: .duster.rental.chassis
+	accessories[]: .duster.rental.fwheel
+	accessories[]: .duster.rental.rwheel
+
+	max_speed: 140
+
+	vehicle_mass: 1300
+
+	sound_move[]: "/sound/traffic/car_default_1.soundref"
+	sound_move[]: "/sound/traffic/car_normal_2.soundref"
+	sound_move[]: "/sound/traffic/car_diesel_2.soundref"
+
+	spawn_ratio: 0.1
+	
+	color[]: (0.7835, 0.7835, 0.7835) #white
+
+
+	tags[]: cheap
+	tags[]: common
+
+
+@include "drivers_generic.sui"
+}
+
+vehicle_accessory: .duster.rental.chassis
+{
+	data_path: "/def/vehicle/ai/duster/chassis.sii"
+}
+
+vehicle_wheel_accessory: .duster.rental.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in_1.sii"
+}
+
+vehicle_wheel_accessory: .duster.rental.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in_1.sii"
+}

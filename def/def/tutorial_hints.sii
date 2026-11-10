@@ -199,6 +199,21 @@ tutorial_hint : hint.tow.b
     cancel_cooldown: 5
 }
 
+tutorial_hint : hint.bus_job.30a
+{
+    start_conditions[]: cond.job.on_any
+
+    cancel_conditions[]: cond.always.false
+
+    complete_conditions[]: cond.speed.moving
+    complete_fadeout_delay: 10
+
+    max_show_count: 1
+
+    for_truck: false
+    for_car: false
+}
+
 # 5A
 tutorial_hint : hint.lights.a
 {
@@ -487,6 +502,54 @@ tutorial_hint : hint.depot_deliv.a
     introductory: true
 }
 
+tutorial_hint : hint.satis_dec.31a
+{
+	start_conditions[]: cond.dist_50.n_city
+    start_conditions[]: cond.satisfaction.decreased
+
+	cancel_conditions[]: cond.always.false
+	cancel_timeout: 20
+
+    complete_conditions[]: cond.satisfaction.increased
+
+	max_show_count: 1
+
+	for_truck: false
+	for_car: false
+}
+
+tutorial_hint : hint.low_satis.32a
+{
+    start_conditions[]: cond.deliveries.max4
+	start_conditions[]: cond.dist_50.n_city
+    start_conditions[]: cond.satisfaction.low
+
+	cancel_conditions[]: cond.always.false
+    cancel_timeout: 20
+
+    complete_conditions[]: cond.satisfaction.increased
+
+	max_show_count: 1
+
+	for_car: false
+	for_truck: false
+}
+
+tutorial_hint : hint.bus_late.33a
+{
+	start_conditions[]: cond.bus_job.late10
+
+	cancel_conditions[]: cond.always.false
+	cancel_timeout: 20
+
+	complete_conditions[]: cond.bus_job.n_late8
+
+	max_show_count: 1
+
+	for_car: false
+	for_truck: false
+}
+
 # 10A
 tutorial_hint : hint.fin_deliv.a
 {
@@ -580,6 +643,36 @@ tutorial_hint : hint.sm_throttle.51a
     complete_conditions[]: cond.sm_throttle.on
 
     max_show_count: 1
+}
+
+tutorial_hint : hint.bus_stop.34a
+{
+	start_conditions[]: cond.dist.delivery50
+	start_conditions[]: cond.stage.not_last
+
+	cancel_conditions[]: cond.min_dist.delivery100
+
+	complete_conditions[]: cond.trigger.job_delivery
+
+	max_complete_count: 1
+
+	for_truck: false
+	for_car: false
+}
+
+tutorial_hint : hint.bus_stop_fin.35a
+{
+	start_conditions[]: cond.dist.delivery50
+	start_conditions[]: cond.stage.last
+
+	cancel_conditions[]: cond.min_dist.delivery100
+
+	complete_conditions[]: cond.trigger.job_delivery
+
+	max_complete_count: 1
+
+	for_truck: false
+	for_car: false
 }
 
 # 3A

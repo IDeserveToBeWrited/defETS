@@ -1,0 +1,53 @@
+# XXXXXXXXXXXXXXXXXXX Berlin Taxi - Sedan XXXXXXXXXXXXXXXXXXX
+
+traffic_vehicle : traffic.betrude.premium_24.sedan.de_taxi
+{
+	accessories[]: .betrude.premium_24.sedan.de_taxi.chassis
+	accessories[]: .betrude.premium_24.sedan.de_taxi.fwheel
+	accessories[]: .betrude.premium_24.sedan.de_taxi.rwheel
+
+	max_speed: 160
+
+	vehicle_mass: 2000
+	spawn_ratio: 0.0
+
+	sound_move[]: "/sound/traffic/car_default_2.soundref"
+	sound_move[]: "/sound/traffic/car_normal_3.soundref"
+
+	color[]: (1, 1, 1) #white
+	
+	tags[]: urban
+	tags[]: taxi
+
+	license_plate_type: taxi
+
+
+@include "drivers_generic.sui"	
+
+spawn_condition[]: .traffic.betrude.premium_24.sedan.de_taxi.condition.city	
+
+}
+
+vehicle_accessory: .betrude.premium_24.sedan.de_taxi.chassis
+{
+	data_path: "/def/vehicle/ai/betrude_premium_24/chassis_s_de_taxi.sii"
+}
+
+vehicle_wheel_accessory: .betrude.premium_24.sedan.de_taxi.fwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/front_18in.sii"
+}
+
+vehicle_wheel_accessory: .betrude.premium_24.sedan.de_taxi.rwheel
+{
+	offset: 0
+	data_path: "/def/vehicle/ai_wheel/rear_18in.sii"
+}
+
+traffic_spawn_condition: .traffic.betrude.premium_24.sedan.de_taxi.condition.city
+{
+	#spawn only near city with name equal to traffic vehicle name suffix
+	type: city
+    str_param[]: "berlin"	
+}
